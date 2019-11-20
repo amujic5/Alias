@@ -1,0 +1,6 @@
+framework module Yalta {
+  umbrella header "Yalta-umbrella.h"
+
+  export *
+  module * { export * }
+}
