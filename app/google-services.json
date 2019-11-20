@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "53463950406",
+    "firebase_url": "https://test-85594.firebaseio.com",
+    "project_id": "test-85594",
+    "storage_bucket": "test-85594.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:53463950406:android:9874e64d4ad63d67d9d647",
+        "android_client_info": {
+          "package_name": "hr.azzi.socialgames.alias"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "53463950406-fbjf3tb6dosubfkldhgoafco01bsn68o.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCK935EYXPIQ9rfB0PF1S5GNfA16zRpUS0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "53463950406-fbjf3tb6dosubfkldhgoafco01bsn68o.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "53463950406-o69kr1dk0d695b5ov1e6gv9j8hmbq26p.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.AliasWords"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
