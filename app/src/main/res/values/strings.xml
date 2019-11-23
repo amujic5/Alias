@@ -3,4 +3,37 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="edit_answers">EDIT ANSWERS</string>
+    <string name="this_round">THIS ROUND</string>
+    <string name="cancel">CANCEL</string>
+    <string name="save">SAVE</string>
+    <string name="how_to_play">How to play?</string>
+    <string name="new_game">New game</string>
+    <string name="tell_your_friends">Tell your friends</string>
+    <string name="got_it">GOT IT</string>
+    <string name="how_to_play_info">This game consists of two or more teams playing against each other. Each team consists of two players.   First player explains the word to the second player without using the root word. If the second player guesses the word, they get a point. The game goes on until set time or point limit.   Team that goes through all words in the least amount of time with most points is the winner.</string>
+    <string name="teams">Teams</string>
+    <string name="start_the_game">START THE GAME</string>
+    <string name="skip">SKIP</string>
+    <string name="correct">CORRECT</string>
+    <string name="results">RESULTS</string>
+    <string name="next_up">NEXT UP</string>
+    <string name="start">START</string>
+    <string name="explaining">Explaining</string>
+    <string name="player_1">Player 1</string>
+    <string name="player_2">Player 2</string>
+    <string name="answering">Answering</string>
+    <string name="finish">FINISH</string>
+    <string name="settings">SETTINGS</string>
+    <string name="play">PLAY</string>
+    <string name="time_limit_seconds">Time limit (seconds)</string>
+    <string name="dictionary">DICTIONARY</string>
+    <string name="create_team">CREATE TEAM</string>
+    <string name="delete">DELETE</string>
+    <string name="create">CREATE</string>
+    <string name="stop">STOP</string>
+    <string name="corrected">correct</string>
+    <string name="skipped">skipped</string>
+    <string name="score">Score:</string>
+    <string name="score_settings">Score</string>
 </resources>

@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="70dp"
         android:background="@android:color/black"
-        android:text="GOT IT"
+        android:text="@string/got_it"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +23,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="30dp"
-        android:text="HOW TO PLAY?"
+        android:text="@string/how_to_play"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -51,7 +51,7 @@
                 android:layout_height="match_parent"
                 android:layout_marginStart="15dp"
                 android:layout_marginEnd="15dp"
-                android:text="This game consists of two or more teams playing against each other. Each team consists of two players.\n \nFirst player explains the word to the second player without using the root word. If the second player guesses the word, they get a point.  The game goes on until set time or point limit.\n \nTeam that goes through all words in the least amount of time with most points is the winner."
+                android:text="@string/how_to_play_info"
                 android:textSize="20sp" />
         </LinearLayout>
     </ScrollView>

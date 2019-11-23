@@ -60,6 +60,8 @@ class FlagAdapter(private val flags: ArrayList<FlagModel>): RecyclerView.Adapter
                 .load(flagModel.url)
                 .into(view.flagImageView)
 
+            view.textView.text = flagModel.code
+
         }
 
         override fun onClick(v: View) {

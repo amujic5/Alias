@@ -43,7 +43,13 @@ class HomeActivity : AppCompatActivity() {
         }
 
         tellYouFriendsButton.setOnClickListener {
-
+            val localIntent = Intent("android.intent.action.SEND")
+            localIntent.type = "text/plain"
+            localIntent.putExtra(
+                "android.intent.extra.TEXT",
+                "Hey there, we are playing Alias!!! " + " https://play.google.com/store/apps/details?id=hr.azzi.socialgames.alias"
+            )
+            startActivity(Intent.createChooser(localIntent, "Share To.."))
         }
 
     }

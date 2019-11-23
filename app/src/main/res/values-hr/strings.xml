@@ -1,0 +1,52 @@
+<resources>
+    <string name="app_name">Alias</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="edit_answers">IZMIJENI</string>
+    <string name="this_round">OVA RUNDA</string>
+    <string name="cancel">ODUSTANI</string>
+    <string name="save">SPREMI</string>
+    <string name="how_to_play">Pravila igre</string>
+    <string name="new_game">Nova igra</string>
+    <string name="tell_your_friends">Podjeli s prijateljima</string>
+    <string name="got_it">U REDU</string>
+    <string name="how_to_play_info">Alias Words  je apsolutni hit za sve uzraste! Ako ste za sebe uvijek tvrdili da ste natprosjecno snalažljivi, brze retorike,spretni i britki na jeziku ovo je prilika da se dokažete.
+\n\n
+        	Cilj igrača je objasniti zadane riječi drugom timskom igraču. Dok objašnjava, igrač ne smije koristiti korijen riječi koju pokušava objasniti. Igra se igra u timovima. Najmanje dvije ekipe su potrebne.
+
+
+        \n\n
+        	U početku runde vidjet ćete dijalog-okvir koji vam govori tko će igrati. Na njemu će biti prikazano koji tim igra, koji igrač objašnjava riječi te koji igrač pogađa riječi. Igrač koji objašnjava riječi treba uzeti telefon u ruke i pritisnuti Kreni kada je spreman za početak. Igrač koji objašnjava riječ mora izbjeći korištenje korijena te riječi (i samu riječ). Kad je riječ pogođena, igrač može dobiti novu riječ pritiskom ikonu kvačice u donjem desnom dijelu zaslona. Ako je igraču dobivena riječ teška za objasniti, on može preskočiti zadanu riječ pritiskom ikonu križića na donjem lijevom dijelu zaslona. Svaka pogođena riječ daje jedan bod, dok svaka preskočena riječ oduzima jedan bod.
+
+
+    \n\n
+        	Igrač ima ograničeno vrijeme koje se može postaviti u postavkama. Odbrojavanje se može vidjeti na gornjem desnom dijelu ekrana. Lijevo pored timera možete vidjeti koliko riječi je pogođeno i preskočeno. Kad istekne vrijeme rudne, prikazati će se popis riječi koje su bile u rundi. Igrač ima mogućnost mijenjanja pogođeno/preskočeno za svaku pojedinu riječ.
+
+        \n\n
+Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednost je 100 koja se može promijeniti).</string>
+    <string name="teams">Timovi</string>
+    <string name="start_the_game">POKRENI IGRU</string>
+    <string name="skip">PRESKOČI</string>
+    <string name="correct">TOČNO</string>
+    <string name="results">REZULTATI</string>
+    <string name="next_up">SLJEDEĆI</string>
+    <string name="start">POKRENI</string>
+    <string name="explaining">Objašnjava</string>
+    <string name="player_1">Igrač 1</string>
+    <string name="player_2">Igrač 2</string>
+    <string name="answering">Pogađa</string>
+    <string name="finish">ZAVRŠI</string>
+    <string name="settings">POSTAVKE</string>
+    <string name="play">IGRAJ</string>
+    <string name="time_limit_seconds">Vrijeme runde (sekunde)</string>
+    <string name="dictionary">RJEČNIK</string>
+    <string name="create_team">NOVI TIM</string>
+    <string name="delete">IZBRIŠI</string>
+    <string name="create">KREIRAJ</string>
+    <string name="stop">ZAVRŠI</string>
+    <string name="corrected">točnih</string>
+    <string name="skipped">preskočenih</string>
+    <string name="score">Rezultat:</string>
+    <string name="score_settings">Ciljni rezultat</string>
+</resources>

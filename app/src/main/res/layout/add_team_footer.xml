@@ -9,7 +9,7 @@
         android:id="@+id/createTeamButton"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="CREATE TEAM"
+        android:text="@string/create_team"
         android:textColor="@android:color/white"
         android:background="#65CAFB"
         app:layout_constraintBottom_toBottomOf="parent"

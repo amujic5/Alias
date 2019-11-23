@@ -3,14 +3,14 @@
     package="hr.azzi.socialgames.alias">
 
     <application
-
         android:allowBackup="true"
         android:icon="@drawable/alias"
         android:label="@string/app_name"
         android:roundIcon="@drawable/alias"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ResultsActivity"></activity>
+        <activity android:name=".EditAnswersActivity"></activity>
+        <activity android:name=".ResultsActivity" />
         <activity android:name=".PlayActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".NewGameActivity" />
@@ -26,9 +26,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
-            android:value="ca-app-pub-1489905432577426~2503811790"/>
+            android:value="ca-app-pub-1489905432577426~2503811790" />
     </application>
 
 </manifest>

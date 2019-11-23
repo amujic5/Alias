@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias.Models
 
 import android.os.Parcelable
+import hr.azzi.socialgames.alias.Service.DictionaryService
 import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
 import kotlin.random.Random
@@ -14,12 +15,9 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
            private var _time: Int,
            private var _goalScore: Int,
            private var _teams: ArrayList<Team>,
-           val _dictionary: Dictionary,
            private var _words: ArrayList<String>,
            private var _currentTeamIndex: Int,
            var currentTeamMarkedWords: ArrayList<MarkedWord> = ArrayList() ) : Parcelable {
-
-
 
     private val _playingTeams: List<Team>
         get() {
@@ -127,9 +125,6 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
 
     val newWord: String
         get() {
-            if (_words.size == 0) {
-                _words = ArrayList(_dictionary.words)
-            }
 
             val randomIndex = randomValue(0, _words.size - 1)
             val wordString = _words[randomIndex]

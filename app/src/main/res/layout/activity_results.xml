@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
         android:layout_marginTop="40dp"
-        android:text="RESULTS"
+        android:text="@string/results"
         android:textColor="@android:color/white"
         android:textSize="33sp"
         app:layout_constraintStart_toStartOf="parent"
@@ -47,7 +47,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:fontFamily="sans-serif-black"
-            android:text="THIS ROUND"
+            android:text="@string/this_round"
             app:layout_constraintStart_toStartOf="@+id/teamTextView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -83,6 +83,19 @@
             app:layout_constraintBottom_toBottomOf="@+id/correctTextView"
             app:layout_constraintStart_toEndOf="@+id/correctTextView" />
 
+        <Button
+            android:id="@+id/editAnswersButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:textColor="@android:color/black"
+            android:background="@android:color/transparent"
+            android:stateListAnimator="@null"
+            android:text="@string/edit_answers"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -114,7 +127,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="14dp"
             android:fontFamily="sans-serif-black"
-            android:text="NEXT UP"
+            android:text="@string/next_up"
             app:layout_constraintStart_toStartOf="@+id/nextTeamTextView"
             app:layout_constraintTop_toTopOf="parent" />
 
@@ -126,7 +139,7 @@
             android:layout_marginEnd="15dp"
             android:background="@color/alias_yellow"
             android:fontFamily="sans-serif-black"
-            android:text="START"
+            android:text="@string/start"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
@@ -137,7 +150,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
-            android:text="Explaining"
+            android:text="@string/explaining"
             app:layout_constraintStart_toStartOf="@+id/nextTeamTextView"
             app:layout_constraintTop_toBottomOf="@+id/nextTeamTextView" />
 
@@ -147,7 +160,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:layout_marginBottom="20dp"
-            android:text="Player 1"
+            android:text="@string/player_1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="@+id/textView10"
             app:layout_constraintTop_toBottomOf="@+id/textView10"
@@ -157,7 +170,7 @@
             android:id="@+id/answeringTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Player 2"
+            android:text="@string/player_2"
             app:layout_constraintBottom_toBottomOf="@+id/explainingTextView"
             app:layout_constraintStart_toStartOf="@+id/textView12" />
 
@@ -166,7 +179,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
-            android:text="Answering"
+            android:text="@string/answering"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
 
@@ -194,7 +207,7 @@
         android:layout_marginBottom="20dp"
         android:background="@color/alias_yellow"
         android:fontFamily="sans-serif-black"
-        android:text="FINISH"
+        android:text="@string/finish"
         android:textColor="@android:color/white"
         android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="@+id/constraintLayout3"
