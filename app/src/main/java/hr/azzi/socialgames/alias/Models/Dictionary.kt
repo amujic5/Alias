@@ -14,7 +14,9 @@ class Dictionary(var language: String,
 
             val language = json["language"] as String
             val languageCode = json["languageCode"] as String
-            val words = json["words"] as List<String>
+            val wordsAPI = json["words"] as List<String>
+            val wordsSet = wordsAPI.toSet()
+            val words = wordsSet.toList()
             val imageURLString = json["imageURLString"]?.toString()
 
             return Dictionary(language, languageCode, words, imageURLString)

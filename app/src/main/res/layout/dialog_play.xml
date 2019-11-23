@@ -62,7 +62,7 @@
         android:layout_width="wrap_content"
         android:layout_height="40dp"
         android:layout_marginEnd="10dp"
-        android:text="STOP"
+        android:text="@string/stop"
         android:fontFamily="sans-serif-black"
         android:textSize="20sp"
         android:textColor="@color/alias_red"
@@ -75,7 +75,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
-        android:text="Explaining"
+        android:text="@string/explaining"
         app:layout_constraintStart_toStartOf="@+id/correctTextView"
         app:layout_constraintTop_toBottomOf="@+id/correctTextView" />
 
@@ -85,7 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="10dp"
         android:layout_marginBottom="20dp"
-        android:text="Player 1"
+        android:text="@string/player_1"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="@+id/textView10"
         app:layout_constraintTop_toBottomOf="@+id/textView10"
@@ -95,7 +95,7 @@
         android:id="@+id/answeringTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Player 2"
+        android:text="@string/player_2"
         app:layout_constraintBottom_toBottomOf="@+id/explainingTextView"
         app:layout_constraintStart_toStartOf="@+id/textView12" />
 
@@ -104,7 +104,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
-        android:text="Answering"
+        android:text="@string/answering"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toTopOf="@+id/textView10" />
 

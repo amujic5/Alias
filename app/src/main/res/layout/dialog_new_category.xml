@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:inputType="text"
-            android:hint="Player 1" />
+            android:hint="@string/player_1" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
@@ -42,7 +42,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:inputType="text"
-            android:hint="Player 2" />
+            android:hint="@string/player_2" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
@@ -60,7 +60,7 @@
             android:layout_marginEnd="20dp"
             android:layout_marginBottom="15dp"
             android:textColor="@android:color/white"
-            android:text="DELETE"
+            android:text="@string/delete"
             android:background="#4D4D4D"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -81,7 +81,7 @@
             android:layout_weight="1"
             android:background="#4D4D4D"
             android:textColor="@android:color/white"
-            android:text="CANCEL" />
+            android:text="@string/cancel" />
 
         <Button
             android:id="@+id/createButton"
@@ -90,7 +90,7 @@
             android:layout_weight="1"
             android:background="#FAD348"
             android:textColor="@android:color/white"
-            android:text="CREATE" />
+            android:text="@string/create" />
     </LinearLayout>
 
 

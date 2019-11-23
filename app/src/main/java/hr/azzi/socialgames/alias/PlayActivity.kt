@@ -11,6 +11,7 @@ import com.google.android.gms.ads.MobileAds
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
+import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.SoundSystem
 import kotlinx.android.synthetic.main.activity_play.*
 import kotlinx.android.synthetic.main.dialog_play.view.*
@@ -62,7 +63,9 @@ class PlayActivity : AppCompatActivity() {
     fun loadIntrestialAd() {
         MobileAds.initialize(this) {}
         mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
+        val prod = "ca-app-pub-1489905432577426/3906492992"
+        val test =  "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.adUnitId = prod
         mInterstitialAd.loadAd(AdRequest.Builder().build())
     }
 
@@ -75,7 +78,7 @@ class PlayActivity : AppCompatActivity() {
         val bundle = Bundle()
         bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "PlayActivity")
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "PlayActivity")
-        bundle.putString("language", game._dictionary.language)
+        bundle.putString("language", DictionaryService.playingDictionary?.language)
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
@@ -87,14 +90,14 @@ class PlayActivity : AppCompatActivity() {
         }
 
         correctButton.setOnClickListener {
-            game.addMarkedWord(MarkedWord("", true))
+            game.addMarkedWord(MarkedWord(wordTextView.text.toString(), true))
             showNewWord()
             soundSystem.playRightButton()
             updateLables()
         }
 
         skipButton.setOnClickListener {
-            game.addMarkedWord(MarkedWord("", false))
+            game.addMarkedWord(MarkedWord(wordTextView.text.toString(), false))
             showNewWord()
             soundSystem.playSkipButton()
             updateLables()
@@ -113,8 +116,8 @@ class PlayActivity : AppCompatActivity() {
         view.explainingTextView.text = game.explainingPlayerName
         view.answeringTextView.text = game.answeringPlayerName
 
-        view.correctTextView.text = "$correctCount correct"
-        view.skipTextView.text = "$skipCount skipped"
+        view.correctTextView.text = "$correctCount " + resources.getString(R.string.corrected)
+        view.skipTextView.text = "$skipCount " + resources.getString(R.string.skipped)
         view.teamTextView.text = game.currentTeam.teamName
 
         val dialog = builder.show()
@@ -148,10 +151,10 @@ class PlayActivity : AppCompatActivity() {
 
     fun updateLables() {
         val correct = game.currentCorrectAnswers
-        correctTextView.text = "$correct correct"
+        correctTextView.text = "$correct " + resources.getString(R.string.corrected)
 
         var skipped = game.currentSkipAnswers
-        skipTextView.text = "$skipped skipped"
+        skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
     }
 
     // WORD

@@ -39,10 +39,6 @@ class NewGameActivity : AppCompatActivity(), TeamAdapterDelegate {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
-
-        teamDataSource.add(Team("first","second","team"))
-        teamDataSource.add(Team("first 2","second 2","team 2"))
-
         adapter.delegate = this
         listView.adapter = adapter
         listView.addFooterView(footerView)
