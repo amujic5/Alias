@@ -36,4 +36,5 @@
     <string name="skipped">skipped</string>
     <string name="score">Score:</string>
     <string name="score_settings">Score</string>
+    <string name="team_name">Team name</string>
 </resources>
