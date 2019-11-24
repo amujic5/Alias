@@ -144,6 +144,9 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
     // FlagAdapterDelegate
     override fun didClick(position: Int) {
+        if (position < 0 || position >= flags.size) {
+            return
+        }
         flags.forEach {
             it.selected = false
         }

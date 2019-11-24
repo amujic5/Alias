@@ -16,7 +16,7 @@
             android:layout_height="wrap_content"
             android:maxLines="1"
             android:inputType="text"
-            android:hint="Team name" />
+            android:hint="@string/team_name" />
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout

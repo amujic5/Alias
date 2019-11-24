@@ -1,5 +1,0 @@
-${PODS_ROOT}/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-frameworks.sh
-${BUILT_PRODUCTS_DIR}/PromiseKit/PromiseKit.framework
-${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework
-${BUILT_PRODUCTS_DIR}/Moya/Moya.framework
-${BUILT_PRODUCTS_DIR}/Result/Result.framework

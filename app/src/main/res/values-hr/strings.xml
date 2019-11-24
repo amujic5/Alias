@@ -49,4 +49,5 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="skipped">preskočenih</string>
     <string name="score">Rezultat:</string>
     <string name="score_settings">Ciljni rezultat</string>
+    <string name="team_name">Ime tima</string>
 </resources>
