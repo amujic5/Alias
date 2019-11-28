@@ -6,426 +6,36 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83a2b3a5-ca00-4dc2-869c-d9366559b94f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_samigehi_loadingview_1_1_aar.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/res/drawable/back.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/CoordinatorKit.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Router/CustomTransition/ExpendPopAnimation/ExpendPopAnimationTransitionManager.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Router/CustomTransition/ExpendPopAnimation/ExpendPopAnimator.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Router/CustomTransition/PopupAnimation/PopupAnimator.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Router/CustomTransition/PopupAnimation/PopupController.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Router/CustomTransition/PopupAnimation/PopupTransitionManager.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Router/Router.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Router/RouterImp.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Sources/BaseCoordinator.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Sources/BaseView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKit/Sources/Presentable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKitTests/CoordinatorKitTests.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/CoordinatorKitTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Podfile" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Podfile.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/AFError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/Alamofire.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/MultipartFormData.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/NetworkReachabilityManager.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/Notifications.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/ParameterEncoding.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/Request.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/Response.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/ResponseSerialization.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/Result.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/ServerTrustPolicy.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/SessionDelegate.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/SessionManager.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/TaskDelegate.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/Timeline.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Alamofire/Source/Validation.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Cache/CacheSerializer.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Cache/DiskStorage.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Cache/FormatIndicatedCacheSerializer.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Cache/ImageCache.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Cache/MemoryStorage.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Cache/Storage.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Extensions/ImageView+Kingfisher.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Extensions/UIButton+Kingfisher.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/Deprecated.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/ImageSource/ImageDataProvider.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/ImageSource/Resource.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/ImageSource/Source.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/Kingfisher.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/KingfisherError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/KingfisherManager.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/General/KingfisherOptionsInfo.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/Filter.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/GIFAnimatedImage.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/Image.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/ImageDrawing.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/ImageFormat.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/ImageProcessor.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/ImageProgressive.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/ImageTransition.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Image/Placeholder.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Kingfisher.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/AuthenticationChallengeResponsable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/ImageDataProcessor.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/ImageDownloader.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/ImageDownloaderDelegate.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/ImageModifier.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/ImagePrefetcher.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/RedirectHandler.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/RequestModifier.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/SessionDataTask.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Networking/SessionDelegate.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/Box.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/CallbackQueue.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/Delegate.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/ExtensionHelpers.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/Result.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/Runtime.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/SizeExtensions.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Utility/String+MD5.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Views/AnimatedImageView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Kingfisher/Sources/Views/Indicator.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Manifest.lock" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/License.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Readme.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/AnyEncodable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Cancellable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Endpoint.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Image.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Moya+Alamofire.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/MoyaError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/MoyaProvider+Defaults.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/MoyaProvider+Internal.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/MoyaProvider.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/MultiTarget.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/MultipartFormData.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Plugin.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Plugins/AccessTokenPlugin.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Plugins/CredentialsPlugin.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Plugins/NetworkActivityPlugin.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Plugins/NetworkLoggerPlugin.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Response.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/TargetType.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/Task.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/URL+Moya.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/URLRequest+Encoding.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Moya/Sources/Moya/ValidationType.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Alamofire.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Kingfisher.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Moya.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Pods-CoordinatorKit.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Pods-SupaGithub.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Pods-SupaGithubCoreKit.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Pods-SupaGithubCoreKitTests.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Pods-SupaGithub_iOS.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/PromiseKit.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Result.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Reusable.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/Yalta.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Alamofire.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Kingfisher.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Moya.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Pods-CoordinatorKit.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Pods-SupaGithub.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Pods-SupaGithubCoreKit.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Pods-SupaGithubCoreKitTests.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Pods-SupaGithub_iOS.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/PromiseKit.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Result.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Reusable.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/Yalta.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Pods.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSObject+Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSTask+AnyPromise.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSTask+AnyPromise.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSURLSession+AnyPromise.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSURLSession+AnyPromise.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/NSURLSession+Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/PMKFoundation.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/Process+Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/Foundation/Sources/afterlife.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/UIKit/Sources/PMKUIKit.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/UIKit/Sources/UIView+AnyPromise.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/UIKit/Sources/UIView+AnyPromise.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/UIKit/Sources/UIView+Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/UIKit/Sources/UIViewController+AnyPromise.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/UIKit/Sources/UIViewController+AnyPromise.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Extensions/UIKit/Sources/UIViewPropertyAnimator+Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/AnyPromise+Private.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/AnyPromise.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/AnyPromise.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/AnyPromise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Box.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Catchable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Configuration.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/CustomStringConvertible.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Deprecations.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Error.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Guarantee.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/LogEvent.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/NSMethodSignatureForBlock.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/PMKCallVariadicBlock.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/PromiseKit.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Resolver.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/Thenable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/after.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/after.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/dispatch_promise.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/firstly.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/fwd.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/hang.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/hang.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/join.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/race.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/race.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/when.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/PromiseKit/Sources/when.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Result/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Result/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Result/Result/AnyError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Result/Result/NoError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Result/Result/Result.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Result/Result/ResultProtocol.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/Sources/Storyboard/StoryboardBased.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/Sources/Storyboard/StoryboardSceneBased.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/Sources/View/NibLoadable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/Sources/View/NibOwnerLoadable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/Sources/View/Reusable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/Sources/View/UICollectionView+Reusable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Reusable/Sources/View/UITableView+Reusable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Alamofire/Alamofire-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Alamofire/Alamofire-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Alamofire/Alamofire.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Alamofire/Alamofire.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Kingfisher/Kingfisher-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Kingfisher/Kingfisher-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Kingfisher/Kingfisher-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Kingfisher/Kingfisher.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Kingfisher/Kingfisher.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Moya/Moya-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Moya/Moya-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Moya/Moya-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Moya/Moya-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Moya/Moya.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Moya/Moya.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit-acknowledgements.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit-acknowledgements.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit.debug.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-CoordinatorKit/Pods-CoordinatorKit.release.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-acknowledgements.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-acknowledgements.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-frameworks-Debug-input-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-frameworks-Debug-output-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-frameworks-Release-input-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-frameworks-Release-output-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-frameworks.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub.debug.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub/Pods-SupaGithub.release.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit-acknowledgements.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit-acknowledgements.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit.debug.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKit/Pods-SupaGithubCoreKit.release.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-acknowledgements.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-acknowledgements.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-frameworks-Debug-input-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-frameworks-Debug-output-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-frameworks-Release-input-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-frameworks-Release-output-files.xcfilelist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-frameworks.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests.debug.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithubCoreKitTests/Pods-SupaGithubCoreKitTests.release.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS-acknowledgements.markdown" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS-acknowledgements.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS.debug.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Pods-SupaGithub_iOS/Pods-SupaGithub_iOS.release.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/PromiseKit/PromiseKit-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/PromiseKit/PromiseKit-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/PromiseKit/PromiseKit-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/PromiseKit/PromiseKit-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/PromiseKit/PromiseKit.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/PromiseKit/PromiseKit.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Result/Result-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Result/Result-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Result/Result-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Result/Result-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Result/Result.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Result/Result.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Reusable/Reusable-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Reusable/Reusable-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Reusable/Reusable-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Reusable/Reusable-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Reusable/Reusable.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Reusable/Reusable.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Yalta/Yalta-Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Yalta/Yalta-dummy.m" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Yalta/Yalta-prefix.pch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Yalta/Yalta-umbrella.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Yalta/Yalta.modulemap" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Target Support Files/Yalta/Yalta.xcconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Yalta/LICENSE" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Yalta/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/Pods/Yalta/Sources/Yalta.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcodeproj/project.pbxproj" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcodeproj/project.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcodeproj/xcshareddata/xcschemes/SupaGithub.xcscheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcodeproj/xcuserdata/amujic5.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcodeproj/xcuserdata/kirito.xcuserdatad/xcschemes/xcschememanagement.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcworkspace/contents.xcworkspacedata" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcworkspace/xcshareddata/WorkspaceSettings.xcsettings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcworkspace/xcuserdata/amujic5.xcuserdatad/UserInterfaceState.xcuserstate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcworkspace/xcuserdata/amujic5.xcuserdatad/WorkspaceSettings.xcsettings" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcworkspace/xcuserdata/amujic5.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub.xcworkspace/xcuserdata/kirito.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/AppDelegate.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/AppIcon.appiconset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/avatar.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/avatar.imageset/avatar.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/close.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/close.imageset/cancel-music-2.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/code.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/code.imageset/icons8-source-code-26.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/company.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/company.imageset/company.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/email.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/email.imageset/black-envelope.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/filter.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/filter.imageset/icons8-filter-filled-50.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/git-branch.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/git-branch.imageset/PinClipart.com_obgyn-clipart_1979961.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/link.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/link.imageset/link-symbol.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/location.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/location.imageset/placeholder-filled-point.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/search.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/search.imageset/search.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/sort-asc.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/sort-asc.imageset/sort-from-a-to-z-in-ascending-order(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/sort-desc.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/sort-desc.imageset/sort-from-a-to-z-in-alphabetical-ascending-order(1).png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/star.imageset/Contents.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Assets.xcassets/star.imageset/star.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Base.lproj/LaunchScreen.storyboard" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/CoreKit.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Models/Repository.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Models/ResultRepository.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Models/User.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/GithubRepository.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/Remote/GithubRemoteApi.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/Remote/Implementation/ApiError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/Remote/Implementation/GithubApi.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/Remote/Implementation/GithubApiEnvironment.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/Remote/Implementation/MoyaGithubRemoteApi.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/Remote/Implementation/NetworkResponsePlugin.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/DataLayer/Repositories/SupaGithubRepository.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/Reusable/ErrorWrapper.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/Reusable/ListSectionModel.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/Reusable/Moya+Promise.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/UILayer/Dashboard/Repository/RepositoryInteractor.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/UILayer/Dashboard/Repository/RepositoryViewModel.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/UILayer/Dashboard/UserDetail/UserDetailInteractor.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKit/UILayer/Dashboard/UserDetail/UserDetailViewModel.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKitTests/FakeRepository/FakeGithubRepository.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKitTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKitTests/RepositoryInteractorTest.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubCoreKitTests/mockData/repositories.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithubTests/SupaGithubTests.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/AppCoordinator.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/AppDependencyContainer.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Launch/LaunchRootView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Launch/LaunchViewController.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/Repositories/Cell/RepositoryTableViewCell.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/Repositories/EmptyDataSetView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/Repositories/EmptyDataSetViewModel.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/Repositories/RepositoryRootView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/Repositories/RepositoryTableViewConfiguration.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/Repositories/RepositoryViewController.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/UserDetail/UserDetailRootView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Screens/UserDetail/UserDetailViewController.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/SupaGithub_iOS.h" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/ClosureAliases.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Debouncer.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/DisplayableError.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Extensions/UIActivityIndicator+Extension.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Extensions/UIIMageView+Extension.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Extensions/UIStackView+Extension.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/InteractorState.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/LoadableView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/NiblessComponent/NiblessView.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/NiblessComponent/NiblessViewController.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Theme/AppViewFactory.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Theme/Style.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Theme/UIColor+Styles.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Theme/UIFont+Style.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/Theme/UIView+Extensions.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOS/Utils/ViewConfigurable.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOSTests/Info.plist" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/SupaGithub_iOSTests/SupaGithub_iOSTests.swift" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/SupaGithub-master/architecture.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Alias.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Alias.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/google-services.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/google-services.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Dictionary.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Dictionary.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/NewGameActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/NewGameActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/back.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/team_item.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/team_item.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/dialog_play.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/dialog_play.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -452,58 +62,32 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/edit_answer_item.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+            <state relative-caret-position="2295">
+              <caret line="153" column="52" selection-start-line="153" selection-start-column="52" selection-end-line="153" selection-end-column="52" />
             </state>
           </provider>
           <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-              <folding>
-                <element signature="e#3352#3368#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="120">
+              <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_answers.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="447">
-              <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
-              <folding>
-                <element signature="e#665#687#0" expanded="true" />
-              </folding>
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_game.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="1185">
+              <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
             </state>
           </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/team_item.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-            </state>
-          </provider>
-          <provider editor-type-id="android-designer2" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="522">
-              <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
-            </state>
-          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -516,8 +100,42 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-          <provider selected="true" editor-type-id="text-editor" />
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_how_to_play.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="840">
+              <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-designer2" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="510">
+              <caret line="34" selection-start-line="34" selection-end-line="34" />
+            </state>
+          </provider>
+          <provider editor-type-id="android-manifest" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="2175">
+              <caret line="159" column="11" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="885">
+              <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+            </state>
+          </provider>
+          <provider selected="true" editor-type-id="android-designer2" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -529,22 +147,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="127">
-              <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="570">
-              <caret line="38" column="4" selection-start-line="38" selection-start-column="4" selection-end-line="38" selection-end-column="47" />
+            <state relative-caret-position="225">
+              <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
             </state>
           </provider>
+          <provider editor-type-id="android-designer2" />
         </entry>
       </file>
     </leaf>
@@ -563,8 +173,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>socialgames</find>
-      <find>hr.azzi.socialgaames</find>
       <find>8</find>
       <find>play</find>
       <find>hr.azzi.socialg</find>
@@ -593,6 +201,8 @@
       <find>score</find>
       <find>team</find>
       <find>rije</find>
+      <find>Photo capture succeeded</find>
+      <find>executor</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -627,7 +237,6 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/result_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/TeamScoreItem.kt" />
         <option value="$PROJECT_DIR$/build.gradle" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Dictionary.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/NewGameActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt" />
@@ -639,16 +248,12 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/flag.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_edit_answers.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_how_to_play.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_new_game.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/add_team_footer.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_play.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Adapters/WordAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/SwitchTheme.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/edit_answer_item.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/EditAnswersActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt" />
@@ -657,13 +262,19 @@
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml" />
-        <option value="$PROJECT_DIR$/app/build.gradle" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_play.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_how_to_play.xml" />
+        <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="53" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
   </component>
@@ -673,6 +284,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="ProjectPane" />
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -683,11 +297,6 @@
             <path>
               <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="manifests" type="f94875db:AndroidManifestsGroupNode" />
-            </path>
-            <path>
-              <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
             </path>
             <path>
@@ -695,31 +304,6 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="alias" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="alias" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="Adapters" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-            </path>
-            <path>
-              <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-            </path>
-            <path>
-              <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="values" type="ddeffd01:AndroidResFolderTypeNode" />
-              <item name="strings" type="c431d0b8:AndroidResGroupNode" />
             </path>
             <path>
               <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
@@ -729,9 +313,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -741,6 +322,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/values-hr" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
+    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -860,16 +442,16 @@
       <window_info id="Designer" order="6" />
       <window_info id="Resources Explorer" order="7" weight="0.32967034" />
       <window_info id="Capture Tool" order="8" />
-      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.497558" weight="0.32941177" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.48229548" weight="0.37005347" />
+      <window_info anchor="bottom" id="Run" order="0" sideWeight="0.4969475" weight="0.32941177" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.47985348" weight="0.37005347" />
       <window_info anchor="bottom" id="TODO" order="2" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.495116" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.34676436" side_tool="true" visible="true" weight="0.23636363" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.34920636" side_tool="true" visible="true" weight="0.23636363" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6532357" visible="true" weight="0.23636363" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.6507937" visible="true" weight="0.23636363" />
       <window_info anchor="bottom" id="Find" order="8" sideWeight="0.4993895" weight="0.3144385" />
-      <window_info anchor="bottom" id="Android Profiler" order="9" weight="0.32941177" />
+      <window_info anchor="bottom" id="Android Profiler" order="9" show_stripe_button="false" weight="0.32941177" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
       <window_info anchor="right" id="Capture Analysis" order="1" />
       <window_info anchor="right" id="Gradle" order="2" />
@@ -939,8 +521,6 @@ import java.util.ArrayList</custom-info>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-hdpi/ic_launcher.png" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-xhdpi/ic_launcher.png" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/mipmap-mdpi/ic_launcher.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -993,9 +573,6 @@ import java.util.ArrayList</custom-info>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/pause.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/play.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable-v24/ic_launcher_foreground.xml">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1007,61 +584,6 @@ import java.util.ArrayList</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="32" lean-forward="true" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="477">
-          <caret line="59" column="31" lean-forward="true" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
-          <folding>
-            <element signature="e#781#802#0" expanded="true" />
-            <element signature="e#1371#1389#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_how_to_play.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="536">
-          <caret line="53" column="34" lean-forward="true" selection-start-line="53" selection-start-column="34" selection-end-line="53" selection-end-column="34" />
-          <folding>
-            <element signature="e#580#596#0" expanded="true" />
-            <element signature="e#1063#1084#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_game.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="267">
-          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
-          <folding>
-            <element signature="e#651#669#0" expanded="true" />
-            <element signature="e#1488#1503#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-933">
-          <caret line="54" column="29" selection-start-line="54" selection-start-column="29" selection-end-line="54" selection-end-column="29" />
-          <folding>
-            <element signature="e#1826#1840#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_team_footer.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1070,66 +592,11 @@ import java.util.ArrayList</custom-info>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_play.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="106" column="39" selection-start-line="106" selection-start-column="39" selection-end-line="106" selection-end-column="39" />
-          <folding>
-            <element signature="e#2542#2556#0" expanded="true" />
-            <element signature="e#3050#3070#0" expanded="true" />
-            <element signature="e#3462#3480#0" expanded="true" />
-            <element signature="e#3883#3901#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/flag.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider editor-type-id="android-manifest" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="17" selection-start-line="17" selection-start-column="17" selection-end-line="17" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/result_item.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/SwitchTheme.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" lean-forward="true" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values/SwitchTheme.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/styles.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="405">
           <caret line="27" selection-start-line="27" selection-end-line="27" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="309">
-          <caret line="93" column="45" selection-start-line="93" selection-start-column="45" selection-end-line="93" selection-end-column="45" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="13" column="8" selection-start-line="13" selection-start-column="8" selection-end-line="13" selection-end-column="32" />
         </state>
       </provider>
     </entry>
@@ -1163,13 +630,6 @@ import java.util.ArrayList</custom-info>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="213">
           <caret line="85" column="17" selection-start-line="85" selection-start-column="17" selection-end-line="85" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="407">
-          <caret line="34" column="26" lean-forward="true" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
         </state>
       </provider>
     </entry>
@@ -1221,54 +681,15 @@ import java.util.ArrayList</custom-info>
       </provider>
       <provider editor-type-id="android-designer2" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="303">
-          <caret line="159" column="11" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
-          <folding>
-            <element signature="e#4435#4474#0" expanded="true" />
-            <element signature="e#4564#4601#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="765">
+          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_answers.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="447">
-          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
-          <folding>
-            <element signature="e#665#687#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/team_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/edit_answer_item.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
-          <folding>
-            <element signature="e#3352#3368#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="android-designer2" />
+    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
@@ -1277,12 +698,125 @@ import java.util.ArrayList</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="522">
-          <caret line="51" column="37" selection-start-line="51" selection-start-column="37" selection-end-line="51" selection-end-column="37" />
+        <state relative-caret-position="127">
+          <caret line="125" selection-start-line="125" selection-end-line="125" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/net/Uri.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="244">
+          <caret line="54" column="22" selection-start-line="54" selection-start-column="22" selection-end-line="54" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/android/content/Intent.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="229">
+          <caret line="8153" column="53" selection-start-line="8153" selection-start-column="53" selection-end-line="8153" selection-end-column="53" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="122">
+          <caret line="34" column="26" selection-start-line="34" selection-start-column="26" selection-end-line="34" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/play.png">
+      <provider selected="true" editor-type-id="images" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="403">
+          <caret line="80" column="8" selection-start-line="80" selection-start-column="8" selection-end-line="80" selection-end-column="48" />
+          <folding>
+            <element signature="e#2289#2306#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="270">
+          <caret line="18" column="28" selection-start-line="18" selection-start-column="28" selection-end-line="18" selection-end-column="28" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_play.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="175">
+          <caret line="78" column="48" selection-start-line="78" selection-start-column="48" selection-end-line="78" selection-end-column="48" />
+          <folding>
+            <element signature="e#4246#4265#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/edit_answer_item.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="28" column="34" selection-start-line="28" selection-start-column="34" selection-end-line="28" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/flag.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="41" selection-start-line="15" selection-start-column="41" selection-end-line="15" selection-end-column="41" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/result_item.xml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/team_item.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="34" selection-start-line="14" selection-start-column="34" selection-end-line="14" selection-end-column="34" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_answers.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="2190">
+          <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="153" column="52" selection-start-line="153" selection-start-column="52" selection-end-line="153" selection-end-column="52" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="37" column="47" selection-start-line="37" selection-start-column="47" selection-end-line="37" selection-end-column="47" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_new_game.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="1185">
+          <caret line="79" column="32" selection-start-line="79" selection-start-column="32" selection-end-line="79" selection-end-column="32" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -1291,8 +825,21 @@ import java.util.ArrayList</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_how_to_play.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="840">
+          <caret line="56" column="17" selection-start-line="56" selection-start-column="17" selection-end-line="56" selection-end-column="17" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_home.xml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="885">
+          <caret line="59" column="31" selection-start-line="59" selection-start-column="31" selection-end-line="59" selection-end-column="31" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="android-designer2" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/build.gradle">
       <provider selected="true" editor-type-id="text-editor">
@@ -1301,12 +848,28 @@ import java.util.ArrayList</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt">
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="127">
-          <caret line="125" lean-forward="true" selection-start-line="125" selection-end-line="125" />
+        <state relative-caret-position="225">
+          <caret line="15" column="32" selection-start-line="15" selection-start-column="32" selection-end-line="15" selection-end-column="32" />
         </state>
       </provider>
+      <provider editor-type-id="android-designer2" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2175">
+          <caret line="159" column="11" selection-start-line="159" selection-start-column="11" selection-end-line="159" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        </state>
+      </provider>
+      <provider editor-type-id="android-manifest" />
     </entry>
   </component>
 </project>
