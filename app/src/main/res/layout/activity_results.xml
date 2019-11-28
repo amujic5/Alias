@@ -151,6 +151,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="45dp"
             android:text="@string/explaining"
+            android:fontFamily="@font/roboto_medium"
             app:layout_constraintStart_toStartOf="@+id/nextTeamTextView"
             app:layout_constraintTop_toBottomOf="@+id/nextTeamTextView" />
 
@@ -180,6 +181,7 @@
             android:layout_height="wrap_content"
             android:layout_marginStart="100dp"
             android:text="@string/answering"
+            android:fontFamily="@font/roboto_medium"
             app:layout_constraintStart_toEndOf="@+id/textView10"
             app:layout_constraintTop_toTopOf="@+id/textView10" />
 

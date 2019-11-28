@@ -76,6 +76,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
         android:text="@string/explaining"
+        android:fontFamily="@font/roboto_medium"
         app:layout_constraintStart_toStartOf="@+id/correctTextView"
         app:layout_constraintTop_toBottomOf="@+id/correctTextView" />
 
@@ -105,6 +106,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="100dp"
         android:text="@string/answering"
+        android:fontFamily="@font/roboto_medium"
         app:layout_constraintStart_toEndOf="@+id/textView10"
         app:layout_constraintTop_toTopOf="@+id/textView10" />
 
