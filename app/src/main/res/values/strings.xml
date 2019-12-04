@@ -37,4 +37,8 @@
     <string name="score">Score:</string>
     <string name="score_settings">Score</string>
     <string name="team_name">Team name</string>
+    <string name="warning">Warning!</string>
+    <string name="are_you_sure_quit">Are you sure that you want to quit the game?</string>
+    <string name="yes">YES</string>
+    <string name="no">No</string>
 </resources>

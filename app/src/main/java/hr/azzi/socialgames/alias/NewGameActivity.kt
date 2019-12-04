@@ -107,7 +107,7 @@ class NewGameActivity : AppCompatActivity(), TeamAdapterDelegate {
                 it.secondPlayer = view.player2EditText.text.toString()
                 adapter.notifyDataSetChanged()
             } ?: kotlin.run {
-                val newTeam = Team(view.teamEditText.text.toString(), view.player1EditText.text.toString(), view.player2EditText.text.toString())
+                val newTeam = Team(view.player1EditText.text.toString(), view.player2EditText.text.toString(), view.teamEditText.text.toString())
                 teamDataSource.add(newTeam)
                 adapter.notifyDataSetChanged()
             }
