@@ -77,8 +77,8 @@ class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
 
     fun updateUI() {
         teamTextView.text = game.currentTeam.teamName
-        correctTextView.text = "$currentCorrectAnswers " + R.string.corrected
-        skipTextView.text = "$currentSkipAnswers " + R.string.skipped
+        correctTextView.text = "$currentCorrectAnswers " + resources.getString(R.string.corrected)
+        skipTextView.text = "$currentSkipAnswers " + resources.getString(R.string.skipped)
     }
 
     override fun didChangeSwitchValue(isChecked: Boolean, position: Int) {

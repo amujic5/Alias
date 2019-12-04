@@ -50,4 +50,8 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="score">Rezultat:</string>
     <string name="score_settings">Ciljni rezultat</string>
     <string name="team_name">Ime tima</string>
+    <string name="warning">Upozorenje!</string>
+    <string name="are_you_sure_quit">Jeste li sigurni da želite prekinuti igru?</string>
+    <string name="yes">DA</string>
+    <string name="no">NE</string>
 </resources>

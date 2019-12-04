@@ -24,8 +24,9 @@ class PlayActivity : AppCompatActivity() {
     var timer: CountDownTimer? = null
     var estimation = 60
     var isRunning = false
-    var correctCount = 0
-    var skipCount = 0
+
+    var finishDialog: AlertDialog? = null
+    var dialog: AlertDialog? = null
 
     val game: Game by lazy {
         intent.getParcelableExtra("game") as Game
@@ -105,6 +106,9 @@ class PlayActivity : AppCompatActivity() {
     }
 
     fun showDialog() {
+        this.dialog?.dismiss()
+        this.finishDialog?.dismiss()
+
         val context = this
         val builder = AlertDialog.Builder(context)
 
@@ -116,15 +120,18 @@ class PlayActivity : AppCompatActivity() {
         view.explainingTextView.text = game.explainingPlayerName
         view.answeringTextView.text = game.answeringPlayerName
 
-        view.correctTextView.text = "$correctCount " + resources.getString(R.string.corrected)
-        view.skipTextView.text = "$skipCount " + resources.getString(R.string.skipped)
+        val correct = game.currentCorrectAnswers
+        view.correctTextView.text = "$correct " + resources.getString(R.string.corrected)
+        var skipped = game.currentSkipAnswers
+        view.skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
         view.teamTextView.text = game.currentTeam.teamName
 
         val dialog = builder.show()
+        this.dialog = dialog
 
         view.stopButton.setOnClickListener {
             dialog.dismiss()
-            finish()
+            showFinishDialog()
         }
 
         view.playButton.setOnClickListener {
@@ -133,6 +140,38 @@ class PlayActivity : AppCompatActivity() {
         }
 
     }
+
+    fun showFinishDialog() {
+        this.dialog?.dismiss()
+        this.finishDialog?.dismiss()
+
+        val builder = AlertDialog.Builder(this)
+
+        builder.setTitle(getString(R.string.warning))
+
+        // Display a message on alert dialog
+        builder.setMessage(getString(R.string.are_you_sure_quit))
+
+        // Set a positive button and its click listener on alert dialog
+        builder.setPositiveButton(getString(R.string.yes)){ dialog, which ->
+            finish()
+        }
+
+
+        // Display a negative button on alert dialog
+        builder.setNegativeButton(getString(R.string.no)){ dialog, which ->
+            showDialog()
+        }
+
+        // Finally, make the alert dialog using builder
+        val dialog: AlertDialog = builder.create()
+
+        // Display the alert dialog on app interface
+        dialog.show()
+
+        this.finishDialog = dialog
+    }
+
 
     override fun onPause() {
         super.onPause()
@@ -174,6 +213,10 @@ class PlayActivity : AppCompatActivity() {
         timer = object: CountDownTimer((estimation * 10000).toLong(), 1000) {
             override fun onTick(millisUntilFinished: Long) {
 
+                if (!isRunning) {
+                    cancel()
+                    return
+                }
                 if (estimation < 10) {
                     soundSystem.playTikTok()
                 }
@@ -202,7 +245,9 @@ class PlayActivity : AppCompatActivity() {
         intent.putExtra("game", game)
         startActivity(intent)
         finish()
-        mInterstitialAd.show()
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+        }
     }
 
 

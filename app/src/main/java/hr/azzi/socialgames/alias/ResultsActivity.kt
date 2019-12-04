@@ -3,6 +3,7 @@ package hr.azzi.socialgames.alias
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import hr.azzi.socialgames.alias.Adapters.TeamScoreAdapter
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
@@ -31,6 +32,9 @@ class ResultsActivity : AppCompatActivity() {
         game.currentTeamHasFinishedTheRound()
         reload()
         observe()
+    }
+
+    override fun onBackPressed() {
     }
 
     fun reload() {
@@ -62,12 +66,15 @@ class ResultsActivity : AppCompatActivity() {
 
         if (game.nextTeam == null) {
             constraintLayout3.alpha = 0F
+            constraintLayout3.visibility = View.GONE
             finishButton.alpha = 1F
+            finishButton.visibility = View.VISIBLE
         } else {
             constraintLayout3.alpha = 1F
+            constraintLayout3.visibility = View.VISIBLE
             finishButton.alpha = 0F
+            finishButton.visibility = View.GONE
         }
-
 
     }
 
