@@ -5,7 +5,6 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import androidx.recyclerview.widget.GridLayoutManager
-import com.github.loadingview.LoadingDialog
 import hr.azzi.socialgames.alias.Adapters.FlagAdapter
 import hr.azzi.socialgames.alias.Adapters.FlagAdapterDelegate
 import hr.azzi.socialgames.alias.Models.Dictionary
@@ -13,7 +12,6 @@ import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.Service.DictionaryService
-import kotlinx.android.synthetic.main.activity_new_game.*
 import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_settings.backButton
 import kotlinx.android.synthetic.main.activity_settings.vsTextView
@@ -49,28 +47,15 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
     }
 
     fun loadData() {
-        val dialog = LoadingDialog.get(this).show()
+        dictionaries = DictionaryService.instance.getDictionaries(this)
+        flags[0].selected = true
 
-        DictionaryService.instance.fetchDictionaries {
+        adapter = FlagAdapter(flags)
+        recyclerView.adapter = adapter
+        adapter.delegate = this
 
-            dialog?.hide()
-
-            if (it.isEmpty()) {
-                finish()
-                Toast.makeText(this, "Check you internet and try again!", Toast.LENGTH_LONG).show()
-
-            } else {
-                dictionaries = it
-                flags[0].selected = true
-
-                adapter = FlagAdapter(flags)
-                recyclerView.adapter = adapter
-                adapter.delegate = this
-
-                updateVsTextView()
-                observe()
-            }
-        }
+        updateVsTextView()
+        observe()
     }
 
     fun observe() {
@@ -90,30 +75,20 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
         var index = flags.indexOfFirst { it.selected }
         val selectedDictionary = dictionaries[index]
 
-        val dialog = LoadingDialog.get(this).show()
 
-        var callback: (ArrayList<String>) -> Unit = {
-            dialog?.hide()
-            if (it.isEmpty()) {
-                Toast.makeText(this, "Please try again", Toast.LENGTH_LONG).show()
-            } else {
-                val newGame = Game(
-                    false,
-                    time,
-                    score,
-                    teams,
-                    it,
-                    0
-                )
-                DictionaryService.playingDictionary = selectedDictionary
+        val newGame = Game(
+            false,
+            time,
+            score,
+            teams,
+            ArrayList(selectedDictionary.words),
+            0
+        )
+        DictionaryService.playingDictionary = selectedDictionary
 
-                val intent =  Intent(this, PlayActivity::class.java)
-                intent.putExtra("game", newGame)
-                startActivity(intent)
-            }
-
-        }
-        DictionaryService.instance.fetchWords(selectedDictionary.languageCode, callback)
+        val intent =  Intent(this, PlayActivity::class.java)
+        intent.putExtra("game", newGame)
+        startActivity(intent)
     }
 
 

@@ -21,8 +21,6 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         observe()
-
-        val a = DictionaryService()
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
