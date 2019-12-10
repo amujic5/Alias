@@ -32,6 +32,10 @@
             android:value="ca-app-pub-1489905432577426~2503811790" />
     </application>
 
+    <uses-feature android:name="android.hardware.camera"
+        android:required="true" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
 
 
 </manifest>

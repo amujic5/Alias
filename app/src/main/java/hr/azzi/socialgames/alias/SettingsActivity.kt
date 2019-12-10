@@ -12,6 +12,7 @@ import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.Service.DictionaryService
+import hr.azzi.socialgames.alias.Service.RecordingFlag
 import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_settings.backButton
 import kotlinx.android.synthetic.main.activity_settings.vsTextView
@@ -85,6 +86,8 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
             0
         )
         DictionaryService.playingDictionary = selectedDictionary
+
+        RecordingFlag.recordingEnabled = recordingCheckbox.isChecked
 
         val intent =  Intent(this, PlayActivity::class.java)
         intent.putExtra("game", newGame)

@@ -6,11 +6,16 @@
     </shared>
   </component>
   <component name="AndroidLogFilters">
-    <option name="TOOL_WINDOW_LOG_LEVEL" value="debug" />
+    <option name="TOOL_WINDOW_LOG_LEVEL" value="verbose" />
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="No Filters" />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="83a2b3a5-ca00-4dc2-869c-d9366559b94f" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_camera_camera_camera2_1_0_0_alpha06_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_camera_camera_core_1_0_0_alpha06_aar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_concurrent_concurrent_futures_1_0_0_alpha03_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__com_google_guava_listenablefuture_1_0_jar.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/RecordingFlag.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -21,8 +26,20 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_arch_core_core_runtime_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_0_0_aar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Gradle__androidx_lifecycle_lifecycle_livedata_core_2_1_0_aar.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/app/app.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,22 +66,19 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/EditAnswersActivity.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="945">
-              <caret line="73" column="9" selection-start-line="73" selection-start-column="9" selection-end-line="73" selection-end-column="9" />
-              <folding>
-                <element signature="e#35#633#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="284">
+              <caret line="342" column="54" selection-start-line="342" selection-start-column="40" selection-end-line="342" selection-end-column="54" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/build.gradle">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+            <state relative-caret-position="299">
+              <caret line="171" selection-start-line="171" selection-end-line="171" />
             </state>
           </provider>
         </entry>
@@ -72,20 +86,31 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-829">
-              <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
+            <state relative-caret-position="505">
+              <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="39" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="231">
+              <caret line="253" column="55" selection-start-line="253" selection-start-column="55" selection-end-line="253" selection-end-column="55" />
               <folding>
-                <element signature="e#35#875#0" expanded="true" />
+                <element signature="e#4354#4378#0" expanded="true" />
+                <element signature="e#12624#12644#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="83">
-              <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+            <state relative-caret-position="44">
+              <caret line="44" selection-start-line="44" selection-start-column="2" selection-end-line="48" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -99,11 +124,20 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/RecordingFlag.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="45">
+              <caret line="3" column="19" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="19" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.camera/camera-core/1.0.0-alpha06/17e9318bc0fbafaf01101ee9999b9d4699b1924e/camera-core-1.0.0-alpha06-sources.jar!/androidx/camera/core/impl/utils/executor/CameraXExecutors.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="97">
+              <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
             </state>
           </provider>
         </entry>
@@ -111,39 +145,18 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
-              <folding>
-                <element signature="e#43#379#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="105">
+              <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="5" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/full_json.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-88043">
-              <caret line="26070" column="14" selection-start-line="26070" selection-start-column="14" selection-end-line="26070" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="990">
-              <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml">
-          <provider editor-type-id="android-designer2" />
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="420">
-              <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <provider selected="true" editor-type-id="android-designer2" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="410">
+              <caret line="159" column="31" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
             </state>
           </provider>
         </entry>
@@ -164,16 +177,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>winner</find>
-      <find>vvv</find>
-      <find>_dictionary</find>
-      <find>_words</find>
-      <find>_dic</find>
-      <find>edit</find>
-      <find>addMarkedWord</find>
-      <find>editan</find>
-      <find>correct</find>
-      <find>corr</find>
       <find>r.string</find>
       <find>r.str</find>
       <find>score</find>
@@ -194,6 +197,16 @@
       <find>languagecode</find>
       <find>яхта</find>
       <find>ярмарка</find>
+      <find>update</find>
+      <find>showres</find>
+      <find>videoCapture</find>
+      <find>startCamera</find>
+      <find>startcam</find>
+      <find>startCamera()</find>
+      <find>startre</find>
+      <find>Video File</find>
+      <find>viewFinder</find>
+      <find>fileURIStrings</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -211,8 +224,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgaames/alias/FullscreenActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgaames/alias/HomeActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgaames/alias/HowToPlayActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgaames/alias/Service/DictionaryService.kt" />
@@ -244,28 +255,30 @@
         <option value="$PROJECT_DIR$/app/src/main/res/values/styles.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Adapters/TeamScoreAdapter.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_play.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_results.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_how_to_play.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/NewGameActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/EditAnswersActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/raw/full_json.json" />
+        <option value="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/RecoordingFlag.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/RecordingFlag.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds">
     <option name="y" value="23" />
     <option name="width" value="1680" />
     <option name="height" value="1027" />
@@ -276,9 +289,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="ProjectPane" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -300,13 +310,20 @@
             <path>
               <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
+              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
+              <item name="alias" type="cbb59c9e:AndroidPsiDirectoryNode" />
+              <item name="Service" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
+              <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
             </path>
             <path>
               <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="res" type="d4f16f75:AndroidResFolderNode" />
-              <item name="raw" type="ddeffd01:AndroidResFolderTypeNode" />
+              <item name="layout" type="ddeffd01:AndroidResFolderTypeNode" />
             </path>
             <path>
               <item name="Alias" type="1abcf292:AndroidViewProjectNode" />
@@ -316,6 +333,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -327,7 +347,7 @@
     <property name="android.sdk.path" value="$USER_HOME$/Library/Android/sdk" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/app/src/main/res/values-hr" />
     <property name="not.eligible.for.single.variant.sync" value="true" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.project.gradle" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -436,6 +456,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="1027" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
       <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.24725275" />
@@ -447,13 +468,13 @@
       <window_info id="Resources Explorer" order="7" weight="0.32967034" />
       <window_info id="Capture Tool" order="8" />
       <window_info anchor="bottom" id="Run" order="0" sideWeight="0.496337" weight="0.32941177" />
-      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.47802198" weight="0.37005347" />
+      <window_info anchor="bottom" id="Logcat" order="1" sideWeight="0.47435898" weight="0.32834226" />
       <window_info anchor="bottom" id="TODO" order="2" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.4945055" weight="0.32941177" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.493895" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.4993895" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.44566545" side_tool="true" visible="true" weight="0.23636363" />
+      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.506105" side_tool="true" visible="true" weight="0.32941177" />
       <window_info anchor="bottom" id="Version Control" order="6" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.5543346" visible="true" weight="0.23636363" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.5518926" weight="0.23636363" />
       <window_info anchor="bottom" id="Find" order="8" sideWeight="0.4993895" weight="0.3144385" />
       <window_info anchor="bottom" id="Android Profiler" order="9" weight="0.32941177" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -463,20 +484,6 @@
       <window_info anchor="right" id="Preview" order="4" weight="0.2014652" />
       <window_info anchor="right" id="Palette&#9;" order="5" />
     </layout>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt</url>
-          <line>171</line>
-          <properties>
-            <option name="lambda-ordinal" value="-1" />
-          </properties>
-          <option name="timeStamp" value="13" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
     <expressions id="evaluateExpression">
@@ -535,20 +542,6 @@ import java.util.ArrayList</custom-info>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/762f7cb9f1331dab7242eecca76c7860/appcompat-1.1.0/res/values/values.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="33795">
-          <caret line="2253" column="35" selection-start-line="2253" selection-start-column="35" selection-end-line="2253" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/FlagModel.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="1" selection-start-line="3" selection-start-column="1" selection-end-line="3" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/drawable/back.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
@@ -563,13 +556,6 @@ import java.util.ArrayList</custom-info>
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_edit_answers2.xml" />
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="37" column="31" selection-start-line="37" selection-start-column="31" selection-end-line="37" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/add_team_footer.xml">
       <provider editor-type-id="android-designer2" />
       <provider selected="true" editor-type-id="text-editor">
@@ -621,18 +607,6 @@ import java.util.ArrayList</custom-info>
           <folding>
             <element signature="e#44#410#0" expanded="true" />
             <element signature="e#1063#1106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="206">
-          <caret line="102" column="20" selection-start-line="102" selection-start-column="20" selection-end-line="102" selection-end-column="20" />
-          <folding>
-            <element signature="e#4354#4378#0" expanded="true" />
-            <element signature="e#12031#12051#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -744,21 +718,6 @@ import java.util.ArrayList</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/java/util/concurrent/Executors.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-4795">
-          <caret line="95" column="57" lean-forward="true" selection-start-line="95" selection-start-column="57" selection-end-line="95" selection-end-column="57" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-      <provider editor-type-id="android-manifest" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HowToPlayActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -788,16 +747,6 @@ import java.util.ArrayList</custom-info>
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="386">
           <caret line="107" column="46" selection-start-line="107" selection-start-column="46" selection-end-line="107" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="49" column="18" selection-start-line="49" selection-start-column="8" selection-end-line="49" selection-end-column="18" />
-          <folding>
-            <element signature="e#35#712#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -832,35 +781,53 @@ import java.util.ArrayList</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="990">
-          <caret line="76" column="9" selection-start-line="76" selection-start-column="9" selection-end-line="76" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml">
-      <provider editor-type-id="android-designer2" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="420">
-          <caret line="28" column="51" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-829">
-          <caret line="45" column="18" selection-start-line="45" selection-start-column="18" selection-end-line="45" selection-end-column="18" />
-          <folding>
-            <element signature="e#35#875#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="83">
+        <state relative-caret-position="255">
           <caret line="22" column="17" selection-start-line="22" selection-start-column="17" selection-end-line="22" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-28/java/util/concurrent/Executors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="510">
+          <caret line="77" column="13" selection-start-line="77" selection-start-column="13" selection-end-line="77" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+      <provider editor-type-id="android-manifest" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="38" selection-start-line="38" selection-end-line="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/full_json.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391050">
+          <caret line="26070" column="14" selection-start-line="26070" selection-start-column="14" selection-end-line="26070" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="58" column="1" selection-start-line="58" selection-start-column="1" selection-end-line="58" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/androidx.camera/camera-core/1.0.0-alpha06/17e9318bc0fbafaf01101ee9999b9d4699b1924e/camera-core-1.0.0-alpha06-sources.jar!/androidx/camera/core/impl/utils/executor/CameraXExecutors.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="97">
+          <caret line="37" column="43" selection-start-line="37" selection-start-column="43" selection-end-line="37" selection-end-column="43" />
         </state>
       </provider>
     </entry>
@@ -873,32 +840,63 @@ import java.util.ArrayList</custom-info>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="63" column="35" selection-start-line="63" selection-start-column="35" selection-end-line="63" selection-end-column="35" />
+        <state relative-caret-position="105">
+          <caret line="12" selection-start-line="12" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/RecordingFlag.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="19" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="19" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/SettingsActivity.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="89" column="8" selection-start-line="89" selection-start-column="8" selection-end-line="89" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_settings.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="253" column="55" selection-start-line="253" selection-start-column="55" selection-end-line="253" selection-end-column="55" />
           <folding>
-            <element signature="e#43#379#0" expanded="true" />
+            <element signature="e#4354#4378#0" expanded="true" />
+            <element signature="e#12624#12644#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/full_json.json">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-88043">
-          <caret line="26070" column="14" selection-start-line="26070" selection-start-column="14" selection-end-line="26070" selection-end-column="14" />
+        <state relative-caret-position="284">
+          <caret line="342" column="54" selection-start-line="342" selection-start-column="40" selection-end-line="342" selection-end-column="54" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="49" selection-start-line="17" selection-start-column="49" selection-end-line="17" selection-end-column="49" />
+        <state relative-caret-position="299">
+          <caret line="171" selection-start-line="171" selection-end-line="171" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/build.gradle">
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ResultsActivity.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="44">
+          <caret line="44" selection-start-line="44" selection-start-column="2" selection-end-line="48" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_play.xml">
+      <provider selected="true" editor-type-id="android-designer2" />
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="410">
+          <caret line="159" column="31" selection-start-line="159" selection-start-column="31" selection-end-line="159" selection-end-column="31" />
         </state>
       </provider>
     </entry>
