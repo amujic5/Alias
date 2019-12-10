@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -11,6 +12,8 @@ import hr.azzi.socialgames.alias.Models.TeamScoreItem
 import kotlinx.android.synthetic.main.activity_play.correctTextView
 import kotlinx.android.synthetic.main.activity_play.skipTextView
 import kotlinx.android.synthetic.main.activity_results.*
+import java.io.File
+import java.net.URI
 
 class ResultsActivity : AppCompatActivity() {
 
@@ -32,6 +35,18 @@ class ResultsActivity : AppCompatActivity() {
         game.currentTeamHasFinishedTheRound()
         reload()
         observe()
+
+        val fileURIString = intent.getStringExtra("fileURIString")
+        if (fileURIString != null) {
+            val uri = Uri.parse(fileURIString)
+            createInstagramIntent("video/*", uri)
+        }
+
+//        val fileURIStrings = intent.getStringArrayListExtra("fileURIStrings")
+//        val uris = fileURIStrings.map {
+//            Uri.parse(it)
+//        }
+//        createInstagramIntents("video/*", ArrayList(uris))
     }
 
     override fun onBackPressed() {
@@ -80,6 +95,7 @@ class ResultsActivity : AppCompatActivity() {
 
     fun observe() {
         startButton.setOnClickListener {
+            deleteFile()
             game.newRound()
             val intent =  Intent(this, PlayActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
@@ -89,6 +105,7 @@ class ResultsActivity : AppCompatActivity() {
         }
 
         finishButton.setOnClickListener {
+            deleteFile()
             finish()
         }
 
@@ -110,6 +127,43 @@ class ResultsActivity : AppCompatActivity() {
         }
 
 
+    }
+
+    fun deleteFile() {
+        val fileURIString = intent.getStringExtra("fileURIString")
+        if (fileURIString != null) {
+            val file = File(fileURIString)
+
+            if (file != null) {
+                if (file.exists()) {
+                    file.delete()
+                }
+            }
+
+        }
+    }
+
+    fun createInstagramIntent(type: String, uri: Uri) {
+        val share = Intent(Intent.ACTION_SEND);
+
+        share.type = type
+        share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        share.putExtra(Intent.EXTRA_STREAM, uri)
+
+        // Broadcast the Intent.
+        startActivity(Intent.createChooser(share, "Share to"))
+    }
+
+    fun createInstagramIntents(type: String, uris: ArrayList<Uri>) {
+        val share = Intent(Intent.ACTION_SEND_MULTIPLE)
+
+        share.type = type
+        share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        share.putExtra(Intent.EXTRA_STREAM, uris)
+        //share.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris)
+
+        // Broadcast the Intent.
+        startActivity(Intent.createChooser(share, "Share to"));
     }
 
 }
