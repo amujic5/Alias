@@ -9,11 +9,13 @@ import hr.azzi.socialgames.alias.Adapters.TeamScoreAdapter
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Models.TeamScoreItem
+import hr.azzi.socialgames.alias.Service.RecordingFlag
 import kotlinx.android.synthetic.main.activity_play.correctTextView
 import kotlinx.android.synthetic.main.activity_play.skipTextView
 import kotlinx.android.synthetic.main.activity_results.*
 import java.io.File
-import java.net.URI
+
+
 
 class ResultsActivity : AppCompatActivity() {
 
@@ -36,17 +38,10 @@ class ResultsActivity : AppCompatActivity() {
         reload()
         observe()
 
-        val fileURIString = intent.getStringExtra("fileURIString")
-        if (fileURIString != null) {
-            val uri = Uri.parse(fileURIString)
-            createInstagramIntent("video/*", uri)
+        if (!RecordingFlag.recordingEnabled) {
+            videoButton.visibility = View.GONE
         }
 
-//        val fileURIStrings = intent.getStringArrayListExtra("fileURIStrings")
-//        val uris = fileURIStrings.map {
-//            Uri.parse(it)
-//        }
-//        createInstagramIntents("video/*", ArrayList(uris))
     }
 
     override fun onBackPressed() {
@@ -114,6 +109,14 @@ class ResultsActivity : AppCompatActivity() {
             intent.putExtra("game", game)
             startActivityForResult(intent, 1)
         }
+
+        videoButton.setOnClickListener {
+            // show videos
+            val intent =  Intent(this, VideoListActivity::class.java)
+            val fileURIStrings = this.intent.getStringArrayListExtra("fileURIStrings")
+            intent.putStringArrayListExtra("fileURIStrings", fileURIStrings)
+            startActivity(intent)
+        }
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
@@ -143,27 +146,5 @@ class ResultsActivity : AppCompatActivity() {
         }
     }
 
-    fun createInstagramIntent(type: String, uri: Uri) {
-        val share = Intent(Intent.ACTION_SEND);
-
-        share.type = type
-        share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        share.putExtra(Intent.EXTRA_STREAM, uri)
-
-        // Broadcast the Intent.
-        startActivity(Intent.createChooser(share, "Share to"))
-    }
-
-    fun createInstagramIntents(type: String, uris: ArrayList<Uri>) {
-        val share = Intent(Intent.ACTION_SEND_MULTIPLE)
-
-        share.type = type
-        share.addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
-        share.putExtra(Intent.EXTRA_STREAM, uris)
-        //share.putParcelableArrayListExtra(Intent.EXTRA_STREAM, uris)
-
-        // Broadcast the Intent.
-        startActivity(Intent.createChooser(share, "Share to"));
-    }
 
 }

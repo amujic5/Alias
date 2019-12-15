@@ -2,6 +2,15 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="hr.azzi.socialgames.alias">
 
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="true" />
+
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/alias"
@@ -9,7 +18,9 @@
         android:roundIcon="@drawable/alias"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".EditAnswersActivity"></activity>
+        <activity android:name=".VideoListActivity"></activity>
+        <activity android:name=".VideoActivity" />
+        <activity android:name=".EditAnswersActivity" />
         <activity android:name=".ResultsActivity" />
         <activity android:name=".PlayActivity" />
         <activity android:name=".SettingsActivity" />
@@ -31,11 +42,5 @@
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-1489905432577426~2503811790" />
     </application>
-
-    <uses-feature android:name="android.hardware.camera"
-        android:required="true" />
-    <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.RECORD_AUDIO" />
-
 
 </manifest>

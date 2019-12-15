@@ -18,7 +18,6 @@ import java.io.File
 import java.util.concurrent.Executors
 import android.util.Log
 import android.view.Surface
-import android.view.TextureView
 import android.view.View
 import android.widget.Toast
 import androidx.camera.core.*
@@ -30,23 +29,14 @@ import android.net.Uri
 import android.Manifest
 import android.annotation.SuppressLint
 import android.view.ViewGroup
-
-import android.graphics.Color
 import android.os.*
-
-import android.view.MotionEvent
-import android.widget.ImageButton
-import androidx.camera.core.*
-import androidx.camera.core.impl.utils.executor.CameraXExecutors
-import androidx.lifecycle.LifecycleOwner
 import hr.azzi.socialgames.alias.Service.RecordingFlag
-import java.util.concurrent.Executor
 
 @SuppressLint("RestrictedApi, ClickableViewAccessibility")
 class PlayActivity : AppCompatActivity() {
 
     // camera
-    private lateinit var videoCapture: VideoCapture
+    private var videoCapture: VideoCapture?  = null
     private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
     private val REQUEST_CODE_PERMISSIONS = 10
 
@@ -133,6 +123,15 @@ class PlayActivity : AppCompatActivity() {
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "PlayActivity")
         bundle.putString("language", DictionaryService.playingDictionary?.language)
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+
+        if (RecordingFlag.recordingEnabled) {
+            val bundle = Bundle()
+            bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "PlayActivity")
+            bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "PlayActivity")
+            bundle.putString("language", DictionaryService.playingDictionary?.language)
+            firebaseAnalytics.logEvent("recording_enabled", bundle)
+        }
+
     }
 
     fun observe() {
@@ -259,7 +258,7 @@ class PlayActivity : AppCompatActivity() {
         timer?.cancel()
         isRunning = false
         if (RecordingFlag.recordingEnabled) {
-            videoCapture.stopRecording()
+            videoCapture?.stopRecording()
         }
     }
 
@@ -285,7 +284,7 @@ class PlayActivity : AppCompatActivity() {
 
                 if (estimation == 0) {
                     if (RecordingFlag.recordingEnabled) {
-                        videoCapture.stopRecording()
+                        videoCapture?.stopRecording()
                     }
                     soundSystem.playEnd()
                     isRunning = false
@@ -308,7 +307,7 @@ class PlayActivity : AppCompatActivity() {
             val file = File(externalMediaDirs.first(),
                 "${System.currentTimeMillis()}.mp4")
 
-            videoCapture.startRecording(file, Executors.newScheduledThreadPool(1), object: VideoCapture.OnVideoSavedListener {
+            videoCapture?.startRecording(file, Executors.newScheduledThreadPool(1), object: VideoCapture.OnVideoSavedListener {
                 override fun onVideoSaved(file: File) {
                     Log.i("tag", "Video File : $file")
                     savedFile = file

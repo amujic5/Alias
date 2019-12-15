@@ -45,6 +45,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
         recyclerView.layoutManager = layoutManager
 
         loadData()
+        scrollView.smoothScrollTo(0,0)
     }
 
     fun loadData() {
