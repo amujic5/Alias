@@ -54,4 +54,6 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="are_you_sure_quit">Jeste li sigurni da želite prekinuti igru?</string>
     <string name="yes">DA</string>
     <string name="no">NE</string>
+    <string name="enable_recording">Omogući snimanje pa možeš podjeliti smješne trenutke na preko svoje omiljene društvene mreše</string>
+    <string name="check_video">Pogledaj snimak :)</string>
 </resources>

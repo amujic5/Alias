@@ -41,4 +41,6 @@
     <string name="are_you_sure_quit">Are you sure that you want to quit the game?</string>
     <string name="yes">YES</string>
     <string name="no">No</string>
+    <string name="enable_recording">Enable recording so you can share funny moments to your favourite social network</string>
+    <string name="check_video">Check video :)</string>
 </resources>
