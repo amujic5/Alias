@@ -28,6 +28,7 @@ import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
 import android.graphics.Color
+import android.graphics.Point
 import android.graphics.drawable.ColorDrawable
 import android.os.*
 import android.view.*
@@ -46,6 +47,7 @@ class PlayActivity : AppCompatActivity() {
     private lateinit var mInterstitialAd: InterstitialAd
 
     var timer: CountDownTimer? = null
+    var startTimer = 60
     var estimation = 60
     var isRunning = false
 
@@ -74,8 +76,10 @@ class PlayActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
+        startTimer = game.time
         estimation = game.time
         timeTextView.text = "$estimation"
+
 
         observe()
         teamNameTextView.text = game.currentTeam.teamName
@@ -96,7 +100,22 @@ class PlayActivity : AppCompatActivity() {
         } else {
             viewFinder.visibility = View.GONE
         }
+    }
 
+    var animationFlag = true
+    fun startAnimation() {
+        var size = Point()
+        windowManager.defaultDisplay.getSize(size)
+        if (animationFlag) {
+            animationView.translationX = -size.x.toFloat()
+            animationFlag = false
+        }
+
+        animationView.animate().setDuration(estimation.toLong()*1000).translationX(0f).start()
+    }
+
+    fun pauseAnimation() {
+        animationView.animate().cancel()
     }
 
     fun loadAd() {
@@ -267,6 +286,7 @@ class PlayActivity : AppCompatActivity() {
 
     // COUNTER
     private fun pause() {
+        pauseAnimation()
         timer?.cancel()
         isRunning = false
         if (RecordingFlag.recordingEnabled) {
@@ -275,6 +295,7 @@ class PlayActivity : AppCompatActivity() {
     }
 
     private fun resume() {
+        startAnimation()
         isRunning = true
         timer = object: CountDownTimer((estimation * 10000).toLong(), 1000) {
             @SuppressLint("RestrictedApi")
