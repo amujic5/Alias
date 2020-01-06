@@ -5,6 +5,7 @@
     <color name="colorAccent">#D81B60</color>
 
     <color name="black_overlay">#66000000</color>
+    <color name="light_overlay">#09000000</color>
 
     <color name="alias_yellow">#FAD348</color>
     <color name="alias_red">#F74545</color>
