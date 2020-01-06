@@ -43,6 +43,9 @@ class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
+        val layout = layoutInflater.inflate(R.layout.empty_view, listView, false)
+        listView.addFooterView(layout)
+
         val words = game.currentTeamMarkedWords.map {
             MarkedWord(it.word, it.isCorrect)
         }
