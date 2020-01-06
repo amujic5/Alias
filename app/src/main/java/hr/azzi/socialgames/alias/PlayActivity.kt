@@ -17,8 +17,6 @@ import kotlinx.android.synthetic.main.dialog_play.view.*
 import java.io.File
 import java.util.concurrent.Executors
 import android.util.Log
-import android.view.Surface
-import android.view.View
 import android.widget.Toast
 import androidx.camera.core.*
 import androidx.core.app.ActivityCompat
@@ -28,8 +26,11 @@ import android.graphics.Matrix
 import android.net.Uri
 import android.Manifest
 import android.annotation.SuppressLint
-import android.view.ViewGroup
+import android.content.Context
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
 import android.os.*
+import android.view.*
 import hr.azzi.socialgames.alias.Service.RecordingFlag
 
 @SuppressLint("RestrictedApi, ClickableViewAccessibility")
@@ -74,10 +75,12 @@ class PlayActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         estimation = game.time
+        timeTextView.text = "$estimation"
 
         observe()
         teamNameTextView.text = game.currentTeam.teamName
         showNewWord()
+        updateLables()
 
 
         if (RecordingFlag.recordingEnabled) {
@@ -178,7 +181,15 @@ class PlayActivity : AppCompatActivity() {
         view.teamTextView.text = game.currentTeam.teamName
 
         val dialog = builder.show()
+        dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         this.dialog = dialog
+
+
+        val window = dialog.window
+        var param = dialog.window.attributes
+        param.gravity = Gravity.TOP
+        param.y = convertDpToPx(this, 80.toFloat()).toInt()
+        window.setAttributes(param);
 
         view.stopButton.setOnClickListener {
             dialog.dismiss()
@@ -191,6 +202,7 @@ class PlayActivity : AppCompatActivity() {
         }
 
     }
+
 
     fun showFinishDialog() {
         this.dialog?.dismiss()
@@ -423,4 +435,8 @@ class PlayActivity : AppCompatActivity() {
     }
 
 
+}
+
+fun convertDpToPx(context: Context, dp: Float): Float {
+    return dp * context.getResources().getDisplayMetrics().density
 }

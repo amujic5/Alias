@@ -8,7 +8,7 @@ data class Team(var firstPlayer: String,
                 var secondPlayer: String,
                 var teamName: String,
                 private var _score: Int = 0,
-                var playing: Boolean = false,
+                var playing: Boolean = true,
                 var isKnockedOut: Boolean = false,
                 var roundsPlayed: Int = 0,
                 var deltaScoreRound: Int = 0

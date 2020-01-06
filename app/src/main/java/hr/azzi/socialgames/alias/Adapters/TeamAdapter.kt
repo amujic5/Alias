@@ -9,14 +9,10 @@ import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.R
 import kotlinx.android.synthetic.main.team_item.view.*
 
-interface TeamAdapterDelegate {
-    fun didChangeCheckboxValue(isChecked: Boolean, position: Int)
-}
 
 class TeamAdapter(private val context: Context,
                   private val dataSource: ArrayList<Team>) : BaseAdapter() {
 
-    var delegate: TeamAdapterDelegate? = null
     private val inflater: LayoutInflater
             = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
@@ -26,11 +22,6 @@ class TeamAdapter(private val context: Context,
         rowView.teamTextView.text = team.teamName
         rowView.player1TextView.text = team.firstPlayer
         rowView.player2TextView.text = team.secondPlayer
-        rowView.checkBox.isChecked = team.playing
-
-        rowView.checkBox.setOnCheckedChangeListener { buttonView, isChecked ->
-            this.delegate?.didChangeCheckboxValue(isChecked, position)
-        }
 
         return rowView
     }
