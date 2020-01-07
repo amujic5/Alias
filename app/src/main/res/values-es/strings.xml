@@ -1,0 +1,46 @@
+<resources>
+<string name="app_name">Alias</string>
+
+<string name="dummy_button">Dummy Button</string>
+<string name="dummy_content">DUMMY\nCONTENT</string>
+<string name="edit_answers">EDIT ANSWERS</string>
+<string name="this_round">ESTA RONDA</string>
+<string name="cancel">CANCELAR</string>
+<string name="save">SALVAR</string>
+<string name="how_to_play">Cómo jugar?</string>
+<string name="new_game">Nuevo juego</string>
+<string name="tell_your_friends">Cuéntales a tus amigos</string>
+<string name="got_it">LO CONSEGUÍTE</string>
+<string name="how_to_play_info">Alias ​​juego de palabras es un éxito absoluto para todas las edades! Si ha pensado sobre si mismo que sea ingenioso, con la retórica rápida, hábil y fuerte en el lenguaje esto es una oportunidad para demostrarlo. Es ideal para unas reuniones de amigos y eventos sociales y por lo tanto tiene la motivación extra de probar. En este juego de palabras hay que describir el término clave con sus sinónimos, las palabras similares, asociaciones, pero no se puede utilizar este término dado o el raíz del término. En la base existe más de 2500 términos, y están disponibles en los siguientes idiomas: inglés, croata, alemán, francés, sueco, esloveno, italiano, español. Comentarios, elogios, sugerencias deje en los comentarios.</string>
+<string name="teams">Equipos</string>
+<string name="start_the_game">INICIAR EL JUEGO</string>
+<string name="skip">OMITIR</string>
+<string name="correct">CORRECTO</string>
+<string name="results">RESULTADOS</string>
+<string name="next_up">SIGUIENTE ARRIBA</string>
+<string name="start">COMIENZO</string>
+<string name="explaining">Explicando</string>
+<string name="player_1">Jugador 1</string>
+<string name="player_2">Jugador 2</string>
+<string name="answering">Respondiendo</string>
+<string name="finish">TERMINAR</string>
+<string name="settings">AJUSTES</string>
+<string name="play">JUGAR</string>
+<string name="time_limit_seconds">Límite de tiempo (segundos)</string>
+<string name="dictionary">DICCIONARIO</string>
+<string name="create_team">CREAR EQUIPO</string>
+<string name="delete">ELIMINAR</string>
+<string name="create">CREAR</string>
+<string name="stop">DETENER</string>
+<string name="corrected">correcto</string>
+<string name="skipped">omitido</string>
+<string name="score">Puntuación:</string>
+<string name="score_settings">Puntuación</string>
+<string name="team_name">Nombre del equipo</string>
+<string name="warning">Advertencia!</string>
+<string name="are_you_sure_quit">¿Estás seguro de que quieres abandonar el juego?</string>
+<string name="yes">SI</string>
+<string name="no">No</string>
+<string name="enable_recording">Habilite la grabación para que pueda compartir momentos divertidos en su red social favorita</string>
+<string name="check_video">Ver video :)</string>
+</resources>
