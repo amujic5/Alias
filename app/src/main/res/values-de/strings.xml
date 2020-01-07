@@ -1,0 +1,47 @@
+<resources>
+<string name="app_name">Alias</string>
+
+<string name="dummy_button">Dummy Button</string>
+<string name="dummy_content">DUMMY\nCONTENT</string>
+<string name="edit_answers">ANTWORTEN BEARBEITEN</string>
+<string name="this_round">DIESE RUNDE</string>
+<string name="cancel">STORNIEREN</string>
+<string name="save">SPEICHERN</string>
+<string name="how_to_play">Spielanleitung?</string>
+<string name="new_game">Neues Spiel</string>
+<string name="tell_your_friends">Sag deinen Freunden</string>
+<string name="got_it">ICH HABS</string>
+<string name="how_to_play_info">Alias Wortspiel ist ein absoluter Hit für alle Altersgruppen! Wenn Sie denken, dass Sie überdurchschnittlich geschickt, einfallsreich und sprachbegabt sind, dazu noch über schnelle Rhetorik verfügen, ist dies eine einzigartige Gelegenheit, Ihre Fähigkeiten unter Beweis zu stellen. Es ist ideal für freundliche und gesellige Zusammenkünfte und daher haben Sie die zusätzliche Motivation, sich zu beweisen.  In diesem Spiel der Wörter, ist es nötig den gegebenen Begriff, mit Hilfe seiner Synonyme und Anwendungen, richtig zu beschreiben, ohne dabei  das gesuchte Wort oder die Wurzel des Wortes zu benutzen. Die Basis verfügt über mehr als 2500 Begriffe, und sind in den folgenden Sprachen erhältlich: Englisch, Kroatisch, Deutsch, Französisch, Schwedisch, Slowenisch, Italienisch und Spanisch. Gerne können Sie Anregungen, Lob oder Kritik zukommen lassen.</string>
+<string name="teams">Teams</string>
+<string name="start_the_game">STARTE</string>
+<string name="skip">SPRINGEN</string>
+<string name="correct">RICHTIG</string>
+<string name="results">ERGEBNISSE</string>
+<string name="next_up">NACH</string>
+<string name="start">STARTE</string>
+<string name="explaining">Erklären</string>
+<string name="player_1">Spieler 1</string>
+<string name="player_2">Spieler 2</string>
+<string name="answering">Antworten</string>
+<string name="finish">FERTIG</string>
+<string name="settings">EINSTELLUNGEN</string>
+<string name="play">ABSPIELEN</string>
+<string name="time_limit_seconds">Zeitlimit (Sekunden)</string>
+<string name="dictionary">WÖRTERBUCH</string>
+<string name="create_team">TEAM ERSTELLEN</string>
+<string name="delete">LÖSCHEN</string>
+<string name="create">ERSTELLEN</string>
+<string name="stop">HALT</string>
+<string name="corrected">richtig</string>
+<string name="skipped">übersprungen</string>
+<string name="score">Ergebnis:</string>
+<string name="score_settings">Ergebnis</string>
+<string name="team_name">Teamname</string>
+<string name="warning">Warnung!</string>
+<string name="are_you_sure_quit">Sind Sie sicher, dass Sie das Spiel beenden möchten?</string>
+<string name="yes">JA</string>
+<string name="no">NEIN</string>
+<string name="enable_recording">Aktivieren Sie die Aufnahme, damit Sie lustige Momente mit Ihrem bevorzugten sozialen Netzwerk teilen können</string>
+<string name="check_video">Video überprüfen :)</string>
+</resources>
+
