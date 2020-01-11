@@ -13,16 +13,11 @@
     <string name="got_it">U REDU</string>
     <string name="how_to_play_info">Alias Words  je apsolutni hit za sve uzraste! Ako ste za sebe uvijek tvrdili da ste natprosjecno snalažljivi, brze retorike,spretni i britki na jeziku ovo je prilika da se dokažete.
 \n\n
-        	Cilj igrača je objasniti zadane riječi drugom timskom igraču. Dok objašnjava, igrač ne smije koristiti korijen riječi koju pokušava objasniti. Igra se igra u timovima. Najmanje dvije ekipe su potrebne.
-
-
+Cilj igrača je objasniti zadane riječi drugom timskom igraču. Dok objašnjava, igrač ne smije koristiti korijen riječi koju pokušava objasniti. Igra se igra u timovima. Najmanje dvije ekipe su potrebne.
         \n\n
-        	U početku runde vidjet ćete dijalog-okvir koji vam govori tko će igrati. Na njemu će biti prikazano koji tim igra, koji igrač objašnjava riječi te koji igrač pogađa riječi. Igrač koji objašnjava riječi treba uzeti telefon u ruke i pritisnuti Kreni kada je spreman za početak. Igrač koji objašnjava riječ mora izbjeći korištenje korijena te riječi (i samu riječ). Kad je riječ pogođena, igrač može dobiti novu riječ pritiskom ikonu kvačice u donjem desnom dijelu zaslona. Ako je igraču dobivena riječ teška za objasniti, on može preskočiti zadanu riječ pritiskom ikonu križića na donjem lijevom dijelu zaslona. Svaka pogođena riječ daje jedan bod, dok svaka preskočena riječ oduzima jedan bod.
-
-
+U početku runde vidjet ćete dijalog-okvir koji vam govori tko će igrati. Na njemu će biti prikazano koji tim igra, koji igrač objašnjava riječi te koji igrač pogađa riječi. Igrač koji objašnjava riječi treba uzeti mobitel u ruke i pritisnuti gumb PLAY kada je spreman za početak. Igrač koji objašnjava riječ mora izbjeći korištenje korijena te riječi (i samu riječ). Kad je riječ pogođena, igrač može dobiti novu riječ pritiskom na gumb  TOČNO (CORRECT) u donjem desnom dijelu zaslona. Ako je igraču dobivena riječ teška za objasniti, on može preskočiti zadanu riječ pritiskom na gum PRESKOČI (SKIP) na donjem lijevom dijelu zaslona. Svaka pogođena riječ daje jedan bod, dok svaka preskočena riječ oduzima jedan bod.
     \n\n
-        	Igrač ima ograničeno vrijeme koje se može postaviti u postavkama. Odbrojavanje se može vidjeti na gornjem desnom dijelu ekrana. Lijevo pored timera možete vidjeti koliko riječi je pogođeno i preskočeno. Kad istekne vrijeme rudne, prikazati će se popis riječi koje su bile u rundi. Igrač ima mogućnost mijenjanja pogođeno/preskočeno za svaku pojedinu riječ.
-
+Igrač ima ograničeno vrijeme koje se može postaviti u postavkama. Odbrojavanje se može vidjeti u sredini ekrana. Lijevo gore možete vidjeti koliko riječi je pogođeno i preskočeno. Kad istekne vrijeme rudne, prikazati će se popis riječi koje su bile u rundi. Igrač ima mogućnost mijenjanja pogođeno/preskočeno za svaku pojedinu riječ.
         \n\n
 Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednost je 100 koja se može promijeniti).</string>
     <string name="teams">Timovi</string>
