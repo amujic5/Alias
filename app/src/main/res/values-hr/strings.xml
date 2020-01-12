@@ -51,4 +51,6 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="no">NE</string>
     <string name="enable_recording">Omogući snimanje pa možeš podjeliti smješne trenutke na preko svoje omiljene društvene mreše</string>
     <string name="check_video">Pogledaj snimak :)</string>
+    <string name="alias_words">ALIAS\nWORDS</string>
+    <string name="two_teams_needed">Potrebna su 2 tima za igru</string>
 </resources>
