@@ -16,6 +16,14 @@
         android:text="@string/results"
         android:textColor="@android:color/white"
         android:textSize="33sp"
+        android:autoSizeMaxTextSize="33sp"
+        android:autoSizeMinTextSize="12sp"
+        android:autoSizeStepGranularity="2sp"
+        android:autoSizeTextType="uniform"
+        app:autoSizeMaxTextSize="33sp"
+        app:autoSizeMinTextSize="12sp"
+        app:autoSizeStepGranularity="2sp"
+        app:autoSizeTextType="uniform"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

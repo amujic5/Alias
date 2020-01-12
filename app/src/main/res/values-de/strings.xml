@@ -43,5 +43,7 @@
 <string name="no">NEIN</string>
 <string name="enable_recording">Aktivieren Sie die Aufnahme, damit Sie lustige Momente mit Ihrem bevorzugten sozialen Netzwerk teilen können</string>
 <string name="check_video">Video überprüfen :)</string>
+    <string name="alias_words">ALIAS\nWORTSPIEL</string>
+    <string name="two_teams_needed">Es sind mindestens 2 Teams erforderlich</string>
 </resources>
 

@@ -43,4 +43,6 @@
 <string name="no">NO</string>
 <string name="enable_recording">Abilita la registrazione in modo da poter condividere momenti divertenti sul tuo social network preferito</string>
 <string name="check_video">Guarda il video :)</string>
+    <string name="alias_words">ALIAS\nWORDS</string>
+    <string name="two_teams_needed">Sono necessarie almeno 2 squadre</string>
 </resources>

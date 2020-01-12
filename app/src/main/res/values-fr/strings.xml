@@ -43,4 +43,6 @@
 <string name="no">Non</string>
 <string name="enable_recording">Activez l\'enregistrement pour partager des moments amusants sur votre réseau social préféré</string>
 <string name="check_video">Vérifiez la vidéo :)</string>
+    <string name="alias_words">ALIAS\nWORDS</string>
+    <string name="two_teams_needed">Un minimum de 2 équipes est requis</string>
 </resources>

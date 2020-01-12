@@ -43,4 +43,6 @@
     <string name="no">No</string>
     <string name="enable_recording">Enable recording so you can share funny moments to your favourite social network</string>
     <string name="check_video">Check video :)</string>
+    <string name="alias_words">ALIAS\nWORDS</string>
+    <string name="two_teams_needed">At least 2 teams needed</string>
 </resources>

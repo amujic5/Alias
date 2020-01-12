@@ -64,7 +64,7 @@ class NewGameActivity : AppCompatActivity() {
 
         startGameButton.setOnClickListener {
             if (teamDataSource.filter { it.playing }.size < 2) {
-                Toast.makeText(this, "At least 2 players needed", Toast.LENGTH_SHORT).show()
+                Toast.makeText(this, resources.getString(R.string.two_teams_needed), Toast.LENGTH_SHORT).show()
             } else {
                 val intent =  Intent(this, SettingsActivity::class.java)
                 val playingTeams = teamDataSource.filter {
