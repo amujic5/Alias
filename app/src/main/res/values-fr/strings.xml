@@ -45,4 +45,6 @@
 <string name="check_video">Vérifiez la vidéo :)</string>
     <string name="alias_words">ALIAS\nWORDS</string>
     <string name="two_teams_needed">Un minimum de 2 équipes est requis</string>
+    <string name="share">PARTAGER</string>
+    <string name="winner">GAGNANT!!!</string>
 </resources>

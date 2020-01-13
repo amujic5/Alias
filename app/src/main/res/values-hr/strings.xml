@@ -53,4 +53,6 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="check_video">Pogledaj snimak :)</string>
     <string name="alias_words">ALIAS\nWORDS</string>
     <string name="two_teams_needed">Potrebna su 2 tima za igru</string>
+    <string name="share">SHARE</string>
+    <string name="winner">POBJEDNICI!!!</string>
 </resources>
