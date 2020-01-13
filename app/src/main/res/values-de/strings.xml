@@ -45,5 +45,7 @@
 <string name="check_video">Video überprüfen :)</string>
     <string name="alias_words">ALIAS\nWORTSPIEL</string>
     <string name="two_teams_needed">Es sind mindestens 2 Teams erforderlich</string>
+    <string name="share">TEILEN</string>
+    <string name="winner">GEWINNER!!!</string>
 </resources>
 

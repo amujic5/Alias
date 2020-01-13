@@ -101,6 +101,10 @@ class ResultsActivity : AppCompatActivity() {
 
         finishButton.setOnClickListener {
             deleteFile()
+            val intent =  Intent(this, WinnerActivity::class.java)
+            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+            intent.putExtra("game", game)
+            startActivity(intent)
             finish()
         }
 

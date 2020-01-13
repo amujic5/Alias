@@ -60,6 +60,13 @@ class VideoListActivity : AppCompatActivity(), VideoAdapterDelegate {
         }
     }
 
+    fun logPlay() {
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "Video list")
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "Video list")
+        firebaseAnalytics.logEvent("play_video", bundle)
+    }
+
 
     fun createInstagramIntent(type: String, uri: Uri) {
         val share = Intent(Intent.ACTION_SEND);
