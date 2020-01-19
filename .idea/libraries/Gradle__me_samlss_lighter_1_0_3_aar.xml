@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="Gradle: me.samlss:lighter:1.0.3@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1bedd0356ba136b492561769e07c5b76/lighter-1.0.3/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/1bedd0356ba136b492561769e07c5b76/lighter-1.0.3/res" />
+    </CLASSES>
+    <JAVADOC>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.samlss/lighter/1.0.3/dd0ca491aec751555037321d3de90ecab562aa12/lighter-1.0.3-javadoc.jar!/" />
+    </JAVADOC>
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/me.samlss/lighter/1.0.3/bccf1ef2adaa8c88240024a58a868fa0bcbc4606/lighter-1.0.3-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
