@@ -1,9 +1,12 @@
 package hr.azzi.socialgames.alias
 
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
+import androidx.constraintlayout.widget.ConstraintLayout
 import androidx.recyclerview.widget.GridLayoutManager
 import hr.azzi.socialgames.alias.Adapters.FlagAdapter
 import hr.azzi.socialgames.alias.Adapters.FlagAdapterDelegate
@@ -13,9 +16,17 @@ import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.RecordingFlag
+import hr.azzi.socialgames.alias.Views.TipTextView
 import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_settings.backButton
 import kotlinx.android.synthetic.main.activity_settings.vsTextView
+import kotlinx.android.synthetic.main.text_layout.view.*
+import me.samlss.lighter.parameter.MarginOffset
+import me.samlss.lighter.parameter.LighterParameter
+import me.samlss.lighter.Lighter
+import me.samlss.lighter.parameter.Direction
+import me.samlss.lighter.shape.RectShape
+
 
 class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
 
@@ -34,6 +45,13 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
         intent.getParcelableArrayListExtra<Team>("playingTeams")
     }
 
+    val preferences: SharedPreferences by lazy {
+        this.getSharedPreferences("settings-recording", Context.MODE_PRIVATE)
+    }
+
+    val keyRecording = "settings-recording"
+    var lighter: Lighter? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_settings)
@@ -46,6 +64,35 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
         loadData()
         scrollView.smoothScrollTo(0,0)
+
+        showInfo()
+    }
+
+    fun showInfo() {
+
+        val shouldShowInfo = preferences.getBoolean(keyRecording, false)
+
+        if (shouldShowInfo) {
+
+            val lighter =  Lighter.with(this)
+            this.lighter = lighter
+
+            val lighterParamter= LighterParameter.Builder()
+                .setHighlightedView(recordingCheckbox)
+                .setTipLayoutId(R.layout.text_layout)
+                .setLighterShape(RectShape(0f, 0f, 30f))
+                .setTipViewRelativeDirection(Direction.TOP)
+                .setTipViewRelativeOffset(MarginOffset(0, 0, 0, 10))
+                .build()
+
+            lighter
+                .addHighlight(
+                    lighterParamter
+                )
+                .show()
+
+            preferences.edit().putBoolean(keyRecording, true).apply()
+        }
     }
 
     fun loadData() {
@@ -58,6 +105,15 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
         updateVsTextView()
         observe()
+    }
+
+    override fun onBackPressed() {
+        if (this.lighter?.isShowing ?: false) {
+            this.lighter?.dismiss()
+            this.lighter = null
+        } else {
+            finish()
+        }
     }
 
     fun observe() {
