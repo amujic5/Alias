@@ -154,6 +154,15 @@ class PlayActivity : AppCompatActivity() {
             firebaseAnalytics.logEvent("recording_enabled", bundle)
         }
 
+        logLanguage()
+    }
+
+    fun logLanguage() {
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "PlayActivity")
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "PlayActivity")
+        val language = DictionaryService.playingDictionary?.language ?: "unknown"
+        firebaseAnalytics.logEvent(language, bundle)
     }
 
     fun observe() {
