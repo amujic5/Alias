@@ -91,6 +91,7 @@ class VideoListActivity : AppCompatActivity(), VideoAdapterDelegate {
 
     }
     override fun didTapPlay(position: Int) {
+        logPlay()
         val intent =  Intent(this, VideoActivity::class.java)
         val fileURIString = videos[position].uriString
         intent.putExtra("fileURIString", fileURIString)
