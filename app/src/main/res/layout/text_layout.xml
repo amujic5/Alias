@@ -14,7 +14,7 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="10dp"
         android:gravity="bottom"
-        android:text="New! Enable recording. Every round will be saved and you will be able to view it and share. Try it, it is cool!"
+        android:text="@string/record_tip_1"
         android:textAlignment="center"
         android:textColor="@android:color/white"
         android:textSize="15sp"

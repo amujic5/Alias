@@ -5,8 +5,10 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.ViewGroup
 import android.widget.*
 import androidx.constraintlayout.widget.ConstraintLayout
+import androidx.core.view.size
 import androidx.recyclerview.widget.GridLayoutManager
 import hr.azzi.socialgames.alias.Adapters.FlagAdapter
 import hr.azzi.socialgames.alias.Adapters.FlagAdapterDelegate
@@ -77,9 +79,12 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
             val lighter =  Lighter.with(this)
             this.lighter = lighter
 
+            val tipTextView = TipTextView(this)
+            tipTextView.setLabel(getString(R.string.record_tip_1))
+
             val lighterParamter= LighterParameter.Builder()
                 .setHighlightedView(recordingCheckbox)
-                .setTipLayoutId(R.layout.text_layout)
+                .setTipView(tipTextView)
                 .setLighterShape(RectShape(0f, 0f, 30f))
                 .setTipViewRelativeDirection(Direction.TOP)
                 .setTipViewRelativeOffset(MarginOffset(0, 0, 0, 10))

@@ -47,4 +47,6 @@
     <string name="two_teams_needed">Un minimum de 2 équipes est requis</string>
     <string name="share">PARTAGER</string>
     <string name="winner">GAGNANT!!!</string>
+    <string name="record_tip_1">Nouveau! Activez l\'enregistrement. Enregistrez, regardez et partagez la vidéo. Essayez-le, c\'est génial!</string>
+    <string name="record_tip_2">Vous pouvez voir un enregistrement de la fête ici.</string>
 </resources>
