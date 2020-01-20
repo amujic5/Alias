@@ -72,7 +72,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
     fun showInfo() {
 
-        val shouldShowInfo = preferences.getBoolean(keyRecording, false)
+        val shouldShowInfo = !preferences.getBoolean(keyRecording, false)
 
         if (shouldShowInfo) {
 
