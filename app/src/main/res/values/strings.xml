@@ -47,4 +47,6 @@
     <string name="two_teams_needed">At least 2 teams needed</string>
     <string name="share">SHARE</string>
     <string name="winner">WINNER!!!</string>
+    <string name="record_tip_1">New! Enable recording. Every round will be saved and you will be able to view it and share. Try it, it is cool!</string>
+    <string name="record_tip_2">Here you can check a video of this round!</string>
 </resources>

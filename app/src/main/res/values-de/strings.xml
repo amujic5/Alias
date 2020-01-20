@@ -47,5 +47,7 @@
     <string name="two_teams_needed">Es sind mindestens 2 Teams erforderlich</string>
     <string name="share">TEILEN</string>
     <string name="winner">GEWINNER!!!</string>
+    <string name="record_tip_1">Neu! Aufzeichnung aktivieren. Video aufnehmen, ansehen und teilen. Probieren Sie es aus, es ist großartig!</string>
+    <string name="record_tip_2">Eine Aufzeichnung der Party sehen Sie hier.</string>
 </resources>
 

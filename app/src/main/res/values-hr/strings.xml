@@ -55,4 +55,6 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="two_teams_needed">Potrebna su 2 tima za igru</string>
     <string name="share">SHARE</string>
     <string name="winner">POBJEDNICI!!!</string>
+    <string name="record_tip_1">Novo! Omogući snimanje. Snimi rudnu, pregledaj i podjeli. Probaj, super je!</string>
+    <string name="record_tip_2">Ovdje možeš pogledati snimku runde!</string>
 </resources>

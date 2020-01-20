@@ -10,7 +10,7 @@ class TipTextView @JvmOverloads constructor(context: Context): FrameLayout(conte
 
     init {
         LayoutInflater.from(context).inflate(R.layout.text_layout, this, true)
-
+        layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
     }
 
     fun setLabel(text: String?) {
