@@ -60,7 +60,7 @@ class ResultsActivity : AppCompatActivity() {
 
     private fun showInfo() {
 
-        val shouldShowInfo = preferences.getBoolean(keyRecording, false)
+        val shouldShowInfo = !preferences.getBoolean(keyRecording, false)
 
         if (shouldShowInfo) {
 
