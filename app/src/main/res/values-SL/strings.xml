@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Alias</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="edit_answers">Spremeni</string>
+    <string name="this_round">TA KROG</string>
+    <string name="cancel">ODVADIMO</string>
+    <string name="save">SHRANI</string>
+    <string name="how_to_play">Pravila igre</string>
+    <string name="new_game">Nova igra</string>
+    <string name="tell_your_friends">Delite s prijatelji</string>
+    <string name="got_it">V redu</string>
+    <string name="how_to_play_info">Alias ​​Words je absolutni hit za vse starosti! Če ste vedno trdili, da ste nadpovprečno iznajdljivi, hitra retorika, spretni in spretni v jeziku, je to priložnost, da se dokažete.
+\ N \ n
+Cilj igralca je razložiti dane besede drugemu igralcu ekipe. Medtem ko igralec razlaga, ne sme uporabljati korena besede, ki jo poskuša razložiti. Igra se v skupinah. Potrebni sta vsaj dve ekipi.
+        \ N \ n
+Na začetku kroga se prikaže pogovorno okno, ki vam pove, kdo bo igral. Prikazalo se bo, katera ekipa igra, kateri igralec razlaga besede in kateri igralec ugiba besede. Igralec, ki razlaga besede, naj vzame svoj mobilni telefon in pritisne gumb PLAY, ko je pripravljen za začetek. Igralec, ki razlaga besedo, se mora izogibati uporabi korena besede (in same besede). Ko je beseda zadeta, lahko igralec dobi novo besedo s pritiskom gumba PRAVILNO v spodnjem desnem kotu zaslona. Če ima igralec težko razložiti besedo, lahko privzeto besedo preskoči s pritiskom gumba SKIP v spodnjem levem kotu zaslona. Vsaka prizadeta beseda daje eno točko, medtem ko vsaka preskočena beseda odšteje eno točko.
+    \ N \ n
+Predvajalnik ima omejen čas, ki ga je mogoče nastaviti v nastavitvah. Odštevanje je vidno na sredini zaslona. V zgornjem levem kotu lahko vidite, koliko besed je bilo zadetih in preskočenih. Ko se izteče čas rudarjenja, bo prikazan seznam besed, ki so bile v krogu. Igralec lahko spreminja prizadete / preskočene za vsako besedo.
+        \ N \ n
+Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost je 100, ki jo je mogoče spremeniti).</string>
+    <string name="teams">Moštvi</string>
+    <string name="start_the_game">ZAČETI IGRO</string>
+    <string name="skip">PRESKOČI</string>
+    <string name="correct">TOČNO</string>
+    <string name="results">REZULTATI</string>
+    <string name="next_up">PO</string>
+    <string name="start">POJDI</string>
+    <string name="explaining">Razlaga</string>
+    <string name="player_1">Predvajalnik 1</string>
+    <string name="player_2">Predvajalnik 2</string>
+    <string name="answering">Vpliva</string>
+    <string name="finish">CILJ</string>
+    <string name="settings">TOČKE</string>
+    <string name="play">IGRAM</string>
+    <string name="time_limit_seconds">ČAS KROG (sekunde)</string>
+    <string name="dictionary">SLOVAR</string>
+    <string name="create_team">NOVI TIM</string>
+    <string name="delete">PONASTAVI</string>
+    <string name="create">USTVARI</string>
+    <string name="stop">CILJ</string>
+    <string name="corrected">natančna</string>
+    <string name="skipped">preskočijo</string>
+    <string name="score">Povzroči:</string>
+    <string name="score_settings">Ciljni rezultat</string>
+    <string name="team_name">Ime ekipe</string>
+    <string name="warning">Opozorilo!</string>
+    <string name="are_you_sure_quit">Ali ste prepričani, da želite prekiniti igro?</string>
+    <string name="yes">DA</string>
+    <string name="no">NE</string>
+    <string name="enable_recording">Omogočite snemanje, da boste lahko delili smešne trenutke prek svojega priljubljenega družabnega omrežja</string>
+    <string name="check_video">Poglejte posnetek :)</string>
+    <string name="alias_words">ALIAS\nWORDS</string>
+    <string name="two_teams_needed">Za igranje sta potrebni 2 ekipi</string>
+    <string name="share">DELITI</string>
+    <string name="winner">ZMAGOVALCI!!!</string>
+    <string name="record_tip_1">Novo! Omogoči snemanje Zapišite krog, si oglejte in razdelite. Poskusite, super je!</string>
+    <string name="record_tip_2">Posnetek kroga si lahko ogledate tukaj!</string>
+</resources>
