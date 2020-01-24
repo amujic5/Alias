@@ -32,7 +32,6 @@ import me.samlss.lighter.shape.RectShape
 
 class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
 
-
     var adapter: FlagAdapter = FlagAdapter(ArrayList())
     var time: Int = 60
     var score: Int = 100
@@ -195,4 +194,5 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
         dictionaryTextView.text = flags[position].name
     }
+
 }
