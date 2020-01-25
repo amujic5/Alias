@@ -36,6 +36,7 @@ class ResultsActivity : AppCompatActivity() {
     var lighter: Lighter? = null
 
     var teamScoreDataSource = ArrayList<TeamScoreItem>()
+    var shouldShowEditAnswers: Boolean = true
 
     lateinit var adapter: TeamScoreAdapter
 
@@ -57,6 +58,18 @@ class ResultsActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onResume() {
+        super.onResume()
+        if (shouldShowEditAnswers) {
+            shouldShowEditAnswers = false
+            val editAnswerIntent =  Intent(this, EditAnswersActivity::class.java)
+            editAnswerIntent.putExtra("game", game)
+            startActivityForResult(editAnswerIntent, 1)
+        }
+
+    }
+
 
     private fun showInfo() {
 

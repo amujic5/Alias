@@ -27,6 +27,7 @@ import android.net.Uri
 import android.Manifest
 import android.annotation.SuppressLint
 import android.content.Context
+import android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
 import android.graphics.Color
 import android.graphics.Point
 import android.graphics.drawable.ColorDrawable
@@ -382,11 +383,14 @@ class PlayActivity : AppCompatActivity() {
             Uri.fromFile(it).toString()
         }
         intent.putStringArrayListExtra("fileURIStrings", ArrayList(fileStrings))
-
+        intent.flags = FLAG_ACTIVITY_NO_ANIMATION
         startActivity(intent)
+
         finish()
         if (mInterstitialAd.isLoaded) {
-            mInterstitialAd.show()
+            Handler().postDelayed({
+                mInterstitialAd.show()
+            }, 1000)
         }
     }
 
