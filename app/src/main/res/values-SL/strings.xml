@@ -3,7 +3,7 @@
 
     <string name="dummy_button">Dummy Button</string>
     <string name="dummy_content">DUMMY\nCONTENT</string>
-    <string name="edit_answers">Spremeni</string>
+    <string name="edit_answers">SPREMENITE ODGOVORE</string>
     <string name="this_round">TA KROG</string>
     <string name="cancel">ODVADIMO</string>
     <string name="save">SHRANI</string>
@@ -31,7 +31,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="player_1">Predvajalnik 1</string>
     <string name="player_2">Predvajalnik 2</string>
     <string name="answering">Vpliva</string>
-    <string name="finish">CILJ</string>
+    <string name="finish">DOKONČAJ</string>
     <string name="settings">TOČKE</string>
     <string name="play">IGRAM</string>
     <string name="time_limit_seconds">ČAS KROG (sekunde)</string>
@@ -39,7 +39,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="create_team">NOVI TIM</string>
     <string name="delete">PONASTAVI</string>
     <string name="create">USTVARI</string>
-    <string name="stop">CILJ</string>
+    <string name="stop">DOKONČAJ</string>
     <string name="corrected">natančna</string>
     <string name="skipped">preskočijo</string>
     <string name="score">Povzroči:</string>
