@@ -156,7 +156,7 @@
                     android:layout_marginBottom="12dp"
                     android:colorControlActivated="@android:color/white"
                     android:indeterminate="false"
-                    android:max="60"
+                    android:max="80"
                     android:progress="40"
                     android:progressBackgroundTint="@android:color/white"
                     android:progressTint="@android:color/white"

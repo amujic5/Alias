@@ -23,6 +23,7 @@
         android:text="@string/winner"
         android:textColor="@android:color/white"
         android:textSize="64sp"
+        android:lines="1"
         app:autoSizeMaxTextSize="64sp"
         app:autoSizeMinTextSize="12sp"
         app:autoSizeStepGranularity="2sp"
