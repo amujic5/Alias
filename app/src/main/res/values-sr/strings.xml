@@ -1,0 +1,60 @@
+<resources>
+    <string name="app_name">Alias</string>
+
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+    <string name="edit_answers">PROMENI ODGOVORE</string>
+    <string name="this_round">OVA RUNDA</string>
+    <string name="cancel">ODUSTANI</string>
+    <string name="save">SPREMI</string>
+    <string name="how_to_play">Pravila igre</string>
+    <string name="new_game">Nova igra</string>
+    <string name="tell_your_friends">Podeli s prijateljima</string>
+    <string name="got_it">U REDU</string>
+    <string name="how_to_play_info">Alias Vords apsolutni je hit za sve uzraste! Ako ste oduvek tvrdili da ste iznad proseka snalažljivi, brze retorike, spretni i vešti u jeziku, ovo je prilika da se dokažete.
+\ N \ n
+Cilj igrača je objasniti dane reči drugom igraču tima. Dok objašnjava, igrač ne sme da koristi koren reči koju pokušava da objasni. Igra se u timovima. Potrebne su najmanje dve ekipe.
+        \ N \ n
+Na početku runde videćete dijaloški okvir koji vam govori ko će igrati. Pokazaće koji tim igra, koji igrač objašnjava reči, a koji igrač pogađa reči. Igrač koji objašnjava te reči treba da uzme svoj mobilni telefon i pritisne dugme PLAI kada je spreman za početak. Igrač koji objašnjava reč mora da izbegava upotrebu korena reči (i same reči). Kada je reč pogođena, igrač može dobiti novu reč pritiskom na dugme CORRECT u donjem desnom uglu ekrana. Ako je igraču data teška reč za objasniti, on može preskočiti zadanu reč pritiskom na SKIP dugme u donjem levom delu ekrana. Svaka pogođena reč daje jedan poen, dok svaka preskočena reč oduzima po jednu.
+    \ N \ n
+Plejer ima ograničeno vreme koje se može podesiti u podešavanjima. Odbrojavanje se može videti na sredini ekrana. U gornjem levom delu možete videti koliko je reči pogodilo i preskočilo. Kada istekne vreme rudarstva, biće prikazana lista reči koje su bile u krugu. Igrač ima mogućnost izmene pogođenih / preskočenih za svaku reč.
+        \ N \ n
+Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednost je 100 koja se može promijeniti).</string>
+    <string name="teams">Timovi</string>
+    <string name="start_the_game">POKRENI IGRU</string>
+    <string name="skip">PRESKOČI</string>
+    <string name="correct">TAČNO</string>
+    <string name="results">REZULTATI</string>
+    <string name="next_up">SLEDEĆI</string>
+    <string name="start">POKRENI</string>
+    <string name="explaining">Objašnjava</string>
+    <string name="player_1">Igrač 1</string>
+    <string name="player_2">Igrač 2</string>
+    <string name="answering">Pogađa</string>
+    <string name="finish">ZAVRŠI</string>
+    <string name="settings">POSTAVKE</string>
+    <string name="play">IGRAJ</string>
+    <string name="time_limit_seconds">Vreeme runde (sekunde)</string>
+    <string name="dictionary">REČNIK</string>
+    <string name="create_team">NOVI TIM</string>
+    <string name="delete">IZBRIŠI</string>
+    <string name="create">KREIRAJ</string>
+    <string name="stop">ZAVRŠI</string>
+    <string name="corrected">točnih</string>
+    <string name="skipped">preskočenih</string>
+    <string name="score">Rezultat:</string>
+    <string name="score_settings">Ciljni rezultat</string>
+    <string name="team_name">Ime tima</string>
+    <string name="warning">Upozorenje!</string>
+    <string name="are_you_sure_quit">Jeste li sigurni da želite prekinuti igru?</string>
+    <string name="yes">DA</string>
+    <string name="no">NE</string>
+    <string name="enable_recording">Omogući snimanje pa možeš podeliti smešne trenutke preko svoje omiljene društvene mreže</string>
+    <string name="check_video">Pogledaj snimak :)</string>
+    <string name="alias_words">ALIAS\nWORDS</string>
+    <string name="two_teams_needed">Potrebna su 2 tima za igru</string>
+    <string name="share">PODELI</string>
+    <string name="winner">POBEDNICI!!!</string>
+    <string name="record_tip_1">Novo! Omogući snimanje. Snimi rudnu, pregledaj i podeli. Probaj, super je!</string>
+    <string name="record_tip_2">Ovde možeš pogledati snimku runde!</string>
+</resources>
