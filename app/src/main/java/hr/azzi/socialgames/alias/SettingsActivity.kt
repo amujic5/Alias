@@ -165,7 +165,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
         if (seekBar == scoreSeekBar) {
-            val score = progress + 60
+            val score = progress + 40
             scoreTextView.text = "$score"
             this.score = score
         } else if (seekBar == timeSeekBar) {
