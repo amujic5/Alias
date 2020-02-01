@@ -62,7 +62,7 @@
             android:layout_marginBottom="15dp"
             android:textColor="@android:color/white"
             android:text="@string/delete"
-            android:background="#4D4D4D"
+            android:background="@color/alias_red"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

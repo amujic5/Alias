@@ -2,7 +2,9 @@ package hr.azzi.socialgames.alias
 
 import android.app.AlertDialog
 import android.app.Dialog
+import android.content.Context
 import android.content.Intent
+import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.opengl.Visibility
@@ -19,6 +21,7 @@ import kotlinx.android.synthetic.main.activity_new_game.*
 import kotlinx.android.synthetic.main.add_team_footer.view.*
 import kotlinx.android.synthetic.main.dialog_new_category.view.*
 import kotlinx.android.synthetic.main.team_item.view.*
+import com.google.gson.Gson
 
 class NewGameActivity : AppCompatActivity() {
 
@@ -26,10 +29,14 @@ class NewGameActivity : AppCompatActivity() {
         layoutInflater.inflate(R.layout.add_team_footer, null, false)
     }
 
-    val teamDataSource = ArrayList<Team>()
+    var teamDataSource = ArrayList<Team>()
 
     val adapter by lazy {
         TeamAdapter(this, teamDataSource)
+    }
+
+    val preferences: SharedPreferences by lazy {
+        this.getSharedPreferences("teams", Context.MODE_PRIVATE)
     }
 
 
@@ -43,9 +50,29 @@ class NewGameActivity : AppCompatActivity() {
         listView.adapter = adapter
         listView.addFooterView(footerView)
 
+        loadTeams()
+
         updateVsTextView()
 
         observe()
+    }
+
+    fun loadTeams() {
+        val gson = Gson()
+        val json = preferences.getString("teams", null)
+        if (json != null) {
+            val obj: List<Team> = gson.fromJson(json, Array<Team>::class.java).toList()
+            for (team in obj) {
+                teamDataSource.add(team)
+            }
+            adapter.notifyDataSetChanged()
+        }
+    }
+
+    fun saveTeams() {
+        val gson = Gson()
+        val json = gson.toJson(teamDataSource)
+        preferences.edit().putString("teams", json).apply()
     }
 
     fun observe() {
@@ -113,6 +140,7 @@ class NewGameActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
             updateVsTextView()
+            saveTeams()
 
             dialog.dismiss()
         }
@@ -122,6 +150,7 @@ class NewGameActivity : AppCompatActivity() {
                 teamDataSource.remove(it)
                 adapter.notifyDataSetChanged()
                 updateVsTextView()
+                saveTeams()
             }
 
             dialog.dismiss()

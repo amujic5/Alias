@@ -37,7 +37,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="time_limit_seconds">ČAS KROG (sekunde)</string>
     <string name="dictionary">SLOVAR</string>
     <string name="create_team">NOVI TIM</string>
-    <string name="delete">PONASTAVI</string>
+    <string name="delete">IZBRIŠI</string>
     <string name="create">USTVARI</string>
     <string name="stop">DOKONČAJ</string>
     <string name="corrected">natančna</string>
