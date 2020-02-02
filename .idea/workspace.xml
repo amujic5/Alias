@@ -21,13 +21,9 @@
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/classAnalysis.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/jarAnalysis.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/javaCompile.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/5.4.1/javaCompile/taskHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
     </list>
@@ -58,7 +54,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="328">
+            <state relative-caret-position="765">
               <caret line="51" column="88" selection-start-line="51" selection-start-column="88" selection-end-line="51" selection-end-column="88" />
             </state>
           </provider>
@@ -94,11 +90,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml">
           <provider editor-type-id="text-editor">
-            <state relative-caret-position="385">
+            <state relative-caret-position="960">
               <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
-              <folding>
-                <element signature="e#2572#2588#0" expanded="true" />
-              </folding>
             </state>
           </provider>
           <provider selected="true" editor-type-id="android-designer2" />
@@ -112,8 +105,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/full_json.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="169">
-              <caret line="20433" column="161" selection-start-line="20433" selection-start-column="161" selection-end-line="20433" selection-end-column="161" />
+            <state relative-caret-position="315">
+              <caret line="14107" column="21" selection-start-line="14107" selection-start-column="21" selection-end-line="14107" selection-end-column="21" />
             </state>
           </provider>
         </entry>
@@ -121,7 +114,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr/strings.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="377">
+            <state relative-caret-position="735">
               <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
             </state>
           </provider>
@@ -153,9 +146,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>estimation</find>
-      <find>egipa</find>
-      <find>egipat</find>
       <find>dream te</find>
       <find>skip</find>
       <find>start</find>
@@ -183,6 +173,9 @@
       <find>deleye</find>
       <find>&quot;hr</find>
       <find>serbian</find>
+      <find>cro&quot;</find>
+      <find>&quot;language&quot;:</find>
+      <find>&quot;language&quot;: &quot;c</find>
     </findStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -246,10 +239,10 @@
         <option value="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/NewGameActivity.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-SL/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml" />
-        <option value="$PROJECT_DIR$/app/src/main/res/raw/full_json.json" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-sr/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml" />
         <option value="$PROJECT_DIR$/app/src/main/res/values-sr-rME/aaa.xml" />
+        <option value="$PROJECT_DIR$/app/src/main/res/raw/full_json.json" />
         <option value="$PROJECT_DIR$/app/build.gradle" />
       </list>
     </option>
@@ -268,6 +261,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="AndroidView">
         <subPane>
           <expand>
@@ -319,8 +314,6 @@
         </subPane>
       </pane>
       <pane id="ProjectPane" />
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -462,7 +455,7 @@
     <frame x="13" y="23" width="1680" height="1027" extended-state="0" />
     <layout>
       <window_info id="Captures" order="0" side_tool="true" weight="0.25" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.2826618" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.2826618" />
       <window_info id="Structure" order="2" side_tool="true" />
       <window_info id="Favorites" order="3" side_tool="true" />
       <window_info id="Build Variants" order="4" side_tool="true" />
@@ -475,9 +468,9 @@
       <window_info anchor="bottom" id="TODO" order="2" sideWeight="0.4981685" weight="0.32941177" />
       <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.491453" weight="0.33262032" />
       <window_info anchor="bottom" id="Terminal" order="4" sideWeight="0.497558" weight="0.32941177" />
-      <window_info anchor="bottom" id="Event Log" order="5" sideWeight="0.497558" side_tool="true" visible="true" weight="0.24491979" />
+      <window_info active="true" anchor="bottom" id="Event Log" order="5" sideWeight="0.4981685" side_tool="true" visible="true" weight="0.24491979" />
       <window_info anchor="bottom" id="Version Control" order="6" sideWeight="0.498779" weight="0.32941177" />
-      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.502442" visible="true" weight="0.24491979" />
+      <window_info anchor="bottom" id="Build" order="7" sideWeight="0.50183153" visible="true" weight="0.24491979" />
       <window_info anchor="bottom" id="Find" order="8" sideWeight="0.4993895" weight="0.3144385" />
       <window_info anchor="bottom" id="Android Profiler" order="9" sideWeight="0.4993895" weight="0.32941177" />
       <window_info anchor="right" id="Device File Explorer" order="0" side_tool="true" />
@@ -745,14 +738,7 @@ import java.util.ArrayList</custom-info>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/aa_item.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="576">
-          <caret line="265" selection-start-line="265" selection-end-line="265" />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/aa_item.xml" />
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Adapters/TeamAdapter.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="270">
@@ -826,6 +812,20 @@ import java.util.ArrayList</custom-info>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-mn/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr-latn/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr_latn/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sh/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr_me/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-me/strings.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr-rME/aaa.xml" />
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="765">
+          <caret line="51" column="88" selection-start-line="51" selection-start-column="88" selection-end-line="51" selection-end-column="88" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/activity_fullscreen.xml">
       <provider selected="true" editor-type-id="text-editor" />
       <provider editor-type-id="android-designer2" />
@@ -840,11 +840,8 @@ import java.util.ArrayList</custom-info>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/layout/dialog_new_category.xml">
       <provider editor-type-id="text-editor">
-        <state relative-caret-position="385">
+        <state relative-caret-position="960">
           <caret line="64" column="49" selection-start-line="64" selection-start-column="49" selection-end-line="64" selection-end-column="49" />
-          <folding>
-            <element signature="e#2572#2588#0" expanded="true" />
-          </folding>
         </state>
       </provider>
       <provider selected="true" editor-type-id="android-designer2" />
@@ -852,64 +849,24 @@ import java.util.ArrayList</custom-info>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Models/Game.kt">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/full_json.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="169">
-          <caret line="20433" column="161" selection-start-line="20433" selection-start-column="161" selection-end-line="20433" selection-end-column="161" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="328">
-          <caret line="51" column="88" selection-start-line="51" selection-start-column="88" selection-end-line="51" selection-end-column="88" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-mn/strings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr-latn/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr_latn/strings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sh/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="19" column="92" lean-forward="true" selection-start-line="19" selection-start-column="92" selection-end-line="19" selection-end-column="92" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr_me/strings.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-me/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="38" column="48" lean-forward="true" selection-start-line="38" selection-start-column="48" selection-end-line="38" selection-end-column="48" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="377">
+        <state relative-caret-position="735">
           <caret line="49" column="34" selection-start-line="49" selection-start-column="34" selection-end-line="49" selection-end-column="34" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr-rME/aaa.xml">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/res/values-sr-rME/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
           <caret line="23" column="55" selection-start-line="23" selection-start-column="55" selection-end-line="23" selection-end-column="55" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/res/raw/full_json.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="14107" column="21" selection-start-line="14107" selection-start-column="21" selection-end-line="14107" selection-end-column="21" />
         </state>
       </provider>
     </entry>
