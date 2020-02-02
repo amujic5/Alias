@@ -34,7 +34,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="finish">ZAVRŠI</string>
     <string name="settings">POSTAVKE</string>
     <string name="play">IGRAJ</string>
-    <string name="time_limit_seconds">Vreeme runde (sekunde)</string>
+    <string name="time_limit_seconds">Vreme runde (sekunde)</string>
     <string name="dictionary">REČNIK</string>
     <string name="create_team">NOVI TIM</string>
     <string name="delete">IZBRIŠI</string>
