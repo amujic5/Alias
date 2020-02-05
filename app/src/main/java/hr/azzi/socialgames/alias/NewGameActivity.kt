@@ -1,26 +1,20 @@
 package hr.azzi.socialgames.alias
 
 import android.app.AlertDialog
-import android.app.Dialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import android.opengl.Visibility
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.AdapterView
 import android.widget.Toast
 import hr.azzi.socialgames.alias.Adapters.TeamAdapter
-import hr.azzi.socialgames.alias.Models.Dictionary
 import hr.azzi.socialgames.alias.Models.Team
-import kotlinx.android.synthetic.main.activity_home.*
 import kotlinx.android.synthetic.main.activity_new_game.*
 import kotlinx.android.synthetic.main.add_team_footer.view.*
 import kotlinx.android.synthetic.main.dialog_new_category.view.*
-import kotlinx.android.synthetic.main.team_item.view.*
 import com.google.gson.Gson
 
 class NewGameActivity : AppCompatActivity() {
