@@ -50,5 +50,10 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(localIntent, "Share To.."))
         }
 
+        onlineButton.setOnClickListener {
+            val intent = Intent(this, OnlinePlayActivity::class.java)
+            startActivity(intent)
+        }
+
     }
 }

@@ -18,7 +18,12 @@
         android:roundIcon="@drawable/alias_circle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".WinnerActivity"></activity>
+        <activity
+            android:name=".OnlinePlayActivity"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_online_play"
+            android:theme="@style/FullscreenTheme"></activity>
+        <activity android:name=".WinnerActivity" />
         <activity android:name=".VideoListActivity" />
         <activity android:name=".VideoActivity" />
         <activity android:name=".EditAnswersActivity" />

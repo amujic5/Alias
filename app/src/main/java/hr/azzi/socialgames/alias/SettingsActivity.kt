@@ -5,14 +5,11 @@ import android.content.Intent
 import android.content.SharedPreferences
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.ViewGroup
 import android.widget.*
-import androidx.constraintlayout.widget.ConstraintLayout
-import androidx.core.view.size
 import androidx.recyclerview.widget.GridLayoutManager
 import hr.azzi.socialgames.alias.Adapters.FlagAdapter
 import hr.azzi.socialgames.alias.Adapters.FlagAdapterDelegate
-import hr.azzi.socialgames.alias.Models.Dictionary
+import hr.azzi.socialgames.alias.Models.DictionaryModel
 import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
@@ -22,7 +19,6 @@ import hr.azzi.socialgames.alias.Views.TipTextView
 import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_settings.backButton
 import kotlinx.android.synthetic.main.activity_settings.vsTextView
-import kotlinx.android.synthetic.main.text_layout.view.*
 import me.samlss.lighter.parameter.MarginOffset
 import me.samlss.lighter.parameter.LighterParameter
 import me.samlss.lighter.Lighter
@@ -36,7 +32,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
     var time: Int = 60
     var score: Int = 100
 
-    var dictionaries: MutableList<Dictionary> = mutableListOf()
+    var dictionaries: MutableList<DictionaryModel> = mutableListOf()
 
     val flags by lazy {
         ArrayList(dictionaries.toList().map { FlagModel(it.imageURLString, false, it.languageCode, it.language) })

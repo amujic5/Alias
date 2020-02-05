@@ -1,7 +1,7 @@
 package hr.azzi.socialgames.alias.Service
 
 import android.content.Context
-import hr.azzi.socialgames.alias.Models.Dictionary
+import hr.azzi.socialgames.alias.Models.DictionaryModel
 import hr.azzi.socialgames.alias.R
 import org.json.JSONObject
 import java.io.IOException
@@ -12,12 +12,12 @@ class DictionaryService {
 
     companion object {
         val instance = DictionaryService()
-        var playingDictionary: Dictionary? = null
+        var playingDictionary: DictionaryModel? = null
     }
 
-    fun getDictionaries(context: Context):  MutableList<Dictionary> {
+    fun getDictionaries(context: Context):  MutableList<DictionaryModel> {
 
-        var localDictionaries: MutableList<Dictionary> = mutableListOf()
+        var localDictionaries: MutableList<DictionaryModel> = mutableListOf()
 
         val jsonArray = JSONObject(loadJSONFromAsset(context)).getJSONArray("dictionaries")
 
@@ -36,7 +36,7 @@ class DictionaryService {
                 words.add(word)
             }
 
-            val dictionary = Dictionary(language, languageCode, words, imageUrlString)
+            val dictionary = DictionaryModel(language, languageCode, words, imageUrlString)
             localDictionaries.add(dictionary)
 
         }
