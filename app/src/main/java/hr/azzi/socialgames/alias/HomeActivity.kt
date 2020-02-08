@@ -51,7 +51,7 @@ class HomeActivity : AppCompatActivity() {
         }
 
         onlineButton.setOnClickListener {
-            val intent = Intent(this, OnlinePlayActivity::class.java)
+            val intent = Intent(this, OnlineDashboardActivity::class.java)
             startActivity(intent)
         }
 

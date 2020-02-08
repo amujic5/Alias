@@ -45,7 +45,7 @@ import android.text.style.StyleSpan
 class OnlinePlayActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
-    lateinit var adapter: MessagesListAdapter<Message>
+        lateinit var adapter: MessagesListAdapter<Message>
     lateinit var dictionary: DictionaryModel
     lateinit var words: ArrayList<String>
 
@@ -115,7 +115,7 @@ class OnlinePlayActivity : AppCompatActivity() {
     }
 
     fun startTimer() {
-        val timer = object: CountDownTimer((roundTime * 10000).toLong(), 1000) {
+        val timer = object: CountDownTimer((4 * 1000).toLong(), 1000) {
             @SuppressLint("RestrictedApi")
             override fun onTick(millisUntilFinished: Long) {
 
@@ -123,10 +123,15 @@ class OnlinePlayActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-
+                openResult()
             }
         }
         timer.start()
+    }
+
+    fun openResult() {
+        val intent = OnlineResultActivity.createIntent(this, gameId)
+        startActivity(intent)
     }
 
     fun updateTime() {
