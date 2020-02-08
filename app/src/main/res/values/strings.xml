@@ -51,4 +51,6 @@
     <string name="record_tip_2">Here you can check a video of this round!</string>
 
     <string name="title_activity_online_play">OnlinePlayActivity</string>
+
+    <string name="title_activity_online_result">OnlineResultActivity</string>
 </resources>
