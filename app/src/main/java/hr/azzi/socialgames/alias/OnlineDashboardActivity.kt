@@ -2,12 +2,11 @@ package hr.azzi.socialgames.alias
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.google.firebase.Timestamp
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import hr.azzi.socialgames.alias.Adapters.OnlineGameAdapter
 import hr.azzi.socialgames.alias.Models.OnlineGame
 import kotlinx.android.synthetic.main.activity_online_dashboard.*
-import java.util.*
 import kotlin.collections.ArrayList
 
 class OnlineDashboardActivity : AppCompatActivity() {
@@ -15,6 +14,7 @@ class OnlineDashboardActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
     lateinit var adapter: OnlineGameAdapter
     var onlineGameDataSource = ArrayList<OnlineGame>()
+    val user = FirebaseAuth.getInstance().currentUser
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -37,11 +37,12 @@ class OnlineDashboardActivity : AppCompatActivity() {
 
         db.collection("Games")
             .whereIn("status", arrayListOf("waiting", "playing"))
+            .whereEqualTo("dictionary", "CRO")
             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                 val documents = querySnapshot?.documents
 
                 onlineGameDataSource.clear()
-                for (document in querySnapshot!!.documents) {
+                for (document in querySnapshot?.documents!!.reversed()) {
                     val data = document.data!!
                     val onlineGame = OnlineGame.gameWithDictionary(data)
                     onlineGameDataSource.add(onlineGame)
@@ -49,6 +50,12 @@ class OnlineDashboardActivity : AppCompatActivity() {
                 adapter.notifyDataSetChanged()
             }
 
+        listView.setOnItemClickListener { parent, view, position, id ->
+            val onlineGame = onlineGameDataSource[position]
+
+            val intent = OnlinePlayActivity.createIntent(this, onlineGame)
+            startActivity(intent)
+        }
     }
 
     fun createGameIfNeeded() {
@@ -70,13 +77,13 @@ class OnlineDashboardActivity : AppCompatActivity() {
 
                 val newGameRef = db.collection("Games").document(newGameIdString)
                 val newGameMap = hashMapOf<String, Any>(
-                    "dictionary" to "cro",
-                    "status" to "waiting"
+                    "dictionary" to "CRO",
+                    "status" to "waiting",
+                    "id" to newGameIdString
                 )
                 transaction.set(newGameRef, newGameMap)
 
             }
-            // Success
             null
         }
 
