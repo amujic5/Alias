@@ -1,32 +1,27 @@
 package hr.azzi.socialgames.alias
 
 import android.annotation.SuppressLint
+import android.content.Context
+import android.content.Intent
 import android.graphics.Color.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.os.Handler
-import android.text.Spannable
 import android.text.SpannableString
 import android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
 import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.View
-import android.view.View.GONE
 import kotlinx.android.synthetic.main.activity_online_play.*
 import com.stfalcon.chatkit.messages.MessagesListAdapter
-import com.stfalcon.chatkit.commons.ViewHolder
 import com.stfalcon.chatkit.commons.models.IMessage
 import com.stfalcon.chatkit.commons.models.IUser
 import java.util.*
-import android.view.ViewGroup
 import android.widget.TextView
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
-import com.google.firebase.firestore.auth.User
 import hr.azzi.socialgames.alias.Models.DictionaryModel
 import hr.azzi.socialgames.alias.Service.DictionaryService
-import hr.azzi.socialgames.alias.Service.RecordingFlag
 import kotlinx.android.synthetic.main.activity_online_play.correctTextView
 import kotlinx.android.synthetic.main.activity_online_play.dotTextView
 import kotlinx.android.synthetic.main.activity_online_play.skipTextView
@@ -35,7 +30,13 @@ import kotlin.random.Random
 import android.graphics.Typeface
 import android.text.style.BackgroundColorSpan
 import android.text.style.StyleSpan
-
+import com.google.firebase.auth.FirebaseAuth
+import hr.azzi.socialgames.alias.Models.OnlineGame
+import hr.azzi.socialgames.alias.Online.Adapters.InMessageViewHolder
+import hr.azzi.socialgames.alias.Online.Adapters.OutMessageViewHolder
+import hr.azzi.socialgames.alias.Online.Models.Author
+import hr.azzi.socialgames.alias.Online.Models.Message
+import hr.azzi.socialgames.alias.Online.Models.MessageType
 
 
 /**
@@ -45,7 +46,14 @@ import android.text.style.StyleSpan
 class OnlinePlayActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
-        lateinit var adapter: MessagesListAdapter<Message>
+    val user = FirebaseAuth.getInstance().currentUser
+
+    val game: OnlineGame by lazy {
+        intent.getParcelableExtra("game") as OnlineGame
+    }
+
+
+    lateinit var adapter: MessagesListAdapter<Message>
     lateinit var dictionary: DictionaryModel
     lateinit var words: ArrayList<String>
 
@@ -67,8 +75,8 @@ class OnlinePlayActivity : AppCompatActivity() {
     }
 
     var word: String = ""
-    var gameId: String = "1"
-    var username: String = "zoko"
+    lateinit var gameId: String
+    lateinit var username: String
     var admin: String = "admin"
     var startDate: Date = Date()
     val roundTime = 60
@@ -80,27 +88,30 @@ class OnlinePlayActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
+        initGame()
+        joinGame()
+        updateAdminView()
+        updateIntroView()
+
         val holdersConfig = MessagesListAdapter.HoldersConfig()
         holdersConfig.setOutcomingTextConfig(OutMessageViewHolder::class.java, R.layout.item_outcoming_text_message)
         holdersConfig.setIncomingTextConfig(InMessageViewHolder::class.java, R.layout.item_incoming_text_message)
         adapter = MessagesListAdapter<Message>(username, holdersConfig, null)
 
-
-        val user = Author(username, username, null)
-
         messagesList.setAdapter(adapter)
 
-        input.setInputListener {
-            createMessage(it.toString())
-            true
-        }
+        startTimer()
+        observe()
+    }
 
-        getData()
+    fun updateIntroView() {
+        playersCountTextView.text = game.user.size.toString()
+        languageTextView.text = dictionary.language
+        startTextView.text = "Soon"
 
-        val dictionaries = DictionaryService.instance.getDictionaries(this)
-        dictionary = dictionaries[1]
-        words = ArrayList(dictionary.words)
+    }
 
+    fun updateAdminView() {
         if (isAdmin()) {
             wordTextView.visibility = View.VISIBLE
         } else {
@@ -108,10 +119,70 @@ class OnlinePlayActivity : AppCompatActivity() {
             dotTextView.visibility = View.INVISIBLE
             skipTextView.visibility = View.INVISIBLE
         }
+    }
+
+    fun observe() {
+        input.setInputListener {
+            createMessage(it.toString())
+            true
+        }
+
+        db.collection("Games")
+            .document(gameId)
+            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+                val data = querySnapshot?.data
+                if (data != null) {
+                    val timestamp = data.get("date") as? Timestamp
+                    if (timestamp != null) {
+                        this.startDate = timestamp.toDate()
+                    }
+
+                    val word = data.get("word") as? String
+                    if (word != null) {
+                        wordTextView.text = word
+                        this.word = word
+                    } else if (isAdmin()){
+                        explainedCount += 1
+                        updateAdminScore()
+                        updateLables()
+                        updateGame(newWord)
+                    }
+
+                }
+            }
+
+        db.collection("Games/$gameId/Message")
+            .orderBy("date")
+            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
+
+                adapter.clear(true)
+                for (document in querySnapshot!!.documents) {
+                    val data = document.data!!
+                    val username = data.get("user") as String
+                    val text = data.get("text") as String
+                    val messageType = data.get("messageType") as String
+
+                    val timestamp = data.get("date") as Timestamp
+                    val date = timestamp.toDate() ?: Date()
+
+                    val message = Message(document.id, date, Author(username, username,null), text, MessageType.initFrom(messageType))
+                    adapter.addToStart(message, true)
+                }
+            }
+    }
+
+    fun initGame() {
+        username = user?.displayName ?: "no_name"
+        gameId = game?.id ?: "0"
+
+        val dictionaries = DictionaryService.instance.getDictionaries(this)
+        dictionary = dictionaries.first {
+             it.languageCode == game.dictionary
+        }
+        words = ArrayList(dictionary.words)
 
         teamNameTextView.text = username
 
-        startTimer()
     }
 
     fun startTimer() {
@@ -178,57 +249,6 @@ class OnlinePlayActivity : AppCompatActivity() {
         }
     }
 
-    fun updateScore() {
-        val score = hashMapOf(
-            "score" to correctCount,
-            "admin" to false
-        )
-        db
-            .collection("Games/$gameId/Score")
-            .document(username)
-            .set(score)
-            .addOnCompleteListener {
-                print("completed")
-            }
-    }
-
-    fun updateAdminScore() {
-        val score = hashMapOf(
-            "score" to explainedCount,
-            "admin" to true
-        )
-        db
-            .collection("Games/$gameId/Score")
-            .document(admin)
-            .set(score)
-            .addOnCompleteListener {
-                print("completed")
-            }
-    }
-
-    fun clearWord(correctWord: String) {
-        val gameRef = db.collection("Games")
-            .document(gameId)
-        db.runTransaction {
-            val snapshot = it.get(gameRef)
-            val word = (snapshot.get("word") as? String) ?: ""
-            if (normalize(word) == normalize(correctWord)) {
-                it.update(gameRef, "word", null)
-            }
-        }
-    }
-
-    fun updateGame(word: String?) {
-        db
-            .collection("Games")
-            .document(gameId)
-            .update("word", word)
-            .addOnCompleteListener {
-                print("done")
-            }
-    }
-
-
     fun messageType(text: String): MessageType {
         if (username == admin) {
             return MessageType.EXPLAIN
@@ -257,179 +277,82 @@ class OnlinePlayActivity : AppCompatActivity() {
             .trim()
     }
 
-    fun getData() {
-        db.collection("Games")
+    // service calls
+    fun joinGame() {
+        val gameRef = db.collection("Games").document(gameId)
+        db.runTransaction {
+            val snapshot = it.get(gameRef)
+            val onlineGame = OnlineGame.gameWithDictionary(snapshot.data ?: hashMapOf())
+
+            if (!onlineGame.user.contains(username)) {
+                onlineGame.user.add(username)
+                it.update(gameRef, "user", onlineGame.user)
+
+                if (onlineGame.user.size == 2) {
+                    it.update(gameRef, "admin", username)
+                    admin = username
+                    updateAdminView()
+                }
+            }
+
+        }
+    }
+
+    fun clearWord(correctWord: String) {
+        val gameRef = db.collection("Games")
             .document(gameId)
-            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
-                val data = querySnapshot?.data
-                if (data != null) {
-                    val timestamp = data.get("date") as? Timestamp
-                    if (timestamp != null) {
-                        this.startDate = timestamp.toDate()
-                    }
-
-                    val word = data.get("word") as? String
-                    if (word != null) {
-                        wordTextView.text = word
-                        this.word = word
-                    } else if (isAdmin()){
-                        explainedCount += 1
-                        updateAdminScore()
-                        updateLables()
-                        updateGame(newWord)
-                    }
-
-                }
-            }
-
-        getMessages()
-    }
-
-    fun getMessages() {
-
-        db.collection("Games/$gameId/Message")
-            .orderBy("date")
-            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
-
-                adapter.clear(true)
-                for (document in querySnapshot!!.documents) {
-                    val data = document.data!!
-                    val username = data.get("user") as String
-                    val text = data.get("text") as String
-                    val messageType = data.get("messageType") as String
-
-                    val timestamp = data.get("date") as Timestamp
-                    val date = timestamp.toDate() ?: Date()
-
-                    val message = Message(document.id, date, Author(username, username,null), text, MessageType.initFrom(messageType))
-                    adapter.addToStart(message, true)
-                }
-            }
-    }
-
-
-}
-
-
-class Message(var messageId: String, var date: Date, var author: IUser, var messageText: String, var messageType: MessageType): IMessage {
-
-    override fun getId(): String {
-        return messageId
-    }
-
-    override fun getCreatedAt(): Date {
-        return date
-    }
-
-    override fun getUser(): IUser {
-        return author
-    }
-
-    override fun getText(): String {
-        return messageText
-    }
-
-}
-
-class Author(var userId: String, var username: String,  var useravatar: String?): IUser {
-    override fun getAvatar(): String {
-        return ""
-    }
-
-    override fun getName(): String {
-        return username
-    }
-
-    override fun getId(): String {
-        return userId
-    }
-}
-
-
-class OutMessageViewHolder(itemView: View) :
-    MessagesListAdapter.OutcomingMessageViewHolder<Message>(itemView) {
-
-    override fun onBind(message: Message) {
-        super.onBind(message)
-
-        text.setTextColor(BLACK)
-
-        val string = message.author.name + ": " + message.messageText
-        val boldSpan = StyleSpan(Typeface.BOLD)
-        val spannable = SpannableString(string)
-        spannable.setSpan(boldSpan, 0, message.author.name.length + 1, SPAN_EXCLUSIVE_EXCLUSIVE)
-        spannable.setSpan(ForegroundColorSpan(BLACK), 0, message.author.name.length + 1, SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        when(message.messageType) {
-            MessageType.WRONG -> {
-                time.setTextColor(RED)
-                time.text = "\u0078"
-            }
-            MessageType.CORRECT -> {
-                time.text = "\u2713"
-                time.setTextColor(GREEN)
-            }
-            MessageType.EXPLAIN -> {
-                time.text = "\u2824"
-                time.setTextColor(BLACK)
-                spannable.setSpan(BackgroundColorSpan(YELLOW), message.author.name.length + 2 , string.length, SPAN_EXCLUSIVE_EXCLUSIVE)
+        db.runTransaction {
+            val snapshot = it.get(gameRef)
+            val word = (snapshot.get("word") as? String) ?: ""
+            if (normalize(word) == normalize(correctWord)) {
+                it.update(gameRef, "word", null)
             }
         }
-
-        text.setText(spannable, TextView.BufferType.SPANNABLE)
-
     }
-}
 
-class InMessageViewHolder(itemView: View) :
-    MessagesListAdapter.IncomingMessageViewHolder<Message>(itemView) {
-
-    override fun onBind(message: Message) {
-        super.onBind(message)
-
-        text.setTextColor(BLACK)
-
-        val string = message.author.name + ": " + message.messageText
-        val boldSpan = StyleSpan(Typeface.BOLD)
-        val spannable = SpannableString(string)
-        spannable.setSpan(boldSpan, 0, message.author.name.length + 1, SPAN_EXCLUSIVE_EXCLUSIVE)
-        spannable.setSpan(ForegroundColorSpan(BLACK), 0, message.author.name.length + 1, SPAN_EXCLUSIVE_EXCLUSIVE)
-
-        when(message.messageType) {
-            MessageType.WRONG -> {
-                time.setTextColor(RED)
-                time.text = "\u0078"
+    fun updateGame(word: String?) {
+        db
+            .collection("Games")
+            .document(gameId)
+            .update("word", word)
+            .addOnCompleteListener {
+                print("done")
             }
-            MessageType.CORRECT -> {
-                time.text = "\u2713"
-                time.setTextColor(GREEN)
-            }
-            MessageType.EXPLAIN -> {
-                time.text = "\u2824"
-                time.setTextColor(BLACK)
-                spannable.setSpan(BackgroundColorSpan(YELLOW), message.author.name.length + 2 , string.length, SPAN_EXCLUSIVE_EXCLUSIVE)
-            }
-        }
-
-        text.setText(spannable, TextView.BufferType.SPANNABLE)
     }
-}
 
-enum class MessageType(val text: String) {
-    CORRECT("correct"),
-    WRONG("wrong"),
-    EXPLAIN("explain");
+    fun updateScore() {
+        val score = hashMapOf(
+            "score" to correctCount,
+            "admin" to false
+        )
+        db
+            .collection("Games/$gameId/Score")
+            .document(username)
+            .set(score)
+            .addOnCompleteListener {
+                print("completed")
+            }
+    }
 
-    companion object  {
-        fun initFrom(text: String): MessageType {
-            if (text == "correct") {
-                return CORRECT
+    fun updateAdminScore() {
+        val score = hashMapOf(
+            "score" to explainedCount,
+            "admin" to true
+        )
+        db
+            .collection("Games/$gameId/Score")
+            .document(admin)
+            .set(score)
+            .addOnCompleteListener {
+                print("completed")
             }
-            if (text == "wrong") {
-                return WRONG
-            }
-            return EXPLAIN
+    }
+
+    companion object {
+        fun createIntent(context: Context, onlineGame: OnlineGame) = Intent(context, OnlinePlayActivity::class.java).apply {
+            putExtra("game", onlineGame)
         }
     }
 
 }
+
