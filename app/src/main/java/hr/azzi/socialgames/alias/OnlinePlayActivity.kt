@@ -30,6 +30,8 @@ import kotlin.random.Random
 import android.graphics.Typeface
 import android.text.style.BackgroundColorSpan
 import android.text.style.StyleSpan
+import android.view.View.GONE
+import android.view.View.VISIBLE
 import com.google.firebase.auth.FirebaseAuth
 import hr.azzi.socialgames.alias.Models.OnlineGame
 import hr.azzi.socialgames.alias.Online.Adapters.InMessageViewHolder
@@ -37,6 +39,9 @@ import hr.azzi.socialgames.alias.Online.Adapters.OutMessageViewHolder
 import hr.azzi.socialgames.alias.Online.Models.Author
 import hr.azzi.socialgames.alias.Online.Models.Message
 import hr.azzi.socialgames.alias.Online.Models.MessageType
+import hr.azzi.socialgames.alias.Online.Play.OnlinePlayPresenter
+import kotlinx.android.synthetic.main.activity_home.*
+import kotlin.collections.ArrayList
 
 
 /**
@@ -48,16 +53,16 @@ class OnlinePlayActivity : AppCompatActivity() {
     val db = FirebaseFirestore.getInstance()
     val user = FirebaseAuth.getInstance().currentUser
 
-    val game: OnlineGame by lazy {
-        intent.getParcelableExtra("game") as OnlineGame
-    }
-
+    lateinit var game: OnlineGame
+    lateinit var presenter: OnlinePlayPresenter
 
     lateinit var adapter: MessagesListAdapter<Message>
     lateinit var dictionary: DictionaryModel
     lateinit var words: ArrayList<String>
 
-    var explainedCount = 0
+    var timer: CountDownTimer? = null
+
+    var explainedCount = -1
     var correctCount = 0
 
     val newWord: String
@@ -89,7 +94,10 @@ class OnlinePlayActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         initGame()
-        joinGame()
+        presenter = OnlinePlayPresenter(this, game)
+        presenter.didCreate()
+        presenter.joinGame()
+
         updateAdminView()
         updateIntroView()
 
@@ -107,8 +115,6 @@ class OnlinePlayActivity : AppCompatActivity() {
     fun updateIntroView() {
         playersCountTextView.text = game.user.size.toString()
         languageTextView.text = dictionary.language
-        startTextView.text = "Soon"
-
     }
 
     fun updateAdminView() {
@@ -122,56 +128,20 @@ class OnlinePlayActivity : AppCompatActivity() {
     }
 
     fun observe() {
+        leaveButton.setOnClickListener {
+            presenter.leaveGame()
+            finish()
+        }
+
         input.setInputListener {
             createMessage(it.toString())
             true
         }
 
-        db.collection("Games")
-            .document(gameId)
-            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
-                val data = querySnapshot?.data
-                if (data != null) {
-                    val timestamp = data.get("date") as? Timestamp
-                    if (timestamp != null) {
-                        this.startDate = timestamp.toDate()
-                    }
-
-                    val word = data.get("word") as? String
-                    if (word != null) {
-                        wordTextView.text = word
-                        this.word = word
-                    } else if (isAdmin()){
-                        explainedCount += 1
-                        updateAdminScore()
-                        updateLables()
-                        updateGame(newWord)
-                    }
-
-                }
-            }
-
-        db.collection("Games/$gameId/Message")
-            .orderBy("date")
-            .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
-
-                adapter.clear(true)
-                for (document in querySnapshot!!.documents) {
-                    val data = document.data!!
-                    val username = data.get("user") as String
-                    val text = data.get("text") as String
-                    val messageType = data.get("messageType") as String
-
-                    val timestamp = data.get("date") as Timestamp
-                    val date = timestamp.toDate() ?: Date()
-
-                    val message = Message(document.id, date, Author(username, username,null), text, MessageType.initFrom(messageType))
-                    adapter.addToStart(message, true)
-                }
-            }
     }
 
     fun initGame() {
+        game = intent.getParcelableExtra("game") as OnlineGame
         username = user?.displayName ?: "no_name"
         gameId = game?.id ?: "0"
 
@@ -182,11 +152,45 @@ class OnlinePlayActivity : AppCompatActivity() {
         words = ArrayList(dictionary.words)
 
         teamNameTextView.text = username
+    }
 
+    fun updateGame(game: OnlineGame) {
+        this.game = game
+
+        this.startDate = game.date?.toDate() ?: Date()
+
+        admin = game.admin ?: ""
+        updateAdminView()
+
+        val word = game.word
+
+        if (word != null) {
+            wordTextView.text = word
+            this.word = word
+        } else if (isAdmin()){
+            explainedCount += 1
+            presenter.updateAdminScore(explainedCount)
+            updateLables()
+            presenter.updateGame(newWord)
+        }
+
+        if (game.isPlaying()) {
+            introContainer.visibility = GONE
+        } else if (game.isWaiting()) {
+            introContainer.visibility = VISIBLE
+            updateIntroView()
+        }
+    }
+
+    fun updateUI(messages: ArrayList<Message>) {
+        adapter.clear(true)
+        messages.forEach {
+            adapter.addToStart(it, true)
+        }
     }
 
     fun startTimer() {
-        val timer = object: CountDownTimer((4 * 1000).toLong(), 1000) {
+        timer = object: CountDownTimer((1000 * 1000).toLong(), 1000) {
             @SuppressLint("RestrictedApi")
             override fun onTick(millisUntilFinished: Long) {
 
@@ -194,20 +198,41 @@ class OnlinePlayActivity : AppCompatActivity() {
             }
 
             override fun onFinish() {
-                openResult()
             }
+
         }
-        timer.start()
+        timer?.start()
+
     }
 
     fun openResult() {
         val intent = OnlineResultActivity.createIntent(this, gameId)
         startActivity(intent)
+        finish()
     }
 
     fun updateTime() {
         val seconds = roundTime - ((Date().time - startDate.time)/1000).toInt()
         timeOnlineTextView.text = seconds.toString()
+
+        val gameStartDate = game.date
+
+        if (gameStartDate != null) {
+            val newSeconds = -((Date().time - gameStartDate.toDate().time)/1000).toInt()
+            startTextView.text = "${newSeconds}"
+
+            if (newSeconds < -59) {
+                timer?.cancel()
+                openResult()
+                presenter.updateGameStatus("finished")
+            } else if (newSeconds <= 0) {
+                presenter.updateGameStatus("playing")
+            }
+
+        } else {
+            startTextView.text = "Soon"
+        }
+
     }
 
     fun updateLables() {
@@ -229,7 +254,7 @@ class OnlinePlayActivity : AppCompatActivity() {
 
         val messageType = messageType(messageText)
 
-        val city = hashMapOf(
+        val message = hashMapOf(
             "text" to messageText,
             "messageType" to messageType.text,
             "user" to username,
@@ -237,15 +262,15 @@ class OnlinePlayActivity : AppCompatActivity() {
         )
 
         db.collection("Games/$gameId/Message")
-            .add(city)
+            .add(message)
             .addOnSuccessListener { Log.d("", "DocumentSnapshot successfully written!") }
             .addOnFailureListener { e -> Log.w("", "Error writing document", e) }
 
         if (messageType == MessageType.CORRECT) {
             correctCount += 1
-            updateScore()
+            presenter.updateScore(correctCount)
             updateLables()
-            clearWord(messageText)
+            presenter.clearWord(messageText)
         }
     }
 
@@ -262,91 +287,11 @@ class OnlinePlayActivity : AppCompatActivity() {
     }
 
     fun isCorrect(text: String): Boolean {
-        return normalize(text) == normalize(this.word)
-    }
-
-    fun normalize(text: String): String {
-        return text
-            .toLowerCase()
-            .replace("č", "c")
-            .replace("đ", "d")
-            .replace("š", "s")
-            .replace("ž", "z")
-            .replace("ć", "c")
-            .replace("-", " ")
-            .trim()
+        return presenter.normalize(text) == presenter.normalize(this.word)
     }
 
     // service calls
-    fun joinGame() {
-        val gameRef = db.collection("Games").document(gameId)
-        db.runTransaction {
-            val snapshot = it.get(gameRef)
-            val onlineGame = OnlineGame.gameWithDictionary(snapshot.data ?: hashMapOf())
 
-            if (!onlineGame.user.contains(username)) {
-                onlineGame.user.add(username)
-                it.update(gameRef, "user", onlineGame.user)
-
-                if (onlineGame.user.size == 2) {
-                    it.update(gameRef, "admin", username)
-                    admin = username
-                    updateAdminView()
-                }
-            }
-
-        }
-    }
-
-    fun clearWord(correctWord: String) {
-        val gameRef = db.collection("Games")
-            .document(gameId)
-        db.runTransaction {
-            val snapshot = it.get(gameRef)
-            val word = (snapshot.get("word") as? String) ?: ""
-            if (normalize(word) == normalize(correctWord)) {
-                it.update(gameRef, "word", null)
-            }
-        }
-    }
-
-    fun updateGame(word: String?) {
-        db
-            .collection("Games")
-            .document(gameId)
-            .update("word", word)
-            .addOnCompleteListener {
-                print("done")
-            }
-    }
-
-    fun updateScore() {
-        val score = hashMapOf(
-            "score" to correctCount,
-            "admin" to false
-        )
-        db
-            .collection("Games/$gameId/Score")
-            .document(username)
-            .set(score)
-            .addOnCompleteListener {
-                print("completed")
-            }
-    }
-
-    fun updateAdminScore() {
-        val score = hashMapOf(
-            "score" to explainedCount,
-            "admin" to true
-        )
-        db
-            .collection("Games/$gameId/Score")
-            .document(admin)
-            .set(score)
-            .addOnCompleteListener {
-                print("completed")
-            }
-    }
 
     companion object {
         fun createIntent(context: Context, onlineGame: OnlineGame) = Intent(context, OnlinePlayActivity::class.java).apply {
