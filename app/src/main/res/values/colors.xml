@@ -11,8 +11,11 @@
     <color name="alias_red">#F74545</color>
     <color name="alias_blue">#3FBDFC</color>
     <color name="alias_green">#67E0A2</color>
+    <color name="alias_dark_green">#006400</color>
     <color name="alias_dark_transparent">#00000088</color>
     <color name="alias_light_gray">#BFBFBF</color>
     <color name="alias_dark_gray">#595959</color>
+    <color name="alias_orange">#FFAA38</color>
+
 
 </resources>

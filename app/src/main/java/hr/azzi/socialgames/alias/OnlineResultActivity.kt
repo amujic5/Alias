@@ -27,7 +27,15 @@ class OnlineResultActivity : AppCompatActivity() {
         supportActionBar?.hide()
 
         loadData()
+        observe()
     }
+
+    fun observe() {
+        finishButton.setOnClickListener {
+            finish()
+        }
+    }
+
 
     fun loadData() {
         UserResultService
@@ -36,6 +44,9 @@ class OnlineResultActivity : AppCompatActivity() {
 
                 val adapter = UserResultAdapter(this, userResult)
                 listView.adapter = adapter
+
+                explainerTextView.text = "Explainer: ${adminUserResult.username}"
+                explainerScoreTextView.text = "Score: ${adminUserResult.score}"
             }
     }
 

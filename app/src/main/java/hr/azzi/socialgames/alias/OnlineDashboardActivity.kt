@@ -7,14 +7,13 @@ import com.google.firebase.firestore.FirebaseFirestore
 import hr.azzi.socialgames.alias.Adapters.OnlineGameAdapter
 import hr.azzi.socialgames.alias.Models.OnlineGame
 import kotlinx.android.synthetic.main.activity_online_dashboard.*
-import kotlin.collections.ArrayList
 
 class OnlineDashboardActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
     lateinit var adapter: OnlineGameAdapter
-    var onlineGameDataSource = ArrayList<OnlineGame>()
     val user = FirebaseAuth.getInstance().currentUser
+    var onlineGame: OnlineGame? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -23,11 +22,19 @@ class OnlineDashboardActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
-        adapter = OnlineGameAdapter(this, onlineGameDataSource)
-        listView.adapter = adapter
 
         observe()
+    }
+
+    override fun onResume() {
+        super.onResume()
         createGameIfNeeded()
+    }
+
+    fun updateUI() {
+        onlineGame?.let {
+            playersCountTextView.text = "${it.user.size} players online"
+        }
     }
 
     fun observe() {
@@ -38,24 +45,29 @@ class OnlineDashboardActivity : AppCompatActivity() {
         db.collection("Games")
             .whereIn("status", arrayListOf("waiting", "playing"))
             .whereEqualTo("dictionary", "CRO")
+            .limit(1)
             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                 val documents = querySnapshot?.documents
-
-                onlineGameDataSource.clear()
-                for (document in querySnapshot?.documents!!.reversed()) {
-                    val data = document.data!!
-                    val onlineGame = OnlineGame.gameWithDictionary(data)
-                    onlineGameDataSource.add(onlineGame)
+                if (documents != null && !documents.isEmpty()) {
+                    val data = documents.first().data
+                    if (data != null) {
+                        val onlineGame = OnlineGame.gameWithDictionary(data)
+                        this.onlineGame = onlineGame
+                        updateUI()
+                    }
                 }
-                adapter.notifyDataSetChanged()
+
+                createGameIfNeeded()
+
             }
 
-        listView.setOnItemClickListener { parent, view, position, id ->
-            val onlineGame = onlineGameDataSource[position]
-
-            val intent = OnlinePlayActivity.createIntent(this, onlineGame)
-            startActivity(intent)
+        onlinePlayButton.setOnClickListener {
+            onlineGame?.let {
+                val intent = OnlinePlayActivity.createIntent(this, it)
+                startActivity(intent)
+            }
         }
+
     }
 
     fun createGameIfNeeded() {
@@ -69,9 +81,10 @@ class OnlineDashboardActivity : AppCompatActivity() {
             val lastGameRef = db.collection("Games").document(gameId.toString())
             val gameSnapshot = transaction.get(lastGameRef)
 
-            val status = gameSnapshot.getString("status")
 
-            if (status != "waiting") {
+            val onlineGame = OnlineGame.gameWithDictionary(gameSnapshot.data!!)
+
+            if (onlineGame.isFinished()) {
                 val newGameIdString = (gameId + 1).toString()
                 transaction.update(constantRef, "gameId", newGameIdString)
 
