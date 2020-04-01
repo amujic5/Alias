@@ -4,12 +4,7 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.Handler
-import android.view.View
-import com.google.firebase.firestore.FirebaseFirestore
 import hr.azzi.socialgames.alias.Adapters.UserResultAdapter
-import hr.azzi.socialgames.alias.Models.Game
-import hr.azzi.socialgames.alias.Models.UserResult
 import hr.azzi.socialgames.alias.Service.UserResultService
 import kotlinx.android.synthetic.main.activity_online_result.*
 
@@ -31,7 +26,7 @@ class OnlineResultActivity : AppCompatActivity() {
     }
 
     fun observe() {
-        finishButton.setOnClickListener {
+        closeButton2.setOnClickListener {
             finish()
         }
     }
@@ -45,8 +40,22 @@ class OnlineResultActivity : AppCompatActivity() {
                 val adapter = UserResultAdapter(this, userResult)
                 listView.adapter = adapter
 
+                playerCountTextView.text = userResult.size.toString()
                 explainerTextView.text = "Explainer: ${adminUserResult.username}"
-                explainerScoreTextView.text = "Score: ${adminUserResult.score}"
+                explainerScoreTextView.text = "${adminUserResult.score}"
+
+                var userMe = userResult.find {
+                    it.isMe
+                }
+                if (userMe == null) {
+                    userMe = adminUserResult
+                }
+                userMe.let {
+                    teamTextView.text = it.username
+                    scoreTextView.text = "Score: ${it.score}"
+                    numberTextView.text = it.index.toString()
+                }
+
             }
     }
 

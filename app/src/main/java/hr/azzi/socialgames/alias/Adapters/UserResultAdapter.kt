@@ -23,6 +23,7 @@ class UserResultAdapter(private val context: Context,
         rowView.teamTextView.text = userResult.username
         rowView.numberTextView.text = userResult.index.toString()
         rowView.scoreTextView.text = context.resources.getString(R.string.score) + " " + userResult.score
+        rowView.setBackgroundColor(Color.WHITE)
 
         if (userResult.isMe) {
             rowView.setBackgroundColor(ContextCompat.getColor(context, R.color.alias_green))

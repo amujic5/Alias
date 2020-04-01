@@ -44,7 +44,7 @@
         app:layout_constraintBottom_toTopOf="@+id/input"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/view3"
         app:outcomingDefaultBubbleColor="@color/white"
         app:outcomingTextColor="@color/alias_red"
         app:outcomingTextSize="18sp" />
@@ -68,13 +68,13 @@
     <View
         android:id="@+id/view3"
         android:layout_width="0dp"
-        android:layout_height="80dp"
+        android:layout_height="70dp"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="21dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="15dp"
         android:background="@drawable/radius"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/adView" />
 
@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="15dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="8dp"
         android:fontFamily="sans-serif-black"
         android:text="dream team"
         app:layout_constraintStart_toStartOf="@+id/view3"
@@ -93,7 +93,7 @@
         android:id="@+id/correctTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="5dp"
+        android:layout_marginTop="2dp"
         android:fontFamily="sans-serif-medium"
         android:text="0 correct"
         app:layout_constraintStart_toStartOf="@+id/teamNameTextView"
@@ -124,31 +124,41 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="25dp"
         android:text="60"
-        android:textSize="40sp"
+        android:textSize="30sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/view3"
         app:layout_constraintEnd_toEndOf="@+id/view3"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
+        app:layout_constraintTop_toBottomOf="@+id/view3"
+        app:layout_constraintVertical_bias="0.55" />
+
 
     <TextView
         android:id="@+id/wordTextView"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="55dp"
+        android:layout_marginEnd="25dp"
+        android:background="@drawable/rounded_online_game"
+        android:paddingTop="2dp"
+        android:paddingBottom="2dp"
         android:text="TextView"
         android:textAlignment="center"
-        android:textSize="60sp"
+        android:textColor="@color/white"
+        android:textSize="30sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/view3" />
-
+        app:layout_constraintEnd_toEndOf="@+id/view3"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/view3"
+        app:layout_constraintTop_toTopOf="@+id/view3" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
 
         android:id="@+id/introContainer"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="#BB000000">
+        android:background="#BB000000"
+        android:visibility="gone">
 
 
         <Button
