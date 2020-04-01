@@ -1,5 +1,6 @@
 package hr.azzi.socialgames.alias.Service
 
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import hr.azzi.socialgames.alias.Models.UserResult
 
@@ -33,7 +34,14 @@ class UserResultService {
 
                     lastScore = score
 
-                    val userResult = UserResult(username, score.toInt(), position,false)
+                    val myUsername = FirebaseAuth.getInstance().currentUser?.displayName ?: ""
+                    val isMe =  username == myUsername
+
+                    if (isMe) {
+                        saveResult(score.toInt(), gameId)
+                    }
+
+                    val userResult = UserResult(username, score.toInt(), position, isMe)
                     if (admin) {
                         adminUserResult = userResult
                     } else {
@@ -43,6 +51,36 @@ class UserResultService {
 
                 callback(userResults, adminUserResult)
             }
+    }
+
+    fun saveResult(result: Int, gameId: String) {
+        val myUdid = FirebaseAuth.getInstance().currentUser?.uid
+        val username = FirebaseAuth.getInstance().currentUser?.displayName
+        if (username == null) {
+            return
+        }
+        if (myUdid == null) {
+            return
+        }
+
+        val userRef= db.document("Users/" + myUdid)
+        db.runTransaction {
+
+            val userDocument= it.get(userRef)
+            if (userDocument.data == null) {
+                val scores = HashMap<String, Int>()
+                scores.set(gameId, result)
+                val map = hashMapOf<String, Any>("scores" to scores, "username" to username)
+                it.set(userRef, map)
+            } else {
+                var scores = (userDocument.data?.get("scores") as? HashMap<String, Int>) ?: HashMap<String, Int>()
+                scores.set(gameId, result)
+                val map = hashMapOf<String, Any>("scores" to scores, "username" to username)
+                it.update(userRef, map)
+            }
+
+
+        }
     }
 
     companion object {
