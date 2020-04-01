@@ -90,8 +90,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun signIn() {
         val providers = arrayListOf(
-            AuthUI.IdpConfig.EmailBuilder().build(),
-            AuthUI.IdpConfig.GoogleBuilder().build())
+            AuthUI.IdpConfig.EmailBuilder().build())
 
         startActivityForResult(
             AuthUI.getInstance()
