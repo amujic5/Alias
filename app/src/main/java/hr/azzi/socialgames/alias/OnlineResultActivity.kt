@@ -4,14 +4,23 @@ import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.github.loadingview.LoadingDialog
 import hr.azzi.socialgames.alias.Adapters.UserResultAdapter
+import hr.azzi.socialgames.alias.Models.OnlineGame
+import hr.azzi.socialgames.alias.Models.UserResult
+import hr.azzi.socialgames.alias.Online.Models.UserManagerModel
 import hr.azzi.socialgames.alias.Service.UserResultService
 import kotlinx.android.synthetic.main.activity_online_result.*
 
 class OnlineResultActivity : AppCompatActivity() {
 
+    lateinit var game: OnlineGame
+
     val gameId: String by lazy {
         intent.getStringExtra("gameId")
+    }
+    val dialog: LoadingDialog by lazy {
+        LoadingDialog.get(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,8 +30,11 @@ class OnlineResultActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
+        game = intent.getParcelableExtra("game") as OnlineGame
+
         loadData()
         observe()
+
     }
 
     fun observe() {
@@ -33,14 +45,34 @@ class OnlineResultActivity : AppCompatActivity() {
 
 
     fun loadData() {
+        dialog.show()
         UserResultService
             .instance
             .getUserResults(gameId) { userResult, adminUserResult ->
 
+                dialog.hide()
+
+                val index = userResult.size + 1
+
+                for (user in game.user) {
+                    if (user == adminUserResult.username) {
+                        continue
+                    }
+
+                    try {
+                        val userResult = userResult.first {
+                            it.username == user
+                        }
+                    } catch (e: NoSuchElementException) {
+                        val userR = UserResult(user, 0, index, user == UserManagerModel.username())
+                        userResult.add(userR)
+                    }
+                }
+
                 val adapter = UserResultAdapter(this, userResult)
                 listView.adapter = adapter
 
-                playerCountTextView.text = userResult.size.toString()
+                playerCountTextView.text = game.user.size.toString()
                 explainerTextView.text = "Explainer: ${adminUserResult.username}"
                 explainerScoreTextView.text = "${adminUserResult.score}"
 
@@ -60,7 +92,8 @@ class OnlineResultActivity : AppCompatActivity() {
     }
 
     companion object {
-        fun createIntent(context: Context, gameId: String) = Intent(context, OnlineResultActivity::class.java).apply {
+        fun createIntent(context: Context, gameId: String, onlineGame: OnlineGame) = Intent(context, OnlineResultActivity::class.java).apply {
+            putExtra("game", onlineGame)
             putExtra("gameId", gameId)
         }
     }
