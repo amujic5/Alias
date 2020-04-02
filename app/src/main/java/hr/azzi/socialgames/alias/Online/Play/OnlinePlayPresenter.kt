@@ -3,6 +3,7 @@ package hr.azzi.socialgames.alias.Online.Play
 import com.google.firebase.Timestamp
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
 import hr.azzi.socialgames.alias.Models.OnlineGame
 import hr.azzi.socialgames.alias.Online.Models.Author
 import hr.azzi.socialgames.alias.Online.Models.Message
@@ -16,6 +17,8 @@ class OnlinePlayPresenter(val view: OnlinePlayActivity, var game: OnlineGame) {
     val db = FirebaseFirestore.getInstance()
     val user = FirebaseAuth.getInstance().currentUser
     lateinit var gameId: String
+    var gameListener: ListenerRegistration? = null
+    var messageListener: ListenerRegistration? = null
 
     fun didCreate() {
         gameId = game.id ?: ""
@@ -24,8 +27,14 @@ class OnlinePlayPresenter(val view: OnlinePlayActivity, var game: OnlineGame) {
         observeMessages()
     }
 
+    fun removeListeners() {
+        gameListener?.remove()
+        messageListener?.remove()
+    }
+
+
     fun observeGame() {
-        db.collection("Games")
+        gameListener =  db.collection("Games")
             .document(gameId)
             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
                 val data = querySnapshot?.data
@@ -38,7 +47,7 @@ class OnlinePlayPresenter(val view: OnlinePlayActivity, var game: OnlineGame) {
     }
 
     fun observeMessages() {
-        db.collection("Games/$gameId/Message")
+        messageListener = db.collection("Games/$gameId/Message")
             .orderBy("date")
             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
 

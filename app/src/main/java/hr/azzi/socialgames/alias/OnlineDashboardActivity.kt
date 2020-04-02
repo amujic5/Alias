@@ -4,8 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.ListenerRegistration
 import hr.azzi.socialgames.alias.Adapters.OnlineGameAdapter
 import hr.azzi.socialgames.alias.Models.OnlineGame
+import hr.azzi.socialgames.alias.Online.LeaderboardMainActivity
+import hr.azzi.socialgames.alias.Online.Profile.ProfileMainActivity
 import kotlinx.android.synthetic.main.activity_online_dashboard.*
 
 class OnlineDashboardActivity : AppCompatActivity() {
@@ -26,6 +29,11 @@ class OnlineDashboardActivity : AppCompatActivity() {
         observe()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        listener?.remove()
+    }
+
     override fun onResume() {
         super.onResume()
         createGameIfNeeded()
@@ -37,13 +45,15 @@ class OnlineDashboardActivity : AppCompatActivity() {
         }
     }
 
+    var listener: ListenerRegistration? = null
+
     fun observe() {
         backButton.setOnClickListener {
             this.finish()
         }
 
-        db.collection("Games")
-            .whereIn("status", arrayListOf("waiting", "playing"))
+        listener = db.collection("Games")
+            .whereIn("status", arrayListOf("waiting"))
             .whereEqualTo("dictionary", "CRO")
             .limit(1)
             .addSnapshotListener { querySnapshot, firebaseFirestoreException ->
@@ -68,6 +78,16 @@ class OnlineDashboardActivity : AppCompatActivity() {
             }
         }
 
+        leaderboardButton.setOnClickListener {
+            val intent = LeaderboardMainActivity.createIntent(this)
+            startActivity(intent)
+        }
+
+        proofileButton.setOnClickListener {
+            val intent = ProfileMainActivity.createIntent(this)
+            startActivity(intent)
+        }
+
     }
 
     fun createGameIfNeeded() {
@@ -84,7 +104,7 @@ class OnlineDashboardActivity : AppCompatActivity() {
 
             val onlineGame = OnlineGame.gameWithDictionary(gameSnapshot.data!!)
 
-            if (onlineGame.isFinished()) {
+            if (onlineGame.isFinished() || onlineGame.isPlaying()) {
                 val newGameIdString = (gameId + 1).toString()
                 transaction.update(constantRef, "gameId", newGameIdString)
 

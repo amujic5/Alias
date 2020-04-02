@@ -3,21 +3,14 @@ package hr.azzi.socialgames.alias
 import android.annotation.SuppressLint
 import android.content.Context
 import android.content.Intent
-import android.graphics.Color.*
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.CountDownTimer
-import android.text.SpannableString
-import android.text.Spanned.SPAN_EXCLUSIVE_EXCLUSIVE
-import android.text.style.ForegroundColorSpan
 import android.util.Log
 import android.view.View
 import kotlinx.android.synthetic.main.activity_online_play.*
 import com.stfalcon.chatkit.messages.MessagesListAdapter
-import com.stfalcon.chatkit.commons.models.IMessage
-import com.stfalcon.chatkit.commons.models.IUser
 import java.util.*
-import android.widget.TextView
 import com.google.firebase.Timestamp
 import com.google.firebase.firestore.FirebaseFirestore
 import hr.azzi.socialgames.alias.Models.DictionaryModel
@@ -27,20 +20,24 @@ import kotlinx.android.synthetic.main.activity_online_play.dotTextView
 import kotlinx.android.synthetic.main.activity_online_play.skipTextView
 import kotlinx.android.synthetic.main.activity_online_play.wordTextView
 import kotlin.random.Random
-import android.graphics.Typeface
-import android.text.style.BackgroundColorSpan
-import android.text.style.StyleSpan
 import android.view.View.GONE
 import android.view.View.VISIBLE
+import android.widget.Toast
+import com.google.android.gms.ads.AdListener
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.InterstitialAd
+import com.google.android.gms.ads.MobileAds
+import com.google.firebase.analytics.FirebaseAnalytics
 import com.google.firebase.auth.FirebaseAuth
 import hr.azzi.socialgames.alias.Models.OnlineGame
 import hr.azzi.socialgames.alias.Online.Adapters.InMessageViewHolder
 import hr.azzi.socialgames.alias.Online.Adapters.OutMessageViewHolder
-import hr.azzi.socialgames.alias.Online.Models.Author
 import hr.azzi.socialgames.alias.Online.Models.Message
 import hr.azzi.socialgames.alias.Online.Models.MessageType
+import hr.azzi.socialgames.alias.Online.Models.UserManagerModel
 import hr.azzi.socialgames.alias.Online.Play.OnlinePlayPresenter
-import kotlinx.android.synthetic.main.activity_home.*
+import kotlinx.android.synthetic.main.activity_online_play.adView
+import kotlinx.android.synthetic.main.activity_online_play.teamNameTextView
 import kotlin.collections.ArrayList
 
 
@@ -52,6 +49,9 @@ class OnlinePlayActivity : AppCompatActivity() {
 
     val db = FirebaseFirestore.getInstance()
     val user = FirebaseAuth.getInstance().currentUser
+
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
+    private lateinit var mInterstitialAd: InterstitialAd
 
     lateinit var game: OnlineGame
     lateinit var presenter: OnlinePlayPresenter
@@ -68,9 +68,16 @@ class OnlinePlayActivity : AppCompatActivity() {
     val newWord: String
         get() {
 
-            val randomIndex = randomValue(0, words.size - 1)
-            val wordString = words[randomIndex]
-            words.removeAt(randomIndex)
+            var wordString: String = ""
+            while (true) {
+                val randomIndex = randomValue(0, words.size - 1)
+                wordString = words[randomIndex]
+                words.removeAt(randomIndex)
+
+                if (wordString.split(" ").count() == 1) {
+                    break
+                }
+            }
 
             return wordString
         }
@@ -110,6 +117,45 @@ class OnlinePlayActivity : AppCompatActivity() {
 
         startTimer()
         observe()
+
+        loadIntrestialAd()
+        loadAd()
+        log()
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        presenter.removeListeners()
+    }
+    fun loadAd() {
+        MobileAds.initialize(this) {}
+
+        val adRequest = AdRequest.Builder().build()
+        adView.loadAd(adRequest)
+    }
+
+    fun loadIntrestialAd() {
+        MobileAds.initialize(this) {}
+        mInterstitialAd = InterstitialAd(this)
+        val prod = "ca-app-pub-1489905432577426/3906492992"
+        val test =  "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd.adUnitId = prod
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+
+        mInterstitialAd.adListener = object: AdListener() {
+            override fun onAdClosed() {
+                openNextScreen()
+            }
+        }
+    }
+
+    fun log() {
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
+
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "ONLINE PLAY")
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "ONLINE PLAY")
+        firebaseAnalytics.logEvent("ONLINEPLAY", bundle)
     }
 
     fun updateIntroView() {
@@ -142,7 +188,7 @@ class OnlinePlayActivity : AppCompatActivity() {
 
     fun initGame() {
         game = intent.getParcelableExtra("game") as OnlineGame
-        username = user?.displayName ?: "no_name"
+        username = UserManagerModel.username()
         gameId = game?.id ?: "0"
 
         val dictionaries = DictionaryService.instance.getDictionaries(this)
@@ -206,10 +252,20 @@ class OnlinePlayActivity : AppCompatActivity() {
     }
 
     fun openResult() {
-        val intent = OnlineResultActivity.createIntent(this, gameId)
+        if (mInterstitialAd.isLoaded) {
+            mInterstitialAd.show()
+        } else {
+            openNextScreen()
+        }
+    }
+
+    fun openNextScreen() {
+        val intent = OnlineResultActivity.createIntent(this, gameId, game)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         startActivity(intent)
         finish()
     }
+
 
     fun updateTime() {
         val seconds = roundTime - ((Date().time - startDate.time)/1000).toInt()
@@ -237,8 +293,8 @@ class OnlinePlayActivity : AppCompatActivity() {
 
     fun updateLables() {
         if (isAdmin()) {
-            var skipped = explainedCount
-            skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
+            var correct = explainedCount
+            correctTextView.text = "$correct " + resources.getString(R.string.corrected)
         } else {
             val correct = correctCount
             correctTextView.text = "$correct " + resources.getString(R.string.corrected)
@@ -260,6 +316,17 @@ class OnlinePlayActivity : AppCompatActivity() {
             "user" to username,
             "date" to Timestamp(Date())
         )
+
+        if (messageType == MessageType.EXPLAIN) {
+
+            val normalized = presenter.normalize(text).replace(" ", "")
+            val thisWordNormalized = presenter.normalize(this.word).replace(" ", "")
+
+            if (normalized.contains(thisWordNormalized) || thisWordNormalized.contains(normalized)) {
+                Toast.makeText(this, "Can not use that explanation!", Toast.LENGTH_SHORT).show()
+                return
+            }
+        }
 
         db.collection("Games/$gameId/Message")
             .add(message)
@@ -289,9 +356,6 @@ class OnlinePlayActivity : AppCompatActivity() {
     fun isCorrect(text: String): Boolean {
         return presenter.normalize(text) == presenter.normalize(this.word)
     }
-
-    // service calls
-
 
     companion object {
         fun createIntent(context: Context, onlineGame: OnlineGame) = Intent(context, OnlinePlayActivity::class.java).apply {

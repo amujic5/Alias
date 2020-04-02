@@ -4,11 +4,16 @@ import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.UserManager
 import android.widget.Toast
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.IdpResponse
+import com.github.loadingview.LoadingDialog
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FirebaseFirestore
+import hr.azzi.socialgames.alias.Online.Models.UserManagerModel
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -18,7 +23,11 @@ import kotlinx.android.synthetic.main.activity_home.*
  */
 class HomeActivity : AppCompatActivity() {
 
+    val dialog: LoadingDialog by lazy {
+        LoadingDialog.get(this)
+    }
 
+    val db = FirebaseFirestore.getInstance()
     val RC_SIGN_IN = 324
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -80,12 +89,59 @@ class HomeActivity : AppCompatActivity() {
     fun openOnline() {
         val user = FirebaseAuth.getInstance().currentUser
         if (user != null) {
-            val intent = Intent(this, OnlineDashboardActivity::class.java)
-            startActivity(intent)
+
+            dialog.show()
+            db
+                .document("Users/" + user.uid)
+                .get()
+                .addOnSuccessListener {
+                    val username = it?.data?.get("username") as? String
+                    dialog.hide()
+                    if (username != null) {
+                        UserManagerModel._username = username
+                        goToOnline()
+                    } else {
+                        createUser(user)
+                    }
+                }
+                .addOnFailureListener {
+                    createUser(user)
+                }
         } else {
             signIn()
         }
+    }
 
+    fun createUser(user: FirebaseUser) {
+
+        val guestRef = db.document("Constant/guest")
+        val userRef = db.document("Users/" + user.uid)
+
+        dialog.show()
+        db.runTransaction {
+            val guestID= it.get(guestRef).get("guestID") as Long
+
+            var guestUsername = "Guest$guestID"
+
+            var userMap = hashMapOf("username" to guestUsername, "canChangeUsername" to true)
+            it.set(userRef, userMap)
+
+            val newGuestId = guestID + 1
+            it.update(guestRef, "guestID", newGuestId)
+            guestUsername
+        }.addOnSuccessListener { username ->
+            dialog.hide()
+            UserManagerModel._username = username
+            goToOnline()
+        }.addOnFailureListener { e ->
+            dialog.hide()
+            Toast.makeText(this, "Something went wrong", Toast.LENGTH_LONG).show()
+        }
+    }
+
+    fun goToOnline() {
+        val intent = Intent(this, OnlineDashboardActivity::class.java)
+        startActivity(intent)
     }
 
     fun signIn() {

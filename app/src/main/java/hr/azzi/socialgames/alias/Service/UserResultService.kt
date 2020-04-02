@@ -3,6 +3,7 @@ package hr.azzi.socialgames.alias.Service
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import hr.azzi.socialgames.alias.Models.UserResult
+import hr.azzi.socialgames.alias.Online.Models.UserManagerModel
 
 class UserResultService {
 
@@ -34,7 +35,7 @@ class UserResultService {
 
                     lastScore = score
 
-                    val myUsername = FirebaseAuth.getInstance().currentUser?.displayName ?: ""
+                    val myUsername = UserManagerModel.username()
                     val isMe =  username == myUsername
 
                     if (isMe) {
@@ -55,10 +56,8 @@ class UserResultService {
 
     fun saveResult(result: Int, gameId: String) {
         val myUdid = FirebaseAuth.getInstance().currentUser?.uid
-        val username = FirebaseAuth.getInstance().currentUser?.displayName
-        if (username == null) {
-            return
-        }
+        val username = UserManagerModel.username()
+
         if (myUdid == null) {
             return
         }

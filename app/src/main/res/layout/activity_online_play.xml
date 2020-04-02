@@ -57,7 +57,7 @@
         app:inputButtonHeight="30dp"
         app:inputButtonMargin="16dp"
         app:inputButtonWidth="30dp"
-        app:inputHint="upisi nesto"
+        app:inputHint="Guess or explain"
         app:inputMaxLines="3"
         app:inputTextColor="@color/black"
         app:inputTextSize="18sp"

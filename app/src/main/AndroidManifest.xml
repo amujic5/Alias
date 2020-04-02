@@ -18,7 +18,9 @@
         android:roundIcon="@drawable/alias_circle"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".OnlineDashboardActivity"></activity>
+        <activity android:name=".Online.Profile.ProfileMainActivity"></activity>
+        <activity android:name=".Online.LeaderboardMainActivity" />
+        <activity android:name=".OnlineDashboardActivity" />
         <activity
             android:name=".OnlineResultActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"

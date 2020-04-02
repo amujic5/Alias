@@ -53,7 +53,7 @@
             android:layout_height="0dp"
             android:background="#00000000"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView333"
+            app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -70,6 +70,16 @@
         app:layout_constraintBottom_toTopOf="@+id/constraintLayout545"
         app:layout_constraintEnd_toEndOf="@+id/constraintLayout5"
         app:layout_constraintStart_toStartOf="@+id/constraintLayout5">
+
+        <Button
+            android:id="@+id/leaderboardButton"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="#01000000"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <TextView
             android:id="@+id/textView22"
@@ -94,16 +104,6 @@
             android:layout_marginStart="25dp"
             android:src="@drawable/leaderboard"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/leaderboardButton"
-            android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:background="#00000000"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toStartOf="@+id/imageView33"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
