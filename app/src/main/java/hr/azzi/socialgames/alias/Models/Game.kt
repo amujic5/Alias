@@ -16,7 +16,7 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
            private var _goalScore: Int,
            private var _teams: ArrayList<Team>,
            private var _words: ArrayList<String>,
-           private var _currentTeamIndex: Int,
+           var _currentTeamIndex: Int,
            var currentTeamMarkedWords: ArrayList<MarkedWord> = ArrayList() ) : Parcelable {
 
     private val _playingTeams: List<Team>

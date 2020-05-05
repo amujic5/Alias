@@ -1,8 +1,32 @@
 package hr.azzi.socialgames.alias
 
+import android.Manifest
+import android.annotation.SuppressLint
 import android.app.AlertDialog
+import android.content.Context
 import android.content.Intent
+import android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
+import android.content.pm.PackageManager
+import android.graphics.Color
+import android.graphics.Matrix
+import android.graphics.Point
+import android.graphics.drawable.ColorDrawable
+import android.net.Uri
+import android.os.Bundle
+import android.os.CountDownTimer
+import android.os.Handler
+import android.os.StrictMode
+import android.util.Log
+import android.view.Gravity
+import android.view.Surface
+import android.view.View
+import android.view.ViewGroup
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.camera.core.*
+import androidx.core.app.ActivityCompat
+import androidx.core.content.ContextCompat
+import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
@@ -10,30 +34,12 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Service.DictionaryService
+import hr.azzi.socialgames.alias.Service.RecordingFlag
 import hr.azzi.socialgames.alias.Service.SoundSystem
 import kotlinx.android.synthetic.main.activity_play.*
 import kotlinx.android.synthetic.main.dialog_play.view.*
-
 import java.io.File
 import java.util.concurrent.Executors
-import android.util.Log
-import android.widget.Toast
-import androidx.camera.core.*
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
-import android.content.pm.PackageManager
-import android.graphics.Matrix
-import android.net.Uri
-import android.Manifest
-import android.annotation.SuppressLint
-import android.content.Context
-import android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
-import android.graphics.Color
-import android.graphics.Point
-import android.graphics.drawable.ColorDrawable
-import android.os.*
-import android.view.*
-import hr.azzi.socialgames.alias.Service.RecordingFlag
 
 @SuppressLint("RestrictedApi, ClickableViewAccessibility")
 class PlayActivity : AppCompatActivity() {
@@ -46,6 +52,7 @@ class PlayActivity : AppCompatActivity() {
 
     private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var mInterstitialAd: InterstitialAd
+    private lateinit var mInterstitialAd2: InterstitialAd
 
     var timer: CountDownTimer? = null
     var startTimer = 60
@@ -73,6 +80,18 @@ class PlayActivity : AppCompatActivity() {
         log()
         loadAd()
         loadIntrestialAd()
+        if (game._currentTeamIndex % 2 == 1) {
+            loadIntrestialAd2()
+        }
+
+
+        mInterstitialAd.setAdListener(object : AdListener() {
+            override fun onAdClosed() {
+                if (mInterstitialAd2.isLoaded) {
+                    mInterstitialAd2.show()
+                }
+            }
+        })
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
@@ -133,6 +152,15 @@ class PlayActivity : AppCompatActivity() {
         val test =  "ca-app-pub-3940256099942544/1033173712"
         mInterstitialAd.adUnitId = prod
         mInterstitialAd.loadAd(AdRequest.Builder().build())
+    }
+
+    fun loadIntrestialAd2() {
+        MobileAds.initialize(this) {}
+        mInterstitialAd2 = InterstitialAd(this)
+        val prod = "ca-app-pub-1489905432577426/4633082957"
+        val test =  "ca-app-pub-3940256099942544/1033173712"
+        mInterstitialAd2.adUnitId = prod
+        mInterstitialAd2.loadAd(AdRequest.Builder().build())
     }
 
     fun log() {
@@ -336,6 +364,10 @@ class PlayActivity : AppCompatActivity() {
                         showResults()
                     }, 1000)
 
+                } else {
+                    if (estimation % 5 == 0) {
+                        loadAd()
+                    }
                 }
             }
 
