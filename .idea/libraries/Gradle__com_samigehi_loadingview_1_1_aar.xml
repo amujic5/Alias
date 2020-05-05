@@ -1,8 +1,8 @@
 <component name="libraryTable">
   <library name="Gradle: com.samigehi:loadingview:1.1@aar">
     <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5535b35febd99cfa4018cd3b7eef3942/jetified-loadingview-1.1/jars/classes.jar!/" />
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5535b35febd99cfa4018cd3b7eef3942/jetified-loadingview-1.1/res" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a4526d0e71c1c1e1d14b460cb7c470c/jetified-loadingview-1.1/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-2/files-2.1/5a4526d0e71c1c1e1d14b460cb7c470c/jetified-loadingview-1.1/res" />
     </CLASSES>
     <JAVADOC>
       <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.samigehi/loadingview/1.1/4b0d10fda0cfd3e0ed6b09b5116d882e987b7004/loadingview-1.1-javadoc.jar!/" />

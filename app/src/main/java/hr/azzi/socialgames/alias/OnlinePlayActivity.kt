@@ -137,7 +137,7 @@ class OnlinePlayActivity : AppCompatActivity() {
     fun loadIntrestialAd() {
         MobileAds.initialize(this) {}
         mInterstitialAd = InterstitialAd(this)
-        val prod = "ca-app-pub-1489905432577426/3906492992"
+        val prod = "ca-app-pub-1489905432577426/6419779676"
         val test =  "ca-app-pub-3940256099942544/1033173712"
         mInterstitialAd.adUnitId = prod
         mInterstitialAd.loadAd(AdRequest.Builder().build())
@@ -269,6 +269,9 @@ class OnlinePlayActivity : AppCompatActivity() {
 
     fun updateTime() {
         val seconds = roundTime - ((Date().time - startDate.time)/1000).toInt()
+        if (seconds % 5 == 0) {
+            loadAd()
+        }
         timeOnlineTextView.text = seconds.toString()
 
         val gameStartDate = game.date
