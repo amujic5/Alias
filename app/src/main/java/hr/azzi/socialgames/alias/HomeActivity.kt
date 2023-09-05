@@ -1,19 +1,10 @@
 package hr.azzi.socialgames.alias
 
-import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.UserManager
-import android.widget.Toast
-import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.IdpResponse
+import androidx.appcompat.app.AppCompatActivity
 import com.github.loadingview.LoadingDialog
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.auth.FirebaseUser
-import com.google.firebase.database.FirebaseDatabase
-import hr.azzi.socialgames.alias.Service.DictionaryService
-import kotlinx.android.synthetic.main.activity_home.*
+import hr.azzi.socialgames.alias.databinding.ActivityHomeBinding
 
 /**
  * An example full-screen activity that shows and hides the system UI (i.e.
@@ -21,14 +12,17 @@ import kotlinx.android.synthetic.main.activity_home.*
  */
 class HomeActivity : AppCompatActivity() {
 
+    private lateinit var binding : ActivityHomeBinding
+
     val dialog: LoadingDialog by lazy {
         LoadingDialog.get(this)
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        binding = ActivityHomeBinding.inflate(layoutInflater)
 
-        setContentView(R.layout.activity_home)
+        setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         observe()
@@ -40,18 +34,18 @@ class HomeActivity : AppCompatActivity() {
     }
 
     fun observe() {
-        newGameButton.setOnClickListener {
+        binding.newGameButton.setOnClickListener {
             val intent = Intent(this, NewGameActivity::class.java)
             startActivity(intent)
         }
 
-        howToPlayButton.setOnClickListener {
+        binding.howToPlayButton.setOnClickListener {
 
             val intent = Intent(this, HowToPlayActivity::class.java)
             startActivity(intent)
         }
 
-        tellYouFriendsButton.setOnClickListener {
+        binding.tellYouFriendsButton.setOnClickListener {
             val localIntent = Intent("android.intent.action.SEND")
             localIntent.type = "text/plain"
             localIntent.putExtra(

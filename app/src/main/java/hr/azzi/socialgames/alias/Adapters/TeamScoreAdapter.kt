@@ -7,8 +7,7 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import hr.azzi.socialgames.alias.Models.TeamScoreItem
 import hr.azzi.socialgames.alias.R
-import kotlinx.android.synthetic.main.result_item.view.*
-import kotlinx.android.synthetic.main.team_item.view.teamTextView
+import hr.azzi.socialgames.alias.databinding.ResultItemBinding
 
 
 class TeamScoreAdapter(private val context: Context,
@@ -18,13 +17,13 @@ class TeamScoreAdapter(private val context: Context,
             = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val rowView = inflater.inflate(R.layout.result_item, parent, false)
+        val rowView = ResultItemBinding.inflate(inflater)
         val teamScoreItem = dataSource[position]
         rowView.teamTextView.text = teamScoreItem.teamName
         rowView.numberTextView.text = teamScoreItem.index.toString()
         rowView.scoreTextView.text = context.resources.getString(R.string.score) + " " + teamScoreItem.score
 
-        return rowView
+        return rowView.root
     }
 
     override fun getItem(position: Int): Any {

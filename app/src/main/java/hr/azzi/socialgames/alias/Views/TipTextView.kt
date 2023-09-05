@@ -3,18 +3,18 @@ package hr.azzi.socialgames.alias.Views
 import android.content.Context
 import android.view.LayoutInflater
 import android.widget.FrameLayout
-import hr.azzi.socialgames.alias.R
-import kotlinx.android.synthetic.main.text_layout.view.*
+import hr.azzi.socialgames.alias.databinding.TextLayoutBinding
 
 class TipTextView @JvmOverloads constructor(context: Context): FrameLayout(context) {
 
+    private val binding = TextLayoutBinding.inflate(LayoutInflater.from(context), this, true)
+
     init {
-        LayoutInflater.from(context).inflate(R.layout.text_layout, this, true)
         layoutParams = LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.WRAP_CONTENT)
     }
 
     fun setLabel(text: String?) {
-        infoTextView.text = text
+        binding.infoTextView.text = text
     }
 
 }

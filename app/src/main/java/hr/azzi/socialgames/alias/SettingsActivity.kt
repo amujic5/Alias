@@ -3,9 +3,9 @@ package hr.azzi.socialgames.alias
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.*
+import android.widget.SeekBar
+import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import hr.azzi.socialgames.alias.Adapters.FlagAdapter
 import hr.azzi.socialgames.alias.Adapters.FlagAdapterDelegate
@@ -14,18 +14,13 @@ import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.Service.DictionaryService
-import hr.azzi.socialgames.alias.Views.TipTextView
-import kotlinx.android.synthetic.main.activity_settings.*
-import kotlinx.android.synthetic.main.activity_settings.backButton
-import kotlinx.android.synthetic.main.activity_settings.vsTextView
-import me.samlss.lighter.parameter.MarginOffset
-import me.samlss.lighter.parameter.LighterParameter
+import hr.azzi.socialgames.alias.databinding.ActivitySettingsBinding
 import me.samlss.lighter.Lighter
-import me.samlss.lighter.parameter.Direction
-import me.samlss.lighter.shape.RectShape
 
 
 class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
+
+    private lateinit var binding: ActivitySettingsBinding
 
     var adapter: FlagAdapter = FlagAdapter(ArrayList())
     var time: Int = 60
@@ -50,16 +45,17 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_settings)
+        binding = ActivitySettingsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
         val layoutManager = GridLayoutManager(this, 4)
-        recyclerView.layoutManager = layoutManager
+        binding.recyclerView.layoutManager = layoutManager
 
         loadData()
-        scrollView.smoothScrollTo(0,0)
+        binding.scrollView.smoothScrollTo(0,0)
     }
 
     fun loadData() {
@@ -67,7 +63,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
         flags[0].selected = true
 
         adapter = FlagAdapter(flags)
-        recyclerView.adapter = adapter
+        binding.recyclerView.adapter = adapter
         adapter.delegate = this
 
         updateVsTextView()
@@ -84,13 +80,13 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
     }
 
     fun observe() {
-        backButton.setOnClickListener {
+        binding.backButton.setOnClickListener {
             finish()
         }
-        scoreSeekBar.setOnSeekBarChangeListener(this)
-        timeSeekBar.setOnSeekBarChangeListener(this)
+        binding.scoreSeekBar.setOnSeekBarChangeListener(this)
+        binding.timeSeekBar.setOnSeekBarChangeListener(this)
 
-        playButton.setOnClickListener {
+        binding.playButton.setOnClickListener {
             play()
         }
     }
@@ -119,7 +115,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
     fun updateVsTextView() {
         teams?.let {
-            vsTextView.setText(it.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
+            binding.vsTextView.setText(it.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
         }
 
     }
@@ -127,13 +123,13 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
     // OnSeekBarChangeListener
 
     override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-        if (seekBar == scoreSeekBar) {
+        if (seekBar == binding.scoreSeekBar) {
             val score = progress + 40
-            scoreTextView.text = "$score"
+            binding.scoreTextView.text = "$score"
             this.score = score
-        } else if (seekBar == timeSeekBar) {
+        } else if (seekBar == binding.timeSeekBar) {
             val time = progress + 20
-            timeTextView.text = "$time"
+            binding.timeTextView.text = "$time"
             this.time = time
         }
     }
@@ -155,7 +151,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
         flags[position].selected = true
         adapter.notifyDataSetChanged()
 
-        dictionaryTextView.text = flags[position].name
+        binding.dictionaryTextView.text = flags[position].name
     }
 
 }
