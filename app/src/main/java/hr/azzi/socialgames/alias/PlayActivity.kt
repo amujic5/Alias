@@ -16,8 +16,11 @@ import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.FullScreenContentCallback
+import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
@@ -33,8 +36,8 @@ class PlayActivity : AppCompatActivity() {
     private lateinit var binding : ActivityPlayBinding
 
     private lateinit var firebaseAnalytics: FirebaseAnalytics
-    private lateinit var mInterstitialAd: InterstitialAd
-    private lateinit var mInterstitialAd2: InterstitialAd
+    private var mInterstitialAd: InterstitialAd? = null
+    private var mInterstitialAd2: InterstitialAd? = null
 
     var timer: CountDownTimer? = null
     var startTimer = 60
@@ -66,15 +69,6 @@ class PlayActivity : AppCompatActivity() {
         if (game._currentTeamIndex % 2 == 1) {
             loadIntrestialAd2()
         }
-
-
-        mInterstitialAd.setAdListener(object : AdListener() {
-            override fun onAdClosed() {
-                if (mInterstitialAd2.isLoaded) {
-                    mInterstitialAd2.show()
-                }
-            }
-        })
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
@@ -115,20 +109,44 @@ class PlayActivity : AppCompatActivity() {
 
     fun loadIntrestialAd() {
         MobileAds.initialize(this) {}
-        mInterstitialAd = InterstitialAd(this)
         val prod = "ca-app-pub-1489905432577426/3906492992"
         val test =  "ca-app-pub-3940256099942544/1033173712"
-        mInterstitialAd.adUnitId = prod
-        mInterstitialAd.loadAd(AdRequest.Builder().build())
+        val adRequest = AdRequest.Builder().build()
+
+        InterstitialAd.load(this, prod, adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdFailedToLoad(p0: LoadAdError) {
+                super.onAdFailedToLoad(p0)
+                mInterstitialAd = null
+            }
+
+            override fun onAdLoaded(p0: InterstitialAd) {
+                super.onAdLoaded(p0)
+                mInterstitialAd = p0
+            }
+        })
+    }
+
+    private fun showFullScreenAd(ad: InterstitialAd) {
+        ad.show(this)
     }
 
     fun loadIntrestialAd2() {
         MobileAds.initialize(this) {}
-        mInterstitialAd2 = InterstitialAd(this)
+
         val prod = "ca-app-pub-1489905432577426/4633082957"
         val test =  "ca-app-pub-3940256099942544/1033173712"
-        mInterstitialAd2.adUnitId = prod
-        mInterstitialAd2.loadAd(AdRequest.Builder().build())
+        val adRequest = AdRequest.Builder().build()
+        InterstitialAd.load(this, prod, adRequest, object : InterstitialAdLoadCallback() {
+            override fun onAdFailedToLoad(p0: LoadAdError) {
+                super.onAdFailedToLoad(p0)
+                mInterstitialAd2 = null
+            }
+
+            override fun onAdLoaded(p0: InterstitialAd) {
+                super.onAdLoaded(p0)
+                mInterstitialAd2 = p0
+            }
+        })
     }
 
     fun log() {
@@ -351,9 +369,18 @@ class PlayActivity : AppCompatActivity() {
         startActivity(intent)
 
         finish()
-        if (mInterstitialAd.isLoaded) {
+        mInterstitialAd?.let {
+            it.fullScreenContentCallback = object: FullScreenContentCallback() {
+                override fun onAdDismissedFullScreenContent() {
+                    super.onAdDismissedFullScreenContent()
+                    mInterstitialAd2?.let {
+                        showFullScreenAd(it)
+                    }
+                }
+            }
+
             Handler().postDelayed({
-                mInterstitialAd.show()
+                showFullScreenAd(it)
             }, 1000)
         }
     }
