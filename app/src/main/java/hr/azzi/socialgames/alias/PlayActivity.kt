@@ -16,19 +16,21 @@ import android.view.Gravity
 import androidx.appcompat.app.AppCompatActivity
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
-import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
+import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.SoundSystem
-import kotlinx.android.synthetic.main.activity_play.*
-import kotlinx.android.synthetic.main.dialog_play.view.*
+import hr.azzi.socialgames.alias.databinding.ActivityPlayBinding
+import hr.azzi.socialgames.alias.databinding.DialogPlayBinding
 import java.io.File
 
 @SuppressLint("RestrictedApi, ClickableViewAccessibility")
 class PlayActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityPlayBinding
 
     private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var mInterstitialAd: InterstitialAd
@@ -55,7 +57,8 @@ class PlayActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_play)
+        binding = ActivityPlayBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         log()
         loadAd()
@@ -78,11 +81,11 @@ class PlayActivity : AppCompatActivity() {
 
         startTimer = game.time
         estimation = game.time
-        timeTextView.text = "$estimation"
+        binding.timeTextView.text = "$estimation"
 
 
         observe()
-        teamNameTextView.text = game.currentTeam.teamName
+        binding.teamNameTextView.text = game.currentTeam.teamName
         showNewWord()
         updateLables()
     }
@@ -92,22 +95,22 @@ class PlayActivity : AppCompatActivity() {
         var size = Point()
         windowManager.defaultDisplay.getSize(size)
         if (animationFlag) {
-            animationView.translationX = -size.x.toFloat()
+            binding.animationView.translationX = -size.x.toFloat()
             animationFlag = false
         }
 
-        animationView.animate().setDuration(estimation.toLong()*1000).translationX(0f).start()
+        binding.animationView.animate().setDuration(estimation.toLong()*1000).translationX(0f).start()
     }
 
     fun pauseAnimation() {
-        animationView.animate().cancel()
+        binding.animationView.animate().cancel()
     }
 
     fun loadAd() {
         MobileAds.initialize(this) {}
 
         val adRequest = AdRequest.Builder().build()
-        adView.loadAd(adRequest)
+        binding.adView.loadAd(adRequest)
     }
 
     fun loadIntrestialAd() {
@@ -153,20 +156,20 @@ class PlayActivity : AppCompatActivity() {
 
     fun observe() {
 
-        pauseButton.setOnClickListener {
+        binding.pauseButton.setOnClickListener {
             pause()
             showDialog()
         }
 
-        correctButton.setOnClickListener {
-            game.addMarkedWord(MarkedWord(wordTextView.text.toString(), true))
+        binding.correctButton.setOnClickListener {
+            game.addMarkedWord(MarkedWord(binding.wordTextView.text.toString(), true))
             showNewWord()
             soundSystem.playRightButton()
             updateLables()
         }
 
-        skipButton.setOnClickListener {
-            game.addMarkedWord(MarkedWord(wordTextView.text.toString(), false))
+        binding.skipButton.setOnClickListener {
+            game.addMarkedWord(MarkedWord(binding.wordTextView.text.toString(), false))
             showNewWord()
             soundSystem.playSkipButton()
             updateLables()
@@ -182,17 +185,17 @@ class PlayActivity : AppCompatActivity() {
 
         builder.setCancelable(false)
 
-        val view = layoutInflater.inflate(R.layout.dialog_play, null)
-        builder.setView(view)
+        val binding = DialogPlayBinding.inflate(layoutInflater)
+        builder.setView(binding.root)
 
-        view.explainingTextView.text = game.explainingPlayerName
-        view.answeringTextView.text = game.answeringPlayerName
+        binding.explainingTextView.text = game.explainingPlayerName
+        binding.answeringTextView.text = game.answeringPlayerName
 
         val correct = game.currentCorrectAnswers
-        view.correctTextView.text = "$correct " + resources.getString(R.string.corrected)
+        binding.correctTextView.text = "$correct " + resources.getString(R.string.corrected)
         var skipped = game.currentSkipAnswers
-        view.skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
-        view.teamTextView.text = game.currentTeam.teamName
+        binding.skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
+        binding.teamTextView.text = game.currentTeam.teamName
 
         val dialog = builder.show()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
@@ -205,12 +208,12 @@ class PlayActivity : AppCompatActivity() {
         param?.y = convertDpToPx(this, 80.toFloat()).toInt()
         window?.setAttributes(param);
 
-        view.stopButton.setOnClickListener {
+        binding.stopButton.setOnClickListener {
             dialog.dismiss()
             showFinishDialog()
         }
 
-        view.playButton.setOnClickListener {
+        binding.playButton.setOnClickListener {
             dialog.dismiss()
             resume()
         }
@@ -267,16 +270,16 @@ class PlayActivity : AppCompatActivity() {
 
     fun updateLables() {
         val correct = game.currentCorrectAnswers
-        correctTextView.text = "$correct " + resources.getString(R.string.corrected)
+        binding.correctTextView.text = "$correct " + resources.getString(R.string.corrected)
 
         var skipped = game.currentSkipAnswers
-        skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
+        binding.skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
     }
 
     // WORD
 
     fun showNewWord() {
-        wordTextView.text = game.newWord
+        binding.wordTextView.text = game.newWord
     }
 
     // COUNTER
@@ -305,7 +308,7 @@ class PlayActivity : AppCompatActivity() {
                 if (estimation < 0) {
                     estimation = 0
                 }
-                timeTextView.text = "$estimation"
+                binding.timeTextView.text = "$estimation"
 
                 if (estimation == 0) {
                     soundSystem.playEnd()
