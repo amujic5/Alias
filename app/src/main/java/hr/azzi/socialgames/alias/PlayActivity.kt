@@ -63,7 +63,7 @@ class PlayActivity : AppCompatActivity() {
     var dialog: AlertDialog? = null
 
     val game: Game by lazy {
-        intent.getParcelableExtra("game") as Game
+        intent.getParcelableExtra<Game>("game") as Game
     }
 
     val soundSystem: SoundSystem by lazy {
@@ -238,15 +238,15 @@ class PlayActivity : AppCompatActivity() {
         view.teamTextView.text = game.currentTeam.teamName
 
         val dialog = builder.show()
-        dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
         this.dialog = dialog
 
 
         val window = dialog.window
-        var param = dialog.window.attributes
-        param.gravity = Gravity.TOP
-        param.y = convertDpToPx(this, 80.toFloat()).toInt()
-        window.setAttributes(param);
+        var param = dialog.window?.attributes
+        param?.gravity = Gravity.TOP
+        param?.y = convertDpToPx(this, 80.toFloat()).toInt()
+        window?.setAttributes(param);
 
         view.stopButton.setOnClickListener {
             dialog.dismiss()
@@ -470,7 +470,7 @@ class PlayActivity : AppCompatActivity() {
         preview.setOnPreviewOutputUpdateListener {
             val parent = viewFinder.parent as ViewGroup
             parent.removeView(viewFinder)
-            viewFinder.surfaceTexture = it.surfaceTexture
+            viewFinder.setSurfaceTexture(it.surfaceTexture)
             parent.addView(viewFinder, 0)
             updateTransform()
         }

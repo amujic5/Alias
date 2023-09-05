@@ -115,7 +115,7 @@ class NewGameActivity : AppCompatActivity() {
         }
 
         val dialog = builder.show()
-        dialog.window.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
         view.cancelButton.setOnClickListener {
             dialog.dismiss()

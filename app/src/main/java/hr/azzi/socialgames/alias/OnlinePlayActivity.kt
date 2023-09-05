@@ -187,7 +187,7 @@ class OnlinePlayActivity : AppCompatActivity() {
     }
 
     fun initGame() {
-        game = intent.getParcelableExtra("game") as OnlineGame
+        game = intent.getParcelableExtra<OnlineGame>("game") as OnlineGame
         username = UserManagerModel.username()
         gameId = game?.id ?: "0"
 

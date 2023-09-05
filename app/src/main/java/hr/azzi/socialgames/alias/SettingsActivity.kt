@@ -138,7 +138,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
             false,
             time,
             score,
-            teams,
+            teams as ArrayList<Team>,
             ArrayList(selectedDictionary.words),
             0
         )
@@ -153,8 +153,10 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
 
     fun updateVsTextView() {
+        teams?.let {
+            vsTextView.setText(it.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
+        }
 
-        vsTextView.setText(teams.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
     }
 
     // OnSeekBarChangeListener

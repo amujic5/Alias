@@ -30,7 +30,7 @@ class VideoListActivity : AppCompatActivity(), VideoAdapterDelegate {
         supportActionBar?.hide()
 
         val fileURIStrings = intent.getStringArrayListExtra("fileURIStrings")
-        val videoList = fileURIStrings.mapIndexed { index, value ->
+        val videoList = fileURIStrings?.mapIndexed { index, value ->
             val uri = Uri.parse(value)
             Video("Video no. $index" , uri, value)
         }

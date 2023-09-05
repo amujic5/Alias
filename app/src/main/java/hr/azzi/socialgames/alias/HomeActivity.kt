@@ -80,10 +80,6 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(localIntent, "Share To.."))
         }
 
-        onlineButton.setOnClickListener {
-            openOnline()
-        }
-
     }
 
     fun openOnline() {
