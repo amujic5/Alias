@@ -12,7 +12,6 @@ import com.github.loadingview.LoadingDialog
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.FirebaseUser
 import com.google.firebase.database.FirebaseDatabase
-import com.google.firebase.firestore.FirebaseFirestore
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import kotlinx.android.synthetic.main.activity_home.*
 
@@ -25,9 +24,6 @@ class HomeActivity : AppCompatActivity() {
     val dialog: LoadingDialog by lazy {
         LoadingDialog.get(this)
     }
-
-    val db = FirebaseFirestore.getInstance()
-    val RC_SIGN_IN = 324
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
