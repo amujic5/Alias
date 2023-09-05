@@ -12,7 +12,7 @@ import kotlinx.android.synthetic.main.activity_winner.*
 class WinnerActivity : AppCompatActivity() {
 
     val game: Game by lazy {
-        intent.getParcelableExtra("game") as Game
+        intent.getParcelableExtra<Game>("game") as Game
     }
 
     private lateinit var firebaseAnalytics: FirebaseAnalytics

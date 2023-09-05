@@ -27,7 +27,7 @@ import java.io.File
 class ResultsActivity : AppCompatActivity() {
 
     val game: Game by lazy {
-        intent.getParcelableExtra("game") as Game
+        intent.getParcelableExtra<Game>("game") as Game
     }
     val preferences: SharedPreferences by lazy {
         this.getSharedPreferences("settings-recording", Context.MODE_PRIVATE)

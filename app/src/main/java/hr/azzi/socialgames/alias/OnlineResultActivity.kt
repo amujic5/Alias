@@ -17,7 +17,7 @@ class OnlineResultActivity : AppCompatActivity() {
     lateinit var game: OnlineGame
 
     val gameId: String by lazy {
-        intent.getStringExtra("gameId")
+        intent.getStringExtra("gameId") as String
     }
     val dialog: LoadingDialog by lazy {
         LoadingDialog.get(this)
@@ -30,7 +30,7 @@ class OnlineResultActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
-        game = intent.getParcelableExtra("game") as OnlineGame
+        game = intent.getParcelableExtra<OnlineGame>("game") as OnlineGame
 
         loadData()
         observe()

@@ -21,7 +21,7 @@ class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
     }
 
     val game: Game by lazy {
-        intent.getParcelableExtra("game") as Game
+        intent.getParcelableExtra<Game>("game") as Game
     }
 
     val currentCorrectAnswers: Int
