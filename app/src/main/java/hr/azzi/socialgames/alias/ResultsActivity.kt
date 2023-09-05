@@ -10,12 +10,10 @@ import hr.azzi.socialgames.alias.Adapters.TeamScoreAdapter
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Models.TeamScoreItem
-import hr.azzi.socialgames.alias.Service.RecordingFlag
 import hr.azzi.socialgames.alias.Views.TipTextView
 import kotlinx.android.synthetic.main.activity_play.correctTextView
 import kotlinx.android.synthetic.main.activity_play.skipTextView
 import kotlinx.android.synthetic.main.activity_results.*
-import me.samlss.lighter.Lighter
 import me.samlss.lighter.parameter.Direction
 import me.samlss.lighter.parameter.LighterParameter
 import me.samlss.lighter.parameter.MarginOffset
@@ -33,7 +31,6 @@ class ResultsActivity : AppCompatActivity() {
         this.getSharedPreferences("settings-recording", Context.MODE_PRIVATE)
     }
     val keyRecording = "settings-recording-2"
-    var lighter: Lighter? = null
 
     var teamScoreDataSource = ArrayList<TeamScoreItem>()
     var shouldShowEditAnswers: Boolean = true
@@ -50,13 +47,6 @@ class ResultsActivity : AppCompatActivity() {
         game.currentTeamHasFinishedTheRound()
         reload()
         observe()
-
-        if (!RecordingFlag.recordingEnabled) {
-            videoButton.visibility = View.GONE
-        } else {
-            showInfo()
-        }
-
     }
 
     override fun onResume() {
@@ -68,42 +58,6 @@ class ResultsActivity : AppCompatActivity() {
             startActivityForResult(editAnswerIntent, 1)
         }
 
-    }
-
-
-    private fun showInfo() {
-
-        val shouldShowInfo = !preferences.getBoolean(keyRecording, false)
-
-        if (shouldShowInfo) {
-
-            val lighter =  Lighter.with(this)
-            this.lighter = lighter
-
-            val tipTextView = TipTextView(this)
-            tipTextView.setLabel(getString(R.string.record_tip_2))
-
-            val lighterParamter= LighterParameter.Builder()
-                .setHighlightedView(videoButton)
-                .setTipView(tipTextView)
-                .setLighterShape(RectShape(0f, 0f, 30f))
-                .setTipViewRelativeDirection(Direction.BOTTOM)
-                .setTipViewRelativeOffset(MarginOffset(0, 0, 0, 10))
-                .build()
-
-            lighter
-                .addHighlight(
-                    lighterParamter
-                )
-                .show()
-
-            preferences.edit().putBoolean(keyRecording, true).apply()
-        }
-    }
-
-    override fun onBackPressed() {
-        this.lighter?.dismiss()
-        this.lighter = null
     }
 
     fun reload() {
@@ -171,14 +125,6 @@ class ResultsActivity : AppCompatActivity() {
             val intent =  Intent(this, EditAnswersActivity::class.java)
             intent.putExtra("game", game)
             startActivityForResult(intent, 1)
-        }
-
-        videoButton.setOnClickListener {
-            // show videos
-            val intent =  Intent(this, VideoListActivity::class.java)
-            val fileURIStrings = this.intent.getStringArrayListExtra("fileURIStrings")
-            intent.putStringArrayListExtra("fileURIStrings", fileURIStrings)
-            startActivity(intent)
         }
     }
 

@@ -1,31 +1,19 @@
 package hr.azzi.socialgames.alias
 
-import android.Manifest
 import android.annotation.SuppressLint
 import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
-import android.content.pm.PackageManager
 import android.graphics.Color
-import android.graphics.Matrix
 import android.graphics.Point
 import android.graphics.drawable.ColorDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.os.CountDownTimer
 import android.os.Handler
-import android.os.StrictMode
-import android.util.Log
 import android.view.Gravity
-import android.view.Surface
-import android.view.View
-import android.view.ViewGroup
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.camera.core.*
-import androidx.core.app.ActivityCompat
-import androidx.core.content.ContextCompat
 import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
@@ -34,21 +22,13 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Service.DictionaryService
-import hr.azzi.socialgames.alias.Service.RecordingFlag
 import hr.azzi.socialgames.alias.Service.SoundSystem
 import kotlinx.android.synthetic.main.activity_play.*
 import kotlinx.android.synthetic.main.dialog_play.view.*
 import java.io.File
-import java.util.concurrent.Executors
 
 @SuppressLint("RestrictedApi, ClickableViewAccessibility")
 class PlayActivity : AppCompatActivity() {
-
-    // camera
-    private var videoCapture: VideoCapture?  = null
-    private val REQUIRED_PERMISSIONS = arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO)
-    private val REQUEST_CODE_PERMISSIONS = 10
-
 
     private lateinit var firebaseAnalytics: FirebaseAnalytics
     private lateinit var mInterstitialAd: InterstitialAd
@@ -105,21 +85,6 @@ class PlayActivity : AppCompatActivity() {
         teamNameTextView.text = game.currentTeam.teamName
         showNewWord()
         updateLables()
-
-
-        if (RecordingFlag.recordingEnabled) {
-            viewFinder.alpha = 0.1F
-            if (allPermissionsGranted()) {
-                viewFinder.post { startCamera() }
-            } else {
-                ActivityCompat.requestPermissions(this, REQUIRED_PERMISSIONS, REQUEST_CODE_PERMISSIONS)
-            }
-
-            val builder = StrictMode.VmPolicy.Builder()
-            StrictMode.setVmPolicy(builder.build())
-        } else {
-            viewFinder.visibility = View.GONE
-        }
     }
 
     var animationFlag = true
@@ -174,14 +139,6 @@ class PlayActivity : AppCompatActivity() {
         bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "PlayActivity")
         bundle.putString("language", DictionaryService.playingDictionary?.language)
         firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
-
-        if (RecordingFlag.recordingEnabled) {
-            val bundle = Bundle()
-            bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "PlayActivity")
-            bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "PlayActivity")
-            bundle.putString("language", DictionaryService.playingDictionary?.language)
-            firebaseAnalytics.logEvent("recording_enabled", bundle)
-        }
 
         logLanguage()
     }
@@ -327,9 +284,6 @@ class PlayActivity : AppCompatActivity() {
         pauseAnimation()
         timer?.cancel()
         isRunning = false
-        if (RecordingFlag.recordingEnabled) {
-            videoCapture?.stopRecording()
-        }
     }
 
     private fun resume() {
@@ -354,9 +308,6 @@ class PlayActivity : AppCompatActivity() {
                 timeTextView.text = "$estimation"
 
                 if (estimation == 0) {
-                    if (RecordingFlag.recordingEnabled) {
-                        videoCapture?.stopRecording()
-                    }
                     soundSystem.playEnd()
                     isRunning = false
                     cancel()
@@ -377,28 +328,6 @@ class PlayActivity : AppCompatActivity() {
         }
         timer?.start()
 
-        if (RecordingFlag.recordingEnabled) {
-            // camera
-            val file = File(externalMediaDirs.first(),
-                "${System.currentTimeMillis()}.mp4")
-
-            videoCapture?.startRecording(file, Executors.newScheduledThreadPool(1), object: VideoCapture.OnVideoSavedListener {
-                override fun onVideoSaved(file: File) {
-                    Log.i("tag", "Video File : $file")
-                    savedFile = file
-                    savedFiles.add(file)
-                }
-
-                override fun onError(
-                    videoCaptureError: VideoCapture.VideoCaptureError,
-                    message: String,
-                    cause: Throwable?
-                ) {
-                    Log.i("tag", "Video Error: $message")
-                }
-
-            })
-        }
     }
 
     fun showResults() {
@@ -425,81 +354,6 @@ class PlayActivity : AppCompatActivity() {
             }, 1000)
         }
     }
-
-
-    // Camera stuff
-
-    // Camera
-
-    override fun onRequestPermissionsResult(
-        requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
-        if (requestCode == REQUEST_CODE_PERMISSIONS) {
-            if (allPermissionsGranted()) {
-                viewFinder.post { startCamera() }
-            } else {
-                Toast.makeText(this,
-                    "Permissions not granted by the user.",
-                    Toast.LENGTH_SHORT).show()
-                finish()
-            }
-        }
-    }
-
-    private fun allPermissionsGranted(): Boolean {
-        for (permission in REQUIRED_PERMISSIONS) {
-            if (ContextCompat.checkSelfPermission(
-                    this, permission) != PackageManager.PERMISSION_GRANTED) {
-                return false
-            }
-        }
-        return true
-    }
-
-    private fun startCamera() {
-        // Create configuration object for the viewfinder use case
-        val previewConfig = PreviewConfig.Builder().build()
-        // Build the viewfinder use case
-        val preview = Preview(previewConfig)
-
-        // Create a configuration object for the video use case
-        val videoCaptureConfig = VideoCaptureConfig.Builder().apply {
-            setTargetRotation(viewFinder.display.rotation)
-        }.build()
-        videoCapture = VideoCapture(videoCaptureConfig)
-
-        preview.setOnPreviewOutputUpdateListener {
-            val parent = viewFinder.parent as ViewGroup
-            parent.removeView(viewFinder)
-            viewFinder.setSurfaceTexture(it.surfaceTexture)
-            parent.addView(viewFinder, 0)
-            updateTransform()
-        }
-
-        // Bind use cases to lifecycle
-        CameraX.bindToLifecycle(this, preview, videoCapture)
-    }
-
-    private fun updateTransform() {
-        val matrix = Matrix()
-
-        // Compute the center of the view finder
-        val centerX = viewFinder.width / 2f
-        val centerY = viewFinder.height / 2f
-
-        // Correct preview output to account for display rotation
-        val rotationDegrees = when(viewFinder.display.rotation) {
-            Surface.ROTATION_0 -> 0
-            Surface.ROTATION_90 -> 90
-            Surface.ROTATION_180 -> 180
-            Surface.ROTATION_270 -> 270
-            else -> return
-        }
-        matrix.postRotate(-rotationDegrees.toFloat(), centerX, centerY)
-
-        // Finally, apply transformations to our TextureView
-        viewFinder.setTransform(matrix)
-    }
-
 
 }
 

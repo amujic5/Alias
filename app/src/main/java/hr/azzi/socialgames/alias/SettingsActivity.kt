@@ -14,7 +14,6 @@ import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.Service.DictionaryService
-import hr.azzi.socialgames.alias.Service.RecordingFlag
 import hr.azzi.socialgames.alias.Views.TipTextView
 import kotlinx.android.synthetic.main.activity_settings.*
 import kotlinx.android.synthetic.main.activity_settings.backButton
@@ -61,38 +60,6 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
         loadData()
         scrollView.smoothScrollTo(0,0)
-
-        showInfo()
-    }
-
-    fun showInfo() {
-
-        val shouldShowInfo = !preferences.getBoolean(keyRecording, false)
-
-        if (shouldShowInfo) {
-
-            val lighter =  Lighter.with(this)
-            this.lighter = lighter
-
-            val tipTextView = TipTextView(this)
-            tipTextView.setLabel(getString(R.string.record_tip_1))
-
-            val lighterParamter= LighterParameter.Builder()
-                .setHighlightedView(recordingCheckbox)
-                .setTipView(tipTextView)
-                .setLighterShape(RectShape(0f, 0f, 30f))
-                .setTipViewRelativeDirection(Direction.TOP)
-                .setTipViewRelativeOffset(MarginOffset(0, 0, 0, 10))
-                .build()
-
-            lighter
-                .addHighlight(
-                    lighterParamter
-                )
-                .show()
-
-            preferences.edit().putBoolean(keyRecording, true).apply()
-        }
     }
 
     fun loadData() {
@@ -143,8 +110,6 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
             0
         )
         DictionaryService.playingDictionary = selectedDictionary
-
-        RecordingFlag.recordingEnabled = recordingCheckbox.isChecked
 
         val intent =  Intent(this, PlayActivity::class.java)
         intent.putExtra("game", newGame)
