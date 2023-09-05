@@ -6,10 +6,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.BaseAdapter
-import androidx.core.content.ContextCompat
 import hr.azzi.socialgames.alias.Models.MarkedWord
-import hr.azzi.socialgames.alias.R
-import kotlinx.android.synthetic.main.edit_answer_item.view.*
+import hr.azzi.socialgames.alias.databinding.EditAnswerItemBinding
 
 interface WordAdapterDelegate {
     fun didChangeSwitchValue(isChecked: Boolean, position: Int)
@@ -23,7 +21,7 @@ class WordAdapter(private val context: Context,
             = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val rowView = inflater.inflate(R.layout.edit_answer_item, parent, false)
+        val rowView = EditAnswerItemBinding.inflate(inflater)
         val markedWord = dataSource[position]
 
         rowView.wordTextView.text = markedWord.word
@@ -46,7 +44,7 @@ class WordAdapter(private val context: Context,
 
         }
 
-        return rowView
+        return rowView.root
     }
 
     override fun getItem(position: Int): Any {

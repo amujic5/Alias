@@ -2,14 +2,15 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import com.google.android.material.snackbar.Snackbar
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
+import hr.azzi.socialgames.alias.databinding.ActivityWinnerBinding
 
-import kotlinx.android.synthetic.main.activity_winner.*
 
 class WinnerActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityWinnerBinding
 
     val game: Game by lazy {
         intent.getParcelableExtra<Game>("game") as Game
@@ -19,24 +20,25 @@ class WinnerActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_winner)
+        binding = ActivityWinnerBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
-        textView16.text = game.winnerTeam?.teamName
+        binding.textView16.text = game.winnerTeam?.teamName
 
         observe()
     }
 
     fun observe() {
-        finishButton.setOnClickListener {
+        binding.finishButton.setOnClickListener {
             finish()
         }
 
-        shareButton.setOnClickListener {
+        binding.shareButton.setOnClickListener {
 
             var teamResults = ""
             game.sortedTeams.forEach {

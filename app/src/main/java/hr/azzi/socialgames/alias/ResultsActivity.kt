@@ -3,26 +3,21 @@ package hr.azzi.socialgames.alias
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.app.AppCompatActivity
 import hr.azzi.socialgames.alias.Adapters.TeamScoreAdapter
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Models.TeamScoreItem
-import hr.azzi.socialgames.alias.Views.TipTextView
-import kotlinx.android.synthetic.main.activity_play.correctTextView
-import kotlinx.android.synthetic.main.activity_play.skipTextView
-import kotlinx.android.synthetic.main.activity_results.*
-import me.samlss.lighter.parameter.Direction
-import me.samlss.lighter.parameter.LighterParameter
-import me.samlss.lighter.parameter.MarginOffset
-import me.samlss.lighter.shape.RectShape
+import hr.azzi.socialgames.alias.databinding.ActivityResultsBinding
 import java.io.File
 
 
 
 class ResultsActivity : AppCompatActivity() {
+
+    private lateinit var binding : ActivityResultsBinding
 
     val game: Game by lazy {
         intent.getParcelableExtra<Game>("game") as Game
@@ -39,7 +34,8 @@ class ResultsActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_results)
+        binding = ActivityResultsBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
@@ -69,40 +65,40 @@ class ResultsActivity : AppCompatActivity() {
         teamScoreDataSource = ArrayList(scores)
 
         adapter = TeamScoreAdapter(this, teamScoreDataSource)
-        resultListView.adapter = adapter
+        binding.resultListView.adapter = adapter
         adapter.notifyDataSetChanged()
 
         updateUI()
     }
 
     fun updateUI() {
-        teamTextView.text = game.currentTeam.teamName
+        binding.teamTextView.text = game.currentTeam.teamName
         val correct = game.currentCorrectAnswers
-        correctTextView.text = "$correct " + resources.getString(R.string.corrected)
+        binding.correctTextView.text = "$correct " + resources.getString(R.string.corrected)
 
         val skipped = game.currentSkipAnswers
-        skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
+        binding.skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
 
-        nextTeamTextView.text = game.nextTeam?.teamName
-        answeringTextView.text = game.nextAnsweringPlayerName
-        explainingTextView.text = game.nextExplainingPlayerName
+        binding.nextTeamTextView.text = game.nextTeam?.teamName
+        binding.answeringTextView.text = game.nextAnsweringPlayerName
+        binding.explainingTextView.text = game.nextExplainingPlayerName
 
         if (game.nextTeam == null) {
-            constraintLayout3.alpha = 0F
-            constraintLayout3.visibility = View.GONE
-            finishButton.alpha = 1F
-            finishButton.visibility = View.VISIBLE
+            binding.constraintLayout3.alpha = 0F
+            binding.constraintLayout3.visibility = View.GONE
+            binding.finishButton.alpha = 1F
+            binding.finishButton.visibility = View.VISIBLE
         } else {
-            constraintLayout3.alpha = 1F
-            constraintLayout3.visibility = View.VISIBLE
-            finishButton.alpha = 0F
-            finishButton.visibility = View.GONE
+            binding.constraintLayout3.alpha = 1F
+            binding.constraintLayout3.visibility = View.VISIBLE
+            binding.finishButton.alpha = 0F
+            binding.finishButton.visibility = View.GONE
         }
 
     }
 
     fun observe() {
-        startButton.setOnClickListener {
+        binding.startButton.setOnClickListener {
             deleteFile()
             game.newRound()
             val intent =  Intent(this, PlayActivity::class.java)
@@ -112,7 +108,7 @@ class ResultsActivity : AppCompatActivity() {
             finish()
         }
 
-        finishButton.setOnClickListener {
+        binding.finishButton.setOnClickListener {
             deleteFile()
             val intent =  Intent(this, WinnerActivity::class.java)
             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
@@ -121,7 +117,7 @@ class ResultsActivity : AppCompatActivity() {
             finish()
         }
 
-        editAnswersButton.setOnClickListener {
+        binding.editAnswersButton.setOnClickListener {
             val intent =  Intent(this, EditAnswersActivity::class.java)
             intent.putExtra("game", game)
             startActivityForResult(intent, 1)

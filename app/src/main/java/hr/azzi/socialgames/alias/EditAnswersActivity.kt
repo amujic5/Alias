@@ -1,17 +1,13 @@
 package hr.azzi.socialgames.alias
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 import hr.azzi.socialgames.alias.Adapters.WordAdapter
 import hr.azzi.socialgames.alias.Adapters.WordAdapterDelegate
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
-import kotlinx.android.synthetic.main.activity_edit_answers.*
-import kotlinx.android.synthetic.main.activity_edit_answers.correctTextView
-import kotlinx.android.synthetic.main.activity_edit_answers.skipTextView
-import kotlinx.android.synthetic.main.activity_edit_answers.teamTextView
-
+import hr.azzi.socialgames.alias.databinding.ActivityEditAnswersBinding
 
 class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
 
@@ -36,22 +32,25 @@ class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
 
     var markedWords: ArrayList<MarkedWord> = ArrayList()
 
+    private lateinit var binding : ActivityEditAnswersBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_edit_answers)
+        binding = ActivityEditAnswersBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
-        val layout = layoutInflater.inflate(R.layout.empty_view, listView, false)
-        listView.addFooterView(layout)
+        val layout = layoutInflater.inflate(R.layout.empty_view, binding.listView, false)
+        binding.listView.addFooterView(layout)
 
         val words = game.currentTeamMarkedWords.map {
             MarkedWord(it.word, it.isCorrect)
         }
         markedWords = ArrayList(words)
 
-        listView.adapter = adapter
+        binding.listView.adapter = adapter
         adapter.delegate = this
 
         updateUI()
@@ -59,11 +58,11 @@ class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
     }
 
     fun observe() {
-        closeButton.setOnClickListener {
+        binding.closeButton.setOnClickListener {
             finish()
         }
 
-        saveButton.setOnClickListener {
+        binding.saveButton.setOnClickListener {
             markedWords
 
             val intent = Intent()
@@ -72,16 +71,16 @@ class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
             finish()
         }
 
-        cancelButton.setOnClickListener {
+        binding.cancelButton.setOnClickListener {
             finish()
         }
 
     }
 
     fun updateUI() {
-        teamTextView.text = game.currentTeam.teamName
-        correctTextView.text = "$currentCorrectAnswers " + resources.getString(R.string.corrected)
-        skipTextView.text = "$currentSkipAnswers " + resources.getString(R.string.skipped)
+        binding.teamTextView.text = game.currentTeam.teamName
+        binding.correctTextView.text = "$currentCorrectAnswers " + resources.getString(R.string.corrected)
+        binding.skipTextView.text = "$currentSkipAnswers " + resources.getString(R.string.skipped)
     }
 
     override fun didChangeSwitchValue(isChecked: Boolean, position: Int) {

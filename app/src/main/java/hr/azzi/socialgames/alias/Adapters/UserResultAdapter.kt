@@ -9,7 +9,7 @@ import android.widget.BaseAdapter
 import androidx.core.content.ContextCompat
 import hr.azzi.socialgames.alias.Models.UserResult
 import hr.azzi.socialgames.alias.R
-import kotlinx.android.synthetic.main.result_item.view.*
+import hr.azzi.socialgames.alias.databinding.ResultItemBinding
 
 class UserResultAdapter(private val context: Context,
                        private val dataSource: ArrayList<UserResult>) : BaseAdapter() {
@@ -18,20 +18,20 @@ class UserResultAdapter(private val context: Context,
             = context.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as LayoutInflater
 
     override fun getView(position: Int, convertView: View?, parent: ViewGroup?): View {
-        val rowView = inflater.inflate(R.layout.result_item, parent, false)
+        val rowView = ResultItemBinding.inflate(inflater)
         val userResult = dataSource[position]
         rowView.teamTextView.text = userResult.username
         rowView.numberTextView.text = userResult.index.toString()
         rowView.scoreTextView.text = context.resources.getString(R.string.score) + " " + userResult.score
-        rowView.setBackgroundColor(Color.WHITE)
+        rowView.root.setBackgroundColor(Color.WHITE)
 
         if (userResult.isMe) {
-            rowView.setBackgroundColor(ContextCompat.getColor(context, R.color.alias_green))
+            rowView.root.setBackgroundColor(ContextCompat.getColor(context, R.color.alias_green))
         } else {
-            rowView.setBackgroundColor(ContextCompat.getColor(context, R.color.alias_blue))
+            rowView.root.setBackgroundColor(ContextCompat.getColor(context, R.color.alias_blue))
         }
 
-        return rowView
+        return rowView.root
     }
 
     override fun getItem(position: Int): Any {

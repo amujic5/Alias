@@ -6,21 +6,23 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
+import com.google.gson.Gson
 import hr.azzi.socialgames.alias.Adapters.TeamAdapter
 import hr.azzi.socialgames.alias.Models.Team
-import kotlinx.android.synthetic.main.activity_new_game.*
-import kotlinx.android.synthetic.main.add_team_footer.view.*
-import kotlinx.android.synthetic.main.dialog_new_category.view.*
-import com.google.gson.Gson
+import hr.azzi.socialgames.alias.databinding.ActivityNewGameBinding
+import hr.azzi.socialgames.alias.databinding.AddTeamFooterBinding
+import hr.azzi.socialgames.alias.databinding.DialogNewCategoryBinding
 
 class NewGameActivity : AppCompatActivity() {
 
+    private lateinit var binding : ActivityNewGameBinding
+
     val footerView by lazy {
-        layoutInflater.inflate(R.layout.add_team_footer, null, false)
+        AddTeamFooterBinding.inflate(layoutInflater)
     }
 
     var teamDataSource = ArrayList<Team>()
@@ -36,13 +38,14 @@ class NewGameActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_new_game)
+        binding = ActivityNewGameBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
 
-        listView.adapter = adapter
-        listView.addFooterView(footerView)
+        binding.listView.adapter = adapter
+        binding.listView.addFooterView(footerView.root)
 
         loadTeams()
 
@@ -70,7 +73,7 @@ class NewGameActivity : AppCompatActivity() {
     }
 
     fun observe() {
-        backButton.setOnClickListener {
+        binding.backButton.setOnClickListener {
             this.finish()
         }
 
@@ -78,12 +81,12 @@ class NewGameActivity : AppCompatActivity() {
             this.editTeam()
         }
 
-        listView.setOnItemClickListener { parent, view, position, id ->
+        binding.listView.setOnItemClickListener { parent, view, position, id ->
             val team = teamDataSource[position]
             editTeam(team)
         }
 
-        startGameButton.setOnClickListener {
+        binding.startGameButton.setOnClickListener {
             if (teamDataSource.filter { it.playing }.size < 2) {
                 Toast.makeText(this, resources.getString(R.string.two_teams_needed), Toast.LENGTH_SHORT).show()
             } else {
@@ -103,33 +106,33 @@ class NewGameActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(context)
 
 
-        val view = layoutInflater.inflate(R.layout.dialog_new_category, null)
-        builder.setView(view)
+        val dialogNewCategoryBinding = DialogNewCategoryBinding.inflate(layoutInflater)
+        builder.setView(dialogNewCategoryBinding.root)
 
         team?.also {
-            view.teamEditText.setText(it.teamName)
-            view.player1EditText.setText(it.firstPlayer)
-            view.player2EditText.setText(it.secondPlayer)
+            dialogNewCategoryBinding.teamEditText.setText(it.teamName)
+            dialogNewCategoryBinding.player1EditText.setText(it.firstPlayer)
+            dialogNewCategoryBinding.player2EditText.setText(it.secondPlayer)
         } ?: kotlin.run {
-            view.deleteContainer.visibility = View.GONE
+            dialogNewCategoryBinding.deleteContainer.visibility = View.GONE
         }
 
         val dialog = builder.show()
         dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
 
-        view.cancelButton.setOnClickListener {
+        dialogNewCategoryBinding.cancelButton.setOnClickListener {
             dialog.dismiss()
         }
 
-        view.createButton.setOnClickListener {
+        dialogNewCategoryBinding.createButton.setOnClickListener {
 
             team?.also {
-                it.teamName = view.teamEditText.text.toString()
-                it.firstPlayer = view.player1EditText.text.toString()
-                it.secondPlayer = view.player2EditText.text.toString()
+                it.teamName = dialogNewCategoryBinding.teamEditText.text.toString()
+                it.firstPlayer = dialogNewCategoryBinding.player1EditText.text.toString()
+                it.secondPlayer = dialogNewCategoryBinding.player2EditText.text.toString()
                 adapter.notifyDataSetChanged()
             } ?: kotlin.run {
-                val newTeam = Team(view.player1EditText.text.toString(), view.player2EditText.text.toString(), view.teamEditText.text.toString())
+                val newTeam = Team(dialogNewCategoryBinding.player1EditText.text.toString(), dialogNewCategoryBinding.player2EditText.text.toString(), dialogNewCategoryBinding.teamEditText.text.toString())
                 teamDataSource.add(newTeam)
                 adapter.notifyDataSetChanged()
             }
@@ -139,7 +142,7 @@ class NewGameActivity : AppCompatActivity() {
             dialog.dismiss()
         }
 
-        view.deleteButton.setOnClickListener {
+        dialogNewCategoryBinding.deleteButton.setOnClickListener {
             team?.also {
                 teamDataSource.remove(it)
                 adapter.notifyDataSetChanged()
@@ -153,7 +156,7 @@ class NewGameActivity : AppCompatActivity() {
     }
 
     fun updateVsTextView() {
-        vsTextView.setText(teamDataSource.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
+        binding.vsTextView.setText(teamDataSource.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
     }
 
 }

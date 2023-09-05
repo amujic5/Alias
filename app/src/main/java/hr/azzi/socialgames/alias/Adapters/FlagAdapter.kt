@@ -1,15 +1,13 @@
 package hr.azzi.socialgames.alias.Adapters
 
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.NetworkPolicy
 import com.squareup.picasso.Picasso
 import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.R
-import kotlinx.android.synthetic.main.flag.view.*
+import hr.azzi.socialgames.alias.databinding.FlagBinding
 
 
 interface FlagAdapterDelegate {
@@ -43,6 +41,8 @@ class FlagAdapter(private val flags: ArrayList<FlagModel>): RecyclerView.Adapter
     //1
     class FlagHolder(private val view: View) : RecyclerView.ViewHolder(view), View.OnClickListener {
 
+        private val binding = FlagBinding.bind(view)
+
         var listener: FlagHolderListener? = null
 
         //3
@@ -58,9 +58,9 @@ class FlagAdapter(private val flags: ArrayList<FlagModel>): RecyclerView.Adapter
             }
             Picasso.get()
                 .load(flagModel.url)
-                .into(view.flagImageView)
+                .into(binding.flagImageView)
 
-            view.textView.text = flagModel.code
+            binding.textView.text = flagModel.code
 
         }
 
