@@ -16,6 +16,7 @@
     <color name="alias_light_gray">#BFBFBF</color>
     <color name="alias_dark_gray">#595959</color>
     <color name="alias_orange">#FFAA38</color>
+    <color name="alias_home_blue">#00C0FF</color>
 
 
 </resources>

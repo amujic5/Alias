@@ -8,11 +8,11 @@ apply plugin: 'com.google.firebase.crashlytics'
 android {
     defaultConfig {
         applicationId "hr.azzi.socialgames.alias"
-        minSdkVersion 31
+        minSdkVersion 28
         compileSdk 31
-        targetSdkVersion 31
-        versionCode 46
-        versionName "5.20"
+        targetSdkVersion 33
+        versionCode 51
+        versionName "5.32"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
