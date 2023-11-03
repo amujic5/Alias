@@ -49,5 +49,15 @@
     <string name="winner">GEWINNER!!!</string>
     <string name="record_tip_1">Neu! Aufzeichnung aktivieren. Video aufnehmen, ansehen und teilen. Probieren Sie es aus, es ist großartig!</string>
     <string name="record_tip_2">Eine Aufzeichnung der Party sehen Sie hier.</string>
+
+    <string name="alias_classic">Alias Klassik</string>
+    <string name="alias_football">Alias Fußball</string>
+    <string name="choose_game">SPIEL AUSWÄHLEN</string>
+    <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_junior">Alias Junior</string>
+    <string name="game_type">Spieltyp</string>
+    <string name="game_alias_slo">Alias Slovenija</string>
+    <string name="game_alias_uk">UK Alias</string>
+    <string name="game_taboo">Tabu</string>
 </resources>
 

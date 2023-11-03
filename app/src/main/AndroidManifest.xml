@@ -5,7 +5,7 @@
     <uses-feature
         android:name="android.hardware.camera"
         android:required="true" />
-    
+
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -16,6 +16,9 @@
         android:roundIcon="@drawable/alias_rounded"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity
+            android:name=".ChooseGame"
+            android:exported="false" />
         <activity android:name=".WinnerActivity" />
         <activity android:name=".EditAnswersActivity" />
         <activity android:name=".ResultsActivity" />
@@ -26,9 +29,9 @@
         <activity
             android:name=".HomeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
+            android:exported="true"
             android:label="@string/app_name"
-            android:theme="@style/FullscreenTheme"
-            android:exported="true">
+            android:theme="@style/FullscreenTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

@@ -4,6 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.github.loadingview.LoadingDialog
+import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.databinding.ActivityHomeBinding
 
 /**
@@ -25,6 +26,7 @@ class HomeActivity : AppCompatActivity() {
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
+        JSONService.loadBoardGamesFromFile(this)
         observe()
     }
 
@@ -35,7 +37,7 @@ class HomeActivity : AppCompatActivity() {
 
     fun observe() {
         binding.newGameButton.setOnClickListener {
-            val intent = Intent(this, NewGameActivity::class.java)
+            val intent = Intent(this, ChooseGame::class.java)
             startActivity(intent)
         }
 

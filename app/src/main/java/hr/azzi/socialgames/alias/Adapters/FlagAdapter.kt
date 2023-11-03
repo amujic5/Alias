@@ -4,7 +4,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.squareup.picasso.Picasso
 import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.databinding.FlagBinding
@@ -56,10 +55,9 @@ class FlagAdapter(private val flags: ArrayList<FlagModel>): RecyclerView.Adapter
             } else {
                 view.alpha = 0.5F
             }
-            Picasso.get()
-                .load(flagModel.url)
-                .into(binding.flagImageView)
+            val context = binding.flagImageView.context
 
+            binding.flagImageView.setImageResource(context.resources.getIdentifier(flagModel.url, "drawable", context.packageName))
             binding.textView.text = flagModel.code
 
         }

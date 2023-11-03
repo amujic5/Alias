@@ -49,4 +49,14 @@
     <string name="winner">VINCITORE!!!</string>
     <string name="record_tip_1">Nuovo! Attiva la registrazione. Registra, guarda e condividi il video. Provalo, è fantastico!</string>
     <string name="record_tip_2">Puoi vedere la registrazione della festa qui.</string>
+    <string name="alias_classic">Alias Classico</string>
+    <string name="alias_football">Alias Calcio</string>
+    <string name="choose_game">SCEGLI UN GIOCO</string>
+    <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_junior">Alias Junior</string>
+    <string name="game_type">Tipo di gioco</string>
+    <string name="game_alias_slo">Alias Slovenia</string>
+    <string name="game_alias_uk">UK Alias</string>
+    <string name="game_taboo">Tabù</string>
+
 </resources>

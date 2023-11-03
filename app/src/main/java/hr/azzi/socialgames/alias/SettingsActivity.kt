@@ -13,7 +13,9 @@ import hr.azzi.socialgames.alias.Models.DictionaryModel
 import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
+import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.Service.DictionaryService
+import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.databinding.ActivitySettingsBinding
 import me.samlss.lighter.Lighter
 
@@ -30,6 +32,10 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
     val flags by lazy {
         ArrayList(dictionaries.toList().map { FlagModel(it.imageURLString, false, it.languageCode, it.language) })
+    }
+
+    val boardGame: BoardGame by lazy {
+        intent.getParcelableExtra("boardGame")!!
     }
 
     val teams by lazy {
@@ -59,7 +65,8 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
     }
 
     fun loadData() {
-        dictionaries = DictionaryService.instance.getDictionaries(this)
+        //dictionaries = DictionaryService.instance.getDictionaries(this)
+        dictionaries = JSONService.getDictionaries(this, boardGame)
         flags[0].selected = true
 
         adapter = FlagAdapter(flags)

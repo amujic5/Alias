@@ -57,4 +57,14 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="winner">ZMAGOVALCI!!!</string>
     <string name="record_tip_1">Novo! Omogoči snemanje Zapišite krog, si oglejte in razdelite. Poskusite, super je!</string>
     <string name="record_tip_2">Posnetek kroga si lahko ogledate tukaj!</string>
+
+    <string name="alias_classic">Alias Klasika</string>
+    <string name="alias_football">Alias Nogomet</string>
+    <string name="choose_game">IZBERI IGRO</string>
+    <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_junior">Alias Junior</string>
+    <string name="game_type">Vrsta igre</string>
+    <string name="game_alias_slo">Alias Slovenija</string>
+    <string name="game_alias_uk">UK Alias</string>
+    <string name="game_taboo">Tabu</string>
 </resources>

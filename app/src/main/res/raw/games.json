@@ -1,0 +1,74 @@
+{
+    "games": [
+        {
+            "id": "game_alias_classic",
+            "name": "alias_classic",
+            "image": "game_classic",
+            "languages": ["Eng", "Ger", "Fra", "Cro", "Ita", "Srb", "Swe", "Rus", "Dut", "Bos", "Slo"],
+            "info": "alias_classic_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+"
+        },
+        {
+            "id": "game_alias_football",
+            "name": "alias_football",
+            "image": "game_football",
+            "languages": ["Cro", "Eng", "Ger", "Slo"],
+            "info": "alias_football_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+"
+        },
+        {
+            "id": "game_alias_cro",
+            "name": "game_alias_cro",
+            "image": "game_alias_cro",
+            "languages": ["Cro"],
+            "info": "alias_cro_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+"
+        },
+        {
+            "id": "game_alias_slo",
+            "name": "game_alias_slo",
+            "image": "game_alias_slo",
+            "languages": ["Slo"],
+            "info": "alias_slo_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+"
+        },
+        {
+            "id": "game_alias_uk",
+            "name": "game_alias_uk",
+            "image": "game_alias_uk",
+            "languages": ["Eng"],
+            "info": "game_alias_uk_info",
+            "age": "4-10",
+            "time": "45min",
+            "players": "3+"
+        },
+        {
+            "id": "game_alias_junior",
+            "name": "game_alias_junior",
+            "image": "game_alias_junior",
+            "languages": ["Eng", "Ger", "Fra", "Cro", "Slo"],
+            "info": "game_alias_junior_info",
+            "age": "4-10",
+            "time": "45min",
+            "players": "3+"
+        },
+        {
+            "id": "game_taboo",
+            "name": "game_taboo",
+            "image": "game_taboo",
+            "languages": ["Eng", "Cro", "Ger"],
+            "info": "game_taboo_info",
+            "age": "4-10",
+            "time": "45min",
+            "players": "3+"
+        }
+    ]
+}
