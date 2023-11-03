@@ -11,8 +11,8 @@ android {
         minSdkVersion 28
         compileSdk 31
         targetSdkVersion 33
-        versionCode 52
-        versionName "5.33"
+        versionCode 55
+        versionName "5.36"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     buildTypes {
