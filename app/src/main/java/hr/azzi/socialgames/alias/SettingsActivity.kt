@@ -7,6 +7,7 @@ import android.os.Bundle
 import android.widget.SeekBar
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
+import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Adapters.FlagAdapter
 import hr.azzi.socialgames.alias.Adapters.FlagAdapterDelegate
 import hr.azzi.socialgames.alias.Models.DictionaryModel
@@ -23,6 +24,7 @@ import me.samlss.lighter.Lighter
 class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
 
     private lateinit var binding: ActivitySettingsBinding
+    private lateinit var firebaseAnalytics: FirebaseAnalytics
 
     var adapter: FlagAdapter = FlagAdapter(ArrayList())
     var time: Int = 60
@@ -62,6 +64,19 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
 
         loadData()
         binding.scrollView.smoothScrollTo(0,0)
+
+        log()
+    }
+
+    fun log() {
+        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
+        firebaseAnalytics.setCurrentScreen(this, "SettingsActivity", null /* class override */)
+
+        val bundle = Bundle()
+        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "SettingsActivity")
+        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "SettingsActivity")
+        bundle.putString("boardGame", boardGame.id.toString())
+        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
     }
 
     fun loadData() {
