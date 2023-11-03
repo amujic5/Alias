@@ -13,6 +13,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import hr.azzi.socialgames.alias.Adapters.TeamAdapter
 import hr.azzi.socialgames.alias.Models.Team
+import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.databinding.ActivityNewGameBinding
 import hr.azzi.socialgames.alias.databinding.AddTeamFooterBinding
 import hr.azzi.socialgames.alias.databinding.DialogNewCategoryBinding
@@ -29,6 +30,10 @@ class NewGameActivity : AppCompatActivity() {
 
     val adapter by lazy {
         TeamAdapter(this, teamDataSource)
+    }
+
+    val boardGame: BoardGame by lazy {
+        intent.getParcelableExtra("boardGame")!!
     }
 
     val preferences: SharedPreferences by lazy {
@@ -95,6 +100,7 @@ class NewGameActivity : AppCompatActivity() {
                     it.playing
                 }
                 intent.putExtra("playingTeams", ArrayList(playingTeams))
+                intent.putExtra("boardGame", boardGame)
 
                 startActivity(intent)
             }

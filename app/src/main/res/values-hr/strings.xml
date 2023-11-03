@@ -57,4 +57,14 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="winner">POBJEDNICI!!!</string>
     <string name="record_tip_1">Novo! Omogući snimanje. Snimi rudnu, pregledaj i podjeli. Probaj, super je!</string>
     <string name="record_tip_2">Ovdje možeš pogledati snimku runde!</string>
+
+    <string name="alias_classic">Alias Klasik</string>
+    <string name="alias_football">Alias Nogomet</string>
+    <string name="choose_game">ODABERI IGRE</string>
+    <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_junior">Alias Junior</string>
+    <string name="game_type">Vrsta igre</string>
+    <string name="game_alias_slo">Alias Slovenija</string>
+    <string name="game_alias_uk">UK Alias</string>
+    <string name="game_taboo">Tabu</string>
 </resources>

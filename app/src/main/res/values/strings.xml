@@ -53,4 +53,15 @@
     <string name="title_activity_online_play">OnlinePlayActivity</string>
 
     <string name="title_activity_online_result">OnlineResultActivity</string>
+
+    <string name="alias_classic">Alias Classic</string>
+    <string name="alias_football">Alias Football</string>
+    <string name="choose_game">CHOOSE A GAME</string>
+    <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_junior">Alias Junior</string>
+    <string name="game_type">Game type</string>
+    <string name="game_alias_slo">Alias Slovenija</string>
+    <string name="game_alias_uk">UK Alias</string>
+    <string name="game_taboo">Taboo</string>
+
 </resources>
