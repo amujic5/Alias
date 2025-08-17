@@ -1,10 +1,9 @@
 package hr.azzi.socialgames.alias
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import hr.azzi.socialgames.alias.databinding.ActivityHowToPlayBinding
 
-class HowToPlayActivity : AppCompatActivity() {
+class HowToPlayActivity : BaseActivity() {
 
     private lateinit var binding : ActivityHowToPlayBinding
 
@@ -12,6 +11,7 @@ class HowToPlayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityHowToPlayBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()

@@ -9,7 +9,6 @@ import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
 import android.view.View
 import android.widget.Toast
-import androidx.appcompat.app.AppCompatActivity
 import com.google.gson.Gson
 import hr.azzi.socialgames.alias.Adapters.TeamAdapter
 import hr.azzi.socialgames.alias.Models.Team
@@ -18,7 +17,7 @@ import hr.azzi.socialgames.alias.databinding.ActivityNewGameBinding
 import hr.azzi.socialgames.alias.databinding.AddTeamFooterBinding
 import hr.azzi.socialgames.alias.databinding.DialogNewCategoryBinding
 
-class NewGameActivity : AppCompatActivity() {
+class NewGameActivity : BaseActivity() {
 
     private lateinit var binding : ActivityNewGameBinding
 
@@ -45,6 +44,7 @@ class NewGameActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityNewGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()

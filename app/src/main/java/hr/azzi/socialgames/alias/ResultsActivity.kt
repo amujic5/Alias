@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.view.View
-import androidx.appcompat.app.AppCompatActivity
 import hr.azzi.socialgames.alias.Adapters.TeamScoreAdapter
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
@@ -14,8 +13,7 @@ import hr.azzi.socialgames.alias.databinding.ActivityResultsBinding
 import java.io.File
 
 
-
-class ResultsActivity : AppCompatActivity() {
+class ResultsActivity : BaseActivity() {
 
     private lateinit var binding : ActivityResultsBinding
 
@@ -36,6 +34,7 @@ class ResultsActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityResultsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()

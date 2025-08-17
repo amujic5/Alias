@@ -2,14 +2,13 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import hr.azzi.socialgames.alias.Adapters.WordAdapter
 import hr.azzi.socialgames.alias.Adapters.WordAdapterDelegate
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.databinding.ActivityEditAnswersBinding
 
-class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
+class EditAnswersActivity : BaseActivity(), WordAdapterDelegate {
 
 
     val adapter by lazy {
@@ -38,6 +37,7 @@ class EditAnswersActivity : AppCompatActivity(), WordAdapterDelegate {
         super.onCreate(savedInstanceState)
         binding = ActivityEditAnswersBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()

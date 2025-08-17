@@ -2,13 +2,12 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.databinding.ActivityWinnerBinding
 
 
-class WinnerActivity : AppCompatActivity() {
+class WinnerActivity : BaseActivity() {
 
     private lateinit var binding : ActivityWinnerBinding
 
@@ -22,6 +21,7 @@ class WinnerActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityWinnerBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()

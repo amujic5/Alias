@@ -1,11 +1,8 @@
 package hr.azzi.socialgames.alias
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.SeekBar
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Adapters.FlagAdapter
@@ -19,7 +16,7 @@ import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.databinding.ActivitySettingsBinding
 
-class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
+class SettingsActivity : BaseActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
 
     private lateinit var binding: ActivitySettingsBinding
     private lateinit var firebaseAnalytics: FirebaseAnalytics
@@ -46,6 +43,7 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
         super.onCreate(savedInstanceState)
         binding = ActivitySettingsBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.hide()
