@@ -2,7 +2,11 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowCompat
+import androidx.core.view.WindowInsetsCompat
 import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.databinding.ActivityHomeBinding
 
@@ -10,7 +14,7 @@ import hr.azzi.socialgames.alias.databinding.ActivityHomeBinding
  * An example full-screen activity that shows and hides the system UI (i.e.
  * status bar and navigation/system bar) with user interaction.
  */
-class HomeActivity : AppCompatActivity() {
+class HomeActivity : BaseActivity() {
 
     private lateinit var binding : ActivityHomeBinding
 
@@ -19,6 +23,7 @@ class HomeActivity : AppCompatActivity() {
         binding = ActivityHomeBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+        applyInsets(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
         JSONService.loadBoardGamesFromFile(this)
@@ -30,7 +35,7 @@ class HomeActivity : AppCompatActivity() {
         supportActionBar?.hide()
     }
 
-    fun observe() {
+    private fun observe() {
         binding.newGameButton.setOnClickListener {
             val intent = Intent(this, ChooseGame::class.java)
             startActivity(intent)
@@ -52,5 +57,25 @@ class HomeActivity : AppCompatActivity() {
             startActivity(Intent.createChooser(localIntent, "Share To.."))
         }
 
+    }
+}
+
+abstract class BaseActivity : AppCompatActivity() {
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+
+        // Let app draw edge-to-edge; we’ll apply padding manually
+        WindowCompat.setDecorFitsSystemWindows(window, false)
+    }
+
+    protected fun applyInsets(target: View) {
+        ViewCompat.setOnApplyWindowInsetsListener(target) { v, insets ->
+            val sysBars = insets.getInsets(WindowInsetsCompat.Type.systemBars())
+            // Apply padding while keeping any existing left/right
+            v.setPadding(v.paddingLeft, sysBars.top, v.paddingRight, sysBars.bottom)
+            insets
+        }
+        ViewCompat.requestApplyInsets(target)
     }
 }

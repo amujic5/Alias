@@ -2,14 +2,13 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.GridLayoutManager
 import hr.azzi.socialgames.alias.Adapters.BoardGameAdapter
 import hr.azzi.socialgames.alias.Adapters.BoardGameAdapterDelegate
 import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.databinding.ActivityChooseGameBinding
 
-class ChooseGame : AppCompatActivity(), BoardGameAdapterDelegate {
+class ChooseGame : BaseActivity(), BoardGameAdapterDelegate {
 
     private lateinit var binding : ActivityChooseGameBinding
 
@@ -19,6 +18,7 @@ class ChooseGame : AppCompatActivity(), BoardGameAdapterDelegate {
 
         binding = ActivityChooseGameBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
         val adapter = BoardGameAdapter(JSONService.boardGames)

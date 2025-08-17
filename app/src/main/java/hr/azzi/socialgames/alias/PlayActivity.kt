@@ -31,7 +31,7 @@ import hr.azzi.socialgames.alias.databinding.DialogPlayBinding
 import java.io.File
 
 @SuppressLint("RestrictedApi, ClickableViewAccessibility")
-class PlayActivity : AppCompatActivity() {
+class PlayActivity : BaseActivity() {
 
     private lateinit var binding : ActivityPlayBinding
 
@@ -62,6 +62,7 @@ class PlayActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityPlayBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        applyInsets(binding.root)
 
         log()
         loadAd()
