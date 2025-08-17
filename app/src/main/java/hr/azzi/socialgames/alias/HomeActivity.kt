@@ -3,7 +3,6 @@ package hr.azzi.socialgames.alias
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import com.github.loadingview.LoadingDialog
 import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.databinding.ActivityHomeBinding
 
@@ -14,10 +13,6 @@ import hr.azzi.socialgames.alias.databinding.ActivityHomeBinding
 class HomeActivity : AppCompatActivity() {
 
     private lateinit var binding : ActivityHomeBinding
-
-    val dialog: LoadingDialog by lazy {
-        LoadingDialog.get(this)
-    }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)

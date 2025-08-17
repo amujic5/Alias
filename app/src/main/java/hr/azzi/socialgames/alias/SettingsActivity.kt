@@ -18,8 +18,6 @@ import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.databinding.ActivitySettingsBinding
-import me.samlss.lighter.Lighter
-
 
 class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
 
@@ -43,13 +41,6 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
     val teams by lazy {
         intent.getParcelableArrayListExtra<Team>("playingTeams")
     }
-
-    val preferences: SharedPreferences by lazy {
-        this.getSharedPreferences("settings-recording", Context.MODE_PRIVATE)
-    }
-
-    val keyRecording = "settings-recording"
-    var lighter: Lighter? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -93,12 +84,8 @@ class SettingsActivity : AppCompatActivity(), SeekBar.OnSeekBarChangeListener, F
     }
 
     override fun onBackPressed() {
-        if (this.lighter?.isShowing ?: false) {
-            this.lighter?.dismiss()
-            this.lighter = null
-        } else {
-            finish()
-        }
+        super.onBackPressed()
+        finish()
     }
 
     fun observe() {
