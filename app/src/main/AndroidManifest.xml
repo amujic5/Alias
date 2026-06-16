@@ -17,14 +17,15 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ChooseGame"
-            android:exported="false" />
-        <activity android:name=".WinnerActivity" />
-        <activity android:name=".EditAnswersActivity" />
-        <activity android:name=".ResultsActivity" />
-        <activity android:name=".PlayActivity" />
-        <activity android:name=".SettingsActivity" />
-        <activity android:name=".NewGameActivity" />
-        <activity android:name=".HowToPlayActivity" />
+            android:exported="false"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".WinnerActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".EditAnswersActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ResultsActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".PlayActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".SettingsActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".NewGameActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".HowToPlayActivity" android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".HomeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
