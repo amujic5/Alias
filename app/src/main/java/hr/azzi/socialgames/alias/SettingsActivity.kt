@@ -2,163 +2,47 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.SeekBar
-import androidx.recyclerview.widget.GridLayoutManager
-import com.google.firebase.analytics.FirebaseAnalytics
-import hr.azzi.socialgames.alias.Adapters.FlagAdapter
-import hr.azzi.socialgames.alias.Adapters.FlagAdapterDelegate
+import androidx.activity.compose.setContent
 import hr.azzi.socialgames.alias.Models.DictionaryModel
-import hr.azzi.socialgames.alias.Models.FlagModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.JSONService
-import hr.azzi.socialgames.alias.databinding.ActivitySettingsBinding
+import hr.azzi.socialgames.alias.ui.screens.SettingsScreen
+import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
-class SettingsActivity : BaseActivity(), SeekBar.OnSeekBarChangeListener, FlagAdapterDelegate {
+class SettingsActivity : BaseActivity() {
 
-    private lateinit var binding: ActivitySettingsBinding
-    private lateinit var firebaseAnalytics: FirebaseAnalytics
-
-    var adapter: FlagAdapter = FlagAdapter(ArrayList())
-    var time: Int = 60
-    var score: Int = 100
-
-    var dictionaries: MutableList<DictionaryModel> = mutableListOf()
-
-    val flags by lazy {
-        ArrayList(dictionaries.toList().map { FlagModel(it.imageURLString, false, it.languageCode, it.language) })
-    }
-
-    val boardGame: BoardGame by lazy {
-        intent.getParcelableExtra("boardGame")!!
-    }
-
-    val teams by lazy {
-        intent.getParcelableArrayListExtra<Team>("playingTeams")
+    private val boardGame: BoardGame by lazy { intent.getParcelableExtra("boardGame")!! }
+    private val teams: ArrayList<Team> by lazy {
+        intent.getParcelableArrayListExtra<Team>("playingTeams") ?: arrayListOf()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivitySettingsBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        applyInsets(binding.root)
+        val dictionaries = JSONService.getDictionaries(this, boardGame)
+        setContent {
+            AliasTheme {
+                SettingsScreen(
+                    teams = teams,
+                    dictionaries = dictionaries,
+                    onBack = { finish() },
+                    onPlay = { index, time, score -> play(dictionaries, index, time, score) },
+                )
+            }
+        }
+    }
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
         supportActionBar?.hide()
-
-        val layoutManager = GridLayoutManager(this, 4)
-        binding.recyclerView.layoutManager = layoutManager
-
-        loadData()
-        binding.scrollView.smoothScrollTo(0,0)
-
-        log()
     }
 
-    fun log() {
-        firebaseAnalytics = FirebaseAnalytics.getInstance(this)
-        firebaseAnalytics.setCurrentScreen(this, "SettingsActivity", null /* class override */)
-
-        val bundle = Bundle()
-        bundle.putString(FirebaseAnalytics.Param.ITEM_ID, "SettingsActivity")
-        bundle.putString(FirebaseAnalytics.Param.ITEM_NAME, "SettingsActivity")
-        bundle.putString("boardGame", boardGame.id.toString())
-        firebaseAnalytics.logEvent(FirebaseAnalytics.Event.SELECT_CONTENT, bundle)
+    private fun play(dictionaries: List<DictionaryModel>, index: Int, time: Int, score: Int) {
+        val dictionary = dictionaries.getOrNull(index) ?: dictionaries.firstOrNull() ?: return
+        DictionaryService.playingDictionary = dictionary
+        val game = Game(false, time, score, teams, ArrayList(dictionary.words), 0)
+        startActivity(Intent(this, PlayActivity::class.java).putExtra("game", game))
     }
-
-    fun loadData() {
-        //dictionaries = DictionaryService.instance.getDictionaries(this)
-        dictionaries = JSONService.getDictionaries(this, boardGame)
-        flags[0].selected = true
-
-        adapter = FlagAdapter(flags)
-        binding.recyclerView.adapter = adapter
-        adapter.delegate = this
-
-        updateVsTextView()
-        observe()
-    }
-
-    override fun onBackPressed() {
-        super.onBackPressed()
-        finish()
-    }
-
-    fun observe() {
-        binding.backButton.setOnClickListener {
-            finish()
-        }
-        binding.scoreSeekBar.setOnSeekBarChangeListener(this)
-        binding.timeSeekBar.setOnSeekBarChangeListener(this)
-
-        binding.playButton.setOnClickListener {
-            play()
-        }
-    }
-
-    fun play() {
-
-        var index = flags.indexOfFirst { it.selected }
-        val selectedDictionary = dictionaries[index]
-
-
-        val newGame = Game(
-            false,
-            time,
-            score,
-            teams as ArrayList<Team>,
-            ArrayList(selectedDictionary.words),
-            0
-        )
-        DictionaryService.playingDictionary = selectedDictionary
-
-        val intent =  Intent(this, PlayActivity::class.java)
-        intent.putExtra("game", newGame)
-        startActivity(intent)
-    }
-
-
-    fun updateVsTextView() {
-        teams?.let {
-            binding.vsTextView.setText(it.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
-        }
-
-    }
-
-    // OnSeekBarChangeListener
-
-    override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
-        if (seekBar == binding.scoreSeekBar) {
-            val score = progress + 40
-            binding.scoreTextView.text = "$score"
-            this.score = score
-        } else if (seekBar == binding.timeSeekBar) {
-            val time = progress + 20
-            binding.timeTextView.text = "$time"
-            this.time = time
-        }
-    }
-
-    override fun onStartTrackingTouch(seekBar: SeekBar?) {
-    }
-
-    override fun onStopTrackingTouch(seekBar: SeekBar?) {
-    }
-
-    // FlagAdapterDelegate
-    override fun didClick(position: Int) {
-        if (position < 0 || position >= flags.size) {
-            return
-        }
-        flags.forEach {
-            it.selected = false
-        }
-        flags[position].selected = true
-        adapter.notifyDataSetChanged()
-
-        binding.dictionaryTextView.text = flags[position].name
-    }
-
 }

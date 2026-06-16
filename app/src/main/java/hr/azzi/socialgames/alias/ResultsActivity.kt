@@ -1,154 +1,100 @@
 package hr.azzi.socialgames.alias
 
-import android.content.Context
 import android.content.Intent
-import android.content.SharedPreferences
 import android.os.Bundle
-import android.view.View
-import hr.azzi.socialgames.alias.Adapters.TeamScoreAdapter
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
-import hr.azzi.socialgames.alias.Models.TeamScoreItem
-import hr.azzi.socialgames.alias.databinding.ActivityResultsBinding
-import java.io.File
-
+import hr.azzi.socialgames.alias.ui.screens.ResultsScreen
+import hr.azzi.socialgames.alias.ui.screens.ResultsUiState
+import hr.azzi.socialgames.alias.ui.screens.TeamRow
+import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
 class ResultsActivity : BaseActivity() {
 
-    private lateinit var binding : ActivityResultsBinding
+    private val game: Game by lazy { intent.getParcelableExtra<Game>("game") as Game }
 
-    val game: Game by lazy {
-        intent.getParcelableExtra<Game>("game") as Game
-    }
-    val preferences: SharedPreferences by lazy {
-        this.getSharedPreferences("settings-recording", Context.MODE_PRIVATE)
-    }
-    val keyRecording = "settings-recording-2"
-
-    var teamScoreDataSource = ArrayList<TeamScoreItem>()
-    var shouldShowEditAnswers: Boolean = true
-
-    lateinit var adapter: TeamScoreAdapter
+    private var uiState by mutableStateOf<ResultsUiState?>(null)
+    private var shouldShowEditAnswers = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityResultsBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        applyInsets(binding.root)
-
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.hide()
-
         game.currentTeamHasFinishedTheRound()
-        reload()
-        observe()
+        uiState = buildState()
+        setContent {
+            AliasTheme {
+                uiState?.let {
+                    ResultsScreen(
+                        state = it,
+                        onEditAnswers = { launchEditAnswers() },
+                        onStart = { startNextRound() },
+                        onFinish = { showWinner() },
+                    )
+                }
+            }
+        }
+    }
+
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
+        supportActionBar?.hide()
     }
 
     override fun onResume() {
         super.onResume()
         if (shouldShowEditAnswers) {
             shouldShowEditAnswers = false
-            val editAnswerIntent =  Intent(this, EditAnswersActivity::class.java)
-            editAnswerIntent.putExtra("game", game)
-            startActivityForResult(editAnswerIntent, 1)
+            launchEditAnswers()
         }
-
     }
 
-    fun reload() {
-        val scores = game.sortedTeams.mapIndexed { index, team ->
-            val winner = index == 0 && game.nextTeam == null
-            TeamScoreItem(index + 1, team.teamName, team.getScore(), winner)
+    private fun buildState(): ResultsUiState {
+        val rows = game.sortedTeams.mapIndexed { index, team ->
+            TeamRow(index + 1, team.teamName, team.getScore(), index == 0 && game.nextTeam == null)
         }
-
-        teamScoreDataSource = ArrayList(scores)
-
-        adapter = TeamScoreAdapter(this, teamScoreDataSource)
-        binding.resultListView.adapter = adapter
-        adapter.notifyDataSetChanged()
-
-        updateUI()
+        return ResultsUiState(
+            teamName = game.currentTeam.teamName,
+            correct = game.currentCorrectAnswers,
+            skip = game.currentSkipAnswers,
+            rows = rows,
+            nextTeamName = game.nextTeam?.teamName,
+            explaining = game.nextExplainingPlayerName,
+            answering = game.nextAnsweringPlayerName,
+        )
     }
 
-    fun updateUI() {
-        binding.teamTextView.text = game.currentTeam.teamName
-        val correct = game.currentCorrectAnswers
-        binding.correctTextView.text = "$correct " + resources.getString(R.string.corrected)
-
-        val skipped = game.currentSkipAnswers
-        binding.skipTextView.text = "$skipped " + resources.getString(R.string.skipped)
-
-        binding.nextTeamTextView.text = game.nextTeam?.teamName
-        binding.answeringTextView.text = game.nextAnsweringPlayerName
-        binding.explainingTextView.text = game.nextExplainingPlayerName
-
-        if (game.nextTeam == null) {
-            binding.constraintLayout3.alpha = 0F
-            binding.constraintLayout3.visibility = View.GONE
-            binding.finishButton.alpha = 1F
-            binding.finishButton.visibility = View.VISIBLE
-        } else {
-            binding.constraintLayout3.alpha = 1F
-            binding.constraintLayout3.visibility = View.VISIBLE
-            binding.finishButton.alpha = 0F
-            binding.finishButton.visibility = View.GONE
-        }
-
+    private fun launchEditAnswers() {
+        val intent = Intent(this, EditAnswersActivity::class.java)
+        intent.putExtra("game", game)
+        startActivityForResult(intent, 1)
     }
 
-    fun observe() {
-        binding.startButton.setOnClickListener {
-            deleteFile()
-            game.newRound()
-            val intent =  Intent(this, PlayActivity::class.java)
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            intent.putExtra("game", game)
-            startActivity(intent)
-            finish()
-        }
+    private fun startNextRound() {
+        game.newRound()
+        val intent = Intent(this, PlayActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        intent.putExtra("game", game)
+        startActivity(intent)
+        finish()
+    }
 
-        binding.finishButton.setOnClickListener {
-            deleteFile()
-            val intent =  Intent(this, WinnerActivity::class.java)
-            intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
-            intent.putExtra("game", game)
-            startActivity(intent)
-            finish()
-        }
-
-        binding.editAnswersButton.setOnClickListener {
-            val intent =  Intent(this, EditAnswersActivity::class.java)
-            intent.putExtra("game", game)
-            startActivityForResult(intent, 1)
-        }
+    private fun showWinner() {
+        val intent = Intent(this, WinnerActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
+        intent.putExtra("game", game)
+        startActivity(intent)
+        finish()
     }
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
         super.onActivityResult(requestCode, resultCode, data)
-
         val words = data?.getParcelableArrayListExtra<MarkedWord>("words")
-
         if (words != null) {
             game.setTeamMarkedWords(words)
-            reload()
-        }
-
-
-    }
-
-    fun deleteFile() {
-        val fileURIString = intent.getStringExtra("fileURIString")
-        if (fileURIString != null) {
-            val file = File(fileURIString)
-
-            if (file != null) {
-                if (file.exists()) {
-                    file.delete()
-                }
-            }
-
+            uiState = buildState()
         }
     }
-
-
 }

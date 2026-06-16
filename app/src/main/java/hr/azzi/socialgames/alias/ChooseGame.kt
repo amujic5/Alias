@@ -2,45 +2,30 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
-import hr.azzi.socialgames.alias.Adapters.BoardGameAdapter
-import hr.azzi.socialgames.alias.Adapters.BoardGameAdapterDelegate
+import androidx.activity.compose.setContent
 import hr.azzi.socialgames.alias.Service.JSONService
-import hr.azzi.socialgames.alias.databinding.ActivityChooseGameBinding
+import hr.azzi.socialgames.alias.ui.screens.ChooseGameScreen
+import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
-class ChooseGame : BaseActivity(), BoardGameAdapterDelegate {
-
-    private lateinit var binding : ActivityChooseGameBinding
+class ChooseGame : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_choose_game)
-
-        binding = ActivityChooseGameBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        applyInsets(binding.root)
-
-        binding.recyclerView.layoutManager = GridLayoutManager(this, 2)
-        val adapter = BoardGameAdapter(JSONService.boardGames)
-        adapter.delegate = this
-        binding.recyclerView.adapter = adapter
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
-
-        binding.backButton.setOnClickListener {
-            this.finish()
+        setContent {
+            AliasTheme {
+                ChooseGameScreen(
+                    decks = JSONService.boardGames,
+                    onBack = { finish() },
+                    onPick = { boardGame ->
+                        startActivity(Intent(this, NewGameActivity::class.java).putExtra("boardGame", boardGame))
+                    },
+                )
+            }
         }
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         supportActionBar?.hide()
-    }
-
-    override fun didClick(position: Int) {
-        val boardGame = JSONService.boardGames[position]
-
-        val intent = Intent(this, NewGameActivity::class.java)
-        intent.putExtra("boardGame", boardGame)
-        startActivity(intent)
     }
 }
