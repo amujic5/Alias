@@ -17,6 +17,7 @@
     <string name="skip">SKIP</string>
     <string name="correct">CORRECT</string>
     <string name="results">RESULTS</string>
+    <string name="game_stats">GAME STATS</string>
     <string name="next_up">NEXT UP</string>
     <string name="start">START</string>
     <string name="explaining">Explaining</string>
@@ -32,6 +33,7 @@
     <string name="delete">DELETE</string>
     <string name="create">CREATE</string>
     <string name="stop">STOP</string>
+    <string name="playing">Playing</string>
     <string name="corrected">correct</string>
     <string name="skipped">skipped</string>
     <string name="score">Score:</string>

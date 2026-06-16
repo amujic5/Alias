@@ -1,168 +1,65 @@
 package hr.azzi.socialgames.alias
 
-import android.app.AlertDialog
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
-import android.view.View
 import android.widget.Toast
+import androidx.activity.compose.setContent
+import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.compose.runtime.toMutableStateList
 import com.google.gson.Gson
-import hr.azzi.socialgames.alias.Adapters.TeamAdapter
 import hr.azzi.socialgames.alias.Models.Team
 import hr.azzi.socialgames.alias.Service.BoardGame
-import hr.azzi.socialgames.alias.databinding.ActivityNewGameBinding
-import hr.azzi.socialgames.alias.databinding.AddTeamFooterBinding
-import hr.azzi.socialgames.alias.databinding.DialogNewCategoryBinding
+import hr.azzi.socialgames.alias.ui.screens.NewGameScreen
+import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
 class NewGameActivity : BaseActivity() {
 
-    private lateinit var binding : ActivityNewGameBinding
+    private val boardGame: BoardGame by lazy { intent.getParcelableExtra("boardGame")!! }
+    private val preferences: SharedPreferences by lazy { getSharedPreferences("teams", Context.MODE_PRIVATE) }
 
-    val footerView by lazy {
-        AddTeamFooterBinding.inflate(layoutInflater)
-    }
-
-    var teamDataSource = ArrayList<Team>()
-
-    val adapter by lazy {
-        TeamAdapter(this, teamDataSource)
-    }
-
-    val boardGame: BoardGame by lazy {
-        intent.getParcelableExtra("boardGame")!!
-    }
-
-    val preferences: SharedPreferences by lazy {
-        this.getSharedPreferences("teams", Context.MODE_PRIVATE)
-    }
-
+    private lateinit var teams: SnapshotStateList<Team>
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityNewGameBinding.inflate(layoutInflater)
-        setContentView(binding.root)
-        applyInsets(binding.root)
+        teams = loadTeams().toMutableStateList()
+        setContent {
+            AliasTheme {
+                NewGameScreen(
+                    teams = teams,
+                    onBack = { finish() },
+                    onChanged = { saveTeams() },
+                    onStart = { startGame() },
+                )
+            }
+        }
+    }
 
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+    override fun onPostCreate(savedInstanceState: Bundle?) {
+        super.onPostCreate(savedInstanceState)
         supportActionBar?.hide()
-
-        binding.listView.adapter = adapter
-        binding.listView.addFooterView(footerView.root)
-
-        loadTeams()
-
-        updateVsTextView()
-
-        observe()
     }
 
-    fun loadTeams() {
-        val gson = Gson()
-        val json = preferences.getString("teams", null)
-        if (json != null) {
-            val obj: List<Team> = gson.fromJson(json, Array<Team>::class.java).toList()
-            for (team in obj) {
-                teamDataSource.add(team)
-            }
-            adapter.notifyDataSetChanged()
-        }
+    private fun loadTeams(): List<Team> {
+        val json = preferences.getString("teams", null) ?: return emptyList()
+        return runCatching { Gson().fromJson(json, Array<Team>::class.java).toList() }.getOrDefault(emptyList())
     }
 
-    fun saveTeams() {
-        val gson = Gson()
-        val json = gson.toJson(teamDataSource)
-        preferences.edit().putString("teams", json).apply()
+    private fun saveTeams() {
+        preferences.edit().putString("teams", Gson().toJson(teams.toList())).apply()
     }
 
-    fun observe() {
-        binding.backButton.setOnClickListener {
-            this.finish()
+    private fun startGame() {
+        val playingTeams = teams.filter { it.playing }
+        if (playingTeams.size < 2) {
+            Toast.makeText(this, getString(R.string.two_teams_needed), Toast.LENGTH_SHORT).show()
+            return
         }
-
-        footerView.createTeamButton.setOnClickListener {
-            this.editTeam()
-        }
-
-        binding.listView.setOnItemClickListener { parent, view, position, id ->
-            val team = teamDataSource[position]
-            editTeam(team)
-        }
-
-        binding.startGameButton.setOnClickListener {
-            if (teamDataSource.filter { it.playing }.size < 2) {
-                Toast.makeText(this, resources.getString(R.string.two_teams_needed), Toast.LENGTH_SHORT).show()
-            } else {
-                val intent =  Intent(this, SettingsActivity::class.java)
-                val playingTeams = teamDataSource.filter {
-                    it.playing
-                }
-                intent.putExtra("playingTeams", ArrayList(playingTeams))
-                intent.putExtra("boardGame", boardGame)
-
-                startActivity(intent)
-            }
-        }
+        startActivity(
+            Intent(this, SettingsActivity::class.java)
+                .putExtra("playingTeams", ArrayList(playingTeams))
+                .putExtra("boardGame", boardGame)
+        )
     }
-
-    fun editTeam(team: Team? = null) {
-        val context = this
-        val builder = AlertDialog.Builder(context)
-
-
-        val dialogNewCategoryBinding = DialogNewCategoryBinding.inflate(layoutInflater)
-        builder.setView(dialogNewCategoryBinding.root)
-
-        team?.also {
-            dialogNewCategoryBinding.teamEditText.setText(it.teamName)
-            dialogNewCategoryBinding.player1EditText.setText(it.firstPlayer)
-            dialogNewCategoryBinding.player2EditText.setText(it.secondPlayer)
-        } ?: kotlin.run {
-            dialogNewCategoryBinding.deleteContainer.visibility = View.GONE
-        }
-
-        val dialog = builder.show()
-        dialog.window?.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
-
-        dialogNewCategoryBinding.cancelButton.setOnClickListener {
-            dialog.dismiss()
-        }
-
-        dialogNewCategoryBinding.createButton.setOnClickListener {
-
-            team?.also {
-                it.teamName = dialogNewCategoryBinding.teamEditText.text.toString()
-                it.firstPlayer = dialogNewCategoryBinding.player1EditText.text.toString()
-                it.secondPlayer = dialogNewCategoryBinding.player2EditText.text.toString()
-                adapter.notifyDataSetChanged()
-            } ?: kotlin.run {
-                val newTeam = Team(dialogNewCategoryBinding.player1EditText.text.toString(), dialogNewCategoryBinding.player2EditText.text.toString(), dialogNewCategoryBinding.teamEditText.text.toString())
-                teamDataSource.add(newTeam)
-                adapter.notifyDataSetChanged()
-            }
-            updateVsTextView()
-            saveTeams()
-
-            dialog.dismiss()
-        }
-
-        dialogNewCategoryBinding.deleteButton.setOnClickListener {
-            team?.also {
-                teamDataSource.remove(it)
-                adapter.notifyDataSetChanged()
-                updateVsTextView()
-                saveTeams()
-            }
-
-            dialog.dismiss()
-        }
-
-    }
-
-    fun updateVsTextView() {
-        binding.vsTextView.setText(teamDataSource.filter { it.playing }.map { it.teamName }.joinToString(" VS "))
-    }
-
 }
