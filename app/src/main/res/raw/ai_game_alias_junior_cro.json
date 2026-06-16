@@ -1,0 +1,3052 @@
+{
+  "language": "Croatian",
+  "languageCode": "CRO",
+  "words": [
+    {
+      "word": "hamburger",
+      "clues": [
+        "Okrugla zemička s mesom i povrćem unutra.",
+        "Brza hrana koju jedeš rukama na žurbu.",
+        "Zlatni lukovi su znak restorana koji ga prodaje.",
+        "Sočni mesni obrok omiljen djeci i odraslima.",
+        "Često ga jedeš zajedno s pomfritom i gaziranim sokom.",
+        "Pljeskavica je smještena između dvije polovice mekane peciva.",
+        "Slično kao hot dog, ali okruglo i s pljeskavicom.",
+        "Ono što naručiš kad si gladan u McDonald'su.",
+        "Najpoznatiji su oni s dvije pljeskavice i posebnim umakom.",
+        "Sastaviš ga slažući salatu, sir i meso jedno na drugo."
+      ]
+    },
+    {
+      "word": "dijamant",
+      "clues": [
+        "Najtvrdji mineral na svijetu, proziran i sjajan.",
+        "Stavlja se na prstenje i nakit kao dragocjen kamen.",
+        "Sjaji se i lomi svjetlost u duge boje.",
+        "Rudari ga traže duboko u zemlji Afrike.",
+        "Bogataši ga nose oko vrata i na ušima jer je vrlo skup.",
+        "Često se njime zaprosi voljena osoba kod vjenčanja.",
+        "Tvrđi je od svega pa se njime može rezati staklo.",
+        "Onaj sjajni kamenčić koji blješti na zaručničkom prstenu.",
+        "Asocira me na kraljice i bogatstvo.",
+        "Brusi se da bi dobio mnogo malih sjajnih ploha."
+      ]
+    },
+    {
+      "word": "robot",
+      "clues": [
+        "Stroj koji može raditi umjesto čovjeka.",
+        "Ima ruke, noge i glavu ali nije živ.",
+        "U filmovima često živi na svemirskim brodovima.",
+        "Programira ga čovjek da obavlja zadatke.",
+        "U tvornicama sastavlja automobile umjesto ljudskih radnika.",
+        "Djeca se vesele igračkama koje hodaju i govore na baterije.",
+        "Onaj koji čisti pod sam od sebe okruglog je oblika.",
+        "Govori metalnim glasom i ima trepćuća svjetla.",
+        "U njega ubaciš naredbu i on je posluša bez pitanja.",
+        "Slično kao čovjek, ali napravljen od metala i žica."
+      ]
+    },
+    {
+      "word": "pijetao",
+      "clues": [
+        "Muška kokoš koja pjeva svako jutro.",
+        "Budi farmere glasnim kukurikanjem u zoru.",
+        "Ima šareno perje i crveni češalj na glavi.",
+        "Živi u kokošinjcu i čuva kokoši.",
+        "Često stoji na vrhu krova kao metalna figura koja pokazuje vjetar.",
+        "On je tata u kokošjoj obitelji i čuva svoje jato.",
+        "Onaj koji se prvi probudi na seoskom dvorištu.",
+        "Suprotno od kokoši po spolu, a glasan je u zoru.",
+        "Crta ga se na kutijama francuskog sira.",
+        "Ima velike šarene perjanice na repu i ponosno se šepiri."
+      ]
+    },
+    {
+      "word": "palačinke",
+      "clues": [
+        "Tanke okrugle ploče od tijesta pečene na tavi.",
+        "Prelijevaju se čokoladom, džemom ili šećerom.",
+        "Djeca ih vole za doručak ili desert.",
+        "Mame ih prave na tavi uz malo maslaca.",
+        "Najpoznatije su iz Francuske, gdje ih savijaju i posipaju šećerom.",
+        "Smotaju se u rolu nakon što se napune slatkim nadjevom.",
+        "Tanke su poput papira i savineš ih na pola.",
+        "Ono slatko što mama ispeče kad ostane mlijeka i brašna.",
+        "U tavi se prevrću da se ispeku s obje strane.",
+        "Posuti šećerom ili nadjeveni nutelom, omiljeni su za užinu."
+      ]
+    },
+    {
+      "word": "kobasica",
+      "clues": [
+        "Dugačak mesni proizvod u tankoj ovitnici.",
+        "Peče se na roštilju ili u tavi.",
+        "Dolazi uz jaja za doručak ili u hot dog.",
+        "Može biti ljuta ili blaga, dimljena ili svježa.",
+        "Često se umeće u pecivo i poslužuje sa senfom na sajmovima.",
+        "Krenski je oblik koji visi obješen u mesnici kao dimljena delicija.",
+        "Dugačka je i tanka, a sikće dok se peče na žaru.",
+        "Slično kao hrenovka, ali deblja i začinjenija.",
+        "Visi obješena u nizu u mesnici.",
+        "Stavljaš je u pecivo i poliješ kečapom na sajmu."
+      ]
+    },
+    {
+      "word": "bicikl",
+      "clues": [
+        "Vozilo s dva kotača koje pokreće pedaliranje.",
+        "Vozi se bez motora, samo snagom nogu.",
+        "Djeca uče na njemu s pomoćnim kotačićima.",
+        "Idealan prijevoz za kratke vožnje po gradu.",
+        "Voziš ga sjedeći na sjedalu i držeći upravljač rukama.",
+        "Kočiš ručicama na upravljaču dok juriš nizbrdo.",
+        "Slično kao motor, ali bez benzina i guraš ga nogama.",
+        "Ono na čemu se voziš oko zgrade kad je lijepo vrijeme.",
+        "Zvoniš zvoncem na njemu da te ljudi čuju.",
+        "Dva kruga jedan iza drugog na koje sjedneš i kreneš."
+      ]
+    },
+    {
+      "word": "hladnjak",
+      "clues": [
+        "Bijeli kućanski aparat koji čuva hranu svježom na niskoj temperaturi.",
+        "Otvoriš vrata i nađu se namirnce i napici.",
+        "Stoji u kuhinji i brni tiho cijeli dan.",
+        "Bez njega bi mlijeko i meso brzo propalo.",
+        "Iznutra svijetli žaruljica kada otvoriš njegova vrata.",
+        "Na vratima ti djeca lijepe šarene magnete s crtežima.",
+        "Onaj bijeli ormar u kuhinji u kojem je uvijek ledeno.",
+        "Suprotno od pećnice jer on rashlađuje umjesto da grije.",
+        "Otvoriš ga kad si gladan i tražiš nešto za pojesti.",
+        "Najgornji dio mu je ledeni i u njemu čuvaš sladoled."
+      ]
+    },
+    {
+      "word": "laptop",
+      "clues": [
+        "Prijenosno računalo koje stavljaš na krilo.",
+        "Ima ekran i tipkovnicu u jednom sklopivom uređaju.",
+        "Djeca ga koriste za učenje i igre.",
+        "Može se puniti strujom i nositi u ruksaku.",
+        "Sklopiš ga poput knjige i staviš u torbu kada završiš s radom.",
+        "Manji je i lakši od stolnog računala pa ga nosiš sa sobom.",
+        "Slično kao tablet, ali ima tipke i otvara se kao knjiga.",
+        "Ono na čemu mama radi sjedeći za stolom u uredu.",
+        "Sklopiš ga i staviš u torbu kad ideš na put.",
+        "Tipkaš po njemu i gledaš u ekran dok pišeš zadaću."
+      ]
+    },
+    {
+      "word": "žaba",
+      "clues": [
+        "Zelena vodena životinja koja skače i kreče.",
+        "Živi uz bare i rijeke, voli vlažna mjesta.",
+        "Počinje kao punoglavac pa naraste u odraslu životinju.",
+        "Hvata insekte dugačkim ljepljivim jezikom.",
+        "U bajci se pretvori u princa kada je princeza poljubi.",
+        "Ima sluzavu kožu i plivajuće noge s opnom među prstima.",
+        "Zelena je i radi kre-kre pokraj jezerca.",
+        "Skače dugačke skokove pa je teško uhvatiti.",
+        "Slično kao krastača, ali glađa i živahnija.",
+        "U bajci sjedi na lopoču i čeka princezin poljubac."
+      ]
+    },
+    {
+      "word": "bubanj",
+      "clues": [
+        "Glazbalo na koje udaraš palicama da bi čuo ritam.",
+        "Okruglo i šuplje, napravljeno od kože i drva.",
+        "Bubnjar ga svira u svakom rock ili pop bendu.",
+        "Glasno odzvanja kada ga udaraš.",
+        "Najveći se njegov tip okreće okolo i sjediš iza njega kao glazbenik.",
+        "Daje takt cijeloj pjesmi svojim udarcima.",
+        "Ono po čemu lupaš palicama da napraviš buku.",
+        "Slično kao lonac okrenut naopako, samo glasniji.",
+        "U bendu daje ritam dok ostali sviraju melodiju.",
+        "Mali ga vojnici nose obješenog oko vrata u povorci."
+      ]
+    },
+    {
+      "word": "košara",
+      "clues": [
+        "Pletena posuda za nošenje voća ili kruha.",
+        "Može biti od pruća, plastike ili žice.",
+        "Baka je puni na tržnici svježim namirnicama.",
+        "Ima ručku i otvoreni vrh za lako punjenje.",
+        "U njoj uskršnji zec ostavlja čokoladna jaja i poklone.",
+        "Pikado i obruč iznad nje znače pogodak u jednom sportu.",
+        "U nju bacaš loptu u jednom sportu da skupiš bodove.",
+        "Ono što baka nosi na ruci kad ide u dućan.",
+        "Slično kao torba, ali pletena i s ručkom.",
+        "Uskrsni zec u nju ostavi obojana jaja."
+      ]
+    },
+    {
+      "word": "ručnik",
+      "clues": [
+        "Mekani komad tkanine kojim se brišeš nakon kupanja.",
+        "Visieš ga na kuku u kupaonici.",
+        "Postoji za ruke, tijelo i lice.",
+        "Plažni je veći i šareniji od kućnog.",
+        "Omotaš ga oko sebe kada izađeš iz tuša da se osušiš.",
+        "Na njega legneš na pijesku kako se ne bi prljao.",
+        "Onim mekanim brišeš se dok kapaš nakon tuširanja.",
+        "Razastreš ga na pijesku da ležiš na njemu.",
+        "Visi presavijen pokraj umivaonika u kupaonici.",
+        "Slično kao deka, ali tanji i upija vodu s tijela."
+      ]
+    },
+    {
+      "word": "pas",
+      "clues": [
+        "Vjerna životinja koja laje i maše repom.",
+        "Zovu ga najboljim prijateljem čovjeka.",
+        "Voli trčati po parku i igrati se s lopticom.",
+        "Čuva kuću i drago mu je kad se vratiš doma.",
+        "Daješ mu kost da gricka i vodiš ga u šetnju na uzici.",
+        "Slijepima pomaže prijeći cestu kao vjerni vodič.",
+        "Onaj koji te dočeka na vratima i veselo skače.",
+        "Radi vau-vau kad netko prođe pokraj kuće.",
+        "Slično kao vuk, ali pripitomljen i živi s nama.",
+        "Baciš mu lopticu pa je on dotrči i vrati u zubima."
+      ]
+    },
+    {
+      "word": "remen",
+      "clues": [
+        "Kožna traka koja drži hlače na struku.",
+        "Provlači se kroz petlje na hlačama.",
+        "Ima metalnu kopču kojom se zatvara.",
+        "Može biti uzak ili širok, crn ili smeđ.",
+        "Tata ga skida prije nego sjedne za stol da mu bude udobnije.",
+        "Najčešće je smeđe ili crne boje i stoji oko trbuha.",
+        "Ono čime stegneš hlače da ti ne padnu.",
+        "Slično kao traka, ali s kopčom i rupicama.",
+        "Provučeš ga oko struka i zakopčaš.",
+        "Drži ga tata oko pojasa da mu hlače stoje uredno."
+      ]
+    },
+    {
+      "word": "kukuruz",
+      "clues": [
+        "Žuta biljka s klipom punim sjemenki.",
+        "Jedeš ga s maslom s klipa ili kao kokice.",
+        "Raste visoko na njivi ljeti.",
+        "Zlatno žuta zrna nalaze se u redovima na klipu.",
+        "Skuhaš ga u loncu i grickaš zrno po zrno s klipa.",
+        "Kokice koje jedeš u kinu nastaju kada se njegova zrna zagriju.",
+        "Onaj žuti klip koji grickaš zub po zub.",
+        "Od njegovih zrna nastaju kokice kad puknu na vrućini.",
+        "Raste visoko u redovima na polju i ima zelene listove.",
+        "Slično kao žitarica, ali zrna su mu krupna i zlatna."
+      ]
+    },
+    {
+      "word": "haljina",
+      "clues": [
+        "Odjevni predmet koji pokriva tijelo i noge u jednom.",
+        "Djevojčice ga nose na proslavama i svečanostima.",
+        "Može biti kratka ili duga, šarena ili bijela.",
+        "Nosi se bez hlača, samo jedna komada odjeće.",
+        "Princeze u crtićima nose dugu raskošnu odjeću koja se vuče po podu.",
+        "Mladenka je obično obuče u bijeloj boji na svadbi.",
+        "Ono jedno što djevojčice obuku kad idu na rođendan.",
+        "Slično kao suknja, ali spojena s gornjim dijelom.",
+        "Mladenka je nosi bijelu i dugačku na vjenčanju.",
+        "Navučeš je preko glave i odjednom si obučena."
+      ]
+    },
+    {
+      "word": "cvijet",
+      "clues": [
+        "Biljni dio s laticama koji miriši i šareno izgleda.",
+        "Dajemo ga osobama koje volimo kao poklon.",
+        "Pčele ga posjećuju da bi skupile nektar.",
+        "Raste u vrtu, livadi ili loncu na prozoru.",
+        "Stavljaš ga u vazu s vodom da ljepše izgleda u sobi.",
+        "Ubereš ga na livadi i pleteš od njega vjenčić za glavu.",
+        "Onaj koji ubereš na livadi i pomirišeš.",
+        "Slično kao biljka, ali ima šarene latice.",
+        "Daješ ga mami za rođendan u buketu.",
+        "Pčele i leptiri slijeću na njega zbog slatkog soka."
+      ]
+    },
+    {
+      "word": "lisica",
+      "clues": [
+        "Crvenkasta šumska životinja s busavim repom.",
+        "Poznata je po lukavosti u bajkama i pričama.",
+        "Lovi miševe i zečeve noću u šumi.",
+        "Ima šiljate uši i dugi pahuljasti rep.",
+        "U poznatoj priči zavarava gladnoga vuka svojom dosjetljivošću.",
+        "Crveni je njen kožuh pa je lovci traže zbog krzna.",
+        "Ona crvena životinja iz priča koja je jako lukava.",
+        "Slično kao pas, ali divlja i s dugim pahuljastim repom.",
+        "Šulja se oko kokošinjca da ukrade kokoš.",
+        "Ima šiljatu njušku i živi u jami u šumi."
+      ]
+    },
+    {
+      "word": "knjiga",
+      "clues": [
+        "Uvezani skup stranica s tekstom ili slikama.",
+        "Čitaš je da bi naučio nešto novo ili se zabavio.",
+        "Može biti debela ili tanka, tvrdog ili mekog uveza.",
+        "Nalazi se na policama u knjižnicama i domovima.",
+        "Posuđuješ je iz posebne zgrade i moraš je vratiti na vrijeme.",
+        "Prije spavanja roditelji djeci čitaju priče iz nje.",
+        "Ono što otvoriš i okrećeš stranice da saznaš priču.",
+        "Slično kao bilježnica, ali u njoj već piše nešto za čitanje.",
+        "Posuđuješ je iz knjižnice i vraćaš na vrijeme.",
+        "Roditelji ti čitaju iz nje priču prije spavanja."
+      ]
+    },
+    {
+      "word": "krava",
+      "clues": [
+        "Velika domaća životinja koja daje mlijeko.",
+        "Čuje se njeno mukanje na farmi.",
+        "Crno-bijela ili smeđa, pase travu na livadi.",
+        "Od njenog mlijeka prave se sir i maslac.",
+        "Na glavi nosi rogove i miljama daleko mukanje se čuje.",
+        "U Indiji se smatra svetom životinjom koju se ne smije ozlijediti.",
+        "Ona velika koja radi mu-u na farmi.",
+        "Daje nam ono bijelo što piješ za doručak.",
+        "Slično kao bik, ali ima vime i daje mlijeko.",
+        "Cijeli dan pase travu i miče repom da otjera muhe."
+      ]
+    },
+    {
+      "word": "bubamara",
+      "clues": [
+        "Mali crveni kukac s crnim točkicama na leđima.",
+        "Smatra se simbolom sreće kad sleti na tebe.",
+        "Leti i slijeće na listove u vrtu.",
+        "Izgleda kao mali okrugli šareni gumb.",
+        "U dječjoj pjesmici joj govore da poleti i donese lijepo vrijeme.",
+        "Tijelo joj je poput malenog crvenog štita s crnim mrljama.",
+        "Onaj mali crveni kukac s točkicama koji ti sjedne na ruku.",
+        "Donosi sreću kad ti sleti na dlan, kažu.",
+        "Slično kao kukac, ali okrugla i šarena poput gumba.",
+        "Sklopi krilca pod crveni oklop kad ne leti."
+      ]
+    },
+    {
+      "word": "čaša",
+      "clues": [
+        "Prozirna posuda za pijenje vode ili soka.",
+        "Drži se u ruci i pije se iz nje.",
+        "Može biti od stakla ili plastike.",
+        "Napuniš je iz slavine ili boce i isprazniš gutljajima.",
+        "Kucneš njome o tuđu pri zdravici riječima nazdravlje.",
+        "Mjehurići soka pjenušaju kada je natočiš do vrha.",
+        "Ono iz čega piješ vodu kad si žedan.",
+        "Slično kao šalica, ali bez ručke i prozirna.",
+        "Kucneš njome o tuđu i kažeš živjeli.",
+        "Napuniš je na slavini i popiješ na eks."
+      ]
+    },
+    {
+      "word": "guma",
+      "clues": [
+        "Okrugli crni dio kotača na autu ili biciklu.",
+        "Napunjena je zrakom i omekšava vožnju.",
+        "Kada se probije, auto ne može normalno voziti.",
+        "Elastičan materijal koji se pravi od lateksa.",
+        "U školi je brišeš njome pogreške napisane olovkom.",
+        "Možeš je žvakati i napuhati balon od nje za zabavu.",
+        "Ono crno i okruglo na čemu se kotrlja auto.",
+        "Njome u školi brišeš ono što si krivo napisao olovkom.",
+        "Možeš je žvakati i napuhati balončić.",
+        "Kad se probuši na biciklu, ispuše se i moraš je krpati."
+      ]
+    },
+    {
+      "word": "lanac",
+      "clues": [
+        "Niz međusobno spojenih metalnih karika.",
+        "Koristi se za zaključavanje bicikla ili za ukrašavanje.",
+        "Na biciklu prenosi snagu s pedala na kotač.",
+        "Može biti zlatni kao nakit ili željezni kao sigurnost.",
+        "Pas se njime veže za ogradu da ne pobjegne.",
+        "Visi oko vrata kao sjajan ukras s privjeskom.",
+        "Ono od karika čime zaključaš bicikl da ga nitko ne ukrade.",
+        "Slično kao ogrlica, ali od povezanih metalnih kolutova.",
+        "Na biciklu se vrti i pokreće kotač kad pedaliraš.",
+        "Vuče ga pas dok je vezan u dvorištu."
+      ]
+    },
+    {
+      "word": "čokolada",
+      "clues": [
+        "Slatka smeđa poslastica napravljena od kakaa.",
+        "Topi se u ustima i djeca je obožavaju.",
+        "Dolazi u pločicama, bombonima i kao napitak.",
+        "Može biti mliječna, tamna ili bijela.",
+        "Za Valentinovo se poklanja u srcolikoj kutiji voljenoj osobi.",
+        "Zec ili Djed Mraz je donosi djeci kao slatki dar.",
+        "Ono smeđe i slatko što se topi u rukama.",
+        "Slično kao bombon, ali u obliku pločice koju lomiš na kockice.",
+        "Djed Mraz je stavlja djeci u čizmicu.",
+        "Otopiš je u toplom mlijeku pa dobiješ slatki napitak."
+      ]
+    },
+    {
+      "word": "limun",
+      "clues": [
+        "Žuti kiseli citrusni plod.",
+        "Cijedimo ga u čaj da bude kiselkast.",
+        "Kora mu miriši svježe i koristi se u kolačima.",
+        "Pregrizeš ga i odmah se skupiš od kiselosti.",
+        "Žmiriš i napraviš grimasu kada ga zagrizeš zbog jakog okusa.",
+        "Boja njegove kore dala je ime jednoj nijansi žute.",
+        "Onaj žuti od kojeg se sav skupiš jer je jako kiseo.",
+        "Slično kao naranča, ali žut i nije sladak.",
+        "Iscijediš ga u vodu i dobiješ kiseli sok.",
+        "Stisneš oči i napraviš grimasu čim ga liznes."
+      ]
+    },
+    {
+      "word": "helikopter",
+      "clues": [
+        "Letjelica s velikim rotirajućim krilima na vrhu.",
+        "Može poletjeti i sletjeti ravno gore-dolje bez piste.",
+        "Koristi se za spašavanje i hitnu medicinu.",
+        "Brni glasno i lebdi na jednom mjestu u zraku.",
+        "Pilot sjedi unutra i upravlja njime povlačeći ručice.",
+        "Često slijeće na vrh bolnice da preveze teško bolesne.",
+        "Ona letjelica s velikom elisom koja se vrti na vrhu.",
+        "Slično kao avion, ali lebdi u zraku na jednom mjestu.",
+        "Diže se ravno uvis bez zaleta i piste.",
+        "Slijeće na krov bolnice da hitno odveze bolesnika."
+      ]
+    },
+    {
+      "word": "krevet",
+      "clues": [
+        "Namještaj na kojemu spavaš svaku noć.",
+        "Ima madrac, jastuke i pokrivač.",
+        "Nalazi se u spavaćoj sobi.",
+        "Jutro počinje ustajanjem iz njega.",
+        "Navečer se uvučeš pod pokrivač u njemu i ugasiš svjetlo.",
+        "Mama te ujutro budi i tjera da iziđeš ispod toplog pokrivača.",
+        "Ono na čemu legneš navečer i pokriješ se dekom.",
+        "Slično kao kauč, ali u njemu spavaš cijelu noć.",
+        "Ujutro se nevoljko dižeš iz njega kad zazvoni budilica.",
+        "Imaš ga u svojoj sobi i na njemu su jastuk i pokrivač."
+      ]
+    },
+    {
+      "word": "mobitel",
+      "clues": [
+        "Mali uređaj koji nosiš u džepu za pozive i poruke.",
+        "Može reproducirati glazbu, filmove i igre.",
+        "Puniti ga moraš svakog dana ili dva.",
+        "Ekran mu je osjetljiv na dodir prsta.",
+        "Roditelji ti njime pošalju poruku gdje su i kad dolaze po tebe.",
+        "Kada zvoni u džepu, izvadiš ga i javiš se na poziv.",
+        "Ono što nosiš u džepu i po čemu prstom listaš slike.",
+        "Slično kao mali računalo koje stane na dlan.",
+        "Zazvoni i zatitra u džepu kad te netko zove.",
+        "Puniš ga na kabel jer mu navečer nestane baterije."
+      ]
+    },
+    {
+      "word": "skije",
+      "clues": [
+        "Duge uske daske koje priviješ na cipele za klizanje po snijegu.",
+        "Koriste se na planinama za spust niz padinu.",
+        "Spuštaš se njima niz bijele staze zimi.",
+        "Dolaze u paru i koristе se uz štapove.",
+        "Na njima se voziš liftom do vrha brda pa juriš dolje po snijegu.",
+        "Nosiš debele rukavice i kacigu dok klizaš na njima zimi.",
+        "One duge daske koje navučeš na cipele za klizanje po snijegu.",
+        "Slično kao daska za snijeg, ali ide ih dvije, jedna na svaku nogu.",
+        "Voziš se njima nizbrdo niz bijelu planinu zimi.",
+        "Pomažeš si s dva štapa dok kližeš dolje po padini."
+      ]
+    },
+    {
+      "word": "leptir",
+      "clues": [
+        "Kukac s velikim šarenim krilima koji leti od cvijeta do cvijeta.",
+        "Počinje kao gusjenica, a pretvori se u krilato čudo.",
+        "Lagano leprša po ljetnom vrtu.",
+        "Ima tanke nožice i proboscis za sisanje nektara.",
+        "Tvori metulja s prekrasnim uzorcima na krilima ljeti.",
+        "Sklopi krilca kada miruje na laticama u vrtu.",
+        "Onaj šareni kukac koji lebdi od cvijeta do cvijeta.",
+        "Najprije je gusjenica, a onda dobije prekrasna krila.",
+        "Slično kao moljac, ali ljepši i leti danju.",
+        "Sleti na laticu i polako spaja i rastvara krilca."
+      ]
+    },
+    {
+      "word": "prtljaga",
+      "clues": [
+        "Torbe i kofera koje pakiraš za putovanje.",
+        "Predaješ je na aerodromu prije leta.",
+        "Stavlja se u gepek auta ili u gornji pretinac aviona.",
+        "Sadrži odjeću i stvari potrebne za odmor.",
+        "Vučeš je na kotačićima kroz aerodrom prema izlazu za let.",
+        "Roditelji u nju spremaju kupaće i ručnike prije ljetovanja.",
+        "Ono što vučeš na kotačićima po aerodromu.",
+        "U nju spakiraš odjeću prije nego kreneš na more.",
+        "Slično kao velika torba s ručkom koja se izvlači.",
+        "Predaš je na šalteru pa ona putuje u trbuhu aviona."
+      ]
+    },
+    {
+      "word": "mačka",
+      "clues": [
+        "Mekana kućna životinja koja predeje i mjauče.",
+        "Voli spavati na suncu i igrati se s klupkom vune.",
+        "Neovisna je i sama se čisti jezikom.",
+        "Lovi miševe i penje se po drveću.",
+        "Češe se kandžama i grebe nokte o ogrebalo u kući.",
+        "Crni primjerak prema praznovjerju donosi nesreću ako prijeđe cestu.",
+        "Ona mekana koja radi mjau i prede kad je gladiš.",
+        "Slično kao mali tigar, samo živi u kući.",
+        "Ima brkove i noću joj oči svijetle u mraku.",
+        "Penje se na drvo i goni miševe po dvorištu."
+      ]
+    },
+    {
+      "word": "pećnica",
+      "clues": [
+        "Kućanski uređaj u kojemu pečeš kolače i meso.",
+        "Dio je štednjaka ili stoji zasebno u kuhinji.",
+        "Zagrije se na visoke temperature za pečenje.",
+        "Iz nje dolazi miris svježe pečenog kruha.",
+        "Postaviš joj temperaturu i tajmer pa čekaš da se torta digne.",
+        "Vruća je iznutra pa rukavicom vadiš tepsiju iz nje.",
+        "Ono vruće u kuhinji u što staviš tepsiju da se kolač ispeče.",
+        "Suprotno od hladnjaka jer ona grije, a ne hladi.",
+        "Slično kao roštilj, ali zatvorena i u kuhinji.",
+        "Rukavicom vadiš vruću pizzu iz nje da se ne opečeš."
+      ]
+    },
+    {
+      "word": "zec",
+      "clues": [
+        "Mali dlakavi sisavac s dugim ušima i kratkim repom.",
+        "Skakuće i voli jesti mrkvu i zelenu salatu.",
+        "Na Uskrs donosi obojana jaja prema legendi.",
+        "Može biti kućni ljubimac ili živjeti u šumi.",
+        "U bajci o kornjači gubi utrku jer zaspe usred trke.",
+        "Brči nosićem i njuška svaki listić salate prije nego ga pojede.",
+        "Ono malo što čupne nosićem dok jede.",
+        "Slično kao kunić, samo malo veće.",
+        "U vrtiću ga crtamo s dva duga uha gore.",
+        "Bježi cik-cak da ga lisica ne ulovi."
+      ]
+    },
+    {
+      "word": "čarape",
+      "clues": [
+        "Odjevni predmet koji oblačiš na stopala prije cipela.",
+        "Drže noge toplima i upijaju znoj.",
+        "Dolaze u parovima i raznih boja i uzoraka.",
+        "Lako ih izgubis u praonici rublja.",
+        "Vješaš ih na kamin uoči Božića da ti Djed Mraz napuni darovima.",
+        "Navučeš ih kako ti se stopala ne smrznu na hladnom podu.",
+        "Ono što ti viri iz cipele kad sjedneš.",
+        "Imaš ih plave, prugaste, s točkicama, kako koje.",
+        "Suprotno od bosih nogu.",
+        "Kad je rupa na njima, viri ti palac van."
+      ]
+    },
+    {
+      "word": "palma",
+      "clues": [
+        "Visoko egzotično stablo s lišćem na vrhu i kokosima.",
+        "Raste na tropskim plažama uz more.",
+        "Njezin plod je kokos ili datulja.",
+        "Simbol je odmora i toplih ljetnih destinacija.",
+        "Slikaju je na razglednicama uz pješčanu obalu i more.",
+        "Ispod nje se često postavlja ležaljka za sunčanje na plaži.",
+        "Ono visoko bez grana, samo lišće na vrhu.",
+        "Vidiš je svuda kad odeš na ljetovanje u toplo.",
+        "Slično kao stablo, ali raste gdje je pijesak i vrućina.",
+        "Lišće joj izgleda kao velika perjanica gore."
+      ]
+    },
+    {
+      "word": "pero",
+      "clues": [
+        "Lako šareno vlakno koje prekriva ptice.",
+        "U prošlosti se koristilo za pisanje umočeno u tintu.",
+        "Ptica ga gubi i zamjenjuje novim.",
+        "Može biti i mali ukras na šeširu.",
+        "Indijanci ih zabadaju u kosu kao ukras na glavi.",
+        "Lagano pada i lebdi prema podu jer je iznimno lagano.",
+        "Ono lagano što ispadne kad ptica zamahne krilima.",
+        "Ako puhneš u njega, odleti.",
+        "Punimo njime jastuke da budu mekani.",
+        "Slično kao listić, ali s ptice."
+      ]
+    },
+    {
+      "word": "slušalice",
+      "clues": [
+        "Uređaj koji staviš na uši da čuješ glazbu bez buke.",
+        "Spajaju se na mobitel ili računalo.",
+        "Mogu biti bežične ili s kabelom.",
+        "Koristiš ih da ne smetaš drugima svojom glazbom.",
+        "Staviš ih na uši u autobusu da samo ti čuješ pjesme.",
+        "Imaju mekane jastučiće koji prekrivaju ili ulaze u uho.",
+        "Ono što navučeš na uši kad želiš čuti pjesmu.",
+        "Imaš ih u kutiji kad kupiš novi telefon.",
+        "Suprotno od zvučnika koji se čuju cijeloj sobi.",
+        "Pomoću njih nitko oko tebe ne zna koju pjesmu vrtiš."
+      ]
+    },
+    {
+      "word": "jastuci",
+      "clues": [
+        "Mekani punjeni predmeti na kojima odmara glava dok spavaš.",
+        "Nalaze se na krevetu ili kauču.",
+        "Mogu biti od perja ili sintetičkog materijala.",
+        "Djeca se njima vole gađati u igri.",
+        "Navečer ga zagrliš dok tonut u san u svojoj sobi.",
+        "Borba njima u pidžamama omiljena je dječja igra prije spavanja.",
+        "Ono mekano pod glavom dok ležiš.",
+        "Imaš ga uvijek na vrhu kreveta.",
+        "Slično kao plišana igračka, samo veće i za spavanje.",
+        "Ako je premekan, glava ti propadne u njega."
+      ]
+    },
+    {
+      "word": "jagoda",
+      "clues": [
+        "Crveno slatko voće s malim sjemenkama na površini.",
+        "Bere se ljeti i koristi za džemove i torte.",
+        "Miriši predivno i jede se sa šlagom.",
+        "Raste pri tlu na malim biljkama u vrtu.",
+        "Wimbledon je slavan po tome što se ona jede sa šlagom.",
+        "Mala je i crvena, a oblikom podsjeća na srce.",
+        "Ono crveno sitno što beremo u proljeće.",
+        "Slično kao maline, ali veće i glađe.",
+        "Umočiš je u čokoladu pa pojedeš.",
+        "Sjemenke su joj sve izvana, a ne unutra."
+      ]
+    },
+    {
+      "word": "kosilica",
+      "clues": [
+        "Stroj ili alat kojim rezuješ travu u vrtu.",
+        "Ima oštrice koje vrtloge i siju travu.",
+        "Može biti na motorni pogon ili ručna.",
+        "Tjera te do susjedovog dvorišta zvukom motora vikendom.",
+        "Guraš je preko travnjaka da ti dvorište bude uredno i kratko.",
+        "Buči u susjedstvu nedjeljom ujutro dok netko sređuje travnjak.",
+        "Ono čime tata uređuje travu da ne naraste previsoko.",
+        "Buči u susjedstvu i miriše po pokošenoj travi.",
+        "Slično kao veliki usisavač, ali za vani po travi.",
+        "Guraš je naprijed pa za njom ostaje uredna staza."
+      ]
+    },
+    {
+      "word": "gljiva",
+      "clues": [
+        "Organizam sa šeširom i stapkom koji raste u šumi.",
+        "Nije biljka ni životinja, ima vlastito carstvo.",
+        "Neke su jestive, a neke su jako otrovne.",
+        "Pice i tjestenine često je imaju kao dodatak.",
+        "Smrkovi i hrastovi rastu uz njih, a beru se nakon kiše u jesen.",
+        "Ima oblik kišobrana s drškom i raste na zemlji u šumi.",
+        "Ono malo sa šeširićem što nikne nakon kiše u šumi.",
+        "Pazi, neke izgledaju lijepo ali te mogu otrovati.",
+        "Stavljamo je narezanu na pizzu.",
+        "Slično kao mali kišobran koji raste iz zemlje."
+      ]
+    },
+    {
+      "word": "kaktus",
+      "clues": [
+        "Bodljikava biljka koja živi u pustinji bez puno vode.",
+        "Ima debelo meso i oštree bodlje umjesto listova.",
+        "Može cvjetati jarkim bojama unatoč sušnim uvjetima.",
+        "Popularna sobna biljka jer traži malo zalijevanja.",
+        "Bockne te ako je dotakneš jer je sva u oštrim iglicama.",
+        "U crtićima o pustinji raste pokraj jahača i deve.",
+        "Ono zeleno bodljikavo u maloj posudi na prozoru.",
+        "Ako ga primiš, ubode te.",
+        "Voli sunce i mrzi puno vode.",
+        "Vidiš ga u crtićima gdje je sve sami pijesak i vrućina."
+      ]
+    },
+    {
+      "word": "roštilj",
+      "clues": [
+        "Rešetka na vatri ili ugljenu za pečenje mesa.",
+        "Koristi se na piknicima i ljetnim zabavama.",
+        "Na njemu cvrči meso uz miris dima.",
+        "Obitelj se okuplja oko njega vikendom.",
+        "Tata raspaljuje ugljen i maše kako bi se vatra rasplamsala.",
+        "Ćevapi i ražnjići cvrče na njegovoj užarenoj rešetki ljeti.",
+        "Ono na čemu se peku ćevapi vani u dvorištu ljeti.",
+        "Miriše po dimu i tata stoji pokraj njega.",
+        "Slično kao štednjak, ali na vatru i vani.",
+        "Stavi se ugljen pa se na rešetku slaže meso."
+      ]
+    },
+    {
+      "word": "spužva",
+      "clues": [
+        "Mekani porozni predmet koji upija vodu.",
+        "Koristiš je za pranje posuđa ili tijela.",
+        "Može biti prirodna iz mora ili sintetička.",
+        "Stisneš je i pusti vodu kao mala pumpa.",
+        "Crtani lik žute boje koji živi u ananasu na dnu mora.",
+        "Brišeš njome zalivenu površinu nakon što razliješ vodu.",
+        "Ono mekano čime peremo sudoper.",
+        "Ako je stisneš, iscuri voda iz nje.",
+        "Žuti lik iz crtića koji živi pod morem.",
+        "Upije lokvicu kad nešto proliješ po stolu."
+      ]
+    },
+    {
+      "word": "volan",
+      "clues": [
+        "Okrugli predmet u autu kojim upravljaš smjerom.",
+        "Dlanom ga okrećeš lijevo i desno da skreneš.",
+        "Nalazi se ispred vozača u kabini automobila.",
+        "Bez njega ne bi mogao skrenuti ni desno ni lijevo.",
+        "Trkači u utrkama ga okreću naglo u zavojima da ostanu na stazi.",
+        "Drži ga vozač s obje ruke dok gleda cestu pred sobom.",
+        "Ono okruglo što vozač drži s obje ruke.",
+        "Okreneš ga lijevo, auto skrene lijevo.",
+        "Bez njega auto ne zna kamo treba.",
+        "Nalazi se točno ispred onoga tko vozi."
+      ]
+    },
+    {
+      "word": "mrkva",
+      "clues": [
+        "Narančasto korjenasto povrće koje raste u zemlji.",
+        "Zečevi je obožavaju u crtanim filmovima i u stvarnosti.",
+        "Jede se sirova kao grickalica ili kuhana u juhi.",
+        "Izvučeš je iz tla za zelenu vršku.",
+        "Sniješka se ukrašava njome kao narančastim nosom.",
+        "Bogata je vitaminima koji su navodno dobri za vid.",
+        "Ono narančasto što zeko najviše voli.",
+        "Izvučeš je iz zemlje za zelene listiće gore.",
+        "Stavimo je snjegoviću umjesto nosa.",
+        "Kažu da od nje bolje vidiš u mraku."
+      ]
+    },
+    {
+      "word": "žirafa",
+      "clues": [
+        "Najviša životinja na svijetu s iznimno dugim vratom.",
+        "Živi u afričkoj savani i jede lišće s visokih stabala.",
+        "Ima žuto-smeđe mrlje po cijelom tijelu.",
+        "Može popiti vodu jedino ako jako raširii noge.",
+        "Da bi se sagnula do tla, mora raširiti prednje noge u stranu.",
+        "Toliko je visoka da bi mogla pogledati kroz prozor na drugom katu.",
+        "Ona s najdužim vratom u zoološkom.",
+        "Toliko je visoka da doseže lišće na vrhu stabla.",
+        "Žuta je sa smeđim mrljama po cijelom tijelu.",
+        "Mora raširiti noge da bi popila vode s tla."
+      ]
+    },
+    {
+      "word": "klavir",
+      "clues": [
+        "Glazbalo s crnim i bijelim tipkama koje se pritiskaju prstima.",
+        "Može biti mali kao digitalni ili velik kao koncertni.",
+        "Učenje na njemu počinje ljestvicama i jednostavnim melodijama.",
+        "Zvuk mu nastaje kad čekić udara u žice iznutra.",
+        "Stoji u koncertnim dvoranama, a pijanist sjedi pred njim na klupici.",
+        "Često je crne lakirane boje i ima poklopac koji štiti tipke.",
+        "Ono veliko crno s puno bijelih i crnih tipki.",
+        "Pritisneš tipku i čuje se ton.",
+        "Slično kao orgulje, sjedneš pred njega i sviraš.",
+        "Često stoji u dvorani, a svira ga onaj tko sjedi na klupici."
+      ]
+    },
+    {
+      "word": "slamka",
+      "clues": [
+        "Tanka cijev kroz koju siješ napitak iz čaše.",
+        "Djeca njome piju sokove i milkshake.",
+        "Može biti plastična ili od papira.",
+        "Stavljaš je u čašu i prisloniš na usne.",
+        "Bacaju je u smeće nakon što popiješ piće u restoranu brze hrane.",
+        "Neki je savijaju ili koriste za puhanje mjehurića od sapunice.",
+        "Ono tanko kroz što povučeš sok u usta.",
+        "Staviš je u čašu pa srkaš.",
+        "Možeš kroz nju puhati i raditi mjehuriće.",
+        "Slično kao tanka cjevčica, samo za piće."
+      ]
+    },
+    {
+      "word": "autobus",
+      "clues": [
+        "Veliko vozilo koje prevozi mnogo putnika odjednom.",
+        "Vozi po gradskim linijama i staje na stanicama.",
+        "Ulazi se na prednja vrata i plaća se karta.",
+        "Školska djeca njime putuju do škole.",
+        "Ima brojeve linija i odredište ispisano na prednjoj strani.",
+        "Kada želiš sići, pritisneš zvonce i čekaš sljedeću postaju.",
+        "Ono veliko što te poveze do škole.",
+        "Staneš na stanicu i čekaš da dođe.",
+        "Slično kao tramvaj, ali ide po cesti, ne po tračnicama.",
+        "Stane u njega puno ljudi odjednom."
+      ]
+    },
+    {
+      "word": "drvo",
+      "clues": [
+        "Visoka biljka s debelim stablom, granama i lišćem.",
+        "Daje kisik, hlad i dom pticama.",
+        "Od njega se pravi namještaj i papir.",
+        "Raste godinama i može živjeti stotinama godina.",
+        "U jesen mu lišće požuti i opada na tlo ispod njega.",
+        "Po njegovim godovima u presjeku može se izbrojati koliko je staro.",
+        "Ono visoko sa stablom i granama na koje se penješ.",
+        "Ptice na njemu prave gnijezdo.",
+        "U jesen mu lišće pada na zemlju.",
+        "Od njega se izrađuju stolovi i stolice."
+      ]
+    },
+    {
+      "word": "bumerang",
+      "clues": [
+        "Zakrivljeni drveni predmet koji se baca i vraća natrag.",
+        "Australski Aboridžini ga tradicionalno koriste za lov.",
+        "Poleti u luk i dođe natrag u ruku bacača.",
+        "Oblik mu sliči slovu V ili polumjesecu.",
+        "Ako se ne uhvati u pravom trenutku, sam te zaobiđe i odleti dalje.",
+        "Lagano je zakrivljen kako bi se vrtio dok klizi kroz zrak.",
+        "Ono što baciš, a ono se samo vrati u ruku.",
+        "Oblikom liči na slovo V.",
+        "Aboridžini su ga koristili u lovu davno.",
+        "Ako ga ne uhvatiš, odleti negdje dalje."
+      ]
+    },
+    {
+      "word": "zavjese",
+      "clues": [
+        "Komadi tkanine koji vise na prozoru i blokiraju svjetlo.",
+        "Povučeš ih navečer za privatnost i mrak.",
+        "Mogu biti prozirne ili debele i tamne.",
+        "Ukrašavaju prozore i dolaze u raznim bojama i uzorcima.",
+        "Skupljaš ih ujutro u stranu da unutra uđe sunce.",
+        "Vise na šipci iznad prozora i klize lijevo-desno na kukicama.",
+        "Ono što povučeš preko prozora navečer da bude mrak.",
+        "Vise s motke iznad prozora.",
+        "Slično kao plahta, ali stoji uspravno pred staklom.",
+        "Razmakneš ih ujutro da uđe sunce."
+      ]
+    },
+    {
+      "word": "motocikl",
+      "clues": [
+        "Dvotočkaš s motorom, brži od bicikla.",
+        "Vozač sjedi na njemu i drži upravljač.",
+        "Glasno reži motorom pri ubrzavanju.",
+        "Treba kacigu za sigurnu vožnju.",
+        "Naginje se u zavoju kad skreće lijevo ili desno.",
+        "Vozač i suvozač sjede jedan iza drugoga, a ne jedan pokraj drugoga.",
+        "Ono s dva kotača i motorom, brže od bicikla.",
+        "Glasno reži kad krene.",
+        "Moraš nositi kacigu kad ga voziš.",
+        "Slično kao bicikl, ali ne moraš okretati pedale."
+      ]
+    },
+    {
+      "word": "brod",
+      "clues": [
+        "Veliko plovilo koje prevozi ljude ili teret morem.",
+        "Pluta zahvaljujući uzgonu i ima palubu.",
+        "Može biti putnički, teretni ili ratni.",
+        "Napušta luku i kreće prema dalekim destinacijama.",
+        "Spušta i diže sidro kako bi ostao na mjestu u luci.",
+        "Kapetan ga vodi s kormila, a putnici uživaju u pogledu s palube.",
+        "Ono veliko što plovi po moru i ne potone.",
+        "Kapetan njime upravlja s kormila.",
+        "Krene iz luke prema dalekim mjestima.",
+        "Ima palubu po kojoj se ljudi šeću dok plovi."
+      ]
+    },
+    {
+      "word": "kombi",
+      "clues": [
+        "Veće vozilo između auta i kamiona s prostornim unutrašnjim prostorom.",
+        "Koriste ga obrti, dostavljači i obitelji s puno djece.",
+        "Ima klizna bočna vrata i više sjedišta straga.",
+        "Dostavlja namještaj, pakete ili skupinu putnika.",
+        "Često ima natpis tvrtke na bočnim vratima jer se koristi za dostavu.",
+        "Stane u njega cijela ekipa s puno torbi i opreme za put.",
+        "Ono veće od auta u čemu stane cijela ekipa s torbama.",
+        "Ima vrata sa strane koja se gurnu, ne otvore.",
+        "Slično kao auto, ali puno prostranije straga.",
+        "Dostavljači njime nose pakete i namještaj."
+      ]
+    },
+    {
+      "word": "lav",
+      "clues": [
+        "Veliki mačji zvijer zvan kraljem životinja.",
+        "Živi u afričkoj savani u skupinama zvanim krdo.",
+        "Mužjak ima gustu grivu oko glave.",
+        "Rika mu se čuje kilometrima daleko.",
+        "Spava gotovo cijeli dan, a u lov kreće tek navečer.",
+        "Pojavljuje se na grbovima i zastavama kao znak hrabrosti i snage.",
+        "Onaj kojeg zovu kralj svih životinja.",
+        "Mužjak ima velike dlake oko glave.",
+        "Strašno glasno rikne i čuje se daleko.",
+        "Vidiš ga na grbovima kao znak hrabrosti."
+      ]
+    },
+    {
+      "word": "usisavač",
+      "clues": [
+        "Kućanski uređaj koji uvuče prašinu s poda u sebe.",
+        "Koristimo ga za čišćenje tepiha i podova u kući.",
+        "Ima cijev i vrećicu unutar koje skuplja nečistoće.",
+        "Bučna mašina koja huka dok čistiš dnevnu sobu.",
+        "Vučeš ga za sobom dok prelaziš cijev preko podova.",
+        "Kad završiš, isprazniš spremnik pun nakupljene prašine i dlaka.",
+        "Ono čime mama čisti pod od prašine.",
+        "Buči i vučeš ga za sobom po sobi.",
+        "Uvuče sve mrvice i dlake u sebe.",
+        "Slično kao metla, ali na struju i s cijevi."
+      ]
+    },
+    {
+      "word": "sladoled",
+      "clues": [
+        "Hladni slatki desert koji jedemo ljeti na žaru.",
+        "Pravi se od mlijeka, šećera i raznih okusa poput vanilije.",
+        "Može biti u kornetu ili u čašici, topi se brzo na suncu.",
+        "Djeca ga obožavaju kupiti u slastičarnici za vruće dane.",
+        "Liže se polako da ne kapne niz prste dok se ne istopi.",
+        "Ima ga u stotinu okusa, od čokolade do jagode, u raznim bojama.",
+        "Ono hladno slatko što jedeš ljeti da se rashladiš.",
+        "Topi se brzo pa moraš lizati prije nego kapne.",
+        "Ima ga u kornetu ili u čašici.",
+        "Biraš okus, čokolada ili jagoda ili vanilija."
+      ]
+    },
+    {
+      "word": "trambolin",
+      "clues": [
+        "Skačeš visoko gore i dolje na ovom elastičnom uređaju.",
+        "Sportska naprava s jakim platnom razapetim na oprugama.",
+        "Gimnastičari i djeca vole skakati na njemu u dvorištu.",
+        "Okrugla ili pravokutna sprava za zabavno odskakivanje.",
+        "Skok na njemu te izbacuje sve više dok savijaš koljena.",
+        "Oko njega se često postavlja zaštitna mreža da ne padneš van.",
+        "Ono na čemu skačeš gore-dolje u dvorištu.",
+        "Što jače savineš koljena, to više odskočiš.",
+        "Oko njega je mreža da ne padneš van.",
+        "Razapeto platno na oprugama te izbacuje u zrak."
+      ]
+    },
+    {
+      "word": "tepih",
+      "clues": [
+        "Mekana podloga koja pokriva pod u sobi.",
+        "Tkan ili tkanicom prekriven predmet na koji staješ bosim nogama.",
+        "Može biti šaren i ukrašava dnevnu sobu ili spavaću sobu.",
+        "Usisavačem ga čistiš od prašine i mrva.",
+        "Ponekad ga prebacuju preko ograde i isteptavaju da izađe prašina.",
+        "Letećim primjercima iz bajki leti se kroz zrak na njemu.",
+        "Ono meko po čemu hodaš bos u sobi.",
+        "Usisavaš ga da skineš prašinu.",
+        "U bajkama leti kroz zrak s ljudima na sebi.",
+        "Prostre se po podu da ti noge ne budu na hladnom."
+      ]
+    },
+    {
+      "word": "paun",
+      "clues": [
+        "Ptica s dugačkim šarenim repom koji otvara poput lepeze.",
+        "Mužjak ove ptice ima plave i zelene perje s okicama.",
+        "Živi u parkovima i zoološkim vrtovima, hoda ponosno.",
+        "Najpoznatija je po spektakularnom rasperenom repu.",
+        "Kad raširi perje, izgleda kao golema šarena lepeza iza sebe.",
+        "Glasa se vrlo glasnim kreštanjem koje se čuje izdaleka.",
+        "Onaj koji raširi rep poput velike šarene lepeze.",
+        "Perje mu je plavo-zeleno s okicama.",
+        "Hoda ponosno po parku zoološkog vrta.",
+        "Glasa se vrlo glasno i ružno za tako lijepu pticu."
+      ]
+    },
+    {
+      "word": "domino",
+      "clues": [
+        "Igra s pravokutnim pločicama koje imaju točkice s obje strane.",
+        "Slažeš ih jednu do druge i ruše se lančano jedna za drugom.",
+        "Svaka pločica ima dva dijela s brojevima od nula do šest.",
+        "Igraš je s obitelji ili prijateljima spajajući odgovarajuće vrijednosti.",
+        "Pobjeđuje onaj tko prvi ostane bez pločica u ruci.",
+        "Ako se posloži u red i gurne prva, sruše se sve jedna za drugom.",
+        "One pločice s točkicama koje slažeš u red.",
+        "Gurneš prvu i sve se sruše jedna za drugom.",
+        "Svaka ima dva polja s točkicama.",
+        "Spajaš ih po jednakim brojevima dok igraš."
+      ]
+    },
+    {
+      "word": "pila",
+      "clues": [
+        "Alat za rezanje drva, metala ili ostalih materijala.",
+        "Ima oštri zubati rub kojim pilješ kroz predmete.",
+        "Stolar je koristi u radionici za oblikovanje dasaka.",
+        "Može biti ručna ili električna, čuvaj prste od oštrice.",
+        "Pomiče se naprijed-natrag dok se zarezuje u gredu ili dasku.",
+        "Drvosječe njome obaraju stabla u šumi prije nego padnu.",
+        "Ono zubato čime stolar reže dasku.",
+        "Pomičeš je naprijed-natrag dok ne prereže drvo.",
+        "Pazi na prste, rub joj je jako oštar.",
+        "Drvosječe njome obaraju stabla u šumi."
+      ]
+    },
+    {
+      "word": "posuda",
+      "clues": [
+        "Spremnik u koji stavljaš hranu, vodu ili razne predmete.",
+        "Može biti zdjela, lonac ili kutija, svakog oblika i veličine.",
+        "Koristimo je u kuhinji za miješanje ili čuvanje namirnica.",
+        "Napuniš je vodom i staviš cvijeće da stoji uspravno.",
+        "Pereš je nakon objeda i odlažeš u kuhinjski ormarić.",
+        "U nju usuješ juhu ili salatu prije nego je staviš na stol.",
+        "Ono u što usuješ juhu prije nego pojedeš.",
+        "Može biti zdjela, lonac ili kutija.",
+        "Pereš je nakon ručka i spremiš u ormarić.",
+        "U nju staviš vodu i cvijeće da stoji."
+      ]
+    },
+    {
+      "word": "ovca",
+      "clues": [
+        "Domaća životinja koja daje vunu i mlijeko na farmi.",
+        "Bijela, dlakava životinja koja bleji i pase travu na livadi.",
+        "Od njezine rune pletu se džemperi i topli šalovi.",
+        "Pastir je čuva u stadu na zelenim pašnjacima.",
+        "Jednom godišnje je ošišaju da bi joj odrezali toplo krzno.",
+        "Kad jedna krene, sve ostale slijepo idu za njom u koloni.",
+        "Ona bijela kovrčava koja pase travu na livadi.",
+        "Od njezine dlake pletu se topli džemperi.",
+        "Glasa se s 'beee' kad zove.",
+        "Kad jedna krene, sve ostale idu za njom."
+      ]
+    },
+    {
+      "word": "gitara",
+      "clues": [
+        "Glazbeni instrument sa žicama koje trzaš prstima ili plektrom.",
+        "Ima tijelo u obliku osmice i dugačak vrat s pragovišima.",
+        "Rock glazbenici i folklorni pjevači sviraju je na pozornici.",
+        "Žice vibriraju i proizvode melodičan zvuk kada ih dotakneš.",
+        "Možeš je nositi prebačenu preko ramena na traci dok sviraš.",
+        "Pritiskaš žice prstima jedne ruke, a drugom prelaziš preko njih.",
+        "Ono sa žicama što prebaciš preko ramena i sviraš.",
+        "Trzaš žice prstima i čuje se melodija.",
+        "Tijelo joj je u obliku osmice.",
+        "Sviraju je uz logorsku vatru i na koncertima."
+      ]
+    },
+    {
+      "word": "banana",
+      "clues": [
+        "Žuto, savijeno voće koje rasteš u tropskim krajevima.",
+        "Gulas koru i jedeš mekanu slatku unutrašnjost.",
+        "Majmuni je obožavaju, a i ljudi je jedu za energiju.",
+        "Duguljastog je oblika i žuti kad sazri.",
+        "Ako padneš na njezinu koru bačenu na pod, poskliznut ćeš se.",
+        "Dolazi u grozdu od više komada povezanih na vrhu.",
+        "Suprotno od kisele jabuke, ova je meka i jako slatka.",
+        "Imaš je u voćnoj salati i u shakeu od mlijeka.",
+        "Slično kao kobasica po obliku, ali žuta i raste na palmi.",
+        "Mama ti je doda u ruksak da pojedeš za užinu u školi."
+      ]
+    },
+    {
+      "word": "balon",
+      "clues": [
+        "Nafuhan mjehur od gume ili lateksa, leti na zabavama.",
+        "Punjenim helijem pluta prema gore i veže se vrpcom.",
+        "Djeca ga drže za konac da ne pobjegne u nebo.",
+        "Šaren je i ukrašava prostor na dječjim rođendanima.",
+        "Pukne uz glasan prasak ako ga previše napuhneš ili ubodeš.",
+        "Trljaš ga o kosu pa ti se zalijepi na zid od statičkog elektriciteta.",
+        "Ono što napuhneš ustima dok ti se obrazi nadme.",
+        "Slično mjehuru od sapunice, ali traje dulje i možeš ga držati.",
+        "Pušteni u zrak lebde gore i izgledaju kao šarene točkice na nebu.",
+        "Kad ga stisneš jako, čuje se 'cijuk' dok trljaš gumu."
+      ]
+    },
+    {
+      "word": "konj",
+      "clues": [
+        "Velika domaća životinja na kojoj jahamo ili vučemo kola.",
+        "Ima grivu, rep i kopita, rzanje je njezin glasanje.",
+        "Drži se u štali i hrani sijenom i zobi.",
+        "Brza i snažna životinja koja trči po travnatim poljanama.",
+        "Potkivač mu na kopita pribija metalne potkove.",
+        "Vitezovi su nekad jurišali u bitke na njegovim leđima.",
+        "Ono na čemu princ dojaše u bajkama da spasi princezu.",
+        "Vuče zapregu i kola po starim selima umjesto traktora.",
+        "Slično poniju, ali puno veći i viši.",
+        "Vidiš ga na trkalištu kako juri dok ljudi navijaju i klade se."
+      ]
+    },
+    {
+      "word": "delfin",
+      "clues": [
+        "Pametna morska životinja koja skače iz mora i squeaka.",
+        "Živi u okeanima i morima, pliva brzinom munje.",
+        "Poznata je po igrivom ponašanju i škripavom glasanju.",
+        "U akvaparku izvodi trikove i skokove za posjetitelje.",
+        "Plivači u jatu prate brodove i izranjaju da udahnu zrak.",
+        "Sporazumijevaju se zvižducima i klikovima ispod površine mora.",
+        "Slično ribi po izgledu, ali diše na zrak i jako je pametan.",
+        "Onaj sivi prijatelj iz crtića o nemo ribici koji voli skakati.",
+        "Pliva uz brod i prati ga, a ljudi mu mašu s palube.",
+        "Ima rep poput ribe i kljun, ali nije riba nego sisavac."
+      ]
+    },
+    {
+      "word": "torta",
+      "clues": [
+        "Slatki desert koji jedemo na proslavama i rođendanima.",
+        "Ukrašena kremom i svjećicama, izreže se na komade za goste.",
+        "Pravi se od biskvita, nadjeva i raznih slatkih premaza.",
+        "Pjevamo pjesmu i puhnemo svjećice kada je donesemo na stol.",
+        "Sastoji se od više slojeva naslaganih jedan na drugi.",
+        "Slastičar je premazuje glazurom i ukrašava šećernim figuricama.",
+        "Ono što razrežeš kad svi zapjevaju 'sretan rođendan'.",
+        "Slično kolaču, ali veće, šarenije i s puno krema.",
+        "Imaš je u slastičarnici u staklenoj vitrini, vabi te bojama.",
+        "Dobiješ komad na tanjuriću s vilicom kad dođeš na proslavu."
+      ]
+    },
+    {
+      "word": "auto",
+      "clues": [
+        "Vozilo na četiri kotača kojim se vozimo ulicom.",
+        "Ima motor, volan i sjedala, vozi nas s mjesta na mjesto.",
+        "Parkiramo ga u garaži ili uz rub ceste.",
+        "Tramvaj nema, ali ovo ima volanski prsten i mjenjač.",
+        "Trubom upozorava pješake, a žmigavcima pokazuje smjer.",
+        "Točiš mu gorivo na benzinskoj postaji prije dugog putovanja.",
+        "Voziš ga cestom da brže stigneš nekamo.",
+        "Ima volan, sjedala i prtljažnik straga.",
+        "Staje u garažu ili na parkiralište.",
+        "Treba mu gorivo ili struja da bi krenuo."
+      ]
+    },
+    {
+      "word": "sat",
+      "clues": [
+        "Naprava koja pokazuje koliko je sati i minuta.",
+        "Može biti na zidu, na ruci ili kao budilica na stolu.",
+        "Ima kazaljke ili digitalni prikaz koji odbrojava vrijeme.",
+        "Pogledat ćeš ga kad provjeriš jesi li zakasnio na vlak.",
+        "Otkucava i njegove kazaljke kruže ukrug cijeli dan.",
+        "U ponoć na njega svi gledamo dok čekamo Novu godinu.",
+        "Ono što pogledaš na zglobu ruke da vidiš koliko je vremena.",
+        "Slično budilici, ali nosiš ga sa sobom kud god ideš.",
+        "Tik-tak je zvuk koji on radi dok visi na zidu.",
+        "Imaš ga i na mobitelu i na pećnici, govori ti kad je vrijeme."
+      ]
+    },
+    {
+      "word": "kutija",
+      "clues": [
+        "Četvrtast spremnik s poklopcem za čuvanje raznih stvari.",
+        "Kartonska ili drvena, pakiraš u nju poklone i predmete.",
+        "Preseli se u nju sve pri selidbi u novi stan.",
+        "Otvorimo je i vidimo što je unutra skriveno.",
+        "Zalijepiš je ljepljivom trakom kad je napuniš stvarima.",
+        "Mačke se rado uvuku i skrivaju unutar prazne kartonske.",
+        "Ono u što spakiraš igračke kad ih spremaš na policu.",
+        "Slično ladici, ali možeš je nositi i premještati gdje hoćeš.",
+        "Poštar ti je dostavi na vrata kad nešto naručiš preko interneta.",
+        "Napravljena je od kartona pa je presaviješ kad je prazna."
+      ]
+    },
+    {
+      "word": "noj",
+      "clues": [
+        "Najveća ptica na svijetu koja ne može letjeti.",
+        "Ima dugačak vrat, dugačke noge i brzo trči po savanama.",
+        "Leže najveća jaja od svih ptica, veća od dlanovi.",
+        "Živi u Africi i može jako brzo trčati od grabežljivaca.",
+        "Kruži priča da glavu zabija u pijesak kada se uplaši.",
+        "Krilima ne leti, ali ih raširi za ravnotežu dok juri po pijesku.",
+        "Slično rodi po dugačkim nogama, ali puno krupniji i ne leti.",
+        "Ono što vidiš u zoološkom kako trči okolo s perjem.",
+        "Trči brže od bicikla, ali u zrak ne može poletjeti.",
+        "Asociraš ga na onu šalu o glavi zabijenoj u pijesak."
+      ]
+    },
+    {
+      "word": "kauč",
+      "clues": [
+        "Mekano namještaj za sjedenje i ležanje u dnevnoj sobi.",
+        "Na njemu gledamo televiziju, čitamo ili odmaramo noge.",
+        "Ima naslone za ruke i leđa, presvučen je tkaninom ili kožom.",
+        "Više osoba može sjediti zajedno na ovom dugačkom sjedištu.",
+        "Ispod jastuka na njemu ponekad nestanu daljinski ili novčići.",
+        "Gosti sjednu na njega kad dođu u posjet u dnevnu sobu.",
+        "Ono na što se baciš kad dođeš umoran iz škole.",
+        "Slično fotelji, ali dulje pa stane cijela obitelj.",
+        "Imaš ga ispred televizora s mekanim jastucima.",
+        "Navečer se na njemu izvališ i pokriješ dekom dok gledaš film."
+      ]
+    },
+    {
+      "word": "sova",
+      "clues": [
+        "Noćna ptica s velikim okruglim očima koja huhuje u tami.",
+        "Lovi miševe i sitne životinje noću u šumi ili na polju.",
+        "Glava joj se može okrenuti gotovo u krug.",
+        "Simbol je mudrosti i često se pojavljuje u bajkama.",
+        "Leti potpuno bešumno pa je plijen ne čuje kako se približava.",
+        "Spava preko dana, a budna je dok ostale ptice spavaju.",
+        "Ona koja kaže 'hu-hu' iz krošnje dok ti spavaš.",
+        "Slično orlu po kandžama, ali leti noću i ima okruglu glavu.",
+        "Asociraš je na Harryja Pottera koji ima takvu kao ljubimca.",
+        "Danju spava skrivena u dupljama drveta, budi se kad padne mrak."
+      ]
+    },
+    {
+      "word": "jaje",
+      "clues": [
+        "Ovalna ljuštura iz koje se izleže ptica ili reptil.",
+        "Kuhamo ga tvrdo ili na oko za doručak u tavi.",
+        "Kokoš ga snese, a mi ga skupljamo iz kokošinjca.",
+        "Šaramo ga u bojama za uskrsne praznike kao ukras.",
+        "Razbiješ mu ljusku o rub zdjele prije nego ga umutiš.",
+        "Žumanjak mu je žut, a bjelanjak proziran dok je sirovo.",
+        "Ono što razbiješ u tavu kad praviš kajganu za doručak.",
+        "Iz njega se izlegne pile ako ga kvočka grije pod sobom.",
+        "Slično lopti, ali ovalno i ima krhku ljusku koja pukne.",
+        "Šaraš ga i tražiš skriveno po vrtu kad dođe Uskrs."
+      ]
+    },
+    {
+      "word": "lubenica",
+      "clues": [
+        "Veliko zeleno voće s crvenom sočnom unutrašnjošću i sjemenkama.",
+        "Jede se ljeti na plaži, hladi te i osvježava.",
+        "Iznutra je crvena i slatka, izvana zelena i čvrsta.",
+        "Reže se na kriške i sjeme pljuješ dok jedeš.",
+        "Tako je teška da je nosiš objema rukama iz trgovine.",
+        "Pucne i raspukne se ako ti padne na pod sa zelene kore.",
+        "Suprotno od malog grožđa, ova je golema i ljeti je svi jedu.",
+        "Ono što razrežeš na pola pa vidiš crveno iznutra i zeleno izvana.",
+        "Slično dinji, ali crvena unutra i puna crnih sjemenki.",
+        "Tako je velika i okrugla da kad kucneš po njoj zvuči šuplje."
+      ]
+    },
+    {
+      "word": "igla",
+      "clues": [
+        "Tanka metalna šiljasta alatka za šivanje tkanine.",
+        "Kroz njezino malo ušice provedeš nit i zašiješ odjeću.",
+        "Medicinska sestra je koristi za davanje injekcija.",
+        "Jako je oštro i tanko, pazi da se ne ubodeš.",
+        "Baka je drži ukoso dok krpi rupu na čarapi.",
+        "Kompas ima jednu takvu koja se okreće i pokazuje sjever.",
+        "Ono čime baka šiva gumbe na košulju.",
+        "Slično trnu, vrlo tanka i šiljasta, ubode te ako nije pažljivo.",
+        "Bojiš je se kod doktora jer njome daju injekciju u ruku.",
+        "Tako je sitna da je teško naći kad ti padne na pod."
+      ]
+    },
+    {
+      "word": "flaster",
+      "clues": [
+        "Mala ljepljiva traka kojom pokrijemo ranu ili ogrebotinu.",
+        "Lijepi se na kožu kako bismo zaštitili posjekotinu.",
+        "U ljekarni ga kupiš i nosiš u kutiji prve pomoći.",
+        "Nakon pada s bicikla, mama ti je lijepila na koljeno.",
+        "Često ima nacrtane crtiće da ga djeca rado nose.",
+        "Kad zacijeli rana, oprezno ga odlijepiš s kože.",
+        "Ono što zalijepiš na prst kad se posiječeš da ne krvari.",
+        "Slično naljepnici, ali ljepiš ga na ranicu da je zaštitiš.",
+        "Imaš ga u kutiji prve pomoći za svaki slučaj.",
+        "Boli malo kad ga povučeš s kože nakon par dana."
+      ]
+    },
+    {
+      "word": "zmija",
+      "clues": [
+        "Dugačka gmizavica bez nogu koja se uvija po tlu.",
+        "Jezičkom miješi zrak kako bi njušila okolinu.",
+        "Neke vrste su otrovne, a neke stežu plijen tijelom.",
+        "Živi u šumama, travnjacima i pustinjama diljem svijeta.",
+        "U zoološkom vrtu drže je iza stakla u toplom terariju.",
+        "Stara koža joj se ljušti i svuče s tijela dok raste.",
+        "Ona koja sikće 'sss' i puže po travi bez nogu.",
+        "Slično crvu, ali puno duža i može biti opasna.",
+        "Bojiš je se kad šuška u travi jer ne znaš grize li.",
+        "Asociraš je na onu što je u priči nagovorila Evu na jabuku."
+      ]
+    },
+    {
+      "word": "vilica",
+      "clues": [
+        "Pribor za jelo s nekoliko zubaca za nabadanje hrane.",
+        "Koristimo je uz nož i žlicu za ručku i večeru.",
+        "Njome nabodeš meso, salatu ili tjesteninu na tanjuru.",
+        "Metalni ili plastični jedaći pribor koji drži hranu.",
+        "U restoranu leži s lijeve strane tanjura pokraj salvete.",
+        "Špagete na nju namotaš okretanjem dok je zarineš u njih.",
+        "Ono čime nabodeš komad mesa da ga prineseš ustima.",
+        "Slično grabljama u malom, ima šiljke za hvatanje hrane.",
+        "Stoji uz tanjur s lijeve strane kad postaviš stol.",
+        "Njome namotaš špagete da ti ne pobjegnu s tanjura."
+      ]
+    },
+    {
+      "word": "nož",
+      "clues": [
+        "Oštar rezni alat koji koristimo za rezanje hrane u kuhinji.",
+        "Ima oštricu i dršku, pazi se od oštroga ruba.",
+        "Kuhar ga brusi i njime reže povrće i meso.",
+        "Jedaći pribor koji ide uz vilicu za stolom.",
+        "Maslac njime razmazuješ po kruhu za doručak.",
+        "Drži se za dršku, a oštri rub okreneš od sebe pri rezanju.",
+        "Ono čime režeš kruh na kriške za doručak.",
+        "Slično sablji u malom, ima oštar rub pa pazi prste.",
+        "Stoji uz vilicu s desne strane tanjura kad jedeš.",
+        "Njime mažeš pekmez ili maslac po prepečencu."
+      ]
+    },
+    {
+      "word": "hlače",
+      "clues": [
+        "Odjevni predmet koji pokriva noge od struka do gležnjeva.",
+        "Nose se na donjem dijelu tijela umjesto suknje.",
+        "Mogu biti traperice, odijelo ili trenirka, na svačiji ukus.",
+        "Ujutro ih oblačiš i zakopčaš pojas prije odlaska u školu.",
+        "Imaju džepove u koje stavljaš ključeve i mobitel.",
+        "Po hladnom vremenu navučeš ih preko gaća da ti noge budu tople.",
+        "Ono što navučeš na noge ujutro prije škole.",
+        "Suprotno od majice, ovo ide na donji dio tijela.",
+        "Imaju dvije nogavice u koje uguraš svaku nogu posebno.",
+        "Slično trapericama, a u njih ti stane mobitel u džep."
+      ]
+    },
+    {
+      "word": "tigar",
+      "clues": [
+        "Velika mačka s narančastim krznom i crnim prugama.",
+        "Živi u džunglama Azije i lovi plijen noću.",
+        "Snažan je predator koji rjovanjem zastrašuje ostale životinje.",
+        "Najprepoznatljivija divlja mačka zbog prugastog uzorka na tijelu.",
+        "Šulja se tiho kroz visoku travu prije nego skoči na plijen.",
+        "Za razliku od drugih velikih mačaka, voli ulaziti u vodu i plivati.",
+        "Slično mački u kući, ali golem, divlji i opasan.",
+        "Ono narančasto s crnim crtama što riče u džungli.",
+        "Asociraš ga na Shere Khana iz priče o Mowgliju.",
+        "Kralj je u Aziji kao što je lav kralj u Africi."
+      ]
+    },
+    {
+      "word": "ruksak",
+      "clues": [
+        "Torba s naramenicama koju nosiš na leđima.",
+        "Djeca u njega slažu knjige i pribor za školu.",
+        "Planinari ga pune opremom za dugačke pohode po planinama.",
+        "Na ramenima ga nosiš dok hodaš ili putujemo.",
+        "Zatvaraš ga patentnim zatvaračem nakon što napuniš pretince.",
+        "Putnici ga zabacuju na leđa na aerodromu umjesto velikog kovčega.",
+        "Ono što zabaciš na leđa pa kreneš u školu.",
+        "Slično torbi, ali ima dvije naramenice za oba ramena.",
+        "U njega slažeš bilježnice, penkalu i užinu za nastavu.",
+        "Planinar ga puni hranom i vodom za uspon na vrh."
+      ]
+    },
+    {
+      "word": "magnet",
+      "clues": [
+        "Predmet koji privlači metalne stvari poput željeza i čelika.",
+        "Visi na hladnjaku kao ukrasni suvenir s putovanja.",
+        "Ima dva pola, sjeverni i južni, koji se privlače i odbijaju.",
+        "Kompas radi zahvaljujući ovome načelu privlačenja.",
+        "Ako mu prineseš spajalice, one same skoče i prilijepe se uz njega.",
+        "Često ga lijepe na vrata frižidera da drži poruke i papiriće.",
+        "Ono što zalijepiš na hladnjak da drži crtež.",
+        "Slično ljepilu, ali drži samo metalne stvari, ne sve.",
+        "Privuče k sebi spajalice i čavle čim ih približiš.",
+        "Asociraš ga na crtić gdje sve željezno leti i lijepi se za njega."
+      ]
+    },
+    {
+      "word": "lonac",
+      "clues": [
+        "Duboka metalna posuda za kuhanje juhe ili umaka na štednjaku.",
+        "Ima poklopac i ručke s kojima ga podižeš.",
+        "U kuhinji se koristi svaki dan za kuhanje ručka.",
+        "Napuniš ga vodom i kuhaš tjesteninu ili povrće.",
+        "Para iz njega kulja kad voda unutra počne ključati.",
+        "Vješa se o kuku ili odlaže u ormar nakon ribanja i pranja.",
+        "Ono u čemu mama kuha juhu na štednjaku.",
+        "Slično zdjeli, ali metalan i greje se na vatri.",
+        "U njemu kuhaš špagete dok voda u njemu ključa i mjehuri.",
+        "Bake njime znaju i lupati po dnu kao po bubnju za pažnju."
+      ]
+    },
+    {
+      "word": "kamen",
+      "clues": [
+        "Čvrst prirodni predmet koji nalaziš na tlu ili rijeci.",
+        "Može biti malen kao šljunak ili velik kao stijena.",
+        "Djeca ga bacaju u vodu gledajući preskakanje po površini.",
+        "Koristi se u gradnji, od njega su napravljene stare zgrade.",
+        "Penjači se hvataju za njega dok se uspinju uz strmu liticu.",
+        "Spotakneš se o njega na stazi ako ne gledaš pod noge.",
+        "Ono što podigneš s tla i baciš u potok da pljusne.",
+        "Slično cigli po tvrdoći, ali nije ga čovjek napravio.",
+        "Pazi da se ne spotakneš o njega dok hodaš stazom.",
+        "Asociraš ga na priču o Davidu koji je njime srušio diva."
+      ]
+    },
+    {
+      "word": "žlica",
+      "clues": [
+        "Okrugli jedaći pribor za jelo juhe i deserata.",
+        "Njome zahvaćaš tekućinu ili meku hranu poput kaše.",
+        "Ide uz vilicu i nož za postavljenim stolom.",
+        "Kuhačom miješaš u loncu, ali ovim manjim jedeš iz tanjura.",
+        "Njome dijete grabi jogurt iz čašice za užinu.",
+        "Zveckaš njome o rub šalice dok miješaš šećer u čaju.",
+        "Ono čime jedeš juhu da ti ne curi niz bradu.",
+        "Slično maloj zaobljenoj posudici s drškom za grabljenje.",
+        "Njome miješaš šećer u čaju pa zvecne o rub šalice.",
+        "Mala beba njome prvi put kuša kašu uz pomoć mame."
+      ]
+    },
+    {
+      "word": "malina",
+      "clues": [
+        "Mala crvena sočna bobica slatko-kiselkasta okusa.",
+        "Raste na grmlju u vrtu, beru se ljeti.",
+        "Od nje se pravi džem, sok i razni slatki deserti.",
+        "Šumska bobica s nježnim dlačicama na površini.",
+        "Nataknu je djeca na svaki prst ruke prije nego je pojedu.",
+        "Sredina joj je šuplja jer otpadne s peteljke kad je ubereš.",
+        "Slično jagodi po crvenoj boji, ali sitnija i raste na grmu.",
+        "Ono što natakneš na vrhove prstiju pa pojedeš jednu po jednu.",
+        "Imaš je u jogurtu i preko palačinki kao slatki dodatak.",
+        "Mekana je i nježna pa se zgnječi ako je previše stisneš."
+      ]
+    },
+    {
+      "word": "šalica",
+      "clues": [
+        "Mala posuda s ručkom za piće poput čaja ili kave.",
+        "Napunješ je vrućim napitkom i griješ ruke uz nju.",
+        "Jutarnji ritual počinje ovim keramičkim posuđem na stolu.",
+        "Ima ušicu sa strane kako ne bi opekao prste.",
+        "Slažeš je naopako na sušilo nakon što je opereš.",
+        "Na njezinu dnu ostane talog kave kad popiješ sav napitak.",
+        "Ono iz čega baka pijucka topli čaj zimi.",
+        "Slično čaši, ali ima ručku da se ne opečeš.",
+        "U nju natočiš mlijeko s kakaom za doručak.",
+        "Asociraš je na jutro kad odrasli prvo srknu kavu iz nje."
+      ]
+    },
+    {
+      "word": "kada",
+      "clues": [
+        "Velika bijela posuda u kupaonici za kupanje u toploj vodi.",
+        "Leži u njoj i odmaraš se u pjeni od kupke.",
+        "Napuniš je vodom, dodaš gel za kupanje i uđeš unutra.",
+        "Stoji u kupaonici pokraj tuša i umivaonika.",
+        "Voda iz nje otječe kroz čep koji izvučeš na dnu kad završiš.",
+        "Gumena patkica pluta po površini dok se mali kupaju u njoj.",
+        "Ono u što napuniš toplu vodu pa se izvališ i opustiš.",
+        "Slično bazenu, ali maleno i stoji u kupaonici.",
+        "Pustiš pjenu u nju pa se igraš mjehurićima dok se kupaš.",
+        "Voda iz nje otječe kad izvučeš čep na dnu."
+      ]
+    },
+    {
+      "word": "ruža",
+      "clues": [
+        "Lijepi cvijet s laticama i trnjem na stabljici.",
+        "Simbol ljubavi koji poklanjamo za Valentinovo i Majčin dan.",
+        "Miše divno i dolazi u crvenoj, ružičastoj i bijeloj boji.",
+        "Uzgaja se u vrtovima i prodaje u cvjećarnicama kao buket.",
+        "Ako je previše stišćeš, ubodeš se na njezinu šiljku.",
+        "Najpoznatija je vrtna biljka koju zaljubljeni daruju kao znak pažnje.",
+        "Ono crveno što dečko pokloni curi kad joj se sviđa.",
+        "Slično tulipanu, lijep cvijet, ali ima bodljike na stabljici.",
+        "Asociraš je na priču o Ljepotici i zvijeri pod staklenim zvonom.",
+        "Pazi kad je bereš jer te ubode šiljak skriven na stabljici."
+      ]
+    },
+    {
+      "word": "toplomjer",
+      "clues": [
+        "Mjerilo za određivanje tjelesne ili sobne temperature.",
+        "Stavljaš ga pod pazuh ili u usta kada se osjećaš bolesno.",
+        "Živa ili digitalni zaslon pokazuje broj u stupnjevima.",
+        "Liječnik ga koristi za provjeru imaš li vrućicu.",
+        "Stupac unutra naraste više što ti je veća temperatura.",
+        "Kad pokaže iznad trideset sedam stupnjeva, znači da imaš povišenu.",
+        "Ono što ti mama stavi pod pazuh kad si bolestan.",
+        "Slično ravnalu, ali pokazuje brojku koliko si vruć.",
+        "Pisne kad je gotov pa pogledaš imaš li povišenu.",
+        "Asociraš ga na doktora koji provjerava jesi li dobio vrućicu."
+      ]
+    },
+    {
+      "word": "list",
+      "clues": [
+        "Ravni zeleni dio biljke koji provodi fotosintezu.",
+        "Pada s drveća u jesen i postaje žut, narančast ili crven.",
+        "Na njemu se vide žilice koje prenose vodu i hranjive tvari.",
+        "Skupljamo ih u herbarium ili se igramo jesenskim lišćem.",
+        "Drvo ih je puno tijekom proljeća i ljeta, a u jesen ih izgubi.",
+        "Dok grabljama čistiš dvorište ujesen, skupljaš velike hrpe ovoga.",
+        "Ono zeleno što pada s drveta u jesen i šušti pod nogama.",
+        "Slično dlanu po obliku, raste na grančici i hvata sunce.",
+        "Skupljaš ih u velike hrpe pa skačeš u njih kad ih grabljaš.",
+        "U jesen pocrveni i požuti pa drvo ostane golo."
+      ]
+    },
+    {
+      "word": "višnja",
+      "clues": [
+        "Mala crvena kiselkasta voćka na dugačkoj peteljci.",
+        "Raste na stablu, bere se početkom ljeta.",
+        "Od nje se pravi sok, džem i ukusna pita.",
+        "Slična trešnji ali kiselija i tamnija po boji.",
+        "Maraskino liker upravo se proizvodi od ovog tamnog voća.",
+        "Često ukrašava vrh torte ili sladoleda kao crvena kuglica.",
+        "Slično trešnji, ali kiselija pa se škvrči lice kad je zagrizeš.",
+        "Ono crveno na vrhu sladoleda ili torte kao ukras.",
+        "Imaš je u kompotu i u soku koji piješ ljeti.",
+        "Visi na dugačkoj peteljci pa je beru u parovima sa stabla."
+      ]
+    },
+    {
+      "word": "lopta",
+      "clues": [
+        "Okrugao predmet kojim se igramo raznih sportova.",
+        "Kopiš je, bacaš ili udaraš rukom ovisno o igri.",
+        "Bez nje nema nogometa, košarke ni tenisa.",
+        "Napunjena je zrakom i odbija se od poda.",
+        "Golman je čuva da ne uđe u gol tijekom utakmice.",
+        "Dolazi u raznim veličinama, od malene za stolni tenis do velike za košarku.",
+        "Ono što udaraš nogom kad igraš nogomet u dvorištu.",
+        "Slično balonu po obliku, ali tvrda i odbija se od poda.",
+        "Baciš je prijatelju pa je on ulovi u igri hvatanja.",
+        "Asociraš je na Messija koji je gura prema golu."
+      ]
+    },
+    {
+      "word": "vaga",
+      "clues": [
+        "Naprava za mjerenje težine osoba ili predmeta.",
+        "Staneš na nju i prikazuje koliko kilogram imaš.",
+        "U kuhinji se koristi za mjerenje brašna i šećera.",
+        "Ljekarnik njome mjeri lijekove u točnim gramima.",
+        "Kuhar i pekar njome odvaguju točne količine sastojaka.",
+        "Na zaslonu ili kazaljkom pokazuje brojku u kilogramima ili gramima.",
+        "Ono na što staneš da vidiš koliko si težak.",
+        "Slično klackalici, jedna strana ide gore druga dolje da uravnoteži.",
+        "Pekar na njoj izmjeri točno koliko brašna treba za kruh.",
+        "Asociraš je na onu sliku gospođe sa zavezanim očima i tasovima."
+      ]
+    },
+    {
+      "word": "pingvin",
+      "clues": [
+        "Crno-bijela ptica koja ne može letjeti ali dobro pliva.",
+        "Živi na ledu Antarktika i hrani se ribom.",
+        "Hoda uspravno i gegavo po snijegu i ledu.",
+        "Njegove mlade drži na nogama kako bi ih zagrijao.",
+        "Iz crtića 'Madagascar' poznata je skupina ovih ptica koje planiraju bijeg.",
+        "Klizi na trbuhu niz snijeg umjesto da hoda kad mu se žuri.",
+        "Slično patki po hodu, gega se, ali živi gdje je hladno i bijelo.",
+        "Ono crno-bijelo što stoji uspravno na ledu kao u fraku.",
+        "Asociraš ga na crtić Madagaskar gdje smišljaju bijeg.",
+        "Skakne u ledeno more i lovi ribu, a krila mu služe za plivanje."
+      ]
+    },
+    {
+      "word": "koala",
+      "clues": [
+        "Sivi torbari sa zonom Australije koji živi na eukaliptusovim stablima.",
+        "Uglavnom spava do dvadeset sati dnevno i jede lišće.",
+        "Slatka životinja s velikim crnim nosem i mekIM krznom.",
+        "Mlade nosi u torbici na trbuhu do odrastanja.",
+        "Mediji ga snimaju diljem svijeta kad nastrada u australskim požarima.",
+        "Spori je penjač koji se rijetko spušta sa svog drveta.",
+        "Grli granu objema šapama kao da je medvjedić iz crtića.",
+        "Ono što izgleda kao plišana igračka, a živo je u Australiji.",
+        "Cijeli dan visi na drvetu i samo žvače zeleno lišće.",
+        "Mali se vozi mami na leđima dok skakuće po granama."
+      ]
+    },
+    {
+      "word": "puž",
+      "clues": [
+        "Mekušac koji nosi kućicu na leđima i klizi polako.",
+        "Ostavlja srebrni sluzavi trag na tlu dok se kreće.",
+        "Nakon kiše pojavljuje se na vrtu i grize biljke.",
+        "Simbol sporosti, kreće se jako sporo bez nogu.",
+        "U bajci o utrci s zecom pobjeđuje upravo ova spora životinja.",
+        "Neke njegove vrste kuhaju se i jedu kao delicija u Francuskoj.",
+        "Ima dva mala roščića na glavi koja uvuče kad ga dirneš.",
+        "Ono što ti polako prijeđe preko ruke i ostavi ljepljivu crtu.",
+        "Vlažan je, gol i nosi svoj dom kamo god krene.",
+        "Kad zaprijeti opasnost, sakrije se unutra i čeka."
+      ]
+    },
+    {
+      "word": "kruna",
+      "clues": [
+        "Ukrasni zlatni obruč koji kralj ili kraljica nosi na glavi.",
+        "Ukrašena je dragim kamenjem i simbolizira vlast i moć.",
+        "Stavlja se na glavu kad netko postane novi vladar.",
+        "Princeze i kraljevi nose je kao znak svog kraljevskog statusa.",
+        "Pobjednica izbora ljepote dobiva je na glavu uz lentu i buket.",
+        "U šahu se najslabija figura može pretvoriti u onoga tko je nosi.",
+        "Ono što stavljaš na glavu kad se igraš kralja na rođendanu.",
+        "Slično šeširu, ali od zlata i blista od kamenčića.",
+        "Ima šiljke koji strše prema gore i sjaji se na suncu.",
+        "Asocira me na palaču, prijestolje i kraljevsku obitelj."
+      ]
+    },
+    {
+      "word": "violina",
+      "clues": [
+        "Glazbeni instrument sa žicama po kojima vučeš gudalo.",
+        "Najmanji je od gudačkih instrumenata u orkestru.",
+        "Drži se ispod brade i svira melodije za koncerte.",
+        "Stradivarius je čuveni majstor koji ih je izrađivao.",
+        "Virtuoz njome prevlači gudalom da nastane visok i nježan zvuk.",
+        "U narodnoj priči vrag se okladio tko će je bolje svirati.",
+        "Ono što stišćeš bradom dok rukom povlačiš preko žica.",
+        "Slično je gitari, ali manje i sviraš ga uspravno uz rame.",
+        "Pravi tanak i piskav zvuk kad njime klizaš naprijed-natrag.",
+        "Ima oblik osmice i drvenu boju s tankim strunama."
+      ]
+    },
+    {
+      "word": "košulja",
+      "clues": [
+        "Odjevni predmet za gornji dio tijela s ovratnikom i gumbima.",
+        "Nosi se ispod sakoa ili samostalno za poslovni izgled.",
+        "Može biti bijela, prugasta ili u raznim bojama i uzorcima.",
+        "Peglamo je prije odlaska na važan događaj ili u ured.",
+        "Zakopčavaš je odozdo prema gore prolazeći kroz rupice.",
+        "Tata je obuče s kravatom kad ide na svadbu ili sastanak.",
+        "Ono što obučeš kad treba izgledati fino i uredno.",
+        "Slično majici, ali ima ovratnik i zakopčava se gumbima.",
+        "Suprotno od zgužvane krpe je ova kad je lijepo izglačana.",
+        "Tata je nosi s kravatom, a rukave može zasukati ljeti."
+      ]
+    },
+    {
+      "word": "šiljilo",
+      "clues": [
+        "Mali školski pribor kojim oštrimo olovku.",
+        "Stavljaš vrh olovke u rupicu i okrćeš da bi bila šiljasta.",
+        "Djeca ga koriste u pernici svaki dan u školi.",
+        "Bez njega olovka postaje tupa i ne možeš crtati ni pisati.",
+        "Ostaci nakon njega su tanke drvene strugotine u obliku spirale.",
+        "Često je u obliku malene kockice s oštrim metalnim nožićem unutra.",
+        "Ono što ti zafali kad ti vrh pisaljke postane tup.",
+        "Gurneš drvce unutra, zavrtiš i opet možeš lijepo pisati.",
+        "Iza njega ostaju kovrčave drvene ljuskice u kanti.",
+        "Stane ti u dlan, a malen je i čuvaš ga u pernici."
+      ]
+    },
+    {
+      "word": "kruška",
+      "clues": [
+        "Sočno slatko voće kapljičastog oblika koje raste na stablu.",
+        "Zelene ili žute boje, mekana kad sazri u jesen.",
+        "Slična jabuci ali duguljastijeg oblika i drugačijeg okusa.",
+        "Može se jesti svježa, kuhana ili u obliku kompota.",
+        "Iz nje raste izreka da pada blizu stabla baš kao i jabuka.",
+        "Šira je pri dnu a uža prema vrhu gdje je peteljka.",
+        "Voće koje je usko gore, a debelo i okruglo prema dnu.",
+        "Slično je jabuci po okusu, ali zrnasto i sočno u ustima.",
+        "Ono što ubereš sa stabla u jesen i odmah zagrizeš.",
+        "Asocira me na izreku da ne pada daleko od svog stabla."
+      ]
+    },
+    {
+      "word": "stol",
+      "clues": [
+        "Namještaj s ravnom pločom i nogama za sjedenje i rad.",
+        "Za njim jedemo, učimo, pišemo i igramo društvene igre.",
+        "U kuhinji, blagovaonici ili uredu uvijek ga ima.",
+        "Drveni komad namještaja s pločom na kojem jedeš ili učiš.",
+        "Vitez Okruglog ovakvog komada namještaja okupljao je svoje ljude.",
+        "Postavljaš tanjure, čaše i pribor na njega prije ručka.",
+        "Ravna ploča na nogama za kojom jedeš ili pišeš.",
+        "U blagovaonici je u sredini sobe.",
+        "Na njega staviš tanjur, čašu i pribor.",
+        "Najčešće je drven i ima četiri noge."
+      ]
+    },
+    {
+      "word": "prozor",
+      "clues": [
+        "Otvor u zidu s staklom koji propušta svjetlost u prostoriju.",
+        "Otvaramo ga za prozračivanje sobe po toplom danu.",
+        "Kroz njega gledamo van na ulicu, vrt ili nebo.",
+        "Ima okvir, staklo i zastor ili žaluzine za zaštitu od sunca.",
+        "Djed Mraz ulazi kroz dimnjak, ali mačka radije skoči kroz ovaj otvor.",
+        "Kad pada kiša, kapljice klize niz njegovo staklo.",
+        "Ono kroz što gledaš van da vidiš pada li kiša.",
+        "Otvoriš ga kad je zagušljivo da uđe svjež zrak.",
+        "Ima staklo, okvir i zavjesu sa strane koja ga prekrije.",
+        "Kapljice kiše klize niz njega kad je oluja vani."
+      ]
+    },
+    {
+      "word": "konop",
+      "clues": [
+        "Dugačka deblja nit od pletenih vlakana za vezanje ili penjanje.",
+        "Koristimo ga za vezanje brodova, paketa ili za penjanje u teretani.",
+        "Skakač ga drži i preskače njime kao sportsku vježbu.",
+        "Alpinisti ga koriste za osiguranje pri penjanju po stijenama.",
+        "Dva tima ga u igri vuku svaki na svoju stranu da pobijede.",
+        "Kauboj ga baca i veže oko vrata bika ili konja.",
+        "Ono čime svežeš paket ili privežeš čamac uz obalu.",
+        "Slično je deblom uzicom, samo jače i pleteno od vlakana.",
+        "Dvije ekipe ga vuku svaka na svoju stranu u natjecanju.",
+        "Penjač se njime osigura da ne padne sa stijene."
+      ]
+    },
+    {
+      "word": "kokoš",
+      "clues": [
+        "Domaća ptica na farmi koja snese jaja svaki dan.",
+        "Ptica iz dvorišta koja nese jaja i grebe zrnje kljunom.",
+        "Živi u nastambi od dasaka i daje nam jaja za doručak.",
+        "Pijetao je njezin muški par u dvorištu.",
+        "Pita se što je bilo prije, ona ili jaje.",
+        "Najpoznatija junakinja crtića o 'malenom Pile-u' njegova je majka.",
+        "Ono što čuješ kako kakodače rano ujutro u dvorištu.",
+        "Daje nam jaja koja onda pojedemo za doručak.",
+        "Šeće po dvorištu i kljuca zrnje s tla.",
+        "Njezin muž je pijetao koji kukuriče u zoru."
+      ]
+    },
+    {
+      "word": "sir",
+      "clues": [
+        "Mliječni proizvod koji nastaje zrnenjem i zrenjem mlijeka.",
+        "Može biti tvrdi, mekani, dimljeni ili s plijesnivim korama.",
+        "Stavlja se na pizzu, sendvič ili se jede s vinom.",
+        "Miševi ga obožavaju prema crtanim filmovima i bajkama.",
+        "Topi se i razvlači u niti kad ga ispečeš na tjestenini.",
+        "Švicarci ga rade s rupama, a Talijani ga ribaju preko špageta.",
+        "Ono što staviš na pizzu pa se rastegne u duge niti.",
+        "Slično maslacu po žutoj boji, ali tvrđe i jede se na kruhu.",
+        "Miš ga u crtićima krade i bježi s velikim komadom.",
+        "Naribaš ga preko špageta da bude ukusnije."
+      ]
+    },
+    {
+      "word": "krokodil",
+      "clues": [
+        "Velika gmizavica s dugačkim čeljustima i oštrim zubima.",
+        "Živi u rijekama i močvarama Afrike i Azije.",
+        "Leži nepomično u mulju i vreba plijen na obali.",
+        "Ima ljuskavo zeleno-smeđe tijelo i dugačak rep.",
+        "Iz crtića o Petru Panu, ovaj je progutao sat i lovi kapetana Kuku.",
+        "Glumi da plače dok vreba žrtvu, pa otud i izraz za lažne suze.",
+        "Ono što leži u rijeci s otvorenom čeljustom punom zuba.",
+        "Slično gušteru, ali ogroman i opasan, vreba uz vodu.",
+        "Ima ljuskavu kožu, dugi rep i njime mlatne po vodi.",
+        "Asocira me na lažne suze koje netko glumi kad zapravo nije tužan."
+      ]
+    },
+    {
+      "word": "nosorog",
+      "clues": [
+        "Velika afrička životinja s jednim ili dva roga na njušci.",
+        "Debele sive kože i masivnog tijela, živi na savanama.",
+        "Ugrožena je vrsta zbog lova na njezin rog.",
+        "Drugi je po veličini kopnenih sisavaca nakon slona.",
+        "U njemu se prepoznaje rog koji se brusi poput onog jednoroga, samo na njušci.",
+        "Pred opasnošću jurne ravno naprijed, ne mareći za prepreke.",
+        "Životinja koja na nosu nosi rog poput šiljka.",
+        "Velik je i siv, a koža mu je debela kao oklop.",
+        "Slično slonu po veličini, ali ima rog na njušci.",
+        "Kad se naljuti, jurne ravno i obara sve pred sobom."
+      ]
+    },
+    {
+      "word": "naranča",
+      "clues": [
+        "Okruglo citrusno voće žarke boje bogato vitaminom C.",
+        "Gulaš je i jedeš sočne kriške ili cijeđiš sok.",
+        "Raste na stablima u toplim krajevima poput Španjolske i Italije.",
+        "Po njoj je nazvana jedna boja između žute i crvene.",
+        "Prodaje se u mrežicama tijekom zimskih mjeseci jer štiti od prehlade.",
+        "Roditelji je često stavljaju djeci u čizmicu na Svetog Nikolu.",
+        "Voće okruglo i sočno koje oguliš pa jedeš kriške.",
+        "Po njemu je dobila ime jedna boja između žute i crvene.",
+        "Ono što iscijediš ujutro za vitamine protiv prehlade.",
+        "Sveti Nikola je djeci stavlja u čizmicu uz slatkiše."
+      ]
+    },
+    {
+      "word": "jakna",
+      "clues": [
+        "Odjevni predmet koji nosiš kada je hladno vani.",
+        "Stavlja se preko majice kako bi te grijala.",
+        "Ima rukave i kopča se sprijeda.",
+        "Zimska ili jesenska odjeća za gornji dio tijela.",
+        "Skidaš je u zatvorenom kad ti postane pretoplo.",
+        "Vjetrovka i bunda su njezine vrste za hladne dane.",
+        "Ono što navučeš preko sebe kad puše hladan vjetar.",
+        "Ima rukave, zatvarač sprijeda i grije te vani zimi.",
+        "Skineš je čim uđeš u toplu sobu jer ti bude vruće.",
+        "Bunda i vjetrovka su njezine vrste za hladne dane."
+      ]
+    },
+    {
+      "word": "medvjed",
+      "clues": [
+        "Velika dlakava životinja koja živi u šumi.",
+        "Voli jesti med i ribu iz potoka.",
+        "Spava cijelu zimu u brlogu.",
+        "Najpoznatija igračka za djecu naziva se po njemu.",
+        "U bajci o Zlatokosi tri zdjelice kaše kuša obitelj ovih životinja.",
+        "Pliva u rijeci i šapom hvata losose koji skaču uzvodno.",
+        "Krupna životinja koja zimu prespava u brlogu.",
+        "Voli zaviriti u košnicu i polizati slatki med.",
+        "Slično krznenoj igrački koju djeca grle u krevetu.",
+        "Šapom hvata ribu koja skače uz rijeku."
+      ]
+    },
+    {
+      "word": "ogledalo",
+      "clues": [
+        "Gledaš u njega kada se češljaš ili šminkaš.",
+        "Staklena površina koja odražava tvoj lik.",
+        "Visi na zidu u kupaonici ili hodniku.",
+        "Pokazuje ti kako izgledaš u tom trenutku.",
+        "Zla kraljica u bajci o Snjeguljici pita ga tko je najljepši.",
+        "Ako se razbije, kaže se da donosi sedam godina nesreće.",
+        "Ono u što pogledaš ujutro dok se češljaš.",
+        "Pokaže ti tvoje lice kad staneš ispred njega.",
+        "Visi na zidu u kupaonici iznad umivaonika.",
+        "Zla kraljica ga pita tko je najljepša na svijetu."
+      ]
+    },
+    {
+      "word": "televizija",
+      "clues": [
+        "Uređaj na kojemu gledaš filmove i crtane.",
+        "Veliki zaslon koji stoji u dnevnoj sobi.",
+        "Uključuješ ga daljinskim upravljačem.",
+        "Emitira vijesti, serije i sportske prijenose.",
+        "Plazma ili LED su vrste njezinog zaslona u trgovinama.",
+        "Subotom navečer cijela obitelj sjedne pred nju gledati film.",
+        "Ono što upališ daljinskim da gledaš crtiće.",
+        "Velika ravna ploča koja stoji u dnevnoj sobi.",
+        "Iz nje izlaze vijesti, serije i nogometne utakmice.",
+        "Cijela obitelj sjedne pred nju navečer i gleda film."
+      ]
+    },
+    {
+      "word": "pismo",
+      "clues": [
+        "Poruka napisana na papiru i poslana poštom.",
+        "Stavlja se u kovertu i šalje na adresu.",
+        "Prije interneta, tako su se dopisivali prijatelji.",
+        "Poštaš ga donosi u poštanski sandučić.",
+        "Marka se lijepi u gornji kut prije nego ga pošalješ.",
+        "Djed Mraz čita ono koje mu djeca napišu sa željama.",
+        "Ono što napišeš na papiru pa pošalješ baki poštom.",
+        "Staviš ga u kuvertu, zalijepiš marku i ubaciš u sandučić.",
+        "Poštar ga donese i ubaci kroz otvor na vratima.",
+        "Djed Mraz čita ono u kojem mu nabrojiš željene poklone."
+      ]
+    },
+    {
+      "word": "luk",
+      "clues": [
+        "Povrće okruglog oblika koje te tjera na suze kada ga režeš.",
+        "Dodaje se u juhe i variva za okus.",
+        "Ima više slojeva koji se ljušte.",
+        "Može biti crven, žut ili bijeli.",
+        "U bajkama vampire tjeraju upravo njegovim mirisom.",
+        "Vitez svetog Jurja njime se gađaju duhovi prema staroj predaji.",
+        "Ono što te zapeče u oči i zaplačeš dok ga režeš.",
+        "Slično je glavici koju ljuštiš sloj po sloj.",
+        "Dodaš ga u juhu da bude ukusnija.",
+        "U pričama njegovim mirisom tjeraju vampire."
+      ]
+    },
+    {
+      "word": "trava",
+      "clues": [
+        "Zelena biljka koja prekriva livade i parkove.",
+        "Kosiš je u vrtu ljeti.",
+        "Mekana podloga po kojoj se voliš valjati.",
+        "Krave i ovce rado je jedu na livadi.",
+        "Na nogometnom igralištu igrači trče po zelenoj podlozi od nje.",
+        "Rosa ujutro svjetluca na njezinim vlatima u vrtu.",
+        "Ono zeleno po čemu trčiš bos po parku ljeti.",
+        "Krave je pasu na livadi cijeli dan.",
+        "Kosilicom je skratiš kad previše naraste u vrtu.",
+        "Rosa ujutro svjetluca na njezinim vlatima."
+      ]
+    },
+    {
+      "word": "ograda",
+      "clues": [
+        "Građevina koja odvaja dva prostora ili štiti dvorište.",
+        "Može biti drvena, metalna ili žičana.",
+        "Sprječava životinje da pobjegnu iz dvorišta.",
+        "Stoji uz cestu ili oko kuće kao zaštita.",
+        "Tom Sawyer je morao obojiti onu od dasaka oko kuće.",
+        "Penješ se preko nje ili gledaš kroz njezine rešetke u susjedovo dvorište.",
+        "Ono što okružuje dvorište da pas ne pobjegne van.",
+        "Može biti od dasaka, žice ili metalnih šipki.",
+        "Provučeš pogled kroz njezine rešetke u susjedov vrt.",
+        "Tom Sawyer ju je morao premazati bojom oko kuće."
+      ]
+    },
+    {
+      "word": "rukavice",
+      "clues": [
+        "Nosiš ih na rukama po zimi da ne ozebneš.",
+        "Štite prste od hladnoće i vjetra.",
+        "Dolaze u paru i navlače se na šake.",
+        "Mogu biti kožne, vunene ili od lateksa.",
+        "Bokser ih navlači na šake prije borbe u ringu.",
+        "Spojiš ih u snježnu grudu prije nego je baciš.",
+        "Ono što navučeš na šake kad ti smrznu prsti zimi.",
+        "Dolaze u paru, jedna za svaku ruku.",
+        "Liječnik ih navlači prozirne kad pregledava bolesnika.",
+        "Bokser ih ima debele i napuhane prije borbe u ringu."
+      ]
+    },
+    {
+      "word": "papiga",
+      "clues": [
+        "Šarena ptica koja zna oponašati ljudski govor.",
+        "Drži se kao kućni ljubimac u kavezu.",
+        "Ima kukasti kljun i dugačak rep.",
+        "Tropska ptica poznata po ponavljanju riječi.",
+        "Gusari je iz priča često nose na ramenu dok plove morem.",
+        "Iz crtića o Aladinu, Jago je crvena vrsta ove ptice.",
+        "Šarena ptica koja ponavlja riječi za tobom.",
+        "Drži se u kavezu i ima zakrivljeni kljun.",
+        "Gusar je u pričama nosi na ramenu dok plovi.",
+        "Iz Aladina, crveni Jago je upravo ova ptica."
+      ]
+    },
+    {
+      "word": "jež",
+      "clues": [
+        "Mala životinja prekrivena oštrim bodljama na leđima.",
+        "Kada se uplaši, srolica se u kuglicu.",
+        "Živi u šumi i jede kukce i červe.",
+        "Noćna životinja s bodljikavim štitom na tijelu.",
+        "U priči o lukavoj lisici, ona ga ne može uloviti zbog bodlji.",
+        "Zimi se sklupča pod lišćem i prespava cijelu hladnu sezonu.",
+        "Životinjica koja se smota u lopticu kad je dirneš.",
+        "Po cijelim leđima ima oštre bodlje poput igala.",
+        "Noću izlazi iz grmlja i traži kukce za jelo.",
+        "Lisica ga ne može pojesti jer ga peku bodlje."
+      ]
+    },
+    {
+      "word": "tobogan",
+      "clues": [
+        "Sprava na dječjem igralištu niz koju se klizaš.",
+        "Penješ se stepenicama, a spuštaš niz kosinu.",
+        "Djeca se na njemu klizaju prema dolje.",
+        "Može biti plastičan i nalaziti se u parkovima ili bazenima.",
+        "Na bazenu ga puniš vodom i sklizneš ravno u dubinu.",
+        "Najveselija sprava na igralištu uz ljuljačku i pješčanik.",
+        "Ono niz što se na igralištu spustiš sjedeći.",
+        "Gore se popneš stepenicama, a dolje sklizneš niz kosinu.",
+        "Na bazenu ima vodu pa sklizneš ravno u bazen.",
+        "Stoji uz ljuljačke i pješčanik u svakom parku."
+      ]
+    },
+    {
+      "word": "rak",
+      "clues": [
+        "Morska ili riječna životinja s kliještima i oklop om.",
+        "Hoda bočno po morskom dnu.",
+        "Ima deset nogu i tvrdu ljušturu.",
+        "Crveni postaje tek kada ga skuhaš.",
+        "Jedan je od horoskopskih znakova rođenih ljeti.",
+        "Mali Sebastian iz 'Male sirene' upravo je ova životinja.",
+        "Morska životinjica koja te može uštinuti kliještima.",
+        "Hoda postrance po pijesku na dnu mora.",
+        "Pocrveni tek kad ga staviš u vruću vodu.",
+        "Sebastian iz Male sirene pjeva, a baš je takav."
+      ]
+    },
+    {
+      "word": "slon",
+      "clues": [
+        "Najveća kopnena životinja na Zemlji.",
+        "Ima dugačak surlu kojom pije vodu i jede.",
+        "Živi u Africi i Aziji u krdu.",
+        "Ima ogromne uši i bjelokosne kljove.",
+        "Dumbo je iz crtića poznat po golemim ušima ove životinje.",
+        "U cirkusu balansira na malenoj klupici unatoč svojoj veličini.",
+        "Najveća životinja koja hoda po kopnu.",
+        "Dugačkim nosom siše vodu pa se njime polije.",
+        "Ima goleme uši kojima maše da se rashladi.",
+        "Dumbo iz crtića leti zahvaljujući svojim ogromnim ušima."
+      ]
+    },
+    {
+      "word": "krumpir",
+      "clues": [
+        "Okrugla gomoljna biljka koja raste u zemlji.",
+        "Od njega se prave pomfrit i pire.",
+        "Jedno od najpopularnijih povrća na svijetu.",
+        "Ima smeđu ljušturu i bijelu sredinu.",
+        "Iz njega se rade i čips i okruglice za juhu.",
+        "Sadiš ga u proljeće a u jesen ga vadiš motikom iz zemlje.",
+        "Ono što izvadiš iz zemlje pa od njega ispržiš pomfrit.",
+        "Smeđe je izvana, a bijelo i tvrdo iznutra.",
+        "Sadiš ga u proljeće, a motikom ga vadiš u jesen.",
+        "Od njega se rade i čips i pire koji djeca vole."
+      ]
+    },
+    {
+      "word": "tenisice",
+      "clues": [
+        "Sportska obuća s gumenim đonom za trčanje.",
+        "Nosiš ih na nogama u teretani ili na šetnji.",
+        "Vežeš ih vezicama i štite stopalo.",
+        "Popularne i za svakodnevno nošenje i za sport.",
+        "Brendovi poput Nikea i Adidasa najpoznatiji su po njihovoj izradi.",
+        "Prije utrke vrhunski sprinter dobro stegne njihove vezice.",
+        "Ono što obuješ na noge kad ideš trčati ili u teretanu.",
+        "Vežeš ih vezicama i imaju mekan gumeni đon.",
+        "Nike i Adidas su poznati po njihovoj izradi.",
+        "Sprinter ih dobro stegne prije nego potrči utrku."
+      ]
+    },
+    {
+      "word": "olovka",
+      "clues": [
+        "Pisaći pribor s grafitnom jezgrom kojim pišeš na papiru.",
+        "Može se brisati gumicom za razliku od kemijske.",
+        "Koriste je učenici u školi svaki dan.",
+        "Ima drvenu oblogu i šiljati vrh.",
+        "Broj 2 ili HB oznaka su za tvrdoću njezine jezgre.",
+        "Šiljilom joj zaoštriš vrh kad postane tup od pisanja.",
+        "Ono čime pišeš u školi, a greške izbrišeš gumicom.",
+        "Ima drveni omot i sivi vrh koji ostavlja trag.",
+        "Kad joj se otupi vrh, naoštriš ga šiljilom.",
+        "Suprotno od kemijske jer se njezin trag može obrisati."
+      ]
+    },
+    {
+      "word": "školjka",
+      "clues": [
+        "Tvrda ljuštura morskog stvorenja pronađena na plaži.",
+        "Prislonjen uz uho, čuješ zvuk mora.",
+        "Mekušac živi u njoj kao u kući.",
+        "Raznih oblika i boja, skuplja se na pijesku.",
+        "Sveti Jakov ima je kao svoj simbol na hodočasničkom putu.",
+        "Biser nastaje skriven unutar nje na dnu mora.",
+        "Ono što sakupljaš po pijesku dok šetaš plažom.",
+        "Prisloniš je na uho i čuješ kao da šumi more.",
+        "Tvrda je kućica u kojoj živi morski stvor.",
+        "Skriva sjajni biser duboko na svom dnu."
+      ]
+    },
+    {
+      "word": "vjeverica",
+      "clues": [
+        "Mala životinja s bujnim repom koja živi na drveću.",
+        "Skuplja žirove i lješnjake za zimu.",
+        "Brzo se penje i skače s grane na granu.",
+        "Ima narančastu ili sivu dlaku i oštro ogla šava se.",
+        "U crtiću 'Ledeno doba' Scrat juri svoj žir baš poput nje.",
+        "Gricka orahe sjedeći uspravno i držeći ih u prednjim šapicama.",
+        "Mala životinja s velikim čupavim repom na drvetu.",
+        "Skuplja lješnjake i sakriva ih za hladne dane.",
+        "Sjedne uspravno i šapicama drži orah dok ga grize.",
+        "Scrat iz Ledenog doba juri za žirom baš poput nje."
+      ]
+    },
+    {
+      "word": "sidro",
+      "clues": [
+        "Teški metalni predmet koji drži brod na jednom mjestu.",
+        "Spušta se na morsko dno na lancu.",
+        "Simbol koji se često tetoviraju mornari.",
+        "Bez njega bi brod otplovio sam.",
+        "Bratstvo iz Popaja često ima ovaj morski simbol na rukavu.",
+        "Kad kapetan poviče da ga dignu, brod kreće na put.",
+        "Ono što brod baci u more da ostane na mjestu.",
+        "Težak je metalni predmet koji visi na lancu.",
+        "Bez njega bi brod odlutao s vjetrom i strujom.",
+        "Mornari ga često tetoviraju na ruku kao svoj znak."
+      ]
+    },
+    {
+      "word": "ptica",
+      "clues": [
+        "Pernatа životinja koja leti krilima kroz zrak.",
+        "Pjeva ujutro i gradi gnijezdo na drveću.",
+        "Polaže jaja i ima kljun umjesto usta.",
+        "Vrabac, lasta i orao su primjeri ove životinje.",
+        "U izreci kažu da je bolje ona u ruci nego deset na grani.",
+        "Selidbom na jug bježi pred zimom u toplije krajeve.",
+        "Ono što vidiš kako sjedi na žici iznad ceste.",
+        "Zimi joj djeca stavljaju hranilicu s mrvicama pred prozor.",
+        "Tvit-tvit ili cvrkut čuješ od nje rano ujutro.",
+        "Ima krila kao i kukci, ali je puno veća i prekrivena perjem."
+      ]
+    },
+    {
+      "word": "zebra",
+      "clues": [
+        "Afrička životinja s crno-bijelim prugama.",
+        "Izgleda poput konja ali ima drugačije šare.",
+        "Živi u savani u krdu.",
+        "Po njoj se naziva i pješački prijelaz.",
+        "Marty iz crtića 'Madagascar' upravo je ova prugasta životinja.",
+        "Vozač zaustavlja auto da pješaci prijeđu cestu po njezinim crtama.",
+        "Šarena je crno-bijelo, baš kao tipke na klaviru.",
+        "Kad je vidiš, znaš da se nalaziš negdje daleko u Africi.",
+        "Bijele i crne crte na cesti zovu se baš po njoj.",
+        "Galopira po travnatim ravnicama bježeći od lavova."
+      ]
+    },
+    {
+      "word": "svinja",
+      "clues": [
+        "Ružičasta domaća životinja koja se drži na farmi.",
+        "Ima kratki zavijeni repić i njuška njonja.",
+        "Od nje dobivamo šunku, slaninu i kobasice.",
+        "Valja se u blatu kako bi se rashladila.",
+        "Tri praščića iz bajke su mladunci ove životinje.",
+        "Djeca štede novčiće u kasici izrađenoj u njezinom obliku.",
+        "U njoj djeca skupljaju kovanice pa je razbiju kad se napuni.",
+        "Glasa se rokćući kad traži hranu u koritu.",
+        "Kad je netko neuredan, kažu mu da je prljav kao ona.",
+        "Babe iz njena mesa rade pršut i čvarke za zimu."
+      ]
+    },
+    {
+      "word": "srce",
+      "clues": [
+        "Organ u prsnom košu koji pumpa krv kroz tijelo.",
+        "Simbol ljubavi u obliku dvije zaobljene strane.",
+        "Kuca i ne prestaje raditi dok živiš.",
+        "Crtaš ga na Valentinovo u crvenoj boji.",
+        "Liječnik osluškuje njegove otkucaje stetoskopom na prsima.",
+        "Jedan je od četiri znaka na igraćim kartama, obojen crveno.",
+        "Brže kuca kad trčiš ili se uplašiš.",
+        "Crtaš ga kad nekoga jako voliš pa mu pošalješ poruku.",
+        "Nalazi se s lijeve strane tvojih prsa.",
+        "Kad si tužan, kažu da te boli baš to iznutra."
+      ]
+    },
+    {
+      "word": "boca",
+      "clues": [
+        "Staklena ili plastična posuda za tekućinu.",
+        "Puni se vodom, sokom ili gaziranim pićem.",
+        "Ima uski vrat i zatvarač ili čep.",
+        "Nosiš je u ruksaku kada ideš u školu.",
+        "Brodić u njoj često se izrađuje kao ukras s jedrima.",
+        "Beba mlijeko pije iz nje s gumenom dudom na vrhu.",
+        "Kad popiješ sve iz nje, vraćaš je u trgovinu i dobiješ kunu.",
+        "Praviš zvuk kad pušeš preko njezina otvorenog grla.",
+        "Slično kao čaša, ali zatvoreno i možeš nositi sa sobom.",
+        "Pošalješ poruku u njoj preko mora kad si na pustom otoku."
+      ]
+    },
+    {
+      "word": "truba",
+      "clues": [
+        "Puhaći glazbeni instrument od metala.",
+        "Svirač puše u nju da dobije zvuk.",
+        "Koristi se u orkestru i na svečanostima.",
+        "Ima tri ventila i sjajnu zlatnu boju.",
+        "U Bibliji su zidine Jerihona pale na zvuk njezinog svirača.",
+        "Anđeli na slikama često je sviraju navješćujući dobre vijesti.",
+        "Tu-tu-tuuu zvuk se čuje kad netko jako puše u nju.",
+        "Slično kao puhanje u rog, samo od sjajnog metala.",
+        "Vatrogasci i vojnici je sviraju kad podižu zastavu.",
+        "Pomičeš prstima tri gumba dok pušeš da promijeniš melodiju."
+      ]
+    },
+    {
+      "word": "snjegović",
+      "clues": [
+        "Figura napravljena od snijega u obliku čovjeka.",
+        "Ima mrkvu umjesto nosa i grane za ruke.",
+        "Djeca ga prave zimi na otvorenom.",
+        "Nosi stari šešir i šal oko vrata.",
+        "Olaf iz 'Snježnog kraljevstva' je živući primjer njega.",
+        "Sastavlja se od tri kugle posložene jedna na drugu po veličini.",
+        "Kad sunce zasja, on se otopi i nestane u lokvu vode.",
+        "Umjesto očiju u glavu mu zabiješ dva crna kamenčića.",
+        "Možeš ga napraviti samo kada vani pada bijelo i hladno.",
+        "Stoji u dvorištu i čeka da padne još snijega."
+      ]
+    },
+    {
+      "word": "jabuka",
+      "clues": [
+        "Okruglo voće crvene, žute ili zelene boje.",
+        "Raste na stablu i jede se sirova ili pečena.",
+        "Kažu da jedna na dan tjera liječnika.",
+        "Jedna od najomiljenijih vrsta voća u Europi.",
+        "U priči o Snjeguljici, zla je kraljica zatruje upravo njom.",
+        "Newton je navodno otkrio gravitaciju kad mu je jedna pala na glavu.",
+        "Hrskava je kad zagrizeš i ostane ti trag zubića na njoj.",
+        "Vilim Tell je gađao strijelom jednu sinu s glave.",
+        "Crv se ponekad sakrije unutra dok je ne razrežeš.",
+        "Slično kao kruška, ali okruglija i hrskavija."
+      ]
+    },
+    {
+      "word": "šibice",
+      "clues": [
+        "Malene drvene štapiće kojima pališ vatru.",
+        "Treba ih zagrepsti o kutiju da se upale.",
+        "Čuvaju se dalje od djece jer su zapaljive.",
+        "Dolaze u maloj kartonskoj kutijici.",
+        "Iz bajke o djevojčici koja ih prodaje, ona pali jednu po jednu da se ugrije.",
+        "Plamen na njihovom vrhu plane čim ih okrzneš o hrapavu površinu.",
+        "Maleni su kao čačkalice, ali na vrhu imaju obojenu glavicu.",
+        "Slično kao upaljač, samo na drvo i za jednokratnu upotrebu.",
+        "Mama ih koristi da upali svjećice na rođendanskoj torti.",
+        "Črk i pojavi se mali plamičak na vrhu drvenog štapića."
+      ]
+    },
+    {
+      "word": "uzica",
+      "clues": [
+        "Tanka vrpca ili konop kojim vežeš predmete.",
+        "Koristi se za vezanje paketa ili privezivanje.",
+        "Može biti pamučna, najlonska ili od jute.",
+        "Kraća i tanja od konopa, ali služi istoj svrsi.",
+        "Njome vežeš mašnu na poklonu ili na cipelama.",
+        "Zmaj se diže u zrak dok ga držiš za nju i puštaš sve dalje.",
+        "Tanka je i duga, pa njome veže ruke lutki ili paketić.",
+        "Slično kao konop, samo puno tanja i lakša.",
+        "Mačka se voli igrati kad je vučeš po podu.",
+        "Možeš njome napraviti omču ili zavezati dva štapa zajedno."
+      ]
+    },
+    {
+      "word": "avion",
+      "clues": [
+        "Letjelica s krilima koja prevozi putnike kroz zrak.",
+        "Polijeće s uzletišta i leti iznad oblaka.",
+        "Najbrži način putovanja na velike udaljenosti.",
+        "Ima motore, pilota i puno sjedala za putnike.",
+        "Na njega se ukrcavaš u zračnoj luci nakon kontrole karata.",
+        "Iza sebe ostavlja bijeli trag visoko na nebu.",
+        "Buuum, glasno tutnji visoko gore kad proleti iznad kuće.",
+        "Mašeš mu s prozora dok prolijeće daleko po nebu.",
+        "Slično kao ptica, samo golem, od metala i pun ljudi.",
+        "Da odeš u Ameriku, najbrže je da se njime popneš u oblake."
+      ]
+    },
+    {
+      "word": "dalekozor",
+      "clues": [
+        "Optički uređaj kroz koji udaljene stvari izgledaju bliže.",
+        "Prislonjaš ga uz oči da povećaš sliku.",
+        "Koristi se na planinarenju i promatranju ptica.",
+        "Ima dva cijevi i može se podešavati.",
+        "Mornari su njime nekad gledali prema obzoru s palube broda.",
+        "Sastoji se od leća i prizmi koje slika čine većom.",
+        "Gledaš kroz dvije rupice i sve udaljeno izgleda blizu.",
+        "Gusar na brodu njime traži kopno na obzoru.",
+        "Slično kao naočale, samo gleda jako, jako u daljinu.",
+        "Na utakmici njime gledaš igrače iz najviših redova."
+      ]
+    },
+    {
+      "word": "pizza",
+      "clues": [
+        "Okruglo talijansko jelo s tijestom i preljevima.",
+        "Reže se na trokutaste komade i jede rukama.",
+        "Popularan preljev je sir i rajčica.",
+        "Naručuješ je dostavljačem ili jedeš u restoranu.",
+        "Peče se u jako vrućoj kamenoj peći dok rubovi ne porumene.",
+        "Margherita i quattro formaggi poznate su njezine vrste.",
+        "Dođe ti čovjek na vrata s toplom kutijom i ti platiš.",
+        "Slično kao langoš, samo okruglo i s rastopljenim sirom.",
+        "Kad povučeš komad, sir se rasteže u duge niti.",
+        "Najbolje miriše kad izlazi iz vruće peći puna salame."
+      ]
+    },
+    {
+      "word": "kikiriki",
+      "clues": [
+        "Mala mahunarка koja raste u zemlji.",
+        "Od nje se pravi popularni namaz za kruh.",
+        "Prži se i soli za grickanje.",
+        "Slonovi je obožavaju, a prodaje se i u vrećicama na utakmicama.",
+        "U školjki obično rastu dva ili tri zrna jedno do drugog.",
+        "Iako mu ime spominje orah, zapravo pripada mahunarkama.",
+        "Maleno je, smeđe i puca ga kad ga vadiš iz tvrde ljuske.",
+        "Od njega se pravi gusti smeđi namaz koji se lijepi za nepce.",
+        "Slično kao orah, samo manje i raste pod zemljom.",
+        "U kinu ili na tribinama grickaš ga slanog iz vrećice."
+      ]
+    },
+    {
+      "word": "bager",
+      "clues": [
+        "Velika građevinska mašina koja kopa zemlju.",
+        "Ima dugačku ruku s kašikom na kraju.",
+        "Vidiš ga na gradilištu uz ceste i zgrade.",
+        "Vozač sjedi u kabini i upravlja kopanjem.",
+        "Žutom bojom često je obojan i radi buku dok radi.",
+        "Ruši nasipe i puni kamione iskopanim materijalom.",
+        "Brrr, glasno bruji dok kopa veliku rupu u zemlji.",
+        "Žuti div s velikom žlicom na kraju duge ruke.",
+        "Slično kao lopata, samo ogroman i sam kopa umjesto tebe.",
+        "Dječaci se vesele kad ga vide kako radi pokraj ceste."
+      ]
+    },
+    {
+      "word": "povećalo",
+      "clues": [
+        "Okruglo staklo s drškom koje sitne stvari čini krupnijima.",
+        "Koristiš ga da bolje vidiš sitne stvari.",
+        "Detektivi ga uvijek drže u ruci u crtanim.",
+        "Sunčeve zrake kroz njega mogu upaliti papir.",
+        "Sherlock Holmes ga koristi da pronađe sitne tragove.",
+        "Učitelji ga daju djeci da promatraju listove i kukce.",
+        "Kroz njega slova u knjizi izgledaju puno veća.",
+        "Detektiv ga drži uz oko dok traži otisak prsta.",
+        "Slično kao naočale, samo okruglo s drškom u ruci.",
+        "Ako ga okreneš prema suncu, može zapaliti suhi list."
+      ]
+    },
+    {
+      "word": "fotografija",
+      "clues": [
+        "Slika snimljena fotoaparatom ili mobitelom.",
+        "Čuva uspomene na posebne trenutke.",
+        "Može biti ispisana na papiru ili digitalna.",
+        "Visiš je na zidu ili spremljaš u album.",
+        "Snimiš je pritiskom na okidač u trenutku osmijeha.",
+        "Selfie je njezina vrsta koju snimiš sam sebi.",
+        "Visi uokvirena na zidu kod bake da se sjećaš ljetovanja.",
+        "Klik napraviš mobitelom i trenutak ostane zauvijek.",
+        "Slično kao slika, samo nije naslikana nego snimljena.",
+        "Reci 'ptičica' i nasmiješi se da ispadneš lijepo na njoj."
+      ]
+    },
+    {
+      "word": "mač",
+      "clues": [
+        "Dugo metalno oštro oružje koje se nosi u ruci.",
+        "Vitezovi su ga koristili u bitkama.",
+        "Ima oštricu i ručku, a čuva se u koricama.",
+        "Često se pojavljuje u filmovima o gusarima i herojima.",
+        "Vitez njime brani kraljevstvo na konju u oklopu.",
+        "U mašti djece sukobljavaju se njime dva borca.",
+        "Cling-cling zazveči kad se dva viteza njime sudare.",
+        "Slično kao nož, samo puno duži i nosi se uz bok.",
+        "Kralj njime dotakne rame kad nekoga proglasi vitezom.",
+        "Vadiš ga iz kožnatog tuljca obješenog o pojas."
+      ]
+    },
+    {
+      "word": "traktor",
+      "clues": [
+        "Veliki poljoprivredni stroj koji ore njive.",
+        "Farmer ga vozi po polju i vuče prikolicu.",
+        "Ima ogromne stražnje gume i snažan motor.",
+        "Koristi se za oranje, sijanje i branje usjeva.",
+        "John Deere je poznata marka tih zelenih strojeva.",
+        "Vozi se sporo cestom i iza sebe stvara kolonu auta.",
+        "Brm-brm spori i veliki, pa se iza njega stvori red auta na cesti.",
+        "Zeleni stroj s ogromnim kotačima vuče prikolicu sijena.",
+        "Slično kao auto, samo za polje i s golemim stražnjim gumama.",
+        "Seljak se njime vozi rano ujutro da preore zemlju."
+      ]
+    },
+    {
+      "word": "skuter",
+      "clues": [
+        "Manji motorni dvokotač za gradsku vožnju.",
+        "Vozač stoji ili sjedi i upravlja volanom.",
+        "Brži od bicikla, a manji od motocikla.",
+        "Popularno prometalo u toplijim mediteranskim gradovima.",
+        "Mladi ga voze do škole noseći kacigu na glavi.",
+        "Spremiš ga u dvije i gas mu daješ rukom na upravljaču.",
+        "Vrrr, mali motor zujji dok njime juriš gradskim ulicama.",
+        "Slično kao motor, samo manji i lakši za parkiranje.",
+        "Na glavu obavezno staviš kacigu prije nego ga upališ.",
+        "Talijani njime jure uskim uličicama uz more."
+      ]
+    },
+    {
+      "word": "ljuljačka",
+      "clues": [
+        "Sprava na dječjem igralištu koja se njiše naprijed-natrag.",
+        "Visiš na lancima ili konopu i odguruješ nogama.",
+        "Djeca je obožavaju u parkovima i dvorištima.",
+        "Možeš se njome vinuti visoko prema nebu.",
+        "Što jače guraš, to letiš više naprijed i natrag.",
+        "Roditelj te često gura s leđa da se zaljuljaš više.",
+        "Sjedneš na dasku obješenu o lance i letiš naprijed-natrag.",
+        "Vauu, u trbuhu te zagolica kad se spustiš iz visine.",
+        "Slično kao klackalica, samo se njiše visoko prema gore.",
+        "Tata te gura s leđa pa vičeš da te gurne još jače."
+      ]
+    },
+    {
+      "word": "krafna",
+      "clues": [
+        "Okrugli slatki kolač pržen u ulju.",
+        "Punjen džemom ili kremom i posut šećerom.",
+        "Oblik mu je prsten ili kugla.",
+        "Popularna poslastica koja se jede za doručak ili užinu.",
+        "U poznatoj priči Pinokio ih jede umjesto svinje.",
+        "Rupica u sredini čini je drugačijom od običnog kolača.",
+        "Slatka je i meka, a u sredini ima rupu ili džem.",
+        "Slično kao uštipak, samo okruglija i pospana šećerom.",
+        "Homer Simpson ih obožava i stalno ih grize.",
+        "Za poklade ih mama prži u dubokom ulju da naraste."
+      ]
+    },
+    {
+      "word": "koza",
+      "clues": [
+        "Domaća životinja s rogovima i bradom.",
+        "Daje mlijeko od kojeg se pravi sir.",
+        "Glasanje joj je karakteristično blejanje.",
+        "Drži se na farmi i jede travu i lišće.",
+        "U bajci o sedam jarića ona je njihova brižna majka.",
+        "Spretno se penje po stijenama i strmim brdima.",
+        "Mee-mee se glasa dok pase travu na livadi.",
+        "Slično kao ovca, samo ima rogove i bradicu pod njuškom.",
+        "Spretno se popne čak i na strmu liticu da dohvati lišće.",
+        "Od njena mlijeka baka pravi bijeli sir za doručak."
+      ]
+    },
+    {
+      "word": "čekić",
+      "clues": [
+        "Alat s metalnom glavom i drvenom drškom.",
+        "Koristi se za zabijanje čavala u zid.",
+        "Udaraš njime tvrdo i precizno.",
+        "Osnovni alat koji se nalazi u svakoj kući.",
+        "U crtiću ga lik koristi da nešto razbije nad glavom drugog.",
+        "Glava mu je s jedne strane ravna, a s druge razdvojena.",
+        "Lup-lup udaraš njime po čavlu da uđe u dasku.",
+        "Slično kao malj, samo manji i stane u kutiju s alatom.",
+        "Pazi da se njime ne udariš po prstu dok zabijaš.",
+        "Tata ga uzme kad treba objesiti sliku na zid."
+      ]
+    },
+    {
+      "word": "grablje",
+      "clues": [
+        "Vrtni alat s više zubaca na kraju drška.",
+        "Koristi se za skupljanje lišća i sređivanje tla.",
+        "Povlačiš ih po travi ili zemlji.",
+        "Na vrtu ih koristiš posebno u jesen.",
+        "Vrtlar njima sakuplja pokošenu travu na hrpu.",
+        "Ako staneš na njih, drška te može lupiti po čelu.",
+        "Imaju mnogo zubaca kao veliki češalj za travu.",
+        "Šuš-šuš zvuče dok njima vučeš suho lišće po dvorištu.",
+        "Slično kao metla, samo za vani i za skupljanje lišća.",
+        "U crtićima netko stane na njih pa ga drška lupne u glavu."
+      ]
+    },
+    {
+      "word": "baterija",
+      "clues": [
+        "Mala cilindrična naprava koja napaja električne uređaje.",
+        "Stavlja se u daljinski upravljač ili u ručnu lampu.",
+        "Kada se isprazni, zamjenjuješ je novom.",
+        "Dolazi u raznim veličinama, AA i AAA su najčešće.",
+        "Energija je u njoj pohranjena dok je ne potrošiš.",
+        "Punjiva se vrsta može iznova napuniti preko kabela.",
+        "Maleni valjak koji guraš u igračku da proradi.",
+        "Bez nje daljinski ne radi i televizor se ne mijenja.",
+        "Ima plus na jednoj i minus na drugoj strani.",
+        "Kad se sat zaustavi, izvadiš staru i staviš novu."
+      ]
+    },
+    {
+      "word": "češalj",
+      "clues": [
+        "Predmet s mnogo zubaca koji se koristi za uređivanje kose.",
+        "Provlačiš ga kroz kosu da je rasčešljaš.",
+        "Obično je plastičan i stoji uz ogledalo.",
+        "Koristiš ga svako jutro pri uređivanju.",
+        "Nakon kupanja njime razmrsuješ mokru kosu.",
+        "Stane u džep, a ima ravan red sitnih zubaca.",
+        "Provlačiš ga kroz kosu da je urediš i razmrsiš.",
+        "Slično kao četka, samo plosnat s redom sitnih zubaca.",
+        "Stoji uz umivaonik kraj ogledala u kupaonici.",
+        "Stane u džep i njime se počešljaš prije fotografije."
+      ]
+    },
+    {
+      "word": "lokot",
+      "clues": [
+        "Metalna brava s petljom kojom zaključavaš nešto.",
+        "Otvara se ključem ili šifrom.",
+        "Visiš ga na lanac bicikla ili kapiju.",
+        "Štiti tvoje stvari od neovlaštenog pristupa.",
+        "Ljubavni parovi ga vješaju na mostove kao znak vjernosti.",
+        "Otključavaš ga okretanjem ili namještanjem brojeva.",
+        "Klik napravi kad ga zaključaš na vratima ormarića.",
+        "Bez ključa ili točne šifre ne otvara se nikako.",
+        "Slično kao brava, samo visi i može se nositi sa sobom.",
+        "Parovi ih kače na ogradu mosta i bace ključ u rijeku."
+      ]
+    },
+    {
+      "word": "poklon",
+      "clues": [
+        "Umotana iznenađenje koje daješ nekome za rođendan.",
+        "Vezuješ ga vrpcom i pišeš čestitku.",
+        "Primatelj ga otvara s radošću i uzbuđenjem.",
+        "Znak pažnje i ljubavi prema dragoj osobi.",
+        "Pod borom ga pronađeš na Božić ujutro.",
+        "Djed Mraz ga donosi djeci koja su bila dobra.",
+        "Treseš kutiju da pogodiš što se skriva unutra.",
+        "Šuš-šuš čuješ kad cijepaš šareni papir oko njega.",
+        "Pod borom ih ujutro nađeš s tvojim imenom na ceduljici.",
+        "Pun je iznenađenja pa ne znaš što je unutra dok ne otvoriš."
+      ]
+    },
+    {
+      "word": "šešir",
+      "clues": [
+        "Pokrivalo za glavu s obodom oko ruba.",
+        "Štiti od sunca ili kiše i dio je kostima.",
+        "Cowboys ga nose u westernima.",
+        "Može biti slamnat, cilindar ili vuneni.",
+        "Mađioničar iz njega izvuče zeca pred publikom.",
+        "Skidaš ga s glave u znak pozdrava ili poštovanja.",
+        "Staviš ga na glavu da te sunce ne peče po čelu.",
+        "Mađioničar iz njega izvuče bijelog zeca pred svima.",
+        "Slično kao kapa, samo ima širok obod oko cijele glave.",
+        "Cowboy ga skine i mahne njime kad nekoga pozdravlja."
+      ]
+    },
+    {
+      "word": "ananas",
+      "clues": [
+        "Tropsko voće s bodljikavom kožom i zelenom krpom na vrhu.",
+        "Iznutra je žute boje i slatko-kiselog okusa.",
+        "Raste u toplim krajevima poput Brazila i Kostarike.",
+        "Dodaje se na pizzu ili jede svjež.",
+        "U trgovini ga ostavljaš jer mu je vanjski dio nejestiv.",
+        "Na vrhu mu raste čuperak listova poput zelene krune.",
+        "Bode te po prstima jer mu je kora puna oštrih ljuski.",
+        "Slično kao šišarka, samo golemo, žuto i slatko iznutra.",
+        "Na vrhu ima čuperak listova nalik zelenoj kruni.",
+        "SpongeBob živi u jednom takvom voću pod morem."
+      ]
+    },
+    {
+      "word": "tuljan",
+      "clues": [
+        "Morska životinja s perajama koja živi na hladnim obalama.",
+        "Klizi se po ledu i pliva brzo.",
+        "Ima glatku kožu i glasno laje.",
+        "Cirkuske životinje poznate po balansiranju lopte na nosu.",
+        "Pingvinima i polarnim medvjedima često je susjed na ledu.",
+        "Hrani se ribom koju lovi roneći ispod morske površine.",
+        "Au-au laje dok leži na hladnoj stijeni kraj mora.",
+        "U cirkusu balansira loptu na vrhu nosa i plješće perajama.",
+        "Slično kao riba, samo diše zrak i ima glatko krzno.",
+        "Klizne s leda u ledeno more i lovi ribu pod vodom."
+      ]
+    },
+    {
+      "word": "deva",
+      "clues": [
+        "Velika životinja s jednom ili dvije grbe na leđima.",
+        "Živi u pustinji i može dugo bez vode.",
+        "Arapi jašu na njoj kroz pijesak.",
+        "Zovu je brodom pustinje.",
+        "U karavani ih nekoliko hoda jedna za drugom kroz dine.",
+        "Trepavice su joj duge da je štite od pijeska.",
+        "Ima brežuljak na leđima u kojem čuva zalihe za dug put.",
+        "Slično kao konj, samo s grbom i živi gdje je sve pijesak.",
+        "Po vrelom pijesku gazi danima a da ne mora piti vodu.",
+        "Tri kralja su navodno do Betlehema jahala na njoj."
+      ]
+    },
+    {
+      "word": "klupa",
+      "clues": [
+        "Drvena ili metalna sjedala u parku ili školi.",
+        "Sjedaš na nju da se odmoriš ili razgovaraš.",
+        "U razredu stoji ispred ploče za učenike.",
+        "Može biti uz stol ili slobodnostojeća u prirodi.",
+        "Zaljubljeni parovi sjedaju na nju u parku za odmor.",
+        "Na njoj sjede igrači koji čekaju ulazak u utakmicu.",
+        "Sjedneš na nju u parku kad se umoriš od šetnje.",
+        "U razredu sjediš za njom i na nju staviš knjige i bilježnice.",
+        "Slično kao stolica, samo duga da stane više ljudi.",
+        "Rezervni nogometaši na njoj sjede dok čekaju da uđu u igru."
+      ]
+    },
+    {
+      "word": "kornjača",
+      "clues": [
+        "Životinja s tvrdom ljušturom na leđima.",
+        "Kreće se polako i uvlači se u oklop.",
+        "Živi na kopnu ili u moru.",
+        "Jedan od najdugovječnijih životinja na Zemlji.",
+        "U poznatoj basni pobjeđuje brzog zeca u utrci.",
+        "Kad joj prijeti opasnost, skriva glavu i noge unutra.",
+        "Nosi svoju kućicu na leđima kamo god krene.",
+        "Tako je spora da je u basni svejedno pobijedila brzog zeca.",
+        "Kad se uplaši, povuče glavu i nožice unutra pod oklop.",
+        "Slično kao žaba, ali ima tvrdu ljušturu i puzi polako."
+      ]
+    },
+    {
+      "word": "sendvič",
+      "clues": [
+        "Obrok napravljen od dva komada kruha s nadjevom.",
+        "Unutra može biti sir, šunka, salata ili jaje.",
+        "Lako se nosi u školu za užinu.",
+        "Brz i praktičan obrok koji jedeš rukama.",
+        "Slojeve nadjeva poslažeš između kriški i pritisneš.",
+        "Naručuješ ga u pekari pa ga umotaju u papir.",
+        "Ono što poneseš na izlet kad nemaš topli ručak.",
+        "McDonald's slavni s mesom i sirom upravo je takvo jelo.",
+        "Slično je tostu, samo se ne mora peći.",
+        "Zagrizeš ga i osjetiš sve slojeve odjednom."
+      ]
+    },
+    {
+      "word": "lizalica",
+      "clues": [
+        "Slatki bombon na štapiću kojeg ližeš.",
+        "Okrugla je i šarena, s dugačkim plastičnim držačem.",
+        "Djeca je vole jesti polagano.",
+        "Prodaje se u slastičarnicama i kioscima.",
+        "Kad je doližeš do kraja, ostane samo prazan štapić.",
+        "Često je u obliku spirale šarenih boja.",
+        "Chupa Chups je najpoznatija marka tog slatkiša.",
+        "Zalijepi ti se za ruke kad se otopi.",
+        "Slično je sladoledu jer je hladno i slatko, ali ne kapa.",
+        "Ono što ti baka kupi kad budeš dobar."
+      ]
+    },
+    {
+      "word": "vješalica",
+      "clues": [
+        "Predmet na koji kačiš odjeću u ormaru.",
+        "Obično je plastična, drvena ili metalna.",
+        "Ima zakrivljeni vrh koji se kači o šipku.",
+        "Na njoj drži obliku majica, jakna ili haljina.",
+        "Kad se vratiš iz dućana, na nju objesiš novu jaknu.",
+        "U garderobi ih ima cijeli niz na metalnoj šipci.",
+        "Ono na čemu visi tvoja košulja dok se ne osuši.",
+        "Ima oblik trokuta s kukicom na vrhu.",
+        "Suprotno od gomilanja odjeće na stolcu.",
+        "Kad je prazna, zveckaju kad ih guraš po šipci."
+      ]
+    },
+    {
+      "word": "tava",
+      "clues": [
+        "Plitka metalna posuda za prženje hrane.",
+        "Stavljaš je na štednjak i pržiš jaja ili meso.",
+        "Ima ravno dno i dugu ručku.",
+        "Teflonska ne lijepi hranu i lako se čisti.",
+        "Kad pripremiš palačinke, u njoj ih okrećeš lopaticom.",
+        "Cvrči kad u nju uliješ ulje i baciš hranu.",
+        "Ono u čemu cvrči slanina za doručak.",
+        "Slično loncu, ali je plitka i ima jednu ručku.",
+        "Drška ti zna biti vruća pa uzmeš krpu.",
+        "Tata u njoj okreće odreske dok dimi se kuhinja."
+      ]
+    },
+    {
+      "word": "smeće",
+      "clues": [
+        "Otpad koji bacaš u kantu i iznosi se van.",
+        "Sakuplja se u vrećicama i odlaže u kontejner.",
+        "Odvozi ga smetlarski kamion po rasporedu.",
+        "Recikliranjem smanjuješ njegovu količinu.",
+        "Razdvajaš ga u plavu, žutu i smeđu kantu prema vrsti.",
+        "Ako ga baciš na pod ulice, prirodu time prljaš.",
+        "Ono što ostane u vrećici nakon što sve pojedeš i odbaciš.",
+        "Suprotno od nečeg čistog i urednog.",
+        "Galebovi ga prevrću po kontejnerima u potrazi za hranom.",
+        "Smrdi ako predugo stoji u kuhinji."
+      ]
+    },
+    {
+      "word": "prsten",
+      "clues": [
+        "Nakit okruglog oblika koji nosiš na ruci.",
+        "Zaručnici ga daruju jedan drugome na zarukama.",
+        "Okrugao je i obično je od zlata ili srebra.",
+        "Može imati dragulj i sjaji na ruci.",
+        "Mladenci ga jedno drugom stavljaju na ruku pred oltarom.",
+        "Frodo u poznatom filmu nosi onaj čaroban i opasan.",
+        "Ono što ti se zavrti oko ruke i sjaji.",
+        "U bajkama ga čarobnjak nosi da bude moćan.",
+        "Slično narukvici, ali puno manje i ide na ruku.",
+        "Klizne ti s ruke kad ti je prevelik."
+      ]
+    },
+    {
+      "word": "ključ",
+      "clues": [
+        "Koristiš ga da otvoriš bravu na vratima.",
+        "Mali metalni predmet koji nosiš u džepu.",
+        "Bez njega ne možeš ući u kuću.",
+        "Svaka brava ima drugačiji oblik toga.",
+        "Često ih ima više zajedno na privjesku ili kolutu.",
+        "Okreneš ga lijevo ili desno da se nešto zatvori ili otvori.",
+        "Mali metalni predmet kojim otvaraš vrata.",
+        "Nosiš ga u džepu ili torbi sa sobom.",
+        "Okreneš ga u bravi da uđeš unutra.",
+        "Svaka brava treba baš svoj oblik toga."
+      ]
+    },
+    {
+      "word": "kaciga",
+      "clues": [
+        "Štiti glavu pri vožnji bicikla ili motora.",
+        "Nosiš je na glavi kao zaštitu.",
+        "Vatrogasci i vojnici obavezno nose tu opremu.",
+        "Tvrda je i oblikom prati oblik glave.",
+        "Astronaut je nosi da diše u svemiru.",
+        "Bez nje te roditelji ne puste na bicikl ili rolere.",
+        "Ono što navučeš na glavu prije nego sjedneš na motor.",
+        "Slično šeširu, ali tvrdo da te zaštiti pri padu.",
+        "Radnici na gradilištu nose žutu da im ništa ne padne na glavu.",
+        "Kad padneš, ona pukne umjesto tvoje glave."
+      ]
+    },
+    {
+      "word": "majica",
+      "clues": [
+        "Odjevni predmet koji nosiš na gornjem dijelu tijela.",
+        "Može imati kratke ili duge rukave.",
+        "Oblačiš je svaki dan ispod džempera ili bez njega.",
+        "Najčešće je od pamuka i ima razne boje i uzorke.",
+        "Navučeš je preko glave provlačeći ruke kroz rukave.",
+        "Navijači je nose s brojem i imenom omiljenog igrača.",
+        "Ono što obučeš prvo ujutro na gornji dio tijela.",
+        "Slično košulji, ali bez gumba i ovratnika.",
+        "Kad ti je vruće, ostaneš samo u njoj.",
+        "Smrdi ako je nosiš tri dana zaredom."
+      ]
+    },
+    {
+      "word": "kišobran",
+      "clues": [
+        "Štiti te od kiše kad hodaš vani.",
+        "Otvoriš ga kad počne padati kiša.",
+        "Ima dršku i širi se poput kupole iznad glave.",
+        "Zaboravljaš ga kod kuće baš kad pada kiša.",
+        "Kad prestane padati, stresaš s njega kapljice prije ulaska.",
+        "Kad ga vjetar izokrene, postane beskoristan u oluji.",
+        "Ono što otvoriš nad glavom da ne pokisneš.",
+        "Slično šatoru, ali ga držiš jednom rukom.",
+        "Suprotno od toga da pokisneš do kože.",
+        "Kapa s njega kad uđeš u kuću pa napraviš lokvu."
+      ]
+    },
+    {
+      "word": "kvaka",
+      "clues": [
+        "Pritisneš je da otvoriš vrata.",
+        "Nalazi se na vratima i obično je od metala.",
+        "Bez nje ne možeš lako ući ni izaći iz sobe.",
+        "Okrugla ili šipkasta naprava za otvaranje vrata.",
+        "Kad su ti ruke pune, laktom je guraš prema dolje.",
+        "Hladna je zimi kad je dotakneš golom rukom.",
+        "Ono što stisneš rukom prije nego gurneš vrata.",
+        "Slično ručici, ali okrugla i na vratima.",
+        "Bez nje vrata ostanu zatvorena pa ostaneš vani.",
+        "Zazvecka kad je netko s druge strane pokušava otvoriti."
+      ]
+    },
+    {
+      "word": "svijeća",
+      "clues": [
+        "Pali se i daje svjetlost u mraku.",
+        "Ima fitilj koji gori i kaplje voskom.",
+        "Stavljamo je na tortu za rođendan i puhnemo je.",
+        "Koristi se kad nestane struje za osvjetljavanje.",
+        "Crkve su pune njih koje vjernici pale u tišini.",
+        "Što duže gori, to je sve kraća i niža.",
+        "Ono što upališ kad nestane struje da nije mračno.",
+        "Slično baterijskoj lampi, ali gori plamenom.",
+        "Suprotno od mraka jer širi mali krug svjetla.",
+        "Puhneš je i ostane samo dim koji miriše."
+      ]
+    },
+    {
+      "word": "riba",
+      "clues": [
+        "Životinja koja živi u vodi i pliva perajama.",
+        "Hvatamo je udicom pri ribolovu.",
+        "Ima krljušti i diše škrgama.",
+        "Losos i šaran poznati su primjeri te životinje.",
+        "Nemo iz poznatog crtića upravo je ona koja se izgubila.",
+        "U akvariju je gledaš kako plovi među algama i kamenjem.",
+        "Ono što pliva u moru i ne može disati na zraku.",
+        "Slično je dupinu jer živi u vodi, ali je puno manje.",
+        "U trgovini je vidiš na ledu kako leži s otvorenim ustima.",
+        "Mokra je i sklizne ti iz ruku kad je uhvatiš."
+      ]
+    },
+    {
+      "word": "majmun",
+      "clues": [
+        "Životinja koja živi na drveću i voli banane.",
+        "Vrlo je slična čovjeku i iznimno pametna.",
+        "Ima rep, dugo se ljulja po granama.",
+        "U zoološkim vrtovima djeca je najviše vole gledati.",
+        "Tarzan se s njim ljulja kroz prašumu po lijanama.",
+        "Ljušti voće rukama prije nego ga pojede u jednom zalogaju.",
+        "Ono što se penje po drveću i jede banane.",
+        "King Kong je golema i opasna verzija te životinje.",
+        "Slično je čovjeku, ali ima dlake po cijelom tijelu.",
+        "Pravi smiješne grimase i skače po kavezu u vrtu."
+      ]
+    },
+    {
+      "word": "klokan",
+      "clues": [
+        "Australska životinja koja skače na dvjema nogama.",
+        "Ženka nosi mladunče u torbici na trbuhu.",
+        "Ima dugačak rep i snažne stražnje noge.",
+        "Simbol je Australije i može skakati jako daleko.",
+        "U poznatom filmu pjeva i bori se na ringu s rukavicama.",
+        "Skakanjem prelazi velike udaljenosti kroz australsku divljinu.",
+        "Ono što skakuće po Australiji i ima bebu u džepu.",
+        "Slično zecu jer skače, ali je puno veće.",
+        "Kao da nosi torbicu na trbuhu u koju spremi mladunče.",
+        "Odgura se snažnim nogama i preleti veliku udaljenost."
+      ]
+    },
+    {
+      "word": "podkova",
+      "clues": [
+        "Metalni luk koji se pribija konju na kopito.",
+        "Štiti kopito konja pri hodanju po tvrdom tlu.",
+        "Simbol je sreće i vješamo je iznad vrata.",
+        "Oblika je slova U i radi se od željeza.",
+        "Kovač je vrućom oblikuje na nakovnju i pribija čavlima.",
+        "Bacanjem je na klin igra se igra spretnosti u dvorištu.",
+        "Ono što kovač pribije konju ispod noge.",
+        "Visiš je na vrata da ti donese sreću.",
+        "Oblika je slova U od željeza.",
+        "Kad je nađeš na cesti, kažu da ćeš imati sreće."
+      ]
+    },
+    {
+      "word": "kist",
+      "clues": [
+        "Alat kojim slikari nanose boju na platno.",
+        "Ima dršku i mekane dlačice na vrhu.",
+        "Koristiš ga za crtanje i bojanje.",
+        "Umačeš ga u boju i njime crtaš crte i oblike.",
+        "Umjetnik njime stvara djela koja vise u galerijama.",
+        "Opereš ga vodom kad zamijeniš jednu boju drugom.",
+        "Ono čime razmažeš boju po papiru na satu likovnog.",
+        "Slično olovci, ali ima meke dlačice umjesto vrha.",
+        "Umočiš ga u vodenu boju pa povučeš preko lista.",
+        "Operu se dlačice da ne ostane stara boja."
+      ]
+    },
+    {
+      "word": "grožđe",
+      "clues": [
+        "Voće koje raste skupljeno na vinovoj lozi.",
+        "Sitni okrugli plodovi nanizani na peteljci.",
+        "Od njega se pravi vino i sok.",
+        "Može biti zeleno ili tamnocrveno i slatko je.",
+        "U jesen ga beru s loze i gnječe da dobiju mošt.",
+        "Suši se na suncu i postaje sitna suha bobica za kolače.",
+        "Ono što visi nanizano i jedeš bobicu po bobicu.",
+        "Od njega se gnječenjem dobije sok pa i vino.",
+        "Slično bobicama, ali raste skupljeno na peteljci.",
+        "Osušeno postane sitno i smežurano za stavljanje u kolače."
+      ]
+    },
+    {
+      "word": "škare",
+      "clues": [
+        "Alatka s dva oštrica za rezanje papira ili tkanine.",
+        "Drže se s jednom rukom i rezanjem otvaraju i zatvaraju.",
+        "Frizerima su nezaobilazan alat pri šišanju.",
+        "Ima dvije petlje za prste i dvije oštrice.",
+        "Mama njima izrezuje oblike iz kolaž papira za zadaću.",
+        "Učenici ih nose u pernici za rezanje slika i listića.",
+        "Ono čime režeš papir kad praviš ukrase.",
+        "Slično nožu, ali ima dvije oštrice koje se sklapaju.",
+        "Mama ti njima podreže nokte ako su predugi.",
+        "Provučeš prste kroz dvije rupe pa stišćeš."
+      ]
+    },
+    {
+      "word": "zvijezda",
+      "clues": [
+        "Svjetlucava točka koju vidimo na nebu noću.",
+        "Sunce je najbliži primjer toga u svemiru.",
+        "Ima oblik s pet krakova kao ukras ili simbol.",
+        "Pjevači i glumci često se zovu tim imenom.",
+        "Padalice gledaš u kolovozu i zaželiš želju kad sklizne nebom.",
+        "Brojne se sastaju u skupine koje crtamo na noćnom nebu.",
+        "Ono što svjetluca visoko na nebu kad padne noć.",
+        "Slično je svjetiljci, ali je nezamislivo daleko.",
+        "Nacrtaš je s pet šiljaka kad slikaš nebo.",
+        "Najslavniji pjevači zovu se baš tim imenom."
+      ]
+    },
+    {
+      "word": "spajalica",
+      "clues": [
+        "Mali metalni predmet za spajanje listova papira.",
+        "Savijen je u obliku koji steže papire zajedno.",
+        "Koristi se u uredu umjesto ljepila ili heftalice.",
+        "Tanka žičica savijena u petlju koja drži papire.",
+        "Spojiš njome zadaću da ti listovi ne ispadnu iz torbe.",
+        "Iz nje se može ispraviti tanka žica za otključavanje.",
+        "Ono čime skupiš listove zadaće da se ne pomiješaju.",
+        "Slično heftalici, ali ne probija papir nego ga stisne.",
+        "Od savijene žice oblikovana petlja koja steže.",
+        "Skineš je pa se listovi razlete po stolu."
+      ]
+    },
+    {
+      "word": "vrata",
+      "clues": [
+        "Otvaraš ih da uđeš ili izađeš iz prostorije.",
+        "Imaju šarke s jedne strane i kvaku s druge.",
+        "Svaka kuća i soba ima taj otvor s poklopcem.",
+        "Mogu biti drvena, metalna ili staklena.",
+        "Zvoni netko izvana pa ih otvaraš da vidiš tko je došao.",
+        "Lupaju kad ih propuh tresne pa ih zatvaraš da utihnu.",
+        "Ono što otvoriš kad netko pozvoni da uđe.",
+        "Slično prozoru, ali kroz njih prolaziš tijelom.",
+        "Lupe od propuha pa ih moraš pridržati.",
+        "Zatvoriš ih da te nitko ne čuje u sobi."
+      ]
+    },
+    {
+      "word": "trofej",
+      "clues": [
+        "Nagrada u obliku kupa ili kipića za pobjednika.",
+        "Sportaši ga dobivaju kad osvoje turnir ili natjecanje.",
+        "Stoji na polici kao dokaz pobjede ili uspjeha.",
+        "Često je od zlata ili srebra i sjaji ponosno.",
+        "Pobjednik ga visoko podiže iznad glave pred navijačima.",
+        "Najpoznatiji u nogometu zlatne je boje i naziva se po svjetskom prvenstvu.",
+        "Ono što pobjednik podigne visoko iznad glave.",
+        "Slično je peharu ili kipiću od sjajnog metala.",
+        "Stoji na polici da svi vide kako si bio najbolji.",
+        "Dobiješ ga kad osvojiš prvo mjesto na natjecanju."
+      ]
+    },
+    {
+      "word": "suknja",
+      "clues": [
+        "Odjevni predmet koji žene nose oko struka prema dolje.",
+        "Nema nogavice i može biti duga ili kratka.",
+        "Dio je ženske odjeće koji se širi prema dnu.",
+        "Može biti ravna, nabrana ili u obliku A-linije.",
+        "Balerine je nose lepršavu i kratku pri plesu.",
+        "Škotski muškarci nose kariranu inačicu uz gajde.",
+        "Ono što djevojčice obuku umjesto hlača na donji dio.",
+        "Slično haljini, ali pokriva samo od struka nadolje.",
+        "Lepršaju kad se vrtiš u krug.",
+        "Balerine nose kratku i nabranu dok plešu."
+      ]
+    },
+    {
+      "word": "tanjur",
+      "clues": [
+        "S njega jedeš hranu za ručak ili večeru.",
+        "Okrugao je i ravan u sredini s rubom.",
+        "Stavlja se na stol i na njega se poslaže obrok.",
+        "Može biti od porculana, plastike ili metala.",
+        "Nakon ručka odnosiš ga prljavog do sudopera na pranje.",
+        "Ujutro u njega usuješ pahuljice i preliješ mlijekom.",
+        "Ono na što ti mama stavi ručak da pojedeš.",
+        "Slično zdjeli, ali je plitak i ravan.",
+        "Razbije se na komadiće kad ti padne na pod.",
+        "Pereš ga nakon jela da bude opet čist."
+      ]
+    },
+    {
+      "word": "krastavac",
+      "clues": [
+        "Zeleno duguljasto povrće koje jedemo u salati.",
+        "Hladan je i sočan, najčešće se jede sirov.",
+        "Raste na tlu u vrtu i ima tanku zelenu kožicu.",
+        "Popularan je u kiselim narezima i osvježavajućim salatama.",
+        "Često ga stavljamo na kriške i koristimo kao masku za lice.",
+        "Od njega radimo i sok ili ga narežemo u zdjelu s vodom za osvježenje.",
+        "Ono zeleno i dugačko što narežeš u salatu.",
+        "Slično je tikvici, ali se jede sirovo i hladno.",
+        "Kriške njega staviš na oči da se odmoriš.",
+        "Sočan je i hrska kad zagrizeš."
+      ]
+    },
+    {
+      "word": "kruh",
+      "clues": [
+        "Pečemo ga od brašna, vode i kvasca.",
+        "Režemo ga na kriške i jedemo uz obrok.",
+        "Osnovna namirnica koja miriše divno kad je svježe pečen.",
+        "Bijeli ili crni, nalazi se na svačijem stolu.",
+        "Pekar ga svako jutro slaže na police u svojoj prodavaonici.",
+        "Mrvice koje ostanu od njega rado bacamo pticama u parku.",
+        "Ono što kupiš u pekari svako jutro za doručak.",
+        "Miriše predivno dok je još topao iz pećnice.",
+        "Slično je peciva, samo je veći i režeš ga na ploške.",
+        "Bacaš mrvice patkama u parku."
+      ]
+    },
+    {
+      "word": "lutka",
+      "clues": [
+        "Igračka u obliku djevojčice ili bebe za djecu.",
+        "Djeca je oblače, češljaju joj kosu i igraju se s njom.",
+        "Može biti od plastike ili tkanine i ima lice.",
+        "Barbie je najpoznatiji primjer te igračke.  ",
+        "Smjestimo je u malu kućicu ili kolica dok se igramo mame i tate.",
+        "Ima ručice, nožice i očice, a često zatvori oči kad je položimo da spava.",
+        "Ono što djevojčice oblače i češljaju kao da je beba.",
+        "Barbie je najpoznatija takva igračka.",
+        "Slično je medvjediću, ali ima lice kao čovjek.",
+        "Zatvori oči kad je položiš da spava."
+      ]
+    }
+  ],
+  "imageURLString": "croatia"
+}

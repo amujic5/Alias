@@ -1,0 +1,802 @@
+{
+  "language": "Croatian",
+  "languageCode": "CRO",
+  "words": [
+    {
+      "word": "akcija",
+      "clues": [
+        "Žanr filma pun borbi, potjera i eksplozija.",
+        "Gledaš ga kad želiš uzbuđenje i adrenalinske scene.",
+        "Junak se bori s neprijateljem uz puno specijalnih efekata.",
+        "Filmovi poput Terminatora ili Misije nemoguće spadaju ovdje.",
+        "U ovom žanru jure se automobili i pucaju pištolji.",
+        "Brzi tempo i scene tučnjave glavno su obilježje ovih filmova.",
+        "Suprotno od mirne romantične priče bez ijednog pucnja.",
+        "Kad čuješ škripu guma i prasak, vjerojatno gledaš upravo to.",
+        "Slično kao ono što rade James Bond ili John Wick cijelo vrijeme.",
+        "Glavni junak obično skače, trči i razbija sve oko sebe."
+      ]
+    },
+    {
+      "word": "avantura",
+      "clues": [
+        "Žanr u kojem likovi putuju na uzbudljiva i opasna mjesta.",
+        "Puna otkrića, putovanja i neočekivanih izazova.",
+        "Indiana Jones traži izgubljene artefakte u ovom žanru.",
+        "Gledaš ga kad voliš priče o junacima koji istražuju nepoznato.",
+        "Likovi kreću na opasno putovanje pun zamki i blaga.",
+        "Pirati i istraživači često su junaci ovakvih priča.",
+        "Slično putovanju do nepoznatog otoka u potrazi za skrivenim blagom.",
+        "Asocira na mapu, kompas i čamac koji plovi prema novim krajevima.",
+        "Junak prelazi planine i rijeke ne bi li stigao do cilja.",
+        "Misli na onu vrstu priče gdje se penje po liticama i bježi od zamki."
+      ]
+    },
+    {
+      "word": "drama",
+      "clues": [
+        "Ozbiljan filmski žanr koji prikazuje emocionalne životne priče.",
+        "Likovi se suočavaju s teškim osobnim i društvenim problemima.",
+        "Često te natera da plačeš zbog snažnih emocija.",
+        "Titanic i Schindlerova lista primjeri su ovog žanra.",
+        "Žanr koji prikazuje teške sudbine i unutarnje borbe likova.",
+        "Nema akcije ni smijeha, samo iskreni prikaz života.",
+        "Suprotno od lagane vesele priče punih šala.",
+        "Često se gledatelju steže grlo dok prati teške sudbine junaka.",
+        "Slično ozbiljnoj priči o bolesti, gubitku ili razvodu u obitelji.",
+        "Tu nema čudovišta ni eksplozija, samo bolne ljudske emocije."
+      ]
+    },
+    {
+      "word": "komedija",
+      "clues": [
+        "Filmski žanr čija je svrha nasmijati publiku.",
+        "Pun smiješnih situacija, šala i nesporazuma.",
+        "Nakon gledanja osjećaš se veselo i nasmijano.",
+        "Mr. Bean ili Neka puca karta primjeri su ovog žanra.",
+        "Lagani žanr koji te zabavlja i tjera na smijeh.",
+        "Cilj mu je razveseliti gledatelja, a ne uplašiti ga.",
+        "Suprotno od onoga što te plaši i tjera trnce niz leđa.",
+        "Asocira na grohot, kokice i opušteno veselje uz prijatelje.",
+        "Slično onome što rade Charlie Chaplin ili Adam Sandler u svojim ulogama.",
+        "Cijela dvorana se trese od smijeha dok prati zaplet."
+      ]
+    },
+    {
+      "word": "triler",
+      "clues": [
+        "Napeti žanr koji te drži na rubu stolice do kraja.",
+        "Pun neizvjesnosti, tajni i opasnih obrta radnje.",
+        "Često se vrti oko ubojstava, špijuna ili opasnih situacija.",
+        "Hitchcockovi filmovi klasični su primjeri ovog žanra.",
+        "Gledatelja drži u napetosti i grči mu želudac do raspleta.",
+        "Često prati istragu, jurnjavu ili borbu protiv vremena.",
+        "Slično je kao kad cijelo vrijeme grizeš nokte ne znajući rasplet.",
+        "Asocira na tamnu sobu, kucanje sata i osjećaj da nešto loše slijedi.",
+        "Glavni junak često bježi od nekoga tko ga progoni do zadnje minute.",
+        "Suprotno od vesele opuštene priče gdje sve teče glatko."
+      ]
+    },
+    {
+      "word": "horor",
+      "clues": [
+        "Žanr koji te plaši i izaziva strah i jezu.",
+        "Pun čudovišta, duhova i zastrašujućih situacija.",
+        "Gledat ćeš ga iza jastuka zbog strašnih scena.",
+        "Filmovi poput Vriske ili Sjajanja spadaju ovdje.",
+        "Žanr koji izaziva jezu, krikove i hladne trnce.",
+        "Često se događa u mraku, uz krv i jezivu glazbu.",
+        "Asocira na vrisak, krv i nešto što vreba u mraku podruma.",
+        "Slično onome što rade Freddy Krueger ili duh u napuštenoj kući.",
+        "Gledaš ga kroz prste i poslije ne možeš zaspati.",
+        "Suprotno od tople vesele priče za cijelu obitelj."
+      ]
+    },
+    {
+      "word": "fantazija",
+      "clues": [
+        "Žanr smješten u izmišljenim svjetovima s magijom i čudovištima.",
+        "Pun čarobnjaka, zmajeva i nadnaravnih bića.",
+        "Gospodar prstenova jedan je od poznatih primjera.",
+        "Radnja se ne može dogoditi u stvarnom životu.",
+        "Žanr smješten u nestvarne svjetove pune čarolija i bića.",
+        "Harry Potter pripada upravo ovoj vrsti filmova.",
+        "Asocira na vilenjake, čarobne štapiće i leteće metle.",
+        "Slično pričama o Narniji gdje djeca ulaze u nestvarni svijet.",
+        "Sve što se ondje događa nemoguće je u našem stvarnom životu.",
+        "Suprotno od dokumentarca koji prikazuje samo istinite činjenice."
+      ]
+    },
+    {
+      "word": "misterij",
+      "clues": [
+        "Žanr u kojemu se rješava zagonetka ili zločin.",
+        "Publika zajedno s likovima otkriva skrivenu istinu.",
+        "Tko je počinio zločin otkriva se na kraju.",
+        "Detektivske priče poput Herkulea Poirota spadaju ovdje.",
+        "Žanr u kojem se polako otkriva tko je krivac i zašto.",
+        "Detektiv slaže tragove dok ne razriješi zagonetku.",
+        "Slično onome što radi Sherlock Holmes dok lovi krivca.",
+        "Asocira na povećalo, otiske prstiju i skrivene tragove.",
+        "Gledatelj cijelo vrijeme pokušava pogoditi tko je krivac prije kraja.",
+        "Suprotno od priče gdje odmah na početku znaš sve odgovore."
+      ]
+    },
+    {
+      "word": "romansa",
+      "clues": [
+        "Filmski žanr koji prikazuje ljubavne priče između likova.",
+        "Pun osjećaja, zagrljaja i sretnih ili tužnih rastanaka.",
+        "Dirty Dancing ili Ponos i predrasuda primjeri su.",
+        "Srce ti se topi gledajući ljubavne zaplete.",
+        "Žanr u središtu kojeg je ljubavna priča između dvoje ljudi.",
+        "Notting Hill ili Bilježnica primjeri su takvih filmova.",
+        "Suprotno od priče pune pucnjave i eksplozija.",
+        "Asocira na svijeće, cvijeće i prvi nesigurni poljubac.",
+        "Slično onome što osjećaš gledajući zaljubljeni par na kiši.",
+        "Često završava vjenčanjem ili tužnim oproštajem na kolodvoru."
+      ]
+    },
+    {
+      "word": "povijesni",
+      "clues": [
+        "Žanr čija se radnja odvija u prošlosti, davno prije nas.",
+        "Prikazuje važne događaje i ličnosti iz prošlih vremena.",
+        "Odjeća i scenografija vjerno dočaravaju davno minula doba.",
+        "Gladijator je smješten u staro rimsko doba.",
+        "Žanr koji nas vraća u doba kraljeva, bitaka i starih običaja.",
+        "Brave heart prikazuje srednjovjekovne sukobe ovog tipa.",
+        "Asocira na dvorce, vitezove i kočije iz davnih stoljeća.",
+        "Slično pričama o starom Egiptu, Rimu ili srednjem vijeku.",
+        "Sve se događa puno prije nego što smo se mi rodili.",
+        "Kostimi, oklopi i mačevi vraćaju gledatelja u prošla vremena."
+      ]
+    },
+    {
+      "word": "ratni",
+      "clues": [
+        "Žanr koji prikazuje sukobe između vojski i naroda.",
+        "Pun borbi, strategija i ljudskih tragedija na bojištu.",
+        "Spašavanje vojnika Ryana poznati je primjer.",
+        "Govori o hrabrosti i žrtvi vojnika u ratu.",
+        "Žanr smješten na frontu, među vojnicima i u rovovima.",
+        "Apokalipsa danas prikazuje strahote oružanog sukoba.",
+        "Asocira na tenkove, rovove i vojnike koji jure preko bojišta.",
+        "Slično pričama o Drugom svjetskom sukobu i iskrcavanju u Normandiji.",
+        "Suprotno od vesele lagane priče za opuštanje.",
+        "Prikazuje strahote borbe i žrtvu onih koji se bore za domovinu."
+      ]
+    },
+    {
+      "word": "sportski",
+      "clues": [
+        "Žanr koji prati sportaše na putu do pobjede ili poraza.",
+        "Pun treninga, natjecanja i motivacijskih trenutaka.",
+        "Rocky je klasičan primjer priče o borcu.",
+        "Gledaš ga kad te nadmetanje na terenu nadahnjuje.",
+        "Žanr smješten na teren, u ring ili na atletsku stazu.",
+        "Često prikazuje uspon outsidera do velike pobjede.",
+        "Asocira na loptu, medalje i navijače koji bodre s tribina.",
+        "Slično pričama o boksaču koji trenira do iznemoglosti za veliki meč.",
+        "Suprotno od priče smještene u dvorac ili svemirski brod.",
+        "Gledaš znojenje, treninge i trenutak slavlja na pobjedničkom postolju."
+      ]
+    },
+    {
+      "word": "obiteljski",
+      "clues": [
+        "Žanr prikladan za sve uzraste, od djece do baka i djedova.",
+        "Priče govore o ljubavi, zajedništvu i vrijednostima doma.",
+        "Lav kralj ili Dumbo primjeri su za najmlađe.",
+        "Možeš ga gledati zajedno s mamom, tatom i klincima.",
+        "Bezopasan žanr koji roditelji mirno puštaju djeci.",
+        "Pun je topline i pouka o zajedništvu i odrastanju.",
+        "Slično crtiću koji bez brige pustiš najmlađima da gledaju.",
+        "Asocira na zajedničko sjedenje pred ekranom uz djecu i bake.",
+        "Suprotno od krvavog horora koji djeca nikako ne smiju gledati.",
+        "Pun je topline, pouka i sretnog završetka za sve uzraste."
+      ]
+    },
+    {
+      "word": "animirani",
+      "clues": [
+        "Filmski žanr u kojemu likovi nisu stvarni glumci nego crteži.",
+        "Svaki kadar nacrtan je ili računalno generiran.",
+        "Djeca ga obožavaju jer je šarolik i dinamičan.",
+        "Toy Story i Frozen primjeri su iz ovog žanra.",
+        "Žanr u kojem se likovi pomiču sličicu po sličicu, a ne snimaju.",
+        "Pixar i Disney najpoznatiji su po ovoj vrsti filmova.",
+        "Suprotno od filma sa stvarnim glumcima od krvi i mesa.",
+        "Asocira na šarene crteže koji oživljavaju na ekranu.",
+        "Slično onome što rade Spužva Bob ili junaci iz Shreka.",
+        "Likovi su nacrtani ili napravljeni na računalu, a ne snimljeni."
+      ]
+    },
+    {
+      "word": "dokumentarni",
+      "clues": [
+        "Vrsta filma koji prikazuje stvarne ljude i događaje.",
+        "Nema glumaca ni izmišljene radnje, samo stvarnost.",
+        "Možeš naučiti nešto novo gledajući ga.",
+        "Planeta Zemlja poznata je serija ovog tipa.",
+        "Vrsta filma koja istražuje prirodu, povijest ili znanost iz stvarnog života.",
+        "Često ima naratora koji objašnjava prave snimke i činjenice.",
+        "Suprotno od izmišljene priče s glumcima i scenarijem.",
+        "Asocira na prave snimke divljih životinja ili povijesnih događaja.",
+        "Slično onome što gledaš na kanalima poput National Geographica.",
+        "Iz njega zaista nešto naučiš jer prikazuje samo istinu."
+      ]
+    },
+    {
+      "word": "muzikal",
+      "clues": [
+        "Filmski žanr u kojemu likovi pjevaju i plešu umjesto govore.",
+        "Priča se prepliće s glazbenim brojevima i koreografijom.",
+        "Mama Mia i Grease poznati su primjeri.",
+        "Glazba i ples prenose emocije umjesto dijaloga.",
+        "Žanr u kojem se priča pripovijeda kroz pjesme i plesne točke.",
+        "La La Land suvremeni je primjer ove vrste filmova.",
+        "Suprotno od običnog filma gdje likovi samo razgovaraju.",
+        "Asocira na pjevanje, ples i raskošne pozornice s reflektorima.",
+        "Slično onome što gledaš u Mary Poppins ili Ljepotici i zvijeri.",
+        "Likovi usred razgovora odjednom zapjevaju i zaplešu."
+      ]
+    },
+    {
+      "word": "redatelj",
+      "clues": [
+        "Osoba koja vodi snimanje filma i govori glumcima što raditi.",
+        "On ili ona odlučuje kako scena izgleda i zvuči.",
+        "Spielberg i Kubrick poznata su imena ove profesije.",
+        "Bez nje niti jedan film ne bi mogao nastati.",
+        "On nadzire glumce i tehničare te oblikuje svaku scenu po svojoj viziji.",
+        "Njegova vizija određuje kako će gotov film izgledati.",
+        "Ta osoba viče 'akcija' i 'rez' tijekom snimanja.",
+        "Slično dirigentu, ali umjesto orkestra vodi glumce i ekipu.",
+        "Ime te osobe obično piše najveće na filmskom plakatu.",
+        "Quentin Tarantino jedna je od najpoznatijih osoba ovog posla."
+      ]
+    },
+    {
+      "word": "scenarist",
+      "clues": [
+        "Osoba koja piše priču i dijaloge za film ili seriju.",
+        "Sve što glumci govore, ova osoba je to napisala.",
+        "Radi na tekstu po kojem se kasnije snima film.",
+        "Bez njezina pisanog predloška snimanje ne može početi.",
+        "Sjedi i piše replike koje će glumci kasnije izgovoriti.",
+        "Njegov rad nastaje za stolom, prije nego kamere krenu.",
+        "Slično piscu romana, ali stvara priču namijenjenu kameri.",
+        "Ta osoba smišlja replike koje glumci kasnije izgovaraju.",
+        "Radi za stolom s tipkovnicom, daleko od svjetla reflektora.",
+        "Bez njegova teksta glumci ne bi imali što reći."
+      ]
+    },
+    {
+      "word": "producent",
+      "clues": [
+        "Osoba koja organizira novac i resurse za snimanje filma.",
+        "Brine se da snimanje teče po planu i budžetu.",
+        "Često stoji iza kulisa, ali njegovo ime vidimo na početku.",
+        "Bez te osobe film ne bi imao financijsku podršku.",
+        "On okuplja ekipu i osigurava da projekt ima dovoljno sredstava.",
+        "Donosi poslovne odluke i nadzire troškove cijelog filma.",
+        "Slično šefu projekta koji brine o novcu i rokovima.",
+        "Ta osoba okuplja ekipu i traži ulagače za snimanje.",
+        "Manje je kreativan, a više poslovni dio nastanka filma.",
+        "Bez njega ne bi bilo dovoljno sredstava da projekt zaživi."
+      ]
+    },
+    {
+      "word": "snimatelj",
+      "clues": [
+        "Osoba koja drži kameru i bilježi sve scene na setu.",
+        "Odgovoran je za vizualnu sliku filma i osvjetljenje.",
+        "Svaki lijepi kadar koji vidimo, ta ga je osoba snimila.",
+        "Surađuje s redateljem kako bi ostvario željenu atmosferu.",
+        "On bira kut, oštrinu i kompoziciju svake snimke.",
+        "Direktor fotografije drugo je ime za ovo zanimanje.",
+        "Ta osoba gleda kroz objektiv i bira što će kamera vidjeti.",
+        "Slično fotografu, ali umjesto fotke bilježi pokretne prizore.",
+        "Brine o svjetlu, sjeni i kompoziciji svakog kadra.",
+        "Direktor fotografije drugi je naziv za to zanimanje."
+      ]
+    },
+    {
+      "word": "montažer",
+      "clues": [
+        "Osoba koja spaja snimljene scene u konačan film.",
+        "Sjedi u studiju i reže i lijepi dijelove snimke.",
+        "Odlučuje što ostaje u filmu, a što se izbacuje.",
+        "Ritam i tempo filma ovise upravo o njezinu radu.",
+        "On u postprodukciji slaže snimke pravim redoslijedom.",
+        "Pred ekranom reže i spaja materijal u gotovu cjelinu.",
+        "Slično kuharu koji od mnogo sastojaka slaže gotovo jelo.",
+        "Ta osoba reže i spaja snimke u tihoj sobi pred ekranom.",
+        "Odlučuje koje će snimke ostati, a koje završiti u smeću.",
+        "Radi nakon snimanja, u fazi obrade gotovog materijala."
+      ]
+    },
+    {
+      "word": "scenograf",
+      "clues": [
+        "Osoba koja osmišljava i gradi vizualno okruženje za film.",
+        "Dizajnira sobe, ulice i sve što kamera vidi iza glumaca.",
+        "Zahvaljujući njemu stara Rim izgleda uvjerljivo na setu.",
+        "Radi na stvaranju prostora u kojemu se odvija radnja.",
+        "On odlučuje kako će izgledati kulise i prostor u kadru.",
+        "Pretvara prazan studio u srednjovjekovni dvorac ili svemirski brod.",
+        "Ta osoba pretvara prazan studio u staru ulicu ili dvoranu.",
+        "Slično arhitektu i dekorateru, ali za potrebe snimanja.",
+        "Brine da prostor iza glumaca izgleda uvjerljivo i stvarno.",
+        "Zahvaljujući njemu vidimo svemirski brod ili srednjovjekovni grad."
+      ]
+    },
+    {
+      "word": "kostimograf",
+      "clues": [
+        "Osoba koja osmišljava i priprema odjeću za glumce.",
+        "Svaku haljinu, odijelo ili oklop koji glumac nosi, ta je osoba odabrala.",
+        "U povijesnim filmovima brine da odjeća odgovara razdoblju.",
+        "Moda i kreativnost spajaju se u ovom zanimanju.",
+        "On bira haljine, odijela i sve što glumci nose pred kamerom.",
+        "Surađuje s krojačima da odjeća pristaje liku i razdoblju.",
+        "Ta osoba bira haljine, odijela i uniforme za svaki lik.",
+        "Slično modnom dizajneru, ali odjeću kroji za potrebe priče.",
+        "Brine da odjeća odgovara razdoblju i karakteru lika.",
+        "Zahvaljujući njoj vitez nosi oklop, a princeza raskošnu haljinu."
+      ]
+    },
+    {
+      "word": "kompozitor",
+      "clues": [
+        "Osoba koja stvara glazbu za film ili seriju.",
+        "Njegova melodija pojačava emocije svake scene.",
+        "Hans Zimmer poznat je po glazbi za blockbustere.",
+        "Bez njega filmovi ne bi imali prepoznatljivu glazbenu temu.",
+        "On piše note i melodije koje prate scene filma.",
+        "Glazbena podloga koju čuješ u kinu njegovo je djelo.",
+        "Ta osoba piše glazbu koja u pozadini pojačava emocije.",
+        "Slično glazbeniku koji stvara melodiju samo za potrebe filma.",
+        "Ono što čuješ dok junak trči ili plače njegovo je djelo.",
+        "Ennio Morricone bio je poznat po radu na vesternima."
+      ]
+    },
+    {
+      "word": "kaskader",
+      "clues": [
+        "Osoba koja umjesto glumca izvodi opasne trikove i skokove.",
+        "Zamijenio bi te kada trebaš pasti s visine ili gorjeti.",
+        "Zahvaljujući njemu glumac izgleda kao da radi nemoguće stvari.",
+        "Sigurnost i vještina ključne su za ovo zanimanje.",
+        "On riskira ozljede izvodeći skokove umjesto slavne zvijezde.",
+        "Pad s krova ili borbu obavlja umjesto pravog glumca.",
+        "Ta osoba pada s krova umjesto slavne zvijezde.",
+        "Slično akrobatu, ali radi opasne scene koje glumac ne smije.",
+        "Zamjenjuje glumca kad treba skočiti iz auta ili gorjeti.",
+        "Zahvaljujući njemu junak izgleda neustrašivo i nepobjedivo."
+      ]
+    },
+    {
+      "word": "koreograf",
+      "clues": [
+        "Osoba koja osmišljava i uči plesne pokrete za nastup ili film.",
+        "Svaki korak koji plesač izvodi, ta osoba je osmislila.",
+        "U mjuziklima i spotovima njezin je rad najvidljiviji.",
+        "Kombinira glazbu i pokret u skladnu cjelinu.",
+        "On slaže plesne korake koje izvođači zatim ponavljaju.",
+        "U scenama plesa njegova zamisao oživljava na pozornici.",
+        "Ta osoba smišlja plesne korake koje izvođači uvježbavaju.",
+        "Slično učitelju plesa, ali za potrebe nastupa ili snimke.",
+        "Spaja glazbu i pokret u skladne usklađene točke.",
+        "Zahvaljujući njoj plesači se kreću kao jedno tijelo na pozornici."
+      ]
+    },
+    {
+      "word": "režija",
+      "clues": [
+        "Kreativno vođenje i oblikovanje cjelokupnog filmskog projekta.",
+        "Sve odluke o vizualnom stilu filma spadaju pod ovo.",
+        "To je posao kojim se bavi redatelj na setu.",
+        "U odjavnoj špici piše pod ovom riječju ime redatelja.",
+        "Umjetničko vođenje cijele snimke, od glumaca do kadrova.",
+        "To je ono što na plakatu piše uz ime glavnog autora filma.",
+        "To je ono što redatelj radi na setu, izraženo jednom riječju.",
+        "U odjavnoj špici tom riječju označava se glavni autor.",
+        "Slično vođenju cijelog tima prema jedinstvenoj viziji.",
+        "Obuhvaća sve odluke o tome kako će scena izgledati i zvučati."
+      ]
+    },
+    {
+      "word": "scenarij",
+      "clues": [
+        "Pisani dokument koji sadrži dijaloge i opis svakog prizora u filmu.",
+        "Glumci uče tekst iz njega prije snimanja.",
+        "Sve što se kaže i dogodi u filmu, ovdje je zapisano.",
+        "Autor priče ga napiše, a redatelj pretvori u sliku.",
+        "Knjiga s replikama i opisima radnje po kojoj se snima film.",
+        "U njemu piše tko što govori i što se događa u svakom prizoru.",
+        "Slično knjizi, ali piše po čemu se snima film.",
+        "U njemu stoji svaka replika i opis onoga što se događa.",
+        "Glumci ga čitaju i uče napamet prije snimanja.",
+        "To je papirnati nacrt cijele priče prije nego krene kamera."
+      ]
+    },
+    {
+      "word": "snimanje",
+      "clues": [
+        "Proces bilježenja scena kamerom na filmskom setu.",
+        "Odvija se prema rasporedu i može trajati tjednima.",
+        "Tada glumci igraju, a tehničari nadziru opremu.",
+        "Nakon tog procesa slijedi montaža i obrada materijala.",
+        "Razdoblje rada na setu kada kamere rade i scene se bilježe.",
+        "Glumci, rasvjeta i kamere zajedno rade tijekom tog procesa.",
+        "Razdoblje kad cijela ekipa radi na setu pred kamerama.",
+        "To je faza koja dolazi nakon scenarija, a prije montaže.",
+        "Slično izvedbi predstave, samo što kamera sve bilježi.",
+        "Tada glumci igraju, a rasvjeta i mikrofoni rade punom parom."
+      ]
+    },
+    {
+      "word": "produkcija",
+      "clues": [
+        "Cjelokupan proces nastanka filma od ideje do gotovog djela.",
+        "Uključuje planiranje, snimanje i završnu obradu.",
+        "Velika studijska kuća brine se o ovom procesu.",
+        "Hollywood je poznat po velikim filmskim procesima ove vrste.",
+        "Sav posao oko nastanka filma, od scenarija do premijere.",
+        "Veliki budžet i mnogo ljudi stoji iza ovog procesa.",
+        "Cijeli posao oko nastanka filma od ideje do premijere.",
+        "Obuhvaća planiranje, snimanje i završnu obradu zajedno.",
+        "Velika studijska kuća stoji iza cijelog tog procesa.",
+        "Slično gradnji kuće, ali umjesto zgrade nastaje film."
+      ]
+    },
+    {
+      "word": "audicija",
+      "clues": [
+        "Proba na kojoj glumci pokazuju talent kako bi dobili ulogu.",
+        "Redatelji i producenti gledaju nastupe i odabiru najboljeg.",
+        "Svaki glumac mora proći kroz nju prije nego dobije posao.",
+        "Trema i uzbuđenje prate svaki ovakav nastup.",
+        "Proba pred ekipom na kojoj se bira tko će glumiti lik.",
+        "Glumac odglumi prizor nadajući se da će dobiti ulogu.",
+        "Proba na kojoj glumac pokazuje može li dobiti ulogu.",
+        "Slično razgovoru za posao, ali se ondje glumi prizor.",
+        "Trema je velika jer o tom nastupu ovisi hoće li dobiti lik.",
+        "Redatelj gleda nekoliko kandidata i bira najboljeg za ulogu."
+      ]
+    },
+    {
+      "word": "statist",
+      "clues": [
+        "Osoba koja se pojavljuje u pozadini filmske scene bez teksta.",
+        "Ne igra glavnu ulogu, ali upotpunjuje sliku pozadine.",
+        "U scenama gužve ili ulice, takve ljude plaćaju da stoje.",
+        "Tisuće takvih osoba sudjelovalo je u snimanju Gladijatora.",
+        "Osoba u masovnoj sceni koja samo ispunjava pozadinu kadra.",
+        "Hoda ulicom ili sjedi u kafiću dok glavni glumci igraju.",
+        "Osoba koja u pozadini stoji ili hoda bez ijedne replike.",
+        "Slično ljudima u gomili koji samo ispunjavaju prizor.",
+        "Vidiš ga kako sjedi u kafiću dok glavni junaci razgovaraju.",
+        "Plaćen je da bude u kadru, ali nikad ne progovori."
+      ]
+    },
+    {
+      "word": "negativac",
+      "clues": [
+        "Lik u filmu koji je zao i ometa junaka u ciljevima.",
+        "Često mu je cilj uništiti sve oko sebe.",
+        "Darth Vader jedan je od najpoznatijih ovog tipa.",
+        "Bez takvog lika junak ne bi imao koga pobijedi.",
+        "Glavni protivnik koji junaku stoji na putu.",
+        "Joker u Batmanu tipičan je primjer takvog lika.",
+        "Suprotno od dobrog junaka kojemu navijamo.",
+        "Ta osoba u priči smišlja zle planove i radi probleme.",
+        "Slično zlikovcu iz crtića koji uvijek gubi na kraju.",
+        "Lord Voldemort iz priča o čarobnjaku tipičan je takav lik."
+      ]
+    },
+    {
+      "word": "narator",
+      "clues": [
+        "Glas koji priča priču i objašnjava radnju gledatelju.",
+        "Čuješ ga, ali ga često ne vidiš na ekranu.",
+        "Ponekad je to sam junak koji priča o prošlosti.",
+        "U dokumentarcima ta osoba vodi gledatelja kroz sadržaj.",
+        "Nevidljivi pripovjedač čiji glas vodi gledatelja kroz radnju.",
+        "Komentira događaje izvan kadra dok se priča odvija.",
+        "Glas koji čuješ, a osobu rijetko vidiš na ekranu.",
+        "Slično pripovjedaču iz bajke koji vodi kroz priču.",
+        "U dokumentarcima taj glas objašnjava što se na snimci događa.",
+        "Komentira radnju izvan kadra dok se prizori nižu."
+      ]
+    },
+    {
+      "word": "premijera",
+      "clues": [
+        "Prvo javno prikazivanje filma pred publikom.",
+        "Glumci i redatelj dolaze u elegantnoj odjeći na taj događaj.",
+        "Crveni tepih i fotografe nalazimo na takvim svečanostima.",
+        "Nakon tog događaja film postaje dostupan široj publici.",
+        "Svečana večer prvog prikazivanja novog filma.",
+        "Tek nakon nje film stiže u redovne kinodvorane.",
+        "Prvo svečano prikazivanje novog filma pred publikom.",
+        "Asocira na crveni tepih, fotografe i blještave haljine.",
+        "Tek nakon te večeri film stiže u redovne dvorane.",
+        "Glumci i redatelj prvi put pokazuju svoje djelo svijetu."
+      ]
+    },
+    {
+      "word": "žiri",
+      "clues": [
+        "Skupina stručnjaka koja ocjenjuje i bira pobjednike na festivalu.",
+        "Na Cannesu ili Oscarima ta skupina dodjeljuje nagrade.",
+        "Svaki član glasa za film koji smatra najboljim.",
+        "Bez nje ne bi znali koji je film zaslužio zlatnu statuu.",
+        "Skupina sudaca koja dodjeljuje nagrade na filmskom natjecanju.",
+        "Oni gledaju filmove i odlučuju koji zaslužuje glavnu nagradu.",
+        "Skupina ljudi koja gleda filmove i bira najboljeg.",
+        "Slično sucima na natjecanju koji dodjeljuju ocjene.",
+        "Na Oscarima ta skupina odlučuje tko dobiva zlatni kipić.",
+        "Svaki član glasa, a zbroj glasova određuje pobjednika."
+      ]
+    },
+    {
+      "word": "kadar",
+      "clues": [
+        "Jedna neprekidna snimka kamerom bez reza.",
+        "Najmanji gradivni element od kojeg je film sastavljen.",
+        "Može biti kratak kao tren ili dugačak nekoliko minuta.",
+        "Montažer spaja više takvih isječaka u scene.",
+        "Neprekinuti dio snimke između dvaju rezova.",
+        "Od mnoštva takvih komadića sastavljena je svaka scena.",
+        "Najmanji komadić snimke između dva reza.",
+        "Slično jednoj rečenici, ali u filmskom jeziku.",
+        "Montažer od mnoštva takvih komadića slaže cijelu scenu.",
+        "Može trajati sekundu ili nekoliko minuta bez prekida."
+      ]
+    },
+    {
+      "word": "stativ",
+      "clues": [
+        "Tronožna metalna naprava na kojoj se postavlja kamera.",
+        "Drži kameru stabilnom da slika ne drhti.",
+        "Fotografu ili snimatelju neophodan je za mirne snimke.",
+        "Visinu i kut možeš podesiti prema potrebi.",
+        "Naprava s tri noge koja drži kameru da se ne ljulja.",
+        "Postavljaš ga na pod kako bi snimka bila mirna i ravna.",
+        "Naprava s tri noge na koju postaviš kameru.",
+        "Slično postolju koje drži uređaj da se ne miče.",
+        "Zahvaljujući njemu snimka je mirna i bez podrhtavanja.",
+        "Fotograf ga rasklopi na pod prije nego napravi snimku."
+      ]
+    },
+    {
+      "word": "kontrast",
+      "clues": [
+        "Razlika između svjetlih i tamnih dijelova slike.",
+        "Visok iznos ove vrijednosti čini sliku dramatičnijom.",
+        "Fotografski termin koji opisuje raspon tonova u snimci.",
+        "Uređuješ ga u programu za obradu fotografija i videa.",
+        "Pojam koji opisuje koliko se svjetlo i sjena razlikuju na slici.",
+        "Što je veći, oštrija je granica između crnog i bijelog.",
+        "Razlika između najsvjetlijih i najtamnijih dijelova slike.",
+        "Što je veći, oštrija je granica između crnog i bijelog.",
+        "Podešavaš ga u programu za obradu fotografija i videa.",
+        "Visoka vrijednost čini sliku dramatičnijom i izraženijom."
+      ]
+    },
+    {
+      "word": "napetost",
+      "clues": [
+        "Osjećaj tjeskobe i neizvjesnosti koji film izaziva kod gledatelja.",
+        "Srce ti kuca brže jer ne znaš što će se dogoditi.",
+        "Redatelj je gradi postupno glazbom i ritmom scena.",
+        "Triler i horor žanrovi poznati su po visokom stupnju toga.",
+        "Osjećaj zategnutosti koji te drži u iščekivanju raspleta.",
+        "Tišina prije naglog zvuka kod gledatelja stvara taj osjećaj.",
+        "Osjećaj zbog kojeg ti srce lupa dok čekaš rasplet.",
+        "Slično trenutku prije naglog zvuka kad zadržiš dah.",
+        "Redatelj je gradi tišinom, mrakom i sporom glazbom.",
+        "Triler i horor poznati su po tom uzbudljivom osjećaju."
+      ]
+    },
+    {
+      "word": "atmosfera",
+      "clues": [
+        "Ukupni osjećaj i raspoloženje koje film prenosi na gledatelja.",
+        "Postiže se osvjetljenjem, glazbom i scenografijom zajedno.",
+        "Mračna ili vesela, svaka dobra priča ima tu kvalitetu.",
+        "Kada izađeš iz kina i još osjećaš ugođaj filma, to je ona.",
+        "Neopipljiv ugođaj koji obavija cijeli film.",
+        "Maglovita ulica i tiha glazba stvaraju jezivu takvu kvalitetu.",
+        "Ukupni ugođaj i raspoloženje koje film ostavlja na tebi.",
+        "Maglovita ulica i tiha glazba stvaraju jezivu takvu kvalitetu.",
+        "Slično osjećaju koji ti ostane u sjećanju nakon kina.",
+        "Postiže se osvjetljenjem, glazbom i prostorom zajedno."
+      ]
+    },
+    {
+      "word": "humor",
+      "clues": [
+        "Sposobnost filma ili lika da nasmije i zabavi publiku.",
+        "Smiješne situacije i duhovite primjedbe dio su toga.",
+        "Komedije su pune ovog elementa.",
+        "Bez njega i najozbiljnija drama ponekad treba malo odmora.",
+        "Ono što izaziva osmijeh i smijeh tijekom gledanja.",
+        "Vicevi i smiješne dosjetke izvor su te zabave.",
+        "Ono što izaziva osmijeh i grohot dok gledaš.",
+        "Slično začinu koji svaku priču učini zabavnijom.",
+        "Komedije su prepune tog veselog elementa.",
+        "Vicevi i duhovite dosjetke njegov su glavni izvor."
+      ]
+    },
+    {
+      "word": "satira",
+      "clues": [
+        "Vrsta humora koja ismijava društvo, politiku ili poznate ličnosti.",
+        "Koristi ironiju i pretjerivanje kako bi ukazala na probleme.",
+        "Filmovi Stanleyja Kubricka ponekad koriste ovaj pristup.",
+        "Nasmije te, ali i natjera da razmisliš o društvu.",
+        "Oštro ruganje društvu i moćnicima kroz pretjerane prikaze.",
+        "Ismijava mane svijeta dok te istovremeno zabavlja.",
+        "Oštro ruganje politici i moćnicima kroz pretjerivanje.",
+        "Slično šali koja te nasmije, ali i natjera na razmišljanje.",
+        "Koristi ironiju da ukaže na mane društva.",
+        "Ismijava svijet oko nas dok te istovremeno zabavlja."
+      ]
+    },
+    {
+      "word": "parodija",
+      "clues": [
+        "Komična imitacija poznatog filma ili žanra uz pretjerivanje.",
+        "Svjesno oponaša stil originala kako bi izazvala smijeh.",
+        "Scary Movie ismijavala je horor filmove na taj način.",
+        "Publika se smije jer prepoznaje original koji se oponaša.",
+        "Smiješno oponašanje poznatih filmova s preuveličanim scenama.",
+        "Goli pištolj zezao je policijske trilere na takav način.",
+        "Smiješno oponašanje poznatog filma uz preuveličane scene.",
+        "Slično imitaciji koja zeza original da bi te nasmijala.",
+        "Publika se smije jer prepoznaje film koji se ismijava.",
+        "Goli pištolj zafrkavao je policijske krimiće na takav način."
+      ]
+    },
+    {
+      "word": "metafora",
+      "clues": [
+        "Književni i filmski postupak koji jednu stvar opisuje drugom.",
+        "Na primjer, životinje se koriste kako bi simbolizirale ljude.",
+        "Daje priči dublje i preneseno značenje ispod površine.",
+        "Filmski kritičari je traže kako bi objasnili skrivenu poruku.",
+        "Slikovit izraz u kojem jedna stvar predstavlja drugu.",
+        "Oluja u priči može značiti unutarnji nemir lika.",
+        "Slikovit izraz u kojem jedna stvar predstavlja drugu.",
+        "Oluja u priči može značiti unutarnji nemir lika.",
+        "Slično skrivenoj poruci ispod površine onoga što vidiš.",
+        "Kritičari je traže kako bi objasnili dublje značenje djela."
+      ]
+    },
+    {
+      "word": "simbolika",
+      "clues": [
+        "Korištenje predmeta ili boja za prenošenje dubljeg značenja.",
+        "Crvena ruža u filmu može označavati ljubav ili opasnost.",
+        "Redatelji je koriste kako bi obogatili priču skrivenim slojevima.",
+        "Gledatelji koji paze na detalje otkrivaju njezine poruke.",
+        "Skriveni jezik predmeta i boja koji nosi dublju poruku.",
+        "Golub u kadru može predstavljati mir ili slobodu.",
+        "Kad predmet u kadru znači nešto više od onoga što doslovno vidiš.",
+        "Suprotno od izravnog, doslovnog prikaza nečega na ekranu.",
+        "Recimo, oluja koja nagovještava nemir u liku.",
+        "Bijela boja vjenčanice često upućuje na čistoću i nevinost."
+      ]
+    },
+    {
+      "word": "motiv",
+      "clues": [
+        "Ponavljajući element u priči koji nosi određeno značenje.",
+        "Može biti predmet, zvuk ili situacija koja se stalno vraća.",
+        "Glazbena tema koja se vraća uz junaka u Zvjezdanim ratovima primjer je.",
+        "Pojavljuje se više puta i pomaže izgraditi temu filma.",
+        "Element koji se opetovano javlja kroz cijelu priču.",
+        "Ponovljena slika ili rečenica koja gradi smisao djela.",
+        "Nešto što se provlači kroz djelo poput crvene niti.",
+        "Tema poput osvete koja boji cijelu radnju.",
+        "U hororima to često bude zlokova škripa vrata koja se vraća.",
+        "Slično refrenu u pjesmi, samo u priči."
+      ]
+    },
+    {
+      "word": "subplot",
+      "clues": [
+        "Sporedna radnja koja prati glavnu priču filma.",
+        "Obično se vrti oko sporednih likova i njihovih priča.",
+        "Obogaćuje film i daje dubinu sporednim karakterima.",
+        "Nije glavna priča, ali podupire temu i razvoj likova.",
+        "Manja usputna priča koja teče uz središnju radnju.",
+        "Ljubav između dvaju sporednih likova često je takva linija.",
+        "Mala bočna grana stabla radnje, ne deblo.",
+        "Dok glavni lik spašava svijet, najbolji mu se prijatelj zaljubi, eto toga.",
+        "Suprotno od središnje, glavne crte zbivanja.",
+        "Tkanje druge, tanje niti uz onu najdeblju u priči."
+      ]
+    },
+    {
+      "word": "sezona",
+      "clues": [
+        "Skup epizoda serije objavljen unutar jedne godine emitiranja.",
+        "Serija može imati više takvih cjelina, svaka s vlastitom pričom.",
+        "Kada završi, čekaš sljedeću godinu za nastavak.",
+        "Game of Thrones imao je osam takvih cjelina.",
+        "Niz povezanih epizoda koje čine jednu cjelinu serije.",
+        "Nakon završetka gledatelji čekaju nastavak iduće godine.",
+        "Velik dio TV serije koji obično ima desetak nastavaka.",
+        "Slično kao kada na Netflixu vidiš oznaku S1, S2, S3.",
+        "Jedna velika cjelina koja se često snima i prikazuje godinu dana.",
+        "Asocijacija: proljeće, ljeto, jesen, zima u prirodi, ali u TV svijetu."
+      ]
+    },
+    {
+      "word": "epizoda",
+      "clues": [
+        "Jedna cjelina serije, obično duga između 20 i 60 minuta.",
+        "Svaki tjedan nova se prikazuje na televiziji ili platformi.",
+        "Završava ponekad otvorenim pitanjem da bi te navukla na sljedeću.",
+        "Serija se sastoji od više takvih dijelova unutar sezone.",
+        "Pojedinačni nastavak serije koji gledaš u jednom sjedenju.",
+        "Više njih zajedno čini jednu sezonu serije.",
+        "Najmanji komad serije koji odgledaš odjednom.",
+        "Pilot je obično prvi takav dio nove serije.",
+        "Slično poglavlju u knjizi, samo na ekranu.",
+        "Ono na čemu Netflix prikazuje brojeve 1, 2, 3 unutar jedne sezone."
+      ]
+    },
+    {
+      "word": "junak",
+      "clues": [
+        "Glavni lik u priči koji se bori za dobro i pravdu.",
+        "Svladava prepreke i rješava probleme za sve oko sebe.",
+        "Superman i Frodo Baggins primjeri su takvog lika.",
+        "Publika navija za njega kroz cijeli film.",
+        "Spašava druge i često riskira vlastiti život za njih.",
+        "Ima posebne vrline poput hrabrosti i poštenja koje ga izdvajaju.",
+        "Suprotno od zlikovca u priči.",
+        "Onaj tip lika u plaštu koji leti i spašava grad.",
+        "Asocijacija: hrabrost, mač, žrtva za druge.",
+        "Glavni dobrica za kojeg svi navijamo."
+      ]
+    },
+    {
+      "word": "partner",
+      "clues": [
+        "Lik koji prati i pomaže glavnom junaku kroz priču.",
+        "Često su komplementarni, pa zajedno nadoknađuju slabosti.",
+        "Batman i Robin ili Sherlock i Watson primjeri su para.",
+        "Bez tog suputnika junak bi bio sam u pustolovini.",
+        "S njim glavni lik dijeli tajne i oslanja se na njega u nevolji.",
+        "Najčešće je drugi po važnosti, odmah iza glavnog lika.",
+        "Vjerni pomoćnik koji uvijek stoji uz glavnog lika.",
+        "Asocijacija: tandem, dvojac, dva čovjeka koji rade zajedno.",
+        "U policijskim filmovima to je onaj drugi murjak u istom autu.",
+        "Slično kao desna ruka glavnoga junaka."
+      ]
+    },
+    {
+      "word": "silhueta",
+      "clues": [
+        "Tamni obris lika ili predmeta bez vidljivih detalja.",
+        "Vidimo samo konture na svjetloj pozadini, obično zalasku sunca.",
+        "Redatelji je koriste za tajanstvene ili dramatične kadrove.",
+        "Prepoznaješ lik samo po obliku tijela, bez lica.",
+        "Crna figura uokvirena svjetlom na vratima ili prozoru.",
+        "Nastaje kad je izvor svjetla iza osobe, pa se vidi samo crni oblik.",
+        "Vidiš samo crnu sjenu osobe naspram svijetle pozadine.",
+        "Asocijacija: zalazak sunca i tamna prilika na pragu vrata.",
+        "Kad je svjetlo iza nekoga, vidiš mu samo oblik, ne i lice.",
+        "Slično obrisu izrezanom iz crnog papira."
+      ]
+    }
+  ],
+  "imageURLString": "croatia"
+}

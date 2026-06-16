@@ -1,0 +1,242 @@
+package hr.azzi.socialgames.alias.ui.screens.ai
+
+import android.content.Context
+import android.content.Intent
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableIntStateOf
+import androidx.compose.runtime.mutableStateListOf
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.setValue
+import androidx.compose.runtime.snapshots.SnapshotStateList
+import androidx.compose.ui.Alignment
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
+import com.firebase.ui.auth.AuthUI
+import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
+import hr.azzi.socialgames.alias.ai.AIChallenge
+import hr.azzi.socialgames.alias.ai.AIChallengePlay
+import hr.azzi.socialgames.alias.ai.AIChallengeRepository
+import hr.azzi.socialgames.alias.ai.AIDeckCatalog
+import hr.azzi.socialgames.alias.ai.AIPracticeConfig
+import hr.azzi.socialgames.alias.ai.AIPracticeResult
+import hr.azzi.socialgames.alias.ai.AIUserStats
+import hr.azzi.socialgames.alias.ai.AuthService
+import hr.azzi.socialgames.alias.ui.theme.BrandBackground
+import kotlinx.coroutines.launch
+
+private sealed interface AiRoute {
+    object Hub : AiRoute
+    data class Setup(val forChallenge: Boolean) : AiRoute
+    data class Play(val config: AIPracticeConfig, val fixedWords: List<String>?, val challenge: AIChallenge?, val isChallenge: Boolean) : AiRoute
+    data class Rank(val challengeId: String) : AiRoute
+    data class Intro(val challenge: AIChallenge) : AiRoute
+    data class Outcome(val challenge: AIChallenge, val score: Int, val total: Int) : AiRoute
+    data class OpenById(val id: String) : AiRoute
+    object Profile : AiRoute
+}
+
+private sealed interface Pending {
+    data class Open(val id: String) : Pending
+    object CreateChallenge : Pending
+}
+
+private fun deckNameOf(context: Context, deck: hr.azzi.socialgames.alias.ai.AIDeck): String {
+    val id = context.resources.getIdentifier(deck.nameRes, "string", context.packageName)
+    return if (id != 0) context.getString(id) else deck.id
+}
+
+@Composable
+fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
+    val context = LocalContext.current
+    val scope = rememberCoroutineScope()
+
+    val stack: SnapshotStateList<AiRoute> = remember { mutableStateListOf(AiRoute.Hub) }
+    fun push(r: AiRoute) { stack.add(r) }
+    fun replaceTop(r: AiRoute) { if (stack.isNotEmpty()) stack[stack.lastIndex] = r else stack.add(r) }
+    fun pop() { if (stack.size > 1) stack.removeAt(stack.lastIndex) else onExit() }
+    fun popToHub() { while (stack.size > 1) stack.removeAt(stack.lastIndex) }
+
+    var authVersion by remember { mutableIntStateOf(0) }
+    var ready by remember { mutableStateOf(false) }
+    var username by remember { mutableStateOf("") }
+    var needsUsername by remember { mutableStateOf(false) }
+    var stats by remember { mutableStateOf(AIUserStats()) }
+    val recent = remember { mutableStateListOf<AIChallenge>() }
+    var pending by remember { mutableStateOf<Pending?>(null) }
+    var unameBusy by remember { mutableStateOf(false) }
+    var unameError by remember { mutableStateOf<String?>(null) }
+    var deepLinkConsumed by remember { mutableStateOf(false) }
+
+    val signInLauncher = rememberLauncherForActivityResult(FirebaseAuthUIActivityResultContract()) { result ->
+        if (result.resultCode == android.app.Activity.RESULT_OK) authVersion++
+    }
+    fun launchSignIn() {
+        val providers = listOf(AuthUI.IdpConfig.GoogleBuilder().build())
+        signInLauncher.launch(
+            AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers).build()
+        )
+    }
+
+    fun openChallenge(ch: AIChallenge) {
+        val me = AuthService.uid ?: ""
+        if (ch.creatorId == me || ch.hasJoined(me)) push(AiRoute.Rank(ch.id)) else push(AiRoute.Intro(ch))
+    }
+
+    LaunchedEffect(authVersion) {
+        ready = false
+        if (AuthService.isSignedIn) {
+            needsUsername = AuthService.needsUsername()
+            username = AuthService.currentName()
+            stats = AuthService.userStats(AuthService.uid!!)
+            recent.clear()
+            if (!needsUsername) recent.addAll(AIChallengeRepository.recent(AuthService.uid!!, 5))
+        } else {
+            needsUsername = false; username = ""; stats = AIUserStats(); recent.clear()
+        }
+        ready = true
+        if (AuthService.isSignedIn && !needsUsername) {
+            when (val p = pending) {
+                is Pending.Open -> { pending = null; push(AiRoute.OpenById(p.id)) }
+                Pending.CreateChallenge -> { pending = null; push(AiRoute.Setup(forChallenge = true)) }
+                null -> {}
+            }
+        }
+    }
+
+    LaunchedEffect(ready) {
+        if (ready && !deepLinkConsumed && initialChallengeId != null) {
+            deepLinkConsumed = true
+            if (AuthService.isSignedIn && !needsUsername) push(AiRoute.OpenById(initialChallengeId))
+            else { pending = Pending.Open(initialChallengeId); if (!AuthService.isSignedIn) launchSignIn() }
+        }
+    }
+
+    fun shareText(text: String) {
+        val send = Intent(Intent.ACTION_SEND).apply { type = "text/plain"; putExtra(Intent.EXTRA_TEXT, text) }
+        context.startActivity(Intent.createChooser(send, "Share challenge"))
+    }
+
+    if (!ready) {
+        BrandBackground { Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) } }
+        return
+    }
+
+    if (AuthService.isSignedIn && needsUsername) {
+        SetUsernameScreen(busy = unameBusy, error = unameError) { handle ->
+            if (!AuthService.isValidHandle(handle)) { unameError = "Use 3–15 letters or numbers."; return@SetUsernameScreen }
+            unameBusy = true; unameError = null
+            scope.launch {
+                try {
+                    if (!AuthService.isUsernameAvailable(handle)) { unameError = "That username is taken."; unameBusy = false; return@launch }
+                    AuthService.setUsername(handle)
+                    unameBusy = false; authVersion++
+                } catch (e: Exception) {
+                    unameBusy = false
+                    unameError = if (e.message == "username_taken") "That username is taken." else "Something went wrong."
+                }
+            }
+        }
+        return
+    }
+
+    val myUid = AuthService.uid ?: ""
+
+    when (val route = stack.last()) {
+        AiRoute.Hub -> AiHubScreen(
+            isSignedIn = AuthService.isSignedIn, username = username, uid = myUid, stats = stats, recent = recent,
+            onBack = { onExit() },
+            onSignIn = { launchSignIn() },
+            onPractice = { push(AiRoute.Setup(forChallenge = false)) },
+            onChallenge = { if (AuthService.isSignedIn) push(AiRoute.Setup(forChallenge = true)) else { pending = Pending.CreateChallenge; launchSignIn() } },
+            onProfile = { push(AiRoute.Profile) },
+            onSeeAll = { push(AiRoute.Profile) },
+            onOpenChallenge = { openChallenge(it) },
+        )
+
+        is AiRoute.Setup -> AiSetupScreen(
+            title = if (route.forChallenge) "Challenge" else "Practice",
+            subtitle = if (route.forChallenge) "Play your round, then send it to a friend" else "Warm up against the AI — nothing saved",
+            startLabel = if (route.forChallenge) "Play your round" else "Start Practice",
+            onBack = { pop() },
+            onStart = { config -> push(AiRoute.Play(config, null, null, route.forChallenge)) },
+        )
+
+        is AiRoute.Play -> AiExplainScreen(
+            config = route.config,
+            fixedWords = route.fixedWords,
+            onChallengeFinish = if (route.isChallenge) { result, frozen ->
+                scope.launch {
+                    val uid = AuthService.uid ?: return@launch
+                    if (route.challenge == null) {
+                        val ch = AIChallengeRepository.create(
+                            route.config, deckNameOf(context, route.config.deck), frozen, result, uid, username)
+                        popToHub(); push(AiRoute.Rank(ch.id)); authVersion++
+                    } else {
+                        AIChallengeRepository.submit(route.challenge.id, uid, username, false, result)
+                        replaceTop(AiRoute.Outcome(route.challenge, result.correct, result.played))
+                        authVersion++
+                    }
+                }
+                Unit
+            } else null,
+            onClose = { if (route.isChallenge) pop() else popToHub() },
+        )
+
+        is AiRoute.OpenById -> {
+            LaunchedEffect(route.id) {
+                val ch = AIChallengeRepository.load(route.id)
+                if (ch == null) pop()
+                else { val me = AuthService.uid ?: ""; replaceTop(if (ch.creatorId == me || ch.hasJoined(me)) AiRoute.Rank(ch.id) else AiRoute.Intro(ch)) }
+            }
+            BrandBackground { Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) } }
+        }
+
+        is AiRoute.Rank -> {
+            var ch by remember(route.challengeId) { mutableStateOf<AIChallenge?>(null) }
+            val plays = remember(route.challengeId) { mutableStateListOf<AIChallengePlay>() }
+            LaunchedEffect(route.challengeId) {
+                ch = AIChallengeRepository.load(route.challengeId)
+                plays.clear(); plays.addAll(AIChallengeRepository.plays(route.challengeId))
+            }
+            val c = ch
+            if (c == null) BrandBackground { Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) } }
+            else AiRankScreen(c, plays, myUid, onShare = { shareText("Beat my Alias score! ${c.shareUrl}") }, onClose = { pop() })
+        }
+
+        is AiRoute.Intro -> AiIntroScreen(
+            challenge = route.challenge,
+            onPlay = {
+                scope.launch {
+                    AuthService.uid?.let { AIChallengeRepository.join(route.challenge, it, username) }
+                    val deck = AIDeckCatalog.deck(route.challenge.deckId) ?: AIDeckCatalog.decks.first()
+                    val config = AIPracticeConfig(deck, route.challenge.aiLanguage, route.challenge.totalSeconds)
+                    replaceTop(AiRoute.Play(config, route.challenge.words, route.challenge, true))
+                }
+            },
+            onClose = { pop() },
+        )
+
+        is AiRoute.Outcome -> AiOutcomeScreen(
+            challenge = route.challenge, myName = username, myScore = route.score, myTotal = route.total, stats = stats,
+            onShare = { shareText("I scored ${route.score} in ${route.challenge.creatorName}'s Alias challenge! ${route.challenge.shareUrl}") },
+            onSeeBoard = { replaceTop(AiRoute.Rank(route.challenge.id)) },
+            onClose = { popToHub() },
+        )
+
+        AiRoute.Profile -> AiProfileScreen(
+            username = username, uid = myUid, stats = stats, recent = recent,
+            onOpenChallenge = { openChallenge(it) },
+            onSignOut = { AuthService.signOut(); popToHub(); authVersion++ },
+            onClose = { pop() },
+        )
+    }
+}

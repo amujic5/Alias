@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias.ui.screens
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -19,8 +20,12 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
+import androidx.compose.material3.Text
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
@@ -33,6 +38,7 @@ fun HomeScreen(
     onNewGame: () -> Unit,
     onHowToPlay: () -> Unit,
     onShare: () -> Unit,
+    onAiChallenge: () -> Unit,
 ) {
     BrandBackground {
         Column(
@@ -48,6 +54,8 @@ fun HomeScreen(
                 }
             }
             Spacer(Modifier.weight(1f))
+            AiChallengeButton(onAiChallenge)
+            Spacer(Modifier.height(12.dp))
             PillButton(stringResource(R.string.new_game).uppercase(), PillKind.Primary, onClick = onNewGame)
             Spacer(Modifier.height(12.dp))
             PillButton(stringResource(R.string.how_to_play).uppercase(), PillKind.Light, onClick = onHowToPlay)
@@ -55,6 +63,21 @@ fun HomeScreen(
             PillButton(stringResource(R.string.tell_your_friends).uppercase(), PillKind.Light, onClick = onShare)
             Spacer(Modifier.height(20.dp))
         }
+    }
+}
+
+/** Distinct teal→blue AI Challenge entry button. */
+@Composable
+private fun AiChallengeButton(onClick: () -> Unit) {
+    Box(
+        Modifier.fillMaxWidth().height(56.dp)
+            .clip(RoundedCornerShape(percent = 50))
+            .background(Brush.horizontalGradient(listOf(Color(0xFF2BC4A8), Color(0xFF0F70D1))))
+            .clickable { onClick() },
+        contentAlignment = Alignment.Center,
+    ) {
+        Text("🤖 AI CHALLENGE", color = Color.White, fontFamily = Alias.display,
+            fontWeight = FontWeight.ExtraBold, fontSize = 17.sp)
     }
 }
 

@@ -1,0 +1,832 @@
+{
+  "language": "English",
+  "languageCode": "ENG",
+  "words": [
+    {
+      "word": "drama",
+      "clues": [
+        "A serious film or show dealing with emotional, real-life situations.",
+        "It explores conflict, relationships, and human struggle on screen.",
+        "Think tears, tension, and powerful acting performances.",
+        "Movies like Schindler's List or Titanic fall into this category.",
+        "Often the genre that dominates awards season and earns Oscar nominations.",
+        "The opposite of a lighthearted comedy, it aims to move you deeply.",
+        "You know when a movie makes the whole room go quiet and somebody starts crying.",
+        "It's the heavy stuff, no jokes, just intense emotional situations.",
+        "Teenagers love stirring up real-life ones of these in the schoolyard too.",
+        "Think Marriage Story or The Pursuit of Happyness, all feelings and no laughs."
+      ]
+    },
+    {
+      "word": "comedy",
+      "clues": [
+        "A film or show designed to make you laugh out loud.",
+        "Jokes, funny situations, and humorous characters fill this genre.",
+        "You might find it on a Friday night to lighten the mood.",
+        "Friends and The Office are famous examples of this type.",
+        "Stand-up performers build their whole careers on this kind of material.",
+        "A rom-com mixes this with a love story to keep you smiling.",
+        "You know, the kind of movie where you're snorting and clutching your sides.",
+        "It's the opposite of a sad serious film, it just wants you giggling.",
+        "Think Jim Carrey pulling faces or Adam Sandler being a goofball.",
+        "Where the whole point is the punchlines and the laugh track."
+      ]
+    },
+    {
+      "word": "thriller",
+      "clues": [
+        "A tense, suspenseful film that keeps you on the edge of your seat.",
+        "It often involves danger, chases, or a race against time.",
+        "Your heart races and you fear for the main character throughout.",
+        "James Bond and Hitchcock movies are classic examples of this.",
+        "Spies, kidnappings, and ticking bombs are common plot ingredients here.",
+        "Often confused with horror, but it scares through tension rather than monsters.",
+        "You know that nail-biting type where you're gripping the couch the whole time.",
+        "Think Jason Bourne or a hostage standoff where anything could go wrong.",
+        "It's the genre built entirely around making you nervous and breathless.",
+        "Where there's always a twist and you can't trust anyone on screen."
+      ]
+    },
+    {
+      "word": "horror",
+      "clues": [
+        "A film genre meant to frighten and scare the audience.",
+        "Monsters, ghosts, and jump scares are common in these movies.",
+        "You might watch it with the lights on and a blanket ready.",
+        "Halloween and The Shining are well-known films of this type.",
+        "Slashers, haunted houses, and zombies all belong under this umbrella.",
+        "Producers love it because it scares up huge profits on tiny budgets.",
+        "You know, the kind you watch through your fingers and can't sleep after.",
+        "It's what you put on at Halloween to make everyone scream.",
+        "Think creepy dolls, masked killers, and something lurking in the dark.",
+        "The genre where you yell 'don't go in there!' at the screen."
+      ]
+    },
+    {
+      "word": "fantasy",
+      "clues": [
+        "A genre featuring magical worlds, creatures, and impossible events.",
+        "Dragons, wizards, and enchanted kingdoms often appear in this type.",
+        "It takes place in a world that could never exist in reality.",
+        "Lord of the Rings and Harry Potter belong to this category.",
+        "Often paired with sword fights and quests across mythical lands.",
+        "Unlike sci-fi, its impossible feats come from magic rather than technology.",
+        "You know, elves and spells and made-up worlds with their own maps.",
+        "Think Game of Thrones, all wizards and mythical beasts and kingdoms.",
+        "It's the genre where someone waves a wand and reality bends.",
+        "Where a kid finds out they're secretly a chosen hero with powers."
+      ]
+    },
+    {
+      "word": "mystery",
+      "clues": [
+        "A genre centered on solving a crime or uncovering a secret.",
+        "The audience tries to figure out who did it before the reveal.",
+        "Clues, detectives, and hidden truths drive the entire story forward.",
+        "Agatha Christie novels are classic examples of this storytelling type.",
+        "A whodunit keeps you guessing about the culprit until the final scene.",
+        "Sherlock Holmes spends his stories unraveling exactly this kind of puzzle.",
+        "You know, the kind where you're trying to guess the killer the whole time.",
+        "Think Knives Out or Murder on the Orient Express, full of suspects.",
+        "It's the genre where the big reveal explains everything at the end.",
+        "Where a detective gathers everyone in a room to name the guilty one."
+      ]
+    },
+    {
+      "word": "romance",
+      "clues": [
+        "A genre focused on love stories and relationships between characters.",
+        "Two people meet, fall in love, and usually overcome obstacles together.",
+        "Valentine's Day movies often belong to this warm and emotional genre.",
+        "The Notebook and Pride and Prejudice are famous examples of this.",
+        "Roses, candlelit dinners, and heartfelt confessions define this tender genre.",
+        "A 'meet-cute' is the charming first encounter that kicks off these stories.",
+        "You know, the mushy kind where they finally kiss in the rain at the end.",
+        "Think Titanic or any movie where two people fall for each other hard.",
+        "It's the genre that makes you sigh and reach for the tissues over love.",
+        "Where there's always a big airport run to confess true feelings."
+      ]
+    },
+    {
+      "word": "biopic",
+      "clues": [
+        "A film that tells the true life story of a real person.",
+        "It dramatizes the real events and achievements of a famous figure.",
+        "You might learn about a musician, athlete, or historical leader this way.",
+        "Films like Bohemian Rhapsody and Lincoln fall into this category.",
+        "The credits often end with photos of the actual person it portrays.",
+        "Actors winning Oscars for portraying real icons usually star in one of these.",
+        "You know, when an actor totally transforms to play a real famous dead guy.",
+        "Think the Freddie Mercury movie or Ray about the blind singer.",
+        "It's a life story of an actual person turned into a movie.",
+        "Where they cast someone who looks just like a real historical legend."
+      ]
+    },
+    {
+      "word": "western",
+      "clues": [
+        "A genre set in the American frontier, usually in the 1800s.",
+        "Cowboys, horses, sheriffs, and dusty desert towns are typical here.",
+        "Showdowns at high noon and outlaws on horseback fill these stories.",
+        "Clint Eastwood and John Wayne are icons of this film genre.",
+        "Saloons, gunslingers, and tumbleweeds set the scene for this dusty genre.",
+        "Sergio Leone's spaghetti films revived this once-fading American style.",
+        "You know, cowboys squinting at each other before a quick-draw duel.",
+        "Think Django or any movie with a lone rider and a six-shooter.",
+        "It's the genre with cattle, deserts, and a sheriff with a star badge.",
+        "Where the hero rides off into the sunset after the final shootout."
+      ]
+    },
+    {
+      "word": "documentary",
+      "clues": [
+        "A non-fiction film that explores real events, people, or issues.",
+        "It uses interviews, footage, and facts to inform the audience.",
+        "You might watch one to learn about nature, history, or society.",
+        "Planet Earth and Super Size Me are well-known examples of this.",
+        "No actors or script here, just real life captured on camera.",
+        "Streaming services release true-crime ones that everyone talks about for weeks.",
+        "You know, the kind narrated by David Attenborough about animals and oceans.",
+        "Think Tiger King or Making a Murderer, all real and no acting.",
+        "It's a movie that's basically teaching you something true with footage.",
+        "Where talking heads explain real events between clips of actual footage."
+      ]
+    },
+    {
+      "word": "musical",
+      "clues": [
+        "A film or show where characters express themselves through songs and dance.",
+        "The story advances through performances and choreographed numbers on screen.",
+        "Les Miserables and Mamma Mia are popular examples of this genre.",
+        "Singing and dancing are as important as the plot in these productions.",
+        "Broadway is the live theater home of this song-filled storytelling style.",
+        "La La Land and The Sound of Music are beloved screen examples.",
+        "You know, when characters randomly burst into song in the middle of talking.",
+        "Think Grease or Hamilton, where everyone sings their feelings out loud.",
+        "It's the kind of show where a big dance number breaks out on the street.",
+        "Where the plot stops so the whole cast can do a choreographed number."
+      ]
+    },
+    {
+      "word": "satire",
+      "clues": [
+        "A form of comedy that mocks and criticizes society, politics, or people.",
+        "It uses humor and irony to expose the flaws of the powerful.",
+        "Shows like South Park and movies like Don't Look Up use this technique.",
+        "The goal is to make people laugh while making them think critically.",
+        "Saturday Night Live skits often skewer politicians using this sharp approach.",
+        "Behind the laughs lies a serious jab at corruption or hypocrisy.",
+        "You know, comedy that's actually making fun of the government and society.",
+        "Think The Daily Show ripping into the news to expose how dumb it is.",
+        "It's funny but it's secretly criticizing politicians and the rich.",
+        "Where the joke has a sharp point and is really mocking the powerful."
+      ]
+    },
+    {
+      "word": "parody",
+      "clues": [
+        "A humorous imitation of a well-known film, show, or genre.",
+        "It exaggerates familiar scenes and characters to get laughs from fans.",
+        "Scary Movie makes fun of popular horror films using this technique.",
+        "You need to know the original work to fully enjoy the jokes.",
+        "Mel Brooks built a career poking fun at other films this way.",
+        "Spaceballs is a famous send-up of Star Wars using this comedic style.",
+        "You know, a movie that copies a famous one but turns it into a joke.",
+        "Think Weird Al doing a silly version of a hit song you already know.",
+        "It's a goofy spoof that mocks something everyone's already seen.",
+        "Where they recreate famous scenes but make them ridiculous for laughs."
+      ]
+    },
+    {
+      "word": "blockbuster",
+      "clues": [
+        "A massive, hugely popular film with a very large budget and audience.",
+        "It dominates cinemas worldwide and earns hundreds of millions of dollars.",
+        "Avengers and Avatar are prime examples of this kind of release.",
+        "Studios spend enormous amounts on special effects and star-studded casts for these.",
+        "The term originally described a film with lines wrapping around the city block.",
+        "A summer release packed with explosions hopes to become one of these hits.",
+        "You know, the giant smash-hit movie everyone's lining up to see opening weekend.",
+        "Think Jurassic Park or Titanic, the kind that breaks box-office records.",
+        "It's the huge, expensive crowd-pleaser that rakes in a billion dollars.",
+        "Where the studio bets a fortune hoping it becomes the hit of the year."
+      ]
+    },
+    {
+      "word": "franchise",
+      "clues": [
+        "A series of related films or shows sharing the same characters and world.",
+        "It expands over many installments and builds a loyal fan base.",
+        "Marvel and Star Wars are two of the most famous examples today.",
+        "New entries keep getting made because audiences keep coming back for more.",
+        "Lunchboxes, toys, and theme-park rides spin off from these mega-properties.",
+        "James Bond is one of the longest-running examples in cinema history.",
+        "You know, when one movie becomes like ten movies all in the same world.",
+        "Think Fast and Furious cranking out part after part for decades.",
+        "It's a whole connected universe of films milking the same story.",
+        "Where the studio keeps the cash machine going with endless installments."
+      ]
+    },
+    {
+      "word": "reboot",
+      "clues": [
+        "A fresh restart of an existing series with a new cast and story.",
+        "It retells a familiar property from the beginning for a new audience.",
+        "The 2005 Batman Begins restarted the entire Batman story from scratch.",
+        "Studios do this when a franchise has gone stale or lost momentum.",
+        "Spider-Man has had several of these, each erasing the previous continuity.",
+        "It wipes the slate clean rather than continuing the old storyline.",
+        "You know, when they hit the reset button and start the whole series over.",
+        "Think how they keep starting Spider-Man fresh with a brand-new actor.",
+        "It's like pressing restart on a tired old film series from scratch.",
+        "Where they ignore everything before and begin the story all over again."
+      ]
+    },
+    {
+      "word": "remake",
+      "clues": [
+        "A new version of an older film, retelling the exact same story.",
+        "Filmmakers update the original with modern actors and production techniques.",
+        "The Lion King 2019 is a recent example of this for a classic.",
+        "It differs from a sequel because it covers the same events again.",
+        "Hollywood often does this to a beloved foreign film for English-speaking audiences.",
+        "Psycho got a shot-for-shot one of these in 1998.",
+        "You know, when they redo an old classic with shinier modern effects.",
+        "Think Disney turning their old cartoons into live-action versions.",
+        "It's the same exact story you've seen, just filmed fresh decades later.",
+        "Where they update a dusty old film instead of inventing something new."
+      ]
+    },
+    {
+      "word": "spin-off",
+      "clues": [
+        "A new show or film focusing on a side character from an existing story.",
+        "It takes one element of a bigger world and builds a new story around it.",
+        "Like how that lawyer from Breaking Bad got his own whole prequel series.",
+        "Fans enjoy getting more time with characters they already love from before.",
+        "Frasier launched from Cheers, following a single bar regular into his own show.",
+        "The little yellow henchmen from Despicable Me got their own movies this way.",
+        "You know, when a minor character gets popular and earns their own show.",
+        "Think how Joey got his own series after being on a famous sitcom.",
+        "It's a fresh series built around someone from a show you already know.",
+        "It's basically a sequel that follows a supporting cast member instead of the lead."
+      ]
+    },
+    {
+      "word": "prequel",
+      "clues": [
+        "A film that tells the story of events that happened before the original.",
+        "It shows the backstory and origins of characters fans already know.",
+        "Rogue One shows events that happened just before the first Star Wars film.",
+        "The timeline goes backward, filling in gaps from an existing story.",
+        "The Star Wars films numbered I through III all serve this purpose.",
+        "It answers the question of how the hero became who they are.",
+        "You know, the kind that rewinds to show what happened before it all began.",
+        "Think the new Willy Wonka movie showing him young before the chocolate factory.",
+        "It's a movie set earlier in the timeline than the one you saw first.",
+        "Where you finally see the origin story leading up to the original film."
+      ]
+    },
+    {
+      "word": "sequel",
+      "clues": [
+        "A film that continues the story where the previous one left off.",
+        "It follows the same characters into new adventures and challenges.",
+        "Toy Story 2 picks up after the events of the first movie.",
+        "Studios make these when a film is successful and audiences want more.",
+        "The number 2 in a movie title almost always signals one of these.",
+        "The Empire Strikes Back is widely considered a better one than its predecessor.",
+        "You know, the follow-up movie that comes out after the first one's a hit.",
+        "Think Frozen 2 or any 'part two' that keeps the story rolling forward.",
+        "It's what you watch next when you want to know what happens after.",
+        "Where the same heroes return for round two of their adventure."
+      ]
+    },
+    {
+      "word": "sitcom",
+      "clues": [
+        "A short, funny TV show with the same characters in recurring situations.",
+        "Each episode is self-contained and usually runs about thirty minutes.",
+        "Friends and Seinfeld are among the most beloved examples ever made.",
+        "A laughtrack or live audience often reacts to the jokes in these shows.",
+        "The Big Bang Theory and The Office are streaming staples of this format.",
+        "Multi-camera ones are often filmed in front of a live studio crowd.",
+        "You know, the half-hour funny TV show with the same gang every week.",
+        "Think How I Met Your Mother, the kind with a recorded laugh after jokes.",
+        "It's a comedy series set in the same apartment or office every episode.",
+        "Where the same characters get into a fresh funny mess each week."
+      ]
+    },
+    {
+      "word": "suspense",
+      "clues": [
+        "A feeling of tension and anxiety about what will happen next in a story.",
+        "The audience knows danger is coming but the character does not yet.",
+        "Hitchcock was a master at building this feeling throughout his films.",
+        "It keeps viewers glued to the screen, afraid to look away even briefly.",
+        "A bomb under the table that only the audience sees creates this exact tension.",
+        "Edge-of-your-seat dread that something terrible is about to occur.",
+        "You know that knot in your stomach when you just know something bad's coming.",
+        "Think the slow creep up the stairs where you're holding your breath.",
+        "It's that unbearable wait when the music swells and nobody's moved yet.",
+        "Where the longer they delay the scary reveal, the more you squirm."
+      ]
+    },
+    {
+      "word": "tone",
+      "clues": [
+        "The overall mood or emotional feel a film or scene creates for the audience.",
+        "A director chooses lighting, music, and pacing to establish this quality.",
+        "A dark, gritty movie has a very different one compared to a bright comedy.",
+        "It sets the emotional expectations before the story even really begins.",
+        "It can shift from playful to menacing with just a change in music.",
+        "Critics describe a movie as 'dark' or 'whimsical' when discussing this quality.",
+        "You know how a film just feels gloomy or upbeat, that whole vibe.",
+        "Think how the same scene feels totally different with creepy music versus cheerful.",
+        "It's the general atmosphere or feeling a movie gives off overall.",
+        "Where you'd say a film is 'light' or 'heavy' to describe its mood."
+      ]
+    },
+    {
+      "word": "symbolism",
+      "clues": [
+        "The use of objects or images to represent deeper ideas in a story.",
+        "A red rose might stand for love, or a storm might suggest danger.",
+        "Filmmakers and writers use this technique to add layers of meaning.",
+        "Viewers who look closely can find hidden messages throughout the work.",
+        "A white dove released on screen often quietly represents peace this way.",
+        "English teachers love asking students what the green light really means.",
+        "You know when something on screen secretly means more than it looks like.",
+        "Think how a broken mirror in a movie hints at a shattered life.",
+        "It's when a simple object stands in for some big abstract idea.",
+        "Where the rain isn't just rain, it's standing for sadness or doom."
+      ]
+    },
+    {
+      "word": "motif",
+      "clues": [
+        "A recurring element, image, or idea that appears throughout a story.",
+        "It repeats to reinforce a theme or create a sense of connection.",
+        "In a film, a specific color or object might reappear in key moments.",
+        "Unlike a symbol used once, this keeps showing up across the whole work.",
+        "The repeated spinning top in Inception is a perfect example of this device.",
+        "Composers create musical ones that play each time a hero appears.",
+        "You know how a certain image or tune keeps popping up over and over.",
+        "Think the same little melody that plays every time the villain shows up.",
+        "It's a repeated detail the filmmaker sprinkles throughout on purpose.",
+        "Where a particular object keeps reappearing to tie the whole thing together."
+      ]
+    },
+    {
+      "word": "theme",
+      "clues": [
+        "The central idea or message that a story explores throughout its entirety.",
+        "Good vs. evil, love, and identity are common examples in film and literature.",
+        "It is the deeper meaning beneath the plot and the characters actions.",
+        "A great film makes you reflect on this long after the credits roll.",
+        "Coming-of-age and the corrupting nature of power are common examples in cinema.",
+        "Ask 'what is this story really about?' and the answer is this.",
+        "You know, the big underlying point the whole movie is trying to make.",
+        "Think how a war film might really be about loss or the cost of revenge.",
+        "It's the deeper message hiding under all the plot and action.",
+        "Where the answer to 'what's it actually about?' isn't just the storyline."
+      ]
+    },
+    {
+      "word": "subplot",
+      "clues": [
+        "A secondary storyline that runs alongside the main plot of a story.",
+        "It involves supporting characters and adds depth to the overall narrative.",
+        "In a film, the hero's romance might be this while they save the world.",
+        "It connects to the main story but is not the central focus.",
+        "You could cut it out and the main story would still make sense.",
+        "The best friend's wedding might be this while the leads chase a treasure.",
+        "You know, the little side story running in the background of the big one.",
+        "Think how the sidekick's love life unfolds while the hero fights the villain.",
+        "It's the extra B-story that's not the main thing but adds flavor.",
+        "Where the minor characters get their own little arc on the side."
+      ]
+    },
+    {
+      "word": "cameo",
+      "clues": [
+        "A very brief appearance by a famous person in a film or show.",
+        "The actor is usually well-known but plays a tiny, often uncredited role.",
+        "Stan Lee famously appeared this way in nearly every Marvel movie.",
+        "Fans enjoy spotting these small surprise appearances throughout a film.",
+        "Alfred Hitchcock famously gave himself a tiny one in nearly every film he directed.",
+        "Blink and you might miss this surprise walk-on by a celebrity.",
+        "You know when a huge star pops up for like two seconds and you gasp.",
+        "Think Bill Murray suddenly showing up just to wave and disappear.",
+        "It's that quick surprise visit by a celeb who isn't really in the movie.",
+        "Where a famous face shows up for one tiny scene just for the fun of it."
+      ]
+    },
+    {
+      "word": "shot",
+      "clues": [
+        "A single uninterrupted piece of footage recorded by a camera.",
+        "It is the basic building block of any film or video production.",
+        "Editors cut together many of these to build a complete scene.",
+        "Its length and angle can completely change how a moment feels to viewers.",
+        "'Action!' begins one and 'cut!' ends it on a film set.",
+        "A 'take' is one attempt at recording this small piece of film.",
+        "You know, one continuous bit of footage before they yell to stop.",
+        "Think how a director frames just one angle of the camera at a time.",
+        "It's a single chunk of filming, the smallest piece they later edit together.",
+        "Where a 'long' one runs minutes without ever stopping the camera."
+      ]
+    },
+    {
+      "word": "close-up",
+      "clues": [
+        "A camera framing that fills the screen with a face or small object.",
+        "It emphasizes emotion, detail, or the importance of what is shown.",
+        "Directors use it to let audiences see every tiny expression on an actor's face.",
+        "Pull back from it and you get a wider view of the surroundings.",
+        "The opposite framing is a wide or establishing view of the whole scene.",
+        "A teary eye filling the whole frame is a textbook example of this.",
+        "You know when the camera gets right up in someone's face on screen.",
+        "Think how you can count an actor's eyelashes because they're so big in frame.",
+        "It's the tight shot where one face takes up the whole screen.",
+        "Where the camera zooms way in so you see every freckle and tear."
+      ]
+    },
+    {
+      "word": "tripod",
+      "clues": [
+        "A three-legged stand used to keep a camera steady during filming.",
+        "It prevents shaky footage by holding the camera at a fixed position.",
+        "Photographers and videographers set this up before shooting still or moving images.",
+        "Its three legs can be extended or adjusted to change the height.",
+        "Folding it up and slinging it over your shoulder makes it portable.",
+        "Long-exposure night photography is nearly impossible without this steadying gear.",
+        "You know, that three-legged thing you screw your camera onto so it stops shaking.",
+        "Think how you'd set up a phone on those little stick legs for a group selfie.",
+        "It's the stand with three legs that holds the camera perfectly still.",
+        "Where you plant it on the ground so the footage isn't all wobbly."
+      ]
+    },
+    {
+      "word": "pan",
+      "clues": [
+        "A camera movement where the lens rotates horizontally from side to side.",
+        "It follows a moving subject or reveals a wide landscape slowly.",
+        "A film crew might use this to track a car driving down a street.",
+        "It keeps the camera in one spot while the view sweeps left or right.",
+        "Sweep it across a stadium crowd to capture the whole roaring audience.",
+        "Its name is short for 'panorama', hinting at the wide sweep it creates.",
+        "You know when the camera slowly swings sideways to show the whole scene.",
+        "Think how it glides left to right across a beautiful mountain view.",
+        "It's that horizontal swivel of the camera without it actually moving.",
+        "Where the camera turns side to side on the spot to follow the action."
+      ]
+    },
+    {
+      "word": "tilt",
+      "clues": [
+        "A camera movement where the lens rotates vertically up or down.",
+        "It can reveal a tall building from base to top in one smooth motion.",
+        "Unlike a pan, this moves the view on a vertical axis instead.",
+        "Directors use it to show scale or follow someone standing up from a chair.",
+        "Point the camera at someone's shoes and slowly reveal their face above.",
+        "It pivots on a horizontal axis while the camera body stays put.",
+        "You know when the camera slowly cranes upward to show a giant skyscraper.",
+        "Think how it climbs from the feet all the way up to a villain's face.",
+        "It's the up-and-down version of the camera swinging, not side to side.",
+        "Where the camera nods upward to reveal how huge something towers above."
+      ]
+    },
+    {
+      "word": "zoom",
+      "clues": [
+        "A camera technique that makes a subject appear closer or further away.",
+        "The lens adjusts to magnify or shrink what is visible in the frame.",
+        "It differs from physically moving the camera toward or away from the subject.",
+        "A sudden fast version of this can create a dramatic or comedic effect.",
+        "A telephoto lens lets you do this without taking a single step.",
+        "Pinch your fingers on a phone screen to do this to a photo.",
+        "You know when the camera suddenly rushes in close on a shocked face.",
+        "Think how you tap and stretch on your phone to make a picture bigger.",
+        "It's the lens trick that pulls something far away right up close.",
+        "Where the binoculars-style effect brings a distant subject right to you."
+      ]
+    },
+    {
+      "word": "storyboard",
+      "clues": [
+        "A sequence of drawn panels that plan out each shot of a film.",
+        "It works like a comic strip showing what the camera will see and when.",
+        "Directors use it to plan action scenes and special effects in advance.",
+        "Every major Hollywood production creates one of these before filming begins.",
+        "Pixar artists sketch these panels long before any animation begins.",
+        "Walt Disney's studio pioneered pinning these drawings to a large board.",
+        "You know, those rough sketches that look like a comic of the whole movie.",
+        "Think how they doodle each scene as little drawings before they shoot it.",
+        "It's the comic-strip plan a director draws to map out every shot.",
+        "Where each frame of the movie gets sketched out on paper first."
+      ]
+    },
+    {
+      "word": "production",
+      "clues": [
+        "The entire process of making a film, from start to finished product.",
+        "It covers everything from hiring the crew to shooting and editing the movie.",
+        "A big-budget one can employ thousands of people over several years.",
+        "The word is often used to refer to a film or TV show itself.",
+        "This phase is bookended by pre- and post- stages of filmmaking.",
+        "Theater companies use the same word for a single staged show.",
+        "You know, the whole giant operation of getting a movie actually made.",
+        "Think of all the work behind the scenes to crank out one film.",
+        "It's the entire machine of making a movie, crew, cameras, the lot.",
+        "Where 'pre-' comes before it and 'post-' comes after it in filmmaking."
+      ]
+    },
+    {
+      "word": "casting",
+      "clues": [
+        "The process of selecting actors to play the roles in a film or show.",
+        "A specialist reviews auditions and helps the director fill each character.",
+        "Finding the right actor for the lead role is a crucial part of this process.",
+        "A bad choice here can seriously hurt how audiences receive the final film.",
+        "A director sometimes picks an unknown over a star to fill a part this way.",
+        "Type the word 'couch' before this and you get a famous scandal phrase.",
+        "You know, picking which actor gets which part before they shoot anything.",
+        "Think how they decide who'll play the hero out of a hundred hopefuls.",
+        "It's the whole job of choosing the right faces for every role.",
+        "Where a director matches each actor to the character they'll play."
+      ]
+    },
+    {
+      "word": "audition",
+      "clues": [
+        "A tryout where an actor performs to win a role in a production.",
+        "The director and producer watch to see if the performer fits the part.",
+        "Actors prepare monologues or read from the script during this process.",
+        "Getting a callback means you did well enough for a second one of these.",
+        "Singers face a similar tryout when competing on talent shows like The Voice.",
+        "Hopefuls line up nervously, hoping to impress with a single performance.",
+        "You know, when an actor reads some lines to try and land the part.",
+        "Think the nervous tryout on American Idol where you sing for the judges.",
+        "It's the test performance you do hoping to get cast in the show.",
+        "Where you give it your best shot in front of the director to win the role."
+      ]
+    },
+    {
+      "word": "extras",
+      "clues": [
+        "Background performers who appear in scenes but have no speaking lines.",
+        "They fill crowds, streets, and restaurants to make a film look real.",
+        "A big battle scene might require hundreds of these non-speaking participants.",
+        "They are paid but receive far less attention than the main cast members.",
+        "You become one yourself if you ever volunteer for a crowd scene.",
+        "They blur into the background so the audience focuses on the stars.",
+        "You know, the random people walking by in the background of a scene.",
+        "Think all those nameless folks filling the restaurant behind the main couple.",
+        "It's the crowd of silent people hired just to make a scene look busy.",
+        "Where you wave your arms in a stadium shot but never say a word."
+      ]
+    },
+    {
+      "word": "voice-over",
+      "clues": [
+        "A narration recorded separately and layered on top of the visuals of a film.",
+        "A character or narrator speaks while the audience watches the on-screen action.",
+        "It is commonly used in documentaries and to share a character's inner thoughts.",
+        "The speaker is not seen on screen while their words are being heard.",
+        "The opening narration of a nature film is delivered this way atop the visuals.",
+        "In Shawshank, Red's calm narration runs all the way through the movie like this.",
+        "You know when you hear someone talking but their mouth isn't on screen.",
+        "Think how a character's inner thoughts play out loud across the picture.",
+        "It's that disembodied talking laid on top of the footage afterward.",
+        "That narrator we hear but never see, with words floating above the action."
+      ]
+    },
+    {
+      "word": "stand-in",
+      "clues": [
+        "A person who takes an actor's place on set during lighting and camera setup.",
+        "They match the actor's height and appearance to help the crew prepare shots.",
+        "The real star does not have to wait around while technical adjustments are made.",
+        "They are different from a stunt performer who does dangerous physical actions.",
+        "A body double is similar, but this person mainly substitutes during setup, not filming.",
+        "While the celebrity relaxes in their trailer, this person occupies their mark.",
+        "You know, the placeholder person standing where the star will be while they fix lights.",
+        "Think someone the same size as the star holding their spot during setup.",
+        "It's the substitute who fills in so the crew can prep the shot.",
+        "Where a lookalike takes the star's place until the camera's actually ready."
+      ]
+    },
+    {
+      "word": "narrator",
+      "clues": [
+        "A voice or character that tells or explains the story to the audience.",
+        "They provide context, backstory, or commentary that characters cannot share themselves.",
+        "Morgan Freeman is famous for playing this role in many well-known films.",
+        "In a documentary, this voice guides you through the entire film.",
+        "The voice in a nature documentary explaining the lion hunt fills this role.",
+        "In Arrested Development, Ron Howard hilariously contradicts the characters as this voice.",
+        "You know, the deep voice that tells you what's happening in the story.",
+        "Think the calm guy explaining the whole plot as the movie plays.",
+        "It's the one telling the tale, sometimes unseen, guiding you through.",
+        "Where a storyteller speaks directly to fill you in on what's going on."
+      ]
+    },
+    {
+      "word": "continuity",
+      "clues": [
+        "The consistency of details from one shot to the next in a film.",
+        "A character's coffee cup must stay in the same hand between cuts.",
+        "A dedicated crew member watches for mistakes that would break this rule.",
+        "Viewers notice errors here as cups, hair, or clothes change between scenes.",
+        "A 'goof' on a movie's trivia page usually points out a break in this.",
+        "The supervisor takes detailed photos so clothing and props match across takes.",
+        "You know when fans spot a Starbucks cup magically appearing between shots.",
+        "Think how a glass is full in one cut and empty the next, that mistake.",
+        "It's keeping every little detail matching from one camera angle to the next.",
+        "Where a character's hair flips sides between cuts and someone goofed."
+      ]
+    },
+    {
+      "word": "editing",
+      "clues": [
+        "The process of cutting and assembling footage into the final version of a film.",
+        "An editor selects the best takes and arranges them in the right order.",
+        "Pacing, tension, and storytelling all depend heavily on the skill used here.",
+        "Without this step, a film would just be hours of raw, unorganized footage.",
+        "A 'cut' is named after the physical slicing done in this stage long ago.",
+        "This is where a film truly takes its final shape after shooting wraps.",
+        "You know, the stitching-together of all the clips into the finished movie.",
+        "Think how they trim and rearrange all the footage to make it flow.",
+        "It's the post-shoot stage where raw clips become an actual film.",
+        "Where someone sits at a screen splicing all the takes into one story."
+      ]
+    },
+    {
+      "word": "montage",
+      "clues": [
+        "A rapid sequence of short clips edited together to show passing time or change.",
+        "It compresses a long process like training or growing up into a short scene.",
+        "The famous training sequence in Rocky is a classic example of this technique.",
+        "Music usually plays over it while images cut quickly to show progression.",
+        "Rocky climbing the museum steps to triumphant music exemplifies this technique.",
+        "A makeover scene compressing hours of shopping into one minute uses this trick.",
+        "You know, that quick burst of clips showing someone get buff while music plays.",
+        "Think the speedy bit where they pack months of training into one minute.",
+        "It's the fast cut-up of scenes showing a big change in a flash.",
+        "Where a whole journey flies by in clips set to a pumped-up song."
+      ]
+    },
+    {
+      "word": "silhouette",
+      "clues": [
+        "The dark outline of a figure against a bright background, with no detail visible.",
+        "You can see the shape but not the features of the person or object.",
+        "Sunsets are a popular backdrop for creating this dramatic visual effect in films.",
+        "It creates mystery and mood by hiding the identity of a subject completely.",
+        "The bat-symbol against the night sky is essentially a giant one of these.",
+        "Cut black paper into a profile and you get a portrait version of this.",
+        "You know, just a black shape of someone standing against a bright sunset.",
+        "Think how you only see the dark outline, no face, no details at all.",
+        "It's the shadowy shape you get when light is behind someone.",
+        "Where a figure shows up as pure black against a glowing background."
+      ]
+    },
+    {
+      "word": "time-lapse",
+      "clues": [
+        "A filming technique that speeds up very slow processes to show change quickly.",
+        "A flower blooming or a city going from day to night can be shown this way.",
+        "Many hours or days of footage are compressed into just a few seconds.",
+        "Documentaries about nature and cities use this technique very frequently.",
+        "Clouds racing across the sky in seconds reveal this sped-up technique.",
+        "The opposite of slow motion, it crams hours into mere moments.",
+        "You know, that sped-up footage where the sunset happens in two seconds.",
+        "Think how a whole day of traffic zips by in a quick blur on screen.",
+        "It's the trick where hours of slow stuff fly past in a flash.",
+        "Where a flower opens up in seconds even though it really took days."
+      ]
+    },
+    {
+      "word": "flashback",
+      "clues": [
+        "A scene that interrupts the present story to show a past event.",
+        "It reveals background information about a character or explains earlier events.",
+        "Filmmakers use visual cues like faded color or wavy edges to signal it.",
+        "In The Godfather Part II, scenes alternate between past and present this way.",
+        "A ripple effect and harp music often signal we are entering one of these.",
+        "Lost was famous for revealing character backstories through these jumps to the past.",
+        "You know when the screen goes wavy and suddenly we're seeing the character as a kid.",
+        "Think how a movie jumps back in time to show what happened years ago.",
+        "It's that sudden rewind to a past memory in the middle of the story.",
+        "Where the picture blurs and we cut to something from the character's past."
+      ]
+    },
+    {
+      "word": "screenplay",
+      "clues": [
+        "The written document that contains the full story, dialogue, and action of a film.",
+        "Every scene, character line, and stage direction is written out in this format.",
+        "Writers spend months or years crafting this before a film goes into production.",
+        "Without it, actors and directors would have no official blueprint to follow.",
+        "The Academy awards a coveted Oscar for the best original one each year.",
+        "Formatted in Courier font, it follows strict industry layout conventions.",
+        "You know, the whole movie written out on paper before they film a thing.",
+        "Think the thick stack of pages with every line and scene typed out.",
+        "It's the writer's blueprint that the entire movie gets built from.",
+        "Where the writer plots out all the dialogue and action page by page."
+      ]
+    },
+    {
+      "word": "script",
+      "clues": [
+        "The written text containing all the dialogue and instructions for a production.",
+        "Actors study it carefully to memorize their lines and understand their characters.",
+        "It serves as the blueprint for every scene filmed during production.",
+        "A finished screenplay becomes this once it is actively being used on set.",
+        "A 'kit' version is the slimmed-down copy actors keep on the day of shooting.",
+        "Stage actors clutch this in early rehearsals before they go 'off-book'.",
+        "You know, the pages the actors hold and read their lines off of.",
+        "Think the bundle the cast flips through to learn what to say.",
+        "It's the written set of lines actors memorize for their roles.",
+        "Where the phrase 'flip the' before it means swapping the usual roles around."
+      ]
+    },
+    {
+      "word": "makeup",
+      "clues": [
+        "Products applied to an actor's face and body to change their appearance.",
+        "It can add age, wounds, or color to help an actor fit their character.",
+        "A dedicated artist applies this before every shooting day on a film set.",
+        "Fantasy films use heavy amounts of it to create monsters and alien creatures.",
+        "Foundation, powder, and brushes are tools of the person who handles this on set.",
+        "A trailer on location often has a chair and mirror reserved just for this work.",
+        "You know, the stuff people put on their face before going out for a night.",
+        "Lipstick, mascara, eyeliner, that whole kit you'd find in a purse.",
+        "It's that thing you take off at night with a wipe before bed.",
+        "Think of a beauty counter at a department store covered in this stuff."
+      ]
+    },
+    {
+      "word": "prosthetics",
+      "clues": [
+        "Artificial body parts or appliances applied to an actor to alter their appearance.",
+        "They can create realistic scars, noses, ears, or even entire creature faces.",
+        "Gary Oldman wore extensive facial ones to transform into Winston Churchill.",
+        "Special effects artists spend hours sculpting and applying these before filming.",
+        "Latex pieces glued onto skin let an actor look wounded, aged, or inhuman.",
+        "The Planet of the Apes films relied heavily on these molded appliances for their ape characters.",
+        "It's also the word for a fake leg or arm someone wears after losing a limb.",
+        "Think of the zombie's rotting face in a horror movie, all built up out of these.",
+        "A dentist might give you a fake replacement tooth, which is technically one of these.",
+        "You know those fake bellies and chins they stick on actors to make them look fat or old."
+      ]
+    },
+    {
+      "word": "cinematography",
+      "clues": [
+        "The art and craft of capturing visuals on camera in a film.",
+        "It involves choosing lighting, lenses, angles, and camera movement for each scene.",
+        "Roger Deakins is one of the most celebrated artists of this discipline today.",
+        "A film can have a great story but still feel flat without strong work here.",
+        "The Academy Award for Best Achievement in this honors the camera work behind a film.",
+        "Emmanuel Lubezki won three Oscars in a row for his mastery of this craft.",
+        "It's basically the reason a movie looks gorgeous even with the sound off.",
+        "The director of photography is the person in charge of all of this.",
+        "When people say a film is visually stunning, this is the craft they're praising.",
+        "Think of those sweeping landscape shots and moody lighting, that whole visual language."
+      ]
+    },
+    {
+      "word": "framing",
+      "clues": [
+        "The way a director and camera operator compose what is visible in each shot.",
+        "It determines where subjects appear within the edges of the screen.",
+        "Placing a character off-center can create tension or show their isolation.",
+        "Skilled use of this can tell the audience how to feel without a single word.",
+        "A wide composition versus a tight close-up are both choices made within this.",
+        "Drawing a storyboard helps a crew plan how each shot will be arranged before rolling.",
+        "It's also what you do to a photo when you put a border around it on your wall.",
+        "You know when a photographer tells you to move so you fit nicely in the picture.",
+        "Decide what goes inside the rectangle and what gets cut off, that's this.",
+        "Think of how a painter decides where to put the subject inside the canvas edges."
+      ]
+    },
+    {
+      "word": "blocking",
+      "clues": [
+        "The planned movement and positioning of actors within a scene.",
+        "The director instructs performers exactly where to stand, walk, and stop.",
+        "It ensures the camera captures the right angles and all actors are in frame.",
+        "Rehearsing this before filming helps the crew set up lights and camera positions.",
+        "A theater director also plans this before a stage play, mapping every actor's path.",
+        "Marking the floor with tape shows performers where to hit their spots during this process.",
+        "It's also the word for stopping someone from getting past you in a doorway.",
+        "In sports, a lineman does this to keep defenders away from the quarterback.",
+        "Choreographing where everyone moves so they don't bump into each other on stage.",
+        "Think of mapping out each step a person takes across the set, like a dance plan."
+      ]
+    }
+  ],
+  "imageURLString": "uk"
+}

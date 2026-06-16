@@ -23,6 +23,7 @@ class HomeActivity : BaseActivity() {
                     onNewGame = { startActivity(Intent(this, ChooseGame::class.java)) },
                     onHowToPlay = { startActivity(Intent(this, HowToPlayActivity::class.java)) },
                     onShare = { shareApp() },
+                    onAiChallenge = { startActivity(Intent(this, AIChallengeActivity::class.java)) },
                 )
             }
         }

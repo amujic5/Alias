@@ -7,8 +7,19 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <queries>
+        <intent>
+            <action android:name="android.speech.RecognitionService" />
+        </intent>
+        <intent>
+            <action android:name="android.intent.action.TTS_SERVICE" />
+        </intent>
+    </queries>
 
     <application
+        android:name=".AliasApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -26,6 +37,25 @@
         <activity android:name=".SettingsActivity" android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".NewGameActivity" android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".HowToPlayActivity" android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".AIChallengeActivity"
+            android:exported="true"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:launchMode="singleTask">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="https" android:host="aliaswords.com" android:pathPrefix="/challenge" />
+                <data android:scheme="https" android:host="www.aliaswords.com" android:pathPrefix="/challenge" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="aliaswords" android:host="challenge" />
+            </intent-filter>
+        </activity>
         <activity
             android:name=".HomeActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
