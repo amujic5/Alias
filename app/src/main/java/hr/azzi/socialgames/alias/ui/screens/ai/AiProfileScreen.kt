@@ -26,9 +26,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIChallenge
 import hr.azzi.socialgames.alias.ai.AIUserStats
 import hr.azzi.socialgames.alias.ui.theme.Alias
@@ -53,7 +55,7 @@ fun AiProfileScreen(
         Column(Modifier.fillMaxSize().systemBarsPadding().verticalScroll(rememberScrollState())) {
             Row(Modifier.padding(start = 6.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = onClose) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
-                DisplayText("Profile", 22)
+                DisplayText(stringResource(R.string.ai_profile), 22)
             }
             Column(Modifier.padding(20.dp), horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(14.dp)) {
@@ -61,14 +63,14 @@ fun AiProfileScreen(
                 Text("@$username", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 24.sp)
 
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                    Stat("WINS", stats.wins, Alias.success, Modifier.weight(1f))
-                    Stat("LOSSES", stats.losses, Alias.danger, Modifier.weight(1f))
-                    Stat("DRAWS", stats.draws, Color(0xFF8A93A6), Modifier.weight(1f))
+                    Stat(stringResource(R.string.ai_wins), stats.wins, Alias.success, Modifier.weight(1f))
+                    Stat(stringResource(R.string.ai_losses), stats.losses, Alias.danger, Modifier.weight(1f))
+                    Stat(stringResource(R.string.ai_draws), stats.draws, Color(0xFF8A93A6), Modifier.weight(1f))
                 }
 
                 if (recent.isNotEmpty()) {
                     Spacer(Modifier.height(4.dp))
-                    Row(Modifier.fillMaxWidth()) { Overline("RECENT CHALLENGES") }
+                    Row(Modifier.fillMaxWidth()) { Overline(stringResource(R.string.ai_recent_challenges)) }
                     CCard(Modifier.fillMaxWidth(), padding = 0) {
                         Column {
                             recent.forEachIndexed { i, ch ->
@@ -77,7 +79,7 @@ fun AiProfileScreen(
                                     val amCreator = ch.creatorId == uid
                                     Avatar(if (amCreator) "You" else ch.creatorName, Alias.blue600, 36)
                                     Spacer(Modifier.width(12.dp))
-                                    Text(if (amCreator) "Your challenge" else "vs ${ch.creatorName}",
+                                    Text(if (amCreator) stringResource(R.string.ai_your_challenge) else stringResource(R.string.ai_vs_name, ch.creatorName),
                                         color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold,
                                         fontSize = 15.sp, modifier = Modifier.weight(1f))
                                     Text(ch.deckName, color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 12.sp)
@@ -90,7 +92,7 @@ fun AiProfileScreen(
                 }
 
                 Spacer(Modifier.height(8.dp))
-                PillButton("Sign out", PillKind.Light, onClick = onSignOut)
+                PillButton(stringResource(R.string.ai_sign_out), PillKind.Light, onClick = onSignOut)
                 Spacer(Modifier.height(20.dp))
             }
         }

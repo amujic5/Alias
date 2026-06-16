@@ -66,4 +66,110 @@
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Taboo</string>
 
+    <!-- AI Challenge -->
+    <string name="ai_home_button">🤖 AI CHALLENGE</string>
+    <string name="ai_hub_title">AI CHALLENGE</string>
+    <string name="ai_join_title">Join the arena</string>
+    <string name="ai_join_subtitle">Sign in to challenge friends and keep your win record.</string>
+    <string name="ai_sign_in_google">Sign in with Google</string>
+    <string name="ai_practice_title">Practice with AI</string>
+    <string name="ai_practice_subtitle">Warm up — no stakes, no login</string>
+    <string name="ai_challenge_title">Challenge a Friend</string>
+    <string name="ai_challenge_subtitle">Beat a friend · counts on your record</string>
+    <string name="ai_recent_challenges">RECENT CHALLENGES</string>
+    <string name="ai_see_all">See all</string>
+    <string name="ai_your_challenge">Your challenge</string>
+    <string name="ai_vs_name">vs %1$s</string>
+    <string name="ai_players_count">%1$d players</string>
+    <string name="ai_didnt_finish">DIDN\'T FINISH</string>
+    <string name="ai_won_score">Won %1$d–%2$d</string>
+    <string name="ai_draw_score">Draw %1$d–%2$d</string>
+    <string name="ai_lost_score">Lost %1$d–%2$d</string>
+    <string name="ai_lv">LV</string>
+    <string name="ai_stat_w">%1$d W</string>
+    <string name="ai_stat_l">%1$d L</string>
+    <string name="ai_stat_d">%1$d D</string>
+
+    <string name="ai_practice">Practice</string>
+    <string name="ai_challenge">Challenge</string>
+    <string name="ai_practice_warmup">Warm up against the AI — nothing saved</string>
+    <string name="ai_challenge_warmup">Play your round, then send it to a friend</string>
+    <string name="ai_start_practice">Start Practice</string>
+    <string name="ai_play_your_round">Play your round</string>
+    <string name="ai_mode_you_explain">You explain</string>
+    <string name="ai_mode_you_explain_sub">You describe — the AI guesses</string>
+    <string name="ai_mode_ai_explains">AI explains</string>
+    <string name="ai_mode_ai_explains_sub">The AI gives clues — you guess</string>
+    <string name="ai_deck">Deck</string>
+    <string name="ai_language">Language</string>
+    <string name="ai_total_time">Total time</string>
+    <string name="ai_choose_deck">Choose a deck</string>
+
+    <string name="ai_ai_clue">AI\'S CLUE</string>
+    <string name="ai_ai_speaking">AI is speaking</string>
+    <string name="ai_listening">Listening</string>
+    <string name="ai_tap_mic_answer">Tap the mic to answer</string>
+    <string name="ai_youre_guessing">You\'re guessing…</string>
+    <string name="ai_hear_again">Hear again</string>
+    <string name="ai_new_clue">New clue</string>
+    <string name="ai_skip_word">Skip word</string>
+    <string name="ai_mic_needed">Microphone access is needed to play.\nEnable it in Settings.</string>
+
+    <string name="ai_explain_dont_say">EXPLAIN IT — DON\'T SAY IT</string>
+    <string name="ai_tap_to_explain">Tap to explain</string>
+    <string name="ai_not_it_explain_more">Not it — explain more</string>
+    <string name="ai_listening_tap_done">Listening… tap when done</string>
+    <string name="ai_ai_is_guessing">AI is guessing…</string>
+    <string name="ai_ai_guesses">AI guesses:</string>
+    <string name="ai_said_word">You said the word!</string>
+    <string name="ai_word_skipped">Word skipped</string>
+
+    <string name="ai_round_complete">Round complete!</string>
+    <string name="ai_correct_label">CORRECT</string>
+    <string name="ai_skipped_label">SKIPPED</string>
+    <string name="ai_play_again">PLAY AGAIN</string>
+    <string name="ai_close_caps">CLOSE</string>
+    <string name="ai_practice_caps">PRACTICE</string>
+
+    <string name="ai_you_won">You won!</string>
+    <string name="ai_you_lost">You lost</string>
+    <string name="ai_its_draw">It\'s a draw</string>
+    <string name="ai_record">record %1$d – %2$d – %3$d</string>
+    <string name="ai_see_full_board">See full board</string>
+    <string name="ai_share_result">Share result</string>
+    <string name="ai_close">Close</string>
+
+    <string name="ai_leaderboard">Leaderboard</string>
+    <string name="ai_score_to_beat">SCORE TO BEAT</string>
+    <string name="ai_players">PLAYERS</string>
+    <string name="ai_share_challenge">Share challenge</string>
+    <string name="ai_badge_host">HOST</string>
+    <string name="ai_badge_win">WIN</string>
+    <string name="ai_badge_draw">DRAW</string>
+    <string name="ai_badge_lost">LOST</string>
+    <string name="ai_you_suffix"> (you)</string>
+
+    <string name="ai_challenges_you">%1$s challenges you!</string>
+    <string name="ai_deck_info">%1$d words · %2$ds · %3$s</string>
+    <string name="ai_beat_score">Beat their score of %1$d</string>
+    <string name="ai_play_challenge">Play challenge</string>
+    <string name="ai_not_now">Not now</string>
+
+    <string name="ai_profile">Profile</string>
+    <string name="ai_wins">WINS</string>
+    <string name="ai_losses">LOSSES</string>
+    <string name="ai_draws">DRAWS</string>
+    <string name="ai_sign_out">Sign out</string>
+
+    <string name="ai_pick_username">Pick a username</string>
+    <string name="ai_username_hint">3–15 letters or numbers. This is how friends see you.</string>
+    <string name="ai_username">Username</string>
+    <string name="ai_continue">Continue</string>
+    <string name="ai_err_handle">Use 3–15 letters or numbers.</string>
+    <string name="ai_err_taken">That username is taken.</string>
+    <string name="ai_err_generic">Something went wrong.</string>
+
+    <string name="ai_share_beat">Beat my Alias score! %1$s</string>
+    <string name="ai_share_scored">I scored %1$d in %2$s\'s Alias challenge! %3$s</string>
+
 </resources>

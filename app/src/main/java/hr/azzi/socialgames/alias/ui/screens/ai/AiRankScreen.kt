@@ -25,9 +25,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIChallenge
 import hr.azzi.socialgames.alias.ai.AIChallengePlay
 import hr.azzi.socialgames.alias.ui.theme.Alias
@@ -53,12 +55,12 @@ fun AiRankScreen(
         Column(Modifier.fillMaxSize().systemBarsPadding().verticalScroll(rememberScrollState())) {
             Row(Modifier.padding(start = 6.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = onClose) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
-                DisplayText("Leaderboard", 22)
+                DisplayText(stringResource(R.string.ai_leaderboard), 22)
             }
             Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
                 CCard(Modifier.fillMaxWidth()) {
                     Column {
-                        Overline("SCORE TO BEAT", color = Alias.textSecondary)
+                        Overline(stringResource(R.string.ai_score_to_beat), color = Alias.textSecondary)
                         Spacer(Modifier.height(4.dp))
                         Row(verticalAlignment = Alignment.CenterVertically) {
                             Avatar(challenge.creatorName, Alias.blue600, 40)
@@ -72,7 +74,7 @@ fun AiRankScreen(
                 }
 
                 if (finished.isNotEmpty()) {
-                    Overline("PLAYERS")
+                    Overline(stringResource(R.string.ai_players))
                     CCard(Modifier.fillMaxWidth(), padding = 0) {
                         Column {
                             finished.forEachIndexed { i, p ->
@@ -85,7 +87,7 @@ fun AiRankScreen(
                 }
 
                 if (unfinished.isNotEmpty()) {
-                    Overline("DIDN'T FINISH")
+                    Overline(stringResource(R.string.ai_didnt_finish))
                     CCard(Modifier.fillMaxWidth(), padding = 0) {
                         Column {
                             unfinished.forEach { p ->
@@ -101,7 +103,7 @@ fun AiRankScreen(
                 }
 
                 Spacer(Modifier.height(4.dp))
-                PillButton("Share challenge", PillKind.Primary, onClick = onShare)
+                PillButton(stringResource(R.string.ai_share_challenge), PillKind.Primary, onClick = onShare)
                 Spacer(Modifier.height(20.dp))
             }
         }
@@ -112,10 +114,10 @@ fun AiRankScreen(
 private fun RankRow(rank: Int, p: AIChallengePlay, challenge: AIChallenge, myUid: String) {
     val isCreator = p.playerId == challenge.creatorId
     val (badge, color) = when {
-        isCreator -> "HOST" to Alias.textSecondary
-        p.score > challenge.creatorScore -> "WIN" to Alias.success
-        p.score == challenge.creatorScore -> "DRAW" to Color(0xFF8A93A6)
-        else -> "LOST" to Alias.danger
+        isCreator -> stringResource(R.string.ai_badge_host) to Alias.textSecondary
+        p.score > challenge.creatorScore -> stringResource(R.string.ai_badge_win) to Alias.success
+        p.score == challenge.creatorScore -> stringResource(R.string.ai_badge_draw) to Color(0xFF8A93A6)
+        else -> stringResource(R.string.ai_badge_lost) to Alias.danger
     }
     val me = p.playerId == myUid
     Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -123,7 +125,7 @@ private fun RankRow(rank: Int, p: AIChallengePlay, challenge: AIChallenge, myUid
             Text("$rank", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 13.sp)
         }
         Spacer(Modifier.size(12.dp))
-        Text(p.playerName + if (me) " (you)" else "", color = Alias.textPrimary, fontFamily = Alias.display,
+        Text(p.playerName + (if (me) stringResource(R.string.ai_you_suffix) else ""), color = Alias.textPrimary, fontFamily = Alias.display,
             fontWeight = FontWeight.Bold, fontSize = 15.sp, modifier = Modifier.weight(1f))
         Text("${p.score}", color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
         Spacer(Modifier.size(10.dp))

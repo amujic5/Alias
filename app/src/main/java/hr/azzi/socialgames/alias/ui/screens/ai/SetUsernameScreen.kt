@@ -18,8 +18,10 @@ import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
 import hr.azzi.socialgames.alias.ui.theme.DisplayText
@@ -37,16 +39,16 @@ fun SetUsernameScreen(
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally) {
             Spacer(Modifier.height(60.dp))
-            DisplayText("Pick a username", 28)
+            DisplayText(stringResource(R.string.ai_pick_username), 28)
             Spacer(Modifier.height(8.dp))
-            Text("3–15 letters or numbers. This is how friends see you.",
+            Text(stringResource(R.string.ai_username_hint),
                 color = Color.White.copy(alpha = 0.85f), fontSize = 14.sp, fontFamily = Alias.body)
             Spacer(Modifier.height(24.dp))
             OutlinedTextField(
                 value = handle,
                 onValueChange = { handle = it.filter { c -> c.isLetterOrDigit() }.take(15) },
                 singleLine = true,
-                label = { Text("Username") },
+                label = { Text(stringResource(R.string.ai_username)) },
                 modifier = Modifier.fillMaxWidth(),
             )
             if (error != null) {
@@ -55,7 +57,7 @@ fun SetUsernameScreen(
             }
             Spacer(Modifier.height(20.dp))
             if (busy) CircularProgressIndicator(color = Color.White)
-            else PillButton("Continue", PillKind.Primary, enabled = handle.length >= 3) { onSubmit(handle) }
+            else PillButton(stringResource(R.string.ai_continue), PillKind.Primary, enabled = handle.length >= 3) { onSubmit(handle) }
         }
     }
 }

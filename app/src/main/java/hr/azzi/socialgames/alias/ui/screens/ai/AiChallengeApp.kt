@@ -20,8 +20,10 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIChallenge
 import hr.azzi.socialgames.alias.ai.AIChallengePlay
 import hr.azzi.socialgames.alias.ai.AIChallengeRepository
@@ -132,16 +134,16 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
 
     if (AuthService.isSignedIn && needsUsername) {
         SetUsernameScreen(busy = unameBusy, error = unameError) { handle ->
-            if (!AuthService.isValidHandle(handle)) { unameError = "Use 3–15 letters or numbers."; return@SetUsernameScreen }
+            if (!AuthService.isValidHandle(handle)) { unameError = context.getString(R.string.ai_err_handle); return@SetUsernameScreen }
             unameBusy = true; unameError = null
             scope.launch {
                 try {
-                    if (!AuthService.isUsernameAvailable(handle)) { unameError = "That username is taken."; unameBusy = false; return@launch }
+                    if (!AuthService.isUsernameAvailable(handle)) { unameError = context.getString(R.string.ai_err_taken); unameBusy = false; return@launch }
                     AuthService.setUsername(handle)
                     unameBusy = false; authVersion++
                 } catch (e: Exception) {
                     unameBusy = false
-                    unameError = if (e.message == "username_taken") "That username is taken." else "Something went wrong."
+                    unameError = if (e.message == "username_taken") context.getString(R.string.ai_err_taken) else context.getString(R.string.ai_err_generic)
                 }
             }
         }
@@ -163,17 +165,15 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
         )
 
         is AiRoute.Setup -> AiSetupScreen(
-            title = if (route.forChallenge) "Challenge" else "Practice",
-            subtitle = if (route.forChallenge) "Play your round, then send it to a friend" else "Warm up against the AI — nothing saved",
-            startLabel = if (route.forChallenge) "Play your round" else "Start Practice",
+            title = if (route.forChallenge) stringResource(R.string.ai_challenge) else stringResource(R.string.ai_practice),
+            subtitle = if (route.forChallenge) stringResource(R.string.ai_challenge_warmup) else stringResource(R.string.ai_practice_warmup),
+            startLabel = if (route.forChallenge) stringResource(R.string.ai_play_your_round) else stringResource(R.string.ai_start_practice),
             onBack = { pop() },
             onStart = { config -> push(AiRoute.Play(config, null, null, route.forChallenge)) },
         )
 
-        is AiRoute.Play -> AiExplainScreen(
-            config = route.config,
-            fixedWords = route.fixedWords,
-            onChallengeFinish = if (route.isChallenge) { result, frozen ->
+        is AiRoute.Play -> {
+            val finish: ((AIPracticeResult, List<String>) -> Unit)? = if (route.isChallenge) { result, frozen ->
                 scope.launch {
                     val uid = AuthService.uid ?: return@launch
                     if (route.challenge == null) {
@@ -187,9 +187,13 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
                     }
                 }
                 Unit
-            } else null,
-            onClose = { if (route.isChallenge) pop() else popToHub() },
-        )
+            } else null
+            val onClose: () -> Unit = { if (route.isChallenge) pop() else popToHub() }
+            if (route.config.mode == hr.azzi.socialgames.alias.ai.AIMode.YOU_EXPLAIN)
+                AiPlayScreen(route.config, route.fixedWords, finish, onClose)
+            else
+                AiExplainScreen(route.config, route.fixedWords, finish, onClose)
+        }
 
         is AiRoute.OpenById -> {
             LaunchedEffect(route.id) {
@@ -209,7 +213,7 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             }
             val c = ch
             if (c == null) BrandBackground { Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) } }
-            else AiRankScreen(c, plays, myUid, onShare = { shareText("Beat my Alias score! ${c.shareUrl}") }, onClose = { pop() })
+            else AiRankScreen(c, plays, myUid, onShare = { shareText(context.getString(R.string.ai_share_beat, c.shareUrl)) }, onClose = { pop() })
         }
 
         is AiRoute.Intro -> AiIntroScreen(
@@ -227,7 +231,7 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
 
         is AiRoute.Outcome -> AiOutcomeScreen(
             challenge = route.challenge, myName = username, myScore = route.score, myTotal = route.total, stats = stats,
-            onShare = { shareText("I scored ${route.score} in ${route.challenge.creatorName}'s Alias challenge! ${route.challenge.shareUrl}") },
+            onShare = { shareText(context.getString(R.string.ai_share_scored, route.score, route.challenge.creatorName, route.challenge.shareUrl)) },
             onSeeBoard = { replaceTop(AiRoute.Rank(route.challenge.id)) },
             onClose = { popToHub() },
         )

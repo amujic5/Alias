@@ -59,4 +59,110 @@
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabù</string>
 
+    <!-- AI Challenge -->
+    <string name="ai_home_button">🤖 SFIDA AI</string>
+    <string name="ai_hub_title">SFIDA AI</string>
+    <string name="ai_join_title">Entra nell\'arena</string>
+    <string name="ai_join_subtitle">Accedi per sfidare gli amici e tenere il conto delle vittorie.</string>
+    <string name="ai_sign_in_google">Accedi con Google</string>
+    <string name="ai_practice_title">Allenati con l\'AI</string>
+    <string name="ai_practice_subtitle">Scaldati — senza posta in gioco, senza login</string>
+    <string name="ai_challenge_title">Sfida un amico</string>
+    <string name="ai_challenge_subtitle">Batti un amico · conta nel tuo record</string>
+    <string name="ai_recent_challenges">SFIDE RECENTI</string>
+    <string name="ai_see_all">Vedi tutte</string>
+    <string name="ai_your_challenge">La tua sfida</string>
+    <string name="ai_vs_name">VS %1$s</string>
+    <string name="ai_players_count">%1$d giocatori</string>
+    <string name="ai_didnt_finish">NON FINITA</string>
+    <string name="ai_won_score">Vinto %1$d–%2$d</string>
+    <string name="ai_draw_score">Pari %1$d–%2$d</string>
+    <string name="ai_lost_score">Perso %1$d–%2$d</string>
+    <string name="ai_lv">LV</string>
+    <string name="ai_stat_w">%1$d W</string>
+    <string name="ai_stat_l">%1$d L</string>
+    <string name="ai_stat_d">%1$d D</string>
+
+    <string name="ai_practice">Allenamento</string>
+    <string name="ai_challenge">Sfida</string>
+    <string name="ai_practice_warmup">Scaldati contro l\'AI — niente viene salvato</string>
+    <string name="ai_challenge_warmup">Gioca il tuo round, poi invialo a un amico</string>
+    <string name="ai_start_practice">Inizia allenamento</string>
+    <string name="ai_play_your_round">Gioca il tuo round</string>
+    <string name="ai_mode_you_explain">Spieghi tu</string>
+    <string name="ai_mode_you_explain_sub">Tu descrivi — l\'AI indovina</string>
+    <string name="ai_mode_ai_explains">Spiega l\'AI</string>
+    <string name="ai_mode_ai_explains_sub">L\'AI dà gli indizi — tu indovini</string>
+    <string name="ai_deck">Mazzo</string>
+    <string name="ai_language">Lingua</string>
+    <string name="ai_total_time">Tempo totale</string>
+    <string name="ai_choose_deck">Scegli un mazzo</string>
+
+    <string name="ai_ai_clue">INDIZIO DELL\'AI</string>
+    <string name="ai_ai_speaking">L\'AI sta parlando</string>
+    <string name="ai_listening">In ascolto</string>
+    <string name="ai_tap_mic_answer">Tocca il microfono per rispondere</string>
+    <string name="ai_youre_guessing">Stai indovinando…</string>
+    <string name="ai_hear_again">Riascolta</string>
+    <string name="ai_new_clue">Nuovo indizio</string>
+    <string name="ai_skip_word">Salta parola</string>
+    <string name="ai_mic_needed">Serve l\'accesso al microfono per giocare.\nAttivalo nelle Impostazioni.</string>
+
+    <string name="ai_explain_dont_say">SPIEGALA — NON DIRLA</string>
+    <string name="ai_tap_to_explain">Tocca per spiegare</string>
+    <string name="ai_not_it_explain_more">Non è questa — spiega meglio</string>
+    <string name="ai_listening_tap_done">In ascolto… tocca quando hai finito</string>
+    <string name="ai_ai_is_guessing">L\'AI sta indovinando…</string>
+    <string name="ai_ai_guesses">L\'AI indovina:</string>
+    <string name="ai_said_word">Hai detto la parola!</string>
+    <string name="ai_word_skipped">Parola saltata</string>
+
+    <string name="ai_round_complete">Round completato!</string>
+    <string name="ai_correct_label">CORRETTE</string>
+    <string name="ai_skipped_label">SALTATE</string>
+    <string name="ai_play_again">GIOCA ANCORA</string>
+    <string name="ai_close_caps">CHIUDI</string>
+    <string name="ai_practice_caps">ALLENAMENTO</string>
+
+    <string name="ai_you_won">Hai vinto!</string>
+    <string name="ai_you_lost">Hai perso</string>
+    <string name="ai_its_draw">È pareggio</string>
+    <string name="ai_record">record %1$d – %2$d – %3$d</string>
+    <string name="ai_see_full_board">Vedi classifica completa</string>
+    <string name="ai_share_result">Condividi risultato</string>
+    <string name="ai_close">Chiudi</string>
+
+    <string name="ai_leaderboard">Classifica</string>
+    <string name="ai_score_to_beat">PUNTEGGIO DA BATTERE</string>
+    <string name="ai_players">GIOCATORI</string>
+    <string name="ai_share_challenge">Condividi sfida</string>
+    <string name="ai_badge_host">HOST</string>
+    <string name="ai_badge_win">VINTA</string>
+    <string name="ai_badge_draw">PARI</string>
+    <string name="ai_badge_lost">PERSA</string>
+    <string name="ai_you_suffix"> (tu)</string>
+
+    <string name="ai_challenges_you">%1$s ti sfida!</string>
+    <string name="ai_deck_info">%1$d parole · %2$ds · %3$s</string>
+    <string name="ai_beat_score">Batti il loro punteggio di %1$d</string>
+    <string name="ai_play_challenge">Gioca la sfida</string>
+    <string name="ai_not_now">Non ora</string>
+
+    <string name="ai_profile">Profilo</string>
+    <string name="ai_wins">VITTORIE</string>
+    <string name="ai_losses">SCONFITTE</string>
+    <string name="ai_draws">PAREGGI</string>
+    <string name="ai_sign_out">Esci</string>
+
+    <string name="ai_pick_username">Scegli un nome utente</string>
+    <string name="ai_username_hint">3–15 lettere o numeri. È così che ti vedono gli amici.</string>
+    <string name="ai_username">Nome utente</string>
+    <string name="ai_continue">Continua</string>
+    <string name="ai_err_handle">Usa 3–15 lettere o numeri.</string>
+    <string name="ai_err_taken">Questo nome utente è già in uso.</string>
+    <string name="ai_err_generic">Qualcosa è andato storto.</string>
+
+    <string name="ai_share_beat">Batti il mio punteggio ad Alias! %1$s</string>
+    <string name="ai_share_scored">Ho fatto %1$d nella sfida Alias di %2$s! %3$s</string>
+
 </resources>

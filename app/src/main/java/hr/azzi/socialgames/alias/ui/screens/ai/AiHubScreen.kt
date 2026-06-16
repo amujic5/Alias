@@ -29,9 +29,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIChallenge
 import hr.azzi.socialgames.alias.ai.AIChallengeOutcome
 import hr.azzi.socialgames.alias.ai.AIUserStats
@@ -62,25 +64,25 @@ fun AiHubScreen(
         Column(Modifier.fillMaxSize().systemBarsPadding().verticalScroll(rememberScrollState())) {
             Row(Modifier.padding(start = 6.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
-                Overline("AI CHALLENGE")
+                Overline(stringResource(R.string.ai_hub_title))
             }
             Spacer(Modifier.height(8.dp))
 
             Column(Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 if (isSignedIn) ProfileHeader(username, stats, onProfile) else JoinCard(onSignIn)
 
-                ActionCard("AI", Color(0xFFB9A7F6), "Practice with AI",
-                    "Warm up — no stakes, no login", locked = false, onClick = onPractice)
+                ActionCard("AI", Color(0xFFB9A7F6), stringResource(R.string.ai_practice_title),
+                    stringResource(R.string.ai_practice_subtitle), locked = false, onClick = onPractice)
 
-                ActionCard("VS", Color(0xFFF7A7BC), "Challenge a Friend",
-                    "Beat a friend · counts on your record", locked = !isSignedIn,
+                ActionCard("VS", Color(0xFFF7A7BC), stringResource(R.string.ai_challenge_title),
+                    stringResource(R.string.ai_challenge_subtitle), locked = !isSignedIn,
                     onClick = if (isSignedIn) onChallenge else onSignIn)
 
                 if (isSignedIn && recent.isNotEmpty()) {
                     Row(Modifier.fillMaxWidth().padding(top = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-                        Overline("RECENT CHALLENGES")
+                        Overline(stringResource(R.string.ai_recent_challenges))
                         Spacer(Modifier.weight(1f))
-                        Text("See all", color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold,
+                        Text(stringResource(R.string.ai_see_all), color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold,
                             fontSize = 13.sp, modifier = Modifier.clickable { onSeeAll() })
                     }
                     CCard(Modifier.fillMaxWidth(), padding = 0) {
@@ -111,13 +113,13 @@ private fun ProfileHeader(username: String, stats: AIUserStats, onClick: () -> U
                 Text("@${username}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
                 Spacer(Modifier.height(6.dp))
                 Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    StatChip("${stats.wins} W", Alias.success)
-                    StatChip("${stats.losses} L", Alias.danger)
-                    StatChip("${stats.draws} D", Color.White.copy(alpha = 0.3f))
+                    StatChip(stringResource(R.string.ai_stat_w, stats.wins), Alias.success)
+                    StatChip(stringResource(R.string.ai_stat_l, stats.losses), Alias.danger)
+                    StatChip(stringResource(R.string.ai_stat_d, stats.draws), Color.White.copy(alpha = 0.3f))
                 }
             }
             Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text("LV", color = Color.White.copy(alpha = 0.7f), fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 10.sp)
+                Text(stringResource(R.string.ai_lv), color = Color.White.copy(alpha = 0.7f), fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 10.sp)
                 Text("$level", color = Alias.accent, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
             }
         }
@@ -134,12 +136,12 @@ private fun StatChip(text: String, color: Color) {
 private fun JoinCard(onSignIn: () -> Unit) {
     CCard(Modifier.fillMaxWidth()) {
         Column {
-            Text("Join the arena", color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 24.sp)
+            Text(stringResource(R.string.ai_join_title), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 24.sp)
             Spacer(Modifier.height(6.dp))
-            Text("Sign in to challenge friends and keep your win record.",
+            Text(stringResource(R.string.ai_join_subtitle),
                 color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 14.sp)
             Spacer(Modifier.height(16.dp))
-            PillButton("Sign in with Google", PillKind.Dark, onClick = onSignIn)
+            PillButton(stringResource(R.string.ai_sign_in_google), PillKind.Dark, onClick = onSignIn)
         }
     }
 }
@@ -165,14 +167,14 @@ private fun ActionCard(badge: String, badgeColor: Color, title: String, subtitle
 @Composable
 private fun RecentRow(ch: AIChallenge, uid: String, onClick: () -> Unit) {
     val amCreator = ch.creatorId == uid
-    val label = if (amCreator) "Your challenge" else "vs ${ch.creatorName}"
+    val label = if (amCreator) stringResource(R.string.ai_your_challenge) else stringResource(R.string.ai_vs_name, ch.creatorName)
     val (text, color) = when {
-        amCreator -> "${ch.players.size} players" to Alias.textSecondary
-        ch.didNotFinish(uid) -> "DIDN'T FINISH" to Alias.textSecondary
+        amCreator -> stringResource(R.string.ai_players_count, ch.players.size) to Alias.textSecondary
+        ch.didNotFinish(uid) -> stringResource(R.string.ai_didnt_finish) to Alias.textSecondary
         else -> when (ch.outcome(uid)) {
-            AIChallengeOutcome.WIN -> "Won ${ch.score(uid)}–${ch.creatorScore}" to Alias.success
-            AIChallengeOutcome.DRAW -> "Draw ${ch.score(uid)}–${ch.creatorScore}" to Alias.textSecondary
-            else -> "Lost ${ch.score(uid)}–${ch.creatorScore}" to Alias.danger
+            AIChallengeOutcome.WIN -> stringResource(R.string.ai_won_score, ch.score(uid), ch.creatorScore) to Alias.success
+            AIChallengeOutcome.DRAW -> stringResource(R.string.ai_draw_score, ch.score(uid), ch.creatorScore) to Alias.textSecondary
+            else -> stringResource(R.string.ai_lost_score, ch.score(uid), ch.creatorScore) to Alias.danger
         }
     }
     Row(Modifier.fillMaxWidth().clickable { onClick() }.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {

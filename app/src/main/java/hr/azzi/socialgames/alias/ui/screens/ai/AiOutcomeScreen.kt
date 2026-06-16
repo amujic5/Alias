@@ -20,9 +20,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIChallenge
 import hr.azzi.socialgames.alias.ai.AIChallengeOutcome
 import hr.azzi.socialgames.alias.ai.AIUserStats
@@ -50,11 +52,11 @@ fun AiOutcomeScreen(
         else -> AIChallengeOutcome.LOST
     }
     val (badge, badgeColor, title) = when (outcome) {
-        AIChallengeOutcome.WIN -> Triple("W", Alias.success, "You won!")
-        AIChallengeOutcome.DRAW -> Triple("D", Color(0xFF8A93A6), "It's a draw")
-        else -> Triple("L", Alias.danger, "You lost")
+        AIChallengeOutcome.WIN -> Triple("W", Alias.success, stringResource(R.string.ai_you_won))
+        AIChallengeOutcome.DRAW -> Triple("D", Color(0xFF8A93A6), stringResource(R.string.ai_its_draw))
+        else -> Triple("L", Alias.danger, stringResource(R.string.ai_you_lost))
     }
-    val record = "record ${stats.wins} – ${stats.losses} – ${stats.draws}"
+    val record = stringResource(R.string.ai_record, stats.wins, stats.losses, stats.draws)
 
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp),
@@ -80,11 +82,11 @@ fun AiOutcomeScreen(
             }
 
             Spacer(Modifier.weight(1f))
-            PillButton("See full board", PillKind.Primary, onClick = onSeeBoard)
+            PillButton(stringResource(R.string.ai_see_full_board), PillKind.Primary, onClick = onSeeBoard)
             Spacer(Modifier.height(12.dp))
-            PillButton("Share result", PillKind.Light, onClick = onShare)
+            PillButton(stringResource(R.string.ai_share_result), PillKind.Light, onClick = onShare)
             Spacer(Modifier.height(8.dp))
-            Text("Close", color = Color.White.copy(alpha = 0.9f), fontFamily = Alias.body, fontWeight = FontWeight.SemiBold,
+            Text(stringResource(R.string.ai_close), color = Color.White.copy(alpha = 0.9f), fontFamily = Alias.body, fontWeight = FontWeight.SemiBold,
                 fontSize = 15.sp, modifier = Modifier.clickable { onClose() }.padding(8.dp))
         }
     }

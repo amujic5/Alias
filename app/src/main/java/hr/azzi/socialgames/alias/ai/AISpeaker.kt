@@ -9,7 +9,7 @@ import android.speech.tts.UtteranceProgressListener
 import java.util.Locale
 
 /** Text-to-speech wrapper that speaks AI clues. Port of iOS AISpeaker. */
-class AISpeaker(context: Context) {
+class AISpeaker(context: Context, private val rate: Float = 1.0f) {
 
     private val main = Handler(Looper.getMainLooper())
     private var ready = false
@@ -18,7 +18,7 @@ class AISpeaker(context: Context) {
 
     private val tts: TextToSpeech = TextToSpeech(context.applicationContext) { status ->
         ready = status == TextToSpeech.SUCCESS
-        if (ready) pending?.let { (t, l) -> pending = null; speak(t, l) }
+        if (ready) { tts.setSpeechRate(rate); pending?.let { (t, l) -> pending = null; speak(t, l) } }
     }
 
     init {

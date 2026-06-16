@@ -67,4 +67,110 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="game_alias_slo">Alias Slovenija</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabu</string>
+
+    <!-- AI Challenge -->
+    <string name="ai_home_button">🤖 AI IZZIV</string>
+    <string name="ai_hub_title">AI IZZIV</string>
+    <string name="ai_join_title">Vstopi v areno</string>
+    <string name="ai_join_subtitle">Prijavi se in izzivaj prijatelje ter beleži svoje zmage.</string>
+    <string name="ai_sign_in_google">Prijava z Google</string>
+    <string name="ai_practice_title">Vadi z AI</string>
+    <string name="ai_practice_subtitle">Ogrej se — brez vložkov, brez prijave</string>
+    <string name="ai_challenge_title">Izzovi prijatelja</string>
+    <string name="ai_challenge_subtitle">Premagaj prijatelja · šteje v tvoj rekord</string>
+    <string name="ai_recent_challenges">NEDAVNI IZZIVI</string>
+    <string name="ai_see_all">Prikaži vse</string>
+    <string name="ai_your_challenge">Tvoj izziv</string>
+    <string name="ai_vs_name">proti %1$s</string>
+    <string name="ai_players_count">%1$d igralcev</string>
+    <string name="ai_didnt_finish">NEDOKONČANO</string>
+    <string name="ai_won_score">Zmaga %1$d–%2$d</string>
+    <string name="ai_draw_score">Neodločeno %1$d–%2$d</string>
+    <string name="ai_lost_score">Poraz %1$d–%2$d</string>
+    <string name="ai_lv">LV</string>
+    <string name="ai_stat_w">%1$d W</string>
+    <string name="ai_stat_l">%1$d L</string>
+    <string name="ai_stat_d">%1$d D</string>
+
+    <string name="ai_practice">Vadba</string>
+    <string name="ai_challenge">Izziv</string>
+    <string name="ai_practice_warmup">Ogrej se proti AI — nič se ne shrani</string>
+    <string name="ai_challenge_warmup">Odigraj svoj krog, nato ga pošlji prijatelju</string>
+    <string name="ai_start_practice">Začni vadbo</string>
+    <string name="ai_play_your_round">Odigraj svoj krog</string>
+    <string name="ai_mode_you_explain">Ti razlagaš</string>
+    <string name="ai_mode_you_explain_sub">Ti opisuješ — AI ugiba</string>
+    <string name="ai_mode_ai_explains">AI razlaga</string>
+    <string name="ai_mode_ai_explains_sub">AI daje namige — ti ugibaš</string>
+    <string name="ai_deck">Komplet</string>
+    <string name="ai_language">Jezik</string>
+    <string name="ai_total_time">Skupni čas</string>
+    <string name="ai_choose_deck">Izberi komplet</string>
+
+    <string name="ai_ai_clue">AI NAMIG</string>
+    <string name="ai_ai_speaking">AI govori</string>
+    <string name="ai_listening">Poslušam</string>
+    <string name="ai_tap_mic_answer">Pritisni mikrofon za odgovor</string>
+    <string name="ai_youre_guessing">Ugibaš…</string>
+    <string name="ai_hear_again">Poslušaj znova</string>
+    <string name="ai_new_clue">Nov namig</string>
+    <string name="ai_skip_word">Preskoči besedo</string>
+    <string name="ai_mic_needed">Za igranje je potreben dostop do mikrofona.\nOmogoči ga v Nastavitvah.</string>
+
+    <string name="ai_explain_dont_say">RAZLOŽI — NE IZGOVORI</string>
+    <string name="ai_tap_to_explain">Pritisni za razlago</string>
+    <string name="ai_not_it_explain_more">Ni to — razloži več</string>
+    <string name="ai_listening_tap_done">Poslušam… pritisni, ko končaš</string>
+    <string name="ai_ai_is_guessing">AI ugiba…</string>
+    <string name="ai_ai_guesses">AI ugiba:</string>
+    <string name="ai_said_word">Izgovoril si besedo!</string>
+    <string name="ai_word_skipped">Beseda preskočena</string>
+
+    <string name="ai_round_complete">Krog končan!</string>
+    <string name="ai_correct_label">PRAVILNO</string>
+    <string name="ai_skipped_label">PRESKOČENO</string>
+    <string name="ai_play_again">IGRAJ ZNOVA</string>
+    <string name="ai_close_caps">ZAPRI</string>
+    <string name="ai_practice_caps">VADBA</string>
+
+    <string name="ai_you_won">Zmagal si!</string>
+    <string name="ai_you_lost">Izgubil si</string>
+    <string name="ai_its_draw">Neodločeno</string>
+    <string name="ai_record">rekord %1$d – %2$d – %3$d</string>
+    <string name="ai_see_full_board">Prikaži celotno lestvico</string>
+    <string name="ai_share_result">Deli rezultat</string>
+    <string name="ai_close">Zapri</string>
+
+    <string name="ai_leaderboard">Lestvica</string>
+    <string name="ai_score_to_beat">REZULTAT ZA PREMAGATI</string>
+    <string name="ai_players">IGRALCI</string>
+    <string name="ai_share_challenge">Deli izziv</string>
+    <string name="ai_badge_host">GOSTITELJ</string>
+    <string name="ai_badge_win">ZMAGA</string>
+    <string name="ai_badge_draw">NEODL.</string>
+    <string name="ai_badge_lost">PORAZ</string>
+    <string name="ai_you_suffix"> (ti)</string>
+
+    <string name="ai_challenges_you">%1$s te izziva!</string>
+    <string name="ai_deck_info">%1$d besed · %2$ds · %3$s</string>
+    <string name="ai_beat_score">Premagaj njegov rezultat %1$d</string>
+    <string name="ai_play_challenge">Odigraj izziv</string>
+    <string name="ai_not_now">Ne zdaj</string>
+
+    <string name="ai_profile">Profil</string>
+    <string name="ai_wins">ZMAGE</string>
+    <string name="ai_losses">PORAZI</string>
+    <string name="ai_draws">NEODLOČENO</string>
+    <string name="ai_sign_out">Odjava</string>
+
+    <string name="ai_pick_username">Izberi uporabniško ime</string>
+    <string name="ai_username_hint">3–15 črk ali številk. Tako te vidijo prijatelji.</string>
+    <string name="ai_username">Uporabniško ime</string>
+    <string name="ai_continue">Naprej</string>
+    <string name="ai_err_handle">Uporabi 3–15 črk ali številk.</string>
+    <string name="ai_err_taken">To uporabniško ime je zasedeno.</string>
+    <string name="ai_err_generic">Nekaj je šlo narobe.</string>
+
+    <string name="ai_share_beat">Premagaj moj rezultat v Alias! %1$s</string>
+    <string name="ai_share_scored">Dosegel sem %1$d v izzivu Alias od %2$s! %3$s</string>
 </resources>

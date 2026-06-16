@@ -2,6 +2,7 @@ package hr.azzi.socialgames.alias.ui.screens.ai
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -36,13 +37,16 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIDeck
 import hr.azzi.socialgames.alias.ai.AIDeckCatalog
 import hr.azzi.socialgames.alias.ai.AILanguage
+import hr.azzi.socialgames.alias.ai.AIMode
 import hr.azzi.socialgames.alias.ai.AIPracticeConfig
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
@@ -63,6 +67,7 @@ fun AiSetupScreen(
     var deck by remember { mutableStateOf(AIDeckCatalog.decks.first()) }
     var language by remember { mutableStateOf(deck.languages.first()) }
     var seconds by remember { mutableStateOf(60) }
+    var mode by remember { mutableStateOf(AIMode.AI_EXPLAINS) }
     var showPicker by remember { mutableStateOf(false) }
 
     BrandBackground {
@@ -77,24 +82,17 @@ fun AiSetupScreen(
             Column(Modifier.weight(1f).fillMaxWidth().padding(horizontal = 20.dp),
                 verticalArrangement = Arrangement.spacedBy(14.dp)) {
 
-                // Mode (only AI-explains supported on Android)
-                CCard(Modifier.fillMaxWidth()) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Box(Modifier.size(48.dp).clip(RoundedCornerShape(14.dp)).background(Color(0xFF2BC4A8)),
-                            contentAlignment = Alignment.Center) { Text("AI", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold) }
-                        Spacer(Modifier.size(14.dp))
-                        Column(Modifier.weight(1f)) {
-                            Text("AI explains", color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
-                            Text("The AI gives clues — you guess", color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
-                        }
-                    }
-                }
+                // Mode selection
+                ModeCard("Y", stringResource(R.string.ai_mode_you_explain), stringResource(R.string.ai_mode_you_explain_sub), Color(0xFFB9A7F6),
+                    selected = mode == AIMode.YOU_EXPLAIN) { mode = AIMode.YOU_EXPLAIN }
+                ModeCard("AI", stringResource(R.string.ai_mode_ai_explains), stringResource(R.string.ai_mode_ai_explains_sub), Color(0xFF2BC4A8),
+                    selected = mode == AIMode.AI_EXPLAINS) { mode = AIMode.AI_EXPLAINS }
 
                 CCard(Modifier.fillMaxWidth()) {
                     Column(verticalArrangement = Arrangement.spacedBy(16.dp)) {
                         // Deck row
                         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                            Text("Deck", color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Text(stringResource(R.string.ai_deck), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                             Spacer(Modifier.weight(1f))
                             Row(Modifier.clip(RoundedCornerShape(50)).background(Alias.fieldBg).clickable { showPicker = true }
                                 .padding(horizontal = 14.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
@@ -105,7 +103,7 @@ fun AiSetupScreen(
                         Divider()
                         // Language
                         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                            Text("Language", color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Text(stringResource(R.string.ai_language), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                             Spacer(Modifier.weight(1f))
                             Segmented(deck.languages.map { it.display }, deck.languages.indexOf(language)) { i ->
                                 language = deck.languages[i]
@@ -114,7 +112,7 @@ fun AiSetupScreen(
                         Divider()
                         // Total time
                         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                            Text("Total time", color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            Text(stringResource(R.string.ai_total_time), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                             Spacer(Modifier.weight(1f))
                             val opts = listOf(40, 60, 80, 100)
                             Segmented(opts.map { "${it}s" }, opts.indexOf(seconds)) { i -> seconds = opts[i] }
@@ -125,7 +123,7 @@ fun AiSetupScreen(
 
             Column(Modifier.fillMaxWidth().padding(20.dp)) {
                 PillButton(startLabel, PillKind.Primary) {
-                    onStart(AIPracticeConfig(deck = deck, language = language, totalSeconds = seconds))
+                    onStart(AIPracticeConfig(deck = deck, language = language, totalSeconds = seconds, mode = mode))
                 }
             }
         }
@@ -141,6 +139,25 @@ fun AiSetupScreen(
                 showPicker = false
             },
         )
+    }
+}
+
+@Composable
+private fun ModeCard(badgeLabel: String, title: String, subtitle: String, badge: Color, selected: Boolean, onClick: () -> Unit) {
+    val border = if (selected) Modifier.border(2.dp, Alias.accent, RoundedCornerShape(20.dp)) else Modifier
+    androidx.compose.foundation.layout.Box(Modifier.fillMaxWidth().then(border)
+        .clip(RoundedCornerShape(20.dp)).background(Color.White).clickable { onClick() }.padding(16.dp)) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            androidx.compose.foundation.layout.Box(Modifier.size(48.dp).clip(RoundedCornerShape(14.dp)).background(badge),
+                contentAlignment = Alignment.Center) { Text(badgeLabel, color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold) }
+            Spacer(Modifier.size(14.dp))
+            Column(Modifier.weight(1f)) {
+                Text(title, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
+                Text(subtitle, color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+            }
+            androidx.compose.foundation.layout.Box(Modifier.size(22.dp).clip(RoundedCornerShape(50))
+                .background(if (selected) Alias.accent else Color(0xFFE2E8F1)))
+        }
     }
 }
 
@@ -177,7 +194,7 @@ private fun DeckPickerOverlay(selected: AIDeck, onDismiss: () -> Unit, onPick: (
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = onDismiss) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
-                DisplayText("Choose a deck", 22)
+                DisplayText(stringResource(R.string.ai_choose_deck), 22)
             }
             Spacer(Modifier.height(8.dp))
             LazyVerticalGrid(columns = GridCells.Fixed(2),

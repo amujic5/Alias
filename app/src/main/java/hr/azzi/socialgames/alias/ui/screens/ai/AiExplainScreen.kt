@@ -45,11 +45,13 @@ import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.graphics.PathEffect
 import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIPracticeConfig
 import hr.azzi.socialgames.alias.ai.AIPracticeResult
 import hr.azzi.socialgames.alias.ai.AiExplainController
@@ -83,7 +85,7 @@ fun AiExplainScreen(
     }
 
     if (controller.phase == AiExplainController.Phase.Done && onChallengeFinish == null) {
-        AiResultScreen(controller.result, onPlayAgain = { sessionKey++ }, onClose = onClose)
+        AiResultScreen(controller.result, title = stringResource(R.string.ai_practice_caps), onPlayAgain = { sessionKey++ }, onClose = onClose)
         return
     }
     if (controller.phase == AiExplainController.Phase.Done) {
@@ -106,7 +108,7 @@ fun AiExplainScreen(
                         Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) }
                     AiExplainController.Phase.Denied ->
                         Box(Modifier.fillMaxSize(), Alignment.Center) {
-                            Text("Microphone access is needed to play.\nEnable it in Settings.",
+                            Text(stringResource(R.string.ai_mic_needed),
                                 color = Color.White, textAlign = TextAlign.Center, fontFamily = Alias.body)
                         }
                     else -> Guessing(controller)
@@ -126,7 +128,7 @@ private fun Guessing(c: AiExplainController) {
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Spacer(Modifier.height(6.dp))
-        Text("AI'S CLUE", color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
+        Text(stringResource(R.string.ai_ai_clue), color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
             fontWeight = FontWeight.Black, fontSize = 12.sp, letterSpacing = 3.sp)
         Spacer(Modifier.height(14.dp))
         Text(if (c.clue.isEmpty()) "…" else "“${c.clue}”", color = Color.White, fontFamily = Alias.display,
@@ -142,7 +144,7 @@ private fun Guessing(c: AiExplainController) {
                 .padding(horizontal = 14.dp, vertical = 8.dp),
             verticalAlignment = Alignment.CenterVertically,
         ) {
-            Text(if (c.listening) "Listening" else "AI is speaking",
+            Text(if (c.listening) stringResource(R.string.ai_listening) else stringResource(R.string.ai_ai_speaking),
                 color = if (c.listening) Gold else Color.White, fontFamily = Alias.body,
                 fontWeight = FontWeight.SemiBold, fontSize = 13.sp)
         }
@@ -168,7 +170,7 @@ private fun Guessing(c: AiExplainController) {
         }
 
         Spacer(Modifier.height(14.dp))
-        DisplayText(if (c.listening) "You're guessing…" else "Tap the mic to answer", 18)
+        DisplayText(if (c.listening) stringResource(R.string.ai_youre_guessing) else stringResource(R.string.ai_tap_mic_answer), 18)
         if (c.listening && c.transcript.isNotEmpty()) {
             Spacer(Modifier.height(10.dp))
             Text(c.transcript, color = Gold, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 26.sp)
@@ -177,8 +179,8 @@ private fun Guessing(c: AiExplainController) {
         Spacer(Modifier.weight(1f))
 
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Chip("Hear again") { c.hearAgain() }
-            Chip("New clue") { c.newClue() }
+            Chip(stringResource(R.string.ai_hear_again)) { c.hearAgain() }
+            Chip(stringResource(R.string.ai_new_clue)) { c.newClue() }
         }
         Spacer(Modifier.height(12.dp))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
@@ -186,7 +188,7 @@ private fun Guessing(c: AiExplainController) {
             Text("» ${c.skippedWords.size}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
         }
         Spacer(Modifier.height(8.dp))
-        Text("Skip word", color = Color.White.copy(alpha = 0.9f), fontFamily = Alias.body,
+        Text(stringResource(R.string.ai_skip_word), color = Color.White.copy(alpha = 0.9f), fontFamily = Alias.body,
             fontWeight = FontWeight.SemiBold, fontSize = 16.sp, modifier = Modifier.clickable { c.reveal() }.padding(8.dp))
     }
 }

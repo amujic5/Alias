@@ -76,7 +76,7 @@ private fun AiChallengeButton(onClick: () -> Unit) {
             .clickable { onClick() },
         contentAlignment = Alignment.Center,
     ) {
-        Text("🤖 AI CHALLENGE", color = Color.White, fontFamily = Alias.display,
+        Text(stringResource(R.string.ai_home_button), color = Color.White, fontFamily = Alias.display,
             fontWeight = FontWeight.ExtraBold, fontSize = 17.sp)
     }
 }

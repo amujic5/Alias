@@ -21,9 +21,11 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIPracticeResult
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
@@ -36,7 +38,7 @@ import hr.azzi.socialgames.alias.ui.theme.PillKind
 @Composable
 fun AiResultScreen(
     result: AIPracticeResult,
-    title: String = "PRACTICE",
+    title: String,
     onPlayAgain: (() -> Unit)?,
     onClose: () -> Unit,
 ) {
@@ -45,15 +47,15 @@ fun AiResultScreen(
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             Overline(title)
             Spacer(Modifier.height(6.dp))
-            DisplayText("Round complete!", 30)
+            DisplayText(stringResource(R.string.ai_round_complete), 30)
             Spacer(Modifier.height(4.dp))
             Text("${result.deckName} · ${result.language}", color = Color.White.copy(alpha = 0.85f),
                 fontFamily = Alias.body, fontSize = 14.sp)
             Spacer(Modifier.height(18.dp))
 
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-                StatTile("CORRECT", result.correct, Alias.success, Modifier.weight(1f))
-                StatTile("SKIPPED", result.skipped, Alias.textSecondary, Modifier.weight(1f))
+                StatTile(stringResource(R.string.ai_correct_label), result.correct, Alias.success, Modifier.weight(1f))
+                StatTile(stringResource(R.string.ai_skipped_label), result.skipped, Alias.textSecondary, Modifier.weight(1f))
             }
             Spacer(Modifier.height(16.dp))
 
@@ -74,10 +76,10 @@ fun AiResultScreen(
             }
             Spacer(Modifier.height(16.dp))
             if (onPlayAgain != null) {
-                PillButton("PLAY AGAIN", PillKind.Primary, onClick = onPlayAgain)
+                PillButton(stringResource(R.string.ai_play_again), PillKind.Primary, onClick = onPlayAgain)
                 Spacer(Modifier.height(12.dp))
             }
-            PillButton("CLOSE", PillKind.Light, onClick = onClose)
+            PillButton(stringResource(R.string.ai_close_caps), PillKind.Light, onClick = onClose)
         }
     }
 }

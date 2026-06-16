@@ -59,5 +59,112 @@
     <string name="game_alias_slo">Alias Slovenija</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabu</string>
+
+    <!-- AI Challenge -->
+    <string name="ai_home_button">🤖 AI CHALLENGE</string>
+    <string name="ai_hub_title">AI CHALLENGE</string>
+    <string name="ai_join_title">Tritt der Arena bei</string>
+    <string name="ai_join_subtitle">Melde dich an, um Freunde herauszufordern und deine Siege zu speichern.</string>
+    <string name="ai_sign_in_google">Mit Google anmelden</string>
+    <string name="ai_practice_title">Mit KI üben</string>
+    <string name="ai_practice_subtitle">Aufwärmen — kein Risiko, kein Login</string>
+    <string name="ai_challenge_title">Freund herausfordern</string>
+    <string name="ai_challenge_subtitle">Schlag einen Freund · zählt für deine Bilanz</string>
+    <string name="ai_recent_challenges">LETZTE HERAUSFORDERUNGEN</string>
+    <string name="ai_see_all">Alle anzeigen</string>
+    <string name="ai_your_challenge">Deine Herausforderung</string>
+    <string name="ai_vs_name">gegen %1$s</string>
+    <string name="ai_players_count">%1$d Spieler</string>
+    <string name="ai_didnt_finish">NICHT BEENDET</string>
+    <string name="ai_won_score">%1$d–%2$d gewonnen</string>
+    <string name="ai_draw_score">%1$d–%2$d unentschieden</string>
+    <string name="ai_lost_score">%1$d–%2$d verloren</string>
+    <string name="ai_lv">LV</string>
+    <string name="ai_stat_w">%1$d S</string>
+    <string name="ai_stat_l">%1$d N</string>
+    <string name="ai_stat_d">%1$d U</string>
+
+    <string name="ai_practice">Üben</string>
+    <string name="ai_challenge">Herausforderung</string>
+    <string name="ai_practice_warmup">Wärm dich gegen die KI auf — nichts wird gespeichert</string>
+    <string name="ai_challenge_warmup">Spiel deine Runde und schick sie einem Freund</string>
+    <string name="ai_start_practice">Üben starten</string>
+    <string name="ai_play_your_round">Spiel deine Runde</string>
+    <string name="ai_mode_you_explain">Du erklärst</string>
+    <string name="ai_mode_you_explain_sub">Du beschreibst — die KI rät</string>
+    <string name="ai_mode_ai_explains">KI erklärt</string>
+    <string name="ai_mode_ai_explains_sub">Die KI gibt Tipps — du rätst</string>
+    <string name="ai_deck">Deck</string>
+    <string name="ai_language">Sprache</string>
+    <string name="ai_total_time">Gesamtzeit</string>
+    <string name="ai_choose_deck">Deck auswählen</string>
+
+    <string name="ai_ai_clue">TIPP DER KI</string>
+    <string name="ai_ai_speaking">KI spricht</string>
+    <string name="ai_listening">Höre zu</string>
+    <string name="ai_tap_mic_answer">Tippe aufs Mikrofon zum Antworten</string>
+    <string name="ai_youre_guessing">Du rätst…</string>
+    <string name="ai_hear_again">Nochmal anhören</string>
+    <string name="ai_new_clue">Neuer Tipp</string>
+    <string name="ai_skip_word">Wort überspringen</string>
+    <string name="ai_mic_needed">Für das Spiel wird Mikrofonzugriff benötigt.\nAktiviere ihn in den Einstellungen.</string>
+
+    <string name="ai_explain_dont_say">ERKLÄRE ES — SAG ES NICHT</string>
+    <string name="ai_tap_to_explain">Tippen zum Erklären</string>
+    <string name="ai_not_it_explain_more">Falsch — erkläre mehr</string>
+    <string name="ai_listening_tap_done">Höre zu… tippe, wenn fertig</string>
+    <string name="ai_ai_is_guessing">KI rät…</string>
+    <string name="ai_ai_guesses">KI rät:</string>
+    <string name="ai_said_word">Du hast das Wort gesagt!</string>
+    <string name="ai_word_skipped">Wort übersprungen</string>
+
+    <string name="ai_round_complete">Runde beendet!</string>
+    <string name="ai_correct_label">RICHTIG</string>
+    <string name="ai_skipped_label">ÜBERSPRUNGEN</string>
+    <string name="ai_play_again">NOCHMAL SPIELEN</string>
+    <string name="ai_close_caps">SCHLIESSEN</string>
+    <string name="ai_practice_caps">ÜBEN</string>
+
+    <string name="ai_you_won">Du hast gewonnen!</string>
+    <string name="ai_you_lost">Du hast verloren</string>
+    <string name="ai_its_draw">Unentschieden</string>
+    <string name="ai_record">Bilanz %1$d – %2$d – %3$d</string>
+    <string name="ai_see_full_board">Ganze Tabelle ansehen</string>
+    <string name="ai_share_result">Ergebnis teilen</string>
+    <string name="ai_close">Schließen</string>
+
+    <string name="ai_leaderboard">Bestenliste</string>
+    <string name="ai_score_to_beat">ZU SCHLAGENDE PUNKTZAHL</string>
+    <string name="ai_players">SPIELER</string>
+    <string name="ai_share_challenge">Herausforderung teilen</string>
+    <string name="ai_badge_host">GASTGEBER</string>
+    <string name="ai_badge_win">SIEG</string>
+    <string name="ai_badge_draw">REMIS</string>
+    <string name="ai_badge_lost">NIEDERLAGE</string>
+    <string name="ai_you_suffix"> (du)</string>
+
+    <string name="ai_challenges_you">%1$s fordert dich heraus!</string>
+    <string name="ai_deck_info">%1$d Wörter · %2$ds · %3$s</string>
+    <string name="ai_beat_score">Schlag die Punktzahl von %1$d</string>
+    <string name="ai_play_challenge">Herausforderung spielen</string>
+    <string name="ai_not_now">Nicht jetzt</string>
+
+    <string name="ai_profile">Profil</string>
+    <string name="ai_wins">SIEGE</string>
+    <string name="ai_losses">NIEDERLAGEN</string>
+    <string name="ai_draws">UNENTSCHIEDEN</string>
+    <string name="ai_sign_out">Abmelden</string>
+
+    <string name="ai_pick_username">Benutzernamen wählen</string>
+    <string name="ai_username_hint">3–15 Buchstaben oder Zahlen. So sehen dich deine Freunde.</string>
+    <string name="ai_username">Benutzername</string>
+    <string name="ai_continue">Weiter</string>
+    <string name="ai_err_handle">Verwende 3–15 Buchstaben oder Zahlen.</string>
+    <string name="ai_err_taken">Dieser Benutzername ist vergeben.</string>
+    <string name="ai_err_generic">Etwas ist schiefgelaufen.</string>
+
+    <string name="ai_share_beat">Schlag meine Alias-Punktzahl! %1$s</string>
+    <string name="ai_share_scored">Ich habe %1$d Punkte in %2$s\'s Alias-Herausforderung erzielt! %3$s</string>
+
 </resources>
 
