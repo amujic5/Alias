@@ -32,7 +32,7 @@ class AiExplainController(
     enum class Phase { Loading, Denied, Thinking, Guessing, Done }
 
     private val sound = SoundSystem(context)
-    private val speaker = AISpeaker(context)
+    private val speaker = AISpeaker(context, rate = 1.2f)
     private val speech = AISpeech(context)
     private val scope = CoroutineScope(Dispatchers.Main + SupervisorJob())
 
