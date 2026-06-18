@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias.ui.screens.ai
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -17,6 +18,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.ChevronRight
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
@@ -46,6 +48,7 @@ fun AiRankScreen(
     plays: List<AIChallengePlay>,
     myUid: String,
     onShare: () -> Unit,
+    onOpenPlay: (AIChallengePlay) -> Unit,
     onClose: () -> Unit,
 ) {
     val finished = plays.filter { it.finished }.sortedWith(compareByDescending<AIChallengePlay> { it.score }.thenBy { it.playedAt })
@@ -78,7 +81,7 @@ fun AiRankScreen(
                     CCard(Modifier.fillMaxWidth(), padding = 0) {
                         Column {
                             finished.forEachIndexed { i, p ->
-                                RankRow(i + 1, p, challenge, myUid)
+                                RankRow(i + 1, p, challenge, myUid) { onOpenPlay(p) }
                                 if (i != finished.lastIndex) Box(Modifier.fillMaxWidth().height(1.dp)
                                     .padding(horizontal = 16.dp).background(Alias.divider))
                             }
@@ -111,7 +114,7 @@ fun AiRankScreen(
 }
 
 @Composable
-private fun RankRow(rank: Int, p: AIChallengePlay, challenge: AIChallenge, myUid: String) {
+private fun RankRow(rank: Int, p: AIChallengePlay, challenge: AIChallenge, myUid: String, onClick: () -> Unit) {
     val isCreator = p.playerId == challenge.creatorId
     val (badge, color) = when {
         isCreator -> stringResource(R.string.ai_badge_host) to Alias.textSecondary
@@ -120,7 +123,7 @@ private fun RankRow(rank: Int, p: AIChallengePlay, challenge: AIChallenge, myUid
         else -> stringResource(R.string.ai_badge_lost) to Alias.danger
     }
     val me = p.playerId == myUid
-    Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
+    Row(Modifier.fillMaxWidth().clickable { onClick() }.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
         Box(Modifier.size(30.dp).clip(RoundedCornerShape(50)).background(Alias.textPrimary), contentAlignment = Alignment.Center) {
             Text("$rank", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 13.sp)
         }
@@ -131,5 +134,6 @@ private fun RankRow(rank: Int, p: AIChallengePlay, challenge: AIChallenge, myUid
         Spacer(Modifier.size(10.dp))
         Text(badge, color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 11.sp,
             modifier = Modifier.clip(RoundedCornerShape(50)).background(color).padding(horizontal = 8.dp, vertical = 4.dp))
+        Icon(Icons.Filled.ChevronRight, null, tint = Alias.textSecondary, modifier = Modifier.size(20.dp).padding(start = 4.dp))
     }
 }

@@ -59,7 +59,7 @@ class AiExplainController(
     private var clueJob: Job? = null
     private var evalJob: Job? = null
 
-    private val firstClueGap = 3_000L
+    private val firstClueGap = 5_000L
     private val nextClueGap = 5_000L
     private val evalDebounce = 1_200L
 

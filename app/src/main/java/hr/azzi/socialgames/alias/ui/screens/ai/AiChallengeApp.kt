@@ -43,6 +43,7 @@ private sealed interface AiRoute {
     data class Intro(val challenge: AIChallenge) : AiRoute
     data class Outcome(val challenge: AIChallenge, val score: Int, val total: Int) : AiRoute
     data class OpenById(val id: String) : AiRoute
+    data class PlayDetail(val play: AIChallengePlay, val challenge: AIChallenge) : AiRoute
     object Profile : AiRoute
 }
 
@@ -213,8 +214,13 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             }
             val c = ch
             if (c == null) BrandBackground { Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) } }
-            else AiRankScreen(c, plays, myUid, onShare = { shareText(context.getString(R.string.ai_share_beat, c.shareUrl)) }, onClose = { pop() })
+            else AiRankScreen(c, plays, myUid,
+                onShare = { shareText(context.getString(R.string.ai_share_beat, c.shareUrl)) },
+                onOpenPlay = { push(AiRoute.PlayDetail(it, c)) },
+                onClose = { pop() })
         }
+
+        is AiRoute.PlayDetail -> AiPlayDetailScreen(route.play, route.challenge, onClose = { pop() })
 
         is AiRoute.Intro -> AiIntroScreen(
             challenge = route.challenge,
