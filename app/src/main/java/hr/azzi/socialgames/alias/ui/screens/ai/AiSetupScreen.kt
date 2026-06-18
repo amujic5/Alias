@@ -64,11 +64,13 @@ fun AiSetupScreen(
     onStart: (AIPracticeConfig) -> Unit,
 ) {
     val context = LocalContext.current
+    val prefs = remember { context.getSharedPreferences("ai_settings", android.content.Context.MODE_PRIVATE) }
     var deck by remember { mutableStateOf(AIDeckCatalog.decks.first()) }
-    var language by remember { mutableStateOf(deck.languages.first()) }
+    var language by remember { mutableStateOf(AILanguage.preferred(deck.languages, prefs.getString("ai_preferred_language", null))) }
     var seconds by remember { mutableStateOf(60) }
     var mode by remember { mutableStateOf(AIMode.AI_EXPLAINS) }
     var showPicker by remember { mutableStateOf(false) }
+    var showLangPicker by remember { mutableStateOf(false) }
 
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
@@ -105,8 +107,12 @@ fun AiSetupScreen(
                         Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                             Text(stringResource(R.string.ai_language), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
                             Spacer(Modifier.weight(1f))
-                            Segmented(deck.languages.map { it.display }, deck.languages.indexOf(language)) { i ->
-                                language = deck.languages[i]
+                            Row(Modifier.clip(RoundedCornerShape(50)).background(Alias.fieldBg).clickable { showLangPicker = true }
+                                .padding(horizontal = 14.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                                Text(language.emoji, fontSize = 16.sp)
+                                Spacer(Modifier.size(8.dp))
+                                Text(language.nativeName, color = Alias.textPrimary, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                                Icon(Icons.Filled.ChevronRight, null, tint = Alias.textSecondary, modifier = Modifier.size(18.dp))
                             }
                         }
                         Divider()
@@ -135,10 +141,59 @@ fun AiSetupScreen(
             onDismiss = { showPicker = false },
             onPick = { d ->
                 deck = d
-                if (!d.languages.contains(language)) language = d.languages.first()
+                if (!d.languages.contains(language)) {
+                    language = AILanguage.preferred(d.languages, prefs.getString("ai_preferred_language", null))
+                }
                 showPicker = false
             },
         )
+    }
+
+    if (showLangPicker) {
+        LanguagePickerOverlay(
+            languages = deck.languages,
+            selected = language,
+            onDismiss = { showLangPicker = false },
+            onPick = { l ->
+                language = l
+                prefs.edit().putString("ai_preferred_language", l.code).apply()
+                showLangPicker = false
+            },
+        )
+    }
+}
+
+@Composable
+private fun LanguagePickerOverlay(languages: List<AILanguage>, selected: AILanguage, onDismiss: () -> Unit, onPick: (AILanguage) -> Unit) {
+    Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.5f)).clickable(false) {}) {
+        Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                IconButton(onClick = onDismiss) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+                DisplayText(stringResource(R.string.ai_choose_language), 22)
+            }
+            Spacer(Modifier.height(8.dp))
+            LazyVerticalGrid(columns = GridCells.Fixed(2),
+                horizontalArrangement = Arrangement.spacedBy(14.dp),
+                verticalArrangement = Arrangement.spacedBy(14.dp)) {
+                items(languages) { l -> LanguageCard(l.emoji, l.nativeName, l == selected) { onPick(l) } }
+            }
+        }
+    }
+}
+
+@Composable
+private fun LanguageCard(emoji: String, name: String, selected: Boolean, onClick: () -> Unit) {
+    val shape = RoundedCornerShape(20.dp)
+    Column(
+        Modifier.fillMaxWidth().height(120.dp).clip(shape).background(Color.White)
+            .border(if (selected) 3.dp else 0.dp, if (selected) Alias.accent else Color.Transparent, shape)
+            .clickable { onClick() }.padding(16.dp),
+        horizontalAlignment = Alignment.CenterHorizontally, verticalArrangement = Arrangement.Center,
+    ) {
+        Text(emoji, fontSize = 40.sp)
+        Spacer(Modifier.height(10.dp))
+        Text(name, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
+            fontSize = 15.sp, textAlign = TextAlign.Center, maxLines = 1)
     }
 }
 

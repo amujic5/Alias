@@ -54,6 +54,7 @@
     <string name="alias_football">Alias Fußball</string>
     <string name="choose_game">SPIEL AUSWÄHLEN</string>
     <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Spieltyp</string>
     <string name="game_alias_slo">Alias Slovenija</string>
@@ -98,6 +99,7 @@
     <string name="ai_language">Sprache</string>
     <string name="ai_total_time">Gesamtzeit</string>
     <string name="ai_choose_deck">Deck auswählen</string>
+    <string name="ai_choose_language">Sprache wählen</string>
 
     <string name="ai_ai_clue">TIPP DER KI</string>
     <string name="ai_ai_speaking">KI spricht</string>
@@ -166,5 +168,7 @@
     <string name="ai_share_beat">Schlag meine Alias-Punktzahl! %1$s</string>
     <string name="ai_share_scored">Ich habe %1$d Punkte in %2$s\'s Alias-Herausforderung erzielt! %3$s</string>
 
+    <string name="ai_word_by_word">WORT FÜR WORT</string>
+    <string name="ai_player_result">Ergebnis von %1$s</string>
 </resources>
 

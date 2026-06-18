@@ -54,6 +54,7 @@
     <string name="alias_football">Alias Football</string>
     <string name="choose_game">CHOISISSEZ UN JEU</string>
     <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Type de jeu</string>
     <string name="game_alias_slo">Alias Slovénie</string>
@@ -98,6 +99,7 @@
     <string name="ai_language">Langue</string>
     <string name="ai_total_time">Temps total</string>
     <string name="ai_choose_deck">Choisissez un paquet</string>
+    <string name="ai_choose_language">Choisir une langue</string>
 
     <string name="ai_ai_clue">INDICE DE L\'AI</string>
     <string name="ai_ai_speaking">L\'AI parle</string>
@@ -166,4 +168,6 @@
     <string name="ai_share_beat">Battez mon score Alias ! %1$s</string>
     <string name="ai_share_scored">J\'ai marqué %1$d au défi Alias de %2$s ! %3$s</string>
 
+    <string name="ai_word_by_word">MOT PAR MOT</string>
+    <string name="ai_player_result">Résultat de %1$s</string>
 </resources>

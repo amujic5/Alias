@@ -1,17 +1,47 @@
 package hr.azzi.socialgames.alias.ai
 
+import java.util.Locale
+
 /** Languages the AI feature supports. fileCode maps to the ai_<deck>_<fileCode>.json assets. */
-enum class AILanguage(val code: String, val locale: String, val aiName: String, val fileCode: String) {
-    EN("en", "en-US", "English", "eng"),
-    FR("fr", "fr-FR", "French", "fra"),
-    DE("de", "de-DE", "German", "ger"),
-    IT("it", "it-IT", "Italian", "ita"),
-    HR("hr", "hr-HR", "Croatian", "cro");
+enum class AILanguage(val code: String, val locale: String, val aiName: String, val fileCode: String, val emoji: String) {
+    EN("en", "en-US", "English", "eng", "🇬🇧"),
+    FR("fr", "fr-FR", "French", "fra", "🇫🇷"),
+    DE("de", "de-DE", "German", "ger", "🇩🇪"),
+    IT("it", "it-IT", "Italian", "ita", "🇮🇹"),
+    HR("hr", "hr-HR", "Croatian", "cro", "🇭🇷"),
+    SR("sr", "sr-RS", "Serbian", "srb", "🇷🇸");
 
     val display: String get() = code.uppercase()
 
+    /** Native display name shown in the language pill / picker. */
+    val nativeName: String get() = when (this) {
+        EN -> "English"; FR -> "Français"; DE -> "Deutsch"; IT -> "Italiano"; HR -> "Hrvatski"; SR -> "Srpski"
+    }
+
     companion object {
         fun from(code: String?): AILanguage = entries.firstOrNull { it.code == code } ?: EN
+
+        /** Best-guess AI language from the device language, then region (null if none match). */
+        fun fromDeviceLocale(): AILanguage? {
+            val lang = Locale.getDefault().language.lowercase()
+            entries.firstOrNull { it.code == lang }?.let { return it }
+            return when (Locale.getDefault().country.uppercase()) {
+                "GB", "US", "IE", "AU", "CA", "NZ" -> EN
+                "FR", "BE", "LU", "MC" -> FR
+                "DE", "AT", "CH", "LI" -> DE
+                "IT", "SM", "VA" -> IT
+                "HR" -> HR
+                "RS", "ME", "BA" -> SR
+                else -> null
+            }
+        }
+
+        /** Pick the language to preselect: 1) saved pref, 2) device locale, 3) first available. */
+        fun preferred(available: List<AILanguage>, savedCode: String?): AILanguage {
+            savedCode?.let { code -> available.firstOrNull { it.code == code } }?.let { return it }
+            fromDeviceLocale()?.let { if (available.contains(it)) return it }
+            return available.firstOrNull() ?: EN
+        }
     }
 }
 

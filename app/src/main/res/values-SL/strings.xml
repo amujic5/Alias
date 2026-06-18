@@ -62,6 +62,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="alias_football">Alias Nogomet</string>
     <string name="choose_game">IZBERI IGRO</string>
     <string name="game_alias_cro">CRO Alias</string>
+    <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Vrsta igre</string>
     <string name="game_alias_slo">Alias Slovenija</string>
@@ -106,6 +107,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="ai_language">Jezik</string>
     <string name="ai_total_time">Skupni čas</string>
     <string name="ai_choose_deck">Izberi komplet</string>
+    <string name="ai_choose_language">Izberi jezik</string>
 
     <string name="ai_ai_clue">AI NAMIG</string>
     <string name="ai_ai_speaking">AI govori</string>
@@ -173,4 +175,6 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
 
     <string name="ai_share_beat">Premagaj moj rezultat v Alias! %1$s</string>
     <string name="ai_share_scored">Dosegel sem %1$d v izzivu Alias od %2$s! %3$s</string>
+    <string name="ai_word_by_word">BESEDA ZA BESEDO</string>
+    <string name="ai_player_result">Rezultat: %1$s</string>
 </resources>

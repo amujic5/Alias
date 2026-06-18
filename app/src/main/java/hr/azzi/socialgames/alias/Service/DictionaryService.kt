@@ -150,6 +150,8 @@ enum class BoardGameId {
     FOOTBALL,
     @SerializedName("game_alias_cro")
     CRO,
+    @SerializedName("game_alias_srb")
+    SRB,
     @SerializedName("game_taboo")
     TABOO,
     @SerializedName("game_alias_junior")
