@@ -3,6 +3,7 @@ package hr.azzi.socialgames.alias
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.compose.setContent
+import hr.azzi.socialgames.alias.ai.AIAnalytics
 import hr.azzi.socialgames.alias.ui.screens.ai.AiChallengeApp
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
@@ -11,6 +12,11 @@ class AIChallengeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val id = challengeIdFrom(intent)
+        // Log how the app was opened when arriving via a challenge deep link.
+        if (id != null) when (intent?.data?.scheme?.lowercase()) {
+            "https" -> AIAnalytics.appOpenViaUniversalLink(this)
+            "aliaswords" -> AIAnalytics.appOpenViaScheme(this)
+        }
         setContent {
             AliasTheme {
                 AiChallengeApp(initialChallengeId = id, onExit = { finish() })

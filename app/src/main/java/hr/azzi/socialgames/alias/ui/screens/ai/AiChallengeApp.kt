@@ -24,6 +24,7 @@ import androidx.compose.ui.res.stringResource
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.ai.AIAnalytics
 import hr.azzi.socialgames.alias.ai.AIChallenge
 import hr.azzi.socialgames.alias.ai.AIChallengePlay
 import hr.azzi.socialgames.alias.ai.AIChallengeRepository
@@ -170,7 +171,11 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             subtitle = if (route.forChallenge) stringResource(R.string.ai_challenge_warmup) else stringResource(R.string.ai_practice_warmup),
             startLabel = if (route.forChallenge) stringResource(R.string.ai_play_your_round) else stringResource(R.string.ai_start_practice),
             onBack = { pop() },
-            onStart = { config -> push(AiRoute.Play(config, null, null, route.forChallenge)) },
+            onStart = { config ->
+                if (route.forChallenge) AIAnalytics.challengeCreateOpen(context, config)
+                else AIAnalytics.practiceOpen(context, config)
+                push(AiRoute.Play(config, null, null, route.forChallenge))
+            },
         )
 
         is AiRoute.Play -> {
@@ -215,7 +220,7 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             val c = ch
             if (c == null) BrandBackground { Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) } }
             else AiRankScreen(c, plays, myUid,
-                onShare = { shareText(context.getString(R.string.ai_share_beat, c.shareUrl)) },
+                onShare = { AIAnalytics.challengeShareTapped(context, c.id); shareText(context.getString(R.string.ai_share_beat, c.shareUrl)) },
                 onOpenPlay = { push(AiRoute.PlayDetail(it, c)) },
                 onClose = { pop() })
         }
@@ -237,7 +242,7 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
 
         is AiRoute.Outcome -> AiOutcomeScreen(
             challenge = route.challenge, myName = username, myScore = route.score, myTotal = route.total, stats = stats,
-            onShare = { shareText(context.getString(R.string.ai_share_scored, route.score, route.challenge.creatorName, route.challenge.shareUrl)) },
+            onShare = { AIAnalytics.challengeShareTapped(context, route.challenge.id); shareText(context.getString(R.string.ai_share_scored, route.score, route.challenge.creatorName, route.challenge.shareUrl)) },
             onSeeBoard = { replaceTop(AiRoute.Rank(route.challenge.id)) },
             onClose = { popToHub() },
         )
