@@ -72,6 +72,8 @@ class AiPlayController(
     fun start() {
         speech.locale = config.language.locale
         speech.onTranscript = { t -> transcript = t; checkForbidden() }
+        // Mic couldn't be sustained: stop pretending to listen, reset the button to Idle.
+        speech.onFailed = { if (turn == Turn.Explaining) { turn = Turn.Idle } }
         scope.launch(Dispatchers.Default) {
             indexReady = AIWordIndex.prepare(context, config.deck.id, config.language)
         }

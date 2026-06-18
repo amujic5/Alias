@@ -84,6 +84,8 @@ class AiExplainController(
         speaker.onSpeakingChanged = { speaking -> if (!speaking) clueSpoken() }
         speech.locale = config.language.locale
         speech.onTranscript = { t -> transcript = t; scheduleEval() }
+        // Mic couldn't be sustained: reflect that the app stopped listening.
+        speech.onFailed = { listening = false }
         beginWord()
         startTimer()
     }
