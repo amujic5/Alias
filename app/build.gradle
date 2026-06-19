@@ -4,18 +4,34 @@ apply plugin: 'kotlin-parcelize'
 apply plugin: 'org.jetbrains.kotlin.plugin.compose'
 apply plugin: 'com.google.firebase.crashlytics'
 
+// Release signing — credentials live in keystore.properties (gitignored), never in VCS.
+def keystorePropsFile = rootProject.file("keystore.properties")
+def keystoreProps = new Properties()
+if (keystorePropsFile.exists()) { keystoreProps.load(new FileInputStream(keystorePropsFile)) }
+
 android {
     compileSdk 35
     defaultConfig {
         applicationId "hr.azzi.socialgames.alias"
         minSdkVersion 29
         targetSdkVersion 35
-        versionCode 6
-        versionName "6.0"
+        versionCode 7
+        versionName "6.1"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    signingConfigs {
+        release {
+            if (keystorePropsFile.exists()) {
+                storeFile rootProject.file(keystoreProps['storeFile'])
+                storePassword keystoreProps['storePassword']
+                keyAlias keystoreProps['keyAlias']
+                keyPassword keystoreProps['keyPassword']
+            }
+        }
     }
     buildTypes {
         release {
+            signingConfig keystorePropsFile.exists() ? signingConfigs.release : signingConfigs.debug
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
