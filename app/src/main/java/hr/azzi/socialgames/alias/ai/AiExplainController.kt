@@ -86,6 +86,7 @@ class AiExplainController(
         speech.onTranscript = { t -> transcript = t; scheduleEval() }
         // Mic couldn't be sustained: reflect that the app stopped listening.
         speech.onFailed = { listening = false }
+        AIInterstitial.preload(context)
         beginWord()
         startTimer()
     }
@@ -232,6 +233,7 @@ class AiExplainController(
         clueJob?.cancel(); evalJob?.cancel()
         speaker.stop(); speech.stop()
         sound.playEnd()
+        AIInterstitial.show(context)
         onFinish?.invoke(result, frozenWords)
     }
 }

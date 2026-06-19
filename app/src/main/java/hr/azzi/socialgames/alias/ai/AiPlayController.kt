@@ -77,6 +77,7 @@ class AiPlayController(
         scope.launch(Dispatchers.Default) {
             indexReady = AIWordIndex.prepare(context, config.deck.id, config.language)
         }
+        AIInterstitial.preload(context)
         beginWord()
         startTimer()
     }
@@ -226,6 +227,7 @@ class AiPlayController(
         phase = Phase.Done
         speaker.stop(); speech.stop()
         sound.playEnd()
+        AIInterstitial.show(context)
         onFinish?.invoke(result, frozenWords)
     }
 
