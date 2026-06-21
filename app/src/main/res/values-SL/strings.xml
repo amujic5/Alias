@@ -172,6 +172,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="ai_err_handle">Uporabi 3–15 črk ali številk.</string>
     <string name="ai_err_taken">To uporabniško ime je zasedeno.</string>
     <string name="ai_err_generic">Nekaj je šlo narobe.</string>
+    <string name="ai_err_no_google_account">Googlov račun ni bil najden. Dodaj ga v nastavitvah naprave.</string>
 
     <string name="ai_share_beat">Premagaj moj rezultat v Alias! %1$s</string>
     <string name="ai_share_scored">Dosegel sem %1$d v izzivu Alias od %2$s! %3$s</string>

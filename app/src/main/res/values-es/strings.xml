@@ -163,6 +163,7 @@
     <string name="ai_err_handle">Usa 3–15 letras o números.</string>
     <string name="ai_err_taken">Ese nombre de usuario ya está en uso.</string>
     <string name="ai_err_generic">Algo salió mal.</string>
+    <string name="ai_err_no_google_account">No se encontró ninguna cuenta de Google. Añade una en los ajustes del dispositivo.</string>
 
     <string name="ai_share_beat">¡Supera mi puntuación en Alias! %1$s</string>
     <string name="ai_share_scored">¡Conseguí %1$d en el reto de Alias de %2$s! %3$s</string>

@@ -1,13 +1,23 @@
 package hr.azzi.socialgames.alias.ai
 
+import android.content.Context
+import androidx.credentials.CredentialManager
+import androidx.credentials.CustomCredential
+import androidx.credentials.GetCredentialRequest
+import androidx.credentials.exceptions.GetCredentialCancellationException
+import androidx.credentials.exceptions.GetCredentialException
+import androidx.credentials.exceptions.NoCredentialException
+import com.google.android.libraries.identity.googleid.GetGoogleIdOption
+import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.GoogleAuthProvider
 import com.google.firebase.auth.userProfileChangeRequest
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.firestore.SetOptions
 import kotlinx.coroutines.tasks.await
 
-/** Firebase auth + username + stats. Sign-in itself is launched via FirebaseUI in the UI layer. */
+/** Firebase auth + username + stats. Google sign-in goes through Credential Manager. */
 object AuthService {
 
     private val auth get() = FirebaseAuth.getInstance()
@@ -16,6 +26,49 @@ object AuthService {
     val uid: String? get() = auth.currentUser?.uid
     val isSignedIn: Boolean get() = auth.currentUser != null
     val displayName: String? get() = auth.currentUser?.displayName
+
+    /** Outcome of a Google sign-in attempt, so the UI can react appropriately. */
+    sealed interface SignInResult {
+        object Success : SignInResult
+        /** User dismissed the picker — stay silent. */
+        object Cancelled : SignInResult
+        /** No Google account on the device — prompt the user to add one. */
+        object NoAccount : SignInResult
+        data class Error(val cause: Throwable) : SignInResult
+    }
+
+    /**
+     * Launches the Google account picker via Credential Manager and signs into Firebase
+     * with the returned ID token. Never throws — failures are mapped to [SignInResult].
+     */
+    suspend fun signInWithGoogle(context: Context, serverClientId: String): SignInResult {
+        val googleIdOption = GetGoogleIdOption.Builder()
+            .setFilterByAuthorizedAccounts(false)
+            .setServerClientId(serverClientId)
+            .setAutoSelectEnabled(true)
+            .build()
+        val request = GetCredentialRequest.Builder().addCredentialOption(googleIdOption).build()
+        val response = try {
+            CredentialManager.create(context).getCredential(context, request)
+        } catch (e: GetCredentialCancellationException) {
+            return SignInResult.Cancelled
+        } catch (e: NoCredentialException) {
+            return SignInResult.NoAccount
+        } catch (e: GetCredentialException) {
+            return SignInResult.Error(e)
+        }
+        return try {
+            val cred = response.credential
+            check(cred is CustomCredential && cred.type == GoogleIdTokenCredential.TYPE_GOOGLE_ID_TOKEN_CREDENTIAL) {
+                "Unexpected credential type: ${cred.type}"
+            }
+            val idToken = GoogleIdTokenCredential.createFrom(cred.data).idToken
+            auth.signInWithCredential(GoogleAuthProvider.getCredential(idToken, null)).await()
+            SignInResult.Success
+        } catch (e: Exception) {
+            SignInResult.Error(e)
+        }
+    }
 
     /** A freshly created Firebase user has no username yet. */
     suspend fun needsUsername(): Boolean {

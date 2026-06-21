@@ -170,6 +170,7 @@
     <string name="ai_err_handle">Use 3–15 letters or numbers.</string>
     <string name="ai_err_taken">That username is taken.</string>
     <string name="ai_err_generic">Something went wrong.</string>
+    <string name="ai_err_no_google_account">No Google account found. Add one in your device settings.</string>
 
     <string name="ai_share_beat">Beat my Alias score! %1$s</string>
     <string name="ai_share_scored">I scored %1$d in %2$s\'s Alias challenge! %3$s</string>

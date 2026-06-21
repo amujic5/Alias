@@ -2,7 +2,7 @@ package hr.azzi.socialgames.alias.ui.screens.ai
 
 import android.content.Context
 import android.content.Intent
-import androidx.activity.compose.rememberLauncherForActivityResult
+import android.widget.Toast
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
@@ -21,8 +21,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import com.firebase.ui.auth.AuthUI
-import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIAnalytics
 import hr.azzi.socialgames.alias.ai.AIChallenge
@@ -80,14 +78,17 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
     var unameError by remember { mutableStateOf<String?>(null) }
     var deepLinkConsumed by remember { mutableStateOf(false) }
 
-    val signInLauncher = rememberLauncherForActivityResult(FirebaseAuthUIActivityResultContract()) { result ->
-        if (result.resultCode == android.app.Activity.RESULT_OK) authVersion++
-    }
     fun launchSignIn() {
-        val providers = listOf(AuthUI.IdpConfig.GoogleBuilder().build())
-        signInLauncher.launch(
-            AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers).build()
-        )
+        scope.launch {
+            when (AuthService.signInWithGoogle(context, context.getString(R.string.default_web_client_id))) {
+                AuthService.SignInResult.Success -> authVersion++
+                AuthService.SignInResult.Cancelled -> {}
+                AuthService.SignInResult.NoAccount ->
+                    Toast.makeText(context, R.string.ai_err_no_google_account, Toast.LENGTH_LONG).show()
+                is AuthService.SignInResult.Error ->
+                    Toast.makeText(context, R.string.ai_err_generic, Toast.LENGTH_LONG).show()
+            }
+        }
     }
 
     fun openChallenge(ch: AIChallenge) {
