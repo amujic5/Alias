@@ -9,7 +9,7 @@
     <string name="save">SPREMI</string>
     <string name="how_to_play">Pravila igre</string>
     <string name="new_game">Nova igra</string>
-    <string name="tell_your_friends">Podeli s prijateljima</string>
+    <string name="tell_your_friends">Podeli s drugarima</string>
     <string name="got_it">U REDU</string>
     <string name="how_to_play_info">Alias Vords apsolutni je hit za sve uzraste! Ako ste oduvek tvrdili da ste iznad proseka snalažljivi, brze retorike, spretni i vešti u jeziku, ovo je prilika da se dokažete.
 \ N \ n
@@ -73,12 +73,12 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="ai_home_button">🤖 AI IZAZOV</string>
     <string name="ai_hub_title">AI IZAZOV</string>
     <string name="ai_join_title">Uđi u arenu</string>
-    <string name="ai_join_subtitle">Prijavi se da izazoveš prijatelje i čuvaš svoj skor pobjeda.</string>
+    <string name="ai_join_subtitle">Prijavi se da izazoveš drugare i čuvaš svoj skor pobjeda.</string>
     <string name="ai_sign_in_google">Prijavi se preko Google</string>
     <string name="ai_practice_title">Vježbaj sa AI</string>
     <string name="ai_practice_subtitle">Zagrij se — bez uloga, bez prijave</string>
-    <string name="ai_challenge_title">Izazovi prijatelja</string>
-    <string name="ai_challenge_subtitle">Pobijedi prijatelja · računa se u skor</string>
+    <string name="ai_challenge_title">Izazovi drugara</string>
+    <string name="ai_challenge_subtitle">Pobijedi drugara · računa se u skor</string>
     <string name="ai_recent_challenges">SKORAŠNJI IZAZOVI</string>
     <string name="ai_see_all">Vidi sve</string>
     <string name="ai_your_challenge">Tvoj izazov</string>
@@ -96,7 +96,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="ai_practice">Vježba</string>
     <string name="ai_challenge">Izazov</string>
     <string name="ai_practice_warmup">Zagrij se protiv AI — ništa se ne čuva</string>
-    <string name="ai_challenge_warmup">Odigraj svoju rundu, pa je pošalji prijatelju</string>
+    <string name="ai_challenge_warmup">Odigraj svoju rundu, pa je pošalji drugaru</string>
     <string name="ai_start_practice">Počni vježbu</string>
     <string name="ai_play_your_round">Odigraj svoju rundu</string>
     <string name="ai_mode_you_explain">Ti objašnjavaš</string>
@@ -166,7 +166,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="ai_sign_out">Odjavi se</string>
 
     <string name="ai_pick_username">Izaberi korisničko ime</string>
-    <string name="ai_username_hint">3–15 slova ili brojeva. Ovako te vide prijatelji.</string>
+    <string name="ai_username_hint">3–15 slova ili brojeva. Ovako te vide drugari.</string>
     <string name="ai_username">Korisničko ime</string>
     <string name="ai_continue">Nastavi</string>
     <string name="ai_err_handle">Koristi 3–15 slova ili brojeva.</string>
