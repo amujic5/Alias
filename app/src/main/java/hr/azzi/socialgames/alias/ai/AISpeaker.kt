@@ -32,7 +32,7 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
     fun speak(text: String, locale: String) {
         if (text.isBlank()) return
         if (!ready) { pending = text to locale; return }
-        tts.language = localeFor(locale)
+        applyLanguage(locale)
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, Bundle(), "ai-clue")
     }
 
@@ -44,6 +44,25 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
     fun shutdown() {
         runCatching { tts.stop(); tts.shutdown() }
     }
+
+    /**
+     * Set the voice for [code]; if that voice isn't installed, fall back to a
+     * mutually-intelligible one. Google's on-device engine ships Croatian but
+     * almost never Serbian, so sr → hr keeps AI clues audible (hr ijekavica is
+     * also closer to Montenegrin pronunciation than sr ekavica).
+     */
+    private fun applyLanguage(code: String) {
+        val res = tts.setLanguage(localeFor(code))
+        if (res == TextToSpeech.LANG_MISSING_DATA || res == TextToSpeech.LANG_NOT_SUPPORTED) {
+            fallbackLocale(code)?.let { tts.setLanguage(it) }
+        }
+    }
+
+    private fun fallbackLocale(code: String): Locale? =
+        when (code.substringBefore("-").lowercase()) {
+            "sr" -> Locale("hr", "HR")
+            else -> null
+        }
 
     private fun localeFor(code: String): Locale {
         val parts = code.split("-")
