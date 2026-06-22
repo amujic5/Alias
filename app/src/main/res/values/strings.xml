@@ -116,6 +116,9 @@
     <string name="ai_new_clue">New clue</string>
     <string name="ai_skip_word">Skip word</string>
     <string name="ai_mic_needed">Microphone access is needed to play.\nEnable it in Settings.</string>
+    <string name="ai_tts_voice_title">Voice not installed</string>
+    <string name="ai_tts_voice_message">Your device needs a voice pack so the AI can speak %1$s. Download it now?</string>
+    <string name="ai_tts_voice_download">Download voice</string>
 
     <string name="ai_explain_dont_say">EXPLAIN IT — DON\'T SAY IT</string>
     <string name="ai_tap_to_explain">Tap to explain</string>

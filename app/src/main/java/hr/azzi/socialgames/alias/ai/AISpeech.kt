@@ -31,6 +31,8 @@ class AISpeech(private val context: Context) {
     var onTranscript: ((String) -> Unit)? = null
     /** Called when listening could not be sustained (mic unavailable / repeated errors). */
     var onFailed: (() -> Unit)? = null
+    /** Called when the recognizer reports the language pack is missing/unsupported. */
+    var onLanguageUnavailable: (() -> Unit)? = null
 
     val isAvailable: Boolean get() = SpeechRecognizer.isRecognitionAvailable(context)
 
@@ -135,6 +137,9 @@ class AISpeech(private val context: Context) {
             when (error) {
                 // Fatal: no point retrying.
                 SpeechRecognizer.ERROR_INSUFFICIENT_PERMISSIONS -> fail()
+                // Language pack missing/unsupported: retrying won't help.
+                SpeechRecognizer.ERROR_LANGUAGE_NOT_SUPPORTED,
+                SpeechRecognizer.ERROR_LANGUAGE_UNAVAILABLE -> { onLanguageUnavailable?.invoke(); fail() }
                 // Benign: user was just silent — keep listening, don't count as failure.
                 SpeechRecognizer.ERROR_NO_MATCH,
                 SpeechRecognizer.ERROR_SPEECH_TIMEOUT -> restartSoon(recreate = false)

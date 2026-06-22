@@ -13,7 +13,7 @@ import kotlin.math.min
 object AnswerMatcher {
 
     fun normalize(s: String): String {
-        val stripped = Normalizer.normalize(s, Normalizer.Form.NFD)
+        val stripped = Normalizer.normalize(cyrillicToLatin(s), Normalizer.Form.NFD)
             .replace(Regex("\\p{Mn}+"), "")
             .lowercase()
         return stripped
@@ -21,6 +21,26 @@ object AnswerMatcher {
             .filter { it.isNotEmpty() }
             .joinToString(" ")
             .trim()
+    }
+
+    private val CYRILLIC_TO_LATIN = mapOf(
+        'а' to "a", 'б' to "b", 'в' to "v", 'г' to "g", 'д' to "d", 'ђ' to "đ",
+        'е' to "e", 'ж' to "ž", 'з' to "z", 'и' to "i", 'ј' to "j", 'к' to "k",
+        'л' to "l", 'љ' to "lj", 'м' to "m", 'н' to "n", 'њ' to "nj", 'о' to "o",
+        'п' to "p", 'р' to "r", 'с' to "s", 'т' to "t", 'ћ' to "ć", 'у' to "u",
+        'ф' to "f", 'х' to "h", 'ц' to "c", 'ч' to "č", 'џ' to "dž", 'ш' to "š",
+    )
+
+    /**
+     * Serbian Cyrillic → Latin (orthographic). Google's recognizer returns Latin
+     * on most setups but Cyrillic on some; transliterating here means spoken
+     * answers match the Latin decks either way. No-op for non-Cyrillic input.
+     */
+    fun cyrillicToLatin(s: String): String {
+        if (s.none { it in 'Ѐ'..'ӿ' }) return s
+        val sb = StringBuilder(s.length + 4)
+        for (ch in s) sb.append(CYRILLIC_TO_LATIN[ch.lowercaseChar()] ?: ch.toString())
+        return sb.toString()
     }
 
     /** True if the transcript contains an acceptable answer. */

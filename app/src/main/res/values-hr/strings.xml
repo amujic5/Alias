@@ -118,6 +118,9 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="ai_new_clue">Novi trag</string>
     <string name="ai_skip_word">Preskoči riječ</string>
     <string name="ai_mic_needed">Za igru je potreban pristup mikrofonu.\nUključi ga u Postavkama.</string>
+    <string name="ai_tts_voice_title">Glas nije instaliran</string>
+    <string name="ai_tts_voice_message">Uređaju treba glasovni paket da bi AI mogao govoriti jezik %1$s. Preuzeti ga sada?</string>
+    <string name="ai_tts_voice_download">Preuzmi glas</string>
 
     <string name="ai_explain_dont_say">OBJASNI — NE IZGOVORI</string>
     <string name="ai_tap_to_explain">Dodirni za objašnjenje</string>

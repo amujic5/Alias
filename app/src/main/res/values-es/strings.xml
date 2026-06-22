@@ -109,6 +109,9 @@
     <string name="ai_new_clue">Nueva pista</string>
     <string name="ai_skip_word">Saltar palabra</string>
     <string name="ai_mic_needed">Se necesita acceso al micrófono para jugar.\nActívalo en Ajustes.</string>
+    <string name="ai_tts_voice_title">Voz no instalada</string>
+    <string name="ai_tts_voice_message">Tu dispositivo necesita un paquete de voz para que la IA hable %1$s. ¿Descargarlo ahora?</string>
+    <string name="ai_tts_voice_download">Descargar voz</string>
 
     <string name="ai_explain_dont_say">EXPLÍCALO — NO LO DIGAS</string>
     <string name="ai_tap_to_explain">Toca para explicar</string>

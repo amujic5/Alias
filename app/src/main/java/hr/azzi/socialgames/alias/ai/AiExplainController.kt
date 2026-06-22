@@ -9,6 +9,7 @@ import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.mutableStateListOf
 import hr.azzi.socialgames.alias.Service.SoundSystem
+import java.util.Locale
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.Job
@@ -29,7 +30,7 @@ class AiExplainController(
     fixedWords: List<String>?,
     private val onFinish: ((AIPracticeResult, List<String>) -> Unit)?,
 ) {
-    enum class Phase { Loading, Denied, Thinking, Guessing, Done }
+    enum class Phase { Loading, VoiceRequired, Denied, Thinking, Guessing, Done }
 
     private val sound = SoundSystem(context)
     private val speaker = AISpeaker(context, rate = 1.2f)
@@ -48,6 +49,13 @@ class AiExplainController(
     var transcript by mutableStateOf(""); private set
     var remaining by mutableDoubleStateOf(config.totalSeconds.toDouble()); private set
     var flash by mutableStateOf(false); private set
+    /** Non-null when the TTS voice for this language isn't installed; drives the
+     *  download prompt. Shown at most once per session. */
+    /** Non-null while play is blocked because the AI voice for this language has
+     *  no data installed; carries the locale to install. */
+    var voiceMissing by mutableStateOf<Locale?>(null); private set
+    private var voiceChecking = false
+    private var sttLogged = false
     val correctWords: SnapshotStateList<String> = mutableStateListOf()
     val skippedWords: SnapshotStateList<String> = mutableStateListOf()
 
@@ -83,12 +91,42 @@ class AiExplainController(
     fun start() {
         speaker.onSpeakingChanged = { speaking -> if (!speaking) clueSpoken() }
         speech.locale = config.language.locale
-        speech.onTranscript = { t -> transcript = t; scheduleEval() }
+        speech.onTranscript = { t -> transcript = t; logSttSuccessOnce(t); scheduleEval() }
         // Mic couldn't be sustained: reflect that the app stopped listening.
         speech.onFailed = { listening = false }
+        speech.onLanguageUnavailable = {
+            SpeechAnalytics.sttResult(context, config.language, config.deck.id, success = false)
+        }
         AIInterstitial.preload(context)
-        beginWord()
-        startTimer()
+        // The AI voice is a hard requirement — never start the round without it.
+        runVoiceGate()
+    }
+
+    /** Block on a usable TTS voice; only start the round once it's confirmed.
+     *  Re-runs every time (e.g. on returning from the installer) — no caching. */
+    fun runVoiceGate() {
+        if (voiceChecking) return
+        voiceChecking = true
+        phase = Phase.Loading
+        var settled = false
+        fun settle(needs: Locale?) {
+            if (settled) return
+            settled = true; voiceChecking = false
+            SpeechAnalytics.voiceResult(context, config.language, config.deck.id, success = needs == null)
+            if (needs != null) { voiceMissing = needs; phase = Phase.VoiceRequired }
+            else { voiceMissing = null; beginWord(); startTimer() }
+        }
+        speaker.checkVoice(config.language.locale) { settle(it) }
+        // Watchdog: if the engine never reports back, treat the voice as missing
+        // (block) rather than starting silently — the voice is required.
+        scope.launch { delay(4_000); settle(config.language.javaLocale) }
+    }
+
+    /** Log STT success once per session, on the first transcript that comes back. */
+    private fun logSttSuccessOnce(text: String) {
+        if (sttLogged || text.isBlank()) return
+        sttLogged = true
+        SpeechAnalytics.sttResult(context, config.language, config.deck.id, success = true)
     }
 
     fun denied() { phase = Phase.Denied }

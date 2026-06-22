@@ -13,6 +13,11 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
 
     val display: String get() = code.uppercase()
 
+    /** [locale] ("ll" or "ll-CC") as a java.util.Locale. */
+    val javaLocale: Locale get() = locale.split("-").let {
+        if (it.size == 2) Locale(it[0], it[1]) else Locale(it[0])
+    }
+
     /** Native display name shown in the language pill / picker. */
     val nativeName: String get() = when (this) {
         EN -> "English"; FR -> "Français"; DE -> "Deutsch"; IT -> "Italiano"; HR -> "Hrvatski"; SR -> "Srpski"

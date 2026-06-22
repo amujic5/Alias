@@ -118,6 +118,9 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="ai_new_clue">Nov namig</string>
     <string name="ai_skip_word">Preskoči besedo</string>
     <string name="ai_mic_needed">Za igranje je potreben dostop do mikrofona.\nOmogoči ga v Nastavitvah.</string>
+    <string name="ai_tts_voice_title">Glas ni nameščen</string>
+    <string name="ai_tts_voice_message">Naprava potrebuje glasovni paket, da lahko UI govori %1$s. Ga prenesem zdaj?</string>
+    <string name="ai_tts_voice_download">Prenesi glas</string>
 
     <string name="ai_explain_dont_say">RAZLOŽI — NE IZGOVORI</string>
     <string name="ai_tap_to_explain">Pritisni za razlago</string>

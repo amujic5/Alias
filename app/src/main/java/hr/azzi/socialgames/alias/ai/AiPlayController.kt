@@ -18,6 +18,7 @@ import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import java.text.Normalizer
+import java.util.Locale
 
 /** "You explain → AI guesses" game logic. Port of iOS AIPlayView. Turn-based:
  *  tap mic to explain (AI silent), tap again to hand over → AI guesses via the
@@ -28,7 +29,7 @@ class AiPlayController(
     fixedWords: List<String>?,
     private val onFinish: ((AIPracticeResult, List<String>) -> Unit)?,
 ) {
-    enum class Phase { Loading, Denied, Playing, Done }
+    enum class Phase { Loading, VoiceRequired, Denied, Playing, Done }
     enum class Turn { Idle, Explaining, AiGuessing }
 
     private val sound = SoundSystem(context)
@@ -47,6 +48,11 @@ class AiPlayController(
     var remaining by mutableDoubleStateOf(config.totalSeconds.toDouble()); private set
     var flash by mutableStateOf(false); private set
     var penaltyFlash by mutableStateOf(false); private set
+    /** Non-null while play is blocked because the AI voice for this language has
+     *  no data installed; carries the locale to install. */
+    var voiceMissing by mutableStateOf<Locale?>(null); private set
+    private var voiceChecking = false
+    private var sttLogged = false
     val correctWords: SnapshotStateList<String> = mutableStateListOf()
     val skippedWords: SnapshotStateList<String> = mutableStateListOf()
 
@@ -71,15 +77,45 @@ class AiPlayController(
 
     fun start() {
         speech.locale = config.language.locale
-        speech.onTranscript = { t -> transcript = t; checkForbidden() }
+        speech.onTranscript = { t -> transcript = t; logSttSuccessOnce(t); checkForbidden() }
         // Mic couldn't be sustained: stop pretending to listen, reset the button to Idle.
         speech.onFailed = { if (turn == Turn.Explaining) { turn = Turn.Idle } }
+        speech.onLanguageUnavailable = {
+            SpeechAnalytics.sttResult(context, config.language, config.deck.id, success = false)
+        }
         scope.launch(Dispatchers.Default) {
             indexReady = AIWordIndex.prepare(context, config.deck.id, config.language)
         }
         AIInterstitial.preload(context)
-        beginWord()
-        startTimer()
+        // The AI voice is a hard requirement — never start the round without it.
+        runVoiceGate()
+    }
+
+    /** Block on a usable TTS voice; only start the round once it's confirmed.
+     *  Re-runs every time (e.g. on returning from the installer) — no caching. */
+    fun runVoiceGate() {
+        if (voiceChecking) return
+        voiceChecking = true
+        phase = Phase.Loading
+        var settled = false
+        fun settle(needs: Locale?) {
+            if (settled) return
+            settled = true; voiceChecking = false
+            SpeechAnalytics.voiceResult(context, config.language, config.deck.id, success = needs == null)
+            if (needs != null) { voiceMissing = needs; phase = Phase.VoiceRequired }
+            else { voiceMissing = null; beginWord(); startTimer() }
+        }
+        speaker.checkVoice(config.language.locale) { settle(it) }
+        // Watchdog: if the engine never reports back, treat the voice as missing
+        // (block) rather than starting silently — the voice is required.
+        scope.launch { delay(4_000); settle(config.language.javaLocale) }
+    }
+
+    /** Log STT success once per session, on the first transcript that comes back. */
+    private fun logSttSuccessOnce(text: String) {
+        if (sttLogged || text.isBlank()) return
+        sttLogged = true
+        SpeechAnalytics.sttResult(context, config.language, config.deck.id, success = true)
     }
 
     fun denied() { phase = Phase.Denied }
@@ -234,7 +270,8 @@ class AiPlayController(
     /** True if any spoken token equals the target word/token or shares its root. */
     private fun saidForbidden(transcript: String, word: String): Boolean {
         fun tokens(s: String): List<String> =
-            Normalizer.normalize(s, Normalizer.Form.NFD).replace(Regex("\\p{Mn}+"), "").lowercase()
+            Normalizer.normalize(AnswerMatcher.cyrillicToLatin(s), Normalizer.Form.NFD)
+                .replace(Regex("\\p{Mn}+"), "").lowercase()
                 .split(Regex("[^\\p{L}\\p{N}]+")).filter { it.isNotEmpty() }
         val spoken = tokens(transcript)
         val targets = tokens(word).filter { it.length >= 3 }

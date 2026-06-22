@@ -51,6 +51,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.LifecycleEventObserver
+import androidx.lifecycle.compose.LocalLifecycleOwner
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIPracticeConfig
 import hr.azzi.socialgames.alias.ai.AIPracticeResult
@@ -84,6 +87,20 @@ fun AiExplainScreen(
         if (granted) controller.start() else launcher.launch(Manifest.permission.RECORD_AUDIO)
     }
 
+    // Re-check the voice whenever we come back (e.g. from the voice installer):
+    // the voice is required every time, so re-verify rather than assume.
+    val lifecycleOwner = LocalLifecycleOwner.current
+    DisposableEffect(lifecycleOwner, controller) {
+        val observer = LifecycleEventObserver { _, event ->
+            if (event == Lifecycle.Event.ON_RESUME &&
+                controller.phase == AiExplainController.Phase.VoiceRequired) {
+                controller.runVoiceGate()
+            }
+        }
+        lifecycleOwner.lifecycle.addObserver(observer)
+        onDispose { lifecycleOwner.lifecycle.removeObserver(observer) }
+    }
+
     if (controller.phase == AiExplainController.Phase.Done && onChallengeFinish == null) {
         AiResultScreen(controller.result, title = stringResource(R.string.ai_practice_caps), onPlayAgain = { sessionKey++ }, onClose = onClose)
         return
@@ -106,6 +123,10 @@ fun AiExplainScreen(
                 when (controller.phase) {
                     AiExplainController.Phase.Loading ->
                         Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) }
+                    AiExplainController.Phase.VoiceRequired ->
+                        controller.voiceMissing?.let { loc ->
+                            VoiceRequiredBody(loc, onDownload = { launchVoiceInstaller(context) })
+                        }
                     AiExplainController.Phase.Denied ->
                         Box(Modifier.fillMaxSize(), Alignment.Center) {
                             Text(stringResource(R.string.ai_mic_needed),
