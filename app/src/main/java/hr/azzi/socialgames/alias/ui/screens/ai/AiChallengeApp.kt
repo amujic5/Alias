@@ -2,6 +2,7 @@ package hr.azzi.socialgames.alias.ui.screens.ai
 
 import android.content.Context
 import android.content.Intent
+import android.widget.Toast
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -182,14 +183,21 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             val finish: ((AIPracticeResult, List<String>) -> Unit)? = if (route.isChallenge) { result, frozen ->
                 scope.launch {
                     val uid = AuthService.uid ?: return@launch
-                    if (route.challenge == null) {
-                        val ch = AIChallengeRepository.create(
-                            route.config, deckNameOf(context, route.config.deck), frozen, result, uid, username)
-                        popToHub(); push(AiRoute.Rank(ch.id)); authVersion++
-                    } else {
-                        AIChallengeRepository.submit(route.challenge.id, uid, username, false, result)
-                        replaceTop(AiRoute.Outcome(route.challenge, result.correct, result.played))
-                        authVersion++
+                    try {
+                        if (route.challenge == null) {
+                            val ch = AIChallengeRepository.create(
+                                route.config, deckNameOf(context, route.config.deck), frozen, result, uid, username)
+                            popToHub(); push(AiRoute.Rank(ch.id)); authVersion++
+                        } else {
+                            AIChallengeRepository.submit(route.challenge.id, uid, username, false, result)
+                            replaceTop(AiRoute.Outcome(route.challenge, result.correct, result.played))
+                            authVersion++
+                        }
+                    } catch (e: Exception) {
+                        // Network/Firestore failure: don't strand the player on the
+                        // "Done" spinner — surface it and return to the hub.
+                        Toast.makeText(context, context.getString(R.string.ai_err_generic), Toast.LENGTH_LONG).show()
+                        popToHub()
                     }
                 }
                 Unit
@@ -231,7 +239,15 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             challenge = route.challenge,
             onPlay = {
                 scope.launch {
-                    AuthService.uid?.let { AIChallengeRepository.join(route.challenge, it, username) }
+                    val uid = AuthService.uid
+                    // Join is a precondition: if it fails, stay on the intro and let
+                    // the player retry rather than entering a round we can't record.
+                    val joined = uid != null &&
+                        runCatching { AIChallengeRepository.join(route.challenge, uid, username) }.isSuccess
+                    if (!joined) {
+                        Toast.makeText(context, context.getString(R.string.ai_err_generic), Toast.LENGTH_LONG).show()
+                        return@launch
+                    }
                     val deck = AIDeckCatalog.deck(route.challenge.deckId) ?: AIDeckCatalog.decks.first()
                     val config = AIPracticeConfig(deck, route.challenge.aiLanguage, route.challenge.totalSeconds)
                     replaceTop(AiRoute.Play(config, route.challenge.words, route.challenge, true))

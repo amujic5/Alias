@@ -44,7 +44,23 @@ object AIChallengeRepository {
         batch.set(ref.collection("plays").document(creatorId),
             playData(id, creatorId, creatorName, true, result, finished = true))
         batch.commit().await()
-        return load(id) ?: throw IllegalStateException("create failed")
+        // Build the result from what we just wrote rather than re-fetching — avoids
+        // a spurious failure if the read-after-write hasn't propagated yet.
+        return AIChallenge(
+            id = id,
+            creatorId = creatorId,
+            creatorName = creatorName,
+            mode = config.mode.raw,
+            deckId = config.deck.id,
+            deckName = deckName,
+            language = config.language.code,
+            totalSeconds = config.totalSeconds,
+            words = words,
+            creatorScore = score,
+            createdAt = System.currentTimeMillis(),
+            players = listOf(creatorId),
+            playerScores = mapOf(creatorId to score),
+        )
     }
 
     suspend fun load(id: String): AIChallenge? =
