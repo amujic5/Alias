@@ -10,7 +10,9 @@ import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.grid.GridCells
@@ -19,19 +21,23 @@ import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.focus.FocusRequester
+import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalClipboardManager
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
-import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.input.ImeAction
 import androidx.compose.ui.text.input.KeyboardCapitalization
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -176,25 +182,33 @@ private fun OnlineEntryScreen(store: OnlineStore, onExit: () -> Unit) {
                 Spacer(Modifier.height(8.dp))
                 Overline(text = stringResource(R.string.online_overline))
                 Spacer(Modifier.height(6.dp))
-                DisplayText(stringResource(R.string.online_entry_title), size = 30)
-                Spacer(Modifier.height(4.dp))
-                Text(stringResource(R.string.online_entry_subtitle), color = Color.White.copy(alpha = 0.85f), fontFamily = Alias.body, fontSize = 15.sp)
-                Spacer(Modifier.height(24.dp))
-                EntryCard(stringResource(R.string.online_create_title), stringResource(R.string.online_create_sub)) { route = "create" }
+                DisplayText(stringResource(R.string.online_entry_title), size = 32)
+                Spacer(Modifier.height(8.dp))
+                Text(stringResource(R.string.online_entry_subtitle), color = Color.White.copy(alpha = 0.85f), fontFamily = Alias.body, fontSize = 15.sp, lineHeight = 21.sp)
+                Spacer(Modifier.height(28.dp))
+                EntryCard("🎮", Alias.blue600, stringResource(R.string.online_create_title), stringResource(R.string.online_create_sub)) { route = "create" }
                 Spacer(Modifier.height(14.dp))
-                EntryCard(stringResource(R.string.online_join_title), stringResource(R.string.online_join_sub)) { route = "join" }
+                EntryCard("🔑", Alias.accent, stringResource(R.string.online_join_title), stringResource(R.string.online_join_sub)) { route = "join" }
             }
         }
     }
 }
 
 @Composable
-private fun EntryCard(title: String, sub: String, onClick: () -> Unit) {
+private fun EntryCard(emoji: String, tint: Color, title: String, sub: String, onClick: () -> Unit) {
     CCard(Modifier.fillMaxWidth().clickable { onClick() }) {
-        Column {
-            Text(title, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 19.sp)
-            Spacer(Modifier.height(2.dp))
-            Text(sub, color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Box(
+                Modifier.size(46.dp).clip(RoundedCornerShape(14.dp)).background(tint.copy(alpha = 0.14f)),
+                contentAlignment = Alignment.Center,
+            ) { Text(emoji, fontSize = 22.sp) }
+            Spacer(Modifier.width(14.dp))
+            Column(Modifier.weight(1f)) {
+                Text(title, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
+                Spacer(Modifier.height(2.dp))
+                Text(sub, color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+            }
+            Text("›", color = Alias.textSecondary.copy(alpha = 0.6f), fontSize = 28.sp)
         }
     }
 }
@@ -243,26 +257,39 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
         BrandBackground {
             Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp).verticalScroll(rememberScrollState())) {
                 TopBar(title = stringResource(R.string.online_create_title), onBack = onBack)
-                Spacer(Modifier.height(12.dp))
+                Spacer(Modifier.height(16.dp))
+                // ROOM
                 CCard(Modifier.fillMaxWidth()) {
                     Column {
-                        Overline(stringResource(R.string.online_dictionary), color = Alias.textSecondary)
-                        Spacer(Modifier.height(8.dp))
+                        Overline(stringResource(R.string.online_section_room), color = Alias.textSecondary)
+                        Spacer(Modifier.height(4.dp))
+                        SegRow(stringResource(R.string.online_players), listOf(4, 6, 8), players) { players = it }
+                        Text(stringResource(R.string.online_players_helper, players, players / 2),
+                            color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+                    }
+                }
+                Spacer(Modifier.height(14.dp))
+                // GAME
+                CCard(Modifier.fillMaxWidth()) {
+                    Column {
+                        Overline(stringResource(R.string.online_section_game), color = Alias.textSecondary)
+                        Spacer(Modifier.height(4.dp))
                         MenuRow(stringResource(R.string.online_dictionary), deck?.let { deckDisplayName(context, it) } ?: "—") { showDeckPicker = true }
+                        Divider(color = Alias.divider)
                         MenuRow(stringResource(R.string.online_language), lang?.let { "${OnlineWordSource.flag(it.first)}  ${it.second}" } ?: "—") { showLangPicker = true }
                     }
                 }
                 Spacer(Modifier.height(14.dp))
+                // MATCH
                 CCard(Modifier.fillMaxWidth()) {
                     Column {
-                        Overline(stringResource(R.string.online_section_room), color = Alias.textSecondary)
-                        Spacer(Modifier.height(8.dp))
-                        SegRow(stringResource(R.string.online_players), listOf(4, 6, 8), players) { players = it }
-                        SegRow(stringResource(R.string.online_win_at), listOf(40, 60, 80), goal) { goal = it }
+                        Overline(stringResource(R.string.online_section_match), color = Alias.textSecondary)
+                        Spacer(Modifier.height(4.dp))
+                        SegRow(stringResource(R.string.online_score), listOf(40, 60, 80), goal) { goal = it }
                         SegRow(stringResource(R.string.online_round_time), listOf(30, 60, 90), seconds) { seconds = it }
                     }
                 }
-                Spacer(Modifier.height(20.dp))
+                Spacer(Modifier.height(24.dp))
                 PillButton(stringResource(R.string.online_create_room_btn), enabled = deck != null && lang != null && !busy) {
                     val d = deck; val l = lang
                     if (d != null && l != null) store.createRoom(d, l.first, l.second, players, goal, seconds)
@@ -279,6 +306,7 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
 private fun OnlineJoinScreen(store: OnlineStore, onBack: () -> Unit) {
     val busy by store.busy.collectAsState()
     val myRooms by store.myRooms.collectAsState()
+    val clipboard = LocalClipboardManager.current
     var code by remember { mutableStateOf("") }
     LaunchedEffect(Unit) { store.loadMyRooms() }
 
@@ -287,42 +315,29 @@ private fun OnlineJoinScreen(store: OnlineStore, onBack: () -> Unit) {
         BrandBackground {
             Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
                 TopBar(title = stringResource(R.string.online_join_title), onBack = onBack)
-                Spacer(Modifier.height(12.dp))
-                CCard(Modifier.fillMaxWidth()) {
-                    Column {
-                        Overline(stringResource(R.string.online_enter_code), color = Alias.textSecondary)
-                        Spacer(Modifier.height(8.dp))
-                        OutlinedTextField(
-                            value = code,
-                            onValueChange = { code = it.uppercase().take(6) },
-                            singleLine = true,
-                            placeholder = { Text(stringResource(R.string.online_code_hint)) },
-                            keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Characters),
-                            modifier = Modifier.fillMaxWidth(),
-                        )
-                        Spacer(Modifier.height(12.dp))
-                        PillButton(stringResource(R.string.online_join_room_btn), enabled = code.length >= 4 && !busy) {
-                            store.joinRoom(code)
-                        }
-                    }
+                Spacer(Modifier.height(20.dp))
+                DisplayText(stringResource(R.string.online_enter_code), size = 32)
+                Spacer(Modifier.height(8.dp))
+                Text(stringResource(R.string.online_enter_code_sub), color = Color.White.copy(alpha = 0.85f), fontFamily = Alias.body, fontSize = 15.sp, lineHeight = 21.sp)
+                Spacer(Modifier.height(20.dp))
+                CodeBoxes(code) { code = it }
+                Spacer(Modifier.height(16.dp))
+                PillButton(stringResource(R.string.online_paste_invite), kind = PillKind.Light) {
+                    val raw = clipboard.getText()?.text.orEmpty()
+                    code = raw.trim().substringAfterLast('/').uppercase().filter { it.isLetterOrDigit() }.take(6)
                 }
                 if (myRooms.isNotEmpty()) {
-                    Spacer(Modifier.height(20.dp))
+                    Spacer(Modifier.height(24.dp))
                     Overline(stringResource(R.string.online_recent_rooms))
-                    Spacer(Modifier.height(8.dp))
-                    LazyColumn(verticalArrangement = Arrangement.spacedBy(10.dp)) {
-                        items(myRooms) { r ->
-                            CCard(Modifier.fillMaxWidth().clickable { store.joinRoom(r.code) }) {
-                                Row(verticalAlignment = Alignment.CenterVertically) {
-                                    Column(Modifier.weight(1f)) {
-                                        Text(r.code, color = Alias.blue600, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp, letterSpacing = 2.sp)
-                                        Text(r.deckName, color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
-                                    }
-                                    Text("${r.players.size}/${r.maxPlayers}", color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
-                                }
-                            }
-                        }
+                    Spacer(Modifier.height(10.dp))
+                    myRooms.forEach { r ->
+                        RecentRoomCard(r) { store.joinRoom(r.code) }
+                        Spacer(Modifier.height(10.dp))
                     }
+                }
+                Spacer(Modifier.weight(1f))
+                PillButton(stringResource(R.string.online_join_room_btn), enabled = code.length >= 4 && !busy) {
+                    store.joinRoom(code)
                 }
             }
         }
@@ -330,46 +345,104 @@ private fun OnlineJoinScreen(store: OnlineStore, onBack: () -> Unit) {
     }
 }
 
+@Composable
+private fun CodeBoxes(code: String, count: Int = 6, onChange: (String) -> Unit) {
+    val focus = remember { FocusRequester() }
+    Box {
+        BasicTextField(
+            value = code,
+            onValueChange = { onChange(it.uppercase().filter { c -> c.isLetterOrDigit() }.take(count)) },
+            keyboardOptions = KeyboardOptions(capitalization = KeyboardCapitalization.Characters, imeAction = ImeAction.Done),
+            modifier = Modifier.focusRequester(focus).size(1.dp).alpha(0f),
+        )
+        Row(
+            Modifier.fillMaxWidth().clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) { focus.requestFocus() },
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+        ) {
+            repeat(count) { i ->
+                val ch = code.getOrNull(i)?.toString() ?: ""
+                val focused = i == code.length.coerceAtMost(count - 1) && code.length <= i
+                Box(
+                    Modifier.weight(1f).aspectRatio(0.82f).clip(RoundedCornerShape(14.dp)).background(Color.White)
+                        .then(if (i == code.length) Modifier.border(2.5.dp, Alias.accent, RoundedCornerShape(14.dp)) else Modifier),
+                    contentAlignment = Alignment.Center,
+                ) { Text(ch, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 26.sp) }
+            }
+        }
+    }
+}
+
+@Composable
+private fun RecentRoomCard(room: OnlineRoom, onRejoin: () -> Unit) {
+    CCard(Modifier.fillMaxWidth().clickable { onRejoin() }) {
+        Row(verticalAlignment = Alignment.CenterVertically) {
+            Column(Modifier.weight(1f)) {
+                Text(room.deckName.ifEmpty { stringResource(R.string.online_title) }, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 17.sp)
+                Spacer(Modifier.height(2.dp))
+                Text("Code · ${room.code}", color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+            }
+            Box(
+                Modifier.clip(RoundedCornerShape(percent = 50)).background(Alias.blue600.copy(alpha = 0.12f)).padding(horizontal = 16.dp, vertical = 8.dp),
+            ) { Text(stringResource(R.string.online_rejoin), color = Alias.blue600, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp) }
+        }
+    }
+}
+
 /* --------------------------------------------------------- shared widgets */
 
 @Composable
-fun TopBar(title: String, onBack: () -> Unit) {
-    Row(verticalAlignment = Alignment.CenterVertically) {
-        Text("‹", color = Color.White, fontSize = 34.sp, fontWeight = FontWeight.Bold, modifier = Modifier.clickable { onBack() })
-        Spacer(Modifier.width(12.dp))
-        Text(title, color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 22.sp)
+fun TopBar(title: String, onBack: () -> Unit, trailing: (@Composable () -> Unit)? = null) {
+    Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
+        Text("‹", color = Color.White, fontSize = 32.sp, fontWeight = FontWeight.Bold,
+            modifier = Modifier.clip(RoundedCornerShape(percent = 50)).clickable { onBack() }.padding(horizontal = 6.dp))
+        Spacer(Modifier.width(8.dp))
+        Text(title.uppercase(), color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.Black, fontSize = 17.sp, letterSpacing = 1.2.sp)
+        if (trailing != null) { Spacer(Modifier.weight(1f)); trailing() }
     }
 }
 
 @Composable
 private fun MenuRow(label: String, value: String, onClick: () -> Unit) {
     Row(
-        Modifier.fillMaxWidth().clickable { onClick() }.padding(vertical = 10.dp),
+        Modifier.fillMaxWidth().clickable { onClick() }.padding(vertical = 12.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Text(label, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+        Text(label, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 19.sp)
         Spacer(Modifier.weight(1f))
-        Text(value, color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 15.sp)
-        Text("  ›", color = Alias.textSecondary, fontSize = 18.sp)
+        Text(value, color = Alias.textPrimary, fontFamily = Alias.body, fontWeight = FontWeight.SemiBold, fontSize = 15.sp)
+        Text("  ›", color = Alias.textSecondary.copy(alpha = 0.6f), fontSize = 20.sp)
     }
 }
 
 @Composable
 private fun <T> SegRow(label: String, options: List<T>, selection: T, onSelect: (T) -> Unit) {
-    Column(Modifier.padding(vertical = 6.dp)) {
-        Text(label, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-        Spacer(Modifier.height(6.dp))
-        Row(horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-            options.forEach { opt ->
-                val on = opt == selection
-                Box(
-                    Modifier.weight(1f).clip(RoundedCornerShape(12.dp))
-                        .background(if (on) Alias.blue600 else Alias.fieldBg)
-                        .clickable { onSelect(opt) }.padding(vertical = 10.dp),
-                    contentAlignment = Alignment.Center,
-                ) {
-                    Text(opt.toString(), color = if (on) Color.White else Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 15.sp)
-                }
+    Row(
+        Modifier.fillMaxWidth().padding(vertical = 8.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(label, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 19.sp)
+        Spacer(Modifier.weight(1f))
+        Segmented(options, selection, onSelect)
+    }
+}
+
+@Composable
+private fun <T> Segmented(options: List<T>, selection: T, onSelect: (T) -> Unit) {
+    Row(
+        Modifier.clip(RoundedCornerShape(percent = 50)).background(Alias.fieldBg).padding(3.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        options.forEach { opt ->
+            val on = opt == selection
+            Box(
+                Modifier.clip(RoundedCornerShape(percent = 50))
+                    .background(if (on) Alias.accent else Color.Transparent)
+                    .clickable { onSelect(opt) }
+                    .padding(horizontal = 15.dp, vertical = 7.dp),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(opt.toString(), color = if (on) Alias.onAccent else Alias.textSecondary,
+                    fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 15.sp)
             }
         }
     }

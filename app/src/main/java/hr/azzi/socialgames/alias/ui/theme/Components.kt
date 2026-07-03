@@ -12,8 +12,12 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
+import androidx.compose.ui.draw.drawBehind
 import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.geometry.CornerRadius
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.PathEffect
+import androidx.compose.ui.graphics.drawscope.Stroke
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
@@ -54,6 +58,29 @@ fun PillButton(
         contentAlignment = Alignment.Center,
     ) {
         Text(title, color = fg, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 17.sp, letterSpacing = 0.4.sp)
+    }
+}
+
+/** Dashed translucent outline pill — e.g. "LEAVE ROOM". */
+@Composable
+fun OutlineDashedButton(title: String, modifier: Modifier = Modifier, onClick: () -> Unit) {
+    Box(
+        modifier
+            .fillMaxWidth()
+            .heightIn(min = 54.dp)
+            .clip(Capsule)
+            .drawBehind {
+                drawRoundRect(
+                    color = Color.White.copy(alpha = 0.7f),
+                    style = Stroke(width = 2.dp.toPx(), pathEffect = PathEffect.dashPathEffect(floatArrayOf(16f, 12f))),
+                    cornerRadius = CornerRadius(size.height / 2f),
+                )
+            }
+            .clickable { onClick() }
+            .padding(vertical = 16.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(title, color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 15.sp, letterSpacing = 0.5.sp)
     }
 }
 

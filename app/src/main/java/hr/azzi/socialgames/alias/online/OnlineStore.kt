@@ -298,6 +298,14 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
     fun finishRound() { OnlineAnalytics.roundFinished(appCtx); launchOp { repo.finishRound(it) } }
     fun editAnswers() = launchOp { repo.editAnswers(it) }
 
+    /** Explainer: drop any un-synced local edits and move on to the standings view. */
+    fun discardAndAdvance() {
+        val code = _room.value?.code ?: return
+        editJob?.cancel()
+        _editedResults.value = null
+        viewModelScope.launch { try { repo.saveAnswers(code) } catch (e: Exception) { _error.value = errorText(e) } }
+    }
+
     // MARK: Local A/V
 
     fun toggleMic() = video.setMic(!video.micOn.value)
