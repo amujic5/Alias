@@ -15,6 +15,7 @@ import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.MicOff
 import androidx.compose.material.icons.filled.SkipNext
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material.icons.filled.VideocamOff
 import androidx.compose.material3.*
@@ -46,11 +47,11 @@ fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
     Box(Modifier.fillMaxSize()) {
         BrandBackground {
             Column(Modifier.fillMaxSize().systemBarsPadding().padding(horizontal = 16.dp, vertical = 12.dp)) {
-                GameTopCard(store, room)
+                GameTopCard(store, room) { showVideoRoom = true }
                 Spacer(Modifier.height(8.dp))
                 TimerBar(store, room)
                 Spacer(Modifier.height(12.dp))
-                VideoStage(store, room, Modifier.weight(1f)) { showVideoRoom = true }
+                VideoStage(store, room, Modifier.weight(1f))
                 if (active) {
                     Spacer(Modifier.height(14.dp))
                     ActiveControls(store, room)
@@ -72,7 +73,7 @@ fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
 /* --------------------------------------------------------------- chrome */
 
 @Composable
-private fun GameTopCard(store: OnlineStore, room: OnlineRoom) {
+private fun GameTopCard(store: OnlineStore, room: OnlineRoom, onVideoRoom: () -> Unit) {
     val now by store.now.collectAsState()
     val team = room.currentTeam
     val secs = room.secondsRemaining(now).coerceAtLeast(0)
@@ -91,6 +92,11 @@ private fun GameTopCard(store: OnlineStore, room: OnlineRoom) {
                 Text(if (timeUp) "0:00" else "${secs / 60}:${(secs % 60).toString().padStart(2, '0')}",
                     color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 16.sp)
             }
+            Spacer(Modifier.width(8.dp))
+            Box(
+                Modifier.size(40.dp).clip(RoundedCornerShape(13.dp)).background(Alias.blue600).clickable { onVideoRoom() },
+                contentAlignment = Alignment.Center,
+            ) { Icon(Icons.Filled.GridView, null, tint = Color.White, modifier = Modifier.size(19.dp)) }
         }
     }
 }
@@ -106,32 +112,38 @@ private fun TimerBar(store: OnlineStore, room: OnlineRoom) {
 }
 
 @Composable
-private fun VideoStage(store: OnlineStore, room: OnlineRoom, modifier: Modifier, onEveryone: () -> Unit) {
+private fun VideoStage(store: OnlineStore, room: OnlineRoom, modifier: Modifier) {
+    val role = room.role(store.myUid)
     val explainer = room.players.firstOrNull { it.id == room.currentExplainerId }
     val guesser = room.players.firstOrNull { it.id == room.currentGuesserId }
     val me = room.players.firstOrNull { it.id == store.myUid }
-    val big = when (store.myUid) {
-        room.currentExplainerId -> guesser ?: explainer
-        room.currentGuesserId -> explainer
-        else -> explainer
+
+    if (role == OnlineRole.SPECTATOR) {
+        // Two equal tiles: explainer → guesser, with an arrow between them.
+        Row(modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+            StageTile(store, explainer, OnlineRole.EXPLAINER, corner = 18, modifier = Modifier.weight(1f).fillMaxHeight())
+            Text("→", color = Color(0xFFCBD5E1), fontFamily = Alias.display, fontWeight = FontWeight.Black, fontSize = 26.sp)
+            StageTile(store, guesser, OnlineRole.GUESSER, corner = 18, modifier = Modifier.weight(1f).fillMaxHeight())
+        }
+    } else {
+        // Big tile of my partner + a small self preview (picture-in-picture).
+        val big = if (role == OnlineRole.EXPLAINER) guesser else explainer
+        val bigRole = if (role == OnlineRole.EXPLAINER) OnlineRole.GUESSER else OnlineRole.EXPLAINER
+        Box(modifier.fillMaxWidth()) {
+            StageTile(store, big, bigRole, corner = 22, spotlight = true, modifier = Modifier.fillMaxSize())
+            if (me != null && me.id != big?.id) {
+                OnlineVideoTile(store, me, corner = 14, modifier = Modifier.align(Alignment.TopEnd).padding(12.dp).width(92.dp).height(116.dp))
+            }
+        }
     }
-    Box(modifier.fillMaxWidth().clip(RoundedCornerShape(22.dp))) {
-        if (big != null) {
-            OnlineVideoTile(store, big, role = room.role(big.id), corner = 22, spotlight = true, modifier = Modifier.fillMaxSize())
-        } else {
-            Box(Modifier.fillMaxSize().background(Brush.verticalGradient(listOf(Alias.brandTop, Color(0xFF16233F)))))
-        }
-        // "Everyone · N" pill (opens the full video room)
-        Box(
-            Modifier.align(Alignment.TopStart).padding(12.dp).clip(RoundedCornerShape(percent = 50))
-                .background(Color(0xFF0E1726).copy(alpha = 0.6f)).clickable { onEveryone() }.padding(horizontal = 12.dp, vertical = 7.dp),
-        ) {
-            Text("▦  " + stringResource(R.string.online_everyone, room.players.size), color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 12.sp)
-        }
-        // self picture-in-picture
-        if (me != null && me.id != big?.id) {
-            OnlineVideoTile(store, me, corner = 14, modifier = Modifier.align(Alignment.TopEnd).padding(12.dp).width(92.dp).height(116.dp))
-        }
+}
+
+@Composable
+private fun StageTile(store: OnlineStore, player: OnlinePlayer?, role: OnlineRole, corner: Int, spotlight: Boolean = false, modifier: Modifier) {
+    if (player != null) {
+        OnlineVideoTile(store, player, role = role, corner = corner, spotlight = spotlight, modifier = modifier)
+    } else {
+        Box(modifier.clip(RoundedCornerShape(corner.dp)).background(Brush.verticalGradient(listOf(Alias.brandTop, Color(0xFF16233F)))))
     }
 }
 
