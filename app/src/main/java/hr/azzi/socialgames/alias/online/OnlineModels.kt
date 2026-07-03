@@ -41,7 +41,8 @@ enum class OnlineRole { EXPLAINER, GUESSER, SPECTATOR }
 data class OnlinePlayer(
     var id: String = "",        // Firebase uid
     var name: String = "",
-    var agoraUid: Int = 0,      // legacy (unused since the Stream migration)
+    var agoraUid: Long = 0,     // legacy (unused since the Stream migration); Long so iOS's
+                                // up-to-4e9 values decode (they overflow a 32-bit Int)
     var teamId: Int = 0,
     var joinedAt: Date = Date(),
 ) {

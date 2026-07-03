@@ -1,5 +1,6 @@
 package hr.azzi.socialgames.alias.ui.screens.online
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -30,8 +31,9 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
+    BackHandler { store.leaveAndTeardown() }
     BrandBackground {
-        Column(Modifier.fillMaxSize().padding(20.dp)) {
+        Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Text("✕", color = Color.White, fontSize = 24.sp, fontWeight = FontWeight.Bold, modifier = Modifier.clickable { store.leaveAndTeardown() })
                 Spacer(Modifier.weight(1f))

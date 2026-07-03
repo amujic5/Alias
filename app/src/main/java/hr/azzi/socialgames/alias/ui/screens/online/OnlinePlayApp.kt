@@ -6,6 +6,7 @@ import android.content.ContextWrapper
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
@@ -141,7 +142,7 @@ fun OnlinePlayApp(onExit: () -> Unit) {
 private fun OnlineSignInScreen(onSignIn: () -> Unit) {
     BrandBackground {
         Column(
-            Modifier.fillMaxSize().padding(24.dp),
+            Modifier.fillMaxSize().systemBarsPadding().padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
@@ -169,7 +170,8 @@ private fun OnlineEntryScreen(store: OnlineStore, onExit: () -> Unit) {
         "create" -> OnlineCreateScreen(store, onBack = { route = "home" })
         "join" -> OnlineJoinScreen(store, onBack = { route = "home" })
         else -> BrandBackground {
-            Column(Modifier.fillMaxSize().padding(24.dp)) {
+            BackHandler { onExit() }
+            Column(Modifier.fillMaxSize().systemBarsPadding().padding(24.dp)) {
                 TopBar(title = stringResource(R.string.online_title), onBack = onExit)
                 Spacer(Modifier.height(8.dp))
                 Overline(text = stringResource(R.string.online_overline))
@@ -236,9 +238,10 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
         return
     }
 
+    BackHandler { onBack() }
     Box(Modifier.fillMaxSize()) {
         BrandBackground {
-            Column(Modifier.fillMaxSize().padding(20.dp).verticalScroll(rememberScrollState())) {
+            Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp).verticalScroll(rememberScrollState())) {
                 TopBar(title = stringResource(R.string.online_create_title), onBack = onBack)
                 Spacer(Modifier.height(12.dp))
                 CCard(Modifier.fillMaxWidth()) {
@@ -279,9 +282,10 @@ private fun OnlineJoinScreen(store: OnlineStore, onBack: () -> Unit) {
     var code by remember { mutableStateOf("") }
     LaunchedEffect(Unit) { store.loadMyRooms() }
 
+    BackHandler { onBack() }
     Box(Modifier.fillMaxSize()) {
         BrandBackground {
-            Column(Modifier.fillMaxSize().padding(20.dp)) {
+            Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
                 TopBar(title = stringResource(R.string.online_join_title), onBack = onBack)
                 Spacer(Modifier.height(12.dp))
                 CCard(Modifier.fillMaxWidth()) {
@@ -376,8 +380,9 @@ private fun <T> OnlinePickerScreen(
     title: String, items: List<T>, label: (T) -> String, emoji: (T) -> String,
     onPick: (T) -> Unit, onBack: () -> Unit,
 ) {
+    BackHandler { onBack() }
     BrandBackground {
-        Column(Modifier.fillMaxSize().padding(20.dp)) {
+        Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             TopBar(title = title, onBack = onBack)
             Spacer(Modifier.height(12.dp))
             LazyVerticalGrid(columns = GridCells.Fixed(3), horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {

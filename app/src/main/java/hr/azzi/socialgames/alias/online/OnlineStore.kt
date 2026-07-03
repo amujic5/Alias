@@ -53,7 +53,7 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
     private var observeJob: Job? = null
     private var timerJob: Job? = null
     private var editJob: Job? = null
-    private var myAgoraUid = 0
+    private var myAgoraUid = 0L
     private var roundEndPosted = false
     private var lastClockSecond = -1
     private var lastResultCount = 0
@@ -306,7 +306,7 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
 
     // MARK: Helpers
 
-    private fun makeAgoraUid() = Random.nextInt(1, Int.MAX_VALUE)
+    private fun makeAgoraUid(): Long = Random.nextLong(1, 4_000_000_000L)
 
     private fun resolveDeckName(deck: BoardGame): String {
         val resId = appCtx.resources.getIdentifier(deck.name, "string", appCtx.packageName)

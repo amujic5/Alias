@@ -51,7 +51,7 @@ class OnlineRoomRepository {
     }
 
     /** Joins (or rejoins) [code]. Enforces freshness, liveness and capacity. */
-    suspend fun joinRoom(code: String, uid: String, name: String, agoraUid: Int): OnlineRoom =
+    suspend fun joinRoom(code: String, uid: String, name: String, agoraUid: Long): OnlineRoom =
         mutate(code) { room ->
             if (!room.isAlive) throw OnlineException(OnlineError.CLOSED)
             if (!room.isFresh) throw OnlineException(OnlineError.EXPIRED)

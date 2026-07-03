@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias.ui.screens.online
 
 import android.Manifest
+import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.background
@@ -38,6 +39,7 @@ fun OnlineLobbyScreen(store: OnlineStore, room: OnlineRoom) {
     val context = LocalContext.current
     val clipboard = LocalClipboardManager.current
     val canStart = store.amHost() && if (BuildConfig.DEBUG) room.players.size >= 2 else room.players.size == room.maxPlayers
+    BackHandler { store.leaveAndTeardown() }
 
     // --- camera/mic permission ---
     var permAlert by remember { mutableStateOf(false) }
@@ -66,7 +68,7 @@ fun OnlineLobbyScreen(store: OnlineStore, room: OnlineRoom) {
     }
 
     BrandBackground {
-        Column(Modifier.fillMaxSize().padding(20.dp)) {
+        Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             TopBar(title = stringResource(R.string.online_lobby_title), onBack = { store.leaveAndTeardown() })
             Spacer(Modifier.height(10.dp))
             // code + copy
