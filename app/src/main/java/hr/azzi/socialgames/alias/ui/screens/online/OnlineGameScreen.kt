@@ -179,12 +179,15 @@ private fun ActiveControls(store: OnlineStore, room: OnlineRoom) {
     val role = room.role(store.myUid)
     val word = words.getOrNull(room.wordCursor)
 
+    // After SKIP/CORRECT, block both buttons for 0.5s to prevent double-taps racing
+    // the shared word cursor (matches iOS onMark).
     var cooldown by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
     fun mark(correct: Boolean) {
         if (cooldown) return
         store.mark(correct)
-        if (!BuildConfig.DEBUG) { cooldown = true; scope.launch { delay(500); cooldown = false } }
+        cooldown = true
+        scope.launch { delay(500); cooldown = false }
     }
 
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
