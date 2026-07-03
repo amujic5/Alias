@@ -17,6 +17,7 @@ import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.MicOff
 import androidx.compose.material.icons.filled.SkipNext
+import androidx.compose.material.icons.filled.Stop
 import androidx.compose.material.icons.filled.Check
 import androidx.compose.material.icons.filled.GridView
 import androidx.compose.material.icons.filled.Videocam
@@ -43,14 +44,27 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
-    BackHandler { store.leaveAndTeardown() }
     var showVideoRoom by remember { mutableStateOf(false) }
+    var showStopConfirm by remember { mutableStateOf(false) }
     val active = room.roundPhase == OnlineRoundPhase.ACTIVE && room.status == OnlineStatus.PLAYING
+    val hostControls = store.amHost() && room.status != OnlineStatus.FINISHED
+
+    // Host back = confirm finishing the game; non-host back is swallowed (no leaving mid-game).
+    BackHandler { if (hostControls) showStopConfirm = true }
+
+    if (showStopConfirm) {
+        AlertDialog(
+            onDismissRequest = { showStopConfirm = false },
+            title = { Text(stringResource(R.string.online_finish_game_q)) },
+            confirmButton = { TextButton(onClick = { showStopConfirm = false; store.stopGame() }) { Text(stringResource(R.string.online_finish_game)) } },
+            dismissButton = { TextButton(onClick = { showStopConfirm = false }) { Text(stringResource(R.string.online_keep_playing)) } },
+        )
+    }
 
     Box(Modifier.fillMaxSize()) {
         BrandBackground {
             Column(Modifier.fillMaxSize().systemBarsPadding().padding(horizontal = 16.dp, vertical = 12.dp)) {
-                GameTopCard(store, room) { showVideoRoom = true }
+                GameTopCard(store, room, onVideoRoom = { showVideoRoom = true }, onStop = if (hostControls) ({ showStopConfirm = true }) else null)
                 Spacer(Modifier.height(8.dp))
                 TimerBar(store, room)
                 Spacer(Modifier.height(12.dp))
@@ -76,7 +90,7 @@ fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
 /* --------------------------------------------------------------- chrome */
 
 @Composable
-private fun GameTopCard(store: OnlineStore, room: OnlineRoom, onVideoRoom: () -> Unit) {
+private fun GameTopCard(store: OnlineStore, room: OnlineRoom, onVideoRoom: () -> Unit, onStop: (() -> Unit)?) {
     val now by store.now.collectAsState()
     val team = room.currentTeam
     val secs = room.secondsRemaining(now).coerceAtLeast(0)
@@ -100,6 +114,13 @@ private fun GameTopCard(store: OnlineStore, room: OnlineRoom, onVideoRoom: () ->
                 Modifier.size(40.dp).clip(RoundedCornerShape(13.dp)).background(Alias.blue600).clickable { onVideoRoom() },
                 contentAlignment = Alignment.Center,
             ) { Icon(Icons.Filled.GridView, null, tint = Color.White, modifier = Modifier.size(19.dp)) }
+            if (onStop != null) {
+                Spacer(Modifier.width(8.dp))
+                Box(
+                    Modifier.size(40.dp).clip(RoundedCornerShape(13.dp)).background(Alias.danger).clickable { onStop() },
+                    contentAlignment = Alignment.Center,
+                ) { Icon(Icons.Filled.Stop, null, tint = Color.White, modifier = Modifier.size(20.dp)) }
+            }
         }
     }
 }
