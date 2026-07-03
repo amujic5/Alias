@@ -20,7 +20,10 @@ import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.automirrored.filled.ArrowBackIos
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -393,9 +396,13 @@ private fun RecentRoomCard(room: OnlineRoom, onRejoin: () -> Unit) {
 @Composable
 fun TopBar(title: String, onBack: () -> Unit, trailing: (@Composable () -> Unit)? = null) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
-        Text("‹", color = Color.White, fontSize = 32.sp, fontWeight = FontWeight.Bold,
-            modifier = Modifier.clip(RoundedCornerShape(percent = 50)).clickable { onBack() }.padding(horizontal = 6.dp))
-        Spacer(Modifier.width(8.dp))
+        // 44dp touch target, nudged left so the chevron sits flush with the content edge.
+        Box(
+            Modifier.offset(x = (-10).dp).size(44.dp).clip(CircleShape).clickable { onBack() },
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(Icons.AutoMirrored.Filled.ArrowBackIos, contentDescription = "Back", tint = Color.White, modifier = Modifier.size(20.dp))
+        }
         Text(title.uppercase(), color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.Black, fontSize = 17.sp, letterSpacing = 1.2.sp)
         if (trailing != null) { Spacer(Modifier.weight(1f)); trailing() }
     }
