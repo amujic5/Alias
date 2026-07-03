@@ -167,12 +167,22 @@ private fun ActiveControls(store: OnlineStore, room: OnlineRoom) {
     }
 
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
+        val visible = role != OnlineRole.GUESSER
         CCard(Modifier.fillMaxWidth(), padding = 22) {
-            Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
-                if (role == OnlineRole.GUESSER) {
-                    Text(stringResource(R.string.online_word_hidden), color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 16.sp)
-                } else {
+            Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
+                Overline(
+                    when {
+                        !visible -> stringResource(R.string.online_word_hidden)
+                        store.amExplainer() -> stringResource(R.string.online_your_word)
+                        else -> stringResource(R.string.online_theyre_guessing)
+                    },
+                    color = Alias.textSecondary,
+                )
+                Spacer(Modifier.height(6.dp))
+                if (visible) {
                     Text(word ?: "—", color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 30.sp, textAlign = TextAlign.Center)
+                } else {
+                    Text("• • • • • •", color = Color(0xFFB8C2D1), fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 26.sp)
                 }
             }
         }
