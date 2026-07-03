@@ -6,11 +6,14 @@ import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
+import androidx.compose.foundation.lazy.itemsIndexed
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Cancel
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.MicOff
 import androidx.compose.material.icons.filled.SkipNext
@@ -389,43 +392,59 @@ private fun StandingRow(rank: Int, team: OnlineTeam, room: OnlineRoom, delta: In
 @Composable
 private fun EditAnswersSheet(store: OnlineStore, room: OnlineRoom) {
     val edited by store.editedResults.collectAsState()
-    val results = edited ?: room.roundResults
+    val results = if (store.amExplainer()) (edited ?: room.roundResults) else room.roundResults
     val amExplainer = store.amExplainer()
+    val explainer = room.nameOf(room.currentExplainerId)
+    val correct = results.count { it.correct }
+    val skipped = results.count { !it.correct }
 
-    SheetCard(heightFraction = if (amExplainer) 0.7f else null) {
-        if (!amExplainer) {
-            Text(stringResource(R.string.online_reviewing, room.nameOf(room.currentExplainerId)), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
-            Spacer(Modifier.height(16.dp))
-            Box(Modifier.fillMaxWidth().padding(vertical = 20.dp), contentAlignment = Alignment.Center) { CircularProgressIndicator(color = Alias.blue600) }
-            return@SheetCard
-        }
+    SheetCard(heightFraction = 0.7f) {
         Row(verticalAlignment = Alignment.CenterVertically) {
-            Text(stringResource(R.string.online_edit_answers), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp, modifier = Modifier.weight(1f))
-            StatChip(stringResource(R.string.online_correct_skipped, room.correctThisRound, room.skippedThisRound), Alias.success)
+            Column(Modifier.weight(1f)) {
+                Text(if (amExplainer) stringResource(R.string.online_edit_answers) else stringResource(R.string.online_answers),
+                    color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
+                Spacer(Modifier.height(2.dp))
+                Text(if (amExplainer) stringResource(R.string.online_fix_mistaps) else stringResource(R.string.online_reviewing, explainer),
+                    color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+            }
+            StatChip(stringResource(R.string.online_answers_count, correct, skipped), Alias.success)
         }
-        Spacer(Modifier.height(4.dp))
-        Text(stringResource(R.string.online_fix_mistaps), color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
         Spacer(Modifier.height(12.dp))
         if (results.isEmpty()) {
             Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) { Text(stringResource(R.string.online_no_words), color = Alias.textSecondary, fontFamily = Alias.body) }
         } else {
-            LazyColumn(Modifier.weight(1f).fillMaxWidth()) {
-                items(results) { mw ->
-                    Row(Modifier.fillMaxWidth().padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
+            LazyColumn(Modifier.weight(1f).fillMaxWidth().clip(RoundedCornerShape(18.dp)).background(Alias.fieldBg).padding(horizontal = 16.dp)) {
+                itemsIndexed(results) { i, mw ->
+                    Row(Modifier.fillMaxWidth().padding(vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
                         Text(mw.word, color = if (mw.correct) Alias.textPrimary else Alias.danger, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 17.sp, modifier = Modifier.weight(1f))
-                        Switch(
-                            checked = mw.correct, onCheckedChange = { store.toggleAnswer(mw.word) },
-                            colors = SwitchDefaults.colors(checkedTrackColor = Alias.success, uncheckedTrackColor = Alias.divider, checkedThumbColor = Color.White, uncheckedThumbColor = Color.White),
-                        )
+                        if (amExplainer) {
+                            Switch(
+                                checked = mw.correct, onCheckedChange = { store.toggleAnswer(mw.word) },
+                                colors = SwitchDefaults.colors(checkedTrackColor = Alias.success, uncheckedTrackColor = Alias.divider, checkedThumbColor = Color.White, uncheckedThumbColor = Color.White),
+                            )
+                        } else {
+                            Icon(
+                                if (mw.correct) Icons.Filled.CheckCircle else Icons.Filled.Cancel, null,
+                                tint = if (mw.correct) Alias.success else Alias.danger, modifier = Modifier.size(24.dp),
+                            )
+                        }
                     }
-                    Divider(color = Alias.divider)
+                    if (i < results.lastIndex) Divider(color = Alias.divider)
                 }
             }
         }
-        Spacer(Modifier.height(16.dp))
-        Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            PillButton(stringResource(R.string.online_cancel), kind = PillKind.Dark, fillWidth = false, modifier = Modifier.weight(1f)) { store.discardAndAdvance() }
-            PillButton(stringResource(R.string.online_save), fillWidth = false, modifier = Modifier.weight(1f)) { store.saveAnswers() }
+        Spacer(Modifier.height(14.dp))
+        if (amExplainer) {
+            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                PillButton(stringResource(R.string.online_cancel), kind = PillKind.Dark, fillWidth = false, modifier = Modifier.weight(1f)) { store.discardAndAdvance() }
+                PillButton(stringResource(R.string.online_save), fillWidth = false, modifier = Modifier.weight(1f)) { store.saveAnswers() }
+            }
+        } else {
+            Row(Modifier.fillMaxWidth().padding(vertical = 10.dp), horizontalArrangement = Arrangement.Center, verticalAlignment = Alignment.CenterVertically) {
+                CircularProgressIndicator(color = Alias.textSecondary, strokeWidth = 2.dp, modifier = Modifier.size(16.dp))
+                Spacer(Modifier.width(10.dp))
+                Text(stringResource(R.string.online_waiting_save, explainer), color = Alias.textSecondary, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+            }
         }
     }
 }
