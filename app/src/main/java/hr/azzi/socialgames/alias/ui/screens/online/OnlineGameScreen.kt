@@ -234,10 +234,11 @@ private fun Scrim(bottom: Boolean = false, content: @Composable () -> Unit) {
 }
 
 @Composable
-private fun SheetCard(scroll: Boolean = false, content: @Composable ColumnScope.() -> Unit) {
-    val maxH = (LocalConfiguration.current.screenHeightDp * 0.92f).dp
+private fun SheetCard(scroll: Boolean = false, heightFraction: Float? = null, content: @Composable ColumnScope.() -> Unit) {
+    val screenH = LocalConfiguration.current.screenHeightDp
+    val heightMod = if (heightFraction != null) Modifier.height((screenH * heightFraction).dp) else Modifier.heightIn(max = (screenH * 0.92f).dp)
     Column(
-        Modifier.fillMaxWidth().heightIn(max = maxH).clip(RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)).background(Alias.surface)
+        Modifier.fillMaxWidth().then(heightMod).clip(RoundedCornerShape(topStart = 28.dp, topEnd = 28.dp)).background(Alias.surface)
             .then(if (scroll) Modifier.verticalScroll(rememberScrollState()) else Modifier).padding(20.dp),
     ) {
         Box(Modifier.align(Alignment.CenterHorizontally).width(40.dp).height(4.dp).clip(RoundedCornerShape(percent = 50)).background(Alias.divider))
@@ -391,7 +392,7 @@ private fun EditAnswersSheet(store: OnlineStore, room: OnlineRoom) {
     val results = edited ?: room.roundResults
     val amExplainer = store.amExplainer()
 
-    SheetCard {
+    SheetCard(heightFraction = if (amExplainer) 0.7f else null) {
         if (!amExplainer) {
             Text(stringResource(R.string.online_reviewing, room.nameOf(room.currentExplainerId)), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
             Spacer(Modifier.height(16.dp))
@@ -406,9 +407,9 @@ private fun EditAnswersSheet(store: OnlineStore, room: OnlineRoom) {
         Text(stringResource(R.string.online_fix_mistaps), color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
         Spacer(Modifier.height(12.dp))
         if (results.isEmpty()) {
-            Box(Modifier.fillMaxWidth().padding(24.dp), contentAlignment = Alignment.Center) { Text(stringResource(R.string.online_no_words), color = Alias.textSecondary, fontFamily = Alias.body) }
+            Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) { Text(stringResource(R.string.online_no_words), color = Alias.textSecondary, fontFamily = Alias.body) }
         } else {
-            LazyColumn(Modifier.heightIn(max = 320.dp)) {
+            LazyColumn(Modifier.weight(1f).fillMaxWidth()) {
                 items(results) { mw ->
                     Row(Modifier.fillMaxWidth().padding(vertical = 10.dp), verticalAlignment = Alignment.CenterVertically) {
                         Text(mw.word, color = if (mw.correct) Alias.textPrimary else Alias.danger, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 17.sp, modifier = Modifier.weight(1f))
