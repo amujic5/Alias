@@ -3,6 +3,7 @@ package hr.azzi.socialgames.alias.ui.screens.online
 import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.interaction.MutableInteractionSource
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -46,7 +47,6 @@ import kotlinx.coroutines.launch
 fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
     var showVideoRoom by remember { mutableStateOf(false) }
     var showStopConfirm by remember { mutableStateOf(false) }
-    val active = room.roundPhase == OnlineRoundPhase.ACTIVE && room.status == OnlineStatus.PLAYING
     val hostControls = store.amHost() && room.status != OnlineStatus.FINISHED
 
     // Host back = confirm finishing the game; non-host back is swallowed (no leaving mid-game).
@@ -69,10 +69,8 @@ fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
                 TimerBar(store, room)
                 Spacer(Modifier.height(12.dp))
                 VideoStage(store, room, Modifier.weight(1f))
-                if (active) {
-                    Spacer(Modifier.height(14.dp))
-                    ActiveControls(store, room)
-                }
+                Spacer(Modifier.height(14.dp))
+                ActiveControls(store, room)
             }
         }
 
@@ -181,17 +179,18 @@ private fun ActiveControls(store: OnlineStore, room: OnlineRoom) {
 
     // After SKIP/CORRECT, block both buttons for 0.5s to prevent double-taps racing
     // the shared word cursor (matches iOS onMark).
+    val roundActive = room.roundPhase == OnlineRoundPhase.ACTIVE
     var cooldown by remember { mutableStateOf(false) }
     val scope = rememberCoroutineScope()
     fun mark(correct: Boolean) {
-        if (cooldown) return
+        if (cooldown || !roundActive) return
         store.mark(correct)
         cooldown = true
         scope.launch { delay(500); cooldown = false }
     }
 
     Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
-        val visible = role != OnlineRole.GUESSER
+        val visible = roundActive && role != OnlineRole.GUESSER
         CCard(Modifier.fillMaxWidth(), padding = 22) {
             Column(Modifier.fillMaxWidth(), horizontalAlignment = Alignment.CenterHorizontally) {
                 Overline(
@@ -265,7 +264,10 @@ private fun BigActionButton(label: String, icon: androidx.compose.ui.graphics.ve
 @Composable
 private fun Scrim(bottom: Boolean = false, content: @Composable () -> Unit) {
     Box(
-        Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.45f)).systemBarsPadding().padding(horizontal = if (bottom) 0.dp else 22.dp),
+        Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.45f))
+            // Swallow taps so the game footer behind the dim isn't clickable.
+            .clickable(interactionSource = remember { MutableInteractionSource() }, indication = null) {}
+            .systemBarsPadding().padding(horizontal = if (bottom) 0.dp else 22.dp),
         contentAlignment = if (bottom) Alignment.BottomCenter else Alignment.Center,
     ) { content() }
 }
