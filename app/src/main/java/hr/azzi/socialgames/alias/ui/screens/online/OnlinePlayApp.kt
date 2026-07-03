@@ -24,7 +24,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.automirrored.filled.ArrowBackIos
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.foundation.text.BasicTextField
 import androidx.compose.foundation.text.KeyboardOptions
 import androidx.compose.foundation.verticalScroll
@@ -399,12 +399,9 @@ private fun RecentRoomCard(room: OnlineRoom, onRejoin: () -> Unit) {
 @Composable
 fun TopBar(title: String, onBack: () -> Unit, trailing: (@Composable () -> Unit)? = null) {
     Row(verticalAlignment = Alignment.CenterVertically, modifier = Modifier.fillMaxWidth()) {
-        // 44dp touch target, nudged left so the chevron sits flush with the content edge.
-        Box(
-            Modifier.offset(x = (-10).dp).size(44.dp).clip(CircleShape).clickable { onBack() },
-            contentAlignment = Alignment.Center,
-        ) {
-            Icon(Icons.AutoMirrored.Filled.ArrowBackIos, contentDescription = "Back", tint = Color.White, modifier = Modifier.size(20.dp))
+        // Same back button as the AI Challenge screens.
+        IconButton(onClick = onBack) {
+            Icon(Icons.AutoMirrored.Filled.ArrowBack, contentDescription = "Back", tint = Color.White)
         }
         Text(title.uppercase(), color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.Black, fontSize = 17.sp, letterSpacing = 1.2.sp)
         if (trailing != null) { Spacer(Modifier.weight(1f)); trailing() }
