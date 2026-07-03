@@ -346,7 +346,7 @@ private fun SummarySheet(store: OnlineStore, room: OnlineRoom) {
         }
         Spacer(Modifier.height(18.dp))
         if (amExplainer) {
-            PillButton(stringResource(R.string.online_start_next_round)) { store.finishRound() }
+            PillButton(stringResource(R.string.online_finish_round)) { store.finishRound() }
             Spacer(Modifier.height(6.dp))
             TextButton(onClick = { store.editAnswers() }, modifier = Modifier.align(Alignment.CenterHorizontally)) {
                 Text(stringResource(R.string.online_edit_answers).uppercase(), color = Alias.blue600, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
