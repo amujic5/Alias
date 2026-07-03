@@ -318,4 +318,13 @@
     <string name="online_perm_msg">Allow camera and microphone access to play online.</string>
     <string name="online_perm_leave">Leave</string>
     <string name="online_perm_settings">Go to Settings</string>
+    <string name="update_soft_title">Update Available</string>
+    <string name="update_soft_message">A new version of the app is available.</string>
+    <string name="update_force_title">Update Required</string>
+    <string name="update_force_message">Please update the app to continue.</string>
+    <string name="update_action_update">Update</string>
+    <string name="update_action_later">Later</string>
+    <string name="update_action_restart">Restart</string>
+    <string name="update_flexible_downloaded_title">Update ready</string>
+    <string name="update_flexible_downloaded_msg">An update has been downloaded. Restart to install it.</string>
 </resources>

@@ -319,4 +319,13 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="online_waiting_to_start">Čakanje, da %1$s začne…</string>
     <string name="online_cancel">PREKLIČI</string>
     <string name="online_role_speaking">GOVORI</string>
+    <string name="update_soft_title">Posodobitev na voljo</string>
+    <string name="update_soft_message">Na voljo je nova različica aplikacije.</string>
+    <string name="update_force_title">Potrebna je posodobitev</string>
+    <string name="update_force_message">Za nadaljevanje posodobite aplikacijo.</string>
+    <string name="update_action_update">Posodobi</string>
+    <string name="update_action_later">Pozneje</string>
+    <string name="update_action_restart">Znova zaženi</string>
+    <string name="update_flexible_downloaded_title">Posodobitev pripravljena</string>
+    <string name="update_flexible_downloaded_msg">Posodobitev je prenesena. Znova zaženite za namestitev.</string>
 </resources>

@@ -4,19 +4,34 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import androidx.activity.compose.setContent
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
+import androidx.lifecycle.lifecycleScope
 import hr.azzi.socialgames.alias.Service.JSONService
+import hr.azzi.socialgames.alias.appupdate.AppUpdateController
 import hr.azzi.socialgames.alias.ui.screens.HomeScreen
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
 class HomeActivity : BaseActivity() {
 
+    // Registered before the activity is RESUMED so the Play update flow can report back.
+    private val updateLauncher = registerForActivityResult(
+        ActivityResultContracts.StartIntentSenderForResult()
+    ) { result -> updateController.onFlowResult(result.resultCode) }
+
+    private val updateController: AppUpdateController by lazy {
+        AppUpdateController(this, lifecycleScope, updateLauncher)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         JSONService.loadBoardGamesFromFile(this)
+        // Check for a required/optional update once the home screen is up
+        // (Firebase is already configured; runs off the launch path).
+        updateController.start()
         setContent {
             AliasTheme {
                 HomeScreen(
@@ -33,6 +48,16 @@ class HomeActivity : BaseActivity() {
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         supportActionBar?.hide()
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateController.onResume()
+    }
+
+    override fun onDestroy() {
+        updateController.dispose()
+        super.onDestroy()
     }
 
     private fun shareApp() {

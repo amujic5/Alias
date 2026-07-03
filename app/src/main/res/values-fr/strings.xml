@@ -312,4 +312,13 @@
     <string name="online_waiting_to_start">En attente du départ de %1$s…</string>
     <string name="online_cancel">ANNULER</string>
     <string name="online_role_speaking">PARLE</string>
+    <string name="update_soft_title">Mise à jour disponible</string>
+    <string name="update_soft_message">Une nouvelle version de l\'application est disponible.</string>
+    <string name="update_force_title">Mise à jour requise</string>
+    <string name="update_force_message">Veuillez mettre à jour l\'application pour continuer.</string>
+    <string name="update_action_update">Mettre à jour</string>
+    <string name="update_action_later">Plus tard</string>
+    <string name="update_action_restart">Redémarrer</string>
+    <string name="update_flexible_downloaded_title">Mise à jour prête</string>
+    <string name="update_flexible_downloaded_msg">Une mise à jour a été téléchargée. Redémarrez pour l\'installer.</string>
 </resources>

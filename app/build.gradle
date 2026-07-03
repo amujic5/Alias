@@ -88,6 +88,11 @@ dependencies {
     implementation 'com.google.firebase:firebase-inappmessaging-display'
     implementation 'com.google.firebase:firebase-appcheck-playintegrity'
     debugImplementation 'com.google.firebase:firebase-appcheck-debug'
+    implementation 'com.google.firebase:firebase-config'
+
+    // Google Play In-App Updates (immediate = force, flexible = soft)
+    implementation 'com.google.android.play:app-update:2.1.0'
+    implementation 'com.google.android.play:app-update-ktx:2.1.0'
 
     implementation 'com.google.android.gms:play-services-ads:25.4.0'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.11.0'

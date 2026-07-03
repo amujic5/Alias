@@ -312,4 +312,13 @@
     <string name="online_waiting_to_start">Warte, bis %1$s startet…</string>
     <string name="online_cancel">ABBRECHEN</string>
     <string name="online_role_speaking">SPRICHT</string>
+    <string name="update_soft_title">Update verfügbar</string>
+    <string name="update_soft_message">Eine neue Version der App ist verfügbar.</string>
+    <string name="update_force_title">Update erforderlich</string>
+    <string name="update_force_message">Bitte aktualisiere die App, um fortzufahren.</string>
+    <string name="update_action_update">Aktualisieren</string>
+    <string name="update_action_later">Später</string>
+    <string name="update_action_restart">Neu starten</string>
+    <string name="update_flexible_downloaded_title">Update bereit</string>
+    <string name="update_flexible_downloaded_msg">Ein Update wurde heruntergeladen. Zum Installieren neu starten.</string>
 </resources>

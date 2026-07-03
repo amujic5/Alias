@@ -311,4 +311,13 @@
     <string name="online_waiting_to_start">In attesa che %1$s inizi…</string>
     <string name="online_cancel">ANNULLA</string>
     <string name="online_role_speaking">STA PARLANDO</string>
+    <string name="update_soft_title">Aggiornamento disponibile</string>
+    <string name="update_soft_message">È disponibile una nuova versione dell\'app.</string>
+    <string name="update_force_title">Aggiornamento necessario</string>
+    <string name="update_force_message">Aggiorna l\'app per continuare.</string>
+    <string name="update_action_update">Aggiorna</string>
+    <string name="update_action_later">Più tardi</string>
+    <string name="update_action_restart">Riavvia</string>
+    <string name="update_flexible_downloaded_title">Aggiornamento pronto</string>
+    <string name="update_flexible_downloaded_msg">È stato scaricato un aggiornamento. Riavvia per installarlo.</string>
 </resources>

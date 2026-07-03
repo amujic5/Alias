@@ -319,4 +319,13 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="online_waiting_to_start">Čekanje da %1$s započne…</string>
     <string name="online_cancel">ODUSTANI</string>
     <string name="online_role_speaking">GOVORI</string>
+    <string name="update_soft_title">Dostupno ažuriranje</string>
+    <string name="update_soft_message">Dostupna je nova verzija aplikacije.</string>
+    <string name="update_force_title">Ažuriranje je obavezno</string>
+    <string name="update_force_message">Ažurirajte aplikaciju za nastavak.</string>
+    <string name="update_action_update">Ažuriraj</string>
+    <string name="update_action_later">Kasnije</string>
+    <string name="update_action_restart">Ponovno pokreni</string>
+    <string name="update_flexible_downloaded_title">Ažuriranje spremno</string>
+    <string name="update_flexible_downloaded_msg">Ažuriranje je preuzeto. Ponovno pokrenite za instalaciju.</string>
 </resources>
