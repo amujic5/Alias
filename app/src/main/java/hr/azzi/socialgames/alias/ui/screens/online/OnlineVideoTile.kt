@@ -111,9 +111,9 @@ fun OnlineVideoTile(
             Text(
                 if (isMe) stringResource(R.string.online_you) else player.name,
                 color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 12.sp,
-                maxLines = 1, modifier = Modifier.weight(1f, fill = false),
+                maxLines = 1, overflow = androidx.compose.ui.text.style.TextOverflow.Ellipsis, modifier = Modifier.weight(1f),
             )
-            Spacer(Modifier.weight(1f))
+            Spacer(Modifier.width(6.dp))
             if (cameraOff) {
                 Icon(Icons.Filled.VideocamOff, null, tint = Color.White.copy(alpha = 0.85f), modifier = Modifier.size(15.dp))
                 Spacer(Modifier.width(6.dp))
