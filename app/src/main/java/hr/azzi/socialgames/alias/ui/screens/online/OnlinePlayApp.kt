@@ -9,6 +9,7 @@ import android.provider.Settings
 import androidx.activity.compose.BackHandler
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -36,7 +37,9 @@ import androidx.compose.ui.draw.clip
 import androidx.compose.ui.focus.FocusRequester
 import androidx.compose.ui.focus.focusRequester
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalClipboardManager
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
@@ -237,7 +240,7 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
             title = stringResource(R.string.online_choose_dictionary),
             items = decks,
             label = { deckDisplayName(context, it) },
-            emoji = { "🎴" },
+            imageName = { it.image },
             onPick = { deck = it; showDeckPicker = false },
             onBack = { showDeckPicker = false },
         )
@@ -457,22 +460,41 @@ private fun <T> Segmented(options: List<T>, selection: T, onSelect: (T) -> Unit)
 
 @Composable
 private fun <T> OnlinePickerScreen(
-    title: String, items: List<T>, label: (T) -> String, emoji: (T) -> String,
-    onPick: (T) -> Unit, onBack: () -> Unit,
+    title: String,
+    items: List<T>,
+    label: (T) -> String,
+    onPick: (T) -> Unit,
+    onBack: () -> Unit,
+    imageName: ((T) -> String?)? = null,
+    emoji: ((T) -> String)? = null,
 ) {
+    val ctx = LocalContext.current
     BackHandler { onBack() }
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             TopBar(title = title, onBack = onBack)
             Spacer(Modifier.height(12.dp))
-            LazyVerticalGrid(columns = GridCells.Fixed(3), horizontalArrangement = Arrangement.spacedBy(12.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
+            LazyVerticalGrid(
+                columns = GridCells.Fixed(2),
+                horizontalArrangement = Arrangement.spacedBy(14.dp),
+                verticalArrangement = Arrangement.spacedBy(14.dp),
+            ) {
                 items(items) { item ->
-                    CCard(Modifier.fillMaxWidth().clickable { onPick(item) }) {
-                        Column(horizontalAlignment = Alignment.CenterHorizontally, modifier = Modifier.fillMaxWidth()) {
-                            Text(emoji(item), fontSize = 34.sp)
-                            Spacer(Modifier.height(6.dp))
-                            Text(label(item), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 13.sp, textAlign = TextAlign.Center, maxLines = 2)
+                    val imgId = imageName?.invoke(item)?.let { ctx.resources.getIdentifier(it, "drawable", ctx.packageName) } ?: 0
+                    Column(
+                        Modifier.fillMaxWidth().height(150.dp).clip(RoundedCornerShape(20.dp)).background(Color.White)
+                            .clickable { onPick(item) }.padding(16.dp),
+                        horizontalAlignment = Alignment.CenterHorizontally,
+                        verticalArrangement = Arrangement.Center,
+                    ) {
+                        if (imgId != 0) {
+                            Image(painterResource(imgId), null, Modifier.size(64.dp), contentScale = ContentScale.Fit)
+                        } else if (emoji != null) {
+                            Text(emoji(item), fontSize = 40.sp)
                         }
+                        Spacer(Modifier.height(12.dp))
+                        Text(label(item), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
+                            fontSize = 15.sp, textAlign = TextAlign.Center, maxLines = 2)
                     }
                 }
             }
