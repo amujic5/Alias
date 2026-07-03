@@ -24,6 +24,7 @@ class HomeActivity : BaseActivity() {
                     onHowToPlay = { startActivity(Intent(this, HowToPlayActivity::class.java)) },
                     onShare = { shareApp() },
                     onAiChallenge = { startActivity(Intent(this, AIChallengeActivity::class.java)) },
+                    onOnlinePlay = { startActivity(Intent(this, OnlineActivity::class.java)) },
                 )
             }
         }

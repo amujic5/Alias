@@ -55,7 +55,8 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
     private var myAgoraUid = 0
     private var roundEndPosted = false
     private var lastClockSecond = -1
-    private var editedResults: List<OnlineMarkedWord>? = null   // local edits in the review sheet
+    private val _editedResults = MutableStateFlow<List<OnlineMarkedWord>?>(null)  // local edits in the review sheet
+    val editedResults: StateFlow<List<OnlineMarkedWord>?> = _editedResults.asStateFlow()
 
     val myUid: String? get() = AuthService.uid
 
@@ -196,8 +197,8 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
                 OnlineAnalytics.roomCancelled(appCtx)
         }
 
-        if (room.roundPhase != OnlineRoundPhase.REVIEW) editedResults = null
-        else if (!wasReview) editedResults = null
+        if (room.roundPhase != OnlineRoundPhase.REVIEW) _editedResults.value = null
+        else if (!wasReview) _editedResults.value = null
         if (room.roundPhase != OnlineRoundPhase.ACTIVE) roundEndPosted = false
         // Terminal: host cancelled/closed → everyone tears down and leaves.
         if (room.status == OnlineStatus.CANCELLED) { teardown(); _dismissed.value = true }
@@ -247,12 +248,10 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
     // Review / edit answers
 
     /** The round's words with the explainer's in-progress edits applied. */
-    fun reviewResults(): List<OnlineMarkedWord> = editedResults ?: _room.value?.roundResults ?: emptyList()
+    fun reviewResults(): List<OnlineMarkedWord> = _editedResults.value ?: _room.value?.roundResults ?: emptyList()
 
     fun toggleAnswer(word: String) {
-        val results = reviewResults().map { if (it.word == word) it.copy(correct = !it.correct) else it }
-        editedResults = results
-        _room.value = _room.value   // nudge collectors (optimistic local flip)
+        _editedResults.value = reviewResults().map { if (it.word == word) it.copy(correct = !it.correct) else it }
         scheduleEditSync()
     }
 
@@ -263,7 +262,7 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
             delay(300)
             val code = _room.value?.code ?: return@launch
             if (_room.value?.roundPhase != OnlineRoundPhase.REVIEW) return@launch
-            val edits = editedResults ?: return@launch
+            val edits = _editedResults.value ?: return@launch
             val cursor = _room.value?.wordCursor ?: 0
             runCatching { repo.setRoundResults(code, edits, cursor) }.onFailure { _error.value = errorText(it) }
         }
@@ -273,7 +272,7 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
     fun saveAnswers() {
         val code = _room.value?.code ?: return
         editJob?.cancel()
-        val edits = editedResults
+        val edits = _editedResults.value
         val cursor = _room.value?.wordCursor ?: 0
         viewModelScope.launch {
             try {

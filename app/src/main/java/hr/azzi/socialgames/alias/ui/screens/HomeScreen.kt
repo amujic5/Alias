@@ -39,6 +39,7 @@ fun HomeScreen(
     onHowToPlay: () -> Unit,
     onShare: () -> Unit,
     onAiChallenge: () -> Unit,
+    onOnlinePlay: () -> Unit,
 ) {
     BrandBackground {
         Column(
@@ -56,6 +57,8 @@ fun HomeScreen(
             Spacer(Modifier.weight(1f))
             AiChallengeButton(onAiChallenge)
             Spacer(Modifier.height(12.dp))
+            OnlinePlayButton(onOnlinePlay)
+            Spacer(Modifier.height(12.dp))
             PillButton(stringResource(R.string.new_game).uppercase(), PillKind.Primary, onClick = onNewGame)
             Spacer(Modifier.height(12.dp))
             PillButton(stringResource(R.string.how_to_play).uppercase(), PillKind.Light, onClick = onHowToPlay)
@@ -63,6 +66,23 @@ fun HomeScreen(
             PillButton(stringResource(R.string.tell_your_friends).uppercase(), PillKind.Light, onClick = onShare)
             Spacer(Modifier.height(20.dp))
         }
+    }
+}
+
+/** Distinct purple→blue Online Play entry button. */
+@Composable
+private fun OnlinePlayButton(onClick: () -> Unit) {
+    Box(
+        Modifier.fillMaxWidth().height(56.dp)
+            .clip(RoundedCornerShape(percent = 50))
+            .background(Brush.horizontalGradient(listOf(Color(0xFF7C5CFF), Color(0xFF0F70D1))))
+            .clickable { onClick() },
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            "🌐 " + stringResource(R.string.online_title).uppercase(),
+            color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 17.sp,
+        )
     }
 }
 
