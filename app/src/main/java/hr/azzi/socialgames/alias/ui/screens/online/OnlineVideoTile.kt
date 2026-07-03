@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.getstream.video.android.compose.theme.VideoTheme
 import io.getstream.video.android.compose.ui.components.call.renderer.ParticipantVideoRenderer
 import hr.azzi.socialgames.alias.online.OnlinePlayer
 import hr.azzi.socialgames.alias.online.OnlineRole
@@ -52,7 +53,8 @@ fun OnlineVideoTile(store: OnlineStore, player: OnlinePlayer, role: OnlineRole?,
     ) {
         if (call != null && participant != null) {
             // Live Stream feed; falls back to the participant's initials when the camera is off.
-            ParticipantVideoRenderer(call = call, participant = participant)
+            // Stream components must be wrapped in a VideoTheme (provides shapes/colors).
+            VideoTheme { ParticipantVideoRenderer(call = call, participant = participant) }
         } else {
             Box(
                 Modifier.align(Alignment.Center).size(54.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.22f)),
