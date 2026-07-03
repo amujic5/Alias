@@ -20,6 +20,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import io.getstream.video.android.compose.ui.components.call.renderer.ParticipantVideoRenderer
 import hr.azzi.socialgames.alias.online.OnlinePlayer
 import hr.azzi.socialgames.alias.online.OnlineRole
 import hr.azzi.socialgames.alias.online.OnlineStore
@@ -40,16 +41,25 @@ fun OnlineVideoTile(store: OnlineStore, player: OnlinePlayer, role: OnlineRole?,
     val muted = if (isMe) !micOn else muted0.contains(player.id)
     val speaking = !muted && speaking0.contains(player.id)
 
+    val participants by store.video.participants.collectAsState()
+    val call = store.video.call
+    val participant = participants[player.id]
+
     Box(
         modifier
             .clip(RoundedCornerShape(16.dp))
             .background(Brush.verticalGradient(listOf(teamColor(player.teamId), Color(0xFF13203A)))),
     ) {
-        Box(
-            Modifier.align(Alignment.Center).size(54.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.22f)),
-            contentAlignment = Alignment.Center,
-        ) {
-            Text(player.initial, color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
+        if (call != null && participant != null) {
+            // Live Stream feed; falls back to the participant's initials when the camera is off.
+            ParticipantVideoRenderer(call = call, participant = participant)
+        } else {
+            Box(
+                Modifier.align(Alignment.Center).size(54.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.22f)),
+                contentAlignment = Alignment.Center,
+            ) {
+                Text(player.initial, color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
+            }
         }
         // role badge (top-left)
         if (role != null && role != OnlineRole.SPECTATOR) {
