@@ -6,6 +6,7 @@ import androidx.lifecycle.viewModelScope
 import com.google.firebase.functions.FirebaseFunctions
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.BoardGame
+import hr.azzi.socialgames.alias.Service.SoundSystem
 import hr.azzi.socialgames.alias.Service.serializedName
 import hr.azzi.socialgames.alias.ai.AuthService
 import kotlinx.coroutines.Job
@@ -55,6 +56,8 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
     private var myAgoraUid = 0
     private var roundEndPosted = false
     private var lastClockSecond = -1
+    private var lastResultCount = 0
+    private val sounds = SoundSystem(appCtx)
     private val _editedResults = MutableStateFlow<List<OnlineMarkedWord>?>(null)  // local edits in the review sheet
     val editedResults: StateFlow<List<OnlineMarkedWord>?> = _editedResults.asStateFlow()
 
@@ -176,12 +179,21 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
         val prevStatus = prev?.status
         val wasReview = prevPhase == OnlineRoundPhase.REVIEW
 
+        // Answer buzzer for observers (the explainer already heard it on tap).
+        if (room.roundPhase == OnlineRoundPhase.ACTIVE && room.roundResults.size > lastResultCount &&
+            room.role(myUid) != OnlineRole.EXPLAINER
+        ) {
+            room.roundResults.lastOrNull()?.let { if (it.correct) sounds.playRightButton() else sounds.playSkipButton() }
+        }
+        lastResultCount = room.roundResults.size
+
         // Interstitial: preload when the round starts (→ active), present for EVERYONE
         // the moment it ends (active → review, countdown at 0).
         if (prevPhase != OnlineRoundPhase.ACTIVE && room.roundPhase == OnlineRoundPhase.ACTIVE) {
             OnlineInterstitial.preload(appCtx)
         }
         if (prevPhase == OnlineRoundPhase.ACTIVE && room.roundPhase == OnlineRoundPhase.REVIEW) {
+            sounds.playEnd()   // whistle for everyone the moment the round ends
             _showAd.tryEmit(Unit)
         }
 
@@ -238,6 +250,7 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
         val room = _room.value ?: return
         if (!amExplainer()) return
         val word = currentWord() ?: return
+        if (correct) sounds.playRightButton() else sounds.playSkipButton()  // instant local feedback
         val results = room.roundResults + OnlineMarkedWord(word, correct)
         val cursor = minOf(room.wordCursor + 1, maxOf(0, _words.value.size - 1))
         launchOp { repo.setRoundResults(it, results, cursor) }
@@ -320,7 +333,7 @@ class OnlineStore(app: Application) : AndroidViewModel(app) {
         val room = _room.value ?: return
         if (room.status != OnlineStatus.PLAYING || room.roundPhase != OnlineRoundPhase.ACTIVE) return
         val s = secondsRemaining()
-        if (s != lastClockSecond) lastClockSecond = s
+        if (s != lastClockSecond) { lastClockSecond = s; if (s in 1..9) sounds.playTikTok() }
         // The explainer's device is the single writer that ends the round when time runs out.
         if (amExplainer() && s == 0 && !roundEndPosted) {
             roundEndPosted = true

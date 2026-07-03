@@ -4,6 +4,7 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.lazy.LazyRow
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -36,7 +37,15 @@ fun OnlineGameScreen(store: OnlineStore, room: OnlineRoom) {
                 Spacer(Modifier.weight(1f))
                 Text(stringResource(R.string.online_standings_header, room.roundIndex + 1), color = Color.White.copy(alpha = 0.8f), fontFamily = Alias.body, fontWeight = FontWeight.Black, fontSize = 12.sp, letterSpacing = 2.sp)
             }
-            Spacer(Modifier.height(12.dp))
+            Spacer(Modifier.height(10.dp))
+            if (room.status == OnlineStatus.PLAYING) {
+                LazyRow(horizontalArrangement = Arrangement.spacedBy(8.dp), modifier = Modifier.fillMaxWidth()) {
+                    items(room.players) { p ->
+                        OnlineVideoTile(store, p, role = room.role(p.id), modifier = Modifier.size(width = 100.dp, height = 74.dp))
+                    }
+                }
+                Spacer(Modifier.height(12.dp))
+            }
             Box(Modifier.weight(1f), contentAlignment = Alignment.Center) {
                 when {
                     room.status == OnlineStatus.FINISHED -> FinalResults(store, room)
