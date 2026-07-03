@@ -284,5 +284,32 @@
     <string name="online_perm_msg">Erlaube Kamera- und Mikrofonzugriff, um online zu spielen.</string>
     <string name="online_perm_leave">Verlassen</string>
     <string name="online_perm_settings">Zu den Einstellungen</string>
+    <string name="online_score">Punkte</string>
+    <string name="online_section_match">SPIEL</string>
+    <string name="online_players_helper">Bis zu %1$d Spieler · 2 Teams zu je %2$d</string>
+    <string name="online_paste_invite">📋  Einladungslink einfügen</string>
+    <string name="online_rejoin">Beitreten</string>
+    <string name="online_enter_code_sub">Frag den Host nach dem 6-stelligen Code oder öffne den Einladungslink.</string>
+    <string name="online_in_the_room">Im Raum</string>
+    <string name="online_video_room_badge">VIDEORAUM</string>
+    <string name="online_cam_mic_title">Deine Kamera &amp; Mikro</string>
+    <string name="online_cam_mic_sub">An · tippen zum Stummschalten oder Ausblenden</string>
+    <string name="online_round_complete">RUNDE %1$d · ABGESCHLOSSEN</string>
+    <string name="online_points_this_round">Punkte diese Runde</string>
+    <string name="online_n_correct">%1$d richtig</string>
+    <string name="online_n_skipped">%1$d übersprungen</string>
+    <string name="online_up_next">ALS NÄCHSTES · %1$s</string>
+    <string name="online_explains_to">%1$s erklärt %2$s</string>
+    <string name="online_start_next_round">NÄCHSTE RUNDE STARTEN</string>
+    <string name="online_home">STARTSEITE</string>
+    <string name="online_winner_badge">SIEGER</string>
+    <string name="online_everyone">Alle · %1$d</string>
+    <string name="online_ready_desc_explain">Beschreibe %1$s das Wort, ohne es zu sagen. Der Timer startet, sobald du tippst.</string>
+    <string name="online_ready_desc_guess">%1$s erklärt gleich. Hör gut zu und rate laut mit — das Wort bleibt für dich verborgen.</string>
+    <string name="online_ready_desc_spectate">%1$s erklärt gleich %2$s. Lehn dich zurück und schau zu — das Wort siehst du, sobald die Runde beginnt.</string>
+    <string name="online_guesses_chip">%1$s rät</string>
+    <string name="online_sec">%1$d Sek.</string>
+    <string name="online_waiting_to_start">Warte, bis %1$s startet…</string>
+    <string name="online_cancel">ABBRECHEN</string>
+    <string name="online_role_speaking">SPRICHT</string>
 </resources>
-
