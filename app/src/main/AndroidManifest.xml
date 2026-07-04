@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <!-- Camera (capture-moment) and microphone (AI speech) are optional features,
          not core to the word game — keep the app installable on devices without them. -->
@@ -17,6 +18,14 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
+
+    <!-- The Stream Video SDK bundles foreground-service types this app never uses:
+         no screen sharing (media projection) and no livestream viewing (media
+         playback). Strip both permissions so Google Play does not require a
+         foreground-service declaration for them. The video call itself uses
+         camera / microphone / phoneCall (VoIP), which stay. -->
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" tools:node="remove" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" tools:node="remove" />
 
     <queries>
         <intent>
@@ -79,6 +88,15 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+        <!-- Remove the unused Stream services that carry the media-projection /
+             media-playback foreground-service types (never started by this app). -->
+        <service
+            android:name="io.getstream.video.android.core.screenshare.StreamScreenShareService"
+            tools:node="remove" />
+        <service
+            android:name="io.getstream.video.android.core.notifications.internal.service.LivestreamViewerService"
+            tools:node="remove" />
 
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
