@@ -142,10 +142,14 @@ private fun VideoStage(store: OnlineStore, room: OnlineRoom, modifier: Modifier)
 
     if (role == OnlineRole.SPECTATOR) {
         // Two equal tiles: explainer → guesser, with an arrow between them.
-        Row(modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
-            StageTile(store, explainer, OnlineRole.EXPLAINER, corner = 18, modifier = Modifier.weight(1f).fillMaxHeight())
-            Text("→", color = Color(0xFFCBD5E1), fontFamily = Alias.display, fontWeight = FontWeight.Black, fontSize = 26.sp)
-            StageTile(store, guesser, OnlineRole.GUESSER, corner = 18, modifier = Modifier.weight(1f).fillMaxHeight())
+        // We're only watching, so shrink the tiles to 50% of the available height,
+        // centered, to give the layout breathing room.
+        Box(modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+            Row(Modifier.fillMaxWidth().fillMaxHeight(0.5f), horizontalArrangement = Arrangement.spacedBy(8.dp), verticalAlignment = Alignment.CenterVertically) {
+                StageTile(store, explainer, OnlineRole.EXPLAINER, corner = 18, modifier = Modifier.weight(1f).fillMaxHeight())
+                Text("→", color = Color(0xFFCBD5E1), fontFamily = Alias.display, fontWeight = FontWeight.Black, fontSize = 26.sp)
+                StageTile(store, guesser, OnlineRole.GUESSER, corner = 18, modifier = Modifier.weight(1f).fillMaxHeight())
+            }
         }
     } else {
         // Big tile of my partner + a small self preview (picture-in-picture).
