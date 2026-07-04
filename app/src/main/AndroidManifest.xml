@@ -27,6 +27,11 @@
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION" tools:node="remove" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" tools:node="remove" />
 
+    <!-- Stream also declares full-screen-intent for incoming-call (ringing) UI.
+         This app joins calls directly and has no ringing flow, so drop it to
+         avoid Play's restricted-permission gate. -->
+    <uses-permission android:name="android.permission.USE_FULL_SCREEN_INTENT" tools:node="remove" />
+
     <queries>
         <intent>
             <action android:name="android.speech.RecognitionService" />
