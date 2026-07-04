@@ -61,7 +61,7 @@
             android:maxLines="4"
             android:text="REDNECK vc dream team vs lala vs ala skdkdfkfkfk vs fdfdfdf vs fdf"
             android:textAlignment="center"
-            app:layout_constraintBottom_toTopOf="@+id/startGameButton"
+            app:layout_constraintBottom_toTopOf="@+id/playButton"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
