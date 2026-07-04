@@ -208,6 +208,7 @@
     <string name="online_players_caps">GIOCATORI</string>
     <string name="online_share_room">Entra nella mia stanza Alias Words — codice %s</string>
     <string name="online_drag_hint">Trascina un giocatore per spostarlo tra le squadre</string>
+    <string name="online_tap_move_hint">Tocca un giocatore per spostarlo tra le squadre</string>
     <string name="online_drop_here">RILASCIA QUI</string>
     <string name="online_drop_player">Rilascia un giocatore qui</string>
     <string name="online_host">HOST</string>

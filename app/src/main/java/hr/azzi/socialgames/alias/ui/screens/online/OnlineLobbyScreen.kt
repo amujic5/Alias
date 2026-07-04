@@ -17,6 +17,7 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.ContentCopy
 import androidx.compose.material.icons.filled.Mic
 import androidx.compose.material.icons.filled.MicOff
+import androidx.compose.material.icons.filled.SwapVert
 import androidx.compose.material.icons.filled.Videocam
 import androidx.compose.material.icons.filled.VideocamOff
 import androidx.compose.material3.*
@@ -143,16 +144,90 @@ fun OnlineLobbyScreen(store: OnlineStore, room: OnlineRoom) {
                         CircleToggle(if (camOn) Icons.Filled.Videocam else Icons.Filled.VideocamOff, camOn) { store.toggleCamera() }
                     }
                 }
+
+                // teams — visible to everyone (read-only for non-hosts); the host can
+                // tap a player to move them between teams.
+                val isHost = store.amHost()
+                if (isHost) {
+                    Spacer(Modifier.height(12.dp))
+                    Row(
+                        Modifier.clip(RoundedCornerShape(percent = 50)).background(Color.White.copy(alpha = 0.16f)).padding(horizontal = 12.dp, vertical = 9.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        Icon(Icons.Filled.SwapVert, null, tint = Color.White, modifier = Modifier.size(16.dp))
+                        Spacer(Modifier.width(7.dp))
+                        Text(stringResource(R.string.online_tap_move_hint), color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 13.sp)
+                    }
+                }
+                room.teams.forEach { team ->
+                    Spacer(Modifier.height(12.dp))
+                    TeamCard(store, room, team, isHost)
+                }
             }
 
             Spacer(Modifier.height(14.dp))
             if (store.amHost()) {
+                PillButton("🔀  " + stringResource(R.string.online_shuffle_teams), kind = PillKind.Light) { store.shuffleTeams() }
+                Spacer(Modifier.height(10.dp))
                 PillButton(stringResource(R.string.online_start_match), enabled = canStart) { store.startGame() }
             } else {
                 Text(stringResource(R.string.online_waiting_start), color = Color.White.copy(alpha = 0.85f), fontFamily = Alias.body, fontSize = 14.sp, modifier = Modifier.align(Alignment.CenterHorizontally).padding(vertical = 6.dp))
             }
-            Spacer(Modifier.height(10.dp))
-            OutlineDashedButton(stringResource(R.string.online_leave_room)) { store.leaveAndTeardown() }
+        }
+    }
+}
+
+/** One team's card: colored dot, name, count, and its members. Read-only for
+ *  everyone; for the host each member row is tappable to move the player to the
+ *  next team (`store.movePlayer` is itself host-guarded). Mirrors the iOS lobby. */
+@Composable
+private fun TeamCard(store: OnlineStore, room: OnlineRoom, team: OnlineTeam, isHost: Boolean) {
+    val members = room.players.filter { it.teamId == team.id }.sortedBy { it.joinedAt.time }
+    val color = teamColor(team.colorIndex)
+    CCard(Modifier.fillMaxWidth(), padding = 14) {
+        Column {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Box(Modifier.size(13.dp).clip(CircleShape).background(color))
+                Spacer(Modifier.width(8.dp))
+                Text(team.name, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 18.sp)
+                Spacer(Modifier.weight(1f))
+                Text("${members.size} / 2", color = Alias.textSecondary, fontFamily = Alias.body, fontWeight = FontWeight.Medium, fontSize = 13.sp)
+            }
+            if (members.isEmpty()) {
+                Spacer(Modifier.height(10.dp))
+                Box(Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(Alias.fieldBg).padding(vertical = 16.dp), contentAlignment = Alignment.Center) {
+                    Text("—", color = Alias.textSecondary.copy(alpha = 0.5f), fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                }
+            } else {
+                members.forEach { p ->
+                    Spacer(Modifier.height(10.dp))
+                    TeamMemberRow(store, room, p, team, color, isHost)
+                }
+            }
+        }
+    }
+}
+
+@Composable
+private fun TeamMemberRow(store: OnlineStore, room: OnlineRoom, p: OnlinePlayer, team: OnlineTeam, color: Color, isHost: Boolean) {
+    val you = p.id == store.myUid
+    val base = Modifier.fillMaxWidth().clip(RoundedCornerShape(12.dp)).background(Alias.fieldBg)
+    val rowMod = if (isHost) base.clickable { store.movePlayer(p.id, (team.id + 1) % room.teamCount) } else base
+    Row(rowMod.padding(horizontal = 10.dp, vertical = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+        if (isHost) {
+            Icon(Icons.Filled.SwapVert, null, tint = Alias.textSecondary.copy(alpha = 0.55f), modifier = Modifier.size(16.dp))
+            Spacer(Modifier.width(8.dp))
+        }
+        Box(Modifier.size(28.dp).clip(CircleShape).background(color), contentAlignment = Alignment.Center) {
+            Text(p.initial, color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 13.sp)
+        }
+        Spacer(Modifier.width(10.dp))
+        Text(p.name + if (you) " (${stringResource(R.string.online_you)})" else "", color = Alias.textPrimary, fontFamily = Alias.body, fontWeight = FontWeight.SemiBold, fontSize = 14.sp)
+        Spacer(Modifier.weight(1f))
+        if (room.isHost(p.id)) {
+            Box(Modifier.clip(RoundedCornerShape(percent = 50)).background(Alias.accent).padding(horizontal = 8.dp, vertical = 4.dp)) {
+                Text(stringResource(R.string.online_host), color = Alias.onAccent, fontFamily = Alias.body, fontWeight = FontWeight.Black, fontSize = 10.sp, letterSpacing = 0.5.sp)
+            }
         }
     }
 }

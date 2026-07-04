@@ -209,6 +209,7 @@
     <string name="online_players_caps">JOUEURS</string>
     <string name="online_share_room">Rejoins ma salle Alias Words — code %s</string>
     <string name="online_drag_hint">Fais glisser un joueur pour le déplacer entre les équipes</string>
+    <string name="online_tap_move_hint">Touche un joueur pour le déplacer entre les équipes</string>
     <string name="online_drop_here">DÉPOSE ICI</string>
     <string name="online_drop_player">Dépose un joueur ici</string>
     <string name="online_host">HÔTE</string>

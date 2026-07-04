@@ -216,6 +216,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="online_players_caps">IGRALCI</string>
     <string name="online_share_room">Pridruži se moji sobi Alias Words — koda %s</string>
     <string name="online_drag_hint">Povleci igralca, da ga premakneš med ekipama</string>
+    <string name="online_tap_move_hint">Pritisni igralca, da ga premakneš med ekipama</string>
     <string name="online_drop_here">SPUSTI TUKAJ</string>
     <string name="online_drop_player">Spusti igralca sem</string>
     <string name="online_host">GOSTITELJ</string>

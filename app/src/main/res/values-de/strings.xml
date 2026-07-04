@@ -209,6 +209,7 @@
     <string name="online_players_caps">SPIELER</string>
     <string name="online_share_room">Tritt meinem Alias Words Raum bei — Code %s</string>
     <string name="online_drag_hint">Ziehe einen Spieler, um ihn zwischen Teams zu verschieben</string>
+    <string name="online_tap_move_hint">Tippe auf einen Spieler, um ihn zwischen Teams zu verschieben</string>
     <string name="online_drop_here">HIER ABLEGEN</string>
     <string name="online_drop_player">Spieler hier ablegen</string>
     <string name="online_host">GASTGEBER</string>

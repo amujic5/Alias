@@ -216,6 +216,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="online_players_caps">ИГРАЧИ</string>
     <string name="online_share_room">Придружи се мојој Alias Words соби — код %s</string>
     <string name="online_drag_hint">Превуци играча да га преместиш међу тимовима</string>
+    <string name="online_tap_move_hint">Додирни играча да га преместиш међу тимовима</string>
     <string name="online_drop_here">СПУСТИ ОВДЕ</string>
     <string name="online_drop_player">Спусти играча овде</string>
     <string name="online_host">ДОМАЋИН</string>
