@@ -99,7 +99,9 @@ data class BoardGame(
     @SerializedName("players")
     val players: String,
     @SerializedName("info")
-    val info: String
+    val info: String,
+    @SerializedName("free")
+    val free: Boolean = true
 ) : Parcelable {
     val isTaboo: Boolean
         get() = id == BoardGameId.TABOO
@@ -115,7 +117,8 @@ data class BoardGame(
         parcel.readString()!!,
         parcel.readString()!!,
         parcel.readString()!!,
-        parcel.readString()!!
+        parcel.readString()!!,
+        parcel.readByte() != 0.toByte()
     )
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -127,6 +130,7 @@ data class BoardGame(
         parcel.writeString(time)
         parcel.writeString(players)
         parcel.writeString(info)
+        parcel.writeByte(if (free) 1 else 0)
     }
 
     override fun describeContents(): Int {
@@ -159,7 +163,13 @@ enum class BoardGameId {
     @SerializedName("game_alias_slo")
     SLO,
     @SerializedName("game_alias_uk")
-    UK
+    UK,
+    @SerializedName("alias_nba")
+    NBA,
+    @SerializedName("alias_movies")
+    MOVIES,
+    @SerializedName("game_alias_who_am_i")
+    WHOAMI
 }
 
 fun BoardGameId.serializedName(): String {

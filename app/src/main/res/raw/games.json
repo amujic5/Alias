@@ -8,7 +8,8 @@
             "info": "alias_classic_info",
             "age": "10+",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
         },
         {
             "id": "game_alias_football",
@@ -18,7 +19,8 @@
             "info": "alias_football_info",
             "age": "10+",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
         },
         {
             "id": "game_alias_cro",
@@ -28,7 +30,8 @@
             "info": "alias_cro_info",
             "age": "10+",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
         },
         {
             "id": "game_alias_srb",
@@ -38,7 +41,8 @@
             "info": "alias_srb_info",
             "age": "10+",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
         },
         {
             "id": "game_alias_slo",
@@ -48,7 +52,8 @@
             "info": "alias_slo_info",
             "age": "10+",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
         },
         {
             "id": "game_alias_uk",
@@ -58,7 +63,8 @@
             "info": "game_alias_uk_info",
             "age": "4-10",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
         },
         {
             "id": "game_alias_junior",
@@ -68,7 +74,8 @@
             "info": "game_alias_junior_info",
             "age": "4-10",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
         },
         {
             "id": "game_taboo",
@@ -78,7 +85,41 @@
             "info": "game_taboo_info",
             "age": "4-10",
             "time": "45min",
-            "players": "3+"
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "alias_nba",
+            "name": "NBA",
+            "image": "alias_nba",
+            "languages": ["Cro", "Eng", "Ger", "Srb"],
+            "info": "game_nba_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": false
+        },
+        {
+            "id": "alias_movies",
+            "name": "Movies & TV",
+            "image": "alias_movies",
+            "languages": ["Cro", "Eng", "Srb"],
+            "info": "alias_movies_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": false
+        },
+        {
+            "id": "game_alias_who_am_i",
+            "name": "game_alias_who_am_i",
+            "image": "game_alias_who_am_i",
+            "languages": ["Cro", "Eng", "Srb"],
+            "info": "game_alias_who_am_i_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": false
         }
     ]
 }
