@@ -333,4 +333,10 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="alias_movies_info">LUCI, MOTORE, AZIONE!\nEntra nel mondo affascinante del cinema, dove ogni indizio è una scena e ogni risposta può essere un successo al botteghino. Dai classici intramontabili e i cult preferiti alle star di Hollywood e alle battute indimenticabili, Alias Movies trasforma la tua serata in un evento da tappeto rosso e mette alla prova le tue conoscenze nel modo più divertente.</string>
     <string name="game_alias_who_am_i_info">RIESCI A INDOVINARE CHI SEI?\nVesti i panni dei volti più famosi del mondo: dalle star del cinema, agli sportivi e musicisti, fino agli eroi dei cartoni, alle leggende storiche e ai personaggi di tutti i giorni. In Chi sono io? ogni indizio porta a un nome famoso, e sta alla tua squadra indovinarlo prima che scada il tempo. Un gioco di indovinelli esilarante e frenetico che mette alla prova la tua conoscenza della cultura pop.</string>
     <string name="game_alias_who_am_i">Chi sono io?</string>
+    <string name="deck_age">ETÀ</string>
+    <string name="deck_players">GIOCATORI</string>
+    <string name="deck_time">TEMPO</string>
+    <string name="deck_unlock">SBLOCCA %1$s</string>
+    <string name="deck_unlock_plain">SBLOCCA</string>
+    <string name="restore_purchases">Ripristina acquisti</string>
 </resources>

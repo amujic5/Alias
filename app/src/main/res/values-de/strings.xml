@@ -334,4 +334,10 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="alias_movies_info">LICHTS, KAMERA, ACTION!\nTauche ein in die glanzvolle Welt des Kinos, wo jeder Hinweis eine Szene ist und jede richtige Antwort ein Blockbuster sein könnte. Von zeitlosen Klassikern und Kultfilmen bis hin zu Hollywood-Stars und unvergesslichen Zitaten – Alias Movies verwandelt deinen Spieleabend in ein rotes-Teppich-Event und stellt dein Wissen auf die unterhaltsamste Probe.</string>
     <string name="game_alias_who_am_i_info">KANNST DU ERRATEN, WER DU BIST?\nSchlüpfe in die Rolle der berühmtesten Persönlichkeiten der Welt — von Filmstars, Sportlern und Musikern bis hin zu Zeichentrickhelden, historischen Legenden und Alltagsfiguren. Bei Wer bin ich? führt jeder Hinweis zu einem berühmten Namen, und dein Team muss ihn erraten, bevor die Zeit abläuft. Ein urkomisches, rasantes Ratespiel, das dein Popkultur-Wissen auf die ultimative Probe stellt.</string>
     <string name="game_alias_who_am_i">Wer bin ich?</string>
+    <string name="deck_age">ALTER</string>
+    <string name="deck_players">SPIELER</string>
+    <string name="deck_time">ZEIT</string>
+    <string name="deck_unlock">FREISCHALTEN %1$s</string>
+    <string name="deck_unlock_plain">FREISCHALTEN</string>
+    <string name="restore_purchases">Käufe wiederherstellen</string>
 </resources>

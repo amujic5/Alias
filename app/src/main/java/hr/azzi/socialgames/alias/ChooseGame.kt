@@ -17,7 +17,7 @@ class ChooseGame : BaseActivity() {
                     decks = JSONService.boardGames,
                     onBack = { finish() },
                     onPick = { boardGame ->
-                        startActivity(Intent(this, NewGameActivity::class.java).putExtra("boardGame", boardGame))
+                        startActivity(Intent(this, DeckDetailActivity::class.java).putExtra("boardGame", boardGame))
                     },
                 )
             }

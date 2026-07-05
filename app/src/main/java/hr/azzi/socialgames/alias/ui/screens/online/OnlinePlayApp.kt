@@ -52,6 +52,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.Service.serializedName
 import hr.azzi.socialgames.alias.ai.AuthService
@@ -225,6 +226,10 @@ private fun EntryCard(emoji: String, tint: Color, title: String, sub: String, on
 private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
     val context = LocalContext.current
     val busy by store.busy.collectAsState()
+    val unlockedIds by Billing.unlocked.collectAsState()
+    val prices by Billing.prices.collectAsState()
+    val activity = context as? Activity
+    val unlockLabel = stringResource(R.string.deck_unlock_plain)
     val decks = remember { OnlineWordSource.decks }
     var deck by remember { mutableStateOf(decks.firstOrNull()) }
     val languages = remember(deck) { deck?.let { OnlineWordSource.languages(context, it) } ?: emptyList() }
@@ -241,7 +246,20 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
             items = decks,
             label = { deckDisplayName(context, it) },
             imageName = { it.image },
-            onPick = { deck = it; showDeckPicker = false },
+            badge = { d ->
+                if (!d.free && !unlockedIds.contains(d.id.serializedName()))
+                    prices[d.id.serializedName()] ?: unlockLabel
+                else null
+            },
+            onPick = { picked ->
+                val pid = picked.id.serializedName()
+                if (!picked.free && !unlockedIds.contains(pid)) {
+                    // Locked paid deck — buy straight from the list (no detail screen).
+                    activity?.let { Billing.launchPurchase(it, pid) }
+                } else {
+                    deck = picked; showDeckPicker = false
+                }
+            },
             onBack = { showDeckPicker = false },
         )
         return
@@ -464,6 +482,7 @@ private fun <T> OnlinePickerScreen(
     onBack: () -> Unit,
     imageName: ((T) -> String?)? = null,
     emoji: ((T) -> String)? = null,
+    badge: ((T) -> String?)? = null,
 ) {
     val ctx = LocalContext.current
     BackHandler { onBack() }
@@ -492,6 +511,21 @@ private fun <T> OnlinePickerScreen(
                         Spacer(Modifier.height(12.dp))
                         Text(label(item), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
                             fontSize = 15.sp, textAlign = TextAlign.Center, maxLines = 2)
+                        val badgeText = badge?.invoke(item)
+                        if (badgeText != null) {
+                            Spacer(Modifier.height(8.dp))
+                            Text(
+                                badgeText,
+                                color = Alias.onAccent,
+                                fontFamily = Alias.display,
+                                fontWeight = FontWeight.ExtraBold,
+                                fontSize = 12.sp,
+                                modifier = Modifier
+                                    .clip(RoundedCornerShape(50))
+                                    .background(Alias.accent)
+                                    .padding(horizontal = 12.dp, vertical = 5.dp),
+                            )
+                        }
                     }
                 }
             }

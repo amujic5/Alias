@@ -341,4 +341,10 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="alias_movies_info">LIGHTS, CAMERA, ACTION!\nStep into the dazzling world of cinema, where every clue is a scene and every guess could be a blockbuster. From timeless classics and cult favorites to Hollywood stars and unforgettable lines, Alias Movies turns your game night into a red-carpet event and challenges your knowledge in the most entertaining way.</string>
     <string name="game_alias_who_am_i_info">CAN YOU GUESS WHO YOU ARE?\nStep into the shoes of the world\'s most famous faces — from movie stars, athletes and musicians to cartoon heroes, historical legends and everyday characters. In Who Am I? every clue points to a famous name, and it\'s up to your team to guess it before time runs out. A hilarious, fast-paced guessing game that puts your pop-culture knowledge to the ultimate test.</string>
     <string name="game_alias_who_am_i">Who Am I?</string>
+    <string name="deck_age">AGE</string>
+    <string name="deck_players">PLAYERS</string>
+    <string name="deck_time">TIME</string>
+    <string name="deck_unlock">UNLOCK %1$s</string>
+    <string name="deck_unlock_plain">UNLOCK</string>
+    <string name="restore_purchases">Restore purchases</string>
 </resources>

@@ -341,4 +341,10 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="alias_movies_info">LUČI, KAMERA, AKCIJA!\nVstopite v bleščeči svet filma, kjer je vsaka namig scena in vsak pravilen odgovor lahko uspešnica. Od brezčasnih klasik in kultnih favoritov do hollywoodskih zvezd in nepozabnih citatov – Alias Movies spremeni vaš večer v dogodek na rdeči preprogi in na zabaven način preizkusi vaše znanje.</string>
     <string name="game_alias_who_am_i_info">ALI UGANEŠ, KDO SI?\nVstopi v kožo najbolj znanih obrazov na svetu — od filmskih zvezd, športnikov in glasbenikov do junakov risank, zgodovinskih legend in vsakdanjih likov. V igri Kdo sem? vsak namig vodi do znanega imena, tvoja ekipa pa ga mora uganiti, preden zmanjka časa. Nora in hitra ugibalna igra, ki tvoje poznavanje pop kulture postavi na največjo preizkušnjo.</string>
     <string name="game_alias_who_am_i">Kdo sem?</string>
+    <string name="deck_age">STAROST</string>
+    <string name="deck_players">IGRALCI</string>
+    <string name="deck_time">ČAS</string>
+    <string name="deck_unlock">ODKLENI %1$s</string>
+    <string name="deck_unlock_plain">ODKLENI</string>
+    <string name="restore_purchases">Obnovi nakupe</string>
 </resources>
