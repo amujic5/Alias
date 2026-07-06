@@ -32,7 +32,7 @@ object TryFreeAd {
 
     /** Request a rewarded ad in the background (no-op if one is ready or loading). */
     fun preload(context: Context) {
-        if (ad != null || loading) return
+        if (ad != null || loading || !AdsConsent.canRequestAds) return
         val app = context.applicationContext
         if (!initialized) { MobileAds.initialize(app) {}; initialized = true }
         loading = true
@@ -54,6 +54,8 @@ object TryFreeAd {
             present(activity, ready, onReward)
             return
         }
+        // No consent to request ads (or none yet) — fail open so the user still gets in.
+        if (!AdsConsent.canRequestAds) { onReward(); return }
         // Not ready — try to load now, then present; fail open if the load fails.
         val app = activity.applicationContext
         if (!initialized) { MobileAds.initialize(app) {}; initialized = true }

@@ -15,7 +15,7 @@ android {
         applicationId "hr.azzi.socialgames.alias"
         minSdkVersion 29
         targetSdkVersion 35
-        versionCode 67
+        versionCode 68
         versionName "10.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -98,6 +98,10 @@ dependencies {
     implementation 'com.android.billingclient:billing-ktx:7.1.1'
 
     implementation 'com.google.android.gms:play-services-ads:25.4.0'
+    // User Messaging Platform — GDPR/UMP consent before requesting ads (EEA/UK)
+    implementation 'com.google.android.ump:user-messaging-platform:3.2.0'
+    // Google Play In-App Review (rating prompt after an AI game)
+    implementation 'com.google.android.play:review-ktx:2.0.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.11.0'
     // Stream Video (Online Play realtime video/audio)
     implementation 'io.getstream:stream-video-android-ui-compose:1.28.0'

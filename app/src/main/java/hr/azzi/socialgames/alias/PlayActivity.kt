@@ -65,6 +65,7 @@ class PlayActivity : BaseActivity() {
     }
 
     private fun loadInterstitialAd() {
+        if (!AdsConsent.canRequestAds) return
         MobileAds.initialize(this) {}
         val prod = "ca-app-pub-1489905432577426/3906492992"
         InterstitialAd.load(this, prod, AdRequest.Builder().build(), object : InterstitialAdLoadCallback() {
@@ -74,6 +75,7 @@ class PlayActivity : BaseActivity() {
     }
 
     private fun loadInterstitialAd2() {
+        if (!AdsConsent.canRequestAds) return
         MobileAds.initialize(this) {}
         val prod = "ca-app-pub-1489905432577426/4633082957"
         InterstitialAd.load(this, prod, AdRequest.Builder().build(), object : InterstitialAdLoadCallback() {

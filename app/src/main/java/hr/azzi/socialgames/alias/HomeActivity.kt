@@ -29,6 +29,9 @@ class HomeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         JSONService.loadBoardGamesFromFile(this)
+        // Gather UMP consent (GDPR/EEA) before any ad is requested; starts the Mobile
+        // Ads SDK only once consent allows it. Mirrors the iOS AdsConsentManager.
+        AdsConsent.gather(this)
         // Check for a required/optional update once the home screen is up
         // (Firebase is already configured; runs off the launch path).
         updateController.start()

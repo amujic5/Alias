@@ -8,6 +8,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.mutableStateListOf
+import hr.azzi.socialgames.alias.AppReview
 import hr.azzi.socialgames.alias.Service.SoundSystem
 import java.util.Locale
 import kotlinx.coroutines.CoroutineScope
@@ -271,7 +272,7 @@ class AiExplainController(
         clueJob?.cancel(); evalJob?.cancel()
         speaker.stop(); speech.stop()
         sound.playEnd()
-        AIInterstitial.show(context)
-        onFinish?.invoke(result, frozenWords)
+        onFinish?.invoke(result, frozenWords)                 // show the score screen first…
+        AIInterstitial.show(context) { AppReview.request(context) } // …ad, then the rating prompt
     }
 }

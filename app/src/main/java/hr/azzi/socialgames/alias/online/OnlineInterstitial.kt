@@ -9,6 +9,7 @@ import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.MobileAds
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import hr.azzi.socialgames.alias.AdsConsent
 import hr.azzi.socialgames.alias.BuildConfig
 
 /**
@@ -33,7 +34,7 @@ object OnlineInterstitial {
 
     /** Request an interstitial in the background (no-op if one is ready or loading). */
     fun preload(context: Context) {
-        if (ad != null || loading) return
+        if (ad != null || loading || !AdsConsent.canRequestAds) return
         val app = context.applicationContext
         if (!initialized) { MobileAds.initialize(app) {}; initialized = true }
         loading = true
