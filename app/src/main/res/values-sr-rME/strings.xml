@@ -349,4 +349,5 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="deck_unlock">OTKLJUČAJ %1$s</string>
     <string name="deck_unlock_plain">OTKLJUČAJ</string>
     <string name="restore_purchases">Vrati kupovine</string>
+    <string name="try_for_free">Isprobaj besplatno</string>
 </resources>

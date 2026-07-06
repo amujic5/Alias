@@ -16,17 +16,24 @@ class DeckDetailActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        // Warm up a rewarded ad for the "Try for free" path on locked paid decks.
+        if (!boardGame.free && !Billing.isUnlocked(boardGame.id.serializedName())) {
+            TryFreeAd.preload(this)
+        }
+        val launchGame = {
+            startActivity(
+                Intent(this, NewGameActivity::class.java).putExtra("boardGame", boardGame)
+            )
+        }
         setContent {
             AliasTheme {
                 DeckDetailScreen(
                     deck = boardGame,
                     onBack = { finish() },
-                    onPlay = {
-                        startActivity(
-                            Intent(this, NewGameActivity::class.java).putExtra("boardGame", boardGame)
-                        )
-                    },
+                    onPlay = { launchGame() },
                     onBuy = { Billing.launchPurchase(this, boardGame.id.serializedName()) },
+                    // Watch the rewarded ad, then drop into the game for this session.
+                    onTryFree = { TryFreeAd.show(this) { launchGame() } },
                 )
             }
         }

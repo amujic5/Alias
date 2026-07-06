@@ -15,8 +15,8 @@ android {
         applicationId "hr.azzi.socialgames.alias"
         minSdkVersion 29
         targetSdkVersion 35
-        versionCode 66
-        versionName "10.4"
+        versionCode 67
+        versionName "10.5"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {

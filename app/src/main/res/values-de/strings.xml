@@ -340,4 +340,5 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="deck_unlock">FREISCHALTEN %1$s</string>
     <string name="deck_unlock_plain">FREISCHALTEN</string>
     <string name="restore_purchases">Käufe wiederherstellen</string>
+    <string name="try_for_free">Kostenlos testen</string>
 </resources>

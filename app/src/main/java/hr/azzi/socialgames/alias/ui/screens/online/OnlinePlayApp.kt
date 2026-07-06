@@ -52,6 +52,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.TryFreeAd
 import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.Service.serializedName
@@ -239,6 +240,10 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
     var seconds by remember { mutableIntStateOf(60) }
     var showDeckPicker by remember { mutableStateOf(false) }
     var showLangPicker by remember { mutableStateOf(false) }
+    var choiceDeck by remember { mutableStateOf<BoardGame?>(null) }   // locked deck → buy / try-for-free
+
+    // Warm up a rewarded ad for the "Try for free" path.
+    LaunchedEffect(Unit) { activity?.let { TryFreeAd.preload(it) } }
 
     if (showDeckPicker) {
         OnlinePickerScreen(
@@ -254,14 +259,35 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
             onPick = { picked ->
                 val pid = picked.id.serializedName()
                 if (!picked.free && !unlockedIds.contains(pid)) {
-                    // Locked paid deck — buy straight from the list (no detail screen).
-                    activity?.let { Billing.launchPurchase(it, pid) }
+                    // Locked paid deck — let the user choose: buy, or watch an ad to try it free.
+                    choiceDeck = picked
                 } else {
                     deck = picked; showDeckPicker = false
                 }
             },
             onBack = { showDeckPicker = false },
         )
+        choiceDeck?.let { d ->
+            val pid = d.id.serializedName()
+            AlertDialog(
+                onDismissRequest = { choiceDeck = null },
+                title = { Text(deckDisplayName(context, d)) },
+                confirmButton = {
+                    TextButton(onClick = {
+                        choiceDeck = null
+                        activity?.let { Billing.launchPurchase(it, pid) }
+                    }) { Text(stringResource(R.string.online_unlock_for, prices[pid] ?: "—")) }
+                },
+                dismissButton = {
+                    TextButton(onClick = {
+                        choiceDeck = null
+                        activity?.let { act ->
+                            TryFreeAd.show(act) { deck = d; showDeckPicker = false }
+                        }
+                    }) { Text(stringResource(R.string.try_for_free)) }
+                },
+            )
+        }
         return
     }
     if (showLangPicker) {

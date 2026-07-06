@@ -47,6 +47,7 @@ import hr.azzi.socialgames.alias.ui.theme.BrandBackground
 import hr.azzi.socialgames.alias.ui.theme.CardShape
 import hr.azzi.socialgames.alias.ui.theme.DisplayText
 import hr.azzi.socialgames.alias.ui.theme.PillButton
+import hr.azzi.socialgames.alias.ui.theme.PillKind
 
 /**
  * Deck detail — cover, description, age/players/time. Free (or already-owned) decks
@@ -59,6 +60,7 @@ fun DeckDetailScreen(
     onBack: () -> Unit,
     onPlay: () -> Unit,
     onBuy: () -> Unit,
+    onTryFree: () -> Unit = {},
 ) {
     val ctx = LocalContext.current
     val unlockedIds by Billing.unlocked.collectAsState()
@@ -123,6 +125,9 @@ fun DeckDetailScreen(
                     val label = if (price != null) stringResource(R.string.deck_unlock, price)
                                 else stringResource(R.string.deck_unlock_plain)
                     PillButton(label, onClick = onBuy)
+                    Spacer(Modifier.height(12.dp))
+                    // "Try for free": watch a rewarded ad, then play this session.
+                    PillButton(stringResource(R.string.try_for_free), kind = PillKind.Light, onClick = onTryFree)
                     Spacer(Modifier.height(12.dp))
                     Text(
                         stringResource(R.string.restore_purchases),

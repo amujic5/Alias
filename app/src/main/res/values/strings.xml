@@ -347,4 +347,5 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="deck_unlock">UNLOCK %1$s</string>
     <string name="deck_unlock_plain">UNLOCK</string>
     <string name="restore_purchases">Restore purchases</string>
+    <string name="try_for_free">Try for free</string>
 </resources>
