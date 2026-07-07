@@ -10,13 +10,13 @@ def keystoreProps = new Properties()
 if (keystorePropsFile.exists()) { keystoreProps.load(new FileInputStream(keystorePropsFile)) }
 
 android {
-    compileSdk 35
+    compileSdk 36
     defaultConfig {
         applicationId "hr.azzi.socialgames.alias"
         minSdkVersion 29
         targetSdkVersion 35
-        versionCode 68
-        versionName "10.5"
+        versionCode 69
+        versionName "10.6"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
     signingConfigs {
@@ -48,7 +48,7 @@ android {
         targetCompatibility JavaVersion.VERSION_17
     }
     androidResources {
-        noCompress 'onnx', 'bin'
+        noCompress 'onnx', 'bin', 'riv'
     }
     namespace 'hr.azzi.socialgames.alias'
 }
@@ -60,7 +60,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Jetpack Compose (UI rebuild)
-    implementation platform('androidx.compose:compose-bom:2024.09.03')
+    implementation platform('androidx.compose:compose-bom:2025.08.00')
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
@@ -68,7 +68,7 @@ dependencies {
     implementation 'androidx.compose.material3:material3'
     implementation 'androidx.compose.material:material-icons-extended'
     implementation 'androidx.compose.foundation:foundation'
-    implementation 'androidx.activity:activity-compose:1.10.1'
+    implementation 'androidx.activity:activity-compose:1.11.0'
     implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'
     implementation 'androidx.appcompat:appcompat:1.7.1'
     implementation 'androidx.core:core-ktx:1.15.0'
@@ -110,6 +110,12 @@ dependencies {
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.google.code.gson:gson:2.14.0'
     implementation 'com.google.guava:guava:33.6.0-android'
+
+    // Rive — animated AI bot avatar (.riv files in res/raw). Auto-initialises via
+    // androidx.startup. 11.x ships 16 KB-page-aligned native libs (required by
+    // Google Play for Android 15+ targets).
+    implementation 'app.rive:rive-android:11.7.1'
+    implementation 'androidx.startup:startup-runtime:1.1.1'
 }
 
 apply plugin: 'com.google.gms.google-services'

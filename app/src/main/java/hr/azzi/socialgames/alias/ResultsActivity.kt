@@ -2,7 +2,6 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.compose.setContent
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
@@ -24,7 +23,7 @@ class ResultsActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         game.currentTeamHasFinishedTheRound()
         uiState = buildState()
-        setContent {
+        setComposeContent {
             AliasTheme {
                 uiState?.let {
                     ResultsScreen(

@@ -5,7 +5,6 @@ import android.content.Intent
 import android.content.SharedPreferences
 import android.os.Bundle
 import android.widget.Toast
-import androidx.activity.compose.setContent
 import androidx.compose.runtime.snapshots.SnapshotStateList
 import androidx.compose.runtime.toMutableStateList
 import com.google.gson.Gson
@@ -24,7 +23,7 @@ class NewGameActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         teams = loadTeams().toMutableStateList()
-        setContent {
+        setComposeContent {
             AliasTheme {
                 NewGameScreen(
                     teams = teams,

@@ -4,7 +4,6 @@ import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
 import android.os.Bundle
 import android.os.Handler
-import androidx.activity.compose.setContent
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
@@ -33,7 +32,7 @@ class PlayActivity : BaseActivity() {
         loadInterstitialAd()
         if (game._currentTeamIndex % 2 == 1) loadInterstitialAd2()
 
-        setContent {
+        setComposeContent {
             AliasTheme {
                 PlayScreen(
                     game = game,

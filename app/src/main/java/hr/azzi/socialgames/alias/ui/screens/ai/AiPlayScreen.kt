@@ -145,6 +145,24 @@ fun AiPlayScreen(
 
 @Composable
 private fun Playing(c: AiPlayController) {
+    // Animated AI bot: listens while you explain, thinks while guessing, talks
+    // while it speaks a guess, celebrates when it gets the word, reacts to a slip.
+    val bot = rememberBotController()
+    LaunchedEffect(c.turn, c.speaking) {
+        bot.mood = when {
+            c.turn == AiPlayController.Turn.AiGuessing -> BotMood.Thinking
+            c.turn == AiPlayController.Turn.Explaining -> BotMood.Listening
+            c.speaking -> BotMood.Talking
+            else -> BotMood.Idle
+        }
+    }
+    LaunchedEffect(c.correctWords.size) {
+        if (c.correctWords.size > 0) bot.react(BotReaction.Celebration)
+    }
+    LaunchedEffect(c.penaltyFlash) {
+        if (c.penaltyFlash) bot.react(BotReaction.Wrong)
+    }
+
     Column(Modifier.fillMaxSize().padding(top = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
         Spacer(Modifier.height(6.dp))
         Text(stringResource(R.string.ai_explain_dont_say), color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
@@ -153,7 +171,9 @@ private fun Playing(c: AiPlayController) {
         Text(c.word.uppercase(), color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
             fontSize = 44.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(horizontal = 6.dp))
 
-        Spacer(Modifier.height(36.dp))
+        Spacer(Modifier.height(16.dp))
+        BotAvatar(bot, Modifier.size(180.dp))
+        Spacer(Modifier.height(12.dp))
 
         val explaining = c.turn == AiPlayController.Turn.Explaining
         Box(Modifier.size(180.dp).clickable(enabled = c.turn != AiPlayController.Turn.AiGuessing) { c.toggleExplain() },

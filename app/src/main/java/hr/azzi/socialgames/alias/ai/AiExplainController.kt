@@ -47,6 +47,9 @@ class AiExplainController(
     var phase by mutableStateOf(Phase.Loading); private set
     var clue by mutableStateOf(""); private set
     var listening by mutableStateOf(false); private set
+    /** True while the AI is speaking a clue (TTS active) — drives the bot avatar's
+     *  "talking" animation. */
+    var speaking by mutableStateOf(false); private set
     var transcript by mutableStateOf(""); private set
     var remaining by mutableDoubleStateOf(config.totalSeconds.toDouble()); private set
     var flash by mutableStateOf(false); private set
@@ -90,7 +93,7 @@ class AiExplainController(
 
     /** Call after RECORD_AUDIO is granted. */
     fun start() {
-        speaker.onSpeakingChanged = { speaking -> if (!speaking) clueSpoken() }
+        speaker.onSpeakingChanged = { s -> speaking = s; if (!s) clueSpoken() }
         speech.locale = config.language.locale
         speech.onTranscript = { t -> transcript = t; logSttSuccessOnce(t); scheduleEval() }
         // Mic couldn't be sustained: reflect that the app stopped listening.

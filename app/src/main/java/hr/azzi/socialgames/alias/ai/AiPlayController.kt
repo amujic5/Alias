@@ -44,6 +44,9 @@ class AiPlayController(
 
     var phase by mutableStateOf(Phase.Loading); private set
     var turn by mutableStateOf(Turn.Idle); private set
+    /** True while the AI is speaking a guess (TTS active) — drives the bot avatar's
+     *  "talking" animation. */
+    var speaking by mutableStateOf(false); private set
     var aiGuess by mutableStateOf<String?>(null); private set
     var transcript by mutableStateOf(""); private set
     var remaining by mutableDoubleStateOf(config.totalSeconds.toDouble()); private set
@@ -77,6 +80,7 @@ class AiPlayController(
     }
 
     fun start() {
+        speaker.onSpeakingChanged = { s -> speaking = s }
         speech.locale = config.language.locale
         speech.onTranscript = { t -> transcript = t; logSttSuccessOnce(t); checkForbidden() }
         // Mic couldn't be sustained: stop pretending to listen, reset the button to Idle.

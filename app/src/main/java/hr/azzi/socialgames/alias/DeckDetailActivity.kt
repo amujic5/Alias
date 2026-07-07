@@ -2,7 +2,6 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.compose.setContent
 import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.Service.serializedName
@@ -25,7 +24,7 @@ class DeckDetailActivity : BaseActivity() {
                 Intent(this, NewGameActivity::class.java).putExtra("boardGame", boardGame)
             )
         }
-        setContent {
+        setComposeContent {
             AliasTheme {
                 DeckDetailScreen(
                     deck = boardGame,

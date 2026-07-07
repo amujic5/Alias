@@ -1,7 +1,6 @@
 package hr.azzi.socialgames.alias
 
 import android.os.Bundle
-import androidx.activity.compose.setContent
 import hr.azzi.socialgames.alias.ui.screens.online.OnlinePlayApp
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
@@ -10,7 +9,7 @@ class OnlineActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent {
+        setComposeContent {
             AliasTheme {
                 OnlinePlayApp(onExit = { finish() })
             }

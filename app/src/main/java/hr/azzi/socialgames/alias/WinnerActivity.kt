@@ -2,7 +2,6 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.compose.setContent
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.ui.screens.WinnerScreen
@@ -17,7 +16,7 @@ class WinnerActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
         firebaseAnalytics = FirebaseAnalytics.getInstance(this)
 
-        setContent {
+        setComposeContent {
             AliasTheme {
                 WinnerScreen(
                     winnerName = game.winnerTeam?.teamName ?: "",

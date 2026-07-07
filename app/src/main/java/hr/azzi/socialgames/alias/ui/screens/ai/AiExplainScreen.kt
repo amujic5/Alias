@@ -144,6 +144,21 @@ fun AiExplainScreen(
 
 @Composable
 private fun Guessing(c: AiExplainController) {
+    // Animated AI bot: talks while it speaks the clue, listens while you guess,
+    // thinks while preparing the next clue, and celebrates a correct answer.
+    val bot = rememberBotController()
+    LaunchedEffect(c.listening, c.speaking, c.phase) {
+        bot.mood = when {
+            c.listening -> BotMood.Listening
+            c.speaking -> BotMood.Talking
+            c.phase == AiExplainController.Phase.Thinking -> BotMood.Thinking
+            else -> BotMood.Idle
+        }
+    }
+    LaunchedEffect(c.correctWords.size) {
+        if (c.correctWords.size > 0) bot.react(BotReaction.Correct)
+    }
+
     Column(
         Modifier.fillMaxSize().padding(top = 10.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
@@ -156,7 +171,7 @@ private fun Guessing(c: AiExplainController) {
             fontWeight = FontWeight.ExtraBold, fontSize = 23.sp, textAlign = TextAlign.Center,
             lineHeight = 30.sp, modifier = Modifier.padding(horizontal = 6.dp))
 
-        Spacer(Modifier.height(36.dp))
+        Spacer(Modifier.height(18.dp))
 
         // Status pill
         Row(
@@ -169,7 +184,9 @@ private fun Guessing(c: AiExplainController) {
                 color = if (c.listening) Gold else Color.White, fontFamily = Alias.body,
                 fontWeight = FontWeight.SemiBold, fontSize = 13.sp)
         }
-        Spacer(Modifier.height(20.dp))
+        Spacer(Modifier.height(16.dp))
+        BotAvatar(bot, Modifier.size(180.dp))
+        Spacer(Modifier.height(12.dp))
 
         // Mic orb
         Box(

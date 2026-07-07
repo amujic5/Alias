@@ -2,7 +2,6 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.compose.setContent
 import androidx.compose.runtime.toMutableStateList
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
@@ -20,7 +19,7 @@ class EditAnswersActivity : BaseActivity() {
             .map { MarkedWord(it.word, it.isCorrect) }
             .toMutableStateList()
 
-        setContent {
+        setComposeContent {
             AliasTheme {
                 EditAnswersScreen(
                     teamName = game.currentTeam.teamName,

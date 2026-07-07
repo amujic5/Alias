@@ -2,7 +2,6 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
-import androidx.activity.compose.setContent
 import hr.azzi.socialgames.alias.Models.DictionaryModel
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.Team
@@ -22,7 +21,7 @@ class SettingsActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val dictionaries = JSONService.getDictionaries(this, boardGame)
-        setContent {
+        setComposeContent {
             AliasTheme {
                 SettingsScreen(
                     teams = teams,

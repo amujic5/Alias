@@ -3,8 +3,9 @@ package hr.azzi.socialgames.alias
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
-import androidx.activity.compose.setContent
 import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.platform.ComposeView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
@@ -35,7 +36,12 @@ class HomeActivity : BaseActivity() {
         // Check for a required/optional update once the home screen is up
         // (Firebase is already configured; runs off the launch path).
         updateController.start()
-        setContent {
+        // NB: use setContentView(ComposeView) rather than the androidx.activity.compose
+        // setContent extension. On Android 15 (API 35) that extension intermittently
+        // NPEs (decorView.findViewById(android.R.id.content) is null) because AppCompat's
+        // sub-decor isn't installed yet at cold start. AppCompat's setContentView installs
+        // it correctly first. See BaseActivity.setComposeContent.
+        setComposeContent {
             AliasTheme {
                 HomeScreen(
                     onNewGame = { startActivity(Intent(this, ChooseGame::class.java)) },
@@ -82,6 +88,16 @@ abstract class BaseActivity : AppCompatActivity() {
 
         // Let app draw edge-to-edge; we’ll apply padding manually
         WindowCompat.setDecorFitsSystemWindows(window, false)
+    }
+
+    /**
+     * Sets Compose UI as the activity content via AppCompat's setContentView, which
+     * installs the sub-decor (android.R.id.content) before Compose reads it. The
+     * androidx.activity.compose.setContent extension skips that and intermittently
+     * NPEs at cold start on Android 15 (API 35). Use this from every activity.
+     */
+    protected fun setComposeContent(content: @Composable () -> Unit) {
+        setContentView(ComposeView(this).apply { setContent(content) })
     }
 
     protected fun applyInsets(target: View) {
