@@ -348,4 +348,14 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="deck_unlock_plain">UNLOCK</string>
     <string name="restore_purchases">Restore purchases</string>
     <string name="try_for_free">Try for free</string>
+    <string name="game_alias_bos">Alias BiH</string>
+    <string name="alias_bos_info">Welcome to the world of Bosnia and Herzegovina — from ćevapi and burek to sevdah, Baščaršija and the national football team. Describe people, places and words to score points in Alias BiH.</string>
+    <string name="ai_choose_avatar">Choose avatar</string>
+    <string name="ai_avatar_robot">Robby</string>
+    <string name="ai_avatar_wordmonster">Wordy</string>
+    <string name="ai_avatar_owl">Owly</string>
+    <string name="ai_avatar_cat">Prof. Paws</string>
+    <string name="settings_language">Language</string>
+    <string name="play_online">Play online</string>
+    <string name="play_with_ai">Play with AI</string>
 </resources>

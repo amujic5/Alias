@@ -85,7 +85,7 @@
         </activity>
         <activity
             android:name=".HomeActivity"
-            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:configChanges="orientation|keyboardHidden|screenSize|locale|layoutDirection|mcc|mnc"
             android:exported="true"
             android:label="@string/app_name"
             android:theme="@style/FullscreenTheme">
@@ -108,6 +108,16 @@
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-1489905432577426~2503811790" />
+
+        <!-- Persists the in-app per-app locale (LanguageManager) on API < 33. -->
+        <service
+            android:name="androidx.appcompat.app.AppLocalesMetadataHolderService"
+            android:enabled="false"
+            android:exported="false">
+            <meta-data
+                android:name="autoStoreLocales"
+                android:value="true" />
+        </service>
     </application>
 
 </manifest>

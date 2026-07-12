@@ -340,4 +340,6 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="deck_unlock_plain">DESBLOQUEAR</string>
     <string name="restore_purchases">Restaurar compras</string>
     <string name="try_for_free">Prueba gratis</string>
+    <string name="play_online">Jugar en línea</string>
+    <string name="play_with_ai">Jugar con IA</string>
 </resources>

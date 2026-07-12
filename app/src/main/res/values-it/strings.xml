@@ -340,4 +340,6 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="deck_unlock_plain">SBLOCCA</string>
     <string name="restore_purchases">Ripristina acquisti</string>
     <string name="try_for_free">Prova gratis</string>
+    <string name="play_online">Gioca online</string>
+    <string name="play_with_ai">Gioca con l\'IA</string>
 </resources>

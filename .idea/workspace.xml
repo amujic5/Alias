@@ -32,13 +32,35 @@
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/8.10.2/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/cache.properties" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/deviceStreaming.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/deploymentTargetSelector.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/online/OnlineGameScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/online/OnlineGameScreen.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/online/OnlineLobbyScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/online/OnlineLobbyScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/HomeActivity.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/HomeScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/HomeScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/SettingsScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/SettingsScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/ai/AiSetupScreen.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/ai/AiSetupScreen.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/ai/BotAvatar.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/ui/screens/ai/BotAvatar.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/game_alias_cro.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/game_alias_slo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/game_alias_uk.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/drawable/serbia.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/game_alias_classic_bos.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/game_alias_classic_bos.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/game_alias_junior_srb.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/game_alias_junior_srb.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/raw/games.json" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/raw/games.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-SL/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-SL/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-de/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-de/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-es/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-fr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-hr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-it/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-it/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sr-rME/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sr-rME/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values-sr/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values-sr/strings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -168,7 +190,7 @@
     "cidr.known.project.marker": "true",
     "com.android.tools.idea.streaming.zoom.toolbar.visible": "false",
     "com.google.services.firebase.aqiPopupShown": "true",
-    "git-widget-placeholder": "feature/online-play",
+    "git-widget-placeholder": "feature/ios-parity-port",
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "/Users/markusi/Developer/Temp/Alias",
     "project.structure.last.edited": "Dependencies",
@@ -356,7 +378,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/PlayActivity.kt</url>
-          <line>45</line>
+          <line>44</line>
           <properties>
             <option name="lambda-ordinal" value="-1" />
           </properties>
@@ -364,7 +386,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="kotlin-line">
           <url>file://$PROJECT_DIR$/app/src/main/java/hr/azzi/socialgames/alias/Service/DictionaryService.kt</url>
-          <line>245</line>
+          <line>255</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
       </breakpoints>

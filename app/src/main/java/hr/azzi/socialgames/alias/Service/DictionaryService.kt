@@ -156,6 +156,8 @@ enum class BoardGameId {
     CRO,
     @SerializedName("game_alias_srb")
     SRB,
+    @SerializedName("game_alias_bos")
+    BOS,
     @SerializedName("game_taboo")
     TABOO,
     @SerializedName("game_alias_junior")
@@ -189,31 +191,35 @@ object JSONService {
         return 0
     }
 
+    /** The country ("local-theme") deck for a given language short-code, if any. */
+    private fun countryDeckLanguage(id: BoardGameId): String? = when (id) {
+        BoardGameId.CRO -> "CRO"
+        BoardGameId.SRB -> "SRB"
+        BoardGameId.BOS -> "BOS"
+        BoardGameId.SLO -> "SLO"
+        BoardGameId.UK  -> "ENG"
+        else -> null
+    }
+
     fun loadBoardGamesFromFile(context: Context) {
-
-
         val inputStream = context.resources.openRawResource(rawId("games"))
         val bufferedReader = BufferedReader(InputStreamReader(inputStream))
         val jsonString = bufferedReader.use { it.readText() }
         val gson = Gson()
-        var boardGames = gson.fromJson(jsonString, BoardGames::class.java)
-        // TODO: filter based on locale
-//        val userLocale = Locale.getDefault()
-//        val regionCode = userLocale.country
-//        val languageCode = userLocale.language
-//
-//        // remove alias cro if needed
-//        if (regionCode.toLowerCase() != "hr" && languageCode.toLowerCase() != "hr") {
-//            boardGames.games.removeAll { it.id == BoardGameId.CRO }
-//        }
-//
-//        // remove alias slo if needed
-//        if (regionCode.toLowerCase() != "si" && languageCode.toLowerCase() != "sl") {
-//            boardGames.games.removeAll { it.id == BoardGameId.SLO }
-//        }
+        val boardGames = gson.fromJson(jsonString, BoardGames::class.java)
 
-
+        // Rebuild from scratch so this is safe to call again after a language change.
+        this.boardGames.clear()
         this.boardGames.addAll(boardGames.games)
+
+        // The locally-themed "country" decks (cro/srb/bos/slo/uk) only show when
+        // their language is the one selected in the app — mirrors iOS.
+        val selected = LanguageManager.deckLanguageCode
+        this.boardGames.removeIf { game ->
+            countryDeckLanguage(game.id)?.let { it != selected } ?: false
+        }
+
+        // Taboo and Junior are not offered in the local game on Android.
         this.boardGames.removeIf {
             it.id == BoardGameId.TABOO || it.id == BoardGameId.JUNIOR
         }

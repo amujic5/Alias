@@ -7,7 +7,7 @@
     <string name="this_round">TA KROG</string>
     <string name="cancel">ODVADIMO</string>
     <string name="save">SHRANI</string>
-    <string name="how_to_play">Pravila igre</string>
+    <string name="how_to_play">Kako igrati?</string>
     <string name="new_game">Nova igra</string>
     <string name="tell_your_friends">Delite s prijatelji</string>
     <string name="got_it">V redu</string>
@@ -348,4 +348,6 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="deck_unlock_plain">ODKLENI</string>
     <string name="restore_purchases">Obnovi nakupe</string>
     <string name="try_for_free">Preizkusi brezplačno</string>
+    <string name="play_online">Igraj na spletu</string>
+    <string name="play_with_ai">Igraj z UI</string>
 </resources>

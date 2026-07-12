@@ -224,10 +224,13 @@ private fun deviceDictionaryCode(): String? {
     }
 }
 
-/** Preselect: 1) saved pref, 2) device locale/region, 3) first dictionary. */
+/** Preselect: 1) the in-app UI language (LanguageManager), 2) saved pref,
+ *  3) device locale/region, 4) first dictionary. The deck default always
+ *  follows the app language, mirroring iOS. */
 private fun preferredDictionaryIndex(dictionaries: List<DictionaryModel>, savedCode: String?): Int {
     if (dictionaries.isEmpty()) return 0
     fun idx(code: String) = dictionaries.indexOfFirst { it.languageCode.equals(code, ignoreCase = true) }
+    idx(hr.azzi.socialgames.alias.Service.LanguageManager.deckLanguageCode).takeIf { it >= 0 }?.let { return it }
     savedCode?.let { idx(it) }?.takeIf { it >= 0 }?.let { return it }
     deviceDictionaryCode()?.let { idx(it) }?.takeIf { it >= 0 }?.let { return it }
     return 0

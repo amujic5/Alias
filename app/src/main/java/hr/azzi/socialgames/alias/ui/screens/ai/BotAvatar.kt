@@ -120,7 +120,7 @@ fun BotAvatar(controller: BotController, modifier: Modifier = Modifier) {
             ensureRiveInitialized(ctx)
             RiveAnimationView(ctx).apply {
                 setRiveResource(
-                    BOT_RES,
+                    AiAvatar.current(ctx).rawRes,
                     artboardName = "avatar",
                     animationName = BotMood.Idle.anim,
                     autoplay = true,
@@ -138,4 +138,26 @@ fun BotAvatar(controller: BotController, modifier: Modifier = Modifier) {
     LaunchedEffect(controller.mood) {
         controller.bot?.setMood(controller.mood)
     }
+}
+
+/** A static idle thumbnail of a given mascot `.riv` (artboard "avatar"), for the
+ *  avatar picker / setup pill. */
+@Composable
+fun AvatarThumb(rawRes: Int, modifier: Modifier = Modifier) {
+    AndroidView(
+        modifier = modifier,
+        factory = { ctx ->
+            ensureRiveInitialized(ctx)
+            RiveAnimationView(ctx).apply {
+                setRiveResource(
+                    rawRes,
+                    artboardName = "avatar",
+                    animationName = BotMood.Idle.anim,
+                    autoplay = true,
+                    fit = Fit.CONTAIN,
+                )
+            }
+        },
+        onRelease = { it.stop() },
+    )
 }

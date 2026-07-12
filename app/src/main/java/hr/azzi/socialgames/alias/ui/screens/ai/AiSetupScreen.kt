@@ -71,12 +71,16 @@ fun AiSetupScreen(
     var mode by remember { mutableStateOf(AIMode.AI_EXPLAINS) }
     var showPicker by remember { mutableStateOf(false) }
     var showLangPicker by remember { mutableStateOf(false) }
+    var showAvatarPicker by remember { mutableStateOf(false) }
+    var avatar by remember { mutableStateOf(AiAvatar.current(context)) }
 
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
-            Row(Modifier.padding(start = 6.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
+            Row(Modifier.fillMaxWidth().padding(start = 6.dp, top = 6.dp, end = 16.dp), verticalAlignment = Alignment.CenterVertically) {
                 IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
                 DisplayText(title, 24)
+                Spacer(Modifier.weight(1f))
+                AvatarPill { showAvatarPicker = true }
             }
             Text(subtitle, color = Color.White.copy(alpha = 0.85f), fontFamily = Alias.body, fontSize = 14.sp,
                 modifier = Modifier.padding(start = 24.dp, bottom = 12.dp))
@@ -159,6 +163,14 @@ fun AiSetupScreen(
                 prefs.edit().putString("ai_preferred_language", l.code).apply()
                 showLangPicker = false
             },
+        )
+    }
+
+    if (showAvatarPicker) {
+        AvatarPickerOverlay(
+            selected = avatar,
+            onDismiss = { showAvatarPicker = false },
+            onPick = { a -> avatar = a; AiAvatar.save(context, a); showAvatarPicker = false },
         )
     }
 }
