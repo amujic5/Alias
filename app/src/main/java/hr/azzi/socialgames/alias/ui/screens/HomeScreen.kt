@@ -42,15 +42,21 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.rotate
+import androidx.compose.ui.geometry.Offset
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.Shadow
 import androidx.compose.ui.graphics.SolidColor
 import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.platform.LocalConfiguration
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
+import androidx.compose.ui.text.PlatformTextStyle
+import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
@@ -59,6 +65,7 @@ import hr.azzi.socialgames.alias.Service.LanguageManager
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
 import hr.azzi.socialgames.alias.ui.theme.DisplayText
+import kotlinx.datetime.format.Padding
 
 @Composable
 fun HomeScreen(
@@ -93,7 +100,7 @@ fun HomeScreen(
         }
 
         Column(
-            Modifier.fillMaxSize().systemBarsPadding().padding(horizontal = 24.dp, vertical = 16.dp),
+            Modifier.fillMaxSize().systemBarsPadding().padding(horizontal = 30.dp, vertical = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
             // Top bar: settings (language) gear on the right — frosted circle to match
@@ -116,12 +123,10 @@ fun HomeScreen(
             }
             Box(Modifier.fillMaxWidth().height(300.dp), contentAlignment = Alignment.Center) {
                 ScatteredSquares()
-                Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                    DisplayText("ALIAS", 56)
-                    DisplayText("WORDS", 56)
-                }
+                HomeTitle()
             }
             Spacer(Modifier.weight(1f))
+
             MenuCard(
                 onOnlinePlay = onOnlinePlay,
                 onAiChallenge = onAiChallenge,
@@ -200,7 +205,7 @@ private fun MenuCard(
         Modifier.fillMaxWidth().clip(shape)
             .background(Color.White.copy(alpha = 0.16f))
             .border(1.5.dp, Color.White.copy(alpha = 0.5f), shape)
-            .padding(16.dp),
+            .padding(18.dp),
         verticalArrangement = Arrangement.spacedBy(14.dp),
     ) {
         // Play online — solid blue.
@@ -263,7 +268,7 @@ private fun MenuButton(
         Box(Modifier.align(Alignment.CenterStart).padding(start = 9.dp)) { badge() }
         Text(
             text, color = textColor, fontFamily = Alias.display,
-            fontWeight = FontWeight.ExtraBold, fontSize = 18.sp,
+            fontWeight = FontWeight.ExtraBold, fontSize = 20.sp,
         )
     }
 }
@@ -281,6 +286,30 @@ private fun Badge(background: Color, border: BorderStroke? = null, content: @Com
 @Composable
 private fun BadgeIcon(icon: ImageVector) {
     Icon(icon, contentDescription = null, tint = Color.White, modifier = Modifier.size(24.dp))
+}
+
+/** Home logo "ALIAS / WORDS" — Baloo 2 ExtraBold, 64sp, tight leading, with the hard
+ *  navy drop-shadow from the Figma home (0px 6px 0px rgba(10,46,89,0.35)). */
+@Composable
+private fun HomeTitle() {
+    val shadow = Shadow(
+        color = Color(0xFF0A2E59).copy(alpha = 0.35f),
+        offset = with(LocalDensity.current) { Offset(0f, 6.dp.toPx()) },
+        blurRadius = 0f,
+    )
+    Text(
+        "ALIAS\nWORDS",
+        color = Color.White,
+        fontFamily = Alias.display,
+        fontWeight = FontWeight.ExtraBold,
+        fontSize = 74.sp,
+        lineHeight = 76.sp,
+        textAlign = TextAlign.Center,
+        style = TextStyle(
+            shadow = shadow,
+            platformStyle = PlatformTextStyle(includeFontPadding = false),
+        ),
+    )
 }
 
 /** Decorative floating rounded squares behind the logo (matches Figma home). */

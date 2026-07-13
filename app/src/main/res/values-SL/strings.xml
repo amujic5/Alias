@@ -350,4 +350,12 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="try_for_free">Preizkusi brezplačno</string>
     <string name="play_online">Igraj na spletu</string>
     <string name="play_with_ai">Igraj z UI</string>
+    <string name="htp_step1_title">Sestavite ekipe</string>
+    <string name="htp_step1_body">Dve ali več ekip se pomeri. Vsaka ekipa ima dva igralca, ki se izmenjujeta pri razlaganju in ugibanju.</string>
+    <string name="htp_step2_title">Razloži besedo</string>
+    <string name="htp_step2_body">Igralec soigralcu opisuje besedo – ne da bi izrekel besedo samo ali njen koren.</string>
+    <string name="htp_step3_title">Ugibaj za točko</string>
+    <string name="htp_step3_body">Če soigralec ugane, ekipa osvoji točko. Se ti zatakne? Preskoči in nadaljuj.</string>
+    <string name="htp_step4_title">Premagaj uro</string>
+    <string name="htp_step4_body">Igrajte do časovne ali točkovne omejitve. Zmaga ekipa z največ točkami v najkrajšem času!</string>
 </resources>

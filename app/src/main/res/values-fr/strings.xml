@@ -343,4 +343,12 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="try_for_free">Essayer gratuitement</string>
     <string name="play_online">Jouer en ligne</string>
     <string name="play_with_ai">Jouer avec l\'IA</string>
+    <string name="htp_step1_title">Formez vos équipes</string>
+    <string name="htp_step1_body">Deux équipes ou plus s\'affrontent. Chaque équipe compte deux joueurs qui expliquent et devinent à tour de rôle.</string>
+    <string name="htp_step2_title">Explique le mot</string>
+    <string name="htp_step2_body">Un joueur décrit le mot à son coéquipier, sans jamais dire le mot ni sa racine.</string>
+    <string name="htp_step3_title">Devine pour marquer</string>
+    <string name="htp_step3_body">Si ton coéquipier devine, ton équipe marque un point. Bloqué ? Passe au suivant et continue.</string>
+    <string name="htp_step4_title">Bats le chrono</string>
+    <string name="htp_step4_body">Jouez jusqu\'à une limite de temps ou de points. L\'équipe avec le plus de points dans le temps le plus court gagne !</string>
 </resources>

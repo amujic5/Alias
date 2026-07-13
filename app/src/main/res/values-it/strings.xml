@@ -342,4 +342,12 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="try_for_free">Prova gratis</string>
     <string name="play_online">Gioca online</string>
     <string name="play_with_ai">Gioca con l\'IA</string>
+    <string name="htp_step1_title">Formate le squadre</string>
+    <string name="htp_step1_body">Due o più squadre si sfidano. Ogni squadra ha due giocatori che si alternano a spiegare e indovinare.</string>
+    <string name="htp_step2_title">Spiega la parola</string>
+    <string name="htp_step2_body">Un giocatore descrive la parola al compagno, senza mai dire la parola stessa né la sua radice.</string>
+    <string name="htp_step3_title">Indovina e fai punti</string>
+    <string name="htp_step3_body">Se il tuo compagno indovina, la squadra segna un punto. Bloccato? Saltala e vai avanti.</string>
+    <string name="htp_step4_title">Batti il tempo</string>
+    <string name="htp_step4_body">Giocate fino a un limite di tempo o di punti. Vince la squadra con più punti nel minor tempo!</string>
 </resources>

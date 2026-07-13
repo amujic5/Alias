@@ -1,7 +1,11 @@
 package hr.azzi.socialgames.alias.ui.screens
 
+import android.content.Context
+import android.graphics.Bitmap
+import android.graphics.Canvas
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.animateFloatAsState
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -38,6 +42,10 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.ImageBitmap
+import androidx.compose.ui.graphics.asImageBitmap
+import androidx.compose.ui.layout.ContentScale
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
@@ -48,6 +56,7 @@ import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Service.SoundSystem
 import hr.azzi.socialgames.alias.ui.theme.Alias
+import com.caverock.androidsvg.SVG
 import kotlinx.coroutines.delay
 
 private val FadedNumber = Color(0xFFDCE4EF)
@@ -59,8 +68,13 @@ fun PlayScreen(
     onFinished: () -> Unit,
     onQuit: () -> Unit,
 ) {
+    val context = LocalContext.current
     var timeLeft by remember { mutableIntStateOf(game.time) }
     var word by remember { mutableStateOf(game.newWord) }
+    // Alias Junior words are "NNN-word": a picture (res/raw/junior_NNN) the guessers look
+    // at, with the clean word shown to the explainer. For every other deck `junior` is null.
+    val junior = remember(word) { juniorImageRes(context, word) }
+    val displayWord = junior?.first ?: word
     var correct by remember { mutableIntStateOf(0) }
     var skip by remember { mutableIntStateOf(0) }
     var running by remember { mutableStateOf(false) }
@@ -117,13 +131,30 @@ fun PlayScreen(
                 Box(Modifier.fillMaxHeight().fillMaxWidth(frac).clip(RoundedCornerShape(50)).background(Alias.accent))
             }
 
-            // Center: faded countdown + word
+            // Center: faded countdown + word (or, for Junior, the picture card)
             Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
-                Text("$timeLeft", color = FadedNumber, fontFamily = Alias.display,
-                    fontWeight = FontWeight.ExtraBold, fontSize = 200.sp)
-                Text(word, color = Alias.textPrimary, fontFamily = Alias.display,
-                    fontWeight = FontWeight.ExtraBold, fontSize = 44.sp, textAlign = TextAlign.Center,
-                    modifier = Modifier.padding(horizontal = 24.dp))
+                if (junior != null) {
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        Text("$timeLeft", color = FadedNumber, fontFamily = Alias.display,
+                            fontWeight = FontWeight.ExtraBold, fontSize = 64.sp)
+                        Spacer(Modifier.height(4.dp))
+                        rememberSvgImage(junior.second)?.let { bmp ->
+                            Image(bitmap = bmp, contentDescription = displayWord,
+                                contentScale = ContentScale.Fit,
+                                modifier = Modifier.size(240.dp))
+                        }
+                        Spacer(Modifier.height(12.dp))
+                        Text(displayWord, color = Alias.textPrimary, fontFamily = Alias.display,
+                            fontWeight = FontWeight.ExtraBold, fontSize = 40.sp, textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(horizontal = 24.dp))
+                    }
+                } else {
+                    Text("$timeLeft", color = FadedNumber, fontFamily = Alias.display,
+                        fontWeight = FontWeight.ExtraBold, fontSize = 200.sp)
+                    Text(word, color = Alias.textPrimary, fontFamily = Alias.display,
+                        fontWeight = FontWeight.ExtraBold, fontSize = 44.sp, textAlign = TextAlign.Center,
+                        modifier = Modifier.padding(horizontal = 24.dp))
+                }
             }
 
             // Bottom action buttons
@@ -131,13 +162,13 @@ fun PlayScreen(
                 ActionButton(stringResource(R.string.skip), Icons.AutoMirrored.Filled.ArrowForward, Alias.danger,
                     Modifier.weight(1f)) {
                     if (!running) return@ActionButton
-                    game.addMarkedWord(MarkedWord(word, false)); skip++
+                    game.addMarkedWord(MarkedWord(displayWord, false)); skip++
                     soundSystem.playSkipButton(); word = game.newWord
                 }
                 ActionButton(stringResource(R.string.correct), Icons.Filled.Check, Alias.success,
                     Modifier.weight(1f)) {
                     if (!running) return@ActionButton
-                    game.addMarkedWord(MarkedWord(word, true)); correct++
+                    game.addMarkedWord(MarkedWord(displayWord, true)); correct++
                     soundSystem.playRightButton(); word = game.newWord
                 }
             }
@@ -235,4 +266,68 @@ private fun PlayerColumn(label: String, name: String, modifier: Modifier = Modif
             fontWeight = FontWeight.Bold, fontSize = 11.sp)
         Text(name, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
     }
+}
+
+/**
+ * Alias Junior words are stored as "NNN-word" where NNN maps to a picture card
+ * (res/raw/junior_NNN.svg, ported from the iOS junior asset set). Returns the clean
+ * display word plus that raw-resource name, or null when the word isn't a junior
+ * picture word — which is how every other deck is detected as "plain text".
+ */
+private fun juniorImageRes(context: Context, raw: String): Pair<String, String>? {
+    val dash = raw.indexOf('-')
+    if (dash != 3) return null
+    val num = raw.substring(0, dash)
+    if (!num.all { it.isDigit() }) return null
+    val resName = "junior_$num"
+    if (context.resources.getIdentifier(resName, "raw", context.packageName) == 0) return null
+    return raw.substring(dash + 1) to resName
+}
+
+/**
+ * Renders a res/raw SVG (the junior picture cards) to an [ImageBitmap], cached per name.
+ *
+ * The SVGs vary wildly (square 512s, tiny 64s, `pt` units, offset/negative viewBoxes), so we
+ * normalise each into a square viewport (fit + centred via its own preserveAspectRatio), then
+ * crop the transparent margins. That removes any asymmetric viewBox padding — the drawing ends
+ * up tight and truly centred once Compose fits it, instead of clipped or shifted to one side.
+ */
+@Composable
+private fun rememberSvgImage(resName: String): ImageBitmap? {
+    val context = LocalContext.current
+    return remember(resName) {
+        runCatching {
+            val id = context.resources.getIdentifier(resName, "raw", context.packageName)
+            if (id == 0) return@runCatching null
+            context.resources.openRawResource(id).use { input ->
+                val target = 768
+                val svg = SVG.getFromInputStream(input).apply {
+                    // Override the intrinsic width/height (may be in pt) so the viewBox maps
+                    // into our pixel viewport regardless of the document's declared units.
+                    setDocumentWidth(target.toFloat())
+                    setDocumentHeight(target.toFloat())
+                }
+                val bmp = Bitmap.createBitmap(target, target, Bitmap.Config.ARGB_8888)
+                svg.renderToCanvas(Canvas(bmp))
+                trimTransparentBorders(bmp).asImageBitmap()
+            }
+        }.getOrNull()
+    }
+}
+
+/** Crops fully-transparent rows/columns from every edge so the artwork sits centred and tight. */
+private fun trimTransparentBorders(src: Bitmap): Bitmap {
+    val w = src.width; val h = src.height
+    val pixels = IntArray(w * h)
+    src.getPixels(pixels, 0, w, 0, 0, w, h)
+    fun rowEmpty(y: Int): Boolean { val b = y * w; for (x in 0 until w) if (pixels[b + x] ushr 24 != 0) return false; return true }
+    fun colEmpty(x: Int): Boolean { for (y in 0 until h) if (pixels[y * w + x] ushr 24 != 0) return false; return true }
+    var top = 0; var bottom = h - 1; var left = 0; var right = w - 1
+    while (top < bottom && rowEmpty(top)) top++
+    while (bottom > top && rowEmpty(bottom)) bottom--
+    while (left < right && colEmpty(left)) left++
+    while (right > left && colEmpty(right)) right--
+    val nw = right - left + 1; val nh = bottom - top + 1
+    return if (nw <= 0 || nh <= 0 || (nw == w && nh == h)) src
+    else Bitmap.createBitmap(src, left, top, nw, nh)
 }

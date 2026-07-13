@@ -219,9 +219,10 @@ object JSONService {
             countryDeckLanguage(game.id)?.let { it != selected } ?: false
         }
 
-        // Taboo and Junior are not offered in the local game on Android.
+        // Taboo is not offered in the local game on Android. Junior IS supported —
+        // its picture cards render from the SVGs in res/raw (see PlayScreen).
         this.boardGames.removeIf {
-            it.id == BoardGameId.TABOO || it.id == BoardGameId.JUNIOR
+            it.id == BoardGameId.TABOO
         }
     }
 

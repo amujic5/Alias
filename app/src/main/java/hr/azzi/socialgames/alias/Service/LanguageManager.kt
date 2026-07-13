@@ -48,7 +48,10 @@ object LanguageManager {
     /** Persists a new language and rebuilds the UI so it takes effect app-wide. */
     fun setLanguage(code: String) {
         if (available.none { it.code == code }) return
-        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(code))
+        // Serbian is always Latin (latinica) in this app — apply the explicit script tag
+        // so the system never falls back to Cyrillic. currentCode still reports "sr".
+        val tag = if (code == "sr") "sr-Latn" else code
+        AppCompatDelegate.setApplicationLocales(LocaleListCompat.forLanguageTags(tag))
     }
 
     /** Bundled-deck language short-code matching the current UI language (games.json

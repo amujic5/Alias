@@ -352,4 +352,12 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="try_for_free">Isprobaj besplatno</string>
     <string name="play_online">Igraj onlajn</string>
     <string name="play_with_ai">Igraj sa AI</string>
+    <string name="htp_step1_title">Napravite timove</string>
+    <string name="htp_step1_body">Dva ili više timova se nadmeću. Svaki tim ima dva igrača koji se smenjuju u objašnjavanju i pogađanju.</string>
+    <string name="htp_step2_title">Objasni reč</string>
+    <string name="htp_step2_body">Jedan igrač opisuje reč saigraču — ne izgovarajući samu reč ni njen koren.</string>
+    <string name="htp_step3_title">Pogodi da osvojiš poen</string>
+    <string name="htp_step3_body">Ako saigrač pogodi, vaš tim osvaja poen. Zaglavili ste? Preskočite i nastavite dalje.</string>
+    <string name="htp_step4_title">Pobedi sat</string>
+    <string name="htp_step4_body">Igrajte do vremenskog ili poenskog ograničenja. Pobeđuje tim koji završi sa najviše poena za najkraće vreme!</string>
 </resources>

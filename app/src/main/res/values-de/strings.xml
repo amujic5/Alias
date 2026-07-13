@@ -343,4 +343,12 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="try_for_free">Kostenlos testen</string>
     <string name="play_online">Online spielen</string>
     <string name="play_with_ai">Mit KI spielen</string>
+    <string name="htp_step1_title">Stellt eure Teams auf</string>
+    <string name="htp_step1_body">Zwei oder mehr Teams treten gegeneinander an. Jedes Team hat zwei Spieler, die abwechselnd erklären und raten.</string>
+    <string name="htp_step2_title">Erkläre das Wort</string>
+    <string name="htp_step2_body">Ein Spieler beschreibt seinem Teampartner das Wort – ohne das Wort selbst oder seinen Wortstamm zu nennen.</string>
+    <string name="htp_step3_title">Raten und punkten</string>
+    <string name="htp_step3_body">Errät dein Teampartner das Wort, bekommt euer Team einen Punkt. Keine Idee? Überspringe es und mach weiter.</string>
+    <string name="htp_step4_title">Schlag die Uhr</string>
+    <string name="htp_step4_body">Spielt bis zu einem Zeit- oder Punktelimit. Das Team mit den meisten Punkten in der kürzesten Zeit gewinnt!</string>
 </resources>

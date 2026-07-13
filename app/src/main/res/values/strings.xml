@@ -358,4 +358,12 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="settings_language">Language</string>
     <string name="play_online">Play online</string>
     <string name="play_with_ai">Play with AI</string>
+    <string name="htp_step1_title">Make your teams</string>
+    <string name="htp_step1_body">Two or more teams face off. Each team has two players who take turns explaining and guessing.</string>
+    <string name="htp_step2_title">Explain the word</string>
+    <string name="htp_step2_body">One player describes the word to their teammate — without ever saying the word itself or its root.</string>
+    <string name="htp_step3_title">Guess to score</string>
+    <string name="htp_step3_body">If your teammate guesses it, your team scores a point. Stuck on one? Skip it and keep going.</string>
+    <string name="htp_step4_title">Beat the clock</string>
+    <string name="htp_step4_body">Play to a time or point limit. The team that finishes with the most points in the least time wins!</string>
 </resources>
