@@ -219,11 +219,8 @@ object JSONService {
             countryDeckLanguage(game.id)?.let { it != selected } ?: false
         }
 
-        // Taboo is not offered in the local game on Android. Junior IS supported —
-        // its picture cards render from the SVGs in res/raw (see PlayScreen).
-        this.boardGames.removeIf {
-            it.id == BoardGameId.TABOO
-        }
+        // Junior (picture cards) and Taboo (forbidden-words card) are both supported in
+        // local play now — see PlayScreen. No board games are filtered by type here.
     }
 
     fun getDictionaries(context: Context, boardGame: BoardGame):  MutableList<DictionaryModel> {

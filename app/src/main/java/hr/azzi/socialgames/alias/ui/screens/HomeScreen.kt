@@ -107,7 +107,7 @@ fun HomeScreen(
             // the Figma home (same treatment as the menu-card badges / iOS gear button).
             Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
                 Box(
-                    Modifier.size(44.dp).clip(CircleShape)
+                    Modifier.size(50.dp).clip(CircleShape)
                         .background(Color.White.copy(alpha = 0.16f))
                         .border(1.5.dp, Color.White.copy(alpha = 0.5f), CircleShape)
                         .clickable { showLanguages = true },
@@ -117,7 +117,7 @@ fun HomeScreen(
                         Icons.Filled.Settings,
                         contentDescription = stringResource(R.string.settings),
                         tint = Color.White,
-                        modifier = Modifier.size(22.dp),
+                        modifier = Modifier.size(28.dp),
                     )
                 }
             }

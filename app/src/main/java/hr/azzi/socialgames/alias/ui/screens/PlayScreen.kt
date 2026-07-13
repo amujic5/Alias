@@ -61,6 +61,11 @@ import kotlinx.coroutines.delay
 
 private val FadedNumber = Color(0xFFDCE4EF)
 
+// Taboo play palette (Figma "14 Play - Taboo").
+private val TabooBg = Color(0xFF2A1E3F)
+private val TabooCard = Color(0xFF8E63F0)
+private val TabooPill = Color(0xFF5C3DA6)
+
 @Composable
 fun PlayScreen(
     game: Game,
@@ -74,7 +79,10 @@ fun PlayScreen(
     // Alias Junior words are "NNN-word": a picture (res/raw/junior_NNN) the guessers look
     // at, with the clean word shown to the explainer. For every other deck `junior` is null.
     val junior = remember(word) { juniorImageRes(context, word) }
-    val displayWord = junior?.first ?: word
+    // Taboo words are "target: forbidden1, forbidden2, …": explain the target without saying
+    // any of the forbidden words. `taboo` is null for every non-taboo deck.
+    val taboo = remember(word) { parseTaboo(word) }
+    val displayWord = junior?.first ?: taboo?.first ?: word
     var correct by remember { mutableIntStateOf(0) }
     var skip by remember { mutableIntStateOf(0) }
     var running by remember { mutableStateOf(false) }
@@ -104,7 +112,7 @@ fun PlayScreen(
         label = "progress",
     )
 
-    Box(Modifier.fillMaxSize().background(Color.White)) {
+    Box(Modifier.fillMaxSize().background(if (taboo != null) TabooBg else Color.White)) {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
             // Top card: team + counts + pause
             Row(
@@ -127,13 +135,29 @@ fun PlayScreen(
 
             // Progress bar
             Box(Modifier.fillMaxWidth().padding(horizontal = 16.dp).height(6.dp)
-                .clip(RoundedCornerShape(50)).background(Alias.divider)) {
+                .clip(RoundedCornerShape(50))
+                .background(if (taboo != null) Color.White.copy(alpha = 0.16f) else Alias.divider)) {
                 Box(Modifier.fillMaxHeight().fillMaxWidth(frac).clip(RoundedCornerShape(50)).background(Alias.accent))
             }
 
-            // Center: faded countdown + word (or, for Junior, the picture card)
+            // Center: faded countdown + word (or Junior picture card / Taboo forbidden-words card)
             Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
-                if (junior != null) {
+                if (taboo != null) {
+                    // Keep the forbidden-words card hidden until the round actually starts —
+                    // the pause/pre-start sheet only dims with a translucent scrim, so without
+                    // this the card would be readable before the player presses Play.
+                    if (!showSheet) {
+                        Column(
+                            Modifier.fillMaxWidth().padding(horizontal = 16.dp),
+                            horizontalAlignment = Alignment.CenterHorizontally,
+                        ) {
+                            Text("$timeLeft", color = Color.White, fontFamily = Alias.display,
+                                fontWeight = FontWeight.ExtraBold, fontSize = 84.sp)
+                            Spacer(Modifier.height(20.dp))
+                            TabooCard(target = taboo.first, forbidden = taboo.second)
+                        }
+                    }
+                } else if (junior != null) {
                     Column(horizontalAlignment = Alignment.CenterHorizontally) {
                         Text("$timeLeft", color = FadedNumber, fontFamily = Alias.display,
                             fontWeight = FontWeight.ExtraBold, fontSize = 64.sp)
@@ -282,6 +306,49 @@ private fun juniorImageRes(context: Context, raw: String): Pair<String, String>?
     val resName = "junior_$num"
     if (context.resources.getIdentifier(resName, "raw", context.packageName) == 0) return null
     return raw.substring(dash + 1) to resName
+}
+
+/**
+ * Taboo words are stored as "target: forbidden1, forbidden2, …" — the player explains the
+ * target without saying any forbidden word. Returns (target, forbidden list), or null when
+ * the word isn't a taboo word (that's how every other deck is treated as plain text).
+ */
+private fun parseTaboo(raw: String): Pair<String, List<String>>? {
+    val idx = raw.indexOf(": ")
+    if (idx <= 0) return null
+    val target = raw.substring(0, idx).trim()
+    val forbidden = raw.substring(idx + 2).split(",").map { it.trim() }.filter { it.isNotEmpty() }
+    if (target.isEmpty() || forbidden.size < 2) return null
+    return target to forbidden
+}
+
+/** The Taboo card: the target word on an overlapping pill, above the forbidden words. */
+@Composable
+private fun TabooCard(target: String, forbidden: List<String>) {
+    Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {
+        // Forbidden words card (leaves top room for the overlapping target pill).
+        Column(
+            Modifier.fillMaxWidth().padding(top = 26.dp).clip(RoundedCornerShape(30.dp))
+                .background(TabooCard).padding(top = 52.dp, bottom = 32.dp, start = 24.dp, end = 24.dp),
+            horizontalAlignment = Alignment.CenterHorizontally,
+            verticalArrangement = Arrangement.spacedBy(6.dp),
+        ) {
+            forbidden.forEach { w ->
+                Text(w, color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.ExtraBold,
+                    fontSize = 26.sp, textAlign = TextAlign.Center)
+            }
+        }
+        // Target word pill, overlapping the top edge of the card.
+        Box(
+            Modifier.shadow(10.dp, RoundedCornerShape(26.dp), clip = false)
+                .clip(RoundedCornerShape(26.dp)).background(TabooPill)
+                .padding(horizontal = 28.dp, vertical = 14.dp),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(target, color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.ExtraBold,
+                fontSize = 30.sp, textAlign = TextAlign.Center)
+        }
+    }
 }
 
 /**
