@@ -167,6 +167,12 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="ai_losses">PORAZI</string>
     <string name="ai_draws">NEREŠENO</string>
     <string name="ai_sign_out">Odjavi se</string>
+    <string name="ai_delete_account">Obriši nalog</string>
+    <string name="ai_delete_account_title">Obrisati nalog?</string>
+    <string name="ai_delete_account_msg">Ovo trajno briše tvoj nalog i sve povezane podatke (korisničko ime, statistiku i izazove). Ovo se ne može opozvati.</string>
+    <string name="ai_delete_account_confirm">Obriši</string>
+    <string name="ai_delete_account_cancel">Odustani</string>
+    <string name="ai_delete_done">Tvoj nalog je obrisan.</string>
 
     <string name="ai_pick_username">Izaberi korisničko ime</string>
     <string name="ai_username_hint">3–15 slova ili brojeva. Ovako te drugari vide.</string>

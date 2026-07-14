@@ -158,6 +158,12 @@
     <string name="ai_losses">SCONFITTE</string>
     <string name="ai_draws">PAREGGI</string>
     <string name="ai_sign_out">Esci</string>
+    <string name="ai_delete_account">Elimina account</string>
+    <string name="ai_delete_account_title">Eliminare l\'account?</string>
+    <string name="ai_delete_account_msg">Questa operazione elimina definitivamente il tuo account e tutti i dati associati (nome utente, statistiche e sfide). Non può essere annullata.</string>
+    <string name="ai_delete_account_confirm">Elimina</string>
+    <string name="ai_delete_account_cancel">Annulla</string>
+    <string name="ai_delete_done">Il tuo account è stato eliminato.</string>
 
     <string name="ai_pick_username">Scegli un nome utente</string>
     <string name="ai_username_hint">3–15 lettere o numeri. È così che ti vedono gli amici.</string>

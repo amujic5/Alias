@@ -159,6 +159,12 @@
     <string name="ai_losses">DÉFAITES</string>
     <string name="ai_draws">NULS</string>
     <string name="ai_sign_out">Se déconnecter</string>
+    <string name="ai_delete_account">Supprimer le compte</string>
+    <string name="ai_delete_account_title">Supprimer le compte ?</string>
+    <string name="ai_delete_account_msg">Cette action supprime définitivement votre compte et toutes les données associées (nom d\'utilisateur, statistiques et défis). Elle est irréversible.</string>
+    <string name="ai_delete_account_confirm">Supprimer</string>
+    <string name="ai_delete_account_cancel">Annuler</string>
+    <string name="ai_delete_done">Votre compte a été supprimé.</string>
 
     <string name="ai_pick_username">Choisissez un pseudo</string>
     <string name="ai_username_hint">3 à 15 lettres ou chiffres. C\'est ainsi que vos amis vous voient.</string>

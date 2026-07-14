@@ -165,6 +165,12 @@
     <string name="ai_losses">LOSSES</string>
     <string name="ai_draws">DRAWS</string>
     <string name="ai_sign_out">Sign out</string>
+    <string name="ai_delete_account">Delete account</string>
+    <string name="ai_delete_account_title">Delete account?</string>
+    <string name="ai_delete_account_msg">This permanently deletes your account and all associated data (username, stats and challenges). This can\'t be undone.</string>
+    <string name="ai_delete_account_confirm">Delete</string>
+    <string name="ai_delete_account_cancel">Cancel</string>
+    <string name="ai_delete_done">Your account has been deleted.</string>
 
     <string name="ai_pick_username">Pick a username</string>
     <string name="ai_username_hint">3–15 letters or numbers. This is how friends see you.</string>

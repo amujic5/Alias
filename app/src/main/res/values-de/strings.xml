@@ -159,6 +159,12 @@
     <string name="ai_losses">NIEDERLAGEN</string>
     <string name="ai_draws">UNENTSCHIEDEN</string>
     <string name="ai_sign_out">Abmelden</string>
+    <string name="ai_delete_account">Konto löschen</string>
+    <string name="ai_delete_account_title">Konto löschen?</string>
+    <string name="ai_delete_account_msg">Dadurch werden dein Konto und alle zugehörigen Daten (Benutzername, Statistiken und Challenges) dauerhaft gelöscht. Dies kann nicht rückgängig gemacht werden.</string>
+    <string name="ai_delete_account_confirm">Löschen</string>
+    <string name="ai_delete_account_cancel">Abbrechen</string>
+    <string name="ai_delete_done">Dein Konto wurde gelöscht.</string>
 
     <string name="ai_pick_username">Benutzernamen wählen</string>
     <string name="ai_username_hint">3–15 Buchstaben oder Zahlen. So sehen dich deine Freunde.</string>

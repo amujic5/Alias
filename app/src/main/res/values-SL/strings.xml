@@ -167,6 +167,12 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="ai_losses">PORAZI</string>
     <string name="ai_draws">NEODLOČENO</string>
     <string name="ai_sign_out">Odjava</string>
+    <string name="ai_delete_account">Izbriši račun</string>
+    <string name="ai_delete_account_title">Izbrišem račun?</string>
+    <string name="ai_delete_account_msg">S tem trajno izbrišeš svoj račun in vse povezane podatke (uporabniško ime, statistiko in izzive). Tega ni mogoče razveljaviti.</string>
+    <string name="ai_delete_account_confirm">Izbriši</string>
+    <string name="ai_delete_account_cancel">Prekliči</string>
+    <string name="ai_delete_done">Tvoj račun je bil izbrisan.</string>
 
     <string name="ai_pick_username">Izberi uporabniško ime</string>
     <string name="ai_username_hint">3–15 črk ali številk. Tako te vidijo prijatelji.</string>

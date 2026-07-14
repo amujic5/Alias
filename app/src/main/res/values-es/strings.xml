@@ -158,6 +158,12 @@
     <string name="ai_losses">DERROTAS</string>
     <string name="ai_draws">EMPATES</string>
     <string name="ai_sign_out">Cerrar sesión</string>
+    <string name="ai_delete_account">Eliminar cuenta</string>
+    <string name="ai_delete_account_title">¿Eliminar cuenta?</string>
+    <string name="ai_delete_account_msg">Esto elimina permanentemente tu cuenta y todos los datos asociados (nombre de usuario, estadísticas y retos). Esta acción no se puede deshacer.</string>
+    <string name="ai_delete_account_confirm">Eliminar</string>
+    <string name="ai_delete_account_cancel">Cancelar</string>
+    <string name="ai_delete_done">Tu cuenta ha sido eliminada.</string>
 
     <string name="ai_pick_username">Elige un nombre de usuario</string>
     <string name="ai_username_hint">3–15 letras o números. Así te ven tus amigos.</string>

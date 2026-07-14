@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias.ai
 
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseAuthRecentLoginRequiredException
 import com.google.firebase.auth.userProfileChangeRequest
 import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
@@ -72,4 +73,41 @@ object AuthService {
         uid?.let { loadName(it) } ?: displayName ?: "You"
 
     fun signOut() = auth.signOut()
+
+    /** Outcome of [deleteAccount]. */
+    sealed interface DeleteResult {
+        /** Account and associated data are gone. */
+        object Success : DeleteResult
+        /** The sign-in is too old; re-authenticate and call [deleteAccount] again. */
+        object NeedsReauth : DeleteResult
+        /** Something else failed (e.g. network). */
+        data class Error(val cause: Throwable) : DeleteResult
+    }
+
+    /**
+     * Permanently deletes the signed-in user's account and associated data:
+     * the Firestore `users/{uid}` and `usernames/{handle}` documents, then the
+     * Firebase Auth user itself. Firestore is cleared first, while still
+     * authenticated, because the security rules require it. The Firestore
+     * deletes are idempotent, so retrying after a re-auth is safe.
+     */
+    suspend fun deleteAccount(): DeleteResult {
+        val user = auth.currentUser ?: return DeleteResult.Success
+        val id = user.uid
+        return try {
+            val lower = runCatching {
+                db.collection("users").document(id).get().await().getString("usernameLower")
+            }.getOrNull()
+            if (!lower.isNullOrBlank()) {
+                runCatching { db.collection("usernames").document(lower).delete().await() }
+            }
+            runCatching { db.collection("users").document(id).delete().await() }
+            user.delete().await()
+            DeleteResult.Success
+        } catch (e: FirebaseAuthRecentLoginRequiredException) {
+            DeleteResult.NeedsReauth
+        } catch (e: Exception) {
+            DeleteResult.Error(e)
+        }
+    }
 }

@@ -80,9 +80,17 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
     var unameBusy by remember { mutableStateOf(false) }
     var unameError by remember { mutableStateOf<String?>(null) }
     var deepLinkConsumed by remember { mutableStateOf(false) }
+    // Account deletion needs a recent sign-in; when it doesn't have one we
+    // re-launch sign-in and retry the delete via this tick.
+    var pendingDelete by remember { mutableStateOf(false) }
+    var deleteRetryTick by remember { mutableIntStateOf(0) }
 
     val signInLauncher = rememberLauncherForActivityResult(FirebaseAuthUIActivityResultContract()) { result ->
-        if (result.resultCode == android.app.Activity.RESULT_OK) authVersion++
+        if (result.resultCode == android.app.Activity.RESULT_OK) {
+            if (pendingDelete) { pendingDelete = false; deleteRetryTick++ } else authVersion++
+        } else {
+            pendingDelete = false
+        }
     }
     fun launchSignIn() {
         val providers = listOf(AuthUI.IdpConfig.GoogleBuilder().build())
@@ -90,6 +98,28 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers).build()
         )
     }
+
+    // Deletes the account; on a stale sign-in, re-auths once and retries.
+    fun runDeleteAccount(reauthed: Boolean) {
+        scope.launch {
+            when (AuthService.deleteAccount()) {
+                AuthService.DeleteResult.Success -> {
+                    Toast.makeText(context, context.getString(R.string.ai_delete_done), Toast.LENGTH_LONG).show()
+                    popToHub(); authVersion++
+                }
+                AuthService.DeleteResult.NeedsReauth -> {
+                    if (reauthed) {
+                        Toast.makeText(context, context.getString(R.string.ai_err_generic), Toast.LENGTH_LONG).show()
+                    } else {
+                        pendingDelete = true; launchSignIn()
+                    }
+                }
+                is AuthService.DeleteResult.Error ->
+                    Toast.makeText(context, context.getString(R.string.ai_err_generic), Toast.LENGTH_LONG).show()
+            }
+        }
+    }
+    LaunchedEffect(deleteRetryTick) { if (deleteRetryTick > 0) runDeleteAccount(reauthed = true) }
 
     fun openChallenge(ch: AIChallenge) {
         val me = AuthService.uid ?: ""
@@ -267,6 +297,7 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             username = username, uid = myUid, stats = stats, recent = recent,
             onOpenChallenge = { openChallenge(it) },
             onSignOut = { AuthService.signOut(); popToHub(); authVersion++ },
+            onDeleteAccount = { runDeleteAccount(reauthed = false) },
             onClose = { pop() },
         )
     }
