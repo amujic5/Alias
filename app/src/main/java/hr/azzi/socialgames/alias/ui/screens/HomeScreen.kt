@@ -57,6 +57,7 @@ import androidx.compose.ui.text.PlatformTextStyle
 import androidx.compose.ui.text.TextStyle
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
@@ -94,7 +95,6 @@ fun HomeScreen(
                     modifier = Modifier.fillMaxSize(),
                     alignment = Alignment.BottomCenter,
                     contentScale = ContentScale.Crop,
-                    alpha = 0.5f,
                 )
             }
         }
@@ -103,37 +103,82 @@ fun HomeScreen(
             Modifier.fillMaxSize().systemBarsPadding().padding(horizontal = 30.dp, vertical = 16.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {
-            // Top bar: settings (language) gear on the right — frosted circle to match
-            // the Figma home (same treatment as the menu-card badges / iOS gear button).
-            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
-                Box(
-                    Modifier.size(50.dp).clip(CircleShape)
-                        .background(Color.White.copy(alpha = 0.16f))
-                        .border(1.5.dp, Color.White.copy(alpha = 0.5f), CircleShape)
-                        .clickable { showLanguages = true },
-                    contentAlignment = Alignment.Center,
+            // Upper half — gear, logo and "Play online". Given equal weight to the lower
+            // half (below), the 10dp gaps + "Play with AI" between them put that button on
+            // the exact vertical centre of the screen, regardless of screen size.
+            Column(
+                Modifier.weight(0.8f).fillMaxWidth(),
+                horizontalAlignment = Alignment.CenterHorizontally,
+            ) {
+                // Top bar: settings (language) gear on the right — frosted circle to match
+                // the Figma home (same treatment as the menu-button badges / iOS gear).
+                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                    Box(
+                        Modifier.size(50.dp).clip(CircleShape)
+                            .background(Color.White.copy(alpha = 0.16f))
+                            .border(1.5.dp, Color.White.copy(alpha = 0.5f), CircleShape)
+                            .clickable { showLanguages = true },
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Icon(
+                            Icons.Filled.Settings,
+                            contentDescription = stringResource(R.string.settings),
+                            tint = Color.White,
+                            modifier = Modifier.size(28.dp),
+                        )
+                    }
+                }
+                Spacer(Modifier.weight(1f))
+                Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.Center) {
+                    ScatteredSquares()
+                    HomeTitle()
+                }
+                Spacer(Modifier.weight(1f))
+            }
+
+
+            Column(
+                Modifier.weight(1.2f).fillMaxWidth().padding(horizontal = 34.dp, vertical = 16.dp),
+                horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.spacedBy(7.dp),
+            ) {
+
+                MenuButton(
+                    text = stringResource(R.string.play_online),
+                    textColor = Color.White,
+                    background = SolidColor(Color(0xFF2685F5)),
+                    onClick = onOnlinePlay,
+                ) { Badge(Color.White.copy(alpha = 0.22f)) { BadgeIcon(Icons.Filled.Public) } }
+
+                // Play with AI — pinned to the vertical centre (pink→orange gradient).
+                MenuButton(
+                    text = stringResource(R.string.play_with_ai),
+                    textColor = Color.White,
+                    background = Brush.horizontalGradient(listOf(Color(0xFFF54A87), Color(0xFFFA8538))),
+                    onClick = onAiChallenge,
+                ) { Badge(Color.White.copy(alpha = 0.22f)) { BadgeIcon(Icons.Filled.SmartToy) } }
+                // New game — solid yellow, dark label, darker-orange badge.
+                MenuButton(
+                    text = stringResource(R.string.new_game),
+                    textColor = Color(0xFF0E1726),
+                    background = SolidColor(Color(0xFFFFC91F)),
+                    onClick = onNewGame,
+                ) { Badge(Color(0xFFF58C0D)) { BadgeIcon(Icons.Filled.Star) } }
+
+                // How to play — translucent black, narrower, white outline.
+                MenuButton(
+                    text = stringResource(R.string.how_to_play),
+                    textColor = Color.White,
+                    background = SolidColor(Color.Black.copy(alpha = 0.5f)),
+                    onClick = onHowToPlay,
+                    modifier = Modifier.fillMaxWidth(0.88f),
+                    height = 64.dp,
                 ) {
-                    Icon(
-                        Icons.Filled.Settings,
-                        contentDescription = stringResource(R.string.settings),
-                        tint = Color.White,
-                        modifier = Modifier.size(28.dp),
-                    )
+                    Badge(Color.White.copy(alpha = 0.16f), border = BorderStroke(1.5.dp, Color.White.copy(alpha = 0.5f))) {
+                        BadgeIcon(Icons.AutoMirrored.Filled.HelpOutline)
+                    }
                 }
             }
-            Box(Modifier.fillMaxWidth().height(300.dp), contentAlignment = Alignment.Center) {
-                ScatteredSquares()
-                HomeTitle()
-            }
-            Spacer(Modifier.weight(1f))
-
-            MenuCard(
-                onOnlinePlay = onOnlinePlay,
-                onAiChallenge = onAiChallenge,
-                onNewGame = onNewGame,
-                onHowToPlay = onHowToPlay,
-            )
-            Spacer(Modifier.height(20.dp))
         }
     }
 
@@ -188,80 +233,24 @@ private fun LanguageRow(lang: AppLanguage, selected: Boolean, onClick: () -> Uni
     }
 }
 
-/**
- * Frosted "Menu Card" holding the four entry buttons (matches Figma home 3037:1747):
- * Play online · Play with AI · New game · How to play. Each button is a 62dp pill with
- * a centered label and a round icon badge pinned to the left.
- */
-@Composable
-private fun MenuCard(
-    onOnlinePlay: () -> Unit,
-    onAiChallenge: () -> Unit,
-    onNewGame: () -> Unit,
-    onHowToPlay: () -> Unit,
-) {
-    val shape = RoundedCornerShape(30.dp)
-    Column(
-        Modifier.fillMaxWidth().clip(shape)
-            .background(Color.White.copy(alpha = 0.16f))
-            .border(1.5.dp, Color.White.copy(alpha = 0.5f), shape)
-            .padding(18.dp),
-        verticalArrangement = Arrangement.spacedBy(14.dp),
-    ) {
-        // Play online — solid blue.
-        MenuButton(
-            text = stringResource(R.string.play_online),
-            textColor = Color.White,
-            background = SolidColor(Color(0xFF2685F5)),
-            onClick = onOnlinePlay,
-        ) { Badge(Color.White.copy(alpha = 0.22f)) { BadgeIcon(Icons.Filled.Public) } }
-
-        // Play with AI — pink→orange gradient.
-        MenuButton(
-            text = stringResource(R.string.play_with_ai),
-            textColor = Color.White,
-            background = Brush.horizontalGradient(listOf(Color(0xFFF54A87), Color(0xFFFA8538))),
-            onClick = onAiChallenge,
-        ) { Badge(Color.White.copy(alpha = 0.22f)) { BadgeIcon(Icons.Filled.SmartToy) } }
-
-        // New game — solid yellow, dark label, darker-orange badge.
-        MenuButton(
-            text = stringResource(R.string.new_game),
-            textColor = Color(0xFF0E1726),
-            background = SolidColor(Color(0xFFFFC91F)),
-            onClick = onNewGame,
-        ) { Badge(Color(0xFFF58C0D)) { BadgeIcon(Icons.Filled.Star) } }
-
-        // How to play — translucent outlined.
-        MenuButton(
-            text = stringResource(R.string.how_to_play),
-            textColor = Color.White,
-            background = SolidColor(Color.White.copy(alpha = 0.14f)),
-            border = BorderStroke(1.5.dp, Color.White.copy(alpha = 0.55f)),
-            onClick = onHowToPlay,
-        ) {
-            Badge(Color.White.copy(alpha = 0.16f), border = BorderStroke(1.5.dp, Color.White.copy(alpha = 0.5f))) {
-                BadgeIcon(Icons.AutoMirrored.Filled.HelpOutline)
-            }
-        }
-    }
-}
-
-/** A single menu-card pill: full-width, 62dp, centered label with a leading round badge. */
+/** A single menu-card pill: 68dp tall, white 2dp outline, centered label with a leading
+ *  round badge. Height and width can be overridden (How-to-play is shorter and narrower). */
 @Composable
 private fun MenuButton(
     text: String,
     textColor: Color,
     background: Brush,
     onClick: () -> Unit,
-    border: BorderStroke? = null,
+    modifier: Modifier = Modifier.fillMaxWidth(),
+    height: Dp = 74.dp,
+    border: BorderStroke = BorderStroke(3.dp, Color.White),
     badge: @Composable () -> Unit,
 ) {
     val shape = RoundedCornerShape(30.dp)
     Box(
-        Modifier.fillMaxWidth().height(62.dp).clip(shape)
+        modifier.height(height).clip(shape)
             .background(background)
-            .then(if (border != null) Modifier.border(border, shape) else Modifier)
+            .border(border, shape)
             .clickable { onClick() },
         contentAlignment = Alignment.Center,
     ) {
@@ -302,8 +291,8 @@ private fun HomeTitle() {
         color = Color.White,
         fontFamily = Alias.display,
         fontWeight = FontWeight.ExtraBold,
-        fontSize = 74.sp,
-        lineHeight = 76.sp,
+        fontSize = 78.sp,
+        lineHeight = 78.sp,
         textAlign = TextAlign.Center,
         style = TextStyle(
             shadow = shadow,
