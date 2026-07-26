@@ -24,6 +24,14 @@ object AIDeckCatalog {
 
     fun deck(id: String): AIDeck? = decks.firstOrNull { it.id == id }
 
+    /**
+     * Deck to open AI setup on: the first one that has clues in [language], else the
+     * first deck. Without this the screen always starts on Classic, and a language
+     * Classic doesn't cover (Bosnian) could never be the preselected one.
+     */
+    fun defaultDeck(language: AILanguage?): AIDeck =
+        decks.firstOrNull { language != null && it.languages.contains(language) } ?: decks.first()
+
     fun entries(context: Context, deckId: String, language: AILanguage): List<Entry> {
         val resName = "ai_${deckId}_${language.fileCode}"
         val resId = context.resources.getIdentifier(resName, "raw", context.packageName)

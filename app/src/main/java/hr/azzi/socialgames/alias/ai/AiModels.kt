@@ -1,5 +1,6 @@
 package hr.azzi.socialgames.alias.ai
 
+import hr.azzi.socialgames.alias.Service.LanguageManager
 import java.util.Locale
 
 /** Languages the AI feature supports. fileCode maps to the ai_<deck>_<fileCode>.json assets. */
@@ -28,6 +29,20 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
     companion object {
         fun from(code: String?): AILanguage = entries.firstOrNull { it.code == code } ?: EN
 
+        /**
+         * AI language matching the in-app UI language (Settings / LanguageManager).
+         * Slovenian has no AI content of its own, so it resolves to Croatian — the
+         * nearest neighbour. Spanish has no Slavic fallback, so it returns null and
+         * the saved preference / device locale decides.
+         */
+        fun fromAppLanguage(): AILanguage? = when (LanguageManager.currentCode) {
+            "en" -> EN; "fr" -> FR; "de" -> DE; "it" -> IT
+            "hr", "sl" -> HR
+            "bs" -> BS
+            "sr" -> SR
+            else -> null
+        }
+
         /** Best-guess AI language from the device language, then region (null if none match). */
         fun fromDeviceLocale(): AILanguage? {
             val lang = Locale.getDefault().language.lowercase()
@@ -44,8 +59,14 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
             }
         }
 
-        /** Pick the language to preselect: 1) saved pref, 2) device locale, 3) first available. */
+        /**
+         * Pick the language to preselect: 1) the in-app UI language, 2) the saved
+         * preference, 3) the device locale, 4) the first available. Same order as iOS
+         * — the language chosen in Settings wins, so opening AI setup on a Croatian
+         * app never lands on English.
+         */
         fun preferred(available: List<AILanguage>, savedCode: String?): AILanguage {
+            fromAppLanguage()?.let { if (available.contains(it)) return it }
             savedCode?.let { code -> available.firstOrNull { it.code == code } }?.let { return it }
             fromDeviceLocale()?.let { if (available.contains(it)) return it }
             return available.firstOrNull() ?: EN

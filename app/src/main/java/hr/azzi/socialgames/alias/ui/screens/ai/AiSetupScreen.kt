@@ -65,7 +65,9 @@ fun AiSetupScreen(
 ) {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("ai_settings", android.content.Context.MODE_PRIVATE) }
-    var deck by remember { mutableStateOf(AIDeckCatalog.decks.first()) }
+    // Start on a deck that actually covers the app's language, so the preselected
+    // language below can be the one chosen in Settings.
+    var deck by remember { mutableStateOf(AIDeckCatalog.defaultDeck(AILanguage.fromAppLanguage())) }
     var language by remember { mutableStateOf(AILanguage.preferred(deck.languages, prefs.getString("ai_preferred_language", null))) }
     var seconds by remember { mutableStateOf(60) }
     var mode by remember { mutableStateOf(AIMode.AI_EXPLAINS) }
