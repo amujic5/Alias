@@ -112,6 +112,7 @@
     <string name="ai_mic_needed">Für das Spiel wird Mikrofonzugriff benötigt.\nAktiviere ihn in den Einstellungen.</string>
     <string name="ai_tts_voice_title">Stimme nicht installiert</string>
     <string name="ai_tts_voice_message">Dein Gerät braucht ein Sprachpaket, damit die KI %1$s sprechen kann. Jetzt herunterladen?</string>
+    <string name="ai_tts_voice_or">oder</string>
     <string name="ai_tts_voice_download">Stimme herunterladen</string>
 
     <string name="ai_explain_dont_say">ERKLÄRE ES — SAG ES NICHT</string>

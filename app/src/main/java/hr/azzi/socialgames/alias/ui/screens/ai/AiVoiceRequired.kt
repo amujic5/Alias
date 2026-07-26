@@ -30,13 +30,21 @@ import java.util.Locale
 private val Gold = Color(0xFFFFD23D)
 
 /**
- * Blocking gate shown when the AI voice (TTS) for [locale] isn't installed.
- * The game can't be played without it, so the only action is to download —
+ * Blocking gate shown when none of the AI voices in [locales] is installed.
+ * The game can't be played without one, so the only action is to download —
  * leaving is the screen's existing close (X) button.
+ *
+ * Every accepted voice is listed, not just the last one tried: Serbian and
+ * Bosnian also play with a Croatian voice, and naming only Croatian to someone
+ * who picked Serbian reads like the wrong language is being demanded.
  */
 @Composable
-fun VoiceRequiredBody(locale: Locale, onDownload: () -> Unit) {
-    val language = locale.getDisplayLanguage(locale).replaceFirstChar { it.uppercaseChar() }
+fun VoiceRequiredBody(locales: List<Locale>, onDownload: () -> Unit) {
+    val or = stringResource(R.string.ai_tts_voice_or)
+    val language = locales
+        .map { it.getDisplayLanguage(it).replaceFirstChar { c -> c.uppercaseChar() } }
+        .reduceOrNull { a, b -> "$a $or $b" }
+        .orEmpty()
     Box(Modifier.fillMaxSize().padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
             Text("🔊", fontSize = 40.sp)

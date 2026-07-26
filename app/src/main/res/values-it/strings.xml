@@ -111,6 +111,7 @@
     <string name="ai_mic_needed">Serve l\'accesso al microfono per giocare.\nAttivalo nelle Impostazioni.</string>
     <string name="ai_tts_voice_title">Voce non installata</string>
     <string name="ai_tts_voice_message">Il tuo dispositivo ha bisogno di un pacchetto vocale perché l\'IA possa parlare %1$s. Scaricarlo ora?</string>
+    <string name="ai_tts_voice_or">o</string>
     <string name="ai_tts_voice_download">Scarica voce</string>
 
     <string name="ai_explain_dont_say">SPIEGALA — NON DIRLA</string>

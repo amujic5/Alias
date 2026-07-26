@@ -112,6 +112,7 @@
     <string name="ai_mic_needed">L\'accès au micro est nécessaire pour jouer.\nActivez-le dans les Réglages.</string>
     <string name="ai_tts_voice_title">Voix non installée</string>
     <string name="ai_tts_voice_message">Votre appareil a besoin d\'un pack vocal pour que l\'IA parle %1$s. Le télécharger maintenant ?</string>
+    <string name="ai_tts_voice_or">ou</string>
     <string name="ai_tts_voice_download">Télécharger la voix</string>
 
     <string name="ai_explain_dont_say">EXPLIQUEZ — NE LE DITES PAS</string>

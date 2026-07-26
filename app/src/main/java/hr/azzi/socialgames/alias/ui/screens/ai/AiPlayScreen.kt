@@ -117,9 +117,7 @@ fun AiPlayScreen(
                     AiPlayController.Phase.Loading ->
                         Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) }
                     AiPlayController.Phase.VoiceRequired ->
-                        controller.voiceMissing?.let { loc ->
-                            VoiceRequiredBody(loc, onDownload = { launchVoiceInstaller(context) })
-                        }
+                        VoiceRequiredBody(controller.voiceMissing, onDownload = { launchVoiceInstaller(context) })
                     AiPlayController.Phase.Denied ->
                         Box(Modifier.fillMaxSize(), Alignment.Center) {
                             Text(stringResource(R.string.ai_mic_needed),

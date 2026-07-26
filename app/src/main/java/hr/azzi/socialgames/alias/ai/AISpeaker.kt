@@ -20,10 +20,9 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
     private val initWaiters = mutableListOf<() -> Unit>()
     private var pending: Pair<String, String>? = null
     var onSpeakingChanged: ((Boolean) -> Unit)? = null
-    /** Fired (on main) when the requested voice — and its fallback — has no data
-     *  installed, so the UI can offer to download it. Carries the locale that
-     *  would actually need installing. */
-    var onVoiceUnavailable: ((Locale) -> Unit)? = null
+    /** Fired (on main) when none of the accepted voices has data installed, so the
+     *  UI can offer to download one. Carries every locale that would do. */
+    var onVoiceUnavailable: ((List<Locale>) -> Unit)? = null
 
     private val tts: TextToSpeech = TextToSpeech(context.applicationContext) { status ->
         ready = status == TextToSpeech.SUCCESS
@@ -59,12 +58,13 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
 
     /**
      * Report whether the voice for [code] can speak, once the engine has
-     * initialized. [onResult] gets null if it's good to go, or the locale that
-     * needs its data installed. Lets callers gate a round on a usable voice
-     * instead of discovering the silence only after starting.
+     * initialized. [onResult] gets an empty list if it's good to go, otherwise
+     * every locale whose voice would do — installing any one of them is enough.
+     * Lets callers gate a round on a usable voice instead of discovering the
+     * silence only after starting.
      */
-    fun checkVoice(code: String, onResult: (Locale?) -> Unit) {
-        runWhenInitialized { onResult(if (ready) resolveVoice(code) else localeFor(code)) }
+    fun checkVoice(code: String, onResult: (List<Locale>) -> Unit) {
+        runWhenInitialized { onResult(if (ready) resolveVoice(code) else voiceCandidates(code)) }
     }
 
     private fun runWhenInitialized(block: () -> Unit) {
@@ -75,23 +75,21 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
     }
 
     /**
-     * Select the voice for [code]; if that voice isn't installed, fall back to a
-     * mutually-intelligible one. Google's on-device engine ships Croatian but
-     * almost never Serbian, so sr → hr keeps AI clues audible (hr ijekavica is
-     * also closer to Montenegrin pronunciation than sr ekavica). Returns null if
-     * a usable voice was selected, otherwise the locale that needs installing.
+     * Select the first installed voice among [voiceCandidates]. Returns an empty
+     * list once one is in use, otherwise all the candidates — the caller offers
+     * them as a choice, since installing any single one makes the round playable.
      */
-    private fun resolveVoice(code: String): Locale? {
-        var effective = localeFor(code)
-        var res = tts.setLanguage(effective)
-        if (!usable(res)) {
-            fallbackLocale(code)?.let { fb -> effective = fb; res = tts.setLanguage(fb) }
+    private fun resolveVoice(code: String): List<Locale> {
+        val candidates = voiceCandidates(code)
+        for (loc in candidates) {
+            if (usable(tts.setLanguage(loc))) return emptyList()
         }
-        return if (usable(res)) null else effective
+        return candidates
     }
 
     private fun applyLanguage(code: String) {
-        resolveVoice(code)?.let { loc -> main.post { onVoiceUnavailable?.invoke(loc) } }
+        val needs = resolveVoice(code)
+        if (needs.isNotEmpty()) main.post { onVoiceUnavailable?.invoke(needs) }
     }
 
     /**
@@ -106,16 +104,25 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
         return TextToSpeech.Engine.KEY_FEATURE_NOT_INSTALLED !in features
     }
 
-    private fun fallbackLocale(code: String): Locale? =
-        when (code.substringBefore("-").lowercase()) {
-            // No Serbian or Bosnian TTS voice ships with Android either — Croatian is the
-            // phonetically closest one (shared Latin pronunciation).
-            "sr", "bs" -> Locale("hr", "HR")
-            else -> null
+    companion object {
+        /**
+         * Voices that would satisfy [code], best first. Android's engine ships
+         * Croatian but almost never Serbian or Bosnian, so those also accept a
+         * Croatian voice — shared Latin pronunciation, and hr ijekavica is closer
+         * to Bosnian/Montenegrin than sr ekavica anyway. The player's own language
+         * is always tried first, so a device that does have it still uses it.
+         */
+        fun voiceCandidates(code: String): List<Locale> {
+            val primary = localeFor(code)
+            return when (code.substringBefore("-").lowercase()) {
+                "sr", "bs" -> listOf(primary, Locale("hr", "HR"))
+                else -> listOf(primary)
+            }
         }
 
-    private fun localeFor(code: String): Locale {
-        val parts = code.split("-")
-        return if (parts.size == 2) Locale(parts[0], parts[1]) else Locale(parts[0])
+        private fun localeFor(code: String): Locale {
+            val parts = code.split("-")
+            return if (parts.size == 2) Locale(parts[0], parts[1]) else Locale(parts[0])
+        }
     }
 }

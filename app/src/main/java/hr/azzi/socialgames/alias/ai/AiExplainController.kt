@@ -53,11 +53,9 @@ class AiExplainController(
     var transcript by mutableStateOf(""); private set
     var remaining by mutableDoubleStateOf(config.totalSeconds.toDouble()); private set
     var flash by mutableStateOf(false); private set
-    /** Non-null when the TTS voice for this language isn't installed; drives the
-     *  download prompt. Shown at most once per session. */
-    /** Non-null while play is blocked because the AI voice for this language has
-     *  no data installed; carries the locale to install. */
-    var voiceMissing by mutableStateOf<Locale?>(null); private set
+    /** Non-empty while play is blocked because no accepted AI voice is installed;
+     *  carries every locale that would unblock it. */
+    var voiceMissing by mutableStateOf<List<Locale>>(emptyList()); private set
     private var voiceChecking = false
     /** Bumped per gate run so a stale engine callback can't touch a newer check. */
     private var voiceGate = 0
@@ -129,11 +127,11 @@ class AiExplainController(
             if (gate != voiceGate) return@checkVoice
             voiceChecking = false
             voiceWatchdog?.cancel()
-            SpeechAnalytics.voiceResult(context, config.language, config.deck.id, success = needs == null)
-            if (needs != null) {
+            SpeechAnalytics.voiceResult(context, config.language, config.deck.id, success = needs.isEmpty())
+            if (needs.isNotEmpty()) {
                 voiceMissing = needs; phase = Phase.VoiceRequired
             } else if (phase == Phase.Loading || phase == Phase.VoiceRequired) {
-                voiceMissing = null; beginWord(); startTimer()
+                voiceMissing = emptyList(); beginWord(); startTimer()
             }
         }
 
@@ -144,7 +142,7 @@ class AiExplainController(
         voiceWatchdog = scope.launch {
             delay(VOICE_PROMPT_DELAY_MS)
             if (gate == voiceGate && voiceChecking) {
-                voiceMissing = config.language.javaLocale
+                voiceMissing = AISpeaker.voiceCandidates(config.language.locale)
                 phase = Phase.VoiceRequired
             }
         }
