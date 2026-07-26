@@ -87,14 +87,15 @@ fun AiExplainScreen(
         if (granted) controller.start() else launcher.launch(Manifest.permission.RECORD_AUDIO)
     }
 
-    // Re-check the voice whenever we come back (e.g. from the voice installer):
-    // the voice is required every time, so re-verify rather than assume.
+    // Coming back to the foreground while the prompt is up means the player has
+    // just been to the installer: reconnect to the TTS engine and re-check, so a
+    // voice they installed a moment ago is picked up without leaving the screen.
     val lifecycleOwner = LocalLifecycleOwner.current
     DisposableEffect(lifecycleOwner, controller) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME &&
                 controller.phase == AiExplainController.Phase.VoiceRequired) {
-                controller.runVoiceGate()
+                controller.runVoiceGate(reloadEngine = true)
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)

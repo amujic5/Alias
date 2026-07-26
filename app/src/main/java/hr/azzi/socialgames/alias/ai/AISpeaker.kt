@@ -24,20 +24,52 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
      *  UI can offer to download one. Carries every locale that would do. */
     var onVoiceUnavailable: ((List<Locale>) -> Unit)? = null
 
-    private val tts: TextToSpeech = TextToSpeech(context.applicationContext) { status ->
-        ready = status == TextToSpeech.SUCCESS
-        initialized = true
-        if (ready) { tts.setSpeechRate(rate); pending?.let { (t, l) -> pending = null; speak(t, l) } }
-        val waiters = synchronized(initWaiters) { initWaiters.toList().also { initWaiters.clear() } }
-        main.post { waiters.forEach { it() } }
+    private val appContext = context.applicationContext
+
+    private val progress = object : UtteranceProgressListener() {
+        override fun onStart(utteranceId: String?) { main.post { onSpeakingChanged?.invoke(true) } }
+        override fun onDone(utteranceId: String?) { main.post { onSpeakingChanged?.invoke(false) } }
+        @Deprecated("deprecated") override fun onError(utteranceId: String?) { main.post { onSpeakingChanged?.invoke(false) } }
     }
 
-    init {
-        tts.setOnUtteranceProgressListener(object : UtteranceProgressListener() {
-            override fun onStart(utteranceId: String?) { main.post { onSpeakingChanged?.invoke(true) } }
-            override fun onDone(utteranceId: String?) { main.post { onSpeakingChanged?.invoke(false) } }
-            @Deprecated("deprecated") override fun onError(utteranceId: String?) { main.post { onSpeakingChanged?.invoke(false) } }
-        })
+    /** Bumped per engine so a superseded instance's init callback is ignored. */
+    private var engineGen = 0
+    private var tts: TextToSpeech = createEngine()
+
+    private fun createEngine(): TextToSpeech {
+        val gen = ++engineGen
+        ready = false
+        initialized = false
+        // Held locally rather than read back off the field: with no engine installed
+        // TextToSpeech reports the failure from inside its own constructor, before
+        // the field has been assigned.
+        var engine: TextToSpeech? = null
+        engine = TextToSpeech(appContext) { status ->
+            if (gen != engineGen) return@TextToSpeech      // replaced while connecting
+            ready = status == TextToSpeech.SUCCESS
+            initialized = true
+            if (ready) {
+                engine?.setSpeechRate(rate)
+                pending?.let { (t, l) -> pending = null; speak(t, l) }
+            }
+            val waiters = synchronized(initWaiters) { initWaiters.toList().also { initWaiters.clear() } }
+            main.post { waiters.forEach { it() } }
+        }
+        engine.setOnUtteranceProgressListener(progress)
+        return engine
+    }
+
+    /**
+     * Rebuild the connection to the TTS engine. A voice installed after this
+     * instance was created isn't necessarily visible to it, so after sending the
+     * player off to the installer we reconnect rather than ask the same engine
+     * again and get the same stale "not installed" answer.
+     */
+    fun reload() {
+        runCatching { tts.stop(); tts.shutdown() }
+        synchronized(initWaiters) { initWaiters.clear() }
+        pending = null
+        tts = createEngine()
     }
 
     fun speak(text: String, locale: String) {

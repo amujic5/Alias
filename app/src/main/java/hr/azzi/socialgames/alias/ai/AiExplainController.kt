@@ -110,14 +110,23 @@ class AiExplainController(
         runVoiceGate()
     }
 
-    /** Block on a usable TTS voice; only start the round once it's confirmed.
-     *  Re-runs every time (e.g. on returning from the installer) — no caching. */
-    fun runVoiceGate() {
-        if (voiceChecking) return
+    /**
+     * Block on a usable TTS voice; only start the round once it's confirmed.
+     * Re-runs every time — no caching.
+     *
+     * [reloadEngine] reconnects to the TTS service first; pass it when coming back
+     * from the voice installer, because the engine this instance is bound to won't
+     * report a voice that was installed after the connection was made. It also
+     * overrides the in-flight guard: this is a deliberate fresh check, and the gate
+     * counter drops whatever the previous one was still waiting on.
+     */
+    fun runVoiceGate(reloadEngine: Boolean = false) {
+        if (voiceChecking && !reloadEngine) return
         voiceChecking = true
         phase = Phase.Loading
         val gate = ++voiceGate
         voiceWatchdog?.cancel()
+        if (reloadEngine) speaker.reload()
 
         // The engine's answer is the only authority, and it is allowed to arrive
         // late: binding to a cold TTS service can take many seconds, so it may well
