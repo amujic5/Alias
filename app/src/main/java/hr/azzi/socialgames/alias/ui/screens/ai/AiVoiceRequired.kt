@@ -24,6 +24,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.ai.AISttSupport
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import java.util.Locale
 
@@ -45,31 +46,80 @@ fun VoiceRequiredBody(locales: List<Locale>, onDownload: () -> Unit) {
         .map { it.getDisplayLanguage(it).replaceFirstChar { c -> c.uppercaseChar() } }
         .reduceOrNull { a, b -> "$a $or $b" }
         .orEmpty()
+    SpeechGateBody(
+        emoji = "🔊",
+        title = stringResource(R.string.ai_tts_voice_title),
+        message = stringResource(R.string.ai_tts_voice_message, language),
+        actionLabel = stringResource(R.string.ai_tts_voice_download),
+        onAction = onDownload,
+    )
+}
+
+/** Shared layout for the blocking speech gates (missing voice, missing recogniser).
+ *  [actionLabel] null renders the screen without a button, for the cases where
+ *  there is genuinely nothing the player can do about it. */
+@Composable
+fun SpeechGateBody(
+    emoji: String,
+    title: String,
+    message: String,
+    actionLabel: String? = null,
+    onAction: (() -> Unit)? = null,
+) {
     Box(Modifier.fillMaxSize().padding(horizontal = 12.dp), contentAlignment = Alignment.Center) {
         Column(horizontalAlignment = Alignment.CenterHorizontally) {
-            Text("🔊", fontSize = 40.sp)
+            Text(emoji, fontSize = 40.sp)
             Spacer(Modifier.height(16.dp))
             Text(
-                stringResource(R.string.ai_tts_voice_title),
+                title,
                 color = Gold, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
                 fontSize = 23.sp, textAlign = TextAlign.Center,
             )
             Spacer(Modifier.height(14.dp))
             Text(
-                stringResource(R.string.ai_tts_voice_message, language),
+                message,
                 color = Color.White.copy(alpha = 0.85f), fontFamily = Alias.body,
                 fontSize = 15.sp, lineHeight = 22.sp, textAlign = TextAlign.Center,
                 modifier = Modifier.padding(horizontal = 16.dp),
             )
-            Spacer(Modifier.height(28.dp))
-            Text(
-                stringResource(R.string.ai_tts_voice_download),
-                color = Color(0xFF0E1726), fontFamily = Alias.body, fontWeight = FontWeight.Bold,
-                fontSize = 16.sp, textAlign = TextAlign.Center,
-                modifier = Modifier.clip(RoundedCornerShape(50)).background(Gold)
-                    .clickable { onDownload() }.padding(horizontal = 40.dp, vertical = 15.dp),
-            )
+            if (actionLabel != null && onAction != null) {
+                Spacer(Modifier.height(28.dp))
+                Text(
+                    actionLabel,
+                    color = Color(0xFF0E1726), fontFamily = Alias.body, fontWeight = FontWeight.Bold,
+                    fontSize = 16.sp, textAlign = TextAlign.Center,
+                    modifier = Modifier.clip(RoundedCornerShape(50)).background(Gold)
+                        .clickable { onAction() }.padding(horizontal = 40.dp, vertical = 15.dp),
+                )
+            }
         }
+    }
+}
+
+/** Blocking gate for speech *recognition*: no service, no network, or a language
+ *  the recogniser doesn't offer. Mirrors the voice gate so the two read alike. */
+@Composable
+fun SttUnavailableBody(status: AISttSupport.Status, language: Locale, onRetry: () -> Unit) {
+    val name = language.getDisplayLanguage(language).replaceFirstChar { it.uppercaseChar() }
+    when (status) {
+        AISttSupport.Status.NoService -> SpeechGateBody(
+            emoji = "🎙️",
+            title = stringResource(R.string.ai_stt_unavailable_title),
+            message = stringResource(R.string.ai_stt_no_service_message),
+        )
+        AISttSupport.Status.NeedsInternet -> SpeechGateBody(
+            emoji = "📶",
+            title = stringResource(R.string.ai_stt_offline_title),
+            message = stringResource(R.string.ai_stt_offline_message, name),
+            actionLabel = stringResource(R.string.ai_stt_retry),
+            onAction = onRetry,
+        )
+        AISttSupport.Status.LanguageUnsupported -> SpeechGateBody(
+            emoji = "🎙️",
+            title = stringResource(R.string.ai_stt_unavailable_title),
+            message = stringResource(R.string.ai_stt_language_message, name),
+        )
+        AISttSupport.Status.Ready -> Unit
     }
 }
 

@@ -368,4 +368,10 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="htp_step4_body">Igrajte do vremenskog ili poenskog ograničenja. Pobeđuje tim koji završi sa najviše poena za najkraće vreme!</string>
     <string name="game_alias_ger">Alias Nemačka</string>
     <string name="alias_ger_info">Willkommen in der Welt des deutschen Alltags — von Feierabend und Pfandautomat bis Tatort, Bundesliga und Weihnachtsmarkt. Erklärt Begriffe und Namen wie „Currywurst“, „Schrebergarten“, „Reeperbahn“, „Helene Fischer“ und „Digga“, lasst euer Team raten und sammelt Punkte im großen Alias Deutschland.\n</string>
+    <string name="ai_stt_unavailable_title">Prepoznavanje govora nije dostupno</string>
+    <string name="ai_stt_no_service_message">Ovaj uređaj nema uslugu prepoznavanja govora, pa AI ne može da čuje tvoje odgovore.</string>
+    <string name="ai_stt_offline_title">Nema internet veze</string>
+    <string name="ai_stt_offline_message">Za prepoznavanje jezika %1$s potrebna je veza ili preuzet oflajn paket. Poveži se i pokušaj ponovo.</string>
+    <string name="ai_stt_language_message">Ovaj uređaj ne nudi prepoznavanje govora za jezik %1$s. Izaberi drugi jezik za igru.</string>
+    <string name="ai_stt_retry">Pokušaj ponovo</string>
 </resources>

@@ -94,8 +94,9 @@ fun AiExplainScreen(
     DisposableEffect(lifecycleOwner, controller) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME &&
-                controller.phase == AiExplainController.Phase.VoiceRequired) {
-                controller.runVoiceGate(reloadEngine = true)
+                (controller.phase == AiExplainController.Phase.VoiceRequired ||
+                    controller.phase == AiExplainController.Phase.SttUnavailable)) {
+                controller.retrySpeechGates()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -126,6 +127,11 @@ fun AiExplainScreen(
                         Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) }
                     AiExplainController.Phase.VoiceRequired ->
                         VoiceRequiredBody(controller.voiceMissing, onDownload = { launchVoiceInstaller(context) })
+                    AiExplainController.Phase.SttUnavailable ->
+                        SttUnavailableBody(
+                            controller.sttStatus, config.language.javaLocale,
+                            onRetry = { controller.retrySpeechGates() },
+                        )
                     AiExplainController.Phase.Denied ->
                         Box(Modifier.fillMaxSize(), Alignment.Center) {
                             Text(stringResource(R.string.ai_mic_needed),

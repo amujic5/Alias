@@ -31,7 +31,7 @@ class AiExplainController(
     fixedWords: List<String>?,
     private val onFinish: ((AIPracticeResult, List<String>) -> Unit)?,
 ) {
-    enum class Phase { Loading, VoiceRequired, Denied, Thinking, Guessing, Done }
+    enum class Phase { Loading, VoiceRequired, SttUnavailable, Denied, Thinking, Guessing, Done }
 
     private val sound = SoundSystem(context)
     private val speaker = AISpeaker(context, rate = 1.2f)
@@ -57,6 +57,8 @@ class AiExplainController(
      *  carries every locale that would unblock it. */
     var voiceMissing by mutableStateOf<List<Locale>>(emptyList()); private set
     private var voiceChecking = false
+    /** Why speech recognition is blocked, when it is. */
+    var sttStatus by mutableStateOf<AISttSupport.Status>(AISttSupport.Status.Ready); private set
     /** Bumped per gate run so a stale engine callback can't touch a newer check. */
     private var voiceGate = 0
     private var voiceWatchdog: Job? = null
@@ -104,6 +106,10 @@ class AiExplainController(
         speech.onFailed = { listening = false }
         speech.onLanguageUnavailable = {
             SpeechAnalytics.sttResult(context, config.language, config.deck.id, success = false)
+            // Nothing to salvage — the recogniser can't hear this language at all, so
+            // say so rather than leaving the mic quietly switched off.
+            sttStatus = AISttSupport.Status.LanguageUnsupported
+            phase = Phase.SttUnavailable
         }
         AIInterstitial.preload(context)
         // The AI voice is a hard requirement — never start the round without it.
@@ -140,7 +146,7 @@ class AiExplainController(
             if (needs.isNotEmpty()) {
                 voiceMissing = needs; phase = Phase.VoiceRequired
             } else if (phase == Phase.Loading || phase == Phase.VoiceRequired) {
-                voiceMissing = emptyList(); beginWord(); startTimer()
+                voiceMissing = emptyList(); runSttGate()
             }
         }
 
@@ -155,6 +161,33 @@ class AiExplainController(
                 phase = Phase.VoiceRequired
             }
         }
+    }
+
+    /**
+     * Second gate: can the recogniser actually hear this language. Kept separate
+     * from the voice gate because the answer is different in kind — a missing
+     * on-device model is not a blocker while there is a network, since recognition
+     * runs online and [AISttSupport] pulls the offline model down quietly for next
+     * time. Only a device with no recogniser, no connection, or a language nobody
+     * offers actually stops the round.
+     */
+    private fun runSttGate() {
+        val gate = voiceGate
+        AISttSupport.check(context, config.language.locale) { status ->
+            if (gate != voiceGate) return@check
+            sttStatus = status
+            if (status == AISttSupport.Status.Ready) { beginWord(); startTimer() }
+            else {
+                phase = Phase.SttUnavailable
+                SpeechAnalytics.sttResult(context, config.language, config.deck.id, success = false)
+            }
+        }
+    }
+
+    /** Re-run both gates from the top — the retry button on the recogniser gate. */
+    fun retrySpeechGates() {
+        voiceChecking = false
+        runVoiceGate(reloadEngine = true)
     }
 
     /** Log STT success once per session, on the first transcript that comes back. */

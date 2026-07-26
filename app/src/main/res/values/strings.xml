@@ -375,4 +375,10 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="htp_step4_body">Play to a time or point limit. The team that finishes with the most points in the least time wins!</string>
     <string name="game_alias_ger">Germany Alias</string>
     <string name="alias_ger_info">Willkommen in der Welt des deutschen Alltags — von Feierabend und Pfandautomat bis Tatort, Bundesliga und Weihnachtsmarkt. Erklärt Begriffe und Namen wie „Currywurst“, „Schrebergarten“, „Reeperbahn“, „Helene Fischer“ und „Digga“, lasst euer Team raten und sammelt Punkte im großen Alias Deutschland.\n</string>
+    <string name="ai_stt_unavailable_title">Speech recognition unavailable</string>
+    <string name="ai_stt_no_service_message">This device has no speech recognition service, so the AI can\'t hear your guesses.</string>
+    <string name="ai_stt_offline_title">No internet connection</string>
+    <string name="ai_stt_offline_message">Recognising %1$s needs a connection, or the offline language pack. Connect and try again.</string>
+    <string name="ai_stt_language_message">This device doesn\'t offer speech recognition for %1$s. Pick another language to play.</string>
+    <string name="ai_stt_retry">Try again</string>
 </resources>

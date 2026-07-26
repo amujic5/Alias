@@ -89,8 +89,9 @@ fun AiPlayScreen(
     DisposableEffect(lifecycleOwner, controller) {
         val observer = LifecycleEventObserver { _, event ->
             if (event == Lifecycle.Event.ON_RESUME &&
-                controller.phase == AiPlayController.Phase.VoiceRequired) {
-                controller.runVoiceGate(reloadEngine = true)
+                (controller.phase == AiPlayController.Phase.VoiceRequired ||
+                    controller.phase == AiPlayController.Phase.SttUnavailable)) {
+                controller.retrySpeechGates()
             }
         }
         lifecycleOwner.lifecycle.addObserver(observer)
@@ -119,6 +120,11 @@ fun AiPlayScreen(
                         Box(Modifier.fillMaxSize(), Alignment.Center) { CircularProgressIndicator(color = Color.White) }
                     AiPlayController.Phase.VoiceRequired ->
                         VoiceRequiredBody(controller.voiceMissing, onDownload = { launchVoiceInstaller(context) })
+                    AiPlayController.Phase.SttUnavailable ->
+                        SttUnavailableBody(
+                            controller.sttStatus, config.language.javaLocale,
+                            onRetry = { controller.retrySpeechGates() },
+                        )
                     AiPlayController.Phase.Denied ->
                         Box(Modifier.fillMaxSize(), Alignment.Center) {
                             Text(stringResource(R.string.ai_mic_needed),
