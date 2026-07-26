@@ -59,6 +59,9 @@ class AiExplainController(
      *  no data installed; carries the locale to install. */
     var voiceMissing by mutableStateOf<Locale?>(null); private set
     private var voiceChecking = false
+    /** Bumped per gate run so a stale engine callback can't touch a newer check. */
+    private var voiceGate = 0
+    private var voiceWatchdog: Job? = null
     private var sttLogged = false
     val correctWords: SnapshotStateList<String> = mutableStateListOf()
     val skippedWords: SnapshotStateList<String> = mutableStateListOf()
@@ -74,6 +77,9 @@ class AiExplainController(
     private val firstClueGap = 5_000L
     private val nextClueGap = 5_000L
     private val evalDebounce = 1_200L
+    /** How long to wait on the TTS engine before offering the download prompt.
+     *  Generous on purpose: a cold engine can take several seconds to bind. */
+    private val VOICE_PROMPT_DELAY_MS = 8_000L
 
     private val word: String get() = words.getOrElse(index) { "" }
 
@@ -112,18 +118,36 @@ class AiExplainController(
         if (voiceChecking) return
         voiceChecking = true
         phase = Phase.Loading
-        var settled = false
-        fun settle(needs: Locale?) {
-            if (settled) return
-            settled = true; voiceChecking = false
+        val gate = ++voiceGate
+        voiceWatchdog?.cancel()
+
+        // The engine's answer is the only authority, and it is allowed to arrive
+        // late: binding to a cold TTS service can take many seconds, so it may well
+        // land after the prompt below has already been shown, and it then overrules
+        // it either way.
+        speaker.checkVoice(config.language.locale) { needs ->
+            if (gate != voiceGate) return@checkVoice
+            voiceChecking = false
+            voiceWatchdog?.cancel()
             SpeechAnalytics.voiceResult(context, config.language, config.deck.id, success = needs == null)
-            if (needs != null) { voiceMissing = needs; phase = Phase.VoiceRequired }
-            else { voiceMissing = null; beginWord(); startTimer() }
+            if (needs != null) {
+                voiceMissing = needs; phase = Phase.VoiceRequired
+            } else if (phase == Phase.Loading || phase == Phase.VoiceRequired) {
+                voiceMissing = null; beginWord(); startTimer()
+            }
         }
-        speaker.checkVoice(config.language.locale) { settle(it) }
-        // Watchdog: if the engine never reports back, treat the voice as missing
-        // (block) rather than starting silently — the voice is required.
-        scope.launch { delay(4_000); settle(config.language.javaLocale) }
+
+        // Nothing back yet: show the prompt so the player isn't left on a spinner,
+        // but do NOT treat it as a verdict. This used to settle the gate, so a slow
+        // first init was reported as a missing voice — which is why leaving the
+        // screen and coming back (warm service, fast init) appeared to fix it.
+        voiceWatchdog = scope.launch {
+            delay(VOICE_PROMPT_DELAY_MS)
+            if (gate == voiceGate && voiceChecking) {
+                voiceMissing = config.language.javaLocale
+                phase = Phase.VoiceRequired
+            }
+        }
     }
 
     /** Log STT success once per session, on the first transcript that comes back. */

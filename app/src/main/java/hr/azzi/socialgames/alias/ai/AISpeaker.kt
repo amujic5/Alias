@@ -12,8 +12,11 @@ import java.util.Locale
 class AISpeaker(context: Context, private val rate: Float = 1.0f) {
 
     private val main = Handler(Looper.getMainLooper())
-    private var ready = false
-    private var initialized = false
+    // The engine's OnInitListener isn't guaranteed to run on the caller's thread,
+    // so the init state is volatile and the waiter list is guarded — otherwise a
+    // waiter added just as init completes can be dropped and never called back.
+    @Volatile private var ready = false
+    @Volatile private var initialized = false
     private val initWaiters = mutableListOf<() -> Unit>()
     private var pending: Pair<String, String>? = null
     var onSpeakingChanged: ((Boolean) -> Unit)? = null
@@ -26,8 +29,8 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
         ready = status == TextToSpeech.SUCCESS
         initialized = true
         if (ready) { tts.setSpeechRate(rate); pending?.let { (t, l) -> pending = null; speak(t, l) } }
-        val waiters = initWaiters.toList(); initWaiters.clear()
-        waiters.forEach { it() }
+        val waiters = synchronized(initWaiters) { initWaiters.toList().also { initWaiters.clear() } }
+        main.post { waiters.forEach { it() } }
     }
 
     init {
@@ -65,7 +68,10 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
     }
 
     private fun runWhenInitialized(block: () -> Unit) {
-        if (initialized) block() else initWaiters += block
+        val run = synchronized(initWaiters) {
+            if (initialized) true else { initWaiters += block; false }
+        }
+        if (run) block()
     }
 
     /**
