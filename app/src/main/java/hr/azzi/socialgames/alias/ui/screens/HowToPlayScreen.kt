@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.pager.HorizontalPager
 import androidx.compose.foundation.pager.PagerState
@@ -64,7 +65,7 @@ fun HowToPlayScreen(onGotIt: () -> Unit) {
         // Dim scrim over the gradient (Figma rgba(11,23,38,0.5)).
         Box(Modifier.fillMaxSize().background(Color(0xFF0B1726).copy(alpha = 0.5f)))
 
-        Box(Modifier.fillMaxSize().padding(24.dp), contentAlignment = Alignment.Center) {
+        Box(Modifier.fillMaxSize().systemBarsPadding().padding(24.dp), contentAlignment = Alignment.Center) {
             Column(
                 Modifier.fillMaxWidth().clip(RoundedCornerShape(28.dp)).background(Color.White)
                     .padding(vertical = 26.dp),

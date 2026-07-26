@@ -6,6 +6,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -25,7 +26,7 @@ import hr.azzi.socialgames.alias.ui.theme.PillKind
 fun WinnerScreen(winnerName: String, onShare: () -> Unit, onFinish: () -> Unit) {
     BrandBackground {
         Column(
-            Modifier.fillMaxSize().padding(28.dp),
+            Modifier.fillMaxSize().systemBarsPadding().padding(28.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
             verticalArrangement = Arrangement.Center,
         ) {
