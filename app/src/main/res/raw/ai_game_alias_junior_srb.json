@@ -60,7 +60,7 @@
         "Pre nego što je izmišljena, veš se prao rukom.",
         "Ima različite programe za različite tkanine.",
         "Centrifuga je deo koji iscedi vodu iz mokre odeće.",
-        "Bela kućna mašina koja štedi vreme i trud."
+        "Beli kućni uređaj koji štedi vreme i trud."
       ]
     },
     {
@@ -298,7 +298,7 @@
         "Znaš ono kad uberete ruže i stavite ih u vazu?",
         "Ima latice, prašnike i miris.",
         "Može biti ruža, lala, suncokret ili lavanda.",
-        "U proljeće svuda oko nas procveta.",
+        "U proleće ih ima svuda oko nas, na livadama i u baštama.",
         "Mlada deca ih beraju za mamu i daju im sa osmehom.",
         "Suvi, koriste se za dekoraciju i mirišljave stvari."
       ]
@@ -329,7 +329,7 @@
         "Može biti roman, bajka, udžbenik ili slikovnica.",
         "Harry Potter je junac veoma popularne serije.",
         "Pisac je osoba koja izmišlja priče i piše ih.",
-        "Elektronska verzija zove se e-knjiga.",
+        "Elektronska verzija se čita na tabletu ili posebnom čitaču.",
         "Deca počinju sa slikovnicama pa prelaze na deblje."
       ]
     },
@@ -443,12 +443,12 @@
       "clues": [
         "Žuto kiselo voće koje raste na stablu.",
         "Kad ga ugrizete, zazubi i kiselo je.",
-        "Koristi se za limunad, koktele i začin jelima.",
+        "Koristi se za koktele, čaj i kao začin ribi i mesu.",
         "Ima tvrdu žutu koru i sočno meso unutra.",
         "Znaš ono kad cedeš taj žuti plod i sok ide svuda?",
         "Bogat je vitaminom C koji jača imunitet.",
         "Raste u toplim krajevima kao Italija i Španija.",
-        "Limunadist squeezuje ga u vodu sa šećerom.",
+        "Iscedi se u hladnu vodu sa šećerom i dobije se piće koje deca obožavaju leti.",
         "Kora mu se ribuje i stavlja u kolač.",
         "Sličan je naranči ali zelenji i sitniji."
       ]
@@ -458,7 +458,7 @@
       "clues": [
         "Kućni uređaj koji priprema topli napitak od mljevene kafe.",
         "Mama ili tata ga uključuju svakog jutra.",
-        "Sipate kafu ili kapsulu unutra i pritisnete dugme.",
+        "Ubacite kapsulu ili sipate mleveno zrno unutra pa pritisnete dugme.",
         "Miris koji širi ujutru budi celu kuću.",
         "Znaš ono kad čujete onaj zvuk ključanja i miriše po kafi?",
         "Može biti espresso mašina, filter ili kapsulna.",
@@ -490,12 +490,12 @@
         "Najveći kopenski grabljivac na svetu.",
         "Odlično pliva i lovi foke ispod leda.",
         "Ima gusto belo krzno koje ga greje na hladnoći.",
-        "Znaš ono u dokumentarcima kad divovski beli sisavac hoda po ledu?",
+        "Znaš ono u dokumentarcima kad ogroman krznati sisar bele boje hoda po ledu?",
         "Voli da jede ribu i morske sisare.",
         "Klimatske promene ugrožavaju njegov dom — arktički led.",
         "Bebice se rađaju bele, male i slepe.",
         "Coca-Cola ih prikazuje u božićnim reklamama.",
-        "U zoološkim vrtovima deca se dive njihovoj belini i veličini."
+        "U zoološkim vrtovima deca se dive njegovoj veličini i snežnom krznu."
       ]
     },
     {
@@ -537,9 +537,9 @@
         "Ima ih u raznim bojama i veličinama.",
         "Znaš ono kad na planini hitro juriš niz sneg sa tim daskama?",
         "Uz njih ide topla odeća, kaciga i naočare.",
-        "Skijanje je i olimpijski sport.",
+        "Spust niz stazu na njima je i olimpijski sport.",
         "Polovi su štapovi koji pomažu ravnoteži pri vožnji.",
-        "Zlatibor, Kopaonik i Divčibare su poznata skijališta u Srbiji.",
+        "Zlatibor, Kopaonik i Divčibare su poznate planine gde se to radi u Srbiji.",
         "Pre stavljanja obavezno zagrejte mišiće i istegnite se."
       ]
     },
@@ -734,7 +734,7 @@
         "Ima sitne žute tačkice na površini.",
         "Sa šlagom je popularna poslastica.",
         "Može se naći na pijaci i u marketu.",
-        "Jagodasti miris koristi se u parfemima i bombonama.",
+        "Njen miris se često dodaje u parfeme, sapune i bombone.",
         "Deca ih beru s bake u bašti i jedu pravo s grane."
       ]
     },
@@ -764,7 +764,8 @@
         "Znaš ono kad hodaš šumom posle kiše i nađu se svuda po tlu?",
         "Mario iz poznate video igrice skače po njima i skuplja poene.",
         "Smolbog u bajkama često živi ispod nje ili u njenoj blizini.",
-        "Nije voće, nije povrće, ali je ukusna kad se ispeče na ulju."
+        "Nije voće, nije povrće, ali je ukusna kad se ispeče na ulju.",
+        "Šampinjon i vrganj su najpoznatije jestive vrste kod nas."
       ]
     },
     {
@@ -778,7 +779,8 @@
         "U crtanim filmovima pustinjski lik uvek nekako padne na njega.",
         "Cvetovi mu mogu biti prelepi, ali telo mu je puno šiljaka.",
         "Životinje u pustinji, poput kamile, nekad jedu delove ove biljke.",
-        "Nalazi se na logou nekih meksičkih restorana i prodavnica."
+        "Nalazi se na logou nekih meksičkih restorana i prodavnica.",
+        "Idealan poklon za nekoga ko stalno zaboravlja da zaliva biljke."
       ]
     },
     {
@@ -792,7 +794,8 @@
         "Ima rešetku od metala na kojoj ostaju prugaste nagorele linije na mesu.",
         "Bez njega bi slava ili rođendan napolju izgledali sasvim drugačije.",
         "Može biti na gas, na ugalj ili na struju, ali uvek pravi ukusan obrok.",
-        "Američki film i TV serije uvek prikazuju porodicu oko njega za Dan zahvalnosti."
+        "Američki film i TV serije uvek prikazuju porodicu oko njega za Dan zahvalnosti.",
+        "Prvog maja se u Srbiji cela zemlja preseli u prirodu upravo zbog njega."
       ]
     },
     {
@@ -806,7 +809,8 @@
         "Znaš ono kad ujutru na praznike dotrčiš u dnevnu sobu i vidiš paketića ispod nje?",
         "U pesmi Jingle Bells peva se o proslavi koja uključuje upravo ovu dekoraciju.",
         "Može biti prava, posečena iz šume, ili veštačka od plastike.",
-        "Bez nje Božić i Nova godina u kući ne bi izgledali isto."
+        "Bez nje Božić i Nova godina u kući ne bi izgledali isto.",
+        "Posle praznika se raskiti i iznese, a igle ostanu razbacane po celom stanu."
       ]
     },
     {
@@ -820,7 +824,8 @@
         "Životinja pod morem istog naziva živi prikačena za stene.",
         "Lik iz popularne crtane serije nosi upravo ovo ime i živi pod morem.",
         "Može biti žut, zelen, plav, i košta malo novca u prodavnici.",
-        "Kad ga stisnete, voda izlazi napolje, a kad pustite, ponovo je upija."
+        "Kad ga stisnete, voda izlazi napolje, a kad pustite, ponovo je upija.",
+        "U autoperionici ga koriste za pranje karoserije, samo je veći i mekši."
       ]
     },
     {
@@ -834,7 +839,8 @@
         "Taksista ga nikada ne pušta dok vozi.",
         "U starim filmovima o špijunima, junak uvek dramatično okreće ovu stvar u kritičnom trenutku.",
         "Nema ga u biciklu, ali ga ima u svakom automobilu i kamionu.",
-        "Bez njega ne možeš da skreneš auto ni levo ni desno."
+        "Bez njega ne možeš da skreneš auto ni levo ni desno.",
+        "U Engleskoj i Japanu se nalazi na desnoj strani, a kod nas na levoj."
       ]
     },
     {
@@ -848,7 +854,8 @@
         "Bogata je vitaminom A koji je dobar za oči.",
         "Stavlja se u gotovo svaki domaći čorbaluk ili supu.",
         "Beli zec Bugs Bunny je uvek nosi u šapi i žvaće.",
-        "Može biti dugačka ili kratka, ali uvek iste narandžaste boje."
+        "Može biti dugačka ili kratka, ali uvek iste narandžaste boje.",
+        "Na pijaci se prodaje u vezicama, sa zelenim listovima još uvek na vrhu."
       ]
     },
     {
@@ -862,7 +869,8 @@
         "U crtanim filmovima pas uvek ima svoju malu zgradu u dvorištu.",
         "Nekad se na nju napiše i ime psa koji u njoj živi.",
         "Snoopy, poznati crtani lik, uvek leži na krovu svoje ovakve konstrukcije.",
-        "Mnogo je manja od prave kuće, ali psu je sasvim dovoljna."
+        "Mnogo je manja od prave kuće, ali psu je sasvim dovoljna.",
+        "Zimi se u nju stavlja slama ili staro ćebe da ljubimcu bude toplije."
       ]
     },
     {
@@ -876,7 +884,8 @@
         "Jedna je od omiljenih životinja u dečijim knjigama i šarolikim igračkama.",
         "Njen vrat može biti duži od dva metra.",
         "Toys R Us je koristio lik ove životinje kao maskotu svoje prodavnice.",
-        "Uprkos ogromnom vratu, ima isto toliko pršljenova kao i čovek."
+        "Uprkos ogromnom vratu, ima isto toliko pršljenova kao i čovek.",
+        "Spava svega nekoliko sati dnevno, i to najčešće stojeći."
       ]
     },
     {
@@ -885,12 +894,13 @@
         "Veliki muzički instrument sa crnim i belim tasterima.",
         "Sviraš ga rukama, pritiskajući tastere koji prave različite zvukove.",
         "Stoji u muzičkim školama i na pozornicama.",
-        "Znaš ono kad sedeš ispred njega i počneš da udараš po tasterima?",
+        "Znaš ono kad sedeš ispred njega i počneš da udaraš po tasterima?",
         "Mozart je bio čudo od deteta upravo na ovom instrumentu.",
         "Može biti uspravni ili krilni, a onaj veliki se zove koncetrni.",
         "Deca ga često uče u muzičkoj školi kao prvi instrument.",
         "Tom iz crtanog filma Tom i Džeri nekad završi u njemu ili ispod njega.",
-        "Ima 88 tastera i može da odsvira skoro svaki muzički ton."
+        "Ima 88 tastera i može da odsvira skoro svaki muzički ton.",
+        "Betoven je za njega pisao muziku i svirao ga i kada je već oglušio."
       ]
     },
     {
@@ -904,21 +914,23 @@
         "U akvarijumima je jedno od glavnih atrakcija za posetioce.",
         "Napada jer je predator, ali su napadi na ljude zapravo retki.",
         "Njene kandže tj. zubi su jedni od najoštrejih u životinjskom svetu.",
-        "Deca je crtaju kad zamišljaju strašne ribe iz dubokog mora."
+        "Deca je crtaju kad zamišljaju strašne ribe iz dubokog mora.",
+        "Skelet joj nije od kostiju nego od hrskavice, kao naša ušna školjka."
       ]
     },
     {
       "word": "slamka",
       "clues": [
         "Tanka cevčica kroz koju piješ sok ili mlečni šejk.",
-        "Stavljaš je u čašu i usima upijаš tečnost.",
+        "Stavljaš je u čašu i usima upijaš tečnost.",
         "Može biti plastična, papirna ili od metala.",
-        "Znaš ono kad naručiš limuanadu i u čaši se nađe ova tanкa stvar?",
+        "Znaš ono kad naručiš limuanadu i u čaši se nađe ova tanka stvar?",
         "Deca je vole jer pijenje uz nju izgleda zabavnije.",
         "McDonalds i drugi fast-food lanci je uvek daju uz piće.",
         "Savijene ili ravne, ima ih u različitim bojama i šarama.",
         "Ako je pritisneš ili presaviješ, tečnost ne može da prođe.",
-        "Bez nje bi trebalo da nagneš čašu da bi popio šejk."
+        "Bez nje bi trebalo da nagneš čašu da bi popio šejk.",
+        "Zbog zaštite mora i okeana mnoge zemlje su zabranile plastičnu verziju."
       ]
     },
     {
@@ -932,7 +944,8 @@
         "Ima više sedišta nego automobil, ali ide sporijim tempom od voza.",
         "Vozač sedi napred iza velikog volana i prodaje ili proverava karte.",
         "Školski primeri u Americi su uvek žute boje.",
-        "Mnogo je jeftiniji od taksija i prevozi te od stanice do stanice."
+        "Mnogo je jeftiniji od taksija i prevozi te od stanice do stanice.",
+        "Kada je gužva, putnici stoje i drže se za šipke dok vozilo kreće i koči."
       ]
     },
     {
@@ -946,7 +959,8 @@
         "Od njega se pravi nameštaj, papir, i drvene kuće.",
         "Jesen mu menja boju listova u crvenu, žutu i narandžastu.",
         "Tarzan se ljulja sa jednog na drugo kroz džunglu.",
-        "Najstariji primerci na svetu stari su više od četiri hiljade godina."
+        "Najstariji primerci na svetu stari su više od četiri hiljade godina.",
+        "Godine mu se broje po krugovima koji se vide kad se preseče deblo."
       ]
     },
     {
@@ -956,11 +970,12 @@
         "Kad ga baciš, napravi krug u vazduhu i vrati se nazad ka tebi.",
         "Koriste ga Aboridžini u Australiji kao tradicionalno oružje ili igračku.",
         "Znaš ono kad baciš nešto i ono se čudesno vrati?",
-        "Deca ga bacaju u parku i smеju se kad se vrati.",
+        "Deca ga bacaju u parku i smeju se kad se vrati.",
         "Oblik mu liči na slovo V ili lakat.",
         "U crtanim filmovima ga junak uvek baci i nekako uvek nekoga pogodi pri povratku.",
         "Simbol je nečega što se vraća onom ko ga pokrene.",
-        "Može biti dekorativni i stajati na polici, a može biti i pravi sportski rekvizit."
+        "Može biti dekorativni i stajati na polici, a može biti i pravi sportski rekvizit.",
+        "Kad nekome nešto loše učiniš, kažu da ti se vrati — baš kao ova sprava."
       ]
     },
     {
@@ -974,7 +989,8 @@
         "Ukrašavaju dnevnu sobu ili spavaću sobu i daju joj izgled.",
         "Mačke ih ponekad koriste kao penjačice i pokidaju ih.",
         "Mogu biti kupljene ili ušivene po meri za prozor.",
-        "Bez njih bi sunce ujutru uvek budilo pre nego što hoćeš da ustaneš."
+        "Bez njih bi sunce ujutru uvek budilo pre nego što hoćeš da ustaneš.",
+        "Umesto njih neki na prozor stave rolete ili venecijanere."
       ]
     },
     {
@@ -988,7 +1004,8 @@
         "Može dostizati visoke brzine i često se viđa na trkama.",
         "Nema krov ni vrata, pa si izložen vetru dok voziš.",
         "U Aziji je jedno od najpopularnijih prevoznih sredstava.",
-        "Deca sanjaju da jednog dana voze ovakvo vozilo kad odrastu."
+        "Deca sanjaju da jednog dana voze ovakvo vozilo kad odrastu.",
+        "Za vožnju je potrebna posebna kategorija vozačke dozvole, ona sa slovom A."
       ]
     },
     {
@@ -1000,9 +1017,10 @@
         "Znaš ono kad stojiš na obali i gledaš kako polako plovi to ogromno plovilo?",
         "Ima kobilicu ispod vode i palubu na vrhu gde šetaju putnici.",
         "Kapetan stoji na komandnom mostu i upravlja njim.",
-        "Pirаti su se borili na njima pre stotinama godina.",
-        "Brodovi koji prevoze automobile i kamione zovu se trajekti.",
-        "Titanik je bio jedan od najvećih ovakvih plovila svog vremena."
+        "Pirati su se borili na njima pre stotinama godina.",
+        "Ona plovila koja prevoze automobile i kamione zovu se trajekti.",
+        "Titanik je bio jedan od najvećih ovakvih plovila svog vremena.",
+        "Kad kreće na put, kapetan zatrubi sirenom, a putnici mašu sa palube."
       ]
     },
     {
@@ -1016,21 +1034,23 @@
         "Volkswagen je napravio čuven model koji se zvao Bulli i bio je simbol hipika.",
         "Čuvarice u školama njime voze decu na izlete.",
         "Može prevesti kauč, frižider ili celu sobu nameštaja.",
-        "Između je automobila i kamiona po veličini."
+        "Između je automobila i kamiona po veličini.",
+        "Muzičke grupe u njemu prevoze instrumente i opremu na svirke."
       ]
     },
     {
       "word": "lav",
       "clues": [
         "Velika mačka grabljivica koja živi u Africi i zove se kralj džungle.",
-        "Mužjak ima gustу grivu oko glave.",
+        "Mužjak ima gustu grivu oko glave.",
         "Rika mu se čuje na kilometrima daljine.",
         "Znaš ono kad u zoo-vrtu prođeš pored kaveza i čuješ taj glasni ryk?",
         "Simba je ime poznatog lika iz animiranog filma koji prikazuje ovu životinju.",
         "Živi u grupi koja se zove čopor, a lov obavljaju ženke.",
         "Mnogi fudbalski klubovi i zemaljski grbovi imaju ovu životinju u simbolu.",
         "Astrološki znak koji pokriva kraj jula i početak avgusta nosi njegovo ime.",
-        "Hercules se borio sa njim u grčkim mitovima."
+        "Hercules se borio sa njim u grčkim mitovima.",
+        "Spava i po dvadeset sati dnevno, pa mu titula kralja ide lako."
       ]
     },
     {
@@ -1044,7 +1064,8 @@
         "Roomba je poznata verzija koja se kreće sama bez čoveka.",
         "Pravi glasnu buku, posebno kad usisa nešto sitno ko paran.",
         "Robot iz dečijih bajki koji čisti sobu bi imao upravo ovu mašinu.",
-        "Maca i pas ga se plaše jer im smeta buka motora."
+        "Maca i pas ga se plaše jer im smeta buka motora.",
+        "Dajson je marka koja je proslavila verziju bez kese i bez kabla."
       ]
     },
     {
@@ -1053,12 +1074,13 @@
         "Hladna, slatka poslastica koja se jede posebno leti.",
         "Pravi se od mleka, šećera i ukusa kao što su čokolada ili vanila.",
         "Može se servirati u kornetu, čaši ili na štapiću.",
-        "Znaš ono kad u vrućem letnjem danu dobijete onu hladnu slatkоću?",
+        "Znaš ono kad u vrućem letnjem danu dobijete onu hladnu slatkoću?",
         "Deca ga obožavaju, a posebno čokoladni ili jagodasti.",
         "U Italiji se naziva džilato i smatra se jednim od najpristupačnijih deserata.",
         "Topi se brzo na vrućini pa ga treba jesti polako.",
         "Svake godine se otvore tezge i prodavnice koje ga nude na svakom uglu.",
-        "Bez njega proslava u vrućem danu ne bi bila ista."
+        "Bez njega proslava u vrućem danu ne bi bila ista.",
+        "Ako ga pojedeš prebrzo, glava te zaboli od hladnoće na par sekundi."
       ]
     },
     {
@@ -1072,7 +1094,8 @@
         "Može biti velika u dvorištu ili mala za vežbanje u stanu.",
         "Roditelji uvek govore deci da budu oprezna na njoj.",
         "Na njoj možeš napraviti salto ako si dovoljno vezan.",
-        "Olimpijski sport skokovi u vis koristi sličan rekvizit."
+        "Olimpijski sport skokovi u vis koristi sličan rekvizit.",
+        "Ako dvoje skaču istovremeno, jedno odleti mnogo više i tu obično nastane plač."
       ]
     },
     {
@@ -1086,7 +1109,8 @@
         "Aladdin iz Disney filma putuje upravo na letećem primerku.",
         "Skuplja prašinu pa ga treba usisavati redovno.",
         "U dnevnoj sobi ispod stola se obično nalazi jedan od njih.",
-        "Iranski i turski ručno rađeni primerci se smatraju umetničkim delima."
+        "Iranski i turski ručno rađeni primerci se smatraju umetničkim delima.",
+        "Po crvenom takvom šetaju glumci pred fotografima na filmskim festivalima."
       ]
     },
     {
@@ -1096,11 +1120,12 @@
         "Mužjak ima prelepo plavo-zeleno perje sa crtežom koji liči na oči.",
         "Živi u parkovima i zoološkim vrtovima gde posetioce impresionira perjem.",
         "Znaš ono kad ptica raširi ceo rep i izgleda ko cvet?",
-        "Kada raširi perje, liči na ogromnu lepezу u boji.",
+        "Kada raširi perje, liči na ogromnu lepezu u boji.",
         "Ženka je manje šarena i nema tako spektakularno perje.",
         "U Indiji se smatra svetom pticom i simbolom sreće.",
         "Hera, grčka boginja, imala ga je kao svetu pticu.",
-        "Deca ga obožavaju u zoo-vrtu jer je toliko šaren."
+        "Deca ga obožavaju u zoo-vrtu jer je toliko šaren.",
+        "Kada hoda, vuče rep za sobom kao dugačak šlep venčanice."
       ]
     },
     {
@@ -1109,12 +1134,13 @@
         "Igra sa malim pravougaonim pločicama koje imaju tačkice.",
         "Na svakoj pločici su dve strane sa različitim brojem tačaka od nula do šest.",
         "Slažeš ih jednu za drugom spajajući iste brojeve tačaka.",
-        "Znaš ono kad porediš niz tih pločica i onda guraš prvu da padnu kao domino efekat?",
+        "Znaš ono kad poređaš dugačak niz pločica pa gurneš prvu i sve popadaju redom?",
         "Mogu se slagati u dugačak niz i pustiti da padaju jedna za drugom.",
         "Starinska porodična igra koja ne zahteva struju ni baterije.",
-        "Postoji i Domino efekat u fizici nazvan po ovoj igrici.",
+        "Po ovoj igri nazvan je i efekat u kome jedan događaj pokrene ceo lanac sledećih.",
         "Igra se u svim generacijama, od dece do baka i deka.",
-        "Bela strana svake pločice je glatka, a crne tačkice označavaju vrednost."
+        "Bela strana svake pločice je glatka, a crne tačkice označavaju vrednost.",
+        "U kafanama i na klupama ispred zgrade starije ekipe ih glasno lupaju po stolu."
       ]
     },
     {
@@ -1128,7 +1154,8 @@
         "Drvodelji je ne smeju da puste deci u ruke jer je opasna.",
         "Može biti mala za tanke daske ili velika za debla.",
         "U horror filmovima zlotvor uvek nosi ovu stvar kao strašno oružje.",
-        "Bez nje majstor ne bi mogao da skrati ni jednu dasku."
+        "Bez nje majstor ne bi mogao da skrati ni jednu dasku.",
+        "Kada je stara i tanka, može se savijati i tada zvuči kao muzički instrument."
       ]
     },
     {
@@ -1142,7 +1169,8 @@
         "Cvrkutave zlatne ribice plivaju u prozirnoj okrugloj vrsti ove stvari.",
         "Može biti plitka ili duboka, zavisno od toga šta se u nju stavlja.",
         "Pekarke su uvek pune odabrane hrane.",
-        "Bez nje ne bismo mogli da kuvamo, serviramo ni čuvamo hranu."
+        "Bez nje ne bismo mogli da kuvamo, serviramo ni čuvamo hranu.",
+        "Grnčar je pravi na vitlu od gline pa je onda peče u peći."
       ]
     },
     {
@@ -1153,10 +1181,11 @@
         "Bleji i živi u stadu zajedno sa drugima svoje vrste.",
         "Znaš ono kad ne možeš da spavaš i brojiš ih dok preskakuju ogradu?",
         "Pastir ih čuva na pašnjaku uz pomoć ovčarskog psa.",
-        "Šiše ih svake godine da bi dobili vunu za pravljenje odеće.",
+        "Šiše ih svake godine da bi dobili vunu za pravljenje odeće.",
         "Dolly je bila prva sisara klonirana u laboratoriji i bila je upravo ove vrste.",
         "Mladi se zove jagnje, a od njenog mleka se pravi sir.",
-        "Bо-Pip iz nursery rime izgubila je baš nju."
+        "Bo-Pip iz nursery rime izgubila je baš nju.",
+        "Njeno meso se zove jagnjetina ili bravetina, zavisno od starosti."
       ]
     },
     {
@@ -1170,7 +1199,8 @@
         "Jimi Hendrix, Kurt Cobain, i Eric Clapton su je svirali majstorski.",
         "Španska flamenko muzika bez nje ne bi mogla da postoji.",
         "Može se naučiti i online, a mnoga deca počinju da je uče u školi.",
-        "Kao Hero igrica je cela bila posvećena sviranju nje."
+        "Kao Hero igrica je cela bila posvećena sviranju nje.",
+        "Oko logorske vatre uvek se nađe neko ko zna bar tri akorda na njoj."
       ]
     },
     {
@@ -1184,7 +1214,8 @@
         "Kora joj je klizava pa u crtanim filmovima likovi uvek posrću na njoj.",
         "Može biti žuta, zelena ili čak crvena zavisno od sorte.",
         "Minions iz popularne animirane franšize su opsednuti njome.",
-        "Slatka je i bez dodavanja šećera, i deca je obično odmah vole."
+        "Slatka je i bez dodavanja šećera, i deca je obično odmah vole.",
+        "Botanički gledano, plod raste na ogromnoj travi, a ne na pravom drvetu."
       ]
     },
     {
@@ -1198,7 +1229,8 @@
         "Winnie the Pooh je možda najpoznatiji animirani lik koji je upravo ovo.",
         "Na sajmu dobijaš ogromnog ako pogodiš metu ili dobiješ nagradnu igru.",
         "Isto uvek ima dugme za nos i plastične ili staklene oči.",
-        "Dеca ga nose sa sobom kao talisman za utehu i sigurnost."
+        "Deca ga nose sa sobom kao talisman za utehu i sigurnost.",
+        "Ako se uprlja, ide u veš mašinu na kratki program pa se suši na terasi."
       ]
     },
     {
@@ -1207,12 +1239,13 @@
         "Tanka gumena vrećica koju naduvavaš vazduhom ili helijumom.",
         "Pun helijuma leti prema plafonu i drži ga se koncem.",
         "Na proslavama i rođendanima uvek ima mnogo njih u raznim bojama.",
-        "Znaš ono kad naduvаš jednu od njih i ona postane mekana kugla?",
+        "Znaš ono kad naduvaš jednu od njih i ona postane mekana kugla?",
         "Ako ga probodeš iglom, pukne sa glasnim praskom.",
         "Postoje i džinovski koji prevoze ljude u košari ispod sebe.",
         "Klovnovi ih savijaju u oblike životinja na dečijim žurkama.",
-        "U Čarobnjaku iz Oza, Dorothyna kućа uleće u vremensku nepogodu uz motiv koji liči na džinovski.",
-        "Pušta se u vazduh na proslavama i leti visoko sve dok ne pukne."
+        "U Čarobnjaku iz Oza, Dorothyna kuća uleće u vremensku nepogodu uz motiv koji liči na džinovski.",
+        "Pušta se u vazduh na proslavama i leti visoko sve dok ne pukne.",
+        "Ako ga protrljaš o kosu, zalepi se za zid zbog statičkog elektriciteta."
       ]
     },
     {
@@ -1222,17 +1255,18 @@
         "Ima grivu, kopita i rep, i može da trči veoma brzo.",
         "Farme i ergele su mesta gde se on gaji.",
         "Znaš ono kad vidite ogromnu životinju kako galopi poljem?",
-        "Konjički sport jahanje je olimpijska disciplina.",
+        "Jahanje i preskakanje prepona su olimpijske discipline.",
         "My Little Pony je popularna franšiza igračaka i crtanog filma posvećena malim verzijama njega.",
         "Vitezovi u srednjem veku su na njemu jurišali u bitke.",
         "Beli primerak je simbol čistoće i pojavljuje se u bajkama.",
-        "Može biti crn, beli, riđi ili šareni, a zove se pastuv, kobila ili ždrebе."
+        "Može biti crn, beli, riđi ili šareni, a zove se pastuv, kobila ili ždrebe.",
+        "Snaga motora u automobilu meri se u jedinici nazvanoj po njemu."
       ]
     },
     {
       "word": "delfin",
       "clues": [
-        "Inteligentna morska životinja sisар koja se igra u vodi i skače.",
+        "Inteligentna morska životinja sisar koja se igra u vodi i skače.",
         "Komunicira zviždanjem i klikovima, a ne govorom.",
         "Znaš ono kad na moru vidite kako skaču i rone pored broda?",
         "Smatraju se jednim od najpametnijih stvorenja na planeti.",
@@ -1240,21 +1274,23 @@
         "Flipper je bio poznata TV serija o jednom takvom i dečaku koji je bio sa njim.",
         "Pomažu ponekad plovilima da nađu put kroz tesne prolaze.",
         "Uvek izgledaju kao da se smeju zbog oblika vilice.",
-        "Žive u grupama koje se zovu čopori i druže se medjusobno."
+        "Žive u grupama koje se zovu čopori i druže se medjusobno.",
+        "Jedan stil plivanja nosi njegovo ime — plivač ga izvodi obema nogama zajedno."
       ]
     },
     {
       "word": "torta",
       "clues": [
-        "Slatki kolač koji se pravi za posebne prilike kao što su rоđendani.",
+        "Slatki kolač koji se pravi za posebne prilike kao što su rođendani.",
         "Na vrhu ima kremu, voće ili čokoladni ukras.",
-        "Svi čekaju da se svеće ugase i da se iseče na komade.",
+        "Svi čekaju da se sveće ugase i da se iseče na komade.",
         "Znaš ono kad unesu onu ukrasnu, višespratnu slatkoću sa svećicama?",
-        "Može biti čokoladna, vanila, jagodastа ili od sira.",
+        "Može biti čokoladna, vanila, jagodasta ili od sira.",
         "Svadbena se pravi visoka i ukrašena kao arhitektonsko delo.",
         "Deca na nju stavljaju toliko svećica koliko imaju godina.",
         "Mary Antoinette je navodno rekla da narod može da jede upravo nju.",
-        "Bez nje proslava rodendana ne izgleda kao prava proslava."
+        "Bez nje proslava rodendana ne izgleda kao prava proslava.",
+        "Poslastičar je ukrašava šlagom kroz špric sa raznim nastavcima."
       ]
     },
     {
@@ -1268,7 +1304,8 @@
         "Punite ga gorivom na benzinskoj stanici.",
         "Herbie je bio čuven lik iz Disney filma, bijeli trkaći primerak sa brojem 53.",
         "Električni primerci se pune strujom umesto benzinom.",
-        "Bez njega bi mnogi ljudi morali peške da idu na daleka mesta."
+        "Bez njega bi mnogi ljudi morali peške da idu na daleka mesta.",
+        "Kad se pokvari nasred puta, zove se šlep služba da ga odveze do majstora."
       ]
     },
     {
@@ -1282,7 +1319,8 @@
         "Na Novu godinu svi gledaju u njega i čekaju ponoć.",
         "Cinderella je morala da pobegne s bala pre nego što dvanaest udara na njemu.",
         "Smartwatch je moderna verzija koja je i mali kompjuter.",
-        "Kada prođe 60 minuta, kazaljka za sate pomeri se za jedan korak."
+        "Kada prođe 60 minuta, kazaljka za sate pomeri se za jedan korak.",
+        "Kazaljke mu se kreću u smeru koji je po njemu i dobio ime."
       ]
     },
     {
@@ -1295,8 +1333,9 @@
         "Mačke se obožavaju da zavuku u praznu od kartona.",
         "Jack-in-the-Box igračka je mala koja iznenadi kad je otvoriš.",
         "Pandorina iz mitologije je sadrzala sve zlo sveta.",
-        "Selimo se s njima kad se paкuju sve stvari iz stana.",
-        "Može biti i muzička, koja svira melodiju čim je otvorite."
+        "Selimo se s njima kad se pakuju sve stvari iz stana.",
+        "Može biti i muzička, koja svira melodiju čim je otvorite.",
+        "Deca se često više raduju kartonskom pakovanju nego poklonu iz njega."
       ]
     },
     {
@@ -1310,21 +1349,23 @@
         "Živi u Africi u savanama i stepama.",
         "Popularna zabluda kaže da zabija glavu u pesak kad ga nešto preplaši.",
         "Može da udaritu nogom tako snažno da povredi čoveka.",
-        "Perje mu se nekada koristilo za ukrašavanje šešira i kostima."
+        "Perje mu se nekada koristilo za ukrašavanje šešira i kostima.",
+        "Ima samo dva prsta na svakoj nozi, što je jedinstveno među pticama."
       ]
     },
     {
       "word": "slike",
       "clues": [
         "Umetničke kreacije ili fotografije koje se vešaju na zid.",
-        "Mogu biti naslikane bojama, nacrtane olovkom ili odštampane.",
+        "Mogu nastati bojama na platnu, olovkom na papiru ili štampanjem.",
         "Ukrašavaju dom i čine prostoriju živom i lepom.",
         "Znaš ono kad u galeriji šetaš i gledaš u razna dela na zidovima?",
-        "Mona Liza je najpoznatija od svih na svetu, naslika ju je Leonardo da Vinci.",
+        "Mona Liza je najpoznatija na svetu, a delo je Leonarda da Vinčija.",
         "Deca ih crtaju u školi bojicama ili temperama.",
         "Mogu prikazivati ljude, predele, apstrakciju ili scenu iz priče.",
         "Muzeum savremene umetnosti u New Yorku čuva hiljade njih.",
-        "Porodični albumi su puni onih fotografisanih na godišnjicama i slavljima."
+        "Porodični albumi su puni onih fotografisanih na godišnjicama i slavljima.",
+        "Kače se na zid pomoću eksera ili lepljivih traka, u ramu ili bez njega."
       ]
     },
     {
@@ -1338,7 +1379,8 @@
         "Može biti od kože, tkanine, ili mekane eko-koze.",
         "Gosti koji spavaju kod vas često spavaju upravo na njemu.",
         "Central Perk kafić u seriji Friends ima čuvenu grupu prijatelja koji uvek sede na njemu.",
-        "Jastučići se slažu na njemu da bude dekorativniji i udobniji."
+        "Jastučići se slažu na njemu da bude dekorativniji i udobniji.",
+        "Neki modeli se razvlače pa noću postaju krevet za prenoćište."
       ]
     },
     {
@@ -1352,7 +1394,8 @@
         "Hedvig iz serijala o Hariju Poteru je upravo ova ptica.",
         "Lovi miševe, ribe i male životinje uz pomoć oštrih kandži.",
         "Živi u dupljama stabala ili napuštenim zgradama i tornjevima.",
-        "Njena silueta se viđa na amblemima škola i biblioteka kao simbol učenja."
+        "Njena silueta se viđa na amblemima škola i biblioteka kao simbol učenja.",
+        "Duolingo, aplikacija za učenje jezika, ima baš ovu pticu kao maskotu."
       ]
     },
     {
@@ -1366,7 +1409,8 @@
         "Humpty Dumpty iz nursery rime je jedno od njih koje sede na zidu.",
         "Kokoška ga snese, a ono može biti belo ili braon.",
         "Čokoladna verzija se pravi za Uskrs i u njoj je sitna igračka za iznenađenje.",
-        "Bez njega se ne može napraviti ni keks ni kolač ni torta."
+        "Bez njega se ne može napraviti ni keks ni kolač ni torta.",
+        "Ako ga staviš u čašu vode i ispliva na vrh, znači da više nije sveže."
       ]
     },
     {
@@ -1380,7 +1424,8 @@
         "U Japanu je uzgajaju u obliku kvadrata da lakše stanu u frižider.",
         "Bez nje leto u Srbiji ne bi izgledalo isto na plaži ili reci.",
         "Njene semenke deca pljuju što dalje mogu kao neku vrstu igre.",
-        "Uglavnom se jede dok stojiš ili sedeš napolju jer je toliko sočna da kaplje."
+        "Uglavnom se jede dok stojiš ili sedeš napolju jer je toliko sočna da kaplje.",
+        "Kupci je kucaju prstom i slušaju zvuk da provere da li je zrela."
       ]
     },
     {
@@ -1394,7 +1439,8 @@
         "Šivaće mašine imaju svoju mehaničku verziju koja šije automatski.",
         "U bajci o Trnoružici, princeza se ubode baš na ovu stvar i zaspi.",
         "Kompas ima magnetnu vrstu koja uvek pokazuje prema severu.",
-        "Toliko je tanka i mala da je lako izgubiti na podu."
+        "Toliko je tanka i mala da je lako izgubiti na podu.",
+        "Postoji izreka o traženju nečega u plastu sena — traži se baš ona."
       ]
     },
     {
@@ -1405,10 +1451,11 @@
         "Botanički je voće, ali ga koristimo kao povrće u kuvanju.",
         "Znaš ono kad mama pravi salatu i isece onu crvenu sočnu stvar na kriške?",
         "U kečapu i u gotovo svim solatama je prisutan.",
-        "Postoje mali cherry primerci koji su kao bombоne za decu.",
+        "Postoje mali cherry primerci koji su kao bombone za decu.",
         "Španija ima festival gde se baca baš njim kao šalom.",
         "Može biti zelenas kad nije zreo, a crveni znači da je spreman za jelo.",
-        "Biljka mu može da se gaji u saksiji na terasi ili u bašti."
+        "Biljka mu može da se gaji u saksiji na terasi ili u bašti.",
+        "Zimnica od njega se flašira u tegle i čuva za hladne mesece."
       ]
     },
     {
@@ -1422,7 +1469,8 @@
         "Dolaze u raznim veličinama, a za decu su i u šarenim bojama sa crtanim likovima.",
         "Kad se podruguje ko je slab, kaže se da ne vredi ni koliko ovaj mali lepak.",
         "Medicinska sestra uvek stavlja jedan posle vađenja krvi iz ruke.",
-        "Skida se brzo jednim povlačenjem i uvek boli malo, ali deca plaču."
+        "Skida se brzo jednim povlačenjem i uvek boli malo, ali deca plaču.",
+        "Ima i veliki, mrežasti oblik za koleno, koji se savija zajedno sa zglobom."
       ]
     },
     {
@@ -1436,7 +1484,8 @@
         "U Indiji ih muzičari sviranjem frule navode da igraju iz korpe.",
         "U Bibliji je u vrtu Edema nagovorila prvu ženu da uzme zabranjeno voće.",
         "Igrica Snejk na starim Nokia telefonima je bila zasnovana na kretanju ove životinje.",
-        "Neke se gaje kao kućni ljubimci i jedu miševe."
+        "Neke se gaje kao kućni ljubimci i jedu miševe.",
+        "U apoteci i medicini simbol je štap oko koga se ona obavija."
       ]
     },
     {
@@ -1449,8 +1498,9 @@
         "Bez nje bi makaroni i meso morali da se jedu rukama.",
         "U restoranu uvek leži sa leve strane tanjira po zapadnom maniru.",
         "Može biti srebrna, plastična ili čak drvena za jednokratnu upotrebu.",
-        "Ariel iz Mале Sirene koristila je ovaj predmet kao češalj za kosu.",
-        "Postoje i velike kuhinjske verzije za serviranje salate ili špagetija."
+        "Ariel iz Male Sirene koristila je ovaj predmet kao češalj za kosu.",
+        "Postoje i velike kuhinjske verzije za serviranje salate ili špagetija.",
+        "U Aziji je zamenjuju štapići, pa se pirinač jede sasvim drugačije."
       ]
     },
     {
@@ -1490,7 +1540,7 @@
         "Živi u džunglama Azije i odličan je plivač.",
         "Najteža je divlja mačka na svetu.",
         "Lovi jelene i divlje svinje u gustim šumama.",
-        "Znaš onu životinju iz crtića koja se zove Tigar i skakuće u Šumi od sto jutara?",
+        "Znaš onog narandžastog skakutavog druga Vinija Pua iz Šume od sto jutara?",
         "Može da riče tako glasno da se čuje kilometrima.",
         "Sličan je lavu, ali ima šare umesto jednoobojnog krzna.",
         "U zoološkom vrtu deca ga gledaju iza zaštitnog stakla.",
@@ -1567,7 +1617,7 @@
         "Bebama se njome daje kašičica leka ili kaše.",
         "Znaš ono kad grabneš desert — pa uzmeš baš ovaj pribor da lopaš?",
         "Može biti drvena, plastična ili metalna.",
-        "U receptima za kolače piše 'dve kašike šećera' — misli se na ovaj predmet.",
+        "U receptima za kolače količine se mere upravo ovim priborom, a ne vagom.",
         "Drveni primerak koristi se za mešanje testa u činiji.",
         "Kuvari u restoranu imaju veliku varjantu ovog predmeta za serviranje.",
         "Na engleskom se zove 'spoon', a deca je lako prepoznaju."
@@ -1876,7 +1926,7 @@
     {
       "word": "crvena paprika",
       "clues": [
-        "Slatko povrće jarko crvene boje u obliku zvona.",
+        "Slatko povrće boje zrelog paradajza, oblika malog zvona.",
         "Kada sazri, menja boju sa zelene na ovu živu boju.",
         "Jede se sirova u salatama ili pečena i punjena mesom.",
         "Puna je vitamina C, čak više nego narandža.",
@@ -1885,7 +1935,7 @@
         "Pravi se od nje ajvar, gulaš i punjeno povrće.",
         "U Meksiku postoje ljute sorte, ali ova je slatka.",
         "Na pijaci se prodaje na kilograme i veoma lepo izgleda u hrpi.",
-        "Sušena i mlevena postaje začin koji zovemo crvena mlevena paprika."
+        "Sušena i samlevena postaje najpoznatiji začin u srpskoj kuhinji, onaj u prahu."
       ]
     },
     {
@@ -1951,7 +2001,7 @@
     {
       "word": "narandža",
       "clues": [
-        "Sočno citrusno voće narandžaste boje s debelom korom.",
+        "Sočno citrusno voće sa debelom korom, boje zalaska sunca.",
         "Cedi se da se dobije svež sok za doručak.",
         "Puna je vitamina C koji pomaže kad si prehlađen.",
         "Oguli se i jede u kriškama.",
@@ -1999,7 +2049,7 @@
         "Staklena površina presvučena metalnim slojem u kojoj vidiš sopstveni odraz.",
         "Svako jutro se gledate u njega kad se češljate ili perete zube.",
         "Viseće je na zidu kupatila ili spavaće sobe.",
-        "Znaš onu bajku gde zla kraljica pita 'ogledalo, ogledalo na zidu, ko je najlepši na svetu'?",
+        "Znaš onu bajku gde zla kraljica pita ko je najlepši na svetu, a odgovor dobija sa zida?",
         "Vozači ga koriste u automobilu da vide šta je iza.",
         "Zabavni park ima sobu u kojoj su iskrivljeni primerci koji te čine visokim ili debelim.",
         "Kada nešto prekrene sunčevu svetlost pod uglom, ono zaslepi oči.",
@@ -2041,11 +2091,11 @@
     {
       "word": "četkica za zube",
       "clues": [
-        "Mali predmet s ručkom i čekinjama koji koristimo da operemo zube.",
-        "Koristi se dva puta dnevno, ujutru i uveče, uz pastu za zube.",
-        "Čuva zube od karijesa i loš dah.",
+        "Mali predmet s ručkom i čekinjama kojim se svako jutro peru zubi.",
+        "Koristi se dva puta dnevno, ujutru i uveče, uz malo paste.",
+        "Čuva od karijesa i sprečava neprijatan zadah u ustima.",
         "Stoji u čaši u kupatilu zajedno s pastom.",
-        "Znaš ono kad mama kaže 'idi operi zube pre spavanja' — uvek uzmeš ovaj predmet?",
+        "Znaš ono kad mama kaže da opereš usta pre spavanja i ti uzmeš taj predmet?",
         "Postoji i električna verzija koja se sama okreće.",
         "Menjati je treba na svaka tri meseca ili kad se čekinje iskrive.",
         "Stomatolog savetuje koje čekinje su prikladne — meke za osetljive desni.",
@@ -2061,7 +2111,7 @@
         "Stavlja se u kovertu, nalepi marka i ubaci u sandučić.",
         "Poštar ga donosi kući i ostavlja u poštanskom sandučiću.",
         "Znaš ono kad deda iz drugog grada pošalje nešto na papiru i ti jedva čekaš da otvoriš?",
-        "Harry Potter je primao magična pisma putem sova umesto poštara.",
+        "Hari Poter je takve poruke dobijao preko sova, a ne preko poštara.",
         "E-mail je digitalna verzija ovog oblika komunikacije.",
         "U bajkama princeza šalje viteza sa ovom porukom Kralju.",
         "Ljubavna vrsta ovog dokumenta čuva se godinama kao uspomena.",
@@ -2094,7 +2144,7 @@
         "Fudbalski stadion ima zelenu podlogu upravo od nje.",
         "Posle kiše postaje sjajnozelena i miriše na svežinu.",
         "Livadske vrste privlače pčele, leptire i skakasce.",
-        "Travnjak ispred kuće zahteva redovno zalivanje leti da ne požuti.",
+        "Zelena površina ispred kuće zahteva redovno zalivanje leti da ne požuti.",
         "Bambusas je zapravo vrsta ove biljke, samo ogromna."
       ]
     },
@@ -2213,7 +2263,9 @@
         "Znaš ono kada čitaš priču pred spavanje i uključiš tu svetlost pored kreveta.",
         "Napaja se strujom i ima dugme za paljenje i gašenje.",
         "Stiže u raznim bojama i oblicima i ukrašava sobu.",
-        "Nije velika kao plafon svetlo, ali sija direktno tamo gde treba."
+        "Nije velika kao plafon svetlo, ali sija direktno tamo gde treba.",
+        "Abažur joj se stavi preko sijalice da svetlost ne bode oči.",
+        "Nije luster niti sveća — ovu možeš rukom da premestiš gde ti treba svetlost."
       ]
     },
     {
@@ -2223,11 +2275,12 @@
         "Ima veoma dug nos koji zove rilica i koristi ga za pijenje vode.",
         "Živi u Africi i Aziji, u savanama i džunglama.",
         "Ima ogromne uši i sive kože.",
-        "Znaš ono kada vidiš u cirkusu ili zoološkom vrtu veliku sivu životinju koja pipa trunком?",
+        "Znaš ono kada vidiš u cirkusu ili zoološkom vrtu veliku sivu životinju koja pipa trunkom?",
         "Može da obaspe sebe vodom pomoću svog dugačkog nosa.",
         "Bamba iz crtanog filma je beba ove životinje.",
         "Kljove su mu veliki beli zubi koji strše iz usta.",
-        "Hoda u grupi koja se zove krdo i pije mnogo vode svaki dan."
+        "Hoda u grupi koja se zove krdo i pije mnogo vode svaki dan.",
+        "Kaže se da nikad ništa ne zaboravlja i da ima ogromno pamćenje."
       ]
     },
     {
@@ -2241,7 +2294,8 @@
         "Deca ga najviše vole kao pomfrit uz kečap.",
         "Uzgaja se na njivi i vadi se iz zemlje jeseni.",
         "Neke sorte su žute, a neke crvene iznutra.",
-        "Može se jesti punjen, sečen na kocke ili kao supa."
+        "Može se jesti punjen, sečen na kocke ili kao supa.",
+        "Irci su nekada zavisili od njega, pa je propast roda izazvala veliku glad."
       ]
     },
     {
@@ -2250,12 +2304,13 @@
         "Obuvaš ih na noge kada ideš da se igraš ili trčiš.",
         "Imaju đon od gume i vezuju se pertlama.",
         "Sportisti ih nose tokom trčanja i vežbanja.",
-        "Pravi ih mnogo poznatih brendova kao što su Adidas i Nаjki.",
+        "Pravi ih mnogo poznatih brendova kao što su Adidas i Najki.",
         "Znaš ono kada vezuješ mašnu na cipelama pre škole?",
         "Ugodnije su od kožnih cipela i lake su za noge.",
         "Mogu biti raznih boja i imaju šarene dezene.",
         "Nose ih i deca i odrasli, naročito tokom sporta.",
-        "Drže stopalo udobno dok skačeš i trčiš napolju."
+        "Drže stopalo udobno dok skačeš i trčiš napolju.",
+        "Kad se dugo nose bez čarapa, znaju neprijatno da zamirišu."
       ]
     },
     {
@@ -2269,7 +2324,8 @@
         "Postoje i obojene verzije za crtanje slika.",
         "Zamislili su je davno pre nego što su smislili hemijsku.",
         "Što više pišeš njome, to postaje kraća.",
-        "Može biti tvrda ili mekana, u zavisnosti od oznake na njoj."
+        "Može biti tvrda ili mekana, u zavisnosti od oznake na njoj.",
+        "U sredini nije olovo nego grafit, mada joj ime baš to sugeriše."
       ]
     },
     {
@@ -2283,7 +2339,8 @@
         "Može biti spiralna, okrugla ili u obliku lepeze.",
         "Biseri nastaju u posebnoj vrsti ove morske kućice.",
         "Pune su raznih boja i oblika i veoma su lepe.",
-        "Živa stvorenja unutar nje zovu se mekušci."
+        "Živa stvorenja unutar nje zovu se mekušci.",
+        "Neke vrste se kuvaju u belom vinu i jedu se u restoranima kraj mora."
       ]
     },
     {
@@ -2297,7 +2354,8 @@
         "Njen bujan rep joj pomaže da drži ravnotežu dok skače.",
         "U crtanim filmovima se često prikazuje kao brza i lukava.",
         "Zimi spava dugo i živi od hrane sakupljene u jesen.",
-        "Grize tvrde ljuske oraha oštrim zubima."
+        "Grize tvrde ljuske oraha oštrim zubima.",
+        "Osam slova, počinje na slovo v, a rep joj je veći od pola tela."
       ]
     },
     {
@@ -2311,7 +2369,8 @@
         "Dizalicom se vuče gore kada brod treba da krene.",
         "Mnogi mornari tetovišu taj predmet na ruci.",
         "Bez njega brod bi ga odnela struja ili vetar.",
-        "Lanci koji ga drže su veoma debeli i čvrsti."
+        "Lanci koji ga drže su veoma debeli i čvrsti.",
+        "U prenesenom značenju kaže se da je neko nekome oslonac u životu."
       ]
     },
     {
@@ -2325,7 +2384,8 @@
         "Neke vrste odleću na jug kada dođe zima.",
         "Ima kljun umesto zuba i kandže na nogama.",
         "Papagaj je vrsta koja ume da ponavlja ljudske reči.",
-        "Pelikani i galeb žive blizu mora i jedu ribu."
+        "Pelikani i galeb žive blizu mora i jedu ribu.",
+        "Nije sisar, jer se ne rađa živa nego se izlegne iz ljuske jajeta."
       ]
     },
     {
@@ -2339,7 +2399,8 @@
         "Svaka ima jedinstvene pruge, kao što mi imamo otiske prstiju.",
         "Prelaz za pešake se zove po njoj jer ima slične pruge.",
         "Hrani se travom i kreće se u krdima radi zaštite.",
-        "Njen mlad se zove ždrebe i brzo uči da trči."
+        "Njen mlad se zove ždrebe i brzo uči da trči.",
+        "Naučnici se još spore da li je crna sa belim prugama ili obrnuto."
       ]
     },
     {
@@ -2353,7 +2414,8 @@
         "Peppa Pig je poznata crtana lik iz ove vrste.",
         "Uzgaja se zbog mesa koje jedemo, kao što je pršuta.",
         "Veoma je pametna, čak pametna poput psa.",
-        "Prasić je njeno malo, a krmača je ženka."
+        "Prasić je njeno malo, a krmača je ženka.",
+        "Deca štede novac u kasici koja ima baš njen oblik i rep."
       ]
     },
     {
@@ -2367,7 +2429,8 @@
         "Lekar ga sluša stetoskopom na pregledu.",
         "Na njemu se baziraju emoji i simboli za ljubav.",
         "Bez njega telo ne bi moglo da prima kiseonik.",
-        "Hirurzi ga mogu presaditi bolesnim ljudima."
+        "Hirurzi ga mogu presaditi bolesnim ljudima.",
+        "Veliko je otprilike kao tvoja stisnuta pesnica, ni manje ni više."
       ]
     },
     {
@@ -2381,7 +2444,8 @@
         "Staklene se recikliraju, a plastične treba pravilno odlagati.",
         "Beba pije mleko iz posebne manje sa cuclom.",
         "Postoje termo verzije koje drže tečnost toplom ili hladnom.",
-        "Prodaje se puna u prodavnici, a prazna se bacа ili vraća."
+        "Prodaje se puna u prodavnici, a prazna se baca ili vraća.",
+        "U pričama o brodolomu poruka se šalje morem zatvorena u njoj."
       ]
     },
     {
@@ -2395,7 +2459,8 @@
         "Pre sata i štoperice, ljudi su ga koristili za merenje vremena.",
         "Danas se koristi i kao ukras i u igrama za decu.",
         "Može meriti minutu, tri minute ili pet minuta.",
-        "Stara je naprava koja se pominje i u bajkama i filmovima."
+        "Stara je naprava koja se pominje i u bajkama i filmovima.",
+        "Oblik mu podseća na broj osam ili na uzak ženski struk."
       ]
     },
     {
@@ -2409,7 +2474,8 @@
         "Luj Armstrong je bio čuveni svirač ovog instrumenta.",
         "Čisti metal sjaji i veoma je lepa na pogled.",
         "Treba dugo vežbati da bi naučio da sviraš na njoj.",
-        "Ima karakteristični lijevak na kraju iz kojeg izlazi zvuk."
+        "Ima karakteristični lijevak na kraju iz kojeg izlazi zvuk.",
+        "Na smotri u Guči takmiče se najbolji svirači ovog instrumenta."
       ]
     },
     {
@@ -2423,7 +2489,8 @@
         "Kada sunce zagreje, polako se topi i nestaje.",
         "U božičnim filmovima je čest lik koji magično oživi.",
         "Napravi se od dve ili tri lopte snega razne veličine.",
-        "Olaf iz filma 'Zaleđeno kraljevstvo' je jedan takav lik."
+        "Olaf iz filma 'Zaleđeno kraljevstvo' je jedan takav lik.",
+        "Nikad ne ulazi u kuću jer bi tamo za par sati postao lokva vode."
       ]
     },
     {
@@ -2437,7 +2504,8 @@
         "Od nje se pravi sok, kompot, pita i džem.",
         "Bajka o Snjeguljici ima otrovanu vrstu ovog voća.",
         "U sredini ima semenke kojima može da se posadi novo drvo.",
-        "Poznata IT kompanija ima je kao simbol sa zalogajem."
+        "Poznata IT kompanija ima je kao simbol sa zalogajem.",
+        "Njutnu je jedna pala na glavu i tako je otkrio gravitaciju."
       ]
     },
     {
@@ -2451,7 +2519,8 @@
         "Deca ne smeju da se igraju s njima bez nadzora odraslih.",
         "Glava im je natopljena hemikalijom koja se pali na trenje.",
         "Prodaju se u supermarketu pored upaljača i sveća.",
-        "U hladnim krajevima spasile su mnoge živote paljenjem vatre za grejanje."
+        "U hladnim krajevima spasile su mnoge živote paljenjem vatre za grejanje.",
+        "Andersenova tužna bajka govori o devojčici koja ih je prodavala po hladnoći."
       ]
     },
     {
@@ -2463,15 +2532,16 @@
         "Mornari ga koriste da vežu brod za luku.",
         "Znaš ono kada u teretani visiš i penješ se uz debelu nit?",
         "Na gradilištu dizalica njime podiže teške stvari.",
-        "Može biti od konoplje, nаjlona ili čelika.",
+        "Može biti od konoplje, najlona ili čelika.",
         "Akrobate ga koriste u cirkusu za viseće trikove.",
-        "Vatrogasci ga koriste da spuste ljude s visine."
+        "Vatrogasci ga koriste da spuste ljude s visine.",
+        "Na seoskim igrama dve ekipe se nadvlače povlačeći ga svaka na svoju stranu."
       ]
     },
     {
       "word": "vatrogasno vozilo",
       "clues": [
-        "To je crveno vozilo koje juri na požar sa sirenama.",
+        "Crveni kamion sa sirenom i rotacionim svetlima koji juri na požar.",
         "Ima dugačku merdevine i crevo za vodu.",
         "Vatrogasci voze njime i gase vatre u gradu.",
         "Zvuči glasno sirenom da bi drugi automobili sklonili.",
@@ -2479,7 +2549,8 @@
         "Ima veliku cisterna napunjenu vodom.",
         "Deca ga vole i često se igraju s igračkama koje ga prikazuju.",
         "Pojavljuje se i u dečijim knjigama o hrabrim zanimanjima.",
-        "Može biti i žuto ili narandžasto, zavisno od zemlje."
+        "Može biti i žuto ili narandžasto, zavisno od zemlje.",
+        "Stanica u kojoj čeka ima velika vrata koja se otvaraju čim zazvoni alarm."
       ]
     },
     {
@@ -2488,12 +2559,13 @@
         "To je ravna plastična ili drvena traka za merenje dužine.",
         "Ima oznake u centimetrima i milimetrima.",
         "Koristiš ga u školi da povučeš ravnu liniju.",
-        "Svaki đak ga ima u pernici uz olovku i guмicu.",
+        "Svaki đak ga ima u pernici uz olovku i gumicu.",
         "Znaš ono kada treba da nacrtaš pravu liniju i uzmeš tu ravnu traku?",
         "Može biti dugo 15, 20 ili 30 centimetara.",
         "Arhitekti i inženjeri koriste veće verzije za crtanje planova.",
         "Ako ga prislonih uz papir, možeš precizno izmeriti dužinu predmeta.",
-        "Prozirna plastična verzija je praktična jer vidite šta je ispod."
+        "Prozirna plastična verzija je praktična jer vidite šta je ispod.",
+        "U školskoj klupi ponekad posluži i kao improvizovana lepeza ili mač."
       ]
     },
     {
@@ -2507,7 +2579,8 @@
         "Ima kabinu gde sedi pilot koji ga upravlja.",
         "Brat Rajt je napravio prvi na svetu pre više od sto godina.",
         "Putnici sede u redu sa sigurnosnim pojasevima i portirnim prozorom.",
-        "Može biti mali za dve osobe ili ogroman za više stotina putnika."
+        "Može biti mali za dve osobe ili ogroman za više stotina putnika.",
+        "Stjuardese tokom leta dele piće i obroke u malim plastičnim posudama."
       ]
     },
     {
@@ -2517,11 +2590,12 @@
         "Drži se s obe ruke ispred oba oka.",
         "Turisti ga koriste na planini da vide daleke vrhove.",
         "Ptičari ga koriste da posmatraju ptice u daljini.",
-        "Znaš ono kada na izletu mama ili tata gledaju kroz dve leće i vidе daleko?",
+        "Znaš ono kada na izletu mama ili tata gledaju kroz dve leće i vide daleko?",
         "Ima točkić za podešavanje oštrine slike.",
         "Mornari su ga koristili da vide neprijatelje ili kopno izdaleka.",
         "Na utakmici ga ponekad koristimo da bolje vidimo igrače.",
-        "Sastoji se od dve leće koje zajedno daju uvećanu sliku."
+        "Sastoji se od dve leće koje zajedno daju uvećanu sliku.",
+        "Nije teleskop, jer ga nosiš oko vrata i gledaš s oba oka odjednom."
       ]
     },
     {
@@ -2535,7 +2609,8 @@
         "Sportisti godinama treniraju da bi je osvojili.",
         "Srebrna i bronzana idu uz nju za drugo i treće mesto.",
         "Na njoj piše naziv takmičenja i ponekad je ugraviran simbol sporta.",
-        "Deca u školi ponekad dobijaju slične nagrade za uspeh na takmičenjima."
+        "Deca u školi ponekad dobijaju slične nagrade za uspeh na takmičenjima.",
+        "Sportisti je iz navike zagrizu pred fotografima da provere metal."
       ]
     },
     {
@@ -2549,7 +2624,8 @@
         "Reže se na trouglaste parčiće i jede se rukama.",
         "Margarita je najjednostavnija vrsta, samo sa paradajzom i sirom.",
         "Postoje restorani koji se bave isključivo ovim jelom.",
-        "Ninja kornjače iz crtanog filma su je obožavale."
+        "Ninja kornjače iz crtanog filma su je obožavale.",
+        "Napulj se smatra rodnim gradom ovog jela i ono je pod zaštitom UNESKO-a."
       ]
     },
     {
@@ -2563,7 +2639,8 @@
         "Deca u Americi ga obožavaju u obliku putera i džema na sendviču.",
         "Sadrži mnogo proteina i masti i daje energiju.",
         "Na filmskim projekcijama često se prodaje u kesicama.",
-        "Slon iz crtanog filma Dumbo ga je dobijao kao poslasticu."
+        "Slon iz crtanog filma Dumbo ga je dobijao kao poslasticu.",
+        "Mnoga deca su alergična na njega, pa ga škole ponekad zabranjuju."
       ]
     },
     {
@@ -2577,7 +2654,8 @@
         "Može da iskopa veliku rupu za samo nekoliko minuta.",
         "Deca se igraju s malim igračkama koje ga prikazuju u peskovniku.",
         "Vozač sedi u kabini i upravlja kašikom joystickom.",
-        "Koristi se i za rušenje starih zgrada."
+        "Koristi se i za rušenje starih zgrada.",
+        "Nije kamion, jer ne prevozi teret nego kopa i podiže zemlju."
       ]
     },
     {
@@ -2591,7 +2669,8 @@
         "Deca je koriste da posmatraju insekte izbliza.",
         "Šerlok Holms je uvek nosio tu napravu u filmovima i knjigama.",
         "Može se koristiti i za palenje vatre sunčevim zracima.",
-        "Naučnici je koriste kada ne treba mikroskop, ali treba povećanje."
+        "Naučnici je koriste kada ne treba mikroskop, ali treba povećanje.",
+        "Ispupčeno staklo savija svetlost i sve iza njega deluje krupnije."
       ]
     },
     {
@@ -2605,7 +2684,8 @@
         "Nekad se jede u hlebu koji ima poseban duguljasti oblik.",
         "Na takmičenjima u Americi vide se ko može pojesti najviše u kratkom vremenu.",
         "Deca ga vole jer je jednostavan za jelo u hodu.",
-        "Može biti svinjski, pileći ili od drugog mesa."
+        "Može biti svinjski, pileći ili od drugog mesa.",
+        "Ime na engleskom bukvalno znači vreli pas, mada psa naravno nema unutra."
       ]
     },
     {
@@ -2619,21 +2699,23 @@
         "Bake i deke čuvaju ih u albumima od kojih su neke crno-bele.",
         "Danas svako ima hiljade njih sačuvano u telefonu.",
         "Može biti portret, priroda, porodica ili sport.",
-        "Profesionalci koji ih prave zovu se fotografi."
+        "Profesionalci koji ih prave zovu se fotografi.",
+        "Kad je uramiš, staviš je na policu ili okačiš na zid dnevne sobe."
       ]
     },
     {
       "word": "naočare za sunce",
       "clues": [
-        "To je modni dodatak koji štiti oči od jakog sunca.",
+        "To je modni dodatak koji štiti oči od jake svetlosti napolju.",
         "Ima tamna stakla i nosi se na licu na plaži ili napolju.",
         "Deca ih vole jer se osećaju kao zvezde kada ih nose.",
         "Lekar preporučuje da ih nosiš za zaštitu vida.",
-        "Znaš ono kada izađeš na sunce i stisneš oči od svetlosti, pa staviš te tamne naočare?",
+        "Znaš ono kad izađeš napolje, stisneš oči od svetlosti i staviš nešto tamno na nos?",
         "Postoje raznih oblika: okrugle, četvrtaste, srcaste i mnoge druge.",
         "Piloti i vozači ih nose zbog refleksije svetlosti.",
         "Poznate zvezde ih nose da budu neprepoznatljive u javnosti.",
-        "Dobre za planinu i sneg jer tamo je sunce posebno jako."
+        "Dobre za planinu i sneg jer se svetlost tamo jako odbija od belog.",
+        "Kad ih zaboraviš na svojoj glavi, satima ih tražiš po celoj kući."
       ]
     },
     {
@@ -2645,9 +2727,10 @@
         "Deca se igraju s plastičnim verzijama kada se igraju ratnika.",
         "Znaš ono kada u crtanom junaci ukrste dugačka metalna oružja?",
         "Samuraji u Japanu su koristili posebnu vrstu koja se zove katana.",
-        "Harijе Poterov mač Grifindora je čuven u filmovima za decu.",
+        "Harije Poterov mač Grifindora je čuven u filmovima za decu.",
         "Pravili su ga kovači od gvožđa ili čelika u davnim vremenima.",
-        "Danas se koristi u sportskom mačevanju kao takmičarskа disciplina."
+        "Danas se koristi u sportskom mačevanju kao takmičarska disciplina.",
+        "Ekskalibur je čuveni primerak koji je kralj Artur izvukao iz kamena."
       ]
     },
     {
@@ -2661,7 +2744,8 @@
         "Igra na njoj zahteva mnogo razmišljanja i planiranja.",
         "Dete koje igra dobro na njoj može postati šampion sveta.",
         "Postoje i džinovske verzije s figurama koje se nose rukom.",
-        "Zove se i dama tabla, mada se za damu koristi ista mreža."
+        "Ista mreža polja koristi se i za igru dame, samo s drugim figurama.",
+        "Bobi Fišer i Gari Kasparov su svetsku slavu stekli sedeći iznad nje."
       ]
     },
     {
@@ -2675,7 +2759,8 @@
         "Seljaci ga koriste za oranje, setvu i berbu.",
         "Deca obožavaju igračke koje ga prikazuju, posebno John Deere zelene.",
         "Može da radi na njivi i bez asfaltiranog puta.",
-        "Na sajmovima se organizuju takmičenja u vožnji ovakvim vozilima."
+        "Na sajmovima se organizuju takmičenja u vožnji ovakvim vozilima.",
+        "Kad se pojavi na asfaltu, iza njega se stvori duga kolona automobila."
       ]
     },
     {
@@ -2689,7 +2774,8 @@
         "Može biti dečiji ili električni za odrasle.",
         "Lagan je i može se sklopiti i poneti sa sobom.",
         "Pre bicikla mnoga deca nauče da se voze na njemu.",
-        "U gradovima ga iznajmljuju turistima da se voze ulicom."
+        "U gradovima ga iznajmljuju turistima da se voze ulicom.",
+        "Uz njega se obavezno nosi kaciga i štitnici za kolena i laktove."
       ]
     },
     {
@@ -2703,7 +2789,8 @@
         "Može biti napravljena od gume, drveta ili plastike.",
         "Deca se takmiče ko će se njišati više i više.",
         "U bašti može biti pričvršćena za drvo ili poseban okvir.",
-        "Postoji i verzija u obliku gnezda gde mogu da sednu dvoje dece."
+        "Postoji i verzija u obliku gnezda gde mogu da sednu dvoje dece.",
+        "Što se jače odguruješ nogama, to letiš više — kao klatno na satu."
       ]
     },
     {
@@ -2717,7 +2804,8 @@
         "Može biti punjena džemom, kremom ili čokoladom.",
         "Na kraju prsta liči na mali prsten od testa.",
         "Deca je vole kao doručak ili poslasticu uz čaj.",
-        "U Americi je zovu 'donat' i prodaju je u posebnim kafićima."
+        "U Americi je zovu 'donat' i prodaju je u posebnim kafićima.",
+        "U američkim filmovima policajci je jedu uz kafu u službenim kolima."
       ]
     },
     {
@@ -2731,7 +2819,8 @@
         "Od njenog mleka pravi se poseban sir.",
         "U bajkama se pojavljuje kao životinja koja pastir čuva.",
         "Može se vezati da ne odlazi daleko od kuće.",
-        "Njena deca zovu se jarad i veoma su slatka i razigrana."
+        "Njena deca zovu se jarad i veoma su slatka i razigrana.",
+        "Nije ovca, jer nema runo nego kratku dlaku i bradicu ispod brade."
       ]
     },
     {
@@ -2740,12 +2829,13 @@
         "To je alat s metalnom glavom i drvenom ili plastičnom drškom.",
         "Koristi se za zabijanje eksera u zid ili drvo.",
         "Tata ga uzima kada nešto treba da popravi u kući.",
-        "Udara se glavom o eksер da bi ušao dublje.",
+        "Udara se glavom o ekser da bi ušao dublje.",
         "Znaš ono kada tata zakuca sliku na zid i lupka tim alatom?",
         "Postoji i veliki koji se zove malj i koristi se za rušenje.",
         "Tor iz filmova Marvela nosi magični koji se zove Mjolnir.",
         "Može biti mali za sitne popravke ili veliki za gradilište.",
-        "U pravu ruku, ovaj alat može napraviti ili rastaviti skoro sve."
+        "U pravu ruku, ovaj alat može napraviti ili rastaviti skoro sve.",
+        "Sudija u američkim filmovima udara malim drvenim po stolu i traži tišinu."
       ]
     },
     {
@@ -2759,7 +2849,8 @@
         "Postoje male za baštu i veće za njive.",
         "Može se napraviti i od bambusa za lagano skupljanje lišća.",
         "Komičan trik u crtanim filmovima je kad neko stane na zube pa ga drška udari u lice.",
-        "Deda uvek uzima ovaj alat kada treba da sredi baštu u jesen."
+        "Deda uvek uzima ovaj alat kada treba da sredi baštu u jesen.",
+        "Nije lopata, jer ne zahvata nego prevlači i skuplja lišće u gomilu."
       ]
     },
     {
@@ -2773,7 +2864,8 @@
         "Punjive se koriste u telefonima i elektricnim automobilima.",
         "Postoje raznih veličina: AA, AAA, i veće za automobile.",
         "Treba ih odlagati na posebna mesta jer sadrže hemikalije.",
-        "Baterijska lampa im je dobila ime jer ih koristi za svetlost."
+        "Ručna svetiljka radi baš na njih kada nestane struje u kući.",
+        "U ručnom satu je sićušna i pljosnata, kao mali srebrni novčić."
       ]
     },
     {
@@ -2787,7 +2879,8 @@
         "Ima zube različite gustine, neki su gušći a neki ređi.",
         "Koristi se i za stilizovanje frizure uz gel ili lak.",
         "Frizerke ga uvek imaju u džepu dok rade.",
-        "Ponekad ga zameni četka za kosu, ali za fine detalje ostaje ovaj."
+        "Ponekad ga zameni četka za kosu, ali za fine detalje ostaje ovaj.",
+        "Šest slova, ima zube ali ne grize i stane u zadnji džep."
       ]
     },
     {
@@ -2801,7 +2894,8 @@
         "Na mostovima ljubavi se kače kao simbol ljubavi.",
         "Postoje sa brojevima koje okrenteš da otključaš bez ključa.",
         "Škole ga koriste na ormarićima učenika u hodnicima.",
-        "Što je veći i teži, to je teže ga probiti."
+        "Što je veći i teži, to je teže ga probiti.",
+        "Nije brava ugrađena u vrata — ovaj možeš da poneseš u džepu."
       ]
     },
     {
@@ -2815,7 +2909,8 @@
         "Rado ga dajemo onima koje volimo kao izraz pažnje.",
         "Neke porodice ih stavljaju ispod jelke za Božić.",
         "Može biti nešto što kupiš ili nešto što sam napraviš.",
-        "Najlepši su oni koji dolaze iz srca i prave pravo iznenađenje."
+        "Najlepši su oni koji dolaze iz srca i prave pravo iznenađenje.",
+        "Deda Mraz ih po pričama ostavlja deci koja su bila dobra tokom godine."
       ]
     },
     {
@@ -2829,7 +2924,8 @@
         "Kauboji u vestrnima nose specifičan visoki sa širokim obodom.",
         "Top hat je visoki crni koji nose elegantni gospodini u starim filmovima.",
         "Sherlock Holmes i Indiana Jones su poznati po svojima.",
-        "Pravi se od slame, filca, platna ili kože."
+        "Pravi se od slame, filca, platna ili kože.",
+        "Nekada se skidao s glave u znak pozdrava i poštovanja prema drugome."
       ]
     },
     {
@@ -2843,7 +2939,8 @@
         "Spongebob iz crtanog filma živi u jednom takvom voću na dnu mora.",
         "Može se jesti svež, konzerviran ili kao sok.",
         "Slika mu se stavlja na dekoracije i majice s letnjim temama.",
-        "Ima posebni enzim koji razgrađuje proteine i može da iritira jezik ako ga jedeš previše."
+        "Ima posebni enzim koji razgrađuje proteine i može da iritira jezik ako ga jedeš previše.",
+        "Iseče se na kolutove s rupom u sredini i stavlja na tortu ili roštilj."
       ]
     },
     {
@@ -2857,7 +2954,8 @@
         "Ima glatku kožu ili gusto krzno i sjajne oči.",
         "Glasanje joj je karakteristično lajanje koje čuješ iz daleka.",
         "Polarni medvedi i orke su im prirodni neprijatelji.",
-        "Na kopnu se kreće nespretno, ali u vodi je neverovatno brza."
+        "Na kopnu se kreće nespretno, ali u vodi je neverovatno brza.",
+        "Mladunci su beli i pahuljasti, pa su bili meta lovaca na krzno."
       ]
     },
     {
@@ -2871,7 +2969,8 @@
         "Dugi trepavici joj štite oči od peska tokom peščanih oluja.",
         "Arabljani su je koristili kao prevozno sredstvo vekovima.",
         "Može dugo hodati po vrućem pesku zahvaljujući posebnim tabanima.",
-        "Dromedar ima jednu grbu, a baktrijska ima dve."
+        "Dromedar ima jednu grbu, a baktrijska ima dve.",
+        "Poznata je i po tome što pljuje kad se naljuti na nekoga."
       ]
     },
     {
@@ -2880,12 +2979,13 @@
         "To je duga drvena ili metalna sedišta za više osoba.",
         "Nalazi se u parku, na autobuskoj stanici ili u crkvi.",
         "Nema naslon s strane i može da sedne više ljudi.",
-        "U parku stariji sedе na njoj i gledaju decu kako se igraju.",
+        "U parku stariji sede na njoj i gledaju decu kako se igraju.",
         "Znaš ono kada u parku sedneš da se odmoriš na onoj dugačkoj dasci s nogama?",
         "U školskim hodnicima stoje za čekanje između časova.",
         "Pravi se od drveta, metala ili plastike i laka je za čišćenje.",
         "Na fudbalskom terenu zamenjački igrači sede na njoj pored terena.",
-        "Parkovi bez nje bili bi mnogo manje ugodni za šetnju."
+        "Parkovi bez nje bili bi mnogo manje ugodni za šetnju.",
+        "Zaljubljeni parovi ponekad urežu inicijale u njenu drvenu dasku."
       ]
     },
     {
@@ -2899,13 +2999,14 @@
         "Neke vrste žive i po 150 godina.",
         "Oklop joj je kao kuća koja je uvek nosi na leđima.",
         "Morska vrsta pliva u okeanu i polaže jaja na plaži.",
-        "Ninja kornjačе iz popularnog crtanog filma su je proslavile kod dece."
+        "Četvorica junaka u oklopima iz crtanog filma proslavila su je kod dece.",
+        "Na ostrvima Galapagos žive džinovski primerci teški i po 200 kilograma."
       ]
     },
     {
       "word": "sendvič",
       "clues": [
-        "To je hrана која se pravi od dva parčeta hleba između kojih se stavlja nadev.",
+        "To je hrana koja se pravi od dva parčeta hleba između kojih se stavlja nadev.",
         "Može biti punjen sirom, šunkom, povrćem ili pavlakom.",
         "Deca ga često nose u školsku torbu za užinu.",
         "Brza je to vrsta obroka, ne treba ga kuvati.",
@@ -2999,7 +3100,7 @@
         "Stavljaš ga u bravu i okreneš da otvoriš vrata.",
         "Svaka kuća ima jedan za ulazna vrata.",
         "Znaš ono što papa drži na privezku i stavlja u bravu automobila – to je to.",
-        "Bez njega ne možeš ući u zaključanu sobu.",
+        "Bez njega vrata ostaju zatvorena i moraš zvoniti komšiji da uđeš.",
         "Može biti mali ili veliki, zavisi od brave.",
         "Zaboraviš li ga, ostaješ napolju i moraš čekati nekoga.",
         "Čuvari i portiri imaju ogroman privezak s mnogo njih.",
@@ -3100,8 +3201,8 @@
     {
       "word": "toaletni papir",
       "clues": [
-        "To je mekani papir koji se koristi u kupatilu posle nužde.",
-        "Namotан je na plastičnu ili kartonsku cevčicu.",
+        "Mek, tanak materijal namotan u rolnu koji se koristi u kupatilu posle nužde.",
+        "Namotan je na plastičnu ili kartonsku cevčicu.",
         "Stoji na držaču pored šolje za vodu.",
         "Bez njega bi bilo neprijatno u toaletu.",
         "Znaš onu rolatnu u WC-u koja se odmotava kad je treba – to je to.",
@@ -3169,7 +3270,7 @@
         "Pravi se od sintetičkih vlakana ili životinjske dlake.",
         "Deca u vrtiću njom mažu ceo papir i prave šarene slike.",
         "Zidar koristi veliku varijantu kad farba zidove kuće.",
-        "Čuva se u čašici ili boksu sa ostalim likоvnim priborom."
+        "Čuva se u čašici ili boksu sa ostalim likovnim priborom."
       ]
     },
     {
@@ -3195,7 +3296,7 @@
         "Jede se sveže ili se od njega pravi sok i vino.",
         "Svaka bobica je mala, okrugla i slatka ili malo kisela.",
         "Znaš ono slatko voće što baka bere s čokota u vinogradu – to je to.",
-        "Suši se i postaje grožđica koja ide u kolače.",
+        "Kad se osuši, dobija se sitna slatka bobica koja ide u kolače i pilav.",
         "Vinova loza je biljka koja ga rađa.",
         "Deca vole da jedu bobice jednu po jednu, skidaju ih s grozda.",
         "U Vojvodini i Makedoniji ima velikh nasada s njim.",
@@ -3228,7 +3329,7 @@
         "Grupisane zajedno čine sazvežđa poput Oriona ili Malog medveda.",
         "Simbol je čuvenih nagrada i čuvena pevačica se i zove po njoj.",
         "Šerifske značke na filmovima imaju oblik te figure.",
-        "Pada sa neba i zove se zvezda padalica – tada treba poželeti želju.",
+        "Kad jedna padne s neba, kaže se da tada treba brzo poželeti želju.",
         "Crta se žutim olovkama i kredom svuda po sveskama."
       ]
     },
@@ -3259,7 +3360,7 @@
         "Ulazna su najveća i najčvršća u kući, jer čuvaju od lopova.",
         "U autu ih ima četiri i svaka se bravom zaključava.",
         "Princeza u bajci uvek iza magičnih nalazi tajanstvenu sobu.",
-        "Deca ih често LUPAJU i mama kaže da ih ne tresko."
+        "Deca ih često LUPAJU i mama kaže da ih ne tresko."
       ]
     },
     {

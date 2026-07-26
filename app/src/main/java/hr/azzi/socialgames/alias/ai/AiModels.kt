@@ -9,7 +9,8 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
     DE("de", "de-DE", "German", "ger", "🇩🇪"),
     IT("it", "it-IT", "Italian", "ita", "🇮🇹"),
     HR("hr", "hr-HR", "Croatian", "cro", "🇭🇷"),
-    SR("sr", "sr-RS", "Serbian", "srb", "🇷🇸");
+    SR("sr", "sr-RS", "Serbian", "srb", "🇷🇸"),
+    BS("bs", "bs-BA", "Bosnian", "bos", "🇧🇦");
 
     val display: String get() = code.uppercase()
 
@@ -20,7 +21,8 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
 
     /** Native display name shown in the language pill / picker. */
     val nativeName: String get() = when (this) {
-        EN -> "English"; FR -> "Français"; DE -> "Deutsch"; IT -> "Italiano"; HR -> "Hrvatski"; SR -> "Srpski"
+        EN -> "English"; FR -> "Français"; DE -> "Deutsch"; IT -> "Italiano"; HR -> "Hrvatski"
+        SR -> "Srpski"; BS -> "Bosanski"
     }
 
     companion object {
@@ -36,7 +38,8 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
                 "DE", "AT", "CH", "LI" -> DE
                 "IT", "SM", "VA" -> IT
                 "HR" -> HR
-                "RS", "ME", "BA" -> SR
+                "BA" -> BS
+                "RS", "ME" -> SR
                 else -> null
             }
         }

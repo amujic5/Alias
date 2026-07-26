@@ -13,6 +13,8 @@ object AIDeckCatalog {
             listOf(AILanguage.EN, AILanguage.FR, AILanguage.DE, AILanguage.IT, AILanguage.HR, AILanguage.SR)),
         AIDeck("game_alias_cro", "game_alias_cro", "game_alias_cro", listOf(AILanguage.HR)),
         AIDeck("game_alias_srb", "game_alias_srb", "serbia", listOf(AILanguage.SR)),
+        AIDeck("game_alias_bos", "game_alias_bos", "bosnia", listOf(AILanguage.BS)),
+        AIDeck("alias_ger", "game_alias_ger", "country_ger", listOf(AILanguage.DE)),
         AIDeck("game_alias_football", "alias_football", "game_football",
             listOf(AILanguage.HR, AILanguage.EN, AILanguage.DE, AILanguage.SR)),
         AIDeck("game_alias_junior", "game_alias_junior", "game_alias_junior",

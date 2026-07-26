@@ -102,7 +102,9 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
 
     private fun fallbackLocale(code: String): Locale? =
         when (code.substringBefore("-").lowercase()) {
-            "sr" -> Locale("hr", "HR")
+            // No Serbian or Bosnian TTS voice ships with Android either — Croatian is the
+            // phonetically closest one (shared Latin pronunciation).
+            "sr", "bs" -> Locale("hr", "HR")
             else -> null
         }
 

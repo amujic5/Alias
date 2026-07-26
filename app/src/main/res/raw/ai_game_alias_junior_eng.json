@@ -173,7 +173,7 @@
         "A woven container used to hold fruits, bread, or laundry.",
         "You carry it by a handle or over your arm.",
         "Easter eggs are often hidden inside a decorated one.",
-        "In basketball, you score points by throwing the ball through one.",
+        "In the hoop sport, you score points by throwing the ball through one.",
         "Little Red Riding Hood carried one full of goodies to grandma.",
         "A hot-air balloon hangs one below it for passengers to ride in.",
         "You know, that woven thing with a handle you fill with apples at the market.",
@@ -233,7 +233,7 @@
         "A tall crop with rows of yellow kernels on a cob.",
         "You can eat it boiled, grilled, or popped as a snack.",
         "Farms grow it in large fields during summer.",
-        "Popcorn and tortilla chips are both made from this grain.",
+        "Tortilla chips and yellow cereal flakes are both made from this grain.",
         "You hold the cob at both ends and bite along the rows.",
         "A scarecrow stands guard over a field of this tall crop.",
         "You know, the yellow veggie on a cob you butter up and bite row by row.",
@@ -263,7 +263,7 @@
         "A colorful blooming part of a plant that attracts bees.",
         "People give them as gifts on birthdays and Valentine's Day.",
         "It grows in gardens and fields and smells sweet.",
-        "A rose and a sunflower are two well-known examples.",
+        "A rose, a tulip, and a daisy are three well-known examples.",
         "You blow the fluffy white seeds off a dandelion one to make a wish.",
         "Its colorful petals open in the sunshine and close at night.",
         "You know, the pretty colorful bloom you give in a bouquet on Valentine's.",
@@ -292,7 +292,7 @@
       "clues": [
         "A collection of printed pages bound together that you read.",
         "Stories, facts, and adventures are all found inside one.",
-        "You borrow it from a library or buy it at a bookstore.",
+        "You borrow it from a library or buy it in a shop full of shelves.",
         "Its cover shows the title and the author's name.",
         "A teacher might ask you to open it to a certain page during class.",
         "Famous wizards, talking animals, and heroes live inside its many chapters.",
@@ -396,7 +396,7 @@
       "word": "lemon",
       "clues": [
         "A bright yellow citrus fruit with very sour juice.",
-        "You squeeze it over fish or into lemonade to drink.",
+        "You squeeze it over fish or into a jug of sugary water to make a drink.",
         "Its tart taste makes your mouth pucker up.",
         "The rind smells fresh and is used to flavor cakes and desserts.",
         "When life gives you these, you are told to make a refreshing drink.",
@@ -1507,7 +1507,7 @@
       "clues": [
         "A round object used in many sports and games.",
         "You kick, throw, bounce, or hit it depending on the sport.",
-        "Soccer, tennis, and basketball all use a version of this.",
+        "Soccer, tennis, and the hoop game in the gym all use a version of this.",
         "Children toss and catch it in the park for fun.",
         "A goalkeeper tries to stop it from crossing the line into the net.",
         "It can be inflated with air or made solid like the kind used in bowling.",
@@ -1677,7 +1677,7 @@
         "Cowboys spin and throw it as a lasso to catch cattle.",
         "In a tug-of-war, two teams pull on opposite ends of it.",
         "You know, the thick twisted thing you'd use to climb up or tie stuff together.",
-        "Think of what a tightrope walker balances on high above a circus crowd.",
+        "Think of the thin line a circus acrobat balances on high above the crowd.",
         "A spider does its own version, but the human-made one is woven from strands.",
         "It's what you'd throw to someone drowning so you can haul them back to shore."
       ]
@@ -2752,7 +2752,7 @@
       "clues": [
         "This scaly creature breathes through gills and lives in water.",
         "People catch them with a rod, a line, and a hook.",
-        "Salmon, tuna, and goldfish are all examples of this animal.",
+        "Salmon, tuna, and cod are all well-known examples of this animal.",
         "It swims by moving its tail from side to side.",
         "Nemo is a famous orange-and-white clown one from a Disney movie.",
         "You keep a pet one swimming in a bowl or a tank at home.",

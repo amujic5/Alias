@@ -38,7 +38,7 @@
       "clues": [
         "Completely sure about something with no doubt at all.",
         "Feeling this way means you are confident and have no hesitation.",
-        "The opposite of being uncertain or unsure.",
+        "The opposite of feeling unsure, doubtful, or hesitant about something.",
         "When you know the answer for sure, you feel this way.",
         "You say you are this when there is absolutely no question in your mind.",
         "A guarantee gives you this feeling that something will definitely happen.",
@@ -128,7 +128,7 @@
       "clues": [
         "A vessel that floats on water and carries people or cargo.",
         "You paddle, sail, or motor across a lake in this.",
-        "Smaller than a ship, it can be a canoe, rowboat, or sailboat.",
+        "Smaller than a ship, it can be a canoe, a kayak, or a little sailing craft.",
         "People use this to go fishing on the water.",
         "You tie this to a dock with a rope so it does not drift away.",
         "A captain steers this small craft using a tiller or wheel.",
@@ -398,7 +398,7 @@
       "clues": [
         "A tall yellow grain crop grown in large fields.",
         "You can eat it on the cob, popped, or ground into flour.",
-        "Popcorn and tortilla chips are both made from this grain.",
+        "Tortilla chips and the fluffy snack you pop in a pan are made from this grain.",
         "Farmers harvest this yellow vegetable in late summer.",
         "Movie theaters pop this grain and sell it buttered in big tubs.",
         "Rows of this tall crop fill the fields of Iowa and Nebraska.",
@@ -444,7 +444,7 @@
         "A unit of measurement for liquid volume in the metric system.",
         "A large soda bottle at the grocery store holds about two of these.",
         "Used to measure water, juice, fuel, and other fluids.",
-        "One thousand milliliters equals exactly one of these.",
+        "A thousand of the smallest metric volume units add up to exactly one of these.",
         "A car's engine size is often measured in this unit, like a 2.0 of them.",
         "Recipes outside America sometimes call for this metric amount of milk.",
         "You know the big plastic soda bottle, the two-of-these size? that unit.",
@@ -666,7 +666,7 @@
     {
       "word": "slip",
       "clues": [
-        "To lose your footing and nearly fall on a slippery surface.",
+        "To lose your footing and nearly fall on a wet, greasy surface.",
         "A small piece of paper with a note or receipt written on it.",
         "Easy to do on a wet floor or an icy sidewalk.",
         "A small mistake or error, as in a Freudian version of this.",
@@ -675,7 +675,7 @@
         "You know that yellow wet-floor sign warning you might do this? that action.",
         "It's the little permission paper you bring back signed to school.",
         "Think of an undergarment women wear under a dress, same word.",
-        "When a secret accidentally comes out, people say it 'slipped' out, like this."
+        "A secret that escapes your lips by accident is said to have done this out."
       ]
     },
     {
@@ -807,7 +807,7 @@
         "To turn in a circle repeatedly without stopping.",
         "A figure skater pulls in their arms to do this faster on the ice.",
         "Politicians put a positive one on bad news to make it sound better.",
-        "You know what a fidget spinner does when you flick it?",
+        "You know what that little fidget toy does when you flick it with your finger?",
         "It's that thing a basketball does on a player's fingertip.",
         "Think of a roulette wheel going round and round before the ball drops.",
         "A class on a stationary bike at the gym is often named after this."
@@ -1269,7 +1269,7 @@
         "Fully grown or developed, in a plant, animal, or person.",
         "A responsible adult who behaves sensibly is called this.",
         "Wine and cheese get better as they become more this.",
-        "The opposite of childish or immature in behavior.",
+        "The opposite of childish, silly, or babyish in the way someone behaves.",
         "Some films carry a rating warning that they contain this kind of content.",
         "A green banana needs a few more days to reach this ripe state.",
         "You know how a fine wine or aged cheese gets better the older it gets?",
@@ -1964,7 +1964,7 @@
         "A radio signal or sound travels through the air as this kind of motion.",
         "You know that thing you do with your hand when saying bye to someone?",
         "A big curling wall of water rolling toward the sand is one.",
-        "Microwaves cook your food using this kind of invisible energy ripple.",
+        "The oven that heats your leftovers in a minute is named after this invisible ripple.",
         "A surfer paddles out hoping to catch a big one."
       ]
     },
@@ -2109,7 +2109,7 @@
         "Strands that grow from your scalp and can be cut or styled.",
         "You wash, comb, and brush this every day.",
         "It can be curly, straight, blonde, or dark.",
-        "Barbers and hairdressers trim and style this for customers.",
+        "Barbers and salon stylists trim and shape this for their customers.",
         "A bald man has lost most of this from the top of his head.",
         "Rapunzel was famous for her extremely long golden version of this.",
         "It's the stuff growing on your head that you get a trim for.",
@@ -3189,7 +3189,7 @@
         "A set of printed pages bound together between two covers.",
         "You read stories, facts, or poetry from this object.",
         "Libraries lend these out for free to anyone with a membership card.",
-        "A novel, a textbook, and a diary are all types of this object.",
+        "A novel, a dictionary, and a diary are all examples of this object.",
         "A ribbon or folded corner helps you save your place in this object.",
         "Authors spend years writing one of these before it gets published.",
         "It's that thing made of paper you curl up with on a rainy day.",
@@ -3480,7 +3480,7 @@
         "It's that thing worth a thousand words, the saying goes.",
         "Smile and say cheese while I take one of these of you.",
         "A photo album is full of these printed memories.",
-        "Old British folks call a movie a 'motion one of these' or the pictures."
+        "Old British folks call the cinema 'the movies' or a 'motion' one of these."
       ]
     },
     {
@@ -3921,7 +3921,7 @@
     {
       "word": "toast",
       "clues": [
-        "Bread that has been browned and crisped by heat in a toaster.",
+        "Bread that has been browned and crisped by heat in a slotted kitchen appliance.",
         "A popular breakfast item often spread with butter or jam.",
         "At a wedding, everyone raises a glass and does this to celebrate.",
         "It pops up when done and smells wonderfully warm and nutty.",
@@ -4288,7 +4288,7 @@
         "This dark feathered creature often perches near a field to steal seeds from crops.",
         "Edgar Allan Poe wrote a famous poem about a related black bird tapping at a door.",
         "You know that big black bird that goes 'caw caw' and looks kind of spooky.",
-        "It's the clever dark bird a scarecrow is built to keep out of the field.",
+        "It's the clever dark bird that straw figure in the field is built to frighten off.",
         "Think of the bird that's smart enough to solve puzzles and use little tools.",
         "A rooster does a loud morning sound that shares this exact word."
       ]
@@ -4470,7 +4470,7 @@
         "You know that clanking metal suit a knight wears to deflect swords.",
         "It's what bulletproof vests are the modern version of, body protection.",
         "Think of the shiny metal outfit on display standing up in a castle hall.",
-        "A tank or armored car has thick plating with this same protective name."
+        "A tank has thick steel plating known by this very same protective word."
       ]
     },
     {
@@ -5009,7 +5009,7 @@
         "In chess, losing your king is checkmate, but in marriage death makes you this.",
         "Queen Victoria mourned in black for forty years as one of these.",
         "A black venomous spider with a red hourglass is named after her.",
-        "The female version of a widower, after a death in the marriage.",
+        "The female counterpart of the man whose wife has died.",
         "She inherits the estate and pension after her late husband is gone."
       ]
     },
@@ -5189,7 +5189,7 @@
         "A dentist asks you to open this wide during a checkup.",
         "Put your money where your what is, the saying goes.",
         "Lipstick goes on the edges of this part of your face.",
-        "A loudmouth person is told to watch theirs when they're rude.",
+        "A rude, loud person gets told to watch theirs when they talk back.",
         "You blow out birthday candles using a big puff from this."
       ]
     },
@@ -5317,7 +5317,7 @@
       "word": "cloth",
       "clues": [
         "A flexible woven material made from cotton, wool, or synthetic fibers.",
-        "You cut it with scissors to sew clothes or curtains.",
+        "You cut it with scissors to sew a shirt or a pair of curtains.",
         "A soft piece of this is used to wipe surfaces clean.",
         "Tailors measure and cut this fabric to make suits and dresses.",
         "A waiter spreads a white one over a restaurant table before serving.",
@@ -5429,7 +5429,7 @@
         "An idiom says the 'is in the details' when small problems hide.",
         "You know the little red guy on your shoulder whispering bad ideas in cartoons.",
         "It's the boss of the underworld, the opposite of an angel.",
-        "Think of the spicy deviled eggs or the chili dish named after him.",
+        "Think of those spicy stuffed eggs, or a fiery chili dish, both named for him.",
         "Where you'd picture him is down below stoking the flames with a fork."
       ]
     },
@@ -5695,7 +5695,7 @@
         "You click it together to secure your seatbelt in a car.",
         "Shoes with a strap across the top often have one of these.",
         "Under great pressure, a wall or bridge might bend and do this.",
-        "A swashbuckling hero might do this under pressure in a sword fight, his knees giving way.",
+        "A dashing sword-fighting hero might do this under pressure, his knees giving way.",
         "On a kilt or overalls, a metal one holds the strap in place.",
         "You know the metal bit you snap shut to hold your trousers up.",
         "It's the part of the airplane strap you click before takeoff.",
@@ -6853,7 +6853,7 @@
         "You might do this to the corner shop instead of driving there.",
         "Doctors recommend ten thousand steps of this each day for health.",
         "You know, just putting one foot in front of the other to get somewhere.",
-        "It's what you do on a green light at the crosswalk.",
+        "It's what you do on a green signal at the striped street crossing.",
         "Babies take their very first wobbly attempt at this around age one.",
         "Instead of taking the bus a short distance, you might just do this."
       ]
@@ -7557,7 +7557,7 @@
         "Building a wall around a garden is one way to do this.",
         "Farmers do this to their fields with hedges to keep cattle from wandering.",
         "Brackets and quotation marks are used to do this to text within a sentence.",
-        "It's what enclosures and compounds are built to do to whatever is inside them.",
+        "It's what a cage or a walled compound is built to do to whatever sits inside.",
         "You know when you tuck a photo in with your letter before sealing it, that's this.",
         "Think of putting a moat and ramparts all the way around a castle.",
         "A pen or paddock does this to sheep so they can't wander off."
@@ -8244,13 +8244,13 @@
         "You press a button to go up or down floors in a building.",
         "It raises you from the ground floor to higher levels.",
         "In British English, this is what Americans call an elevator.",
-        "Weightlifters do this to heavy bars at the gym.",
+        "Bodybuilders do this to heavy barbells over and over at the gym.",
         "A ski resort uses a chair-style version of this to carry skiers up the mountain.",
         "To give someone a ride in your car is to offer them one of these in British English.",
         "You know the little box you step into and the doors close and you rise up the tower.",
         "It's what a crane does to a heavy load high into the air.",
         "Think of what you do to a suitcase off the carousel at the airport.",
-        "A forklift is built to do this to heavy pallets in a warehouse."
+        "That little warehouse truck with two prongs is built to do this to pallets."
       ]
     },
     {
@@ -8468,7 +8468,7 @@
       "clues": [
         "A waiter does this when bringing food to your table.",
         "In tennis, you start each point by doing this with the ball.",
-        "To provide a service or food to someone who needs it.",
+        "To bring or provide food and help to someone who needs it.",
         "A soldier or public official does this for their country.",
         "A volleyball player does this to put the ball into play over the net.",
         "To dish out a portion of food onto someone's plate is to do this.",
@@ -8518,7 +8518,7 @@
         "Carpe diem urges you to do this to the day.",
         "A medical episode where the body shakes uncontrollably is spelled the same way.",
         "You know how you snatch a falling glass before it hits the floor?",
-        "Think of soldiers storming in and taking control of a city by force seizure.",
+        "Think of soldiers storming in and taking control of a whole city by force.",
         "Customs officers do this to illegal goods at the border.",
         "Don't hesitate, just grab the moment, as the saying about the day goes."
       ]
@@ -8616,7 +8616,7 @@
     {
       "word": "news",
       "clues": [
-        "Current events reported on TV, radio, or in newspapers.",
+        "Current events reported on TV, on the radio, or in the daily papers.",
         "Journalists write and broadcast this information to the public.",
         "You watch this on the evening broadcast to learn what happened today.",
         "Breaking updates about world events, politics, or local happenings.",
@@ -8767,7 +8767,7 @@
       "word": "melon",
       "clues": [
         "A large round juicy fruit with a green or yellow skin.",
-        "Watermelon and cantaloupe are two popular types of this fruit.",
+        "Cantaloupe and the big striped green one are two popular types of this fruit.",
         "On a hot summer day, a chilled slice of this is refreshing.",
         "It has a thick rind and sweet, watery flesh inside.",
         "You scoop out little balls of this fruit with a special tool.",
@@ -9089,8 +9089,8 @@
         "A map gets creased into a small rectangle when you do this to it.",
         "You know, what you do to laundry fresh out of the dryer.",
         "Think of bending a letter in three to fit it in an envelope.",
-        "A folding chair does this so you can store it flat against a wall.",
-        "The opposite of unfolding a napkin onto your lap."
+        "A collapsible chair does this so you can store it flat against the wall.",
+        "The opposite of opening a napkin out flat and laying it on your lap."
       ]
     },
     {
@@ -9207,7 +9207,7 @@
         "You might do this with a secret if you promise not to tell anyone.",
         "This verb means to hold onto something rather than discard or surrender it.",
         "If you find a wallet on the street, the honest choice is not to do this with it.",
-        "You know, what 'finders keepers' is all about doing with something.",
+        "You know that playground rule about finding something and never giving it back?",
         "Think of refusing to throw away a thing because you might need it.",
         "The strongest stronghold of a medieval castle goes by this name.",
         "Bees do this to honey and squirrels do it with nuts for winter."
@@ -9479,7 +9479,7 @@
         "You click through web pages each time you do this to a website.",
         "You know, what you do when you pop round to a friend's house.",
         "Think of dropping in on Grandma for tea on a Sunday afternoon.",
-        "Visiting hours at a hospital are the times you can do this.",
+        "Hospitals set special hours each day when you're allowed to do this to a patient.",
         "A tourist does this to the Eiffel Tower while sightseeing in Paris."
       ]
     },
@@ -9637,9 +9637,9 @@
       "word": "fire",
       "clues": [
         "A bright, hot, flickering phenomenon produced by burning fuel.",
-        "A campfire is a cozy example of this warm and dangerous thing.",
+        "A cozy blaze at a campsite is a friendly example of this warm, dangerous thing.",
         "The alarm sounds when smoke detectors sense this dangerous blaze starting.",
-        "Firefighters are trained to extinguish and control this burning hazard.",
+        "Crews in helmets with hoses are trained to put out and control this hazard.",
         "Cavemen first learned to make this by rubbing sticks together.",
         "You roast marshmallows over the glowing flames of this at a campsite.",
         "You know, the orange dancing thing that gives off heat and smoke.",
@@ -10029,7 +10029,7 @@
         "A feeling of ease and well-being with no pain or worry.",
         "A soft couch and warm blanket can give you this feeling.",
         "You might seek this from a friend when you are sad.",
-        "The opposite of discomfort or distress.",
+        "The opposite of pain, unease, and distress.",
         "A grieving person leans on loved ones to find this in hard times.",
         "Airlines advertise the extra legroom that gives you this on long flights.",
         "You know, that cozy, settled feeling when everything is soft and easy.",
@@ -10515,7 +10515,7 @@
         "Think of a saxophone solo that just goes off in whatever direction the player feels.",
         "It's that free-flowing music where nobody's really playing the same thing twice.",
         "An NBA team in Utah is named after this kind of music, oddly enough.",
-        "When something is decorated or jazzed up, the word comes from this very genre."
+        "When people say they're going to liven something up with flair, the slang comes from this music."
       ]
     },
     {
@@ -10845,7 +10845,7 @@
         "The panel of gauges right in front of a car driver is called this board.",
         "It's that quick little burst when you bolt across the room to grab something.",
         "Morse code uses dots and these to spell out messages.",
-        "Santa's reindeer Dasher gets his name from this fast-moving action."
+        "The first of Santa's reindeer is named after this quick, speedy action."
       ]
     },
     {
@@ -11143,7 +11143,7 @@
         "A traffic signal with red, yellow, and green colors controls cars at an intersection.",
         "A cigarette smoker asks for a flame to do this to it.",
         "It's what pours through the window in the morning to wake you up.",
-        "Think of what a candle or a flashlight gives off in the dark.",
+        "Think of what a candle or a small hand torch gives off in the dark.",
         "A feather is famously described as being this rather than heavy.",
         "A tower with a beam guiding ships at sea is a house of this."
       ]
@@ -11647,7 +11647,7 @@
       "word": "tour",
       "clues": [
         "A rock band travels from city to city on one of these.",
-        "Tourists visit famous landmarks on a guided one of these.",
+        "Visitors see famous landmarks on a guided one of these with a group.",
         "A bicycle race across France is a famous one of these.",
         "It means to travel around a place visiting different spots.",
         "A museum gives a guided one to show visitors the exhibits.",
@@ -12688,7 +12688,7 @@
         "Shakespeare's famous London theatre shared its name with this round object.",
         "Travel writing often describes circling the whole world by spinning this image.",
         "you give this desktop ball a spin and stop it with your finger to pick a country.",
-        "the Golden Globes award name comes from this round word.",
+        "the famous Golden film awards take their name from this round object.",
         "it's a fancy word for the whole planet, the entire world.",
         "a snow one is a little dome you shake to make flakes swirl."
       ]
@@ -12999,7 +12999,7 @@
         "A fine dry substance made of tiny particles.",
         "Baking flour and talcum both have this texture.",
         "You can make it by grinding something solid very finely.",
-        "Gunpowder and face makeup both come in this form.",
+        "The explosive stuff in a musket and face makeup both come in this form.",
         "Skiers love fresh, fluffy snow of this dry, loose kind.",
         "Detergent for laundry often comes in this granular dry form.",
         "You know, that fine dusty stuff you sprinkle on a baby's bottom.",
@@ -13178,7 +13178,7 @@
       "clues": [
         "A flat floating platform used to travel on water.",
         "You can build a simple one from logs tied together.",
-        "Survivors sometimes escape on this makeshift watercraft.",
+        "Shipwreck survivors sometimes escape aboard this makeshift wooden vessel.",
         "White-water enthusiasts paddle down rapids on an inflatable one.",
         "Tom Hanks built one to escape the island in the film Cast Away.",
         "Huckleberry Finn floated down the Mississippi on a wooden one.",
@@ -13674,7 +13674,7 @@
         "A one-piece garment worn by women or girls that covers the torso and legs.",
         "You put this on over your head and it flows down past the waist.",
         "Brides often wear a long white version of this at their wedding.",
-        "It also means to get dressed or to put clothing on.",
+        "As a verb it also means to put your clothes on in the morning.",
         "A debate over the color of one viral online photo split the internet years ago.",
         "Ballerinas and flamenco dancers twirl in flowing versions of this garment.",
         "You know that flowy outfit a woman slips on for a fancy night out.",
@@ -13980,7 +13980,7 @@
         "You know the person behind the wheel taking everyone where they need to go.",
         "Think of who you tip when an Uber drops you off at home.",
         "It's the big club golfers use to smash the ball as far as possible off the tee.",
-        "A screwdriver gets its name from being a tool that ___ screws into wood."
+        "The tool that turns screws into wood is a screw plus this word."
       ]
     },
     {
@@ -14233,7 +14233,7 @@
         "Mickey Mouse is instantly recognizable by his two big round ones of these.",
         "Headphones and earrings are worn on or over these body parts.",
         "You know the things you stick your fingers in when a sound's too loud.",
-        "Think of what a dog perks up when it hears the doorbell ring.",
+        "Think of what a dog perks up the moment the doorbell rings.",
         "It's where you put the buds in to listen to your music.",
         "An elephant's huge flappy ones of these help it stay cool."
       ]
@@ -14647,7 +14647,7 @@
       "word": "spine",
       "clues": [
         "The column of bones running down the center of your back.",
-        "It protects your spinal cord and allows you to stand upright.",
+        "It shields the nerve cord inside and lets you stand up straight.",
         "The narrow back edge of a book where its title is often printed.",
         "Scoliosis is a condition where this bony column curves sideways.",
         "Stand a book on a shelf and you read the title printed on this part.",
@@ -14770,11 +14770,11 @@
         "Cats love to chase and hunt this tiny creature.",
         "A computer peripheral you move across a desk to control the cursor.",
         "It squeaks and looks for crumbs or cheese in kitchens.",
-        "A small grey cartoon one named Jerry famously outsmarts a cat named Tom.",
+        "A small grey cartoon one named Jerry always outsmarts a cat named Tom.",
         "Click the button on this hand-held gadget to select things on your screen.",
         "You know that little gadget you slide around the desk to move the pointer?",
         "It's the tiny squeaky thing a cat pounces on, and elephants supposedly fear.",
-        "Think of Disney's most famous character, the cheery one with big round ears.",
+        "Think of Disney's best-known character, the cheery one with big round ears.",
         "You set a trap with cheese to catch this little critter in the kitchen."
       ]
     },
@@ -15084,7 +15084,7 @@
         "A safety device in an electrical circuit that melts and breaks when overloaded.",
         "If it blows, the power to part of your home shuts off for safety.",
         "The thin cord on a bomb or firework that you light to trigger it.",
-        "Replacing this small component in the fusebox restores electricity to an outlet.",
+        "Swapping this small component in the breaker panel restores power to an outlet.",
         "You light the cord on a stick of dynamite and run before it reaches the end.",
         "A short-tempered person is said to have a short one of these.",
         "You know that little glass cylinder in old cars and plug boxes.",
@@ -15232,7 +15232,7 @@
       "word": "ginger",
       "clues": [
         "A spicy, aromatic root used in cooking and herbal teas.",
-        "It is a common ingredient in Asian dishes and gingerbread cookies.",
+        "It is a common ingredient in Asian dishes and those spicy Christmas cookies.",
         "Sipping tea made from this root can soothe an upset stomach.",
         "Its tan, knobby underground root has a pungent, warming flavor.",
         "A pale-skinned redhead is sometimes nicknamed after this orange-tinged root.",
@@ -15284,8 +15284,8 @@
         "A kite needs plenty of this to rise and stay up in the sky.",
         "You know what blows your hat off and messes up your hair outside.",
         "It's the invisible thing that makes the leaves rustle and flags flap.",
-        "Think of a stormy day when it howls and rattles the windows.",
-        "The breezy stuff that powers a sailboat and spins a windmill."
+        "Think of a stormy day when it howls outside and rattles the glass panes.",
+        "The breezy stuff that pushes a sailboat along and turns a mill's blades."
       ]
     },
     {
@@ -15518,7 +15518,7 @@
       "clues": [
         "To press ink onto paper using a machine or press.",
         "You send a document to a device that produces a paper copy.",
-        "Fingerprints left at crime scenes help police identify suspects.",
+        "Marks left by fingers at a crime scene help police identify suspects.",
         "A pattern of repeated shapes on fabric is also called this.",
         "Newspapers and magazines are produced by this process on a large press.",
         "Bold leopard or floral designs on a dress are described by this word.",
@@ -15555,7 +15555,7 @@
         "You know when someone throws a tantrum in public and 'makes a' one.",
         "It's a single chunk of a movie set in one spot before they cut.",
         "Think of the yellow tape cops put up around where the crime happened.",
-        "Behind the scenes is the saying, but each chunk of the film is one of these."
+        "'Behind the ___' is the saying for what happens off camera."
       ]
     },
     {
@@ -16507,7 +16507,7 @@
       "word": "game",
       "clues": [
         "An activity with rules played for fun or competition.",
-        "Chess, soccer, and video games are all types of this.",
+        "Chess, soccer, and the things you play on a console are all types of this.",
         "Players try to win by following its specific rules.",
         "Children love playing board ones on rainy days.",
         "Monopoly, tag, and poker all fall under this label.",
@@ -16629,7 +16629,7 @@
         "An aquatic animal with scales, fins, and gills.",
         "It breathes underwater and swims using its tail.",
         "People catch them with rods, nets, or spears.",
-        "Salmon, tuna, and goldfish are all examples of this creature.",
+        "Salmon, tuna, and cod are all examples of this scaly water creature.",
         "You might keep one as a pet in a glass tank of water.",
         "A bear scoops these out of a river with its paws.",
         "you know the thing you order with chips at the seaside",
@@ -16883,7 +16883,7 @@
       "clues": [
         "A bright yellow citrus fruit with a very sour juice.",
         "You squeeze it over fish or into tea.",
-        "Its juice is the main ingredient in lemonade.",
+        "Its juice is the main ingredient in that sweet yellow summer drink.",
         "Biting into a slice makes you pucker your lips.",
         "Its peel is grated to add zest to cakes and dressings.",
         "A car that constantly breaks down is nicknamed after this fruit.",
@@ -16973,7 +16973,7 @@
       "clues": [
         "The colorful bloom that grows on plants and attracts bees.",
         "People give bouquets of them on birthdays and anniversaries.",
-        "Roses, tulips, and sunflowers are popular types.",
+        "Roses, tulips, and daisies are all popular types of these blooms.",
         "After it blooms, it may produce fruit or seeds.",
         "A bee lands on this to gather nectar and pollen.",
         "You give a single red one to show romantic affection.",
@@ -17107,7 +17107,7 @@
       "word": "knee",
       "clues": [
         "The joint in the middle of your leg.",
-        "You bend this when you kneel on the floor.",
+        "You bend this when you go down on one leg to propose.",
         "It connects your thigh to your lower leg.",
         "Runners often wear a brace to protect this joint.",
         "A child scrapes this when they fall off a bike.",
@@ -17310,7 +17310,7 @@
         "You know that fluffy cotton-wool thing up in the sky on a nice day.",
         "When you're really happy people say you're on number nine of these.",
         "It blocks the sun and then it pours water down on you.",
-        "Where iCloud or Dropbox keeps your files, named after the sky thing."
+        "Where Dropbox and Google Drive keep your files, named after the sky thing."
       ]
     },
     {
@@ -17623,7 +17623,7 @@
         "You dial a number on its keypad to reach someone far away.",
         "Alexander Graham Bell is credited with inventing the first one.",
         "You know, the thing you ring someone up on when you want to chat.",
-        "The iPhone or Samsung Galaxy is the smart version everyone carries now.",
+        "A Samsung Galaxy or an Apple one is the smart version everyone carries now.",
         "It rings, you pick it up and say 'hello?'",
         "ET wanted to use one of these to call home."
       ]
@@ -18449,7 +18449,7 @@
         "Ancient people painted pictures of animals on the walls of one.",
         "You know that dark hollow opening in a mountainside you can walk into? That.",
         "It's where Batman keeps all his gadgets, his secret hideout.",
-        "Think of cavemen living inside one before there were houses.",
+        "Think of prehistoric people sheltering inside one before there were houses.",
         "Where you'd explore with a headlamp and find dripping rock formations underground."
       ]
     },
@@ -19119,7 +19119,7 @@
         "A sweet liquid squeezed from fruit, like oranges or apples.",
         "You drink it cold from a glass, often at breakfast.",
         "It is the natural liquid inside fruits and vegetables.",
-        "A juicer or blender helps you make it fresh at home.",
+        "A squeezer or a blender helps you make it fresh at home.",
         "Carton brands like Tropicana sell the orange variety chilled.",
         "Concentrate is diluted with water to make this drink from frozen tubs.",
         "Think of the fresh orange stuff you'd order at brunch.",
@@ -19198,7 +19198,7 @@
         "High at this hour, an old western film often staged a tense gunfight.",
         "A sundial casts its shortest shadow at this central point of daylight.",
         "Think of when the church bells chime twelve times in the daytime.",
-        "It's the exact moment morning turns into afternoon.",
+        "It's the exact moment morning ends and the second half of the day begins.",
         "You know, the time when your shadow practically disappears.",
         "Cinderella's spell was at midnight, but this is its daytime twin."
       ]
@@ -19440,7 +19440,7 @@
         "Think of the smooth metal strip a tram or train glides along.",
         "It's the horizontal bar you slide your hand along going up the stairs.",
         "You know, the long shiny line you'd balance on like a tightrope.",
-        "To go off the this is a saying meaning to lose control or get derailed."
+        "To go off the ___ is a saying meaning to lose control completely."
       ]
     },
     {
@@ -20428,7 +20428,7 @@
         "Music written for a song is printed on a piece of this for a pianist to read.",
         "A thin slab of metal or glass can also be described with this flat term.",
         "It's that flat cloth thing you pull over yourself in bed.",
-        "A spreadsheet program is named after this word combined with work.",
+        "Excel's grid of cells is named after this word joined with 'spread'.",
         "After a wash you fold these and stack them in the linen closet.",
         "On Halloween you cut two eye holes in one to look like a ghost."
       ]
@@ -20544,7 +20544,7 @@
         "A period of seven days starting on Monday.",
         "There are 52 of these in a single year.",
         "Monday to Sunday makes up one complete unit of this.",
-        "You get a paycheck once every one of these if paid weekly.",
+        "You get a paycheck once every one of these if that's how your job pays.",
         "A typical school timetable runs for five days of this seven day span.",
         "Saturday and Sunday form the resting part at the end of this period.",
         "It's that chunk of time from one Monday to the next.",
@@ -20955,7 +20955,7 @@
         "It's that wide grassy expanse out in the countryside.",
         "A magnetic or gravitational area of force is also called this in physics.",
         "Your area of expertise or study is referred to as your one of these.",
-        "A baseball outfielder stands way out in the green part of this."
+        "A baseball player out past second base stands way out in the green part of this."
       ]
     },
     {
@@ -20997,7 +20997,7 @@
         "You might dip chicken nuggets or fries into it.",
         "A barbecue chef brushes a smoky, sticky one of these over the ribs.",
         "Spaghetti would be dry and bland without a generous ladle of this on top.",
-        "It's that saucy liquid you pour or drizzle over your food.",
+        "It's that thick tasty liquid you pour or drizzle all over your food.",
         "You dunk your fries into a little cup of the tomato-red kind.",
         "A taco gets a spicy red or green one drizzled on top.",
         "Sweet and sour is a popular sticky one served with Chinese food."
@@ -21209,7 +21209,7 @@
         "Celebrities sometimes legally change theirs to a stage version.",
         "When you meet someone new, you ask them what theirs is.",
         "It's what you call somebody, like John or Maria.",
-        "A nickname is a shorter, friendlier version of yours.",
+        "A friendly little pet version of yours might be Bob instead of Robert.",
         "You sign your real one at the bottom of a contract."
       ]
     },
@@ -21261,7 +21261,7 @@
     {
       "word": "nature",
       "clues": [
-        "The natural world of plants, animals, landscapes, and weather.",
+        "The wild living world of plants, animals, landscapes, and weather.",
         "Forests, oceans, mountains, and rivers are all part of it.",
         "Spending time outdoors in it can reduce stress and boost mood.",
         "It exists entirely apart from anything humans have built.",
@@ -21493,7 +21493,7 @@
         "In a deck of cards, hearts and spades are each one of these four groups.",
         "A tailor takes measurements to custom-make a perfectly fitted one for a wedding.",
         "James Bond always looks sharp in a tailored one of these.",
-        "When you file a lawsuit against someone, you bring this against them.",
+        "When you file a legal claim against someone, the word 'law' goes in front of this.",
         "Suing someone in court is also called bringing one of these.",
         "The follow part means to do the same thing someone else just did."
       ]
@@ -21642,7 +21642,7 @@
         "It comes in many sizes, from a marble to a beach version.",
         "Cinderella attended a royal one and lost her glass slipper there.",
         "A bowling one is heavy with finger holes and rolls down a lane.",
-        "You dribble a round one down the basketball court.",
+        "You dribble a round orange one down the court and shoot at a hoop.",
         "Soccer players kick a black-and-white spotted one into the net.",
         "A cannon shoots a heavy iron sphere by this name.",
         "When you're having a great time, you say you're having a one of these."
@@ -22346,7 +22346,7 @@
         "It is used in heraldry and painting to describe a rich blue hue.",
         "Microsoft named one of its major cloud computing services after this color.",
         "Painters mix this vivid blue from cobalt to capture a summer sky.",
-        "On a clear day, the Cote d'Azur coastline shimmers this very shade.",
+        "On a clear day, the French Riviera coastline shimmers exactly this shade.",
         "You know that gorgeous bright blue of a clear summer sky?",
         "It's the fancy word for the vivid blue of the Mediterranean sea.",
         "Microsoft named its big cloud computing service after this blue shade.",
@@ -23258,7 +23258,7 @@
       "clues": [
         "The activity of travelling on water in a small vessel for fun.",
         "People enjoy this on lakes and rivers during summer.",
-        "Rowing, sailing, and motorboating are all forms of this pastime.",
+        "Rowing, sailing, and puttering along with an outboard motor are forms of this.",
         "You might need a life jacket when doing this activity.",
         "A marina rents these small vessels out by the hour to visitors.",
         "A relaxing hobby that involves oars, sails, or a small outboard motor.",
@@ -23533,8 +23533,8 @@
         "Fists fly as a crowd erupts into a chaotic mass scuffle.",
         "An all-out, free-for-all fight that breaks out in a crowded pub.",
         "You know when a whole bar suddenly erupts and everyone's throwing punches.",
-        "Think of a brawly hockey-game fight where the gloves come off and chaos breaks out.",
-        "The brawly bench-clearing chaos when both teams pile in and swing wildly.",
+        "Think of a hockey game where the gloves come off and total chaos breaks out.",
+        "The bench-clearing chaos when both teams pile in and start swinging wildly.",
         "A messy free-for-all where chairs fly and bottles break, not a clean boxing match."
       ]
     },
@@ -25898,7 +25898,7 @@
       "clues": [
         "To impress someone greatly with brilliance or spectacular display.",
         "The fireworks display managed to completely amaze the crowd.",
-        "A performer can do this with a dazzling costume and lighting.",
+        "A performer can do this with a glittering costume and blinding stage lights.",
         "Bright sunlight reflecting off water can blind and overwhelm the eyes.",
         "A magician aims to do this to the audience with a stunning trick.",
         "The chandelier's sparkling crystals seemed to do this to everyone who entered.",
@@ -26963,13 +26963,13 @@
       "clues": [
         "A large public exhibition or fair showcasing technology, products, or culture.",
         "Companies set up booths and displays to present their latest innovations.",
-        "World expos have been held in cities like Paris, Shanghai, and Milan.",
+        "World fairs of this kind have been held in Paris, Shanghai, and Milan.",
         "You walk around a large hall visiting displays and collecting promotional items.",
         "Visitors wander a vast convention center sampling demos at a tech one.",
         "A giant landmark like the Eiffel Tower was built for a world one in Paris.",
         "It's that big trade fair where every company shows off its new gadgets.",
         "You grab free pens and tote bags from booths at one of these huge events.",
-        "Short for 'exposition,' it's a massive showcase under one giant roof.",
+        "It's the clipped four-letter form of a longer word meaning a grand showcase.",
         "Whole countries build fancy pavilions to represent themselves at a world one."
       ]
     },
@@ -27641,7 +27641,7 @@
         "Champagne is famous for its lively, sparkling version of this.",
         "Tiny gas bubbles rising through a drink create this effect.",
         "You know that hissing, bubbly tingle when you crack open a soda?",
-        "Think of the prickle on your tongue from a fresh fizzy drink.",
+        "Think of the prickle on your tongue from a freshly poured sparkling drink.",
         "It's the bubbly hiss of carbonation in champagne or pop.",
         "A bath bomb dropped in water dissolves with this bubbly display.",
         "When a flat cola has lost all of this, it's gone dead and boring.",
@@ -27855,7 +27855,7 @@
         "You know that pancake-shaped fish with both eyes scrunched on one side?",
         "Think of the flat bottom-dweller that blends into the sand on the seabed.",
         "When you thrash around helplessly, struggling to cope, you do this.",
-        "It's the flatfish a chef might pan-fry, and also a word for floundering hopelessly."
+        "It's the flatfish a chef might pan-fry, and also a word for struggling hopelessly."
       ]
     },
     {
@@ -27864,7 +27864,7 @@
         "Soft, light bits of fibre or dust that collect on surfaces.",
         "Lint that gathers in pockets or under the sofa is called this.",
         "Something light, airy, and lacking real substance is described as this.",
-        "A cat's thick, fluffy coat sheds small bits of this everywhere.",
+        "A cat's thick, soft coat sheds tiny bits of this all over the sofa.",
         "You pull this clinging stuff out of the lint trap after drying clothes.",
         "A pillow filling or a dandelion seed head feels exactly like this.",
         "You know that soft airy stuff that gathers in your belly button or pockets?",
@@ -28223,7 +28223,7 @@
       "clues": [
         "A member of a religious order who lives a simple, devout life.",
         "He wears a robe and often lives in a community or travels.",
-        "Friars Minor and Dominicans are well-known groups of this type.",
+        "The Franciscans and the Dominicans are well-known orders of this type of man.",
         "Think of the hooded monk who preaches and helps the poor.",
         "Robin Hood's jovial companion in Sherwood Forest belonged to this brown-robed order.",
         "Bound by vows of poverty, he begs alms and serves rather than owning property.",
@@ -31042,14 +31042,14 @@
       "word": "loin",
       "clues": [
         "A cut of meat from the back or side of an animal.",
-        "A tenderloin steak comes from this part of a pig or cow.",
+        "The tenderest premium steak cut is named after this part of a pig or cow.",
         "It is the region of the body between the ribs and hips.",
-        "Pork chops and sirloin both come from this area of the animal.",
+        "Pork chops and the classic beef steak cuts both come from this area of the animal.",
         "A rack of lamb is cut from this part of the carcass.",
         "Butchers prize this tender section running along the spine.",
         "You know the tender cut a butcher slices from along the spine?",
         "It's the bit of the body between your ribs and your hips.",
-        "Think of where pork chops and sirloin steak come from on the animal.",
+        "Think of the part of the pig a chop is cut from, just behind the ribs.",
         "Tarzan wears a cloth around this region in old jungle movies."
       ]
     },
@@ -31343,7 +31343,7 @@
       "clues": [
         "Grain, usually barley, that has been soaked, sprouted, and dried.",
         "It is a key ingredient in beer and whiskey production.",
-        "A malted milkshake uses a powder made from this ingredient.",
+        "A thick old-fashioned milkshake uses a powder made from this ingredient.",
         "The roasting process determines how dark or light the flavor will be.",
         "Brewers steep this sprouted grain in hot water to extract sugars.",
         "A whiskey labeled single ones is distilled from this one type of grain.",
@@ -31566,10 +31566,10 @@
     {
       "word": "merry-go-round",
       "clues": [
-        "A spinning fairground ride with horses children sit on.",
+        "A spinning carnival ride with wooden horses for children to sit on.",
         "Kids love this circular carnival attraction that goes up and down.",
         "It plays cheerful music while it slowly rotates at a fair.",
-        "A classic playground or amusement park ride shaped like a big circle.",
+        "A classic amusement park ride for kids, shaped like one big turning circle.",
         "Painted ponies move up and down on poles as this whirling ride turns.",
         "You buy a ticket and grab a brass pole as the platform spins.",
         "You know that ride where you pick a colourful horse and just keep circling.",
@@ -31995,7 +31995,7 @@
         "You know that wet sloppy filth that cakes your wellies on a farm.",
         "It's that gloopy brown mess a pig loves to roll around in.",
         "Think of the grimy sludge kids come home plastered in after the rain.",
-        "The mucky dirt you have to scrape off before tracking it into the house."
+        "The sticky wet dirt you have to scrape off before tracking it into the house."
       ]
     },
     {
@@ -35997,7 +35997,7 @@
         "A quality that helps you stay focused and achieve long-term goals.",
         "Resisting that midnight snack when you are dieting takes plenty of this.",
         "The marshmallow test measures this trait in young children.",
-        "You know that inner willpower to make yourself do the hard thing anyway?",
+        "You know that inner willpower that drives a person to do the hard thing anyway?",
         "It's what keeps you off your phone and on task when nobody's watching.",
         "Think of the grit it takes to train every day without anyone forcing you.",
         "Drill sergeants try to hammer this kind of personal control into recruits."
@@ -36014,7 +36014,7 @@
         "Imposter syndrome is closely tied to this nagging feeling of inadequacy.",
         "It's that nagging little voice going 'you can't actually do this'.",
         "You know when you're about to send a text and you second-guess every word?",
-        "The opposite of feeling totally confident in yourself.",
+        "The opposite of feeling totally confident in your own abilities.",
         "It's why people freeze up and think everyone else is smarter than them."
       ]
     },
@@ -36036,7 +36036,7 @@
     {
       "word": "self-improvement",
       "clues": [
-        "The process of making yourself better in some way.",
+        "The process of making your own life or character better in some way.",
         "People read, exercise, or study to achieve this goal.",
         "Working on your weaknesses is a form of this.",
         "It involves growing your skills, habits, or character over time.",
@@ -36045,20 +36045,20 @@
         "It's that whole 'becoming a better version of me' thing.",
         "Think of someone hitting the gym and reading every night to level up.",
         "You know when people say they're working on themselves?",
-        "Bettering yourself bit by bit, day after day."
+        "Bettering who you are, bit by bit, day after day."
       ]
     },
     {
       "word": "self-reliance",
       "clues": [
-        "The ability to depend on yourself rather than others.",
+        "The ability to depend on your own resources rather than on other people.",
         "A pioneer living alone in the wilderness needs this quality.",
         "Ralph Waldo Emerson wrote a famous essay about this idea.",
         "Doing your own repairs instead of hiring someone shows this trait.",
         "Growing your own food and fixing your own car both demonstrate this quality.",
         "A survivalist prides themselves on having a high degree of this.",
         "It's that thing where you never have to ask anyone for help.",
-        "Think of a hermit who provides absolutely everything for himself.",
+        "Think of a hermit who grows, builds, and fixes absolutely everything alone.",
         "You know when someone refuses to lean on anybody else?",
         "The opposite of being totally dependent on other people."
       ]
@@ -36066,12 +36066,12 @@
     {
       "word": "self-respect",
       "clues": [
-        "A positive regard and value you hold for yourself.",
+        "A positive regard and value you hold for your own worth as a person.",
         "Without it, people may let others treat them badly.",
         "It means knowing you deserve to be treated with dignity.",
-        "Standing up for yourself in an unfair situation shows this quality.",
+        "Standing up to unfair treatment instead of taking it shows this quality.",
         "Refusing to let anyone treat you as worthless is rooted in this quality.",
-        "It is the dignity and pride you maintain in how you carry yourself.",
+        "It is the dignity and quiet pride a person carries through life.",
         "It's that thing where you walk away because you know your own worth.",
         "You know when someone won't let anybody belittle them?",
         "The feeling that keeps you from begging an ex to come back.",
@@ -36105,7 +36105,7 @@
         "It's when you give up everything you have so someone else can be okay.",
         "You know when a mom skips meals so the kids can eat?",
         "Think of a hero throwing themselves in front of danger to save another.",
-        "Putting yourself last on purpose so somebody you love wins."
+        "Putting your own needs last on purpose so somebody you love wins."
       ]
     },
     {
@@ -36907,7 +36907,7 @@
       "word": "slime",
       "clues": [
         "A thick, wet, gooey substance that feels gross to touch.",
-        "Kids love to make and squish this slimy craft material.",
+        "Kids love to mix up and squish this gooey homemade craft material.",
         "It oozes and drips and sticks to your fingers.",
         "Snails and slugs leave a trail of this behind them.",
         "You can buy this stretchy goo in tubs that come in bright colors and glitter.",
@@ -37695,7 +37695,7 @@
         "You know when you do something nasty on purpose just to get back at someone?",
         "It's that petty 'I'll show you' feeling that makes you act mean.",
         "Think of slashing your ex's tires not for any reason except to hurt them.",
-        "It's the bitter motivation behind a vengeful, spiteful little act."
+        "It's the bitter motivation behind a petty, vengeful little act."
       ]
     },
     {
@@ -39420,7 +39420,7 @@
         "You know the sparkly silver stringy stuff you drape on the Christmas tree? That.",
         "It's the shimmery foil strands that get everywhere and stick to the carpet.",
         "Think of the glittery garland that makes a tree shimmer under the lights.",
-        "Hollywood's glitzy nickname, 'Tinseltown', is named after this sparkly decoration."
+        "Hollywood's glitzy nickname, ___town, comes from this sparkly decoration."
       ]
     },
     {
@@ -41994,7 +41994,7 @@
         "The process of doing something to achieve a result.",
         "A movie with lots of car chases and explosions is called this genre.",
         "When you stop talking and start moving toward a goal, you are taking this.",
-        "Every reaction has an equal and opposite one, according to physics.",
+        "In physics, every one of these has an equal and opposite response.",
         "Toys, figures, and adventure films are described with this energetic label.",
         "A director shouts 'lights, camera...' followed by this word to start filming.",
         "A small posable superhero toy is called an ___ figure.",
@@ -42473,7 +42473,7 @@
       "clues": [
         "A common short word for a car or motor vehicle.",
         "You can use this prefix to mean something works by itself.",
-        "An automatic transmission in a car is named with this word.",
+        "The transmission that shifts gears by itself starts with this word.",
         "A body shop repairs this kind of vehicle after a crash.",
         "A racing series with cars zooming around a track uses this short name.",
         "In a word processor, this kind of correct fixes your spelling as you type.",
@@ -42698,14 +42698,14 @@
       "clues": [
         "The bottom part that supports something from below.",
         "A military camp or headquarters is called one.",
-        "In baseball, there are four of these that runners must touch.",
+        "In the American bat-and-ball sport, runners must touch four of these.",
         "The foundation of a building sits on this.",
         "A lamp has a wide one so it won't tip over on the table.",
         "Soldiers return to this after a mission in the field.",
         "You know the wide flat bottom of a statue that keeps it standing upright?",
         "It's the camp soldiers live and operate out of during a mission.",
         "Think of the foundation a tall column or tower rests on.",
-        "When a runner in baseball sprints to touch the safe spot, they're heading for one."
+        "When a runner sprints to touch the safe white bag on the diamond, that's one."
       ]
     },
     {
@@ -42868,7 +42868,7 @@
         "After a big meal it feels stuffed and full.",
         "Snakes and other creatures slither along on this part.",
         "It's that part where your button is, right in the middle of your front.",
-        "A dancer who shakes this midriff does the bellydance.",
+        "A dancer from the Middle East shimmies this midriff in a famous style.",
         "Beer drinkers sometimes get a big round one of these.",
         "When you flop face-down into a pool it's a flop named after this."
       ]
@@ -42915,7 +42915,7 @@
         "It's that tiny fruit you toss into a smoothie by the handful.",
         "Think of the dark purple one named blue, or the red one named straw.",
         "A bear forages for these in the woods in late summer.",
-        "Cranberry sauce is made from the tart red ones of these."
+        "That tart red sauce served with Thanksgiving turkey is made from these."
       ]
     },
     {
@@ -43004,7 +43004,7 @@
         "You try not to be late when this superior is watching.",
         "It's that person you report to who can hire or fire you.",
         "Bruce Springsteen is nicknamed 'The' one of these.",
-        "When someone bosses people around, they act like they're this.",
+        "When someone orders everyone about, they're acting like they're this.",
         "Your manager or supervisor, the one who calls the shots."
       ]
     },
@@ -43014,7 +43014,7 @@
         "A very large heavy rock, much bigger than a stone.",
         "Indiana Jones famously ran from one in an old adventure film.",
         "You might see one at the bottom of a cliff or hillside.",
-        "Climbers scale these massive rocks as a sport called bouldering.",
+        "Climbers scramble up these massive rocks without ropes as a sport.",
         "A landslide sends these huge rocks tumbling down the slope.",
         "Sisyphus was cursed to roll one of these uphill forever.",
         "It's that giant rock too big to lift, sitting alone in a field.",
@@ -43929,7 +43929,7 @@
         "A group of people who meet to share a common interest.",
         "A heavy stick used as a weapon is also called this.",
         "Book lovers might join a reading one of these.",
-        "A nightclub is a place people dance and socialize.",
+        "A late-night place where people dance and drink goes by this name.",
         "A golfer swings one of these to hit the ball down the fairway.",
         "In a deck of cards, one black suit is named after this shape.",
         "A bouncer stands outside one of these checking IDs at night.",
@@ -44197,7 +44197,7 @@
       "word": "craft",
       "clues": [
         "Making something by hand with skill, like pottery or sewing.",
-        "A boat or aircraft can also be called this.",
+        "A boat or a flying machine can also be called this.",
         "Children enjoy this activity with scissors, glue, and paper.",
         "A skilled trade or artistic handmade creation.",
         "A spaceship is sometimes referred to as this kind of vessel.",
@@ -44377,7 +44377,7 @@
       "word": "cycle",
       "clues": [
         "A series of events that repeats over and over again.",
-        "Another word for a bicycle you ride with pedals.",
+        "Another word for the pedal-powered machine you ride to work.",
         "Seasons follow a repeating pattern called this.",
         "The washing machine has different settings called by this name.",
         "The phases of the moon repeat in one of these each month.",
@@ -45090,7 +45090,7 @@
         "you know, the people on the payroll, the ones who actually do the work",
         "of the month, there's an award with that title at many shops",
         "they get fired or hired, depends on how they perform",
-        "the staff under the boss, basically anyone who isn't self-employed"
+        "the staff under the boss, basically anyone who isn't their own master."
       ]
     },
     {
@@ -45283,7 +45283,7 @@
         "Doctor No and similar Bond villains embody this wicked nature.",
         "A demon or a wicked witch symbolizes this malevolent force in folklore.",
         "you know, the dark side, what Darth Vader represents",
-        "it's pure badness, the stuff devils and monsters stand for",
+        "it's pure badness, the stuff demons and monsters stand for.",
         "the battle between good and ___, that's the classic theme",
         "an ___ genius is the mad scientist who wants to destroy the world"
       ]
@@ -45864,7 +45864,7 @@
         "The bright glowing part of a fire that gives off heat and light.",
         "A candle produces a small flickering one of these.",
         "It dances orange and yellow at the top of a burning log.",
-        "Keep flammable objects away from this part of a fire.",
+        "Keep paper, fabric, and anything that burns well away from this.",
         "A dragon in fairy tales breathes this out of its mouth.",
         "Blowing on this is how you put out a birthday candle.",
         "You know that hot flickering tongue of light on a match? That's it.",
@@ -45982,7 +45982,7 @@
       "word": "folk",
       "clues": [
         "Traditional music and stories passed down through generations are called this.",
-        "Country people or ordinary working folks are sometimes called this.",
+        "Country people or ordinary working types are sometimes called this.",
         "Old fairy tales and legends belong to this type of culture.",
         "A singer with an acoustic guitar often plays this style of music.",
         "Bob Dylan and Woody Guthrie are famous for this genre of song.",
@@ -46573,7 +46573,7 @@
         "This person checks tickets and keeps order at the entrance of a club.",
         "A goalkeeper's job is essentially to do this for the net in soccer.",
         "The uniformed guy at the gate who won't let you in without a pass.",
-        "A bodyguard is hired to do this for a celebrity.",
+        "A hired muscle-man in a black suit does this for a celebrity.",
         "You raise your fists to do this and block a punch in boxing.",
         "The royal ones in tall fur hats outside Buckingham Palace."
       ]
@@ -46753,7 +46753,7 @@
         "A shampoo bottle has instructions to rub the product into this part.",
         "You nod this up and down to say yes to someone.",
         "It's the top bit of you that sits on your neck and shoulders.",
-        "A headache is a pain right in this part of you.",
+        "A migraine is a throbbing pain right inside this part of you.",
         "You bang this on a low doorframe if you're tall.",
         "The thing you scratch when you're confused or thinking hard."
       ]
@@ -46979,7 +46979,7 @@
         "Pull this up over your ears to stay warm and hide your face in the rain.",
         "Little Red Riding one of these wore a red one in the fairy tale.",
         "A monk's robe has one of these you pull over your bald head.",
-        "Slang for the neighborhood you grew up in, the shortened version.",
+        "Street slang for the block or district you grew up in, clipped short.",
         "A hangman wears a black one of these over the head of the condemned."
       ]
     },
@@ -47999,7 +47999,7 @@
         "The arms and legs together are known as your four of these.",
         "You know when you say go out on a this, meaning take a risk.",
         "It's the general word for an arm or a leg sticking out from your body.",
-        "Think of a big tree branch a kid climbs out onto.",
+        "Think of a big tree branch a kid crawls out along.",
         "An octopus has eight of these flexible body parts."
       ]
     },
@@ -48014,7 +48014,7 @@
         "An all-you-can-eat buffet has no one on how much you can eat.",
         "It's that ceiling you're not supposed to cross, like an age one for a ride.",
         "You know when a parent says you've reached your screen-time one for the day?",
-        "The opposite of unlimited, basically.",
+        "The opposite of endless and boundless, basically.",
         "Bartenders will cut you off when you hit yours."
       ]
     },
@@ -48075,7 +48075,7 @@
         "You know when a website spins forever before it finishes? It's still doing this.",
         "It's that pile of dishes or work that weighs you down, a heavy one.",
         "Think of a moving truck, that whole pile in the back is one of these.",
-        "The opposite of unloading, it's putting stuff on or in."
+        "The opposite of taking everything off the truck, it's putting stuff on."
       ]
     },
     {
@@ -48218,7 +48218,7 @@
       "clues": [
         "Letters and packages delivered to your home by a postal worker.",
         "You drop an envelope in a box to send it.",
-        "Email is the digital version of this older communication method.",
+        "The electronic version sent over the internet borrows the name of this older method.",
         "The carrier comes to your door with this delivery each day.",
         "The address and a stamp must go on the envelope before you send this.",
         "A red flag on the box tells the carrier there is something outgoing to collect.",
@@ -48233,14 +48233,14 @@
       "clues": [
         "The biological sex associated with boys and men.",
         "It is used to describe the gender of animals and people.",
-        "On forms, you check a box labeled this or female.",
+        "On official paperwork, this is the gender box a man ticks.",
         "A stallion is the one form of a horse.",
         "A rooster is the strutting one in the henhouse.",
         "On a plug, this is the part with the protruding pins.",
-        "You know on a form when you tick the box that isn't female? That one.",
+        "You know when a form asks your gender and you're a guy? That's the word.",
         "It's the bull, not the cow, the gender with the antlers in deer.",
         "Think of the cable end with the pins that pokes into the socket.",
-        "The opposite of female, basically the boy side of things."
+        "The opposite of the girl side of things, basically the boy one."
       ]
     },
     {
@@ -48308,7 +48308,7 @@
       "clues": [
         "A visible sign, stain, or symbol left on a surface.",
         "A teacher gives you a grade or a score called this.",
-        "A birthmark is a type of one you are born with on your skin.",
+        "A dark patch you are born with on your skin is a type of this.",
         "You use a pen or pencil to make one on paper.",
         "A red one on the calendar reminds you of an important date.",
         "A dirty shoe can leave a muddy one on the clean carpet.",
@@ -48352,7 +48352,7 @@
       "word": "master",
       "clues": [
         "An expert who has reached the highest level of a skill.",
-        "A chess grandmaster earns the title through years of study.",
+        "A top chess player earns this grand title through years of study.",
         "It also refers to the main or original version of something.",
         "A degree earned after a bachelor's degree at university carries this name.",
         "A dog obeys its owner, who acts as its trainer and one.",
@@ -48930,14 +48930,14 @@
         "You know, like the old tales of Hercules and the gods.",
         "It's a legend that's not actually true but lots of folks believe it.",
         "Think of those fables explaining why thunder rumbles.",
-        "MythBusters built a whole show around testing whether these are true."
+        "Two TV guys built a whole show around blowing things up to test if these are true."
       ]
     },
     {
       "word": "neck",
       "clues": [
         "The part of the body that connects the head to the shoulders.",
-        "You wear a scarf or necklace around this body part.",
+        "You wear a scarf or a string of pearls around this body part.",
         "A giraffe's most striking feature is its extremely long one.",
         "Turning your head is made possible by the muscles in this area.",
         "A tie or a collar wraps around this part of the body.",
@@ -49124,7 +49124,7 @@
         "Grief over losing a loved one causes deep emotional one of this kind.",
         "You know, the 'ouch' you feel when you bang your shin.",
         "It's the opposite of comfort or pleasure, the hurt you want gone.",
-        "Think of what painkillers are designed to make go away.",
+        "Think of what a couple of aspirin are designed to make go away.",
         "'No ___, no gain' is the gym motto built on this feeling."
       ]
     },
@@ -49450,7 +49450,7 @@
         "Plumbers fix leaking ones inside walls and under sinks.",
         "An old man might smoke tobacco from a curved wooden one.",
         "A plumber's job involves cutting, joining, and sealing these.",
-        "A bagpipe player blows air through a long one to make sound.",
+        "A Scottish player in a kilt blows air through a long one to make music.",
         "Organs in churches have rows of tall metal ones that produce notes.",
         "You know, the tube that carries water under your sink.",
         "Sherlock Holmes is often pictured puffing on a wooden one.",
@@ -49717,11 +49717,11 @@
       "word": "port",
       "clues": [
         "A harbor where ships dock to load and unload cargo.",
-        "It is a key location for maritime trade and transport.",
+        "It is a key location for sea trade and moving goods by ship.",
         "Sailors arrive and depart from this place by the sea.",
         "On a computer or device, it is also a connection socket.",
         "On a sailing ship, this is the left-hand side as you face the front.",
-        "A sweet fortified wine from Portugal shares this name.",
+        "A sweet fortified wine from the Douro valley shares this name.",
         "It's where you plug a USB cable into your laptop.",
         "Think of where the cruise ship ties up so passengers can get off.",
         "You know that dark sweet wine people sip after dinner?",
@@ -50002,7 +50002,7 @@
       "word": "rain",
       "clues": [
         "Water droplets that fall from clouds in the sky.",
-        "You need an umbrella or raincoat to stay dry during this.",
+        "You need an umbrella or a waterproof coat to stay dry during this.",
         "Plants and crops depend on it to grow and survive.",
         "It is the sound of drops tapping on your window during a storm.",
         "After a downpour, a colorful arc may appear in the sky.",
@@ -50347,14 +50347,14 @@
       "word": "room",
       "clues": [
         "An enclosed area inside a building separated by walls.",
-        "A bedroom, kitchen, or bathroom is each one of these in a house.",
+        "The kitchen, the place you wash, and the place you sleep are each one of these.",
         "Hotels rent individual ones to guests for overnight stays.",
         "If there is enough space for something, you say there is this for it.",
         "You enter one through a door and it may have windows and a floor.",
         "If a suitcase is too full, you say there is no more of this for clothes.",
         "You know that space with four walls and a door you walk into?",
         "It's what you ask for at a hotel front desk to spend the night.",
-        "Think of how a house is divided into the kitchen, the bedroom, and so on.",
+        "Think of how a house is divided into the kitchen, the place you sleep, and so on.",
         "When there's plenty of empty space, you say there's lots of it to move around."
       ]
     },
@@ -50948,7 +50948,7 @@
       "clues": [
         "One of the flat surfaces or edges of an object.",
         "In a conflict, each group fights for their own one.",
-        "A salad or fries served alongside the main course is called a dish of this.",
+        "A salad or fries served next to the main course is called a dish of this.",
         "Left and right are the two main ones of your body.",
         "A coin has two of these: heads and tails.",
         "Garlic bread served with pasta is a popular dish of this kind.",
@@ -51478,7 +51478,7 @@
         "A tennis or golf player swings the racket or club in one motion.",
         "Each tap of a clock's bell at the hour marks one of these.",
         "You know how you gently pet a cat with a smooth motion of your hand?",
-        "The freestyle or backstroke in swimming each end with this word.",
+        "In swimming, the crawl and the butterfly are each named as a type of this.",
         "Think of the medical emergency where someone's face droops suddenly.",
         "A single pull of an oar through the water counts as one of these."
       ]
@@ -52011,9 +52011,9 @@
     {
       "word": "teen",
       "clues": [
-        "A person who is between thirteen and nineteen years old.",
+        "A young person who is between 13 and 19 years old.",
         "A high school student is usually in this age group.",
-        "Their age ends with the same sound for thirteen through nineteen.",
+        "Every age from 13 to 19 ends in the same syllable, and that syllable names them.",
         "They are no longer a child but not yet a full adult.",
         "This person is often given more freedom, like a curfew, but still lives with parents.",
         "Acne, mood swings, and a first crush are common in this stage of life.",
@@ -52317,7 +52317,7 @@
         "A software program can also be called this when it helps you work.",
         "A screwdriver and a saw are common examples found in a handyman's belt.",
         "A magnifying glass can serve as a handy one of these for reading tiny print.",
-        "You know, the stuff in a toolbox, like pliers and a drill.",
+        "You know, the stuff in a handyman's box, like pliers and a drill.",
         "The right one of these for the right job, as the handyman always says.",
         "Think of what Bob the Builder hauls around to fix and build things.",
         "Even a stick a chimp uses to fish out ants counts as one of these."
@@ -53274,7 +53274,7 @@
         "The joint that connects your hand to your forearm.",
         "People wear watches on this part of the body.",
         "It can sprain if you fall and land on your hand.",
-        "A bracelet or wristband wraps around this narrow joint.",
+        "A bracelet or a fitness band wraps around this narrow joint.",
         "You bend this to wave your hand back and forth.",
         "Carpal tunnel syndrome causes pain and numbness in this area.",
         "You know that thin bit just below your palm? That spot.",
@@ -53962,14 +53962,14 @@
       "word": "arch",
       "clues": [
         "A curved structure that spans an opening and supports weight above it.",
-        "Bridges and doorways often feature this rounded architectural element.",
+        "Bridges and doorways often feature this rounded curve in their design.",
         "The Romans were famous builders of these stone curved structures.",
         "It also refers to the curved underside of your foot.",
         "The famous golden one in St. Louis is a giant landmark shaped like this.",
         "Stretching your foot too far can cause a cramp in this curved part of the sole.",
         "A fast-food giant's logo is two golden ones of these shapes.",
         "The curved top of a doorway or a stone bridge.",
-        "Paris has a famous triumphal one that troops march under.",
+        "Paris has a famous triumphal one that troops parade under.",
         "The springy curved bit in the middle of the bottom of your foot."
       ]
     },
@@ -54159,7 +54159,7 @@
         "A public sale where items go to the highest bidder.",
         "People raise paddles or hands to offer more money than others.",
         "Art, antiques, and houses can be sold this way.",
-        "An auctioneer speaks very fast as the price climbs higher and higher.",
+        "The man with the gavel talks faster and faster as the price climbs higher.",
         "Going once, going twice, sold to the buyer who paid the most.",
         "Online sites let you place rising offers until a timer runs out.",
         "You know that fast-talking guy pointing at bidders saying 'sold'?",
@@ -54375,7 +54375,7 @@
         "You know the wriggly worm you stick on a hook to tempt a fish?",
         "It's the tasty thing you set out to lure something into a trap.",
         "Think of the cheese a mouse can't resist, even though it's a trap.",
-        "A clickbait headline is basically this — something to tempt you in."
+        "A headline written purely to make you click is exactly this, in online form."
       ]
     },
     {
@@ -55659,7 +55659,7 @@
         "A person who uses strength or power to intimidate or harm others.",
         "Schools have programs to prevent this behavior in playgrounds and hallways.",
         "The victim feels scared and helpless when targeted by one of these.",
-        "Online versions of this behavior are called cyberbullying.",
+        "Doing this over social media and text messages gets 'cyber' put in front of it.",
         "A bigger kid stealing lunch money is a classic example of one.",
         "Standing up to one is a common theme in children's movies.",
         "It's that mean kid who picks on everyone smaller than them.",
@@ -56557,7 +56557,7 @@
       "word": "cigar",
       "clues": [
         "A thick roll of dried tobacco leaves smoked by adults.",
-        "It is fatter and longer than a cigarette, with no filter.",
+        "It is far fatter and longer than what most smokers light up, and has no filter.",
         "Winston Churchill was famously often photographed with one.",
         "Smoke rises from its tip as it slowly burns down.",
         "A new father traditionally hands these out to celebrate a birth.",
@@ -56594,7 +56594,7 @@
         "Steamed ones served with melted butter are a seaside delicacy.",
         "It's that two-shelled little critter you dig out of wet sand.",
         "Think of the seafood that goes in a creamy New England chowder.",
-        "You know when someone clams up and won't say a word? Like this.",
+        "You know how a silent person is said to shut tight like one of these shellfish.",
         "Pearls sometimes form inside these tightly shut shells."
       ]
     },
@@ -57577,7 +57577,7 @@
       "word": "cork",
       "clues": [
         "A light spongy material used to seal wine bottles.",
-        "You pop it out with a corkscrew before pouring a glass of wine.",
+        "You twist a spiral opener into it and pop it out before pouring the wine.",
         "It is harvested from the bark of a special oak tree in Portugal.",
         "Bulletin boards are often made from this soft, porous material.",
         "The springy material used to make wine-bottle stoppers and dartboard surfaces.",
@@ -58972,7 +58972,7 @@
       "word": "dent",
       "clues": [
         "A small hollow or depression pushed into a surface.",
-        "You might find one on a car door after a parking accident.",
+        "You might find one on a car door after a bump in the parking lot.",
         "Hitting metal hard leaves this kind of mark.",
         "Even a small one can reduce the value of a vehicle.",
         "Repair shops use a plunger-like tool to pop one out of a fender.",
@@ -60968,7 +60968,7 @@
       "clues": [
         "A fast bird of prey with pointed wings used in hunting.",
         "The peregrine version is the fastest animal on Earth in a dive.",
-        "Falconry is the ancient sport of hunting with this trained bird.",
+        "The ancient sport of hunting with this trained bird is named after it.",
         "Its sharp talons and hooked beak catch prey in mid-air.",
         "An NFL team from Atlanta is named after this swift raptor.",
         "Medieval kings kept these hooded birds perched on a gloved hand.",
@@ -61419,7 +61419,7 @@
         "The exciting last part of a show, concert, or competition.",
         "Fireworks are often the spectacular ending at this moment.",
         "An orchestra plays its loudest and most dramatic piece here.",
-        "The final episode of a TV series is often called this.",
+        "The very last episode of a TV series is often called this.",
         "The season-ending episode that resolves a cliffhanger is called this.",
         "A magician saves the most jaw-dropping trick for this closing act.",
         "You know the big dramatic ending where everything wraps up? That.",
@@ -62456,7 +62456,7 @@
         "It is a joyful, almost bubbly kind of emotion.",
         "A school choir group is sometimes called by this name.",
         "You might rub your hands together with this when a plan goes your way.",
-        "It is the gleeful joy a prankster feels after a successful trick.",
+        "It is the wicked joy a prankster feels right after a successful trick.",
         "You know that pure bubbly delight when something great happens?",
         "There was a popular TV show about a singing high-school club called this.",
         "It's giddy, joyful excitement, like a kid on Christmas morning.",
@@ -63448,7 +63448,7 @@
         "A frayed electrical cord is a fire one waiting to happen.",
         "On a stormy plane flight, oxygen masks drop in case of this kind of risk.",
         "You know those flashing orange lights you put on when your car breaks down?",
-        "Think of a 'biohazard' symbol warning of something dangerous nearby.",
+        "Think of the yellow-and-black 'bio' symbol warning of something dangerous nearby.",
         "It's the sand trap or water pit that ruins your shot on a golf course.",
         "A 'moral' one is the risk taken when someone else covers the consequences."
       ]
@@ -63668,7 +63668,7 @@
       "clues": [
         "A large group of animals such as cattle or elephants moving together.",
         "Cows graze together across a field as part of one.",
-        "A shepherd is responsible for guiding a large flock or this.",
+        "The person guarding sheep on a hillside guides a flock or one of these.",
         "Following others mindlessly is sometimes called going with this.",
         "The thundering pound of buffalo running together shakes the prairie.",
         "A vast moving group of wildebeest crossing the plains is called this.",
@@ -63945,7 +63945,7 @@
         "Kids run through the spraying water from one on a hot summer day.",
         "You coil this green rubbery tube back up after watering the flowers.",
         "Firefighters unroll a big one and blast water at a burning building.",
-        "Old-timey pantyhose for the legs share this word too."
+        "Old-fashioned nylon leg coverings share this exact word too."
       ]
     },
     {
@@ -63982,7 +63982,7 @@
       "word": "hound",
       "clues": [
         "A dog bred especially for hunting by scent or sight.",
-        "Beagles and bloodhounds are classic examples of this breed type.",
+        "Beagles and basset dogs are classic examples of this hunting breed type.",
         "It can also mean to persistently chase or bother someone.",
         "Fox hunters traditionally ride horses and follow a pack of these.",
         "Sherlock Holmes owned a famous one named Toby that tracked a scent.",
@@ -64777,9 +64777,9 @@
       "word": "isle",
       "clues": [
         "A small island, often used in poetic or place-name contexts.",
-        "The British Isles include several of these surrounded by sea.",
+        "Britain, Ireland, and Man are grouped together under the plural of this word.",
         "A small piece of land entirely surrounded by water.",
-        "The aisle in a church is spelled differently from this word.",
+        "The walkway a bride comes down sounds the same but is spelled with an extra letter.",
         "A castaway might be stranded on a tiny deserted one in the middle of the ocean.",
         "Poets and old maps favor this short word for a little patch of land at sea.",
         "You know that tiny scrap of land with water all around it, said in a poetic way?",
@@ -65002,7 +65002,7 @@
       "word": "keeper",
       "clues": [
         "A person responsible for guarding or taking care of something.",
-        "A zookeeper looks after animals in this role.",
+        "At the zoo, the staff member who feeds and cares for the animals is one of these.",
         "In soccer, the player who guards the goal is called this.",
         "Something worth holding onto is often described as a real one of these.",
         "A lighthouse one was the lonely person who tended the lamp for passing ships.",
@@ -65679,7 +65679,7 @@
         "A shaped mass of bread baked in a single large piece.",
         "You slice it to make sandwiches or toast.",
         "It sits on the bakery counter wrapped in paper or plastic.",
-        "Meatloaf is a savory version of food baked in this same shape.",
+        "Minced beef baked in a tin takes this same shape and borrows the word.",
         "A bread machine bakes the dough into this familiar shape.",
         "You twist the heel off the end of this and butter a slice.",
         "You know, the whole uncut block of bread before you slice it up.",
@@ -65813,7 +65813,7 @@
       "clues": [
         "A small rounded swelling or bump on a surface.",
         "You might find one of these under your skin after a bump.",
-        "A clump of sugar or clay that has no defined shape.",
+        "A shapeless little wad of sugar or clay with no proper form at all.",
         "It sits there as an irregular, solid mass.",
         "A poorly stirred batter leaves these solid clots throughout it.",
         "A doctor checks a worrying one in your throat or under your arm.",
@@ -66291,11 +66291,11 @@
     {
       "word": "medic",
       "clues": [
-        "A trained person who gives emergency medical help.",
+        "A trained person who gives emergency first aid to the injured.",
         "On a battlefield or at an accident, they arrive first to treat injuries.",
         "They carry a bag of supplies and know basic first aid.",
         "Soldiers shout for one when someone is wounded.",
-        "An army doctor or paramedic who rushes to help the wounded.",
+        "An army doctor or ambulance worker who rushes to help the wounded.",
         "On a hospital TV show, this caregiver patches up patients quickly.",
         "Think of the person you yell for when someone collapses in a war film.",
         "The first responder who jumps out of the ambulance with a bag.",
@@ -67944,7 +67944,7 @@
         "The ability to wait calmly without getting frustrated.",
         "Waiting in a long line requires a lot of this virtue.",
         "Good teachers need plenty of this when working with students.",
-        "It is the opposite of impatience or rushing.",
+        "It is the exact opposite of being in a rush and snapping at every delay.",
         "'Good things come to those who wait' praises this quiet virtue.",
         "A solitaire card game is named after this calm quality.",
         "It's that calm you need when you're stuck waiting forever.",
@@ -68361,7 +68361,7 @@
     {
       "word": "persona",
       "clues": [
-        "The character or image a person presents to the outside world.",
+        "The character or image someone presents to the outside world.",
         "A pop star might adopt a dramatic stage version of this.",
         "It is the public face someone shows that may differ from their true self.",
         "An assumed identity or role that someone plays in a social setting.",
@@ -68790,7 +68790,7 @@
         "You know when a kidnap victim's family begs on TV for the safe return? That tearful appeal is this.",
         "It rhymes with sea and means a desperate, urgent request.",
         "The accused stands up in court and answers guilty or not guilty with this.",
-        "A heartfelt cry of please, I'm begging you, is exactly this."
+        "A heartfelt cry of 'I'm begging you, help me' is exactly this."
       ]
     },
     {
@@ -70815,7 +70815,7 @@
         "You know that deep growly noise distant thunder makes before a storm?",
         "It's the low vibrating sound you feel in your chest when the subway passes.",
         "In old movies, two gangs meeting for a street fight call it a ___.",
-        "The grumbling noise an empty tummy makes before lunch."
+        "The deep gurgling noise an empty tummy makes just before lunch."
       ]
     },
     {
@@ -71021,7 +71021,7 @@
         "A judge may question this when deciding if a defendant knew right from wrong.",
         "It's the quality of being mentally sound and thinking clearly.",
         "After a chaotic week, a quiet walk helps you keep your grip on this.",
-        "Pleading insanity is the opposite of claiming this in a courtroom.",
+        "In court, a defence of madness is the exact opposite of claiming this.",
         "You know that mental soundness you cling to when life gets crazy?",
         "When everything is chaos, people say 'I'm losing my ___.'",
         "Being level-headed and not going crazy is having this.",
@@ -71415,7 +71415,7 @@
         "You know that feeling of being totally sure you can do something?",
         "It's what lets you walk into a job interview without your hands shaking.",
         "Think of someone who trusts themselves completely, that inner faith.",
-        "The opposite of doubting yourself; you just believe you've got this."
+        "The opposite of constant doubt; you simply believe you can pull it off."
       ]
     },
     {
@@ -71424,7 +71424,7 @@
         "The ability to manage your emotions and resist temptation.",
         "Staying calm when angry shows a high level of this quality.",
         "Dieters need plenty of it to avoid eating extra sweets.",
-        "It is the inner strength to stop yourself from acting impulsively.",
+        "It is the inner strength that stops an impulse before it becomes an action.",
         "Resisting one more cookie when on a diet takes real amounts of this.",
         "A monk meditating to quiet his urges is practicing this discipline.",
         "You know when you really want dessert but you hold back? That's it.",
@@ -71436,7 +71436,7 @@
     {
       "word": "self-defense",
       "clues": [
-        "Actions taken to protect yourself from physical attack.",
+        "Actions taken to protect your own body from a physical attack.",
         "Martial arts classes often teach techniques for this purpose.",
         "The law allows a person to use reasonable force in this situation.",
         "Pepper spray and karate moves are tools people use for this.",
@@ -71454,13 +71454,13 @@
         "Your overall sense of personal value and worthiness.",
         "Compliments and achievements can boost this inner feeling.",
         "Therapists often work to help patients improve low levels of it.",
-        "It shapes how you think about yourself and your abilities.",
+        "It shapes how you judge your own worth and your own abilities.",
         "Bullying can crush a child's sense of this inner worth.",
         "People with high amounts of it tend to feel comfortable in their own skin.",
-        "You know how good you feel about yourself overall? That's the thing.",
+        "You know how good or bad you feel about who you are overall? That's it.",
         "It's how much you actually like and value who you are as a person.",
         "Constant criticism slowly chips away at how much someone values themselves.",
-        "When you feel worthless and down on yourself, this is what's low."
+        "When somebody feels worthless and small inside, this is what runs low."
       ]
     },
     {
@@ -71473,7 +71473,7 @@
         "You point the phone camera at your own face to snap a casual version of this.",
         "Frida Kahlo painted dozens of these images of her own face.",
         "You know when a painter paints their own face looking in a mirror?",
-        "It's basically the old-school artistic version of a selfie.",
+        "It's basically the old-school painted version of a phone snap of your own face.",
         "Think of the guy who cut off his ear and then painted his own picture.",
         "The subject and the artist are the exact same person in this artwork."
       ]
@@ -72340,7 +72340,7 @@
         "People living here often lack clean water and basic services.",
         "These urban neighborhoods have crumbling buildings and narrow alleys.",
         "Rapid city growth can create these overcrowded poverty zones.",
-        "You know the kind of district shown in the movie Slumdog Millionaire?",
+        "You know that Mumbai district from the film about the quiz-show 'Millionaire' kid.",
         "It's that sprawling maze of shacks with tin roofs and open sewers.",
         "Think of the poorest, most overcrowded quarter on the edge of a megacity.",
         "Aid groups work to bring clean water and toilets to these districts.",
@@ -74661,7 +74661,7 @@
     {
       "word": "tomb",
       "clues": [
-        "A chamber or vault where a dead person is buried or entombed.",
+        "A chamber or stone vault where a dead body is laid to rest.",
         "Ancient Egyptians built great pyramids to serve as these.",
         "Tourists visit famous ones to honor historical figures.",
         "A sealed stone structure that holds the remains of the deceased.",
@@ -74873,7 +74873,7 @@
       "clues": [
         "A speech, song, or act that honors someone important.",
         "Memorial events often include one of these for a person who passed away.",
-        "It shows deep respect and admiration for someone's contributions.",
+        "It shows deep respect and admiration for what someone achieved.",
         "A fan might write one of these to their favorite musician.",
         "A band might perform a cover concert as a heartfelt one of these to a legend.",
         "Conquered lands once paid this as forced homage to a ruling empire.",
@@ -76650,7 +76650,7 @@
         "You know an untamed kitty version that lives out in the bush, not a pet.",
         "It also means an oil well drilled where nobody's sure there's any oil.",
         "Picture a fierce, hissing cat that's never been near a human couch.",
-        "The Arizona university Wildcats team is named after this scrappy creature."
+        "The Arizona university sports teams are named after this scrappy feline."
       ]
     },
     {
@@ -76845,7 +76845,7 @@
         "You know a smashed-up car twisted on the side of the road, that's one.",
         "When you're an emotional mess crying all day, you call yourself this.",
         "Scuba divers explore old sunken ships, the underwater kind of this.",
-        "It's the wreckage left over after a really bad collision."
+        "It's the twisted heap of metal left over after a really bad collision."
       ]
     },
     {
@@ -77094,7 +77094,7 @@
         "Round fruits with red, green, or yellow skin that grow on trees.",
         "You can eat them raw, bake them into a pie, or press them into juice.",
         "The saying goes one of these a day keeps the doctor away.",
-        "Johnny Appleseed is a famous American legend associated with planting these.",
+        "An American folk legend walked the frontier planting orchards of this fruit.",
         "A teacher might receive one as a classic gift placed on the desk.",
         "Their flavors include Granny Smith, Fuji, and Honeycrisp varieties.",
         "You know the fruit that's the logo of a famous phone and computer company.",
@@ -77122,7 +77122,7 @@
       "word": "berries",
       "clues": [
         "Small, round, colorful fruits that grow on bushes or vines.",
-        "Strawberries, blueberries, and raspberries are popular examples.",
+        "The strawberry, the blueberry, and the raspberry are popular examples.",
         "They are often sweet or tart and eaten fresh or in jam.",
         "Birds love to eat these tiny fruits off wild bushes.",
         "Holly bushes display bright red ones during the winter holidays.",

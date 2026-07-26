@@ -126,13 +126,13 @@
       "word": "Ball",
       "clues": [
         "Dieses runde Objekt wird in vielen Sportarten getreten, geworfen oder geschlagen.",
-        "Ohne ihn kann man kein Fußballspiel spielen.",
+        "Ohne ihn kann keine Partie auf dem Rasen stattfinden.",
         "Er springt, rollt und fliegt durch die Luft.",
         "Kinder spielen damit auf der Wiese.",
         "Aus Leder oder Kunststoff genäht, ist er in der klassischen Form schwarz-weiß gemustert.",
         "Beim Elfmeter liegt er still auf dem Punkt, bevor er ins Tor gedroschen wird.",
         "Das runde Ding muss ins eckige Tor, sagt man oft.",
-        "Beim Tennis und Basketball gibt es das auch, nur in anderer Größe.",
+        "Beim Tennis oder beim Golf gibt es so ein Ding auch, nur viel kleiner.",
         "Du weißt schon, das Ding, das der Torwart festhalten will.",
         "Pumpst du Luft rein, wird er prall und springt richtig gut."
       ]
@@ -222,7 +222,7 @@
         "Wer es verliert, holt höchstens den zweiten Platz und die Silbermedaille.",
         "Millionen Zuschauer schalten ein, weil danach der Pokal überreicht wird.",
         "Du weißt schon, das allerletzte Match, um das es am Ende geht.",
-        "Nach dem Halbfinale kommt genau dieses eine große Spiel.",
+        "Nach der Runde der letzten vier kommt genau dieses eine große Spiel.",
         "Auch bei einer Castingshow nennt man den letzten Abend, an dem der Gewinner feststeht, so.",
         "Verlierst du davor, bist du raus, hier gewinnst oder verlierst du alles."
       ]
@@ -509,7 +509,7 @@
         "Du weißt schon, wenn der Spieler hochsteigt und den Ball mit der Birne reinmacht.",
         "Statt mit dem Fuß macht man hier das Tor mit dem obersten Körperteil.",
         "Nach einer hohen Flanke nicken die Großen den Ball genau so ins Netz.",
-        "Beim Kopfballpendel im Training üben Spieler genau diese Bewegung mit der Stirn."
+        "Am Pendel im Training üben die Spieler genau diese Bewegung mit der Stirn."
       ]
     },
     {
@@ -584,7 +584,7 @@
         "Du weißt schon, das, was man im Stau dringend braucht, um nicht durchzudrehen.",
         "Das Sprichwort sagt, sie sei eine Tugend, wenn man ruhig abwarten kann.",
         "Eltern von kleinen Kindern brauchen davon oft ganz besonders viel.",
-        "Das Gegenteil ist Ungeduld, wenn dir alles zu lange dauert und du hektisch wirst."
+        "Das Gegenteil ist Hektik, wenn dir alles zu lange dauert und du durchdrehst."
       ]
     },
     {
@@ -611,7 +611,7 @@
         "100-Meter-Läufer sind Spezialisten darin.",
         "Auf der kurzen Bahn über 100 Meter zählt jede Hundertstelsekunde dieser Höchstgeschwindigkeit.",
         "Mit so einem Antritt zieht ein Spieler plötzlich seinem Bewacher davon.",
-        "Du weißt schon, wenn jemand plötzlich Vollgas gibt und in Sekunden lossprintet.",
+        "Du weißt schon, wenn jemand plötzlich Vollgas gibt und in Sekunden davonzieht.",
         "Usain Bolt war der schnellste Mensch der Welt in genau dieser kurzen Disziplin.",
         "Anders als beim Marathon hältst du das Tempo nur ganz kurz durch.",
         "Wenn der Bus an der Haltestelle wartet, legst du auch so einen kurzen hin."
@@ -628,7 +628,7 @@
         "Läuft sie ab und steht es im Pokal remis, droht das Elfmeterschießen nach Verlängerung.",
         "Du weißt schon, die ganze Zeitspanne vom Anpfiff bis zum Schlusspfiff.",
         "Die Stadionuhr zeigt genau das an, von null bis neunzig hochzählend.",
-        "Ist sie vorbei, geht keiner mehr auf den Platz, außer es gibt Nachspielzeit.",
+        "Ist sie vorbei, geht keiner mehr auf den Platz, außer der Schiri hängt Minuten dran.",
         "Anders als die Pause meint das wirklich die Minuten, in denen tatsächlich gespielt wird."
       ]
     },
@@ -673,7 +673,7 @@
         "Beim Tanzen folgt eine solche Fußbewegung der nächsten im Takt der Musik.",
         "Du weißt schon, was du machst, wenn du einen Fuß hebst und vorsetzt beim Gehen.",
         "Eine Treppe besteht aus lauter einzelnen davon, die du hochsteigst.",
-        "Ein Schrittzähler oder eine Smartwatch zählt am Tag tausende von ihnen.",
+        "Eine Smartwatch am Arm zählt am Tag tausende von ihnen mit.",
         "Mach mal einen davon zur Seite, dann hast du dich nur ein kleines Stück bewegt."
       ]
     },
@@ -836,7 +836,7 @@
         "Beim Meistertitel oder bei Olympia ist es das Höchste.",
         "Auch Ringe und Schmuck werden aus diesem edlen Stoff gefertigt.",
         "Wer im Finale triumphiert, holt sich diese glänzende Auszeichnung.",
-        "Das Zeug, nach dem die Goldgräber im Fluss gesucht haben.",
+        "Das Zeug, nach dem die Männer damals im Fluss von Alaska gesiebt haben.",
         "Fort Knox ist voll davon, lauter glänzende Barren.",
         "Dein Ehering ist wahrscheinlich aus genau diesem Edelmetall.",
         "Wenn etwas total wertvoll und perfekt ist, sagt man, es ist wert wie das."
@@ -983,7 +983,7 @@
         "Ein Wettkampf zwischen zwei Mannschaften oder Einzelpersonen.",
         "Es hat einen Anfang, eine Halbzeit und ein Ende.",
         "Fans schauen gespannt zu, wer am Ende gewinnt.",
-        "Fußball, Basketball oder Tennis sind Beispiele dafür.",
+        "Fußball, Basketball oder Tennis gehören alle in diese Kategorie.",
         "Mit dem Schlusspfiff ist dieses Ereignis beendet.",
         "Auf dem Brett mit Figuren oder mit Karten kann man es ebenfalls bestreiten.",
         "Mensch ärgere dich nicht ist sowas für den Wohnzimmertisch.",
@@ -1048,7 +1048,7 @@
         "Mit einer cleveren Bewegung lässt man den Verteidiger ins Leere laufen.",
         "Ein Zauberer zieht sowas mit dem Kaninchen aus dem Hut.",
         "Halloween: entweder du gibst Süßes oder es gibt genau sowas.",
-        "So ein schlauer Kniff, mit dem du jemanden austrickst.",
+        "So ein schlauer Kniff, mit dem du jemanden hinters Licht führst.",
         "Der Hund lernt sowas, Pfötchen geben oder sich totstellen."
       ]
     },
@@ -1325,7 +1325,7 @@
     {
       "word": "Kegel",
       "clues": [
-        "Ein kegelförmiges Plastikgerät, das beim Training als Markierung dient.",
+        "Ein spitz zulaufendes Plastikhütchen, das beim Training als Markierung dient.",
         "Spieler slalomen im Training darum herum.",
         "Es ist meist orange und steht auf dem Rasen.",
         "Trainer stellen viele davon auf den Platz für Übungen.",
@@ -1348,8 +1348,8 @@
         "Ohne Fleiß bleibt selbst die größte angeborene Veranlagung ungenutzt.",
         "Bei der Castingshow suchen sie genau danach, das gewisse Etwas.",
         "Das, womit manche einfach geboren werden und andere nicht.",
-        "Ein Naturtalent hat eben jede Menge davon mitbekommen.",
-        "Die Sendung heißt 'Das Supertalent', da geht's um genau das."
+        "Wer von Natur aus alles kann, hat eben jede Menge davon mitbekommen.",
+        "Sechs Buchstaben, beginnt mit T, und keiner kann es sich kaufen."
       ]
     },
     {
@@ -1409,7 +1409,7 @@
         "Nachts im Bett zuckt dir auf einmal der Fuß zusammen, voll der Schmerz.",
         "Manche kriegen sowas in der Hand vom vielen Schreiben.",
         "Beim Schwimmen im kalten Wasser kann dich das gefährlich erwischen.",
-        "Dieser stechende Schmerz, wenn sich ein Muskel verkrampft und nicht loslässt."
+        "Dieser stechende Schmerz, wenn ein Muskel sich verhärtet und nicht loslässt."
       ]
     },
     {
@@ -1521,7 +1521,7 @@
       "word": "Tabelle",
       "clues": [
         "Eine Rangliste aller Teams einer Liga nach Punkten sortiert.",
-        "Das Team ganz oben ist der Tabellenführer.",
+        "Das Team ganz oben darin ist der Spitzenreiter der Saison.",
         "Nach jedem Spieltag ändert sie sich.",
         "Mannschaften am unteren Ende steigen in die zweite Liga ab.",
         "Hier kann man auf einen Blick ablesen, wer gerade führt.",
@@ -1685,7 +1685,7 @@
     {
       "word": "Feier",
       "clues": [
-        "Das ausgelassene Feiern nach einem Sieg oder Titel.",
+        "Das ausgelassene Jubeln und Anstoßen nach einem Sieg oder Titel.",
         "Spieler und Fans jubeln und tanzen gemeinsam.",
         "Nach dem Gewinn der Meisterschaft gibt es eine große davon.",
         "Konfetti, Musik und Trophäen gehören oft dazu.",
@@ -1820,7 +1820,7 @@
     {
       "word": "Gelenk",
       "clues": [
-        "Knöchel, Knie und Handgelenk sind Beispiele dafür am Körper.",
+        "Knöchel, Knie und Ellenbogen sind Beispiele dafür am Körper.",
         "Es verbindet zwei Knochen und ermöglicht Bewegung.",
         "Sportler tapen es oft, um Verletzungen zu vermeiden.",
         "Es kann verstaucht oder überdehnt werden nach einem Sturz.",
@@ -2030,7 +2030,7 @@
     {
       "word": "Liga",
       "clues": [
-        "Die Bundesliga ist die bekannteste davon in Deutschland.",
+        "Die bekannteste in Deutschland trägt das Wort Bundes im Namen.",
         "Teams spielen eine ganze Saison gegeneinander um den Titel.",
         "Es ist ein Wettbewerb, bei dem Vereine Punkte sammeln.",
         "Premier League, Serie A und La Spanien-Variante sind bekannte Beispiele.",
@@ -2487,9 +2487,9 @@
         "An jedem Arm sitzt eine davon, mit fünf Fingern dran.",
         "Beim Einwurf darf man den Ball ausnahmsweise damit über den Kopf werfen.",
         "Du weißt schon, womit man jemandem zur Begrüßung greift.",
-        "Im Winter zieht man Handschuhe darüber.",
+        "Im Winter zieht man dicke Fäustlinge darüber.",
         "Beim Klatschen schlägt man zwei davon zusammen.",
-        "Damit hältst du gerade deinen Stift oder dein Handy."
+        "Damit hältst du gerade deinen Stift oder dein Smartphone."
       ]
     },
     {
@@ -2607,7 +2607,7 @@
         "Wenn ein Verletzter wieder aufsteht, gibt es ihn anerkennend.",
         "Bei einer Auswechslung bekommt der gefeierte Spieler diesen von den Rängen.",
         "Du weißt schon, was nach einem tollen Theaterstück durch den Saal donnert.",
-        "Auf Englisch heißt es 'applause'.",
+        "Sieben Buchstaben, beginnt mit A, und man hört es, statt es zu sehen.",
         "Wenn alle aufstehen und es nicht enden will, nennt man es Standing Ovation.",
         "Ein Künstler verbeugt sich am Ende und genießt genau das."
       ]
@@ -2682,7 +2682,7 @@
         "Auf dem Siegerpodest stehen die besten von ihnen mit Medaillen.",
         "Tag für Tag schinden sie sich, um Höchstleistungen zu bringen.",
         "Du weißt schon, das Gegenteil von einem Stubenhocker, der nur auf der Couch liegt.",
-        "Im Englischen heißt so jemand 'athlete'.",
+        "Sechs Buchstaben, beginnt mit A, und trägt meist Trikot statt Anzug.",
         "Bei Olympia treten Tausende von ihnen aus aller Welt gegeneinander an.",
         "Usain Bolt oder Serena Williams sind berühmte Beispiele dafür."
       ]

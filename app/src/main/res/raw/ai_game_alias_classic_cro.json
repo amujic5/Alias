@@ -652,7 +652,7 @@
       "word": "zagonetka",
       "clues": [
         "Pitanje s prikrivenim odgovorom koje treba pogoditi.",
-        "Sfinга je postavljala ovo putnicima u mitologiji.",
+        "Sfinga je postavljala ovo putnicima u mitologiji.",
         "Tražiš logiku skrivenu u riječima da pronađeš rješenje.",
         "Zašto je gavran kao pisaći stol, to je primjer ovoga.",
         "Često počinje s riječima Što ima ali ne hoda.",
@@ -1003,7 +1003,7 @@
         "Kad ti zalogaj zapne, refleksno to napraviš.",
         "Pušači to često rade ujutro zbog dima u plućima.",
         "Kad ti dim uđe u dušnik, refleksno to napraviš da ga izbaciš.",
-        "Suho ili s iskašljavanjem - i jedno i drugo te muči zimi.",
+        "Suho ili s izbacivanjem sluzi - i jedno i drugo te muči zimi.",
         "Pokriješ usta rukom da to ne usmjeriš na druge.",
         "Sirup i pastila ti to ublaže kad si prehlađen."
       ]
@@ -1494,7 +1494,7 @@
         "Dati nekome obrok da utoli glad.",
         "Majka to radi svojoj bebi svaka tri sata.",
         "Idi na farmu i to napraviti životinjama.",
-        "Davati obrok ili prehranjivati živu biću.",
+        "Davati obrok ili namirnice nekom živom biću.",
         "U zoološkom vrtu posjetiteljima zabranjuju da to rade životinjama.",
         "Sadnice u vrtu redovito to činiš gnojivom da rastu.",
         "Stavljaš mu zdjelicu s granulama jer je pas gladan.",
@@ -3579,7 +3579,7 @@
         "Urediti ili prikupiti sve što je potrebno za neku aktivnost.",
         "Kuhar to radi s namirnicama prije kuhanja.",
         "Sportaš to radi s opremom i tijelom prije utakmice.",
-        "Suprotno je biti nepripremljen ili zateći se bez ičega.",
+        "Suprotno je zateći se nespreman i bez ičega u rukama.",
         "Glumac to radi s ulogom učeći tekst prije premijere.",
         "Domaćica to radi sa stolom prije nego stignu gosti.",
         "Slično kao organizirati, posložiti sve unaprijed.",
@@ -4943,7 +4943,7 @@
       "clues": [
         "Zelena životinja koja živi kraj vode i skače.",
         "Glasno kreče noću na ribnjaku ili baruštini.",
-        "U bajkama se pretvori u princa kada je princeза poljubi.",
+        "U bajkama se pretvori u princa kada je princeza poljubi.",
         "Prolazi kroz punoglavca prije nego postane odrasla.",
         "U školi se ponekad secira na satu biologije.",
         "Skače dugim stražnjim nogama i ima ljepljiv jezik za lov muha.",
@@ -5203,7 +5203,7 @@
         "Sokrat je smaknut tako što ga je popio iz čaše.",
         "Štakori se uništavaju mamcem pomiješanim s ovom tvari.",
         "Smrtonosna tvar koju zmija ubrizga ugrizom u žrtvu.",
-        "U krimićima ubojica njime trује protivnika u čaši vina.",
+        "U krimićima ubojica njime truje protivnika u čaši vina.",
         "Slično lijeku po izgledu, ali umjesto da liječi, ubija.",
         "Protiv glodavaca u podrumu postavi se mamac natopljen njime."
       ]
@@ -5648,7 +5648,7 @@
       "clues": [
         "Mali metalni ili plastični zatvarač na remenu ili torbi.",
         "Spaja dva kraja pojasa ili naramenice.",
-        "Klikne kada je čvrsto zatvorena i osigurана.",
+        "Klikne kada je čvrsto zatvorena i osigurana.",
         "Koristi se na ruksacima, remenim i nakitu.",
         "Provučeš je kroz rupice da podesiš dužinu remena oko struka.",
         "Na cipelama i jaknama zamjenjuje vezice jednim klikom.",
@@ -6265,7 +6265,7 @@
         "Simbol vlasti i moći monarhije kroz povijest.",
         "Ukrašena je dragim kamenjem poput dijamanata i rubina.",
         "Na novčanicama i grbovima često je prikazana kao simbol države.",
-        "Pobjednika ljepote okrune njome na natjecanju.",
+        "Pobjednicu natjecanja ljepote njome ovjenčaju pred publikom.",
         "Stavlja se na glavu monarhu tijekom svečane ceremonije.",
         "Zlatni ukras pun dragulja koji vladar nosi navrh glave.",
         "Pobjednica izbora ljepote dobije je na svečanoj pozornici.",
@@ -6804,7 +6804,7 @@
         "Nadzor ili provjera nečega kako bi sve funkcioniralo ispravno.",
         "Na granici prolazite carinsku takvu provjeru dokumenata.",
         "Pilot ima je nad avionom pomoću komandi u kabini.",
-        "Suprotno od kaosa i nekontroliranog stanja.",
+        "Suprotno od kaosa i stanja u kojem nitko ništa ne nadzire.",
         "Daljinski upravljač daje ti je nad televizorom iz fotelje.",
         "Roditelji žele imati je nad time što djeca rade.",
         "Kad učiteljica daje pismeni ispit da provjeri znaš li gradivo.",
@@ -7101,7 +7101,7 @@
     {
       "word": "putovnica",
       "clues": [
-        "Službeni dokument koji dokazuje tvoj identitet pri putovanju u inozemstvo.",
+        "Službeni dokument koji dokazuje tvoj identitet na odlasku u inozemstvo.",
         "Na granici carinik traži da mu je pokaž.",
         "Sadrži fotografiju i osobne podatke vlasnika.",
         "Bez nje ne možeš ući u mnoge strane zemlje.",
@@ -7109,7 +7109,7 @@
         "Prazne stranice u njoj služe za pečate stranih graničnih službi.",
         "Mala plava knjižica s grbom koju pokazuješ na aerodromu.",
         "Dokument koji nosiš kad ideš preko granice u stranu državu.",
-        "U njoj je tvoja slika, ime i jedinstveni broj za putovanje.",
+        "U njoj su tvoja slika, ime i jedinstveni broj koji nosiš preko granice.",
         "Bez nje te ne puste u avion za inozemstvo niti u stranu zemlju."
       ]
     },
@@ -7137,7 +7137,7 @@
         "Suprotno od mutnog ili maglovitog, posve razumljivo.",
         "Kada konačno shvatiš zadatak, kažeš da ti je sve to.",
         "Voda u planinskom potoku je toliko prozirna da je posve to.",
-        "Kad ti netko objasni nešto tako dobro da nemaš više pitanja.",
+        "Kad ti netko rastumači nešto tako dobro da nemaš više pitanja.",
         "Nebo bez ijednog oblačka, vedro i prozirno do daljine.",
         "Suprotno od mutnog, kad se sve lijepo razabire bez magle.",
         "Kad ti konačno sjedne u glavu kako nešto funkcionira, kažeš 'aha, sad mi je...'"
@@ -10634,7 +10634,7 @@
         "Romantičnu večeru često prati njezino treperavo svjetlo na stolu.",
         "Romeo i Julija večeraju uz njezino treperavo svjetlo.",
         "Ima fitilj koji zapališ šibicom da bi gorjela.",
-        "Kapljice vrućeg voska cure niz nju dok polako kraćа.",
+        "Kapljice vrućeg voska cure niz nju dok polako kraća.",
         "Na grobu ostavljamo je upaljenu u spomen na pokojnika."
       ]
     },
@@ -11286,7 +11286,7 @@
     {
       "word": "jakna",
       "clues": [
-        "Odjevni komad koji nosiš preко majice da te grije.",
+        "Odjevni komad koji nosiš preko majice da te grije.",
         "Ima prednji zatvarač ili gumbe i obično kraća od kaputa.",
         "Kožna verzija popularna je u rock stilu.",
         "Kada izlaziš vani po hladnom vremenu, oblačiš je.",
@@ -11841,11 +11841,11 @@
     {
       "word": "graditi",
       "clues": [
-        "Radnici to rade kad dižu novu kuću ili zgradu.",
+        "Radnici to rade kad dižu novu kuću ili neboder.",
         "Složiti ciglu na ciglu da nastane nešto novo.",
-        "Arhitekt to isplanira, a radnici izvedu na mjestu gdje niče zgrada.",
+        "Arhitekt to isplanira na papiru, a majstori izvedu na terenu.",
         "Djeca to vole raditi s lego kockicama.",
-        "Zidar i tesar to čine uz dizalicu i skele dok diže nova zgrada.",
+        "Tesar i zidar to čine penjući se po skelama uz dizalicu.",
         "Dabar to radi na potoku slažući granje u branu.",
         "Zidar to čini slažući ciglu na ciglu uz cement.",
         "Kad imaš lego kockice, satima se zabavljaš tom aktivnošću.",
@@ -13971,7 +13971,7 @@
     {
       "word": "gledati",
       "clues": [
-        "Usmjeriti pogled prema nečemu ili nekome.",
+        "Usmjeriti oči prema nečemu ili nekome i pratiti to.",
         "To radimo kad pratimo film ili TV emisiju.",
         "Oči su nam potrebne za ovu radnju.",
         "Možeš li ovo dugo bez treptaja?",
@@ -14620,7 +14620,7 @@
         "Torta, kolač ili sladoled spadaju u ovu kategoriju.",
         "U pekari ili cukrarni možeš kupiti taj sladak desert.",
         "Djeca je obožavaju, a zubi pate od nje.",
-        "Šlag, čokolada i krema obični su sastojci ove poslastice.",
+        "Šlag, čokolada i krema obični su sastojci ovog slatkog jela.",
         "Stiže na stol tek na kraju ručka ili večere.",
         "Nešto slatko što pojedeš na kraju ručka.",
         "Kremšnita, palačinka ili puding spadaju ovamo.",
@@ -15366,7 +15366,7 @@
     {
       "word": "koljeno",
       "clues": [
-        "Zglob koji spaja bedro i potkoljenicu.",
+        "Zglob koji spaja bedro i donji dio noge.",
         "Kada padneš s bicikla, ovo ti se najčešće ogrebe.",
         "Savijamo ga kada čučnemo ili idemo uz stepenice.",
         "Nalazi se na sredini noge, ispred je okrugla kapa.",
@@ -15789,12 +15789,12 @@
         "Frizura napravljena od triju pramenova kose uplitanjem.",
         "Djevojčice je nose kao praktičnu i lijepu frizuru.",
         "Praviš je rukama spajajući pramenove od korijena do vrha kose.",
-        "Tri pramenova isprepletena čine ovu frizersku tvorevinu.",
+        "Tri pramena kose koja se međusobno prepliću čine ovu frizersku tvorevinu.",
         "Često je vežemo gumicom ili mašnom na kraju.",
         "Možeš je nositi sa strane glave ili sprijeda oko čela kao vijenac.",
-        "Frizura u kojoj tri pramena kose ispleteš jedan preko drugog.",
+        "Frizura u kojoj tri pramena kose prebacuješ jedan preko drugog.",
         "Djevojčice je nose da im kosa ne smeta dok se igraju.",
-        "Slično konjskom repu, samo je kosa upletena, ne ravna.",
+        "Slično konjskom repu, samo što kosa nije ravna nego uvijena od tri pramena.",
         "Na kraju je vežeš gumicom da se ne raspetlja."
       ]
     },
@@ -16434,7 +16434,7 @@
         "Pozitivan osjećaj radosti i zadovoljstva u životu.",
         "Četverolisna djetelina i potkova su simboli ovoga.",
         "Kad ti sve ide od ruke, imaš puno ovoga.",
-        "Suprotno od nesreće i tuge.",
+        "Suprotno od peha i crne kobi koja te prati.",
         "Posljednjih nekoliko brojeva na lotu mogu ti je donijeti.",
         "Kažu da je novac ne može kupiti, ali smijeh je njezin znak.",
         "Smiješak od uha do uha znak je da je netko pun ovoga.",
@@ -16551,16 +16551,16 @@
     {
       "word": "večera",
       "clues": [
-        "Obrok koji jedeš navečer s obitelji.",
+        "Obrok koji jedeš s obitelji na kraju dana.",
         "Treći i zadnji dnevni obrok, poslije ručka.",
         "Restoran je popularno mjesto za ovo uz kušanje vina.",
         "Kuhanje paste ili gulaša za kraj dana.",
         "Sveti Nikola i Badnjak imaju posebnu svečanu takvu.",
         "Nakon ovoga uskoro slijedi odlazak na spavanje.",
         "Posljednji obrok u danu koji pojedeš prije spavanja.",
-        "Romantičan izlazak u restoran navečer uz svijeće i vino.",
+        "Romantičan izlazak u restoran uz svijeće i vino nakon zalaska sunca.",
         "Na Badnjak je posebna svečana i tradicionalno posna.",
-        "Skuhaš tjesteninu ili juhu pa cijela obitelj sjedne za stol predvečer."
+        "Skuhaš tjesteninu ili juhu pa cijela obitelj sjedne za stol kad se smrači."
       ]
     },
     {
@@ -17381,7 +17381,7 @@
         "Optičar ih propisuje kad imaš kratkovidnost ili dalekovidnost.",
         "Sunčane su inačica koja štiti oči od UV zraka.",
         "Bez njih nositelj sve vidi mutno i zamagljeno.",
-        "Maglе se kad uđeš s hladnoće u toplu prostoriju.",
+        "Magle se kad uđeš s hladnoće u toplu prostoriju.",
         "Staviš ih na nos kad slova u knjizi izgledaju zamućeno.",
         "Harry Potter nosi okrugle takve s ožiljkom na čelu.",
         "Bez njih kratkovidan čovjek ne vidi jasno udaljene predmete.",
@@ -17558,7 +17558,7 @@
       "clues": [
         "Snažan osjećaj koji osjećaš kad si u opasnosti ili pred nepoznatim.",
         "Srce ti ubrzano kuca i htio bi pobjeći.",
-        "Paukovi, mrак ili visina mogu izazvati taj osjećaj.",
+        "Paukovi, mrak ili visina mogu izazvati taj osjećaj.",
         "Suprotnost je hrabrost ili smjelost.",
         "Filmovi horora namjerno žele izazvati taj osjećaj kod gledatelja.",
         "Fobija je njegov pretjeran i neobjašnjiv oblik.",
@@ -19360,7 +19360,7 @@
         "Zubi ti cvokoču kad si premrzao.",
         "Ruke ti se tresu kad si jako nervozan.",
         "Tijelo to automatski radi da bi se zagrijalo.",
-        "Drhtiš i treseš se kad ti je zima ili kad si prestrašen.",
+        "Tijelo ti se nekontrolirano trese kad ti je zima ili kad si prestrašen.",
         "Lišće na grani to čini kad zapuše jak vjetar.",
         "Cijelo se tijelo trese kad uđeš u hladnu vodu.",
         "Ruka ti se tako mota od straha da ne možeš mirno pisati.",
@@ -19536,7 +19536,7 @@
     {
       "word": "naljepnica",
       "clues": [
-        "Mali komad papira s lijepljivom stranom za naljepljivanje.",
+        "Mali komad papira s ljepljivom poleđinom koji se pričvrsti na predmet.",
         "Djeca ukrašavaju bilježnice i mobitele njima.",
         "Na boci piše sastav jer ima ovakav papirić.",
         "Zalijepiš je na neku površinu i ostaje.",
@@ -19602,7 +19602,7 @@
         "Nitko ti ga ne može ukrasti jednom kad ga imaš.",
         "Kažu da je moć i da se godinama gomila učenjem.",
         "Na ispitu pokazuješ koliko ga imaš o nekom predmetu.",
-        "Suprotno od neznanja i gluposti.",
+        "Suprotno od neukosti i gluposti koje se liječe učenjem.",
         "Ono u glavi što ti pomaže riješiti težak zadatak.",
         "Profesori ga prenose učenicima iz generacije u generaciju.",
         "Što više čitaš, to ga imaš više."
@@ -19614,7 +19614,7 @@
         "Tekući dodatak jelima koji im daje okus.",
         "Paradajz, češnjak i začini čine jedan od popularnih.",
         "Prelijevaš ga preko tjestenine ili mesa.",
-        "Ketchup i majoneза su poznate vrste ovoga.",
+        "Ketchup i majoneza su poznate vrste ovoga.",
         "Umačeš krumpiriće u njega prije nego ih pojedeš.",
         "Bešamel je bijela vrsta koja se radi od maslaca i brašna.",
         "Gust ili rijedak, sipaš ga preko jela da ne bude suho.",
@@ -19702,7 +19702,7 @@
       "word": "vampir",
       "clues": [
         "Mitsko biće koje pije krv i boji se sunca.",
-        "Drakula je najpознatiji primjer ovog lika.",
+        "Drakula je najpoznatiji primjer ovog lika.",
         "Spava u lijesu i pretvara se u šišmiša.",
         "Česen i križ navodno ga tjeraju.",
         "Lik s dugim očnjacima koji se često pojavljuje za Noć vještica.",
@@ -19732,7 +19732,7 @@
       "word": "plaća",
       "clues": [
         "Novac koji zaradiš radeći posao svaki mjesec.",
-        "Poslodavac ti ga isplaćuje na kraju perioda.",
+        "Poslodavac ti je doznači kad istekne mjesec rada.",
         "Njome podmiruješ stanarinu, hranu i račune.",
         "Veća je ako imaš bolji položaj u firmi.",
         "Stiže ti na bankovni račun jednom mjesečno za rad.",
@@ -19888,7 +19888,7 @@
         "Vatrogasna kola i Coca-Cola logo su te boje.",
         "Bik navodno pobjesni kad vidi ovu boju u areni.",
         "Boja paprike i rajčice kad sazriju.",
-        "Kad se naljutiš, lice ti se zacrveni u tu boju.",
+        "Kad se naljutiš ili posramiš, lice ti poprimi baš tu boju.",
         "Ferrari je tradicionalno obojan baš tako.",
         "Na semaforu znači da moraš stati."
       ]
@@ -20409,7 +20409,7 @@
         "Stanje organizma kad sve funkcionira ispravno bez bolesti.",
         "Liječnik brine o njemu a pacijenti nastoje ga sačuvati.",
         "Dobra prehrana, sport i san doprinose njemu.",
-        "Nazdravlja se na njega uz čašu na proslavama.",
+        "Kucne se čašama na proslavi i poželi ti se baš to.",
         "Kad ga izgubiš, voziš se hitnom u bolnicu.",
         "Kažu da je vrednije od svega novca na svijetu.",
         "Kad kihneš, ljudi ti zažele dobro i da ti bude bolje.",
@@ -20752,7 +20752,7 @@
       "word": "spavaonica",
       "clues": [
         "Prostorija u kojoj stoji krevet i u koju odlaziš na noćni počinak.",
-        "Tu se odmараš, presvlačiš i čuvaš odjeću.",
+        "Tu se odmaraš, presvlačiš i čuvaš odjeću.",
         "U njoj su obično ormar, jastuk i pokrivač.",
         "Svaka kuća ima barem jednu takvu sobu.",
         "Roditelji djecu šalju u nju kad dođe vrijeme za počinak.",
@@ -21066,7 +21066,7 @@
     {
       "word": "katapult",
       "clues": [
-        "Staro oružje koje bacа kamenje ili teška tijela na neprijatelja.",
+        "Staro oružje koje baca kamenje ili teška tijela na neprijatelja.",
         "Koristi snagu napetosti da izbaci projektil daleko.",
         "Vidjet ćeš ga u filmovima o srednjovjekovnim opsadama.",
         "Djeca rade igračku verziju od račve i gumice.",
@@ -21157,7 +21157,7 @@
       "word": "žičara",
       "clues": [
         "Prijevozno sredstvo koje visi na čeličnim žicama i vozi uz planinu.",
-        "Kabinа se kreće gore-dolje noseći putnike.",
+        "Kabina se kreće gore-dolje noseći putnike.",
         "Na skijaškim odmaralištima prenosi skijaše na vrh.",
         "Lebdi iznad tla i nema tračnice ni kotača na cesti.",
         "Turisti je voze da bi uživali u pogledu s visine.",
@@ -21445,7 +21445,7 @@
         "Netko s njom brzo uči i donosi dobre odluke.",
         "Kaže se da je mudrost njen viši oblik.",
         "Koristiš je svaki put kad razmišljaš ili učiš.",
-        "Pomažе ti da riješiš zagonetku ili matematički zadatak.",
+        "Pomaže ti da riješiš zagonetku ili matematički zadatak.",
         "Onaj tko je nema teško shvaća jednostavne stvari.",
         "Ono čime razmišljaš i rješavaš teške zadatke.",
         "Onaj tko je ima brzo skuži u čemu je stvar.",
@@ -21714,7 +21714,7 @@
         "Kažeš hvala i molim te jer si odgojen tako.",
         "Lijepo ponašanje prema drugima odraz je toga.",
         "Suprotno je od grubosti i bezobrazluka.",
-        "Na stolu jedeš tihо i ne govoriš punih usta.",
+        "Na stolu jedeš tiho i ne govoriš punih usta.",
         "Propustiš starijoj osobi mjesto u tramvaju iz tog razloga.",
         "Ljubazno ponašanje za stolom i u društvu zove se tako.",
         "Kucaš prije nego uđeš u tuđu sobu, to je znak toga.",
@@ -21726,7 +21726,7 @@
     {
       "word": "kleveta",
       "clues": [
-        "Lažno i zlonamjerno govorenje loših stvari о nekome.",
+        "Lažno i zlonamjerno govorenje loših stvari o nekome.",
         "Može uništiti ugled nevinog čovjeka.",
         "Suprotno je od pohvale i istinite kritike.",
         "Za to se može biti tužen pred sudom.",
@@ -21914,7 +21914,7 @@
         "Osjetiš je kad te netko uhvati u laži pred svima.",
         "Kad ti je toliko neugodno da bi se najradije sakrio.",
         "Padneš nasred ulice pred svima i osjetiš baš to.",
-        "Slično blamu kad se osramotiš u javnosti.",
+        "Slično blamu kad te cijela dvorana ismije pred svima.",
         "Crveniš se i gledaš u pod jer ti je nelagodno."
       ]
     },
@@ -22642,7 +22642,7 @@
       "word": "kliziti",
       "clues": [
         "Kretati se glatko po ledu bez podizanja nogu.",
-        "Ono što radiš na klizaljkama po zaleđenoj površini.",
+        "Ono što radiš na oštricama pričvršćenim za cipele po ledu.",
         "Kretanje bez trenja po mokrom ili smrznutom tlu.",
         "Djeca to vole raditi niz snježnu padinu trbuške.",
         "Tobogan na sniegu omogućuje upravo takvo brzo spuštanje.",
@@ -22927,7 +22927,7 @@
       "word": "gutljaj",
       "clues": [
         "Mala količina tekućine koju progutaš odjednom.",
-        "Jedan mali požder vode ili sokа iz čaše.",
+        "Jedan mali požder vode ili soka iz čaše.",
         "Uzmeš samo malo pića u usta i progutaš.",
         "Ponudi mu da uzme jedan takav od tvoje boce.",
         "Kušač vina uzme jedan pa ga prevrti po nepcu.",
@@ -22959,7 +22959,7 @@
         "Optički uređaj na pušci koji pomaže točnom ciljanju.",
         "Gledaš kroz njega da pogodis metu pri pucanju.",
         "Poravnaš ga s ciljem prije nego povučeš okidač.",
-        "Lovac ga koristi da precizno ciljа divljač.",
+        "Lovac ga koristi da precizno cilja divljač.",
         "Strijelac luk zategne i kroz njega usmjeri pogled na metu.",
         "Snajperist kroz povećalo na njemu vidi cilj izbliza.",
         "Vojnik zatvori jedno oko i kroz njega gleda da pogodi metu.",
@@ -23019,7 +23019,7 @@
         "Boravak i življenje u nekom prostoru, kući ili apartmanu.",
         "Plaćaš stanarinu ili kredit za tu vrstu smještaja.",
         "Pronalaženje mjesta za život jedno je od osnovnih potreba.",
-        "Troškovi za krov nad glavom rasту u gradovima.",
+        "Troškovi za krov nad glavom rastu u gradovima.",
         "U oglasniku tražiš oglas za najam koji rješava tu potrebu.",
         "Pravo na krov nad glavom ubraja se među ljudska prava.",
         "Osnovna ljudska potreba uz hranu i odjeću, da imaš gdje spavati.",
@@ -23033,7 +23033,7 @@
       "clues": [
         "Žena koja šiša, boji i stilizira kosu klijentima.",
         "Radi u salonu i koristi škare, fenove i boje.",
-        "Zakazuješ joj termin kad ti je kosa preduljа.",
+        "Zakazuješ joj termin kad ti je kosa predulja.",
         "Zna točno koji stil ti pristaje i kako ga postići.",
         "Oko vrata ti stavlja pelerinu prije nego počne s radom.",
         "Brije i potkresuje bradu muškarcima u svom salonu.",
@@ -23078,7 +23078,7 @@
       "clues": [
         "Ekipni sport u dvorani gdje se lopta šakom ubacuje u gol.",
         "Sedam igrača na svakoj strani pokušava zabiti loptom.",
-        "Brza igra poput nogometа ali se igra rukama.",
+        "Brza igra poput nogometa ali se igra rukama.",
         "Hrvatska ima bogatu tradiciju u tom dvoranskom sportu.",
         "Igrač zaleti tri koraka i skoči prije nego ispali loptu.",
         "Lopta je manja od nogometne i premazana ljepljivom smolom.",
@@ -23181,7 +23181,7 @@
     {
       "word": "jež",
       "clues": [
-        "Mala bodljikava životinja koja se smoтa u kuglicu kad je uplašena.",
+        "Mala bodljikava životinja koja se smota u kuglicu kad je uplašena.",
         "Ima bodlje na leđima i sitne šapice za kopanje.",
         "Noćna životinja koja jede puževe i insekte u vrtu.",
         "Sonic je poznati lik iz videoigara koji na njega podsjeća.",
@@ -24057,7 +24057,7 @@
         "Metalna rupa u bravi koja prihvaća nazubljeni metalni predmet.",
         "Kad zaboravite svjetlo, kroz nju u mračnu sobu prodire tračak svjetla.",
         "Pišete riječ kao da gledate kroz nju kad nešto tajno promatrate.",
-        "Mali otvor na bravi u koji nešto uguraš da otključaš vrata.",
+        "Mali otvor na bravi u koji nešto uguraš pa vrata popuste.",
         "Radoznalci su nekad kroz nju virili da vide što se zbiva u sobi.",
         "Kroz tu rupicu probija tračak svjetla u zamračenu sobu.",
         "Kažeš da nekoga uhodiš kao da gledaš kroz nju kad ga tajno promatraš."
@@ -24111,7 +24111,7 @@
     {
       "word": "koljena",
       "clues": [
-        "Zglobovi u sredini nogu koji spajaju bedra i potkoljenice.",
+        "Zglobovi u sredini nogu koji spajaju bedra i listove.",
         "Kleknete na njih kad molite ili tražite oproštenje.",
         "Trčanje i penjanje po stepenicama ih opterećuje.",
         "Dio tijela gdje se savija noga kad hodamo ili čučimo.",

@@ -2,10 +2,6 @@
     "language": "Croatian",
     "languageCode": "CRO",
     "words": [
-    "1. gardijska brigada Tigrovi",
-    "24 sata",
-    "3-2-1-Kuhaj",
-"505 s crtom",
 "ATP Umag",
 "Advent u Zagrebu",
 "Adventski kalendar",
@@ -1788,10 +1784,9 @@
 "Žumberačko gorje",
 "Župa",
 "Župan",
-"Žuti karton",
-"Žuti tisak"
+"Žuti karton"
     ],
-    "imageURLString": "croatia"
+    "imageURLString": "country_cro"
 }
 
 

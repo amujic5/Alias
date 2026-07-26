@@ -71,7 +71,7 @@
         "Dieses Tier kräht laut Kikeriki beim Sonnenaufgang.",
         "Auf vielen Kirchtürmen sitzt eine Wetterfigur in seiner Form.",
         "Er hat bunte, lange Schwanzfedern und stolziert über den Hof.",
-        "Aus dem Wasserhahn kommt Wasser, und der heißt fast genauso.",
+        "Am Waschbecken drehst du an dem Ding, aus dem Wasser kommt, und es heißt genauso.",
         "In Frankreich ist genau dieses Tier das Wappentier des Landes.",
         "Er bewacht seine Hennen und gibt mächtig an.",
         "Die Frau zu diesem Tier legt die Eier, er selbst kräht nur."
@@ -97,7 +97,7 @@
       "clues": [
         "Ein Fleischprodukt in einer langen, runden Form.",
         "Man legt sie auf Brot oder grillt sie.",
-        "Salami und Leberwurst sind Arten davon.",
+        "Salami und Mortadella sind bekannte Sorten davon.",
         "In Deutschland isst man sie sehr gerne mit Senf.",
         "Auf dem Volksfest steckt sie auf einem Brötchen mit Ketchup.",
         "Der Metzger stellt sie aus Hackfleisch und Gewürzen her.",
@@ -193,7 +193,7 @@
         "Rotkäppchen bringt der Großmutter eines voller Kuchen und Wein.",
         "Wenn dich jemand abblitzen lässt, gibt er dir genau das.",
         "Am Heißluftballon hängt unten genau so ein Teil, in dem die Leute stehen.",
-        "Aus Weidenzweigen flicht der Korbflechter so ein Teil mit Henkel.",
+        "Aus Weidenzweigen flicht ein Handwerker so ein Teil mit Henkel.",
         "Die Katze schläft gern in so einem weichen geflochtenen Körbchen."
       ]
     },
@@ -275,7 +275,7 @@
     {
       "word": "Kleid",
       "clues": [
-        "Ein einteiliges Kleidungsstück für Frauen und Mädchen.",
+        "Ein einteiliges Stück Stoff, das Frauen und Mädchen anziehen.",
         "Es bedeckt Oberkörper und Beine in einem Stück.",
         "Auf Hochzeiten trägt die Braut oft ein weißes davon.",
         "Es kann lang oder kurz sein und flattert im Wind.",
@@ -297,7 +297,7 @@
         "Im Frühling sprießen die ersten bunten davon aus der Erde.",
         "Eine Königin unter ihnen hat Dornen am Stiel und heißt Rose.",
         "Du zupfst die Blätter ab und sagst dabei: er liebt mich, er liebt mich nicht.",
-        "Tulpe, Gänseblümchen und Sonnenblume gehören alle dazu.",
+        "Tulpe, Nelke und Narzisse gehören alle in diese Gruppe.",
         "Zum Muttertag pflückt man einen ganzen Strauß davon.",
         "Sie braucht Wasser und Sonne, sonst lässt sie traurig den Kopf hängen."
       ]
@@ -502,7 +502,7 @@
       "clues": [
         "Ein Möbelstück zum Schlafen mit Matratze und Kissen.",
         "Man legt sich abends hinein und deckt sich zu.",
-        "Es hat einen Rahmen, eine Matratze und Bettwäsche.",
+        "Es hat einen Rahmen, eine Matratze und frisch bezogene Laken.",
         "Kranke erholen sich in einem weichen davon.",
         "Manche für Kinder haben zwei Ebenen, eine oben und eine unten.",
         "Morgens muss man es machen und die Decke glattziehen.",
@@ -568,7 +568,7 @@
         "Wer zu viel davon hat, muss am Schalter extra bezahlen.",
         "Mit Rollen unten zieht man es hinter sich her durch den Bahnhof.",
         "Manchmal geht es beim Fliegen verloren und kommt erst Tage später.",
-        "Was du in die Kabine mitnehmen darfst, heißt das Handgepäck.",
+        "Was du mit in die Kabine nehmen darfst, ist die kleine Variante davon.",
         "Auf dem Förderband sucht jeder nach seinem eigenen unter den vielen ähnlichen."
       ]
     },
@@ -657,7 +657,7 @@
         "Auf vielen Urlaubspostkarten steht sie vor dem blauen Meer.",
         "Unter ihren großen Wedeln sucht man Schatten vor der heißen Sonne.",
         "Stell dir eine einsame Insel im Comic vor, da steht meistens genau eine.",
-        "Am Palmsonntag erinnert man an die Zweige davon vor Jerusalem.",
+        "Eine Woche vor Ostern erinnert man an die Zweige davon vor Jerusalem.",
         "In Los Angeles säumen Reihen davon die Straßen.",
         "Ihr Stamm biegt sich im Sturm, aber bricht meist nicht."
       ]
@@ -674,7 +674,7 @@
         "In der Uhr und im Kugelschreiber gibt es auch eine, aber aus Metall, die spannt.",
         "Forrest Gump beginnt und endet mit einer, die durch die Luft schwebt.",
         "Man kitzelt jemanden gern mit so einem flauschigen Ding.",
-        "Beim Federball fliegt genau so ein Ding mit Korkkopf hin und her."
+        "Beim Badminton fliegt genau so ein Ding mit Korkkopf hin und her."
       ]
     },
     {
@@ -719,7 +719,7 @@
         "Im Sommer geht man aufs Feld und pflückt sie selbst in Körbchen.",
         "Sie ist die einzige Frucht, deren Kerne außen statt innen sitzen.",
         "Aus ihr macht man die rote Marmelade fürs Frühstücksbrötchen.",
-        "Auf der Verpackung von Erdbeerjoghurt ist genau diese Frucht abgebildet."
+        "Auf dem rosa Joghurtbecher im Kühlregal ist genau diese Frucht abgebildet."
       ]
     },
     {
@@ -1243,7 +1243,7 @@
         "Auf dem Reiterhof striegelt man sein glänzendes Fell.",
         "Das Tier, auf dessen Rücken der Cowboy durch die Prärie galoppiert.",
         "Es wiehert laut und galoppiert mit klappernden Hufen über die Wiese.",
-        "Beim Pferderennen gewinnt das schnellste mit dem Jockey obendrauf.",
+        "Auf der Rennbahn gewinnt das schnellste von ihnen mit dem Jockey obendrauf.",
         "Du steigst in den Sattel, nimmst die Zügel und reitest los."
       ]
     },
@@ -1465,7 +1465,7 @@
         "Sie wechselt regelmäßig ihre Haut.",
         "Im Zoo kann man sie hinter Glas bewundern.",
         "Sie ringelt sich zusammen und bewegt sich in Wellenlinien vorwärts.",
-        "Die Kobra und die Klapperschlange gehören zu dieser Tierart.",
+        "Die Kobra und die Python gehören zu genau dieser Tierart.",
         "Das beinlose Tier, das zischend und züngelnd über den Boden gleitet.",
         "Indische Beschwörer locken sie mit der Flöte aus dem Korb.",
         "Im Dschungelbuch will Kaa damit Mogli hypnotisieren.",
@@ -1514,7 +1514,7 @@
         "Na das Ding mit den zwei Röhren, in die du deine Beine steckst.",
         "Stell dir das Gegenteil von einem Rock vor, aber für beide Beine getrennt.",
         "Wenn du im Sommer kurz drin bist, friert keiner an den Knien.",
-        "Mit Hosenträgern oder einem Riemen bleibt sie an Ort und Stelle."
+        "Mit Trägern über der Schulter oder einem Riemen bleibt sie an Ort und Stelle."
       ]
     },
     {
@@ -1568,7 +1568,7 @@
         "Rundes Kochgefäß aus Metall mit einem Deckel.",
         "Darin kochst du Suppe, Nudeln oder Gemüse.",
         "Er steht auf dem Herd und wird sehr heiß.",
-        "Man braucht einen Topflappen, um ihn anzufassen.",
+        "Man braucht einen dicken Lappen, um den heißen Griff anzufassen.",
         "Hexen rühren darin angeblich ihren Zaubertrank zusammen.",
         "Es gibt ihn aus Edelstahl, Emaille oder Gusseisen.",
         "Das tiefe Ding, in dem das Wasser für die Spaghetti brodelt.",
@@ -1597,7 +1597,7 @@
       "clues": [
         "Besteckteil mit runder Vertiefung zum Schöpfen.",
         "Damit isst man Suppe oder Joghurt.",
-        "Ein Teelöffel ist viel kleiner als ein Suppenlöffel.",
+        "Die kleine Variante für den Tee ist viel winziger als die für die Suppe.",
         "Man benutzt ihn auch zum Umrühren im Kaffee.",
         "Beim Eis essen aus dem Becher ist er das richtige Werkzeug.",
         "Ein Holz-Exemplar bekommt man oft zum Honig oder zur Marmelade.",
@@ -1717,9 +1717,9 @@
       "clues": [
         "Rundes Spielgerät aus Gummi oder Leder.",
         "Man wirft, kickt oder fängt ihn beim Spielen.",
-        "Beim Fußball schießt man ihn ins Tor.",
+        "Auf dem Rasen schießt man ihn mit dem Fuß ins Tor.",
         "Es gibt ihn in vielen Größen und Farben.",
-        "Beim Basketball wirft man ihn durch einen hohen Korb.",
+        "Beim Korbwerfen in der Halle wirft man ihn durch einen hohen Ring.",
         "Wenn die Luft heraus ist, springt er nicht mehr richtig.",
         "Das runde Ding, das du mit dem Fuß kickst oder mit der Hand prellst.",
         "Hau ihn auf den Boden, und er springt dir wieder entgegen.",
@@ -1856,7 +1856,7 @@
         "Man kann daraus Kompott oder Saft machen.",
         "Helene Fischer singt von einer, die im Mondschein nackt am Baum steht.",
         "Bei der Glühlampe nennt man den runden Glaskörper auch genau so.",
-        "Das Obst mit der typischen bauchigen Glühbirnen-Form, oben dünn, unten dick.",
+        "Das Obst mit der bauchigen Form der Lampe, oben dünn, unten dick.",
         "Auf dem Babybrei-Glas steht oft genau diese Frucht zusammen mit Apfel.",
         "Beißt du rein, läuft dir der süße Saft am Kinn herunter.",
         "Im scherzhaften Slang nennt man auch den Kopf so wie diese bauchige Frucht."
@@ -1970,7 +1970,7 @@
     {
       "word": "Orange",
       "clues": [
-        "Eine runde Frucht mit dicker oranger Schale.",
+        "Eine runde Südfrucht mit dicker, kräftig gefärbter Schale.",
         "Man presst sie aus und trinkt den Saft zum Frühstück.",
         "Sie wächst in warmen Ländern wie Spanien oder Brasilien.",
         "Ihr Name ist auch eine Farbe.",
@@ -2078,7 +2078,7 @@
         "Eine handgeschriebene oder gedruckte Nachricht auf Papier.",
         "Man steckt ihn in einen Umschlag und schickt ihn per Post.",
         "Früher schrieb man ihn, weil es noch kein Internet gab.",
-        "Der Briefträger bringt ihn in den Kasten.",
+        "Der Postbote bringt ihn morgens in den Kasten.",
         "Oben rechts klebt man eine Marke darauf, bevor man ihn abschickt.",
         "Der Weihnachtsmann bekommt davon viele mit Wunschzetteln darin.",
         "Die geschriebene Nachricht auf Papier, die du in den Umschlag faltest, statt eine E-Mail zu tippen.",
@@ -2090,13 +2090,13 @@
     {
       "word": "Bogen",
       "clues": [
-        "Eine gebogene Waffe, mit der man Pfeile abschießt.",
+        "Eine gekrümmte Waffe aus Holz, mit der man Pfeile abschießt.",
         "Robin Hood benutzte genau dieses Ding zum Schießen.",
         "Man spannt eine Sehne zwischen zwei Enden eines Holzstabs.",
         "Im Turnen oder Tanzen nennt man eine Rückbeuge auch so.",
         "Über den Himmel spannt sich nach dem Regen ein bunter aus Farben.",
         "Bei Brücken oder Toren nennt man die geschwungene Form oben auch so.",
-        "Das gebogene Holz mit der gespannten Sehne, mit dem du einen Pfeil abfeuerst.",
+        "Das krumme Holz mit der gespannten Sehne, mit dem du einen Pfeil abfeuerst.",
         "Beim Geigespielen streichst du mit so einem Stab über die Saiten.",
         "Amor, der kleine Liebesengel, schießt damit seine Pfeile auf Verliebte.",
         "Beim Schießsport zielst du damit auf die runde Zielscheibe mit den Ringen."
@@ -2308,7 +2308,7 @@
         "Ihre beiden Hälften klappen wie ein kleines Buch auf und zu.",
         "Kinder sammeln sie im Urlaub und stecken sie in den Sandeimer.",
         "Das Tankstellen-Logo von Shell zeigt genau so etwas in Gelb.",
-        "Miesmuscheln in Weißweinsoße sind so ein bekanntes Gericht daraus.",
+        "Die schwarzen aus dem Meer in Weißweinsoße sind ein bekanntes Gericht.",
         "Stell dir so ein kleines hartes Ding vor, das man als Andenken vom Meer mitbringt."
       ]
     },
@@ -2994,7 +2994,7 @@
         "Kochutensil mit flachem Boden und einem langen Griff.",
         "Sie ist meist aus Metall und wird sehr heiß.",
         "Ohne sie kannst du kein Spiegelei machen.",
-        "Beim Pfannkuchenwenden wirft man den Teig kurz in die Luft.",
+        "Beim Crêpewenden wirft man den Teig kurz in die Luft und fängt ihn wieder auf.",
         "An einer beschichteten klebt das Spiegelei nicht fest.",
         "Tom aus dem Cartoon kriegt oft eine über den Kopf gehauen, dass es scheppert.",
         "Stell dir das flache runde Metallding mit dem Stiel auf der Herdplatte vor.",

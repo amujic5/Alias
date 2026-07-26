@@ -372,4 +372,6 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="htp_step3_body">If your teammate guesses it, your team scores a point. Stuck on one? Skip it and keep going.</string>
     <string name="htp_step4_title">Beat the clock</string>
     <string name="htp_step4_body">Play to a time or point limit. The team that finishes with the most points in the least time wins!</string>
+    <string name="game_alias_ger">Germany Alias</string>
+    <string name="alias_ger_info">Willkommen in der Welt des deutschen Alltags — von Feierabend und Pfandautomat bis Tatort, Bundesliga und Weihnachtsmarkt. Erklärt Begriffe und Namen wie „Currywurst“, „Schrebergarten“, „Reeperbahn“, „Helene Fischer“ und „Digga“, lasst euer Team raten und sammelt Punkte im großen Alias Deutschland.\n</string>
 </resources>

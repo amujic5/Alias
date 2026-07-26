@@ -18,64 +18,8 @@ import java.nio.charset.Charset
 class DictionaryService {
 
     companion object {
-        val instance = DictionaryService()
         var playingDictionary: DictionaryModel? = null
     }
-
-    fun getDictionaries(context: Context):  MutableList<DictionaryModel> {
-
-        var localDictionaries: MutableList<DictionaryModel> = mutableListOf()
-
-        val jsonArray = JSONObject(loadJSONFromAsset(context)).getJSONArray("dictionaries")
-
-        for (i in 0 until jsonArray.length()) {
-            val item = jsonArray.getJSONObject(i)
-
-            val imageUrlString = item.getString("imageURLString")
-            val language = item.getString("language")
-            val languageCode = item.getString("languageCode")
-
-            var words: MutableList<String> = mutableListOf()
-
-            val wordsJsonArray = item.getJSONArray("words")
-            for (i in 0 until wordsJsonArray.length()) {
-                val word = wordsJsonArray.getString(i)
-                words.add(word)
-            }
-
-            val dictionary = DictionaryModel(language, languageCode, words, imageUrlString)
-            localDictionaries.add(dictionary)
-
-        }
-
-        return localDictionaries
-    }
-
-    fun loadJSONFromAsset(context: Context): String {
-        var json: String? = null
-        try {
-
-            val `is` = context.resources.openRawResource(R.raw.full_json)
-
-            val size = `is`.available()
-
-            val buffer = ByteArray(size)
-
-            `is`.read(buffer)
-
-            `is`.close()
-
-            json = String(buffer, Charset.forName("UTF-8"))
-
-
-        } catch (ex: IOException) {
-            ex.printStackTrace()
-            return ""
-        }
-
-        return json
-    }
-
 }
 
 data class BoardGames(
@@ -164,6 +108,8 @@ enum class BoardGameId {
     JUNIOR,
     @SerializedName("game_alias_slo")
     SLO,
+    @SerializedName("alias_ger")
+    GER,
     @SerializedName("game_alias_uk")
     UK,
     @SerializedName("alias_nba")
@@ -197,6 +143,7 @@ object JSONService {
         BoardGameId.SRB -> "SRB"
         BoardGameId.BOS -> "BOS"
         BoardGameId.SLO -> "SLO"
+        BoardGameId.GER -> "GER"
         BoardGameId.UK  -> "ENG"
         else -> null
     }
@@ -212,7 +159,7 @@ object JSONService {
         this.boardGames.clear()
         this.boardGames.addAll(boardGames.games)
 
-        // The locally-themed "country" decks (cro/srb/bos/slo/uk) only show when
+        // The locally-themed "country" decks (cro/srb/bos/slo/ger/uk) only show when
         // their language is the one selected in the app — mirrors iOS.
         val selected = LanguageManager.deckLanguageCode
         this.boardGames.removeIf { game ->
