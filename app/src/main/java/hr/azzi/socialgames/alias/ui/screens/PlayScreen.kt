@@ -245,18 +245,10 @@ fun PlayScreen(
     }
 
     if (showQuit) {
-        AlertDialog(
-            onDismissRequest = { showQuit = false; showSheet = true },
-            title = { Text(stringResource(R.string.warning), fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold) },
-            text = { Text(stringResource(R.string.are_you_sure_quit), fontFamily = Alias.body) },
-            confirmButton = {
-                TextButton(onClick = onQuit) { Text(stringResource(R.string.yes), color = Alias.danger, fontWeight = FontWeight.Bold) }
-            },
-            dismissButton = {
-                TextButton(onClick = { showQuit = false; showSheet = true }) {
-                    Text(stringResource(R.string.no), color = Alias.textSecondary)
-                }
-            },
+        QuitGameDialog(
+            onConfirm = onQuit,
+            // Back to the pause sheet, which is where the question was asked from.
+            onDismiss = { showQuit = false; showSheet = true },
         )
     }
 }

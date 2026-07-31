@@ -1,5 +1,6 @@
 package hr.azzi.socialgames.alias.ui.screens
 
+import androidx.activity.compose.BackHandler
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -60,9 +61,19 @@ fun ResultsScreen(
     onEditAnswers: () -> Unit,
     onStart: () -> Unit,
     onFinish: () -> Unit,
+    /** Leaving the game from here. Asked for first — a round has been played by now. */
+    onQuit: () -> Unit = {},
 ) {
     var playing by remember { mutableStateOf<String?>(null) }
+    var showQuit by remember { mutableStateOf(false) }
+
+    // Back is the only way out of this screen, and there is a game in progress behind it.
+    BackHandler { showQuit = true }
+
     playing?.let { path -> ReplayPlayer(path) { playing = null } }
+    if (showQuit) {
+        QuitGameDialog(onConfirm = onQuit, onDismiss = { showQuit = false })
+    }
 
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {

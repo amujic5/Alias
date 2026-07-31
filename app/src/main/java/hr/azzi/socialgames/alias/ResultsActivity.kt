@@ -32,6 +32,7 @@ class ResultsActivity : BaseActivity() {
                         onEditAnswers = { launchEditAnswers() },
                         onStart = { startNextRound() },
                         onFinish = { showWinner() },
+                        onQuit = { quitToHome() },
                     )
                 }
             }
@@ -84,6 +85,21 @@ class ResultsActivity : BaseActivity() {
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         intent.putExtra("game", game)
         intent.putExtra("captureMoment", captureMoment)
+        startActivity(intent)
+        finish()
+    }
+
+    /**
+     * Leaves the game for the home screen.
+     *
+     * Not `finish()`, which is what quitting from the play screen does: there it drops back
+     * one step into a game that is still being set up, and that is the right place to land.
+     * From results the game is what is being left, so the half-configured screens behind this
+     * one are cleared with it.
+     */
+    private fun quitToHome() {
+        val intent = Intent(this, HomeActivity::class.java)
+        intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP
         startActivity(intent)
         finish()
     }
