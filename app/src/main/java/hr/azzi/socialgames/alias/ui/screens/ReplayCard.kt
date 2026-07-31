@@ -3,6 +3,7 @@ package hr.azzi.socialgames.alias.ui.screens
 import android.content.ClipData
 import android.content.Context
 import android.content.Intent
+import android.util.Log
 import android.widget.MediaController
 import android.widget.VideoView
 import androidx.compose.foundation.background
@@ -151,6 +152,10 @@ fun ReplayPlayer(path: String, onClose: () -> Unit) {
 fun shareReplayFile(context: Context, path: String) {
     val uri = runCatching {
         FileProvider.getUriForFile(context, "${context.packageName}.fileprovider", File(path))
+    }.onFailure {
+        // A path the provider has not been told about throws here, and swallowing it is how
+        // a share button ends up doing nothing at all.
+        Log.w("RoundVideo", "cannot share $path", it)
     }.getOrNull() ?: return
 
     val intent = Intent(Intent.ACTION_SEND).apply {

@@ -1,5 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- The round video lives in the cache directory; sharing it needs a content:// URI. -->
+<!--
+  Where a round video may be found when it is shared.
+
+  Two places, because a clip has two homes: the writer leaves it in the cache, and the
+  library moves it into files/RoundVideos to keep it. A share from the history screen reads
+  the second, and declaring only the first is why it silently did nothing.
+-->
 <paths>
-    <cache-path name="round_videos" path="." />
+    <cache-path name="round_cache" path="." />
+    <files-path name="round_videos" path="RoundVideos/" />
 </paths>
