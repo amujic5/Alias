@@ -20,6 +20,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
+import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaLibrary
@@ -44,6 +45,11 @@ class PlayActivity : BaseActivity() {
 
     /** True once the cameras are actually rolling, which is what puts the stage on screen. */
     private var filming by mutableStateOf(false)
+
+    /** Goes false if the device turns out to manage only one camera at a time. */
+    private var hasFrontCamera by mutableStateOf(true)
+
+    private var roundStartLogged = false
 
     /**
      * Asked for once, here, rather than in Settings: this is the screen where the answer
@@ -71,7 +77,10 @@ class PlayActivity : BaseActivity() {
                     soundSystem = soundSystem,
                     onFinished = { showResults() },
                     onQuit = { finish() },
-                    onRoundRunning = { recorder?.setRoundRunning(it) },
+                    onRoundRunning = { running ->
+                        recorder?.setRoundRunning(running)
+                        if (running) logRoundStarted()
+                    },
                     onRoundState = { word, correct, skipped, remaining ->
                         recorder?.update(word, correct, skipped, remaining)
                     },
@@ -79,6 +88,7 @@ class PlayActivity : BaseActivity() {
                     onPreviewSurface = { surface, width, height ->
                         recorder?.setPreviewSurface(surface, width, height)
                     },
+                    hasFrontCamera = hasFrontCamera,
                 )
             }
         }
@@ -107,7 +117,10 @@ class PlayActivity : BaseActivity() {
     }
 
     private fun startRecording() {
-        recorder = RoundRecorder(this).takeIf { it.start(cardInfo()) }
+        hasFrontCamera = true
+        recorder = RoundRecorder(this)
+            .apply { onSingleCamera = { runOnUiThread { hasFrontCamera = false } } }
+            .takeIf { it.start(cardInfo()) }
         filming = recorder != null
     }
 
@@ -122,6 +135,23 @@ class PlayActivity : BaseActivity() {
         correctWords = game.currentTeamMarkedWords.filter { it.isCorrect }.map { it.word },
         skippedWords = game.currentTeamMarkedWords.filterNot { it.isCorrect }.map { it.word },
     )
+
+    /**
+     * Logged once per round, at the moment it actually begins — not at every resume from a
+     * pause, which is the same signal arriving again.
+     *
+     * What is reported is whether the round is really being filmed, not whether the switch
+     * was on: a round where the camera was asked for and refused is not a recorded round.
+     */
+    private fun logRoundStarted() {
+        if (roundStartLogged) return
+        roundStartLogged = true
+        Analytics.log(
+            this,
+            if (recorder != null) Analytics.RECORDING_ROUND_ENABLED
+            else Analytics.RECORDING_ROUND_DISABLED,
+        )
+    }
 
     /**
      * Closes the clip and hands the file back.
@@ -139,6 +169,7 @@ class PlayActivity : BaseActivity() {
         recorder = null
         filming = false
         val info = cardInfo()
+        val dualCamera = !recording.singleCamera
         Thread {
             recording.stop(info) { file ->
                 // Moved out of the cache and into the library, which is what makes it
@@ -155,6 +186,7 @@ class PlayActivity : BaseActivity() {
                     )?.let { item -> RoundMediaLibrary.fileFor(this, item) }
                 }
                 Log.w(TAG, "round clip: ${kept?.absolutePath ?: "none"} (${kept?.length() ?: 0} bytes)")
+                Analytics.logReplayCreation(this, succeeded = kept != null, dualCamera = dualCamera)
                 runOnUiThread { onDone(kept) }
             }
         }.start()

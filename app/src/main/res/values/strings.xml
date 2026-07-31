@@ -438,4 +438,5 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="history_delete">Delete</string>
     <string name="history_empty">No rounds recorded yet</string>
     <string name="settings_share">Share</string>
+    <string name="capture_moment_next_round">Capture moment for next round</string>
 </resources>

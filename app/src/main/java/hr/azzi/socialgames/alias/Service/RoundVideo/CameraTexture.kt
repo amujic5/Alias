@@ -49,6 +49,17 @@ class CameraTexture(private val sensorOrientation: Int, val size: Size) {
     }
 
     /**
+     * Forget what was last delivered.
+     *
+     * For a camera that has gone: the texture still holds its final frame, and the
+     * compositor draws whatever it holds — so without this the inset would sit there frozen
+     * on the same face for the rest of the round, which looks worse than not being there.
+     */
+    fun forget() {
+        hasFrame = false
+    }
+
+    /**
      * The sampling transform that fills [destination] with this camera's frame: upright,
      * aspect-filled, overflow centre-cropped.
      *

@@ -1,11 +1,13 @@
 package hr.azzi.socialgames.alias.ui.screens
 
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
+import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaLibrary
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaSort
 
@@ -25,6 +27,8 @@ fun RoundHistoryRoute(onBack: () -> Unit) {
     var revision by remember { mutableStateOf(0) }
     var playing by remember { mutableStateOf<String?>(null) }
 
+    LaunchedEffect(Unit) { Analytics.log(context, Analytics.REPLAY_LIST_VISITED) }
+
     val items = remember(sort, revision) { RoundMediaLibrary.items(context, sort) }
     val best = remember(items) { items.maxByOrNull { it.correctCount }?.id }
 
@@ -39,11 +43,16 @@ fun RoundHistoryRoute(onBack: () -> Unit) {
             // that are all one tap apart is more chrome than it is worth.
             sort = RoundMediaSort.entries[(sort.ordinal + 1) % RoundMediaSort.entries.size]
         },
-        onPlay = { item -> playing = RoundMediaLibrary.fileFor(context, item).absolutePath },
+        onPlay = { item ->
+            Analytics.log(context, Analytics.REPLAY_LIST_ITEM_PLAY)
+            playing = RoundMediaLibrary.fileFor(context, item).absolutePath
+        },
         onShare = { item ->
+            Analytics.log(context, Analytics.REPLAY_LIST_ITEM_SHARE)
             shareReplayFile(context, RoundMediaLibrary.fileFor(context, item).absolutePath)
         },
         onDelete = { item ->
+            Analytics.log(context, Analytics.REPLAY_LIST_ITEM_DELETE)
             RoundMediaLibrary.delete(context, item)
             revision++
         },

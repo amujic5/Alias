@@ -70,32 +70,85 @@ object DualCameraSupport {
         }
     }
 
+    /**
+     * How the answer was arrived at. Not a gate — the gate is a yes or a no — but the thing
+     * to read first when someone reports that Capture Moment is missing, or that it is there
+     * and produces nothing.
+     */
+    enum class Diagnosis {
+        /** Below API 30; concurrent capture did not exist yet. */
+        TOO_OLD,
+
+        /** The device declares the pair. The strongest answer there is. */
+        DECLARED_PAIR,
+
+        /** It declares the feature but no front + back pair — wide + tele is not this. */
+        DECLARED_NO_PAIR,
+
+        /**
+         * It says nothing, and is offered it anyway. An SM-A376B declares neither the feature
+         * nor a pair and films both cameras perfectly well, so silence is not taken for no.
+         */
+        UNDECLARED,
+
+        /** No camera service, or it threw while being asked what it can do. */
+        UNAVAILABLE,
+    }
+
     private fun resolve(context: Context): Boolean {
         debugOverride(context)?.let {
             Log.w(TAG, "debug override: supported=$it")
             return it
         }
+        val (supported, diagnosis) = diagnose(context)
+        // One line with everything the answer was based on. Without the device on the desk
+        // this is the whole of what a report has to go on, so it says what was asked as well
+        // as what came back.
+        Log.w(
+            TAG,
+            "capture moment $supported ($diagnosis) — ${Build.MANUFACTURER} ${Build.MODEL}, " +
+                "API ${Build.VERSION.SDK_INT}, feature=${hasFeature(context)}, " +
+                "concurrentCameraIds=${concurrentIds(context)}",
+        )
+        return supported
+    }
 
-        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) return false
-        if (!context.packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_CONCURRENT)) {
-            return true
-        }
+    private fun diagnose(context: Context): Pair<Boolean, Diagnosis> {
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) return false to Diagnosis.TOO_OLD
 
-        val manager = context.getSystemService(Context.CAMERA_SERVICE) as? CameraManager ?: return false
+        val manager = context.getSystemService(Context.CAMERA_SERVICE) as? CameraManager
+            ?: return false to Diagnosis.UNAVAILABLE
+
         return try {
             val facing = manager.cameraIdList.associateWith { id ->
                 manager.getCameraCharacteristics(id).get(CameraCharacteristics.LENS_FACING)
             }
-            manager.concurrentCameraIds.any { combination ->
+            val declaredPair = manager.concurrentCameraIds.any { combination ->
                 val facings = combination.mapNotNull { facing[it] }
                 facings.contains(CameraCharacteristics.LENS_FACING_FRONT) &&
                     facings.contains(CameraCharacteristics.LENS_FACING_BACK)
             }
+            when {
+                declaredPair -> true to Diagnosis.DECLARED_PAIR
+                hasFeature(context) -> false to Diagnosis.DECLARED_NO_PAIR
+                else -> true to Diagnosis.UNDECLARED
+            }
         } catch (t: Throwable) {
-            // A camera service that throws while being asked what it can do is in no state
-            // to film two streams at once.
             Log.w(TAG, "concurrent camera query failed", t)
-            false
+            false to Diagnosis.UNAVAILABLE
         }
     }
+
+    private fun hasFeature(context: Context) =
+        context.packageManager.hasSystemFeature(PackageManager.FEATURE_CAMERA_CONCURRENT)
+
+    private fun concurrentIds(context: Context): String =
+        if (Build.VERSION.SDK_INT < Build.VERSION_CODES.R) {
+            "n/a"
+        } else {
+            runCatching {
+                (context.getSystemService(Context.CAMERA_SERVICE) as CameraManager)
+                    .concurrentCameraIds.toString()
+            }.getOrElse { "unreadable" }
+        }
 }

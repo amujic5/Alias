@@ -40,6 +40,7 @@ import androidx.compose.ui.window.Dialog
 import androidx.compose.ui.window.DialogProperties
 import androidx.core.content.FileProvider
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.CCard
 import java.io.File
@@ -133,7 +134,10 @@ fun ReplayPlayer(path: String, onClose: () -> Unit) {
             Row(
                 Modifier.align(Alignment.BottomCenter).padding(bottom = 48.dp)
                     .clip(CircleShape).background(Alias.accent)
-                    .clickable { shareReplayFile(context, path) }
+                    .clickable {
+                        Analytics.log(context, Analytics.REPLAY_SHARE)
+                        shareReplayFile(context, path)
+                    }
                     .padding(horizontal = 26.dp, vertical = 14.dp),
                 verticalAlignment = Alignment.CenterVertically,
                 horizontalArrangement = Arrangement.spacedBy(10.dp),

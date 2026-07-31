@@ -53,6 +53,14 @@ class RoundRecorder(private val context: Context) {
     private var overlay: RoundOverlayRenderer? = null
     private var cards: RoundCardRenderer? = null
 
+    /**
+     * True once the front camera has been given up on. The clip carries on with the back
+     * camera alone; the caller reads this to stop labelling an inset that is not there.
+     */
+    @Volatile
+    var singleCamera = false
+        private set
+
     /** The play screen's live stage, if it is on screen. */
     private var previewSurface: EGLSurface? = null
     private var previewWidth = 0
@@ -72,6 +80,9 @@ class RoundRecorder(private val context: Context) {
      */
     @Volatile
     private var state = RoundFrameRenderer.State(word = "", correct = 0, skipped = 0, remainingSeconds = 0)
+
+    /** Called once if the front camera has to be dropped, so the screen can follow suit. */
+    var onSingleCamera: (() -> Unit)? = null
 
     fun update(word: String, correct: Int, skipped: Int, remainingSeconds: Int) {
         state = RoundFrameRenderer.State(word, correct, skipped, remainingSeconds)
@@ -193,6 +204,14 @@ class RoundRecorder(private val context: Context) {
             it.open(
                 back = Surface(back!!.surfaceTexture),
                 front = Surface(front!!.surfaceTexture),
+                onDegraded = { reason ->
+                    // One camera is still a clip worth having. The inset is dropped and
+                    // nothing else about the round changes.
+                    Log.w(TAG, "single camera: $reason")
+                    singleCamera = true
+                    glHandler.post { front?.forget() }
+                    onSingleCamera?.invoke()
+                },
                 onFailure = { reason ->
                     Log.w(TAG, "capture failed: $reason")
                     stage = Stage.FAILED

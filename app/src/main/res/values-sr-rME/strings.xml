@@ -433,4 +433,5 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="history_delete">Obriši</string>
     <string name="history_empty">Još nema snimljenih rundi</string>
     <string name="settings_share">Podijeli</string>
+    <string name="capture_moment_next_round">Snimi sljedeću rundu</string>
 </resources>

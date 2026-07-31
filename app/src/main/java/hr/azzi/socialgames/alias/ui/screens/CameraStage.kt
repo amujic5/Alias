@@ -53,6 +53,8 @@ fun CameraStage(
     word: String,
     onSurface: (Surface?, Int, Int) -> Unit,
     modifier: Modifier = Modifier,
+    /** False once the front camera has been dropped — there is no inset to label. */
+    hasFrontCamera: Boolean = true,
 ) {
     val current = rememberUpdatedState(onSurface)
 
@@ -85,10 +87,12 @@ fun CameraStage(
         )
 
         // Sits over the PiP the compositor draws in the same corner.
-        CameraPill(
-            label = stringResource(R.string.camera_label_front),
-            modifier = Modifier.align(Alignment.TopStart).padding(start = 22.dp, top = 20.dp),
-        )
+        if (hasFrontCamera) {
+            CameraPill(
+                label = stringResource(R.string.camera_label_front),
+                modifier = Modifier.align(Alignment.TopStart).padding(start = 22.dp, top = 20.dp),
+            )
+        }
         CameraPill(
             label = stringResource(R.string.camera_label_back),
             modifier = Modifier.align(Alignment.BottomEnd).padding(end = 14.dp, bottom = 26.dp),

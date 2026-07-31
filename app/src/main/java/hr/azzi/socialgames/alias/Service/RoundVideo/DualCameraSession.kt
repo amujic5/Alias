@@ -131,12 +131,18 @@ data class CameraPair(
 }
 
 /**
- * Both cameras, streaming at once into the surfaces the compositor draws from.
+ * Both cameras, streaming into the surfaces the compositor draws from — or one, if that is
+ * all the device turns out to manage.
  *
- * Each camera gets its own device and its own capture session — there is no combined
- * session in Camera2. What makes them run together is that the pair came from
- * `getConcurrentCameraIds()`, so the camera service has already agreed to the combination
- * and will not evict one when the other opens.
+ * Each camera gets its own device and its own capture session; there is no combined session
+ * in Camera2. They are opened one after the other rather than together, and that order is
+ * the whole design: a device that cannot really run both evicts the first camera when the
+ * second opens, so opening them at once would lose the back one — the full-bleed image and
+ * the clock the whole clip is written against — and keep the small inset instead.
+ *
+ * Opened in sequence, the back camera is established first and the front is the one at risk.
+ * If it cannot be had, it is dropped and the round is filmed with the back camera alone: the
+ * compositor simply stops drawing the inset, and everything else about the clip is unchanged.
  */
 class DualCameraSession(
     private val context: Context,
@@ -148,48 +154,130 @@ class DualCameraSession(
     private val sessions = mutableListOf<CameraCaptureSession>()
     private var closed = false
 
+    /** Set once the front has been given up on, so a late callback cannot revive it. */
+    private var frontAbandoned = false
+
+    private lateinit var backSurface: Surface
+    private lateinit var frontSurface: Surface
+    private lateinit var onDegraded: (String) -> Unit
+    private lateinit var onFailure: (String) -> Unit
+
+    /**
+     * @param onDegraded the front camera could not be had; the clip is back-camera only.
+     * @param onFailure nothing usable at all — the round is played without a clip.
+     */
+    fun open(
+        back: Surface,
+        front: Surface,
+        onDegraded: (String) -> Unit,
+        onFailure: (String) -> Unit,
+    ) {
+        backSurface = back
+        frontSurface = front
+        this.onDegraded = onDegraded
+        this.onFailure = onFailure
+        openBack()
+    }
+
     @SuppressLint("MissingPermission")
-    fun open(back: Surface, front: Surface, onFailure: (String) -> Unit) {
+    private fun openBack() {
         val manager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
         try {
-            manager.openCamera(pair.backId, callback(back, onFailure), handler)
-            manager.openCamera(pair.frontId, callback(front, onFailure), handler)
+            manager.openCamera(pair.backId, backCallback, handler)
         } catch (t: Throwable) {
-            onFailure("openCamera: ${t.message}")
+            onFailure("openCamera(back): ${t.message}")
         }
     }
 
-    private fun callback(surface: Surface, onFailure: (String) -> Unit) =
-        object : CameraDevice.StateCallback() {
+    @SuppressLint("MissingPermission")
+    private fun openFront() {
+        if (closed || frontAbandoned) return
+        val manager = context.getSystemService(Context.CAMERA_SERVICE) as CameraManager
+        try {
+            manager.openCamera(pair.frontId, frontCallback, handler)
+        } catch (t: Throwable) {
+            giveUpOnFront("openCamera(front): ${t.message}")
+        }
+    }
 
-            override fun onOpened(device: CameraDevice) {
-                if (closed) {
-                    device.close()
-                    return
-                }
-                devices += device
-                startStreaming(device, surface, onFailure)
-            }
+    private val backCallback = object : CameraDevice.StateCallback() {
 
-            override fun onDisconnected(device: CameraDevice) {
-                // On a device that cannot really run both, this is how it says so: the
-                // second open evicts the first rather than failing outright.
-                Log.w(TAG, "camera ${device.id} disconnected")
+        override fun onOpened(device: CameraDevice) {
+            if (closed) {
                 device.close()
-                devices -= device
-                onFailure("camera ${device.id} was evicted")
+                return
             }
-
-            override fun onError(device: CameraDevice, error: Int) {
-                Log.w(TAG, "camera ${device.id} error $error")
-                device.close()
-                devices -= device
-                onFailure("camera ${device.id} error $error")
-            }
+            devices += device
+            // The front is only attempted once the back is actually streaming, so what the
+            // device does about the second one can be told apart from a slow first one.
+            stream(device, backSurface, onReady = { openFront() }, onProblem = { onFailure(it) })
         }
 
-    @Suppress("DEPRECATION") // createCaptureSession(List, ...) is the only form below API 28's successor everywhere we run
-    private fun startStreaming(device: CameraDevice, surface: Surface, onFailure: (String) -> Unit) {
+        override fun onDisconnected(device: CameraDevice) {
+            devices -= device
+            device.close()
+            if (frontAbandoned || closed) {
+                // Already down to one camera and it has gone too: nothing is left to film with.
+                onFailure("back camera was disconnected")
+                return
+            }
+            // This is a device saying it cannot do both, in the only way it says it. The
+            // front is what has to go, and the back is opened again without it.
+            Log.w(TAG, "back camera evicted when the front opened — dropping the front")
+            giveUpOnFront("the back camera was evicted by the front")
+            openBack()
+        }
+
+        override fun onError(device: CameraDevice, error: Int) {
+            devices -= device
+            device.close()
+            onFailure("back camera error $error")
+        }
+    }
+
+    private val frontCallback = object : CameraDevice.StateCallback() {
+
+        override fun onOpened(device: CameraDevice) {
+            if (closed || frontAbandoned) {
+                device.close()
+                return
+            }
+            devices += device
+            stream(
+                device, frontSurface,
+                onReady = { Log.w(TAG, "both cameras streaming") },
+                onProblem = { giveUpOnFront(it) },
+            )
+        }
+
+        override fun onDisconnected(device: CameraDevice) {
+            devices -= device
+            device.close()
+            giveUpOnFront("front camera was disconnected")
+        }
+
+        override fun onError(device: CameraDevice, error: Int) {
+            devices -= device
+            device.close()
+            giveUpOnFront("front camera error $error")
+        }
+    }
+
+    /** Drops the front for good and tells the recorder to stop expecting its frames. */
+    private fun giveUpOnFront(reason: String) {
+        if (frontAbandoned) return
+        frontAbandoned = true
+        Log.w(TAG, "filming with the back camera only: $reason")
+        onDegraded(reason)
+    }
+
+    @Suppress("DEPRECATION") // The successor form is API 28+; this runs on 30+ but reads the same.
+    private fun stream(
+        device: CameraDevice,
+        surface: Surface,
+        onReady: () -> Unit,
+        onProblem: (String) -> Unit,
+    ) {
         try {
             device.createCaptureSession(
                 listOf(surface),
@@ -201,20 +289,26 @@ class DualCameraSession(
                             return
                         }
                         sessions += session
-                        val request = device.createCaptureRequest(CameraDevice.TEMPLATE_RECORD)
-                            .apply { addTarget(surface) }
-                            .build()
-                        session.setRepeatingRequest(request, null, handler)
+                        runCatching {
+                            val request = device.createCaptureRequest(CameraDevice.TEMPLATE_RECORD)
+                                .apply { addTarget(surface) }
+                                .build()
+                            session.setRepeatingRequest(request, null, handler)
+                        }.onFailure {
+                            onProblem("camera ${device.id} would not start: ${it.message}")
+                            return
+                        }
+                        onReady()
                     }
 
                     override fun onConfigureFailed(session: CameraCaptureSession) {
-                        onFailure("session for camera ${device.id} would not configure")
+                        onProblem("session for camera ${device.id} would not configure")
                     }
                 },
                 handler,
             )
         } catch (t: Throwable) {
-            onFailure("createCaptureSession: ${t.message}")
+            onProblem("createCaptureSession(${device.id}): ${t.message}")
         }
     }
 

@@ -431,4 +431,5 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="history_delete">Izbriši</string>
     <string name="history_empty">Ni še posnetih rund</string>
     <string name="settings_share">Deli</string>
+    <string name="capture_moment_next_round">Posnemi naslednjo rundo</string>
 </resources>

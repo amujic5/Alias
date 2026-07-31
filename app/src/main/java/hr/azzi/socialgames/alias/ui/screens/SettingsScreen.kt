@@ -238,41 +238,7 @@ private fun Context.findActivity(): Activity? {
  * subtitle, and the Figma checkbox (26dp, 2dp accent border). Only ever shown on devices
  * that can actually film both cameras at once.
  */
-@Composable
-private fun CaptureMomentRow(checked: Boolean, onCheckedChange: (Boolean) -> Unit, onInfo: () -> Unit) {
-    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-        Column(Modifier.weight(1f)) {
-            Row(verticalAlignment = Alignment.CenterVertically) {
-                Overline(stringResource(R.string.capture_moment).uppercase())
-                Spacer(Modifier.width(2.dp))
-                IconButton(onClick = onInfo, modifier = Modifier.size(28.dp)) {
-                    Icon(
-                        Icons.Outlined.Info, contentDescription = stringResource(R.string.capture_moment),
-                        tint = Color.White.copy(alpha = 0.75f), modifier = Modifier.size(17.dp),
-                    )
-                }
-            }
-            Text(
-                stringResource(R.string.capture_moment_subtitle),
-                color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
-                fontWeight = FontWeight.Medium, fontSize = 12.sp, lineHeight = 16.sp,
-            )
-        }
-        Spacer(Modifier.width(12.dp))
-        Box(
-            Modifier.size(26.dp).clip(RoundedCornerShape(7.dp))
-                .background(if (checked) Alias.accent else Color.Transparent)
-                .border(2.dp, Alias.accent, RoundedCornerShape(7.dp))
-                .clickable { onCheckedChange(!checked) },
-            contentAlignment = Alignment.Center,
-        ) {
-            if (checked) {
-                Icon(Icons.Filled.Check, contentDescription = null, tint = Alias.onAccent,
-                    modifier = Modifier.size(18.dp))
-            }
-        }
-    }
-}
+
 
 @Composable
 private fun VsPill(names: List<String>) {

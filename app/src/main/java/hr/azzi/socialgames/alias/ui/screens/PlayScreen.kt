@@ -84,6 +84,8 @@ fun PlayScreen(
     cameraMode: Boolean = false,
     /** Where the compositor should draw the stage. */
     onPreviewSurface: (Surface?, Int, Int) -> Unit = { _, _, _ -> },
+    /** False when the round is being filmed with the back camera alone. */
+    hasFrontCamera: Boolean = true,
 ) {
     val context = LocalContext.current
     var timeLeft by remember { mutableIntStateOf(game.time) }
@@ -169,6 +171,7 @@ fun PlayScreen(
                         CameraStage(
                             word = if (showSheet) "" else displayWord,
                             onSurface = onPreviewSurface,
+                            hasFrontCamera = hasFrontCamera,
                         )
                         TimerBadge(
                             timeLeft,

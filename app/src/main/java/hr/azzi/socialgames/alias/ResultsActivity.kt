@@ -7,6 +7,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
+import hr.azzi.socialgames.alias.Service.DualCameraSupport
 import hr.azzi.socialgames.alias.ui.screens.ResultsScreen
 import hr.azzi.socialgames.alias.ui.screens.ResultsUiState
 import hr.azzi.socialgames.alias.ui.screens.TeamRow
@@ -18,11 +19,18 @@ class ResultsActivity : BaseActivity() {
     private val game: Game by lazy { intent.getParcelableExtra<Game>("game") as Game }
 
     private var uiState by mutableStateOf<ResultsUiState?>(null)
+
+    /**
+     * Whether the next round is filmed. Starts as whatever the round just played did, so the
+     * usual answer costs nothing, and travels on to the next round from here.
+     */
+    private var captureMoment by mutableStateOf(false)
     private var shouldShowEditAnswers = true
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         game.currentTeamHasFinishedTheRound()
+        captureMoment = intent.getBooleanExtra("captureMoment", false)
         uiState = buildState()
         setComposeContent {
             AliasTheme {
@@ -33,6 +41,9 @@ class ResultsActivity : BaseActivity() {
                         onStart = { startNextRound() },
                         onFinish = { showWinner() },
                         onQuit = { quitToHome() },
+                        captureMomentAvailable = DualCameraSupport.isSupported(this),
+                        captureMoment = captureMoment,
+                        onCaptureMomentChange = { captureMoment = it },
                     )
                 }
             }
@@ -77,9 +88,6 @@ class ResultsActivity : BaseActivity() {
     }
 
     private fun startNextRound() {
-        // Read before the local shadows it: the choice arrives with the round that just
-        // finished and has to travel on to the next one.
-        val captureMoment = intent.getBooleanExtra("captureMoment", false)
         game.newRound()
         val intent = Intent(this, PlayActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP

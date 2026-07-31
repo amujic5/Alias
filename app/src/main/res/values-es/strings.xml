@@ -423,4 +423,5 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="history_delete">Eliminar</string>
     <string name="history_empty">Aún no hay rondas grabadas</string>
     <string name="settings_share">Compartir</string>
+    <string name="capture_moment_next_round">Grabar la próxima ronda</string>
 </resources>

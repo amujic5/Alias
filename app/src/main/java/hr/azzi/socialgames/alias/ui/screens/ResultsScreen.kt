@@ -28,11 +28,13 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
 import hr.azzi.socialgames.alias.ui.theme.CCard
@@ -63,9 +65,16 @@ fun ResultsScreen(
     onFinish: () -> Unit,
     /** Leaving the game from here. Asked for first — a round has been played by now. */
     onQuit: () -> Unit = {},
+    /** Whether this device can film at all; the row is not offered when it cannot. */
+    captureMomentAvailable: Boolean = false,
+    /** Carried over from the round just played, so the usual answer needs no tap. */
+    captureMoment: Boolean = false,
+    onCaptureMomentChange: (Boolean) -> Unit = {},
 ) {
+    val context = LocalContext.current
     var playing by remember { mutableStateOf<String?>(null) }
     var showQuit by remember { mutableStateOf(false) }
+    var showCaptureInfo by remember { mutableStateOf(false) }
 
     // Back is the only way out of this screen, and there is a game in progress behind it.
     BackHandler { showQuit = true }
@@ -73,6 +82,13 @@ fun ResultsScreen(
     playing?.let { path -> ReplayPlayer(path) { playing = null } }
     if (showQuit) {
         QuitGameDialog(onConfirm = onQuit, onDismiss = { showQuit = false })
+    }
+    if (showCaptureInfo) {
+        DualCameraSheet(
+            isOn = captureMoment,
+            onToggle = onCaptureMomentChange,
+            onDismiss = { showCaptureInfo = false },
+        )
     }
 
     BrandBackground {
@@ -103,7 +119,27 @@ fun ResultsScreen(
                 }
 
                 state.replayPath?.let { path ->
-                    ReplayCard(onPlay = { playing = path })
+                    ReplayCard(
+                        onPlay = {
+                            Analytics.log(context, Analytics.REPLAY_PLAY)
+                            playing = path
+                        },
+                    )
+                }
+
+                // Only where there is a next round to film. On the last one the button below
+                // says FINISH, and offering a choice about a round that will not happen is
+                // just something else to read.
+                if (captureMomentAvailable && state.nextTeamName != null) {
+                    CCard(Modifier.fillMaxWidth()) {
+                        CaptureMomentRow(
+                            checked = captureMoment,
+                            title = stringResource(R.string.capture_moment_next_round),
+                            style = CaptureMomentStyle.OnCard,
+                            onCheckedChange = onCaptureMomentChange,
+                            onInfo = { showCaptureInfo = true },
+                        )
+                    }
                 }
 
                 Column {
