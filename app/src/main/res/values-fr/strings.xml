@@ -366,4 +366,62 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="ai_stt_offline_message">La reconnaissance du %1$s nécessite une connexion ou le pack hors ligne. Connecte-toi et réessaie.</string>
     <string name="ai_stt_language_message">Cet appareil ne propose pas la reconnaissance vocale pour %1$s. Choisis une autre langue pour jouer.</string>
     <string name="ai_stt_retry">Réessayer</string>
+    <string name="capture_moment">Capture l’instant</string>
+    <string name="capture_moment_subtitle">Filme la manche avec les deux caméras et garde les moments les plus drôles.</string>
+    <string name="dualcam_title_1">L\'un explique. L\'autre devine.</string>
+    <string name="dualcam_body_1">La caméra avant filme celui qui explique, la caméra arrière celui qui devine. C\'est ton moment Alias en direct !</string>
+    <string name="dualcam_title_2">Réuni en un seul clip Alias</string>
+    <string name="dualcam_body_2">À la fin de la manche, les deux vues, le mot et la réaction se réunissent dans une seule vidéo amusante.</string>
+    <string name="dualcam_title_3">Garde-la. Partage le chaos.</string>
+    <string name="dualcam_body_3">Conserve tes manches Alias les plus drôles ou publie-les sur TikTok, Instagram et envoie-les à tes amis en un geste.</string>
+    <string name="dualcam_enable">Activer le mode double caméra</string>
+    <string name="camera_permission_title">Ouvrir les réglages</string>
+    <string name="camera_permission_message">Alias Words a besoin de la caméra et du micro pour enregistrer vos moments.</string>
+
+    <!-- Round video overlay -->
+    <string name="ai_video_correct">Trouvé</string>
+    <string name="ai_video_missed">Raté</string>
+    <string name="ai_video_the_word_is">LE MOT EST</string>
+
+    <!-- Round video cards -->
+    <string name="round_intro_team">ÉQUIPE</string>
+    <string name="round_intro_explains">EXPLIQUE</string>
+    <string name="round_intro_guesses">DEVINE</string>
+    <string name="round_outro_title">MANCHE TERMINÉE</string>
+    <string name="round_outro_skipped">Ratés</string>
+    <string name="round_outro_correct_words">MOTS TROUVÉS</string>
+    <string name="round_outro_skipped_words">MOTS RATÉS</string>
+
+    <!-- Play screen, camera mode -->
+    <string name="camera_label_front">AVANT</string>
+    <string name="camera_label_back">ARRIÈRE</string>
+    <string name="camera_your_word">TON MOT</string>
+
+    <!-- Round replay -->
+    <string name="replay_ready_title">Ton clip est prêt !</string>
+    <string name="replay_ready_subtitle">Regarde et partage</string>
+
+    <!-- Settings menu and round history -->
+    <string name="settings_general">GÉNÉRAL</string>
+    <string name="settings_audio">SON</string>
+    <string name="settings_media">MÉDIAS</string>
+    <string name="settings_about">À PROPOS</string>
+    <string name="settings_language">Langue</string>
+    <string name="settings_sound_effects">Effets sonores</string>
+    <string name="settings_vibrate">Vibration</string>
+    <string name="settings_media_row">Médias</string>
+    <string name="settings_privacy">Politique de confidentialité</string>
+    <string name="settings_terms">Conditions d\'utilisation</string>
+    <string name="settings_version">Version %1$s (%2$d)</string>
+    <string name="history_title">HISTORIQUE</string>
+    <string name="history_hint">Touche une manche pour voir le replay</string>
+    <string name="history_explains">Explique :</string>
+    <string name="history_guesses">Devine :</string>
+    <string name="history_correct_count">%1$d trouvés</string>
+    <string name="history_skipped_count">%1$d ratés</string>
+    <string name="history_watch_replay">Voir le replay</string>
+    <string name="history_share">Partager</string>
+    <string name="history_delete">Supprimer</string>
+    <string name="history_empty">Aucune manche enregistrée</string>
+    <string name="settings_share">Partager</string>
 </resources>

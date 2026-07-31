@@ -365,4 +365,62 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="ai_stt_offline_message">Reconocer %1$s necesita conexión o el paquete sin conexión. Conéctate e inténtalo de nuevo.</string>
     <string name="ai_stt_language_message">Este dispositivo no ofrece reconocimiento de voz para %1$s. Elige otro idioma para jugar.</string>
     <string name="ai_stt_retry">Reintentar</string>
+    <string name="capture_moment">Captura el momento</string>
+    <string name="capture_moment_subtitle">Graba la ronda con ambas cámaras y guarda los momentos más divertidos.</string>
+    <string name="dualcam_title_1">Uno explica. Otro adivina.</string>
+    <string name="dualcam_body_1">La cámara frontal graba a quien explica y la trasera a quien adivina. ¡Este es tu momento Alias en directo!</string>
+    <string name="dualcam_title_2">Unido en un solo clip de Alias</string>
+    <string name="dualcam_body_2">Cuando termina la ronda, ambas vistas, la palabra y la reacción se unen en un solo vídeo divertido.</string>
+    <string name="dualcam_title_3">Guárdalo. Comparte el caos.</string>
+    <string name="dualcam_body_3">Guarda tus rondas de Alias más divertidas o publícalas en TikTok, Instagram y envíalas a tus amigos con un toque.</string>
+    <string name="dualcam_enable">Activar el modo de doble cámara</string>
+    <string name="camera_permission_title">Abrir Ajustes</string>
+    <string name="camera_permission_message">Alias Words necesita acceso a la cámara y al micrófono para grabar vuestros momentos.</string>
+
+    <!-- Round video overlay -->
+    <string name="ai_video_correct">Acertadas</string>
+    <string name="ai_video_missed">Falladas</string>
+    <string name="ai_video_the_word_is">LA PALABRA ES</string>
+
+    <!-- Round video cards -->
+    <string name="round_intro_team">EQUIPO</string>
+    <string name="round_intro_explains">EXPLICA</string>
+    <string name="round_intro_guesses">ADIVINA</string>
+    <string name="round_outro_title">RONDA TERMINADA</string>
+    <string name="round_outro_skipped">Falladas</string>
+    <string name="round_outro_correct_words">PALABRAS ACERTADAS</string>
+    <string name="round_outro_skipped_words">PALABRAS FALLADAS</string>
+
+    <!-- Play screen, camera mode -->
+    <string name="camera_label_front">FRONTAL</string>
+    <string name="camera_label_back">TRASERA</string>
+    <string name="camera_your_word">TU PALABRA</string>
+
+    <!-- Round replay -->
+    <string name="replay_ready_title">¡Tu clip está listo!</string>
+    <string name="replay_ready_subtitle">Míralo y comparte la diversión</string>
+
+    <!-- Settings menu and round history -->
+    <string name="settings_general">GENERAL</string>
+    <string name="settings_audio">SONIDO</string>
+    <string name="settings_media">MEDIOS</string>
+    <string name="settings_about">ACERCA DE</string>
+    <string name="settings_language">Idioma</string>
+    <string name="settings_sound_effects">Efectos de sonido</string>
+    <string name="settings_vibrate">Vibración</string>
+    <string name="settings_media_row">Medios</string>
+    <string name="settings_privacy">Política de privacidad</string>
+    <string name="settings_terms">Términos de uso</string>
+    <string name="settings_version">Versión %1$s (%2$d)</string>
+    <string name="history_title">HISTORIAL</string>
+    <string name="history_hint">Toca una ronda para ver la repetición</string>
+    <string name="history_explains">Explica:</string>
+    <string name="history_guesses">Adivina:</string>
+    <string name="history_correct_count">%1$d acertadas</string>
+    <string name="history_skipped_count">%1$d falladas</string>
+    <string name="history_watch_replay">Ver repetición</string>
+    <string name="history_share">Compartir</string>
+    <string name="history_delete">Eliminar</string>
+    <string name="history_empty">Aún no hay rondas grabadas</string>
+    <string name="settings_share">Compartir</string>
 </resources>

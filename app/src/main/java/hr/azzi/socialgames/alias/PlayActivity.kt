@@ -1,9 +1,17 @@
 package hr.azzi.socialgames.alias
 
+import android.Manifest
 import android.content.Intent
 import android.content.Intent.FLAG_ACTIVITY_NO_ANIMATION
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.os.Handler
+import android.util.Log
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
+import androidx.core.content.ContextCompat
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
@@ -13,9 +21,13 @@ import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Service.DictionaryService
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaLibrary
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundRecorder
 import hr.azzi.socialgames.alias.Service.SoundSystem
 import hr.azzi.socialgames.alias.ui.screens.PlayScreen
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
+import java.io.File
 
 class PlayActivity : BaseActivity() {
 
@@ -26,9 +38,29 @@ class PlayActivity : BaseActivity() {
     private val game: Game by lazy { intent.getParcelableExtra<Game>("game") as Game }
     private val soundSystem: SoundSystem by lazy { SoundSystem(this) }
 
+    /** Set in Settings, and only ever true on a device that passed `DualCameraSupport`. */
+    private val captureMoment: Boolean by lazy { intent.getBooleanExtra("captureMoment", false) }
+    private var recorder: RoundRecorder? = null
+
+    /** True once the cameras are actually rolling, which is what puts the stage on screen. */
+    private var filming by mutableStateOf(false)
+
+    /**
+     * Asked for once, here, rather than in Settings: this is the screen where the answer
+     * matters, and where a player can see what it is for. A refusal is not fatal — the round
+     * is played without a clip.
+     */
+    private val permissions = registerForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions(),
+    ) { granted ->
+        if (granted[Manifest.permission.CAMERA] == true) startRecording()
+        else Log.w(TAG, "camera declined — playing the round without a clip")
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         log()
+        startRecordingIfAsked()
         loadInterstitialAd()
         if (game._currentTeamIndex % 2 == 1) loadInterstitialAd2()
 
@@ -39,6 +71,14 @@ class PlayActivity : BaseActivity() {
                     soundSystem = soundSystem,
                     onFinished = { showResults() },
                     onQuit = { finish() },
+                    onRoundRunning = { recorder?.setRoundRunning(it) },
+                    onRoundState = { word, correct, skipped, remaining ->
+                        recorder?.update(word, correct, skipped, remaining)
+                    },
+                    cameraMode = filming,
+                    onPreviewSurface = { surface, width, height ->
+                        recorder?.setPreviewSurface(surface, width, height)
+                    },
                 )
             }
         }
@@ -47,6 +87,84 @@ class PlayActivity : BaseActivity() {
     override fun onPostCreate(savedInstanceState: Bundle?) {
         super.onPostCreate(savedInstanceState)
         supportActionBar?.hide()
+    }
+
+    /**
+     * The clip is a bonus, never a precondition: if the camera is unavailable or the
+     * permission was declined, the round is played exactly as it would have been.
+     */
+    private fun startRecordingIfAsked() {
+        if (!captureMoment) return
+        val granted = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) ==
+            PackageManager.PERMISSION_GRANTED
+        if (granted) {
+            startRecording()
+        } else {
+            // The microphone is asked for alongside, but only the camera decides whether the
+            // clip happens at all — a silent clip is still worth having.
+            permissions.launch(arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO))
+        }
+    }
+
+    private fun startRecording() {
+        recorder = RoundRecorder(this).takeIf { it.start(cardInfo()) }
+        filming = recorder != null
+    }
+
+    /**
+     * What the intro and outro cards say. Read twice — before the round for the intro, and
+     * again after it for the outro, when the word lists exist.
+     */
+    private fun cardInfo() = RoundCardInfo(
+        teamName = game.currentTeam.teamName,
+        explainer = game.explainingPlayerName,
+        guesser = game.answeringPlayerName,
+        correctWords = game.currentTeamMarkedWords.filter { it.isCorrect }.map { it.word },
+        skippedWords = game.currentTeamMarkedWords.filterNot { it.isCorrect }.map { it.word },
+    )
+
+    /**
+     * Closes the clip and hands the file back.
+     *
+     * Off the main thread on purpose: finishing means writing two seconds of outro, laying
+     * the whistle down and closing an mp4, which is the better part of a second. Blocking the
+     * UI for it would stall the very screen transition it is meant to precede.
+     */
+    private fun stopRecording(onDone: (File?) -> Unit) {
+        val recording = recorder
+        if (recording == null) {
+            onDone(null)
+            return
+        }
+        recorder = null
+        filming = false
+        val info = cardInfo()
+        Thread {
+            recording.stop(info) { file ->
+                // Moved out of the cache and into the library, which is what makes it
+                // survive: the cache is the system's to reclaim, and nothing else keeps it.
+                val kept = file?.let {
+                    RoundMediaLibrary.save(
+                        context = this,
+                        video = it,
+                        teamName = info.teamName,
+                        explainer = info.explainer,
+                        guesser = info.guesser,
+                        correctCount = info.correctWords.size,
+                        skippedCount = info.skippedWords.size,
+                    )?.let { item -> RoundMediaLibrary.fileFor(this, item) }
+                }
+                Log.w(TAG, "round clip: ${kept?.absolutePath ?: "none"} (${kept?.length() ?: 0} bytes)")
+                runOnUiThread { onDone(kept) }
+            }
+        }.start()
+    }
+
+    override fun onDestroy() {
+        // A round abandoned partway still has to let the cameras go; nobody is waiting for
+        // the file, so it is only closed so the next round can open them again.
+        stopRecording {}
+        super.onDestroy()
     }
 
     private fun log() {
@@ -84,8 +202,16 @@ class PlayActivity : BaseActivity() {
     }
 
     private fun showResults() {
+        stopRecording { clip -> goToResults(clip) }
+    }
+
+    private fun goToResults(clip: File?) {
         val intent = Intent(this, ResultsActivity::class.java)
         intent.putExtra("game", game)
+        intent.putExtra("replayPath", clip?.absolutePath)
+        // Carried on so the next round is filmed too. The choice is made once, in Settings,
+        // and the game runs through Play → Results → Play without passing that way again.
+        intent.putExtra("captureMoment", captureMoment)
         intent.flags = FLAG_ACTIVITY_NO_ANIMATION
         startActivity(intent)
         finish()
@@ -98,5 +224,9 @@ class PlayActivity : BaseActivity() {
             }
             Handler().postDelayed({ ad.show(this) }, 1000)
         }
+    }
+
+    private companion object {
+        const val TAG = "RoundVideo"
     }
 }

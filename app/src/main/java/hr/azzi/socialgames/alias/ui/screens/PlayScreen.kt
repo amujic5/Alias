@@ -5,9 +5,12 @@ import android.graphics.Bitmap
 import android.graphics.Canvas
 import androidx.activity.compose.BackHandler
 import androidx.compose.animation.core.animateFloatAsState
+import android.view.Surface
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
+import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
@@ -54,6 +57,7 @@ import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
+import hr.azzi.socialgames.alias.Service.GameSettings
 import hr.azzi.socialgames.alias.Service.SoundSystem
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import com.caverock.androidsvg.SVG
@@ -72,6 +76,14 @@ fun PlayScreen(
     soundSystem: SoundSystem,
     onFinished: () -> Unit,
     onQuit: () -> Unit,
+    /** Follows the round's own play/pause, so the round video covers the round and nothing else. */
+    onRoundRunning: (Boolean) -> Unit = {},
+    /** The round video's overlay, fed the same values the screen is showing. */
+    onRoundState: (word: String, correct: Int, skipped: Int, remainingSeconds: Int) -> Unit = { _, _, _, _ -> },
+    /** True when the round is being filmed, which replaces the word with the live stage. */
+    cameraMode: Boolean = false,
+    /** Where the compositor should draw the stage. */
+    onPreviewSurface: (Surface?, Int, Int) -> Unit = { _, _, _ -> },
 ) {
     val context = LocalContext.current
     var timeLeft by remember { mutableIntStateOf(game.time) }
@@ -90,6 +102,7 @@ fun PlayScreen(
     var showQuit by remember { mutableStateOf(false) }
 
     LaunchedEffect(running) {
+        onRoundRunning(running)
         if (!running) return@LaunchedEffect
         while (timeLeft > 0) {
             delay(1000)
@@ -101,6 +114,13 @@ fun PlayScreen(
         soundSystem.playEnd()
         delay(800)
         onFinished()
+    }
+
+    // The overlay is fed from the same values the screen renders from, so the clip cannot
+    // drift from what the players actually saw. `displayWord` rather than `word`: Junior and
+    // Taboo decks pack extra data into the raw word, and the card shows the clean one.
+    LaunchedEffect(displayWord, correct, skip, timeLeft) {
+        onRoundState(displayWord, correct, skip, timeLeft)
     }
 
     fun pauseAndShow() { running = false; showSheet = true }
@@ -142,7 +162,20 @@ fun PlayScreen(
 
             // Center: faded countdown + word (or Junior picture card / Taboo forbidden-words card)
             Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
-                if (taboo != null) {
+                if (cameraMode) {
+                    Box(Modifier.fillMaxSize().padding(horizontal = 6.dp, vertical = 8.dp)) {
+                        // The word is on the stage's own plate here, not on the screen behind
+                        // it — the explainer is looking at the camera, not at the page.
+                        CameraStage(
+                            word = if (showSheet) "" else displayWord,
+                            onSurface = onPreviewSurface,
+                        )
+                        TimerBadge(
+                            timeLeft,
+                            Modifier.align(Alignment.TopEnd).padding(top = 4.dp, end = 8.dp),
+                        )
+                    }
+                } else if (taboo != null) {
                     // Keep the forbidden-words card hidden until the round actually starts —
                     // the pause/pre-start sheet only dims with a translucent scrim, so without
                     // this the card would be readable before the player presses Play.
@@ -187,13 +220,13 @@ fun PlayScreen(
                     Modifier.weight(1f)) {
                     if (!running) return@ActionButton
                     game.addMarkedWord(MarkedWord(displayWord, false)); skip++
-                    soundSystem.playSkipButton(); word = game.newWord
+                    soundSystem.playSkipButton(); GameSettings.tick(context); word = game.newWord
                 }
                 ActionButton(stringResource(R.string.correct), Icons.Filled.Check, Alias.success,
                     Modifier.weight(1f)) {
                     if (!running) return@ActionButton
                     game.addMarkedWord(MarkedWord(displayWord, true)); correct++
-                    soundSystem.playRightButton(); word = game.newWord
+                    soundSystem.playRightButton(); GameSettings.tick(context); word = game.newWord
                 }
             }
         }
@@ -323,6 +356,27 @@ private fun parseTaboo(raw: String): Pair<String, List<String>>? {
 }
 
 /** The Taboo card: the target word on an overlapping pill, above the forbidden words. */
+/**
+ * The clock, as its own disc. In camera mode it floats over the stage's corner rather than
+ * sitting behind the word, because the stage is opaque and the faded number would be lost.
+ */
+@Composable
+private fun TimerBadge(seconds: Int, modifier: Modifier = Modifier) {
+    Box(
+        modifier
+            .size(62.dp)
+            .clip(CircleShape)
+            .background(Color.White)
+            .border(4.dp, Alias.brandBottom, CircleShape),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            "$seconds", color = Alias.brandBottom, fontFamily = Alias.display,
+            fontWeight = FontWeight.ExtraBold, fontSize = 27.sp,
+        )
+    }
+}
+
 @Composable
 private fun TabooCard(target: String, forbidden: List<String>) {
     Box(Modifier.fillMaxWidth(), contentAlignment = Alignment.TopCenter) {

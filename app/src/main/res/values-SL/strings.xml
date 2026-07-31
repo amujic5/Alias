@@ -373,4 +373,62 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="ai_stt_offline_message">Za prepoznavanje jezika %1$s je potrebna povezava ali prenesen paket za brez povezave. Poveži se in poskusi znova.</string>
     <string name="ai_stt_language_message">Ta naprava ne ponuja prepoznavanja govora za jezik %1$s. Izberi drug jezik za igro.</string>
     <string name="ai_stt_retry">Poskusi znova</string>
+    <string name="capture_moment">Ujemi trenutek</string>
+    <string name="capture_moment_subtitle">Posnemi rundo z obema kamerama in shrani najbolj zabavne trenutke.</string>
+    <string name="dualcam_title_1">Eden razlaga. Drugi ugiba.</string>
+    <string name="dualcam_body_1">Sprednja kamera snema tistega, ki razlaga, zadnja pa tistega, ki ugiba. To je tvoj Alias trenutek v živo!</string>
+    <string name="dualcam_title_2">Združeno v en Alias posnetek</string>
+    <string name="dualcam_body_2">Ko se runda konča, se oba pogleda, beseda in reakcija združijo v en zabaven video.</string>
+    <string name="dualcam_title_3">Shrani. Deli kaos.</string>
+    <string name="dualcam_body_3">Obdrži svoje najbolj smešne Alias runde ali jih z enim dotikom objavi na TikTok, Instagram in pošlji prijateljem.</string>
+    <string name="dualcam_enable">Vklopi način z dvema kamerama</string>
+    <string name="camera_permission_title">Odpri nastavitve</string>
+    <string name="camera_permission_message">Alias Words potrebuje dostop do kamere in mikrofona za snemanje vaših trenutkov.</string>
+
+    <!-- Round video overlay -->
+    <string name="ai_video_correct">Uganjeno</string>
+    <string name="ai_video_missed">Zgrešeno</string>
+    <string name="ai_video_the_word_is">BESEDA JE</string>
+
+    <!-- Round video cards -->
+    <string name="round_intro_team">EKIPA</string>
+    <string name="round_intro_explains">RAZLAGA</string>
+    <string name="round_intro_guesses">UGIBA</string>
+    <string name="round_outro_title">RUNDA KONČANA</string>
+    <string name="round_outro_skipped">Preskočeno</string>
+    <string name="round_outro_correct_words">UGANJENE BESEDE</string>
+    <string name="round_outro_skipped_words">PRESKOČENE BESEDE</string>
+
+    <!-- Play screen, camera mode -->
+    <string name="camera_label_front">SPREDNJA</string>
+    <string name="camera_label_back">ZADNJA</string>
+    <string name="camera_your_word">TVOJA BESEDA</string>
+
+    <!-- Round replay -->
+    <string name="replay_ready_title">Tvoj posnetek je pripravljen!</string>
+    <string name="replay_ready_subtitle">Poglej in deli zabavo</string>
+
+    <!-- Settings menu and round history -->
+    <string name="settings_general">SPLOŠNO</string>
+    <string name="settings_audio">ZVOK</string>
+    <string name="settings_media">MEDIJI</string>
+    <string name="settings_about">O APLIKACIJI</string>
+    <string name="settings_language">Jezik</string>
+    <string name="settings_sound_effects">Zvočni učinki</string>
+    <string name="settings_vibrate">Vibriranje</string>
+    <string name="settings_media_row">Mediji</string>
+    <string name="settings_privacy">Pravilnik o zasebnosti</string>
+    <string name="settings_terms">Pogoji uporabe</string>
+    <string name="settings_version">Različica %1$s (%2$d)</string>
+    <string name="history_title">ZGODOVINA</string>
+    <string name="history_hint">Dotakni se runde za ogled posnetka</string>
+    <string name="history_explains">Razlaga:</string>
+    <string name="history_guesses">Ugiba:</string>
+    <string name="history_correct_count">%1$d uganjenih</string>
+    <string name="history_skipped_count">%1$d preskočenih</string>
+    <string name="history_watch_replay">Poglej posnetek</string>
+    <string name="history_share">Deli</string>
+    <string name="history_delete">Izbriši</string>
+    <string name="history_empty">Ni še posnetih rund</string>
+    <string name="settings_share">Deli</string>
 </resources>

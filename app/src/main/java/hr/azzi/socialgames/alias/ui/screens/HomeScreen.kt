@@ -60,7 +60,9 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import hr.azzi.socialgames.alias.BuildConfig
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.Service.GameSettings
 import hr.azzi.socialgames.alias.Service.AppLanguage
 import hr.azzi.socialgames.alias.Service.LanguageManager
 import hr.azzi.socialgames.alias.ui.theme.Alias
@@ -82,6 +84,10 @@ fun HomeScreen(
     // being relaunched), refreshing the flag image and every LanguageManager-derived value.
     LocalConfiguration.current
     var showLanguages by remember { mutableStateOf(false) }
+    var showSettings by remember { mutableStateOf(false) }
+    var showHistory by remember { mutableStateOf(false) }
+    var soundEnabled by remember { mutableStateOf(GameSettings.soundEnabled(context)) }
+    var vibrateEnabled by remember { mutableStateOf(GameSettings.vibrateEnabled(context)) }
 
     BrandBackground {
         // Country background image for the selected language (bottom-aligned, subtle).
@@ -117,7 +123,7 @@ fun HomeScreen(
                         Modifier.size(50.dp).clip(CircleShape)
                             .background(Color.White.copy(alpha = 0.16f))
                             .border(1.5.dp, Color.White.copy(alpha = 0.5f), CircleShape)
-                            .clickable { showLanguages = true },
+                            .clickable { showSettings = true },
                         contentAlignment = Alignment.Center,
                     ) {
                         Icon(
@@ -182,6 +188,30 @@ fun HomeScreen(
         }
     }
 
+    // The gear opens settings, and the language picker is one row inside it rather than the
+    // whole of what the gear does.
+    if (showSettings) {
+        AppSettingsScreen(
+            language = LanguageManager.current.nativeName,
+            soundEnabled = soundEnabled,
+            vibrateEnabled = vibrateEnabled,
+            versionName = BuildConfig.VERSION_NAME,
+            versionCode = BuildConfig.VERSION_CODE,
+            onBack = { showSettings = false },
+            onLanguage = { showLanguages = true },
+            onSoundChanged = { soundEnabled = it; GameSettings.setSoundEnabled(context, it) },
+            onVibrateChanged = { vibrateEnabled = it; GameSettings.setVibrateEnabled(context, it) },
+            onMedia = { showHistory = true },
+            onPrivacy = { openUrl(context, PRIVACY_URL) },
+            onTerms = { openUrl(context, TERMS_URL) },
+            onShare = onShare,
+        )
+    }
+
+    if (showHistory) {
+        RoundHistoryRoute(onBack = { showHistory = false })
+    }
+
     if (showLanguages) {
         LanguagePickerScreen(
             current = LanguageManager.currentCode,
@@ -191,6 +221,18 @@ fun HomeScreen(
                 // Applies the locale app-wide and recreates the UI.
                 LanguageManager.setLanguage(code)
             },
+        )
+    }
+}
+
+/** The app's own pages. Confirm these before release — they are the site's expected paths. */
+private const val PRIVACY_URL = "https://aliaswords.com/privacy"
+private const val TERMS_URL = "https://aliaswords.com/terms"
+
+private fun openUrl(context: android.content.Context, url: String) {
+    runCatching {
+        context.startActivity(
+            android.content.Intent(android.content.Intent.ACTION_VIEW, android.net.Uri.parse(url)),
         )
     }
 }

@@ -18,6 +18,10 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.remember
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -46,6 +50,8 @@ data class ResultsUiState(
     val nextTeamName: String?,
     val explaining: String?,
     val answering: String?,
+    /** The round video, if one was filmed and came out. */
+    val replayPath: String? = null,
 )
 
 @Composable
@@ -55,6 +61,9 @@ fun ResultsScreen(
     onStart: () -> Unit,
     onFinish: () -> Unit,
 ) {
+    var playing by remember { mutableStateOf<String?>(null) }
+    playing?.let { path -> ReplayPlayer(path) { playing = null } }
+
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
             DisplayText(stringResource(R.string.results).uppercase(), 22,
@@ -80,6 +89,10 @@ fun ResultsScreen(
                             modifier = Modifier.clip(RoundedCornerShape(8.dp))
                                 .clickable { onEditAnswers() }.padding(4.dp))
                     }
+                }
+
+                state.replayPath?.let { path ->
+                    ReplayCard(onPlay = { playing = path })
                 }
 
                 Column {

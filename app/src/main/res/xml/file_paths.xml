@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The round video lives in the cache directory; sharing it needs a content:// URI. -->
+<paths>
+    <cache-path name="round_videos" path="." />
+</paths>

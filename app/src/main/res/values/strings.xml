@@ -381,4 +381,61 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="ai_stt_offline_message">Recognising %1$s needs a connection, or the offline language pack. Connect and try again.</string>
     <string name="ai_stt_language_message">This device doesn\'t offer speech recognition for %1$s. Pick another language to play.</string>
     <string name="ai_stt_retry">Try again</string>
+    <string name="capture_moment">Capture moment</string>
+    <string name="capture_moment_subtitle">Film the round with both cameras and keep the funniest moments.</string>
+    <string name="dualcam_title_1">One explains. One guesses.</string>
+    <string name="dualcam_body_1">The front camera records the explainer while the back camera captures the guesser. This is your live Alias moment!</string>
+    <string name="dualcam_title_2">Merged into one Alias clip</string>
+    <string name="dualcam_body_2">When the round ends, both views, the word, and the reaction come together in one fun video.</string>
+    <string name="dualcam_title_3">Save it. Share the chaos.</string>
+    <string name="dualcam_body_3">Keep your funniest Alias rounds, or post them to TikTok, Instagram, and your friends in one tap.</string>
+    <string name="dualcam_enable">Enable Dual Camera Mode</string>
+    <string name="camera_permission_title">Open Settings</string>
+    <string name="camera_permission_message">Alias Words needs camera and microphone access to capture your moments.</string>
+
+    <!-- Round video overlay -->
+    <string name="ai_video_correct">Correct</string>
+    <string name="ai_video_missed">Missed</string>
+    <string name="ai_video_the_word_is">THE WORD IS</string>
+
+    <!-- Round video cards -->
+    <string name="round_intro_team">TEAM</string>
+    <string name="round_intro_explains">EXPLAINS</string>
+    <string name="round_intro_guesses">GUESSES</string>
+    <string name="round_outro_title">ROUND OVER</string>
+    <string name="round_outro_skipped">Skipped</string>
+    <string name="round_outro_correct_words">CORRECT WORDS</string>
+    <string name="round_outro_skipped_words">SKIPPED WORDS</string>
+
+    <!-- Play screen, camera mode -->
+    <string name="camera_label_front">FRONT</string>
+    <string name="camera_label_back">BACK</string>
+    <string name="camera_your_word">YOUR WORD</string>
+
+    <!-- Round replay -->
+    <string name="replay_ready_title">Your replay is ready!</string>
+    <string name="replay_ready_subtitle">Watch &amp; share the fun</string>
+
+    <!-- Settings menu and round history -->
+    <string name="settings_general">GENERAL</string>
+    <string name="settings_audio">AUDIO</string>
+    <string name="settings_media">MEDIA</string>
+    <string name="settings_about">ABOUT</string>
+    <string name="settings_sound_effects">Sound effects</string>
+    <string name="settings_vibrate">Vibrate</string>
+    <string name="settings_media_row">Media</string>
+    <string name="settings_privacy">Privacy Policy</string>
+    <string name="settings_terms">Terms of Use</string>
+    <string name="settings_version">Version %1$s (%2$d)</string>
+    <string name="history_title">HISTORY</string>
+    <string name="history_hint">Tap a round to open its replay</string>
+    <string name="history_explains">Explains:</string>
+    <string name="history_guesses">Guesses:</string>
+    <string name="history_correct_count">%1$d correct</string>
+    <string name="history_skipped_count">%1$d skipped</string>
+    <string name="history_watch_replay">Watch replay</string>
+    <string name="history_share">Share</string>
+    <string name="history_delete">Delete</string>
+    <string name="history_empty">No rounds recorded yet</string>
+    <string name="settings_share">Share</string>
 </resources>

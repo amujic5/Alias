@@ -26,8 +26,11 @@ class SettingsActivity : BaseActivity() {
                 SettingsScreen(
                     teams = teams,
                     dictionaries = dictionaries,
+                    boardGame = boardGame,
                     onBack = { finish() },
-                    onPlay = { index, time, score -> play(dictionaries, index, time, score) },
+                    onPlay = { index, time, score, captureMoment ->
+                        play(dictionaries, index, time, score, captureMoment)
+                    },
                 )
             }
         }
@@ -38,10 +41,22 @@ class SettingsActivity : BaseActivity() {
         supportActionBar?.hide()
     }
 
-    private fun play(dictionaries: List<DictionaryModel>, index: Int, time: Int, score: Int) {
+    private fun play(
+        dictionaries: List<DictionaryModel>,
+        index: Int,
+        time: Int,
+        score: Int,
+        captureMoment: Boolean,
+    ) {
         val dictionary = dictionaries.getOrNull(index) ?: dictionaries.firstOrNull() ?: return
         DictionaryService.playingDictionary = dictionary
         val game = Game(false, time, score, teams, ArrayList(dictionary.words), 0)
-        startActivity(Intent(this, PlayActivity::class.java).putExtra("game", game))
+        startActivity(
+            Intent(this, PlayActivity::class.java)
+                .putExtra("game", game)
+                // Nothing reads this yet — the dual-camera recorder is not built. It is the
+                // handover point the round will pick the choice up from.
+                .putExtra("captureMoment", captureMoment)
+        )
     }
 }

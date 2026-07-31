@@ -1,5 +1,12 @@
 package hr.azzi.socialgames.alias.ui.screens
 
+import android.Manifest
+import android.app.Activity
+import android.content.Context
+import android.content.ContextWrapper
+import androidx.activity.compose.rememberLauncherForActivityResult
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.app.ActivityCompat
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -19,12 +26,17 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.outlined.Info
+import androidx.compose.material3.AlertDialog
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Slider
 import androidx.compose.material3.SliderDefaults
 import androidx.compose.material3.Text
+import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
 import androidx.compose.runtime.remember
@@ -49,6 +61,11 @@ import java.util.Locale
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Models.DictionaryModel
 import hr.azzi.socialgames.alias.Models.Team
+import hr.azzi.socialgames.alias.Service.BoardGame
+import hr.azzi.socialgames.alias.Service.CameraInfoService
+import hr.azzi.socialgames.alias.Service.DualCameraSupport
+import hr.azzi.socialgames.alias.ui.screens.online.hasAvPermissions
+import hr.azzi.socialgames.alias.ui.screens.online.openAppSettings
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
 import hr.azzi.socialgames.alias.ui.theme.DisplayText
@@ -60,8 +77,9 @@ import hr.azzi.socialgames.alias.ui.theme.PillKind
 fun SettingsScreen(
     teams: List<Team>,
     dictionaries: List<DictionaryModel>,
+    boardGame: BoardGame,
     onBack: () -> Unit,
-    onPlay: (dictionaryIndex: Int, time: Int, score: Int) -> Unit,
+    onPlay: (dictionaryIndex: Int, time: Int, score: Int, captureMoment: Boolean) -> Unit,
 ) {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("gameSettings", android.content.Context.MODE_PRIVATE) }
@@ -69,6 +87,49 @@ fun SettingsScreen(
     var score by remember { mutableIntStateOf(100) }  // range 40..120
     var selected by remember { mutableIntStateOf(preferredDictionaryIndex(dictionaries, prefs.getString("selectedLanguageCode", null))) }
     var showPicker by remember { mutableStateOf(false) }
+
+    // Capture Moment needs two cameras at once, and the word cards in Junior and Taboo
+    // leave no room for the camera stage — so those two never offer it.
+    val captureMomentAvailable = remember {
+        !boardGame.isTaboo && !boardGame.isAliasJunior && DualCameraSupport.isSupported(context)
+    }
+    var captureMoment by remember { mutableStateOf(false) }
+    var showDualCamSheet by remember { mutableStateOf(false) }
+    var showPermissionDialog by remember { mutableStateOf(false) }
+
+    val permissionLauncher = rememberLauncherForActivityResult(
+        ActivityResultContracts.RequestMultiplePermissions()
+    ) { granted ->
+        if (granted.values.all { it }) {
+            captureMoment = true
+        } else {
+            // A plain "no" is taken at face value. Only a permanent denial — the system
+            // stops asking, so a second tap would look broken — is worth a detour to the
+            // app settings.
+            val activity = context.findActivity()
+            val permanentlyDenied = activity != null && granted.keys.none {
+                ActivityCompat.shouldShowRequestPermissionRationale(activity, it)
+            }
+            if (permanentlyDenied) showPermissionDialog = true
+        }
+    }
+
+    fun toggleCaptureMoment(on: Boolean) {
+        if (!on) { captureMoment = false; return }
+        if (hasAvPermissions(context)) {
+            captureMoment = true
+        } else {
+            permissionLauncher.launch(arrayOf(Manifest.permission.CAMERA, Manifest.permission.RECORD_AUDIO))
+        }
+    }
+
+    // Opens itself on the first few visits, then only now and again — see CameraInfoService.
+    LaunchedEffect(captureMomentAvailable) {
+        if (captureMomentAvailable && !captureMoment && CameraInfoService.shouldShowInfo(context)) {
+            showDualCamSheet = true
+            CameraInfoService.infoShowed(context)
+        }
+    }
 
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
@@ -100,13 +161,50 @@ fun SettingsScreen(
                         Icon(Icons.Filled.ChevronRight, null, tint = Color.White.copy(alpha = 0.85f), modifier = Modifier.size(18.dp))
                     }
                 }
+
+                if (captureMomentAvailable) {
+                    CaptureMomentRow(
+                        checked = captureMoment,
+                        onCheckedChange = { toggleCaptureMoment(it) },
+                        onInfo = { showDualCamSheet = true },
+                    )
+                }
                 Spacer(Modifier.height(8.dp))
             }
 
             Column(Modifier.fillMaxWidth().padding(20.dp)) {
-                PillButton(stringResource(R.string.play), PillKind.Primary) { onPlay(selected, time, score) }
+                PillButton(stringResource(R.string.play), PillKind.Primary) {
+                    onPlay(selected, time, score, captureMoment && captureMomentAvailable)
+                }
             }
         }
+    }
+
+    if (showDualCamSheet) {
+        DualCameraSheet(
+            isOn = captureMoment,
+            onToggle = { toggleCaptureMoment(it) },
+            onDismiss = { showDualCamSheet = false },
+        )
+    }
+
+    if (showPermissionDialog) {
+        AlertDialog(
+            onDismissRequest = { showPermissionDialog = false },
+            title = { Text(stringResource(R.string.camera_permission_title), fontFamily = Alias.body, fontWeight = FontWeight.Bold) },
+            text = { Text(stringResource(R.string.camera_permission_message), fontFamily = Alias.body) },
+            confirmButton = {
+                TextButton(onClick = {
+                    showPermissionDialog = false
+                    openAppSettings(context)
+                }) { Text(stringResource(R.string.settings), fontFamily = Alias.body, fontWeight = FontWeight.Bold) }
+            },
+            dismissButton = {
+                TextButton(onClick = { showPermissionDialog = false }) {
+                    Text(stringResource(R.string.cancel), fontFamily = Alias.body)
+                }
+            },
+        )
     }
 
     if (showPicker) {
@@ -120,6 +218,59 @@ fun SettingsScreen(
                 showPicker = false
             },
         )
+    }
+}
+
+/** The hosting Activity — needed for `shouldShowRequestPermissionRationale`, and reached
+ *  by unwrapping because a Compose context can be a themed wrapper rather than the
+ *  Activity itself. */
+private fun Context.findActivity(): Activity? {
+    var context = this
+    while (context is ContextWrapper) {
+        if (context is Activity) return context
+        context = context.baseContext
+    }
+    return null
+}
+
+/**
+ * The CAPTURE MOMENT row: overline title, an ⓘ that reopens the explainer, a one-line
+ * subtitle, and the Figma checkbox (26dp, 2dp accent border). Only ever shown on devices
+ * that can actually film both cameras at once.
+ */
+@Composable
+private fun CaptureMomentRow(checked: Boolean, onCheckedChange: (Boolean) -> Unit, onInfo: () -> Unit) {
+    Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+        Column(Modifier.weight(1f)) {
+            Row(verticalAlignment = Alignment.CenterVertically) {
+                Overline(stringResource(R.string.capture_moment).uppercase())
+                Spacer(Modifier.width(2.dp))
+                IconButton(onClick = onInfo, modifier = Modifier.size(28.dp)) {
+                    Icon(
+                        Icons.Outlined.Info, contentDescription = stringResource(R.string.capture_moment),
+                        tint = Color.White.copy(alpha = 0.75f), modifier = Modifier.size(17.dp),
+                    )
+                }
+            }
+            Text(
+                stringResource(R.string.capture_moment_subtitle),
+                color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
+                fontWeight = FontWeight.Medium, fontSize = 12.sp, lineHeight = 16.sp,
+            )
+        }
+        Spacer(Modifier.width(12.dp))
+        Box(
+            Modifier.size(26.dp).clip(RoundedCornerShape(7.dp))
+                .background(if (checked) Alias.accent else Color.Transparent)
+                .border(2.dp, Alias.accent, RoundedCornerShape(7.dp))
+                .clickable { onCheckedChange(!checked) },
+            contentAlignment = Alignment.Center,
+        ) {
+            if (checked) {
+                Icon(Icons.Filled.Check, contentDescription = null, tint = Alias.onAccent,
+                    modifier = Modifier.size(18.dp))
+            }
+        }
     }
 }
 

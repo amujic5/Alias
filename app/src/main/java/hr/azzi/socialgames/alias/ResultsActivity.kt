@@ -11,6 +11,7 @@ import hr.azzi.socialgames.alias.ui.screens.ResultsScreen
 import hr.azzi.socialgames.alias.ui.screens.ResultsUiState
 import hr.azzi.socialgames.alias.ui.screens.TeamRow
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
+import java.io.File
 
 class ResultsActivity : BaseActivity() {
 
@@ -62,6 +63,9 @@ class ResultsActivity : BaseActivity() {
             nextTeamName = game.nextTeam?.teamName,
             explaining = game.nextExplainingPlayerName,
             answering = game.nextAnsweringPlayerName,
+            // Only offered if the file is still there — the cache is the system's to reclaim,
+            // and a card that opens a black player is worse than no card.
+            replayPath = intent.getStringExtra("replayPath")?.takeIf { File(it).exists() },
         )
     }
 
@@ -72,10 +76,14 @@ class ResultsActivity : BaseActivity() {
     }
 
     private fun startNextRound() {
+        // Read before the local shadows it: the choice arrives with the round that just
+        // finished and has to travel on to the next one.
+        val captureMoment = intent.getBooleanExtra("captureMoment", false)
         game.newRound()
         val intent = Intent(this, PlayActivity::class.java)
         intent.flags = Intent.FLAG_ACTIVITY_CLEAR_TOP
         intent.putExtra("game", game)
+        intent.putExtra("captureMoment", captureMoment)
         startActivity(intent)
         finish()
     }
