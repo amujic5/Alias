@@ -6,6 +6,9 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.verticalScroll
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -87,8 +90,16 @@ fun AiSetupScreen(
             Text(subtitle, color = Color.White.copy(alpha = 0.85f), fontFamily = Alias.body, fontSize = 14.sp,
                 modifier = Modifier.padding(start = 24.dp, bottom = 12.dp))
 
-            Column(Modifier.weight(1f).fillMaxWidth().padding(horizontal = 20.dp),
-                verticalArrangement = Arrangement.spacedBy(14.dp)) {
+            // Scrolls rather than being squeezed: this is the one screen here that can grow
+            // — a longer deck name, a wider language, four time options that need their own
+            // room — and on a short phone the last row was falling off the bottom of the
+            // card with its numbers on it. The start button below stays put.
+            Column(
+                Modifier.weight(1f).fillMaxWidth()
+                    .verticalScroll(rememberScrollState())
+                    .padding(horizontal = 20.dp),
+                verticalArrangement = Arrangement.spacedBy(14.dp),
+            ) {
 
                 // Mode selection
                 ModeCard("Y", stringResource(R.string.ai_mode_you_explain), stringResource(R.string.ai_mode_you_explain_sub), Color(0xFFB9A7F6),
@@ -122,15 +133,34 @@ fun AiSetupScreen(
                             }
                         }
                         Divider()
-                        // Total time
-                        Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                            Text(stringResource(R.string.ai_total_time), color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
-                            Spacer(Modifier.weight(1f))
-                            val opts = listOf(40, 60, 80, 100)
-                            Segmented(opts.map { "${it}s" }, opts.indexOf(seconds)) { i -> seconds = opts[i] }
+                        // Total time. Four options plus their label do not fit across a
+                        // narrow phone — squeezed onto one line the last of them wrapped a
+                        // letter at a time — so below that width the label takes its own.
+                        val opts = listOf(40, 60, 80, 100)
+                        BoxWithConstraints(Modifier.fillMaxWidth()) {
+                            val label: @Composable () -> Unit = {
+                                Text(stringResource(R.string.ai_total_time), color = Alias.textPrimary,
+                                    fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 16.sp)
+                            }
+                            val control: @Composable () -> Unit = {
+                                Segmented(opts.map { "${it}s" }, opts.indexOf(seconds)) { i -> seconds = opts[i] }
+                            }
+                            if (maxWidth < 330.dp) {
+                                Column(verticalArrangement = Arrangement.spacedBy(10.dp)) {
+                                    label()
+                                    control()
+                                }
+                            } else {
+                                Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
+                                    label()
+                                    Spacer(Modifier.weight(1f))
+                                    control()
+                                }
+                            }
                         }
                     }
                 }
+                Spacer(Modifier.height(4.dp))
             }
 
             Column(Modifier.fillMaxWidth().padding(20.dp)) {

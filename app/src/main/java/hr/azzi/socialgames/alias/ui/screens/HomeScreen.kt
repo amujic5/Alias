@@ -171,13 +171,14 @@ fun HomeScreen(
                     onClick = onNewGame,
                 ) { Badge(Color(0xFFF58C0D)) { BadgeIcon(Icons.Filled.Star) } }
 
-                // How to play — translucent black, narrower, white outline.
+                // How to play — translucent black with a white outline, and the same width as
+                // the rest: it is the least important of the four, which the colour already
+                // says without also making it a different shape.
                 MenuButton(
                     text = stringResource(R.string.how_to_play),
                     textColor = Color.White,
                     background = SolidColor(Color.Black.copy(alpha = 0.5f)),
                     onClick = onHowToPlay,
-                    modifier = Modifier.fillMaxWidth(0.88f),
                     height = 64.dp,
                 ) {
                     Badge(Color.White.copy(alpha = 0.16f), border = BorderStroke(1.5.dp, Color.White.copy(alpha = 0.5f))) {

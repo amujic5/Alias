@@ -10,6 +10,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -164,81 +165,96 @@ private fun Guessing(c: AiExplainController) {
         if (c.correctWords.size > 0) bot.react(BotReaction.Correct)
     }
 
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+    val s = rememberCompactScale(maxHeight)
     Column(
-        Modifier.fillMaxSize().padding(top = 10.dp),
+        Modifier.fillMaxSize().padding(top = 10.dp.compact(s)),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(Modifier.height(6.dp))
+        Spacer(Modifier.height(6.dp.compact(s)))
         Text(stringResource(R.string.ai_ai_clue), color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
-            fontWeight = FontWeight.Black, fontSize = 12.sp, letterSpacing = 3.sp)
-        Spacer(Modifier.height(14.dp))
-        Text(if (c.clue.isEmpty()) "…" else "“${c.clue}”", color = Color.White, fontFamily = Alias.display,
-            fontWeight = FontWeight.ExtraBold, fontSize = 23.sp, textAlign = TextAlign.Center,
-            lineHeight = 30.sp, modifier = Modifier.padding(horizontal = 6.dp))
+            fontWeight = FontWeight.Black, fontSize = 12.sp.compact(s), letterSpacing = 3.sp)
+        Spacer(Modifier.height(14.dp.compact(s)))
+        AutoShrinkText(
+            text = if (c.clue.isEmpty()) "…" else "“${c.clue}”",
+            maxFontSize = 23.sp.compact(s),
+            maxLines = 3,
+            color = Color.White,
+            fontFamily = Alias.display,
+            fontWeight = FontWeight.ExtraBold,
+            lineHeightRatio = 1.3f,
+            modifier = Modifier.padding(horizontal = 6.dp),
+        )
 
-        Spacer(Modifier.height(18.dp))
+        Spacer(Modifier.height(18.dp.compact(s)))
 
         // Status pill
         Row(
             Modifier.clip(RoundedCornerShape(50))
                 .background((if (c.listening) Gold else Color.White).copy(alpha = if (c.listening) 0.20f else 0.14f))
-                .padding(horizontal = 14.dp, vertical = 8.dp),
+                .padding(horizontal = 14.dp.compact(s), vertical = 8.dp.compact(s)),
             verticalAlignment = Alignment.CenterVertically,
         ) {
             Text(if (c.listening) stringResource(R.string.ai_listening) else stringResource(R.string.ai_ai_speaking),
                 color = if (c.listening) Gold else Color.White, fontFamily = Alias.body,
-                fontWeight = FontWeight.SemiBold, fontSize = 13.sp)
+                fontWeight = FontWeight.SemiBold, fontSize = 13.sp.compact(s))
         }
-        Spacer(Modifier.height(16.dp))
-        BotAvatar(bot, Modifier.size(180.dp))
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(16.dp.compact(s)))
+        BotAvatar(bot, Modifier.size(180.dp.compact(s)))
+        Spacer(Modifier.height(12.dp.compact(s)))
 
         // Mic orb
         Box(
-            Modifier.size(180.dp).clickable { c.answerNow() },
+            Modifier.size(180.dp.compact(s)).clickable { c.answerNow() },
             contentAlignment = Alignment.Center,
         ) {
             if (c.listening) {
-                Box(Modifier.size(168.dp).clip(CircleShape).background(Gold.copy(alpha = 0.18f)))
-                Box(Modifier.size(128.dp).clip(CircleShape).border(3.dp, Gold, CircleShape))
+                Box(Modifier.size(168.dp.compact(s)).clip(CircleShape).background(Gold.copy(alpha = 0.18f)))
+                Box(Modifier.size(128.dp.compact(s)).clip(CircleShape).border(3.dp, Gold, CircleShape))
             } else {
-                Box(Modifier.size(124.dp).clip(CircleShape)
+                Box(Modifier.size(124.dp.compact(s)).clip(CircleShape)
                     .dashedCircle(Color.White.copy(alpha = 0.55f)))
             }
-            Box(Modifier.size(110.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.14f)))
-            Box(Modifier.size(88.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.20f)))
-            Box(Modifier.size(66.dp).clip(CircleShape).background(Color.White), contentAlignment = Alignment.Center) {
-                Icon(Icons.Filled.Mic, null, tint = Alias.blue600, modifier = Modifier.size(28.dp))
+            Box(Modifier.size(110.dp.compact(s)).clip(CircleShape).background(Color.White.copy(alpha = 0.14f)))
+            Box(Modifier.size(88.dp.compact(s)).clip(CircleShape).background(Color.White.copy(alpha = 0.20f)))
+            Box(Modifier.size(66.dp.compact(s)).clip(CircleShape).background(Color.White), contentAlignment = Alignment.Center) {
+                Icon(Icons.Filled.Mic, null, tint = Alias.blue600, modifier = Modifier.size(28.dp.compact(s)))
             }
         }
 
-        Spacer(Modifier.height(14.dp))
-        DisplayText(if (c.listening) stringResource(R.string.ai_youre_guessing) else stringResource(R.string.ai_tap_mic_answer), 18)
+        Spacer(Modifier.height(14.dp.compact(s)))
+        DisplayText(
+            if (c.listening) stringResource(R.string.ai_youre_guessing) else stringResource(R.string.ai_tap_mic_answer),
+            18.compactSp(s),
+        )
         if (c.listening && c.transcript.isNotEmpty()) {
-            Spacer(Modifier.height(10.dp))
-            Text(c.transcript, color = Gold, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 26.sp)
+            Spacer(Modifier.height(10.dp.compact(s)))
+            Text(c.transcript, color = Gold, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
+                fontSize = 26.sp.compact(s), maxLines = 1)
         }
 
         Spacer(Modifier.weight(1f))
 
-        Row(horizontalArrangement = Arrangement.spacedBy(12.dp)) {
-            Chip(stringResource(R.string.ai_hear_again)) { c.hearAgain() }
-            Chip(stringResource(R.string.ai_new_clue)) { c.newClue() }
+        Row(horizontalArrangement = Arrangement.spacedBy(12.dp.compact(s))) {
+            Chip(stringResource(R.string.ai_hear_again), s) { c.hearAgain() }
+            Chip(stringResource(R.string.ai_new_clue), s) { c.newClue() }
         }
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(12.dp.compact(s)))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
-            Text("✓ ${c.correctWords.size}", color = Alias.success, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
-            Text("» ${c.skippedWords.size}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
+            Text("✓ ${c.correctWords.size}", color = Alias.success, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp.compact(s))
+            Text("» ${c.skippedWords.size}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp.compact(s))
         }
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(8.dp.compact(s)))
         Text(stringResource(R.string.ai_skip_word), color = Color.White.copy(alpha = 0.9f), fontFamily = Alias.body,
-            fontWeight = FontWeight.SemiBold, fontSize = 16.sp, modifier = Modifier.clickable { c.reveal() }.padding(8.dp))
+            fontWeight = FontWeight.SemiBold, fontSize = 16.sp.compact(s),
+            modifier = Modifier.clickable { c.reveal() }.padding(8.dp.compact(s)))
+    }
     }
 }
 
 @Composable
-private fun Chip(title: String, onClick: () -> Unit) {
-    Text(title, color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.SemiBold, fontSize = 14.sp,
+private fun Chip(title: String, s: Float = 1f, onClick: () -> Unit) {
+    Text(title, color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.SemiBold, fontSize = 14.sp.compact(s),
         modifier = Modifier.clip(RoundedCornerShape(50)).background(Color.White.copy(alpha = 0.16f))
             .clickable { onClick() }.padding(horizontal = 18.dp, vertical = 11.dp))
 }

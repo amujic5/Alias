@@ -9,6 +9,7 @@ import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
@@ -168,65 +169,75 @@ private fun Playing(c: AiPlayController) {
         if (c.penaltyFlash) bot.react(BotReaction.Wrong)
     }
 
-    Column(Modifier.fillMaxSize().padding(top = 10.dp), horizontalAlignment = Alignment.CenterHorizontally) {
-        Spacer(Modifier.height(6.dp))
+    BoxWithConstraints(Modifier.fillMaxSize()) {
+    val s = rememberCompactScale(maxHeight)
+    Column(Modifier.fillMaxSize().padding(top = 10.dp.compact(s)), horizontalAlignment = Alignment.CenterHorizontally) {
+        Spacer(Modifier.height(6.dp.compact(s)))
         Text(stringResource(R.string.ai_explain_dont_say), color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
-            fontWeight = FontWeight.Black, fontSize = 12.sp, letterSpacing = 3.sp)
-        Spacer(Modifier.height(14.dp))
-        Text(c.word.uppercase(), color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
-            fontSize = 44.sp, textAlign = TextAlign.Center, modifier = Modifier.padding(horizontal = 6.dp))
+            fontWeight = FontWeight.Black, fontSize = 12.sp.compact(s), letterSpacing = 3.sp)
+        Spacer(Modifier.height(14.dp.compact(s)))
+        AutoShrinkText(
+            text = c.word.uppercase(),
+            maxFontSize = 44.sp.compact(s),
+            maxLines = 3,
+            color = Color.White,
+            fontFamily = Alias.display,
+            fontWeight = FontWeight.ExtraBold,
+            modifier = Modifier.padding(horizontal = 6.dp),
+        )
 
-        Spacer(Modifier.height(16.dp))
-        BotAvatar(bot, Modifier.size(180.dp))
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(16.dp.compact(s)))
+        BotAvatar(bot, Modifier.size(180.dp.compact(s)))
+        Spacer(Modifier.height(12.dp.compact(s)))
 
         val explaining = c.turn == AiPlayController.Turn.Explaining
-        Box(Modifier.size(180.dp).clickable(enabled = c.turn != AiPlayController.Turn.AiGuessing) { c.toggleExplain() },
+        Box(Modifier.size(180.dp.compact(s)).clickable(enabled = c.turn != AiPlayController.Turn.AiGuessing) { c.toggleExplain() },
             contentAlignment = Alignment.Center) {
             if (explaining) {
-                Box(Modifier.size(168.dp).clip(CircleShape).background(Gold.copy(alpha = 0.18f)))
-                Box(Modifier.size(128.dp).clip(CircleShape).border(3.dp, Gold, CircleShape))
+                Box(Modifier.size(168.dp.compact(s)).clip(CircleShape).background(Gold.copy(alpha = 0.18f)))
+                Box(Modifier.size(128.dp.compact(s)).clip(CircleShape).border(3.dp, Gold, CircleShape))
             } else {
-                Box(Modifier.size(124.dp).clip(CircleShape).dashedCircle(Color.White.copy(alpha = 0.55f)))
+                Box(Modifier.size(124.dp.compact(s)).clip(CircleShape).dashedCircle(Color.White.copy(alpha = 0.55f)))
             }
-            Box(Modifier.size(110.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.14f)))
-            Box(Modifier.size(88.dp).clip(CircleShape).background(Color.White.copy(alpha = 0.20f)))
-            Box(Modifier.size(66.dp).clip(CircleShape).background(Color.White), contentAlignment = Alignment.Center) {
-                Icon(Icons.Filled.Mic, null, tint = Alias.blue600, modifier = Modifier.size(28.dp))
+            Box(Modifier.size(110.dp.compact(s)).clip(CircleShape).background(Color.White.copy(alpha = 0.14f)))
+            Box(Modifier.size(88.dp.compact(s)).clip(CircleShape).background(Color.White.copy(alpha = 0.20f)))
+            Box(Modifier.size(66.dp.compact(s)).clip(CircleShape).background(Color.White), contentAlignment = Alignment.Center) {
+                Icon(Icons.Filled.Mic, null, tint = Alias.blue600, modifier = Modifier.size(28.dp.compact(s)))
             }
         }
 
-        Spacer(Modifier.height(14.dp))
+        Spacer(Modifier.height(14.dp.compact(s)))
         val status = when (c.turn) {
             AiPlayController.Turn.Idle -> if (c.aiGuess == null) stringResource(R.string.ai_tap_to_explain) else stringResource(R.string.ai_not_it_explain_more)
             AiPlayController.Turn.Explaining -> stringResource(R.string.ai_listening_tap_done)
             AiPlayController.Turn.AiGuessing -> stringResource(R.string.ai_ai_is_guessing)
         }
-        DisplayText(status, 18, color = if (explaining) Gold else Color.White)
+        DisplayText(status, 18.compactSp(s), color = if (explaining) Gold else Color.White)
 
         if (explaining && c.transcript.isNotEmpty()) {
-            Spacer(Modifier.height(10.dp))
+            Spacer(Modifier.height(10.dp.compact(s)))
             Text("“${c.transcript}”", color = Color.White.copy(alpha = 0.75f), fontFamily = Alias.body,
-                fontSize = 14.sp, textAlign = TextAlign.Center, maxLines = 2)
+                fontSize = 14.sp.compact(s), textAlign = TextAlign.Center, maxLines = 2)
         }
         c.aiGuess?.let { g ->
-            Spacer(Modifier.height(16.dp))
+            Spacer(Modifier.height(16.dp.compact(s)))
             Row(Modifier.clip(RoundedCornerShape(50)).background(Color.White.copy(alpha = 0.16f))
-                .padding(horizontal = 18.dp, vertical = 12.dp), verticalAlignment = Alignment.CenterVertically) {
-                Text(stringResource(R.string.ai_ai_guesses), color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 13.sp)
-                Spacer(Modifier.size(8.dp))
-                Text(g, color = Alias.accent, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
+                .padding(horizontal = 18.dp.compact(s), vertical = 12.dp.compact(s)), verticalAlignment = Alignment.CenterVertically) {
+                Text(stringResource(R.string.ai_ai_guesses), color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 13.sp.compact(s))
+                Spacer(Modifier.size(8.dp.compact(s)))
+                Text(g, color = Alias.accent, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp.compact(s))
             }
         }
 
         Spacer(Modifier.weight(1f))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
-            Text("✓ ${c.correctWords.size}", color = Alias.success, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
-            Text("» ${c.skippedWords.size}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
+            Text("✓ ${c.correctWords.size}", color = Alias.success, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp.compact(s))
+            Text("» ${c.skippedWords.size}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp.compact(s))
         }
-        Spacer(Modifier.height(8.dp))
+        Spacer(Modifier.height(8.dp.compact(s)))
         Text(stringResource(R.string.ai_skip_word), color = Color.White.copy(alpha = 0.9f), fontFamily = Alias.body, fontWeight = FontWeight.SemiBold,
-            fontSize = 16.sp, modifier = Modifier.clickable { c.skip() }.padding(8.dp))
+            fontSize = 16.sp.compact(s), modifier = Modifier.clickable { c.skip() }.padding(8.dp.compact(s)))
+    }
     }
 }
 

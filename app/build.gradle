@@ -15,8 +15,8 @@ android {
         applicationId "hr.azzi.socialgames.alias"
         minSdkVersion 29
         targetSdkVersion 36
-        versionCode 74
-        versionName "11.1"
+        versionCode 75
+        versionName "11.2"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
         // x86/x86_64 are emulator-only; real devices are arm. Dropping them
         // removes the duplicate onnxruntime/jingle/rive .so from the bundle.
