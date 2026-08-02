@@ -33,7 +33,7 @@ import kotlinx.coroutines.launch
 object Billing {
 
     /** Managed one-time product IDs — same as the paid deck ids / iOS products. */
-    val productIds = listOf("alias_nba", "alias_movies", "game_alias_who_am_i")
+    val productIds = listOf("alias_nba", "alias_movies", "game_alias_who_am_i", NoAds.PRODUCT_ID)
 
     private val _unlocked = MutableStateFlow<Set<String>>(emptySet())
     /** Product IDs the user owns. */

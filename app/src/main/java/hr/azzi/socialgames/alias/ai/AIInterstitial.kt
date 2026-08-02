@@ -13,6 +13,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import hr.azzi.socialgames.alias.AdsConsent
 import hr.azzi.socialgames.alias.BuildConfig
+import hr.azzi.socialgames.alias.Service.NoAds
 
 /**
  * Full-screen interstitial shown after an AI round (Practice + Challenge), mirroring
@@ -33,6 +34,7 @@ object AIInterstitial {
 
     /** Request an interstitial in the background (no-op if one is ready or loading). */
     fun preload(context: Context) {
+        if (NoAds.isPurchased) return
         if (ad != null || loading || !AdsConsent.canRequestAds) return
         val app = context.applicationContext
         if (!initialized) { MobileAds.initialize(app) {}; initialized = true }
@@ -49,6 +51,9 @@ object AIInterstitial {
      * so callers can chain a follow-up (e.g. the in-app review prompt) after the ad.
      */
     fun show(context: Context, onDismiss: () -> Unit = {}) {
+        // Bought out of ads — hand straight back, so whatever was chained after the ad
+        // (the rating prompt) still happens.
+        if (NoAds.isPurchased) { onDismiss(); return }
         val activity = context as? Activity
         val current = ad
         if (activity == null || current == null) { onDismiss(); return }

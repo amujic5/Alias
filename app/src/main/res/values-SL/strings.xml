@@ -432,4 +432,9 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="history_empty">Ni še posnetih rund</string>
     <string name="settings_share">Deli</string>
     <string name="capture_moment_next_round">Posnemi naslednjo rundo</string>
+
+    <!-- Remove Ads -->
+    <string name="remove_ads_title">Odstrani oglase</string>
+    <string name="remove_ads_subtitle">Enkratni nakup</string>
+    <string name="remove_ads_subtitle_priced">Enkratni nakup · %1$s</string>
 </resources>

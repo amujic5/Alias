@@ -22,6 +22,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.DictionaryService
+import hr.azzi.socialgames.alias.Service.NoAds
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaLibrary
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundRecorder
@@ -214,6 +215,7 @@ class PlayActivity : BaseActivity() {
     }
 
     private fun loadInterstitialAd() {
+        if (NoAds.isPurchased) return
         if (!AdsConsent.canRequestAds) return
         MobileAds.initialize(this) {}
         val prod = "ca-app-pub-1489905432577426/3906492992"
@@ -224,6 +226,7 @@ class PlayActivity : BaseActivity() {
     }
 
     private fun loadInterstitialAd2() {
+        if (NoAds.isPurchased) return
         if (!AdsConsent.canRequestAds) return
         MobileAds.initialize(this) {}
         val prod = "ca-app-pub-1489905432577426/4633082957"

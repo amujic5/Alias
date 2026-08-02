@@ -425,4 +425,9 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="history_empty">Noch keine Runden aufgezeichnet</string>
     <string name="settings_share">Teilen</string>
     <string name="capture_moment_next_round">Nächste Runde filmen</string>
+
+    <!-- Remove Ads -->
+    <string name="remove_ads_title">Werbung entfernen</string>
+    <string name="remove_ads_subtitle">Einmalkauf</string>
+    <string name="remove_ads_subtitle_priced">Einmalkauf · %1$s</string>
 </resources>

@@ -60,6 +60,12 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.Dp
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import android.app.Activity
+import androidx.compose.runtime.LaunchedEffect
+import androidx.compose.runtime.collectAsState
+import hr.azzi.socialgames.alias.Service.Billing
+import hr.azzi.socialgames.alias.Service.NoAds
+import kotlinx.coroutines.delay
 import hr.azzi.socialgames.alias.BuildConfig
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.GameSettings
@@ -88,6 +94,25 @@ fun HomeScreen(
     var showHistory by remember { mutableStateOf(false) }
     var soundEnabled by remember { mutableStateOf(GameSettings.soundEnabled(context)) }
     var vibrateEnabled by remember { mutableStateOf(GameSettings.vibrateEnabled(context)) }
+
+    // Owned products and prices both arrive from Play after a round trip, so the offer
+    // follows them rather than being read once.
+    val owned by Billing.unlocked.collectAsState()
+    val prices by Billing.prices.collectAsState()
+    val adsRemoved = owned.contains(NoAds.PRODUCT_ID)
+    val removeAdsPrice = prices[NoAds.PRODUCT_ID]
+    val activity = context as? Activity
+
+    // Shows the offer, then folds it away: expanded first, because a disc alone says nothing
+    // about what it costs; folded after a few seconds, because the home screen belongs to the
+    // buttons below it.
+    var removeAdsExpanded by remember { mutableStateOf(true) }
+    LaunchedEffect(adsRemoved) {
+        if (!adsRemoved) {
+            delay(5_000)
+            removeAdsExpanded = false
+        }
+    }
 
     BrandBackground {
         // Country background image for the selected language (bottom-aligned, subtle).
@@ -118,7 +143,26 @@ fun HomeScreen(
             ) {
                 // Top bar: settings (language) gear on the right — frosted circle to match
                 // the Figma home (same treatment as the menu-button badges / iOS gear).
-                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.End) {
+                Row(
+                    Modifier.fillMaxWidth(),
+                    horizontalArrangement = Arrangement.SpaceBetween,
+                    verticalAlignment = Alignment.CenterVertically,
+                ) {
+                    // The offer, opposite the gear. Owners never see it.
+                    if (!adsRemoved) {
+                        RemoveAdsPill(
+                            expanded = removeAdsExpanded,
+                            price = removeAdsPrice,
+                            onClick = {
+                                // It has said its piece either way — fold it now rather than
+                                // leaving it open behind the Play sheet.
+                                removeAdsExpanded = false
+                                activity?.let { Billing.launchPurchase(it, NoAds.PRODUCT_ID) }
+                            },
+                        )
+                    } else {
+                        Spacer(Modifier.size(1.dp))
+                    }
                     Box(
                         Modifier.size(50.dp).clip(CircleShape)
                             .background(Color.White.copy(alpha = 0.16f))

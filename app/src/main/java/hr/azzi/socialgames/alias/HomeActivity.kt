@@ -13,6 +13,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.appupdate.AppUpdateController
 import hr.azzi.socialgames.alias.ui.screens.HomeScreen
@@ -66,6 +67,9 @@ class HomeActivity : BaseActivity() {
         // Re-filter the deck list in case the language was changed in Settings —
         // country ("local-theme") decks follow the selected language.
         JSONService.loadBoardGamesFromFile(this)
+        // A purchase made elsewhere — another device, or the Play store itself — should be
+        // honoured here without waiting for a cold start.
+        Billing.refresh()
         updateController.onResume()
     }
 

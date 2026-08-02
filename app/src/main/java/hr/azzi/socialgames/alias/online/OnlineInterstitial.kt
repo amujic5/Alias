@@ -11,6 +11,7 @@ import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
 import hr.azzi.socialgames.alias.AdsConsent
 import hr.azzi.socialgames.alias.BuildConfig
+import hr.azzi.socialgames.alias.Service.NoAds
 
 /**
  * Full-screen interstitial shown to EVERYONE at the end of each Online Play round —
@@ -34,6 +35,7 @@ object OnlineInterstitial {
 
     /** Request an interstitial in the background (no-op if one is ready or loading). */
     fun preload(context: Context) {
+        if (NoAds.isPurchased) return
         if (ad != null || loading || !AdsConsent.canRequestAds) return
         val app = context.applicationContext
         if (!initialized) { MobileAds.initialize(app) {}; initialized = true }
@@ -46,6 +48,7 @@ object OnlineInterstitial {
 
     /** Present the ad right away (round just ended) if one is loaded; else silently skip. */
     fun show(context: Context) {
+        if (NoAds.isPurchased) return
         val activity = context as? Activity ?: return
         val current = ad ?: return
         current.fullScreenContentCallback = object : FullScreenContentCallback() {
