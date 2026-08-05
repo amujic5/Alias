@@ -17,11 +17,15 @@ import androidx.compose.foundation.layout.systemBarsPadding
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Share
+import androidx.compose.material3.Icon
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -35,6 +39,9 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.Analytics
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
+import hr.azzi.socialgames.alias.Service.RoundVideo.shareRoundImage
+import hr.azzi.socialgames.alias.Service.RoundVideo.writeRoundShareImage
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import hr.azzi.socialgames.alias.ui.theme.BrandBackground
 import hr.azzi.socialgames.alias.ui.theme.CCard
@@ -42,6 +49,7 @@ import hr.azzi.socialgames.alias.ui.theme.DisplayText
 import hr.azzi.socialgames.alias.ui.theme.Overline
 import hr.azzi.socialgames.alias.ui.theme.PillButton
 import hr.azzi.socialgames.alias.ui.theme.PillKind
+import kotlinx.coroutines.launch
 
 data class TeamRow(val rank: Int, val name: String, val score: Int, val winner: Boolean)
 
@@ -55,6 +63,8 @@ data class ResultsUiState(
     val answering: String?,
     /** The round video, if one was filmed and came out. */
     val replayPath: String? = null,
+    /** Everything the shareable result image draws — the round that just ended. */
+    val shareInfo: RoundCardInfo? = null,
 )
 
 @Composable
@@ -72,9 +82,11 @@ fun ResultsScreen(
     onCaptureMomentChange: (Boolean) -> Unit = {},
 ) {
     val context = LocalContext.current
+    val scope = rememberCoroutineScope()
     var playing by remember { mutableStateOf<String?>(null) }
     var showQuit by remember { mutableStateOf(false) }
     var showCaptureInfo by remember { mutableStateOf(false) }
+    var sharing by remember { mutableStateOf(false) }
 
     // Back is the only way out of this screen, and there is a game in progress behind it.
     BackHandler { showQuit = true }
@@ -103,18 +115,39 @@ fun ResultsScreen(
             ) {
                 // This round card
                 CCard(Modifier.fillMaxWidth()) {
-                    Row(verticalAlignment = Alignment.Top) {
-                        Column(Modifier.weight(1f)) {
-                            Overline(stringResource(R.string.this_round), color = Alias.textSecondary)
-                            Text(state.teamName, color = Alias.textPrimary, fontFamily = Alias.display,
-                                fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
-                            Text("${state.correct} ${stringResource(R.string.corrected)} · ${state.skip} ${stringResource(R.string.skipped)}",
-                                color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+                    Column {
+                        Row(verticalAlignment = Alignment.Top) {
+                            Column(Modifier.weight(1f)) {
+                                Overline(stringResource(R.string.this_round), color = Alias.textSecondary)
+                                Text(state.teamName, color = Alias.textPrimary, fontFamily = Alias.display,
+                                    fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
+                                Text("${state.correct} ${stringResource(R.string.corrected)} · ${state.skip} ${stringResource(R.string.skipped)}",
+                                    color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+                            }
+                            Text(stringResource(R.string.edit_answers), color = Alias.blue600,
+                                fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 13.sp,
+                                modifier = Modifier.clip(RoundedCornerShape(8.dp))
+                                    .clickable { onEditAnswers() }.padding(4.dp))
                         }
-                        Text(stringResource(R.string.edit_answers), color = Alias.blue600,
-                            fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 13.sp,
-                            modifier = Modifier.clip(RoundedCornerShape(8.dp))
-                                .clickable { onEditAnswers() }.padding(4.dp))
+                        state.shareInfo?.let { info ->
+                            Spacer(Modifier.height(12.dp))
+                            SharePill(
+                                // Rendering is quick but not free; the pill says so rather
+                                // than looking dead until the sheet appears.
+                                busy = sharing,
+                                onClick = {
+                                    if (!sharing) {
+                                        sharing = true
+                                        Analytics.log(context, Analytics.ROUND_RESULT_SHARED)
+                                        scope.launch {
+                                            writeRoundShareImage(context, info)
+                                                ?.let { shareRoundImage(context, it) }
+                                            sharing = false
+                                        }
+                                    }
+                                },
+                            )
+                        }
                     }
                 }
 
@@ -184,6 +217,25 @@ fun ResultsScreen(
                 }
             }
         }
+    }
+}
+
+/** The compact accent pill inside the "this round" card: label first, share glyph after it. */
+@Composable
+private fun SharePill(busy: Boolean, onClick: () -> Unit) {
+    Row(
+        Modifier.clip(RoundedCornerShape(percent = 50))
+            .background(if (busy) Alias.accentPressed else Alias.accent)
+            .clickable(enabled = !busy) { onClick() }
+            .padding(horizontal = 16.dp, vertical = 9.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Text(stringResource(R.string.share_round_results), color = Alias.onAccent,
+            fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 13.sp,
+            letterSpacing = 0.4.sp)
+        Spacer(Modifier.size(8.dp))
+        Icon(Icons.Filled.Share, contentDescription = null, tint = Alias.onAccent,
+            modifier = Modifier.size(16.dp))
     }
 }
 

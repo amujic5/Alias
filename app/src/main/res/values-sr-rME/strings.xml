@@ -439,4 +439,7 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="remove_ads_title">Ukloni oglase</string>
     <string name="remove_ads_subtitle">Jednokratna kupovina</string>
     <string name="remove_ads_subtitle_priced">Jednokratna kupovina · %1$s</string>
+
+    <!-- Sharing the round result as an image -->
+    <string name="share_round_results">PODELI REZULTAT</string>
 </resources>

@@ -437,4 +437,7 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="remove_ads_title">Odstrani oglase</string>
     <string name="remove_ads_subtitle">Enkratni nakup</string>
     <string name="remove_ads_subtitle_priced">Enkratni nakup · %1$s</string>
+
+    <!-- Sharing the round result as an image -->
+    <string name="share_round_results">DELI REZULTAT</string>
 </resources>

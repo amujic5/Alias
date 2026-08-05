@@ -444,4 +444,7 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="remove_ads_title">Remove Ads</string>
     <string name="remove_ads_subtitle">One-time purchase</string>
     <string name="remove_ads_subtitle_priced">One-time purchase · %1$s</string>
+
+    <!-- Sharing the round result as an image -->
+    <string name="share_round_results">SHARE RESULTS</string>
 </resources>

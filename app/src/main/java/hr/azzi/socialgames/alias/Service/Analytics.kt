@@ -37,6 +37,9 @@ object Analytics {
     /** Shared from the player. */
     const val REPLAY_SHARE = "android_replay_share"
 
+    /** The round's result was shared as an image from the results screen. */
+    const val ROUND_RESULT_SHARED = "android_round_result_shared"
+
     /** The saved rounds were opened from settings. */
     const val REPLAY_LIST_VISITED = "android_replay_list_visited"
 

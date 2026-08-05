@@ -8,6 +8,7 @@ import androidx.compose.runtime.setValue
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Service.DualCameraSupport
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
 import hr.azzi.socialgames.alias.ui.screens.ResultsScreen
 import hr.azzi.socialgames.alias.ui.screens.ResultsUiState
 import hr.azzi.socialgames.alias.ui.screens.TeamRow
@@ -78,6 +79,15 @@ class ResultsActivity : BaseActivity() {
             // Only offered if the file is still there — the cache is the system's to reclaim,
             // and a card that opens a black player is worse than no card.
             replayPath = intent.getStringExtra("replayPath")?.takeIf { File(it).exists() },
+            // The round just played, not the one coming up. Rebuilt after answers are
+            // edited, so the shared image always agrees with the screen.
+            shareInfo = RoundCardInfo(
+                teamName = game.currentTeam.teamName,
+                explainer = game.explainingPlayerName,
+                guesser = game.answeringPlayerName,
+                correctWords = game.currentTeamMarkedWords.filter { it.isCorrect }.map { it.word },
+                skippedWords = game.currentTeamMarkedWords.filterNot { it.isCorrect }.map { it.word },
+            ),
         )
     }
 
