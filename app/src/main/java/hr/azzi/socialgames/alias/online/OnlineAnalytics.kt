@@ -14,6 +14,13 @@ object OnlineAnalytics {
         FirebaseAnalytics.getInstance(context.applicationContext).logEvent(name, null)
     }
 
+    /**
+     * The Online Play screen was opened — the top of the funnel, logged before a room
+     * exists so the drop-off to created/joined is visible. Unlike the room events this
+     * one follows the iOS `ios_`/`android_` prefix convention, not the suffix one.
+     */
+    fun screenOpen(context: Context) = log(context, "android_online_screen_open")
+
     fun roomCreated(context: Context) = log(context, "onlineRoomCreatedAndroid")
     fun roomJoined(context: Context) = log(context, "onlineRoomJoinedAndroid")
     /** Split by room size: onlineRoomStartedAndroid4 / …6 / …8. */

@@ -21,6 +21,12 @@ object AIAnalytics {
         putInt("seconds", config.totalSeconds)
     }
 
+    /**
+     * The AI hub was opened — the top of the funnel, logged before any setup choice
+     * so the drop-off to android_ai_practice_open_* is visible.
+     */
+    fun screenOpen(context: Context) = log(context, "android_ai_screen_open")
+
     /** A Practice round was started. Separate event per mode; language + seconds as params. */
     fun practiceOpen(context: Context, config: AIPracticeConfig) {
         val name = if (config.mode == AIMode.AI_EXPLAINS) "android_ai_practice_open_ai_explains"

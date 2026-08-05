@@ -11,6 +11,8 @@ class AIChallengeActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         val id = challengeIdFrom(intent)
+        // Only on a fresh open — a recreation (rotation, process restart) isn't a new visit.
+        if (savedInstanceState == null) AIAnalytics.screenOpen(this)
         // Log how the app was opened when arriving via a challenge deep link.
         if (id != null) when (intent?.data?.scheme?.lowercase()) {
             "https" -> AIAnalytics.appOpenViaUniversalLink(this)
