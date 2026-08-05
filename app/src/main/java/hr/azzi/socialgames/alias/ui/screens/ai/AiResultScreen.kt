@@ -79,6 +79,8 @@ fun AiResultScreen(
                 PillButton(stringResource(R.string.ai_play_again), PillKind.Primary, onClick = onPlayAgain)
                 Spacer(Modifier.height(12.dp))
             }
+            AiSharePill(result.correctWords, result.skippedWords)
+            Spacer(Modifier.height(12.dp))
             PillButton(stringResource(R.string.ai_close_caps), PillKind.Light, onClick = onClose)
         }
     }

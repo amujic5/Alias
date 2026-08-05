@@ -47,11 +47,17 @@ enum class AiAvatar(
     val rawRes: Int,
     val nameRes: Int,
     val tint: Color,
+    /**
+     * A still of the mascot, for what is drawn rather than animated — the shareable
+     * result card. A Rive artboard cannot be turned into a bitmap off-screen, so the
+     * same artwork also ships as a plain drawable.
+     */
+    val stillRes: Int,
 ) {
-    ROBOT(R.raw.aliasbot, R.string.ai_avatar_robot, Color(0xFFE8EFFE)),
-    WORDMONSTER(R.raw.wordmonster, R.string.ai_avatar_wordmonster, Color(0xFFE2FAF6)),
-    OWL(R.raw.aliasowl, R.string.ai_avatar_owl, Color(0xFFF0EAFF)),
-    CAT(R.raw.catbot, R.string.ai_avatar_cat, Color(0xFFFFF0E6));
+    ROBOT(R.raw.aliasbot, R.string.ai_avatar_robot, Color(0xFFE8EFFE), R.drawable.mascot_robot),
+    WORDMONSTER(R.raw.wordmonster, R.string.ai_avatar_wordmonster, Color(0xFFE2FAF6), R.drawable.mascot_wordmonster),
+    OWL(R.raw.aliasowl, R.string.ai_avatar_owl, Color(0xFFF0EAFF), R.drawable.mascot_owl),
+    CAT(R.raw.catbot, R.string.ai_avatar_cat, Color(0xFFFFF0E6), R.drawable.mascot_cat);
 
     companion object {
         private const val PREFS = "ai_settings"

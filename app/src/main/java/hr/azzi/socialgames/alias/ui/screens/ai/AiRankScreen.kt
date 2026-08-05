@@ -107,6 +107,13 @@ fun AiRankScreen(
 
                 Spacer(Modifier.height(4.dp))
                 PillButton(stringResource(R.string.ai_share_challenge), PillKind.Primary, onClick = onShare)
+
+                // Sharing the round itself, as a picture — the pill above invites others to
+                // play it, this shows how it went. Only for someone who has actually played.
+                plays.firstOrNull { it.playerId == myUid && it.finished }?.let { mine ->
+                    Spacer(Modifier.height(12.dp))
+                    AiSharePill(mine.correctWords, mine.skippedWords)
+                }
                 Spacer(Modifier.height(20.dp))
             }
         }

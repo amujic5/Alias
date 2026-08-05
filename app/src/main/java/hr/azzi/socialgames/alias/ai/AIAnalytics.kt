@@ -41,6 +41,9 @@ object AIAnalytics {
         log(context, name, configParams(config))
     }
 
+    /** The result card of an AI round — practice or challenge — was shared as an image. */
+    fun shareAiResult(context: Context) = log(context, "android_share_ai_result")
+
     /** The Share button on a challenge (rank board or outcome screen) was tapped. */
     fun challengeShareTapped(context: Context, challengeId: String) {
         log(context, "android_ai_challenge_share_tapped", Bundle().apply { putString("challenge_id", challengeId) })
