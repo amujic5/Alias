@@ -445,4 +445,5 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="emh_tier_1">LAHKO · 1 TOČKA</string>
     <string name="emh_tier_2">SREDNJE · 2 TOČKI</string>
     <string name="emh_tier_3">TEŽKO · 3 TOČKE</string>
+    <string name="round_saving_clip">Shranjujem posnetek…</string>
 </resources>

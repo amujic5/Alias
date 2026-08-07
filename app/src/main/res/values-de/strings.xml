@@ -438,4 +438,5 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="emh_tier_1">LEICHT · 1 PUNKT</string>
     <string name="emh_tier_2">MITTEL · 2 PUNKTE</string>
     <string name="emh_tier_3">SCHWER · 3 PUNKTE</string>
+    <string name="round_saving_clip">Clip wird gespeichert …</string>
 </resources>

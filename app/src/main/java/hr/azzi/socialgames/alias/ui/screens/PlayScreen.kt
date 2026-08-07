@@ -107,6 +107,11 @@ fun PlayScreen(
     var correctPoints by remember { mutableIntStateOf(0) }
     var skip by remember { mutableIntStateOf(0) }
     var running by remember { mutableStateOf(false) }
+    // True from the moment the whistle blows. The round is over then, but the screen stays up
+    // while the clip is closed — and an answer marked in that window would score a word that
+    // is nowhere in the video. `running` can't say this: it keys the timer's coroutine, and
+    // flipping it there would cancel the coroutine before it reaches onFinished().
+    var finishing by remember { mutableStateOf(false) }
     var showSheet by remember { mutableStateOf(true) }
     var showQuit by remember { mutableStateOf(false) }
 
@@ -120,6 +125,7 @@ fun PlayScreen(
         }
         // timeLeft == 0 — DON'T flip `running` here: it keys this LaunchedEffect,
         // so changing it would cancel this coroutine before onFinished() runs.
+        finishing = true
         soundSystem.playEnd()
         delay(800)
         onFinished()
@@ -132,7 +138,11 @@ fun PlayScreen(
         onRoundState(displayWord, correctPoints, skip, timeLeft)
     }
 
-    fun pauseAndShow() { running = false; showSheet = true }
+    fun pauseAndShow() {
+        // Pausing a round that is already being closed would poke a recording on its way out.
+        if (finishing) return
+        running = false; showSheet = true
+    }
 
     BackHandler { pauseAndShow() }
 
@@ -233,21 +243,35 @@ fun PlayScreen(
                 }
             }
 
-            // Bottom action buttons
-            Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                ActionButton(stringResource(R.string.skip), Icons.AutoMirrored.Filled.ArrowForward, Alias.danger,
-                    Modifier.weight(1f)) {
-                    if (!running) return@ActionButton
-                    game.addMarkedWord(MarkedWord(displayWord, false, wordPoints)); skip++
-                    soundSystem.playSkipButton(); GameSettings.tick(context)
-                    word = game.newWord; wordPoints = game.currentWordPoints
+            // Bottom action buttons. A filmed round holds the screen while the clip is
+            // written, and a screen that just sits there is what makes people tap again.
+            if (finishing && cameraMode) {
+                Box(
+                    Modifier.fillMaxWidth().padding(16.dp).height(72.dp)
+                        .clip(RoundedCornerShape(20.dp)).background(Color.White.copy(alpha = 0.14f)),
+                    contentAlignment = Alignment.Center,
+                ) {
+                    Text(stringResource(R.string.round_saving_clip),
+                        color = if (taboo != null) Color.White else Alias.textSecondary,
+                        fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 17.sp)
                 }
-                ActionButton(stringResource(R.string.correct), Icons.Filled.Check, Alias.success,
-                    Modifier.weight(1f)) {
-                    if (!running) return@ActionButton
-                    game.addMarkedWord(MarkedWord(displayWord, true, wordPoints)); correctPoints += wordPoints
-                    soundSystem.playRightButton(); GameSettings.tick(context)
-                    word = game.newWord; wordPoints = game.currentWordPoints
+            } else {
+                Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(14.dp)) {
+                    ActionButton(stringResource(R.string.skip), Icons.AutoMirrored.Filled.ArrowForward, Alias.danger,
+                        Modifier.weight(1f), enabled = running && !finishing) {
+                        // Guarded here as well as greyed out: a tap already on its way still arrives.
+                        if (!running || finishing) return@ActionButton
+                        game.addMarkedWord(MarkedWord(displayWord, false, wordPoints)); skip++
+                        soundSystem.playSkipButton(); GameSettings.tick(context)
+                        word = game.newWord; wordPoints = game.currentWordPoints
+                    }
+                    ActionButton(stringResource(R.string.correct), Icons.Filled.Check, Alias.success,
+                        Modifier.weight(1f), enabled = running && !finishing) {
+                        if (!running || finishing) return@ActionButton
+                        game.addMarkedWord(MarkedWord(displayWord, true, wordPoints)); correctPoints += wordPoints
+                        soundSystem.playRightButton(); GameSettings.tick(context)
+                        word = game.newWord; wordPoints = game.currentWordPoints
+                    }
                 }
             }
         }
@@ -276,10 +300,12 @@ fun PlayScreen(
 
 @Composable
 private fun ActionButton(label: String, icon: androidx.compose.ui.graphics.vector.ImageVector,
-                         color: Color, modifier: Modifier = Modifier, onClick: () -> Unit) {
+                         color: Color, modifier: Modifier = Modifier, enabled: Boolean = true,
+                         onClick: () -> Unit) {
     Row(
         modifier.height(72.dp).shadow(8.dp, RoundedCornerShape(20.dp), clip = false)
-            .clip(RoundedCornerShape(20.dp)).background(color).clickable { onClick() }.padding(horizontal = 18.dp),
+            .clip(RoundedCornerShape(20.dp)).background(if (enabled) color else color.copy(alpha = 0.4f))
+            .clickable(enabled = enabled) { onClick() }.padding(horizontal = 18.dp),
         verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center,
     ) {
         Icon(icon, null, tint = Color.White, modifier = Modifier.size(22.dp))

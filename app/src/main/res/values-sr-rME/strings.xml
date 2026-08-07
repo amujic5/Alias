@@ -447,4 +447,5 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="emh_tier_1">LAKO · 1 POEN</string>
     <string name="emh_tier_2">SREDNJE · 2 POENA</string>
     <string name="emh_tier_3">TEŠKO · 3 POENA</string>
+    <string name="round_saving_clip">Čuvam snimak…</string>
 </resources>
