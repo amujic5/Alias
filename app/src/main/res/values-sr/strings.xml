@@ -441,4 +441,9 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
 
     <!-- Sharing the round result as an image -->
     <string name="share_round_results">PODELI REZULTAT</string>
+    <string name="easy_medium_hard">Lako Srednje Teško</string>
+    <string name="easy_medium_hard_info">Više od 1.000 reči. Tri nivoa težine. Nikad ne znaš šta dolazi sledeće. Lake reči vrede 1 poen, srednje 2, a teške 3. Ostani pribran, objašnjavaj brzo i pretvori svaku reč u poene pre nego što vreme istekne.</string>
+    <string name="emh_tier_1">LAKO · 1 POEN</string>
+    <string name="emh_tier_2">SREDNJE · 2 POENA</string>
+    <string name="emh_tier_3">TEŠKO · 3 POENA</string>
 </resources>

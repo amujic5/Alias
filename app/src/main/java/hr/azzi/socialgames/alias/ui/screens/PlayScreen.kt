@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.offset
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.systemBarsPadding
@@ -90,6 +91,10 @@ fun PlayScreen(
     val context = LocalContext.current
     var timeLeft by remember { mutableIntStateOf(game.time) }
     var word by remember { mutableStateOf(game.newWord) }
+    // What the word on screen is worth, captured with it: the game moves `currentWordPoints`
+    // on as soon as the next word is drawn, and the mark has to carry the old one. Worth 1
+    // on every deck that doesn't price its words, so nothing else has to know the difference.
+    var wordPoints by remember { mutableIntStateOf(game.currentWordPoints) }
     // Alias Junior words are "NNN-word": a picture (res/raw/junior_NNN) the guessers look
     // at, with the clean word shown to the explainer. For every other deck `junior` is null.
     val junior = remember(word) { juniorImageRes(context, word) }
@@ -97,7 +102,9 @@ fun PlayScreen(
     // any of the forbidden words. `taboo` is null for every non-taboo deck.
     val taboo = remember(word) { parseTaboo(word) }
     val displayWord = junior?.first ?: taboo?.first ?: word
-    var correct by remember { mutableIntStateOf(0) }
+    // Points rather than guessed words: the same number on every deck where a word is worth
+    // one, and on a scored deck the only number that matters — four hard words are worth 11.
+    var correctPoints by remember { mutableIntStateOf(0) }
     var skip by remember { mutableIntStateOf(0) }
     var running by remember { mutableStateOf(false) }
     var showSheet by remember { mutableStateOf(true) }
@@ -121,8 +128,8 @@ fun PlayScreen(
     // The overlay is fed from the same values the screen renders from, so the clip cannot
     // drift from what the players actually saw. `displayWord` rather than `word`: Junior and
     // Taboo decks pack extra data into the raw word, and the card shows the clean one.
-    LaunchedEffect(displayWord, correct, skip, timeLeft) {
-        onRoundState(displayWord, correct, skip, timeLeft)
+    LaunchedEffect(displayWord, correctPoints, skip, timeLeft) {
+        onRoundState(displayWord, correctPoints, skip, timeLeft)
     }
 
     fun pauseAndShow() { running = false; showSheet = true }
@@ -145,7 +152,7 @@ fun PlayScreen(
                 Column(Modifier.weight(1f)) {
                     Text(game.currentTeam.teamName, color = Alias.textPrimary,
                         fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
-                    Text("$correct ${stringResource(R.string.corrected)} · $skip ${stringResource(R.string.skipped)}",
+                    Text("$correctPoints ${stringResource(R.string.corrected)} · $skip ${stringResource(R.string.skipped)}",
                         color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
                 }
                 Box(
@@ -172,6 +179,7 @@ fun PlayScreen(
                             word = if (showSheet) "" else displayWord,
                             onSurface = onPreviewSurface,
                             hasFrontCamera = hasFrontCamera,
+                            wordPoints = wordPoints.takeIf { game.isScored },
                         )
                         TimerBadge(
                             timeLeft,
@@ -214,6 +222,14 @@ fun PlayScreen(
                     Text(word, color = Alias.textPrimary, fontFamily = Alias.display,
                         fontWeight = FontWeight.ExtraBold, fontSize = 44.sp, textAlign = TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 24.dp))
+                    // Sits above the word, and only on decks whose cards carry a value. Hidden
+                    // behind the sheet like the word is: it would give the card away early.
+                    if (game.isScored && !showSheet) {
+                        DifficultyPill(
+                            wordPoints,
+                            Modifier.align(Alignment.Center).offset(y = (-56).dp),
+                        )
+                    }
                 }
             }
 
@@ -222,14 +238,16 @@ fun PlayScreen(
                 ActionButton(stringResource(R.string.skip), Icons.AutoMirrored.Filled.ArrowForward, Alias.danger,
                     Modifier.weight(1f)) {
                     if (!running) return@ActionButton
-                    game.addMarkedWord(MarkedWord(displayWord, false)); skip++
-                    soundSystem.playSkipButton(); GameSettings.tick(context); word = game.newWord
+                    game.addMarkedWord(MarkedWord(displayWord, false, wordPoints)); skip++
+                    soundSystem.playSkipButton(); GameSettings.tick(context)
+                    word = game.newWord; wordPoints = game.currentWordPoints
                 }
                 ActionButton(stringResource(R.string.correct), Icons.Filled.Check, Alias.success,
                     Modifier.weight(1f)) {
                     if (!running) return@ActionButton
-                    game.addMarkedWord(MarkedWord(displayWord, true)); correct++
-                    soundSystem.playRightButton(); GameSettings.tick(context); word = game.newWord
+                    game.addMarkedWord(MarkedWord(displayWord, true, wordPoints)); correctPoints += wordPoints
+                    soundSystem.playRightButton(); GameSettings.tick(context)
+                    word = game.newWord; wordPoints = game.currentWordPoints
                 }
             }
         }
@@ -239,7 +257,7 @@ fun PlayScreen(
                 teamName = game.currentTeam.teamName,
                 explaining = game.explainingPlayerName,
                 answering = game.answeringPlayerName,
-                correct = correct,
+                correct = correctPoints,
                 skip = skip,
                 onResume = { showSheet = false; running = true },
                 onStop = { showSheet = false; showQuit = true },

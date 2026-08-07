@@ -447,4 +447,9 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
 
     <!-- Sharing the round result as an image -->
     <string name="share_round_results">SHARE RESULTS</string>
+    <string name="easy_medium_hard">Easy Medium Hard</string>
+    <string name="easy_medium_hard_info">Over 1,000 words. Three difficulty levels. No idea what’s coming next. Easy words are worth 1 point, medium words 2, and hard words 3. Keep your cool, explain fast, and turn every word into points before time runs out.</string>
+    <string name="emh_tier_1">EASY · 1 POINT</string>
+    <string name="emh_tier_2">MEDIUM · 2 POINTS</string>
+    <string name="emh_tier_3">HARD · 3 POINTS</string>
 </resources>

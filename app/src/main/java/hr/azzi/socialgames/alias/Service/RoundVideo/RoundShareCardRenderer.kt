@@ -82,9 +82,10 @@ class RoundShareCardRenderer(
      * Beyond [MAX_ROWS] a list stops listing and ends with a "+N" row: an image that grows
      * without limit stops being shareable.
      */
-    private fun rows(words: List<String>): List<String> =
+    private fun rows(words: List<RoundCardWord>): List<RoundCardWord> =
         if (words.size <= MAX_ROWS) words
-        else words.take(MAX_ROWS - 1) + "+${words.size - (MAX_ROWS - 1)}"
+        // The overflow row counts words, not points, so it carries no value of its own.
+        else words.take(MAX_ROWS - 1) + RoundCardWord("+${words.size - (MAX_ROWS - 1)}")
 
     private fun listHeight(rowCount: Int) = listHeader + max(rowCount, 1) * rowPitch + listPadding
 
@@ -116,7 +117,7 @@ class RoundShareCardRenderer(
 
         statCard(
             canvas, 24f, RoundCardColor.GREEN, "✓",
-            context.getString(R.string.ai_video_correct).uppercase(), info.correctWords.size,
+            context.getString(R.string.ai_video_correct).uppercase(), info.correctTotal,
         )
         statCard(
             canvas, 201f, RoundCardColor.ORANGE, "✕",
@@ -130,6 +131,7 @@ class RoundShareCardRenderer(
         wordList(
             canvas, 203f, RoundCardColor.ORANGE, "✕",
             context.getString(R.string.round_outro_skipped_words), skippedRows,
+            mutedPoints = true,
         )
 
         return bitmap
@@ -333,7 +335,10 @@ class RoundShareCardRenderer(
 
     // MARK: - Word lists
 
-    private fun wordList(canvas: Canvas, x: Float, accent: Int, glyph: String, title: String, words: List<String>) {
+    private fun wordList(
+        canvas: Canvas, x: Float, accent: Int, glyph: String, title: String,
+        words: List<RoundCardWord>, mutedPoints: Boolean = false,
+    ) {
         val card = RectF(x, listY, x + listWidth, listY + listHeight(words.size))
         val rect = scaled(card)
         val radius = s(22f)
@@ -361,13 +366,36 @@ class RoundShareCardRenderer(
             val icon = scaled(RectF(card.left + 14f, iconY, card.left + 33f, iconY + 19f))
             canvas.drawOval(icon, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = accent })
             text(canvas, glyph, icon, paint(jakarta, 800, s(11f), Color.WHITE), center = true)
+            // A valued word gives up its right end to the chip; the rest keep the full width.
+            val textRight = if (word.points == null) 153f else 129f
             text(
-                canvas, word,
-                scaled(RectF(card.left + 41f, iconY - 1f, card.left + 153f, iconY + 20f)),
+                canvas, word.text,
+                scaled(RectF(card.left + 41f, iconY - 1f, card.left + textRight, iconY + 20f)),
                 paint(jakarta, 600, s(13.5f), RoundCardColor.INK), center = false, shrinkToFit = true,
             )
+            word.points?.let {
+                pointsChip(canvas, RectF(card.left + 133f, iconY - 1f, card.left + 153f, iconY + 20f),
+                    it, mutedPoints)
+            }
             dashed(canvas, card.left + 41f, iconY + 23f, 112f, RoundCardColor.DIVIDER, 1.5f, floatArrayOf(2f, 3f))
         }
+    }
+
+    /**
+     * What the word was worth, in the tier's colour on a soft tint of itself — the same badge
+     * the Edit Answers list shows next to the word. `muted` is the skipped list: the value
+     * still reads, but faded, because none of it was earned.
+     */
+    private fun pointsChip(canvas: Canvas, rect: RectF, points: Int, muted: Boolean) {
+        val tint = RoundCardColor.tier(points)
+        val box = scaled(rect)
+        canvas.drawRoundRect(box, box.height() / 2f, box.height() / 2f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = tint
+            alpha = if (muted) 26 else 41
+        })
+        text(canvas, "$points", box, paint(jakarta, 800, s(12.5f), tint).apply {
+            if (muted) alpha = 140
+        }, center = true)
     }
 
     // MARK: - Primitives

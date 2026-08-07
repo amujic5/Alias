@@ -6,8 +6,12 @@ import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
 import kotlin.random.Random
 
+/**
+ * @param points what guessing this word is worth. One everywhere except the scored decks,
+ * where an easy word is 1 and a hard one 3.
+ */
 @Parcelize
-class MarkedWord(var word: String, var isCorrect: Boolean) : Parcelable {}
+class MarkedWord(var word: String, var isCorrect: Boolean, var points: Int = 1) : Parcelable {}
 
 
 @Parcelize
@@ -17,7 +21,9 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
            private var _teams: ArrayList<Team>,
            private var _words: ArrayList<String>,
            var _currentTeamIndex: Int,
-           var currentTeamMarkedWords: ArrayList<MarkedWord> = ArrayList() ) : Parcelable {
+           var currentTeamMarkedWords: ArrayList<MarkedWord> = ArrayList(),
+           /** True on decks whose words carry their own value — see [newWord]. */
+           private var _isScored: Boolean = false ) : Parcelable {
 
     private val _playingTeams: List<Team>
         get() {
@@ -33,9 +39,22 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
         currentTeam.deltaScoreRound = currentRoundScore
     }
 
+    /** Whether this game's words carry their own value — the pill above the word. */
+    val isScored: Boolean
+        get() = _isScored
+
     val currentRoundScore: Int
         get() {
-            return currentCorrectAnswers - currentSkipAnswers
+            return currentCorrectPoints - currentSkipAnswers
+        }
+
+    /**
+     * What the guessed words are worth. The same as their count on every deck but the
+     * scored ones, where each word carries its own value.
+     */
+    val currentCorrectPoints: Int
+        get() {
+            return currentTeamMarkedWords.filter { it.isCorrect }.sumOf { it.points }
         }
 
     val currentCorrectAnswers: Int
@@ -123,6 +142,14 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
             return _time
         }
 
+    /**
+     * What the word now on screen is worth. Read when the word is marked, so it has to be
+     * set as the word is handed out and left alone until the next one.
+     */
+    @IgnoredOnParcel
+    var currentWordPoints: Int = 1
+        private set
+
     val newWord: String
         get() {
 
@@ -130,7 +157,13 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
             val wordString = _words[randomIndex]
             _words.removeAt(randomIndex)
 
-            return wordString
+            if (!_isScored) {
+                currentWordPoints = 1
+                return wordString
+            }
+            val (word, points) = splitScored(wordString)
+            currentWordPoints = points
+            return word
         }
 
     // Public functions
@@ -240,6 +273,24 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
 
     private fun randomValue(min: Int, max: Int) : Int {
         return Random.nextInt(min, max)
+    }
+
+    companion object {
+        /**
+         * Splits `"Ananas-2"` into the word and its value.
+         *
+         * The suffix is part of the deck file rather than a second field so the JSON stays
+         * the shape every other deck has. Anything without a readable `-1`..`-3` tail is
+         * taken whole and worth a point — a missing suffix should cost a word, not a round.
+         */
+        fun splitScored(entry: String): Pair<String, Int> {
+            val dash = entry.lastIndexOf('-')
+            if (dash < 0) return entry to 1
+            val points = entry.substring(dash + 1).toIntOrNull()
+            if (points == null || points !in 1..3) return entry to 1
+            val word = entry.substring(0, dash).trim()
+            return if (word.isEmpty()) entry to 1 else word to points
+        }
     }
 
 }

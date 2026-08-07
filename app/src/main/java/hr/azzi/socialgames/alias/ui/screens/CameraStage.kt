@@ -7,8 +7,10 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
@@ -55,6 +57,8 @@ fun CameraStage(
     modifier: Modifier = Modifier,
     /** False once the front camera has been dropped — there is no inset to label. */
     hasFrontCamera: Boolean = true,
+    /** What the word is worth on a scored deck; null on every deck that prices none. */
+    wordPoints: Int? = null,
 ) {
     val current = rememberUpdatedState(onSurface)
 
@@ -98,12 +102,18 @@ fun CameraStage(
             modifier = Modifier.align(Alignment.BottomEnd).padding(end = 14.dp, bottom = 26.dp),
         )
 
-        WordPlate(word, Modifier.align(Alignment.BottomCenter).padding(bottom = 92.dp))
+        WordPlate(
+            word,
+            // The pill rides on the plate rather than over the picture: on the stage it would
+            // sit on whatever the camera happens to be pointing at.
+            points = wordPoints.takeIf { word.isNotEmpty() },
+            modifier = Modifier.align(Alignment.BottomCenter).padding(bottom = 92.dp),
+        )
     }
 }
 
 @Composable
-private fun WordPlate(word: String, modifier: Modifier = Modifier) {
+private fun WordPlate(word: String, points: Int?, modifier: Modifier = Modifier) {
     Column(
         modifier
             .fillMaxWidth()
@@ -131,6 +141,10 @@ private fun WordPlate(word: String, modifier: Modifier = Modifier) {
             textAlign = TextAlign.Center,
             maxLines = 2,
         )
+        if (points != null) {
+            Spacer(Modifier.height(6.dp))
+            DifficultyPill(points, style = DifficultyPillStyle.OnDark)
+        }
     }
 }
 

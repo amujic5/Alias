@@ -21,7 +21,7 @@ object OnlineWordSource {
 
     /** Decks offered for Online Play — every board game except Taboo (poor fit online). */
     val decks: List<BoardGame>
-        get() = JSONService.boardGames.filter { it.id != BoardGameId.TABOO }
+        get() = JSONService.boardGames.filter { it.id != BoardGameId.TABOO && !it.isLocalOnly }
 
     /** Loaded deck words + display language name for a (deckId, code) pair, or null. */
     data class DeckWords(val language: String, val languageCode: String, val words: List<String>)

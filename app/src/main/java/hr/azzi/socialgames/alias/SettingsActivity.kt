@@ -50,7 +50,10 @@ class SettingsActivity : BaseActivity() {
     ) {
         val dictionary = dictionaries.getOrNull(index) ?: dictionaries.firstOrNull() ?: return
         DictionaryService.playingDictionary = dictionary
-        val game = Game(false, time, score, teams, ArrayList(dictionary.words), 0)
+        // The deck decides whether its words carry values; the game only needs the flag,
+        // and reads the value off each word as it hands it out.
+        val game = Game(false, time, score, teams, ArrayList(dictionary.words), 0,
+            _isScored = boardGame.isScored)
         startActivity(
             Intent(this, PlayActivity::class.java)
                 .putExtra("game", game)

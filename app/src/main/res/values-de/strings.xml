@@ -433,4 +433,9 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
 
     <!-- Sharing the round result as an image -->
     <string name="share_round_results">ERGEBNIS TEILEN</string>
+    <string name="easy_medium_hard">Leicht Mittel Schwer</string>
+    <string name="easy_medium_hard_info">Über 1.000 Wörter. Drei Schwierigkeitsstufen. Du weißt nie, was als Nächstes kommt. Leichte Wörter bringen 1 Punkt, mittlere 2 und schwere 3. Bleib cool, erklär schnell und mach aus jedem Wort Punkte, bevor die Zeit abläuft.</string>
+    <string name="emh_tier_1">LEICHT · 1 PUNKT</string>
+    <string name="emh_tier_2">MITTEL · 2 PUNKTE</string>
+    <string name="emh_tier_3">SCHWER · 3 PUNKTE</string>
 </resources>

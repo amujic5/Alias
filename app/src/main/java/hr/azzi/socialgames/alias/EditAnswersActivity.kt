@@ -16,7 +16,7 @@ class EditAnswersActivity : BaseActivity() {
         super.onCreate(savedInstanceState)
 
         val words = game.currentTeamMarkedWords
-            .map { MarkedWord(it.word, it.isCorrect) }
+            .map { MarkedWord(it.word, it.isCorrect, it.points) }
             .toMutableStateList()
 
         setComposeContent {
@@ -24,7 +24,10 @@ class EditAnswersActivity : BaseActivity() {
                 EditAnswersScreen(
                     teamName = game.currentTeam.teamName,
                     words = words,
-                    onToggle = { i, checked -> words[i] = MarkedWord(words[i].word, checked) },
+                    onToggle = { i, checked ->
+                        words[i] = MarkedWord(words[i].word, checked, words[i].points)
+                    },
+                    showsPoints = game.isScored,
                     onCancel = { finish() },
                     onSave = {
                         val intent = Intent()

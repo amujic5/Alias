@@ -24,6 +24,24 @@
       "free": true
     },
     {
+      "id": "easy_medium_hard",
+      "name": "easy_medium_hard",
+      "image": "game_easy_medium_hard",
+      "languages": [
+        "Bos",
+        "Cro",
+        "Srb",
+        "Eng",
+        "Ger",
+        "Slo"
+      ],
+      "info": "easy_medium_hard_info",
+      "age": "10+",
+      "time": "45min",
+      "players": "3+",
+      "free": false
+    },
+    {
       "id": "game_alias_football",
       "name": "alias_football",
       "image": "game_football",

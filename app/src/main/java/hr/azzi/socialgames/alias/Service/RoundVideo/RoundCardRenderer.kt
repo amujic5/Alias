@@ -16,16 +16,31 @@ import androidx.core.content.res.ResourcesCompat
 import hr.azzi.socialgames.alias.R
 import kotlin.math.max
 
+/**
+ * A word as the cards list it: what it says, and what it was worth.
+ *
+ * @param points its value, on the decks where that varies. `null` keeps it off the card —
+ * a column of ones says nothing.
+ */
+data class RoundCardWord(val text: String, val points: Int? = null)
+
 /** What the two cards need to say. */
 data class RoundCardInfo(
     val teamName: String,
     val explainer: String,
     val guesser: String,
-    val correctWords: List<String>,
-    val skippedWords: List<String>,
+    val correctWords: List<RoundCardWord>,
+    val skippedWords: List<RoundCardWord>,
     /** Country backdrop for the intro; null falls back to a plain brand fill. */
     val backgroundRes: Int? = null,
-)
+) {
+    /**
+     * The headline number. Words that carry no value count as one, so this is the word count
+     * on every deck but the scored ones — where it is what the round is worth.
+     */
+    val correctTotal: Int
+        get() = correctWords.sumOf { it.points ?: 1 }
+}
 
 /** The cards' palette, from the same Figma frames. */
 object RoundCardColor {
@@ -44,6 +59,16 @@ object RoundCardColor {
     const val CONFETTI_PURPLE = 0xFF9B6DFF.toInt()
     const val CONFETTI_TEAL = 0xFF28D9C4.toInt()
     const val CONFETTI_GREEN = 0xFF4CD964.toInt()
+
+    /**
+     * The Easy/Medium/Hard ramp — the same three the difficulty pill uses in the app, so a
+     * word carries one colour from the round into the video and the share card.
+     */
+    fun tier(points: Int): Int = when (points) {
+        1 -> GREEN
+        2 -> ORANGE
+        else -> CONFETTI_PINK
+    }
 }
 
 /**
@@ -347,7 +372,7 @@ class RoundCardRenderer(private val context: Context, private val info: RoundCar
         layers += layer(RectF(25f, 246f + drop, 190f, 414f + drop), delay = 0.36) { canvas ->
             statCard(
                 canvas, 25f, 246f + drop, RoundCardColor.GREEN, "✓",
-                context.getString(R.string.ai_video_correct), info.correctWords.size,
+                context.getString(R.string.ai_video_correct), info.correctTotal,
             )
         }
         layers += layer(RectF(203f, 246f + drop, 368f, 414f + drop), delay = 0.44) { canvas ->
@@ -365,6 +390,7 @@ class RoundCardRenderer(private val context: Context, private val info: RoundCar
         addWordList(
             layers, x = 203f, y = 439f + drop, accent = RoundCardColor.ORANGE, glyph = "✕",
             title = context.getString(R.string.round_outro_skipped_words), words = info.skippedWords,
+            mutedPoints = true,
             cardDelay = 0.62, rowDelay = 0.78,
         )
 
@@ -379,9 +405,10 @@ class RoundCardRenderer(private val context: Context, private val info: RoundCar
         accent: Int,
         glyph: String,
         title: String,
-        words: List<String>,
+        words: List<RoundCardWord>,
         cardDelay: Double,
         rowDelay: Double,
+        mutedPoints: Boolean = false,
     ) {
         val shown = words.take(MAX_WORD_ROWS)
         val listHeight = max(72f, 42f + max(shown.size, 1) * 21f + 8f)
@@ -398,7 +425,8 @@ class RoundCardRenderer(private val context: Context, private val info: RoundCar
                 motion = RoundCardLayer.Motion.RISE,
                 padding = 6f,
             ) { canvas ->
-                wordListRow(canvas, x, rowY, accent, glyph, word, divider = index < shown.size - 1)
+                wordListRow(canvas, x, rowY, accent, glyph, word, mutedPoints,
+                    divider = index < shown.size - 1)
             }
         }
     }
@@ -455,20 +483,43 @@ class RoundCardRenderer(private val context: Context, private val info: RoundCar
         )
     }
 
-    private fun wordListRow(canvas: Canvas, x: Float, rowY: Float, accent: Int, glyph: String, word: String, divider: Boolean) {
+    private fun wordListRow(
+        canvas: Canvas, x: Float, rowY: Float, accent: Int, glyph: String,
+        word: RoundCardWord, mutedPoints: Boolean, divider: Boolean,
+    ) {
         val icon = scaled(RectF(x + 12f, rowY, x + 27f, rowY + 15f))
         canvas.drawOval(icon, Paint(Paint.ANTI_ALIAS_FLAG).apply { color = accent })
         text(canvas, glyph, icon, paint(jakarta, 800, s(9f), Color.WHITE), center = true)
+        // A valued word gives up its right end to the chip; the rest keep the full width.
+        val textRight = if (word.points == null) 154f else 132f
         text(
-            canvas, word, scaled(RectF(x + 33f, rowY - 1f, x + 154f, rowY + 16f)),
+            canvas, word.text, scaled(RectF(x + 33f, rowY - 1f, x + textRight, rowY + 16f)),
             paint(jakarta, 600, s(12f), RoundCardColor.INK), center = false, shrinkToFit = true,
         )
+        word.points?.let { pointsChip(canvas, RectF(x + 136f, rowY - 1f, x + 154f, rowY + 16f), it, mutedPoints) }
         if (divider) {
             canvas.drawRect(
                 scaled(RectF(x + 33f, rowY + 17f, x + 154f, rowY + 18f)),
                 Paint().apply { color = RoundCardColor.DIVIDER },
             )
         }
+    }
+
+    /**
+     * What the word was worth, in the tier's colour on a soft tint of itself — the same badge
+     * the Edit Answers list shows next to the word. `muted` is the skipped list: the value
+     * still reads, but faded, because none of it was earned.
+     */
+    private fun pointsChip(canvas: Canvas, rect: RectF, points: Int, muted: Boolean) {
+        val tint = RoundCardColor.tier(points)
+        val box = scaled(rect)
+        canvas.drawRoundRect(box, box.height() / 2f, box.height() / 2f, Paint(Paint.ANTI_ALIAS_FLAG).apply {
+            color = tint
+            alpha = if (muted) 26 else 41
+        })
+        text(canvas, "$points", box, paint(jakarta, 800, s(11f), tint).apply {
+            if (muted) alpha = 140
+        }, center = true)
     }
 
     // MARK: - Primitives

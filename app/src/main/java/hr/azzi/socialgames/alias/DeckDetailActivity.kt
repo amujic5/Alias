@@ -16,7 +16,7 @@ class DeckDetailActivity : BaseActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Warm up a rewarded ad for the "Try for free" path on locked paid decks.
-        if (!boardGame.free && !Billing.isUnlocked(boardGame.id.serializedName())) {
+        if (!boardGame.free && boardGame.allowsFreeTry && !Billing.isUnlocked(boardGame.id.serializedName())) {
             TryFreeAd.preload(this)
         }
         val launchGame = {

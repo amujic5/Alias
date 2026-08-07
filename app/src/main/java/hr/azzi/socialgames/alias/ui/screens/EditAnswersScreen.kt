@@ -5,12 +5,14 @@ import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
+import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.statusBarsPadding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
 import androidx.compose.material.icons.Icons
@@ -44,9 +46,13 @@ fun EditAnswersScreen(
     onToggle: (Int, Boolean) -> Unit,
     onCancel: () -> Unit,
     onSave: () -> Unit,
+    /** Whether a word can be worth more than one — only then is its value worth showing. */
+    showsPoints: Boolean = false,
 ) {
-    val correct = words.count { it.isCorrect }
-    val skip = words.size - correct
+    // Read off the edits being made here, not off the game: the round is only written back
+    // on Save, and the tally has to follow the switches in the meantime.
+    val correct = words.filter { it.isCorrect }.sumOf { it.points }
+    val skip = words.count { !it.isCorrect }
 
     Column(Modifier.fillMaxSize().background(Color.White)) {
         // Blue header
@@ -76,6 +82,12 @@ fun EditAnswersScreen(
                     Text(word.word, color = if (word.isCorrect) Alias.textPrimary else Alias.danger,
                         fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 18.sp,
                         modifier = Modifier.weight(1f))
+                    if (showsPoints) {
+                        // A skipped word keeps its value on screen but greys out — it is not
+                        // being scored.
+                        PointsBadge(word.points, dimmed = !word.isCorrect)
+                        Spacer(Modifier.width(12.dp))
+                    }
                     Switch(
                         checked = word.isCorrect,
                         onCheckedChange = { onToggle(i, it) },

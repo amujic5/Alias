@@ -440,4 +440,9 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
 
     <!-- Sharing the round result as an image -->
     <string name="share_round_results">DELI REZULTAT</string>
+    <string name="easy_medium_hard">Lahko Srednje Težko</string>
+    <string name="easy_medium_hard_info">Več kot 1.000 besed. Tri težavnostne stopnje. Nikoli ne veš, kaj sledi. Lahke besede so vredne 1 točko, srednje 2, težke pa 3. Ostani zbran, razlagaj hitro in spremeni vsako besedo v točke, preden zmanjka časa.</string>
+    <string name="emh_tier_1">LAHKO · 1 TOČKA</string>
+    <string name="emh_tier_2">SREDNJE · 2 TOČKI</string>
+    <string name="emh_tier_3">TEŽKO · 3 TOČKE</string>
 </resources>

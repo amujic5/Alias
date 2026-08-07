@@ -13,6 +13,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardWord
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundShareHeader
 import hr.azzi.socialgames.alias.Service.RoundVideo.shareRoundImage
 import hr.azzi.socialgames.alias.Service.RoundVideo.writeRoundShareImage
@@ -47,8 +48,9 @@ suspend fun writeAiShareImage(
         teamName = "",
         explainer = "",
         guesser = "",
-        correctWords = correctWords,
-        skippedWords = skippedWords,
+        // An AI round has no scored deck behind it, so no word carries a value.
+        correctWords = correctWords.map { RoundCardWord(it) },
+        skippedWords = skippedWords.map { RoundCardWord(it) },
     )
     writeRoundShareImage(
         context = context,

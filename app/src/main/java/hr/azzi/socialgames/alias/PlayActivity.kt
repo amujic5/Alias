@@ -24,6 +24,7 @@ import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import hr.azzi.socialgames.alias.Service.NoAds
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardWord
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaLibrary
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundRecorder
 import hr.azzi.socialgames.alias.Service.SoundSystem
@@ -133,8 +134,12 @@ class PlayActivity : BaseActivity() {
         teamName = game.currentTeam.teamName,
         explainer = game.explainingPlayerName,
         guesser = game.answeringPlayerName,
-        correctWords = game.currentTeamMarkedWords.filter { it.isCorrect }.map { it.word },
-        skippedWords = game.currentTeamMarkedWords.filterNot { it.isCorrect }.map { it.word },
+        // A word carries its value onto the cards on the decks that price them; the skipped
+        // ones carry theirs too, drawn muted — passing on a 3 is a different miss from a 1.
+        correctWords = game.currentTeamMarkedWords.filter { it.isCorrect }
+            .map { RoundCardWord(it.word, if (game.isScored) it.points else null) },
+        skippedWords = game.currentTeamMarkedWords.filterNot { it.isCorrect }
+            .map { RoundCardWord(it.word, if (game.isScored) it.points else null) },
     )
 
     /**
@@ -182,7 +187,7 @@ class PlayActivity : BaseActivity() {
                         teamName = info.teamName,
                         explainer = info.explainer,
                         guesser = info.guesser,
-                        correctCount = info.correctWords.size,
+                        correctCount = info.correctTotal,
                         skippedCount = info.skippedWords.size,
                     )?.let { item -> RoundMediaLibrary.fileFor(this, item) }
                 }

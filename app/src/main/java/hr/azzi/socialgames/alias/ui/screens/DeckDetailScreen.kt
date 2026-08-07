@@ -126,9 +126,12 @@ fun DeckDetailScreen(
                                 else stringResource(R.string.deck_unlock_plain)
                     PillButton(label, onClick = onBuy)
                     Spacer(Modifier.height(12.dp))
-                    // "Try for free": watch a rewarded ad, then play this session.
-                    PillButton(stringResource(R.string.try_for_free), kind = PillKind.Light, onClick = onTryFree)
-                    Spacer(Modifier.height(12.dp))
+                    // "Try for free": watch a rewarded ad, then play this session. Off for
+                    // decks that are bought rather than sampled.
+                    if (deck.allowsFreeTry) {
+                        PillButton(stringResource(R.string.try_for_free), kind = PillKind.Light, onClick = onTryFree)
+                        Spacer(Modifier.height(12.dp))
+                    }
                     Text(
                         stringResource(R.string.restore_purchases),
                         color = Color.White.copy(alpha = 0.8f),

@@ -36,6 +36,7 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
@@ -80,6 +81,9 @@ private fun DeckCard(deck: BoardGame, onClick: () -> Unit) {
     val ctx = LocalContext.current
     val imgId = remember(deck.image) { ctx.resources.getIdentifier(deck.image, "drawable", ctx.packageName) }
     val nameId = remember(deck.name) { ctx.resources.getIdentifier(deck.name, "string", ctx.packageName) }
+    // The tile is a fixed 150dp so the grid stays even, which leaves 126dp of content once
+    // the padding is off: 66 art + 10 gap + two 18dp lines fits, where the design's 70 + 12
+    // + a default line height did not, and the second line was cut off mid-glyph.
     Column(
         Modifier
             .fillMaxWidth()
@@ -88,19 +92,21 @@ private fun DeckCard(deck: BoardGame, onClick: () -> Unit) {
             .clip(CardShape)
             .background(Color.White)
             .clickable { onClick() }
-            .padding(16.dp),
+            .padding(horizontal = 12.dp, vertical = 12.dp),
         horizontalAlignment = Alignment.CenterHorizontally,
         verticalArrangement = Arrangement.Center,
     ) {
         if (imgId != 0) {
             Image(painterResource(imgId), contentDescription = null,
-                modifier = Modifier.size(70.dp), contentScale = ContentScale.Fit)
+                modifier = Modifier.size(66.dp), contentScale = ContentScale.Fit)
         }
-        Spacer(Modifier.height(12.dp))
+        Spacer(Modifier.height(10.dp))
         Text(
             if (nameId != 0) stringResource(nameId) else deck.name,
             fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 16.sp,
-            color = Alias.textPrimary, textAlign = TextAlign.Center, maxLines = 2,
+            lineHeight = 18.sp,
+            color = Alias.textPrimary, textAlign = TextAlign.Center,
+            maxLines = 2, overflow = TextOverflow.Ellipsis,
         )
     }
 }

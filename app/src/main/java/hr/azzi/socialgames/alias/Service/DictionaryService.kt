@@ -53,6 +53,28 @@ data class BoardGame(
     val isAliasJunior: Boolean
         get() = id == BoardGameId.JUNIOR
 
+    /**
+     * Decks whose words carry their own value, written as a `-1`/`-2`/`-3` suffix that
+     * never reaches the screen. Everything else scores a flat point per word.
+     */
+    val isScored: Boolean
+        get() = id == BoardGameId.EASY_MEDIUM_HARD
+
+    /**
+     * Decks that only make sense passing one phone around: the AI reads its words aloud
+     * and Online Play freezes a list for strangers, and neither has anything to do with
+     * a word being worth three points.
+     */
+    val isLocalOnly: Boolean
+        get() = id == BoardGameId.EASY_MEDIUM_HARD
+
+    /**
+     * Whether a locked deck can be opened for one session by watching a rewarded video.
+     * Off for Easy Medium Hard: it is bought, not sampled.
+     */
+    val allowsFreeTry: Boolean
+        get() = id != BoardGameId.EASY_MEDIUM_HARD
+
     constructor(parcel: Parcel) : this(
         parcel.readSerializable() as BoardGameId,
         parcel.readString()!!,
@@ -117,7 +139,9 @@ enum class BoardGameId {
     @SerializedName("alias_movies")
     MOVIES,
     @SerializedName("game_alias_who_am_i")
-    WHOAMI
+    WHOAMI,
+    @SerializedName("easy_medium_hard")
+    EASY_MEDIUM_HARD
 }
 
 fun BoardGameId.serializedName(): String {

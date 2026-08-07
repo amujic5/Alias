@@ -447,4 +447,9 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
 
     <!-- Sharing the round result as an image -->
     <string name="share_round_results">PODIJELI REZULTAT</string>
+    <string name="easy_medium_hard">Lako Srednje Teško</string>
+    <string name="easy_medium_hard_info">Više od 1.000 riječi. Tri razine težine. Nikad ne znaš što dolazi sljedeće. Lake riječi vrijede 1 bod, srednje 2, a teške 3. Ostani pribran, objašnjavaj brzo i pretvori svaku riječ u bodove prije nego što vrijeme istekne.</string>
+    <string name="emh_tier_1">LAKO · 1 BOD</string>
+    <string name="emh_tier_2">SREDNJE · 2 BODA</string>
+    <string name="emh_tier_3">TEŠKO · 3 BODA</string>
 </resources>

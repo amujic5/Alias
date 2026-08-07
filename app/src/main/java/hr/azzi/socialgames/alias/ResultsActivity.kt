@@ -9,6 +9,7 @@ import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Service.DualCameraSupport
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardWord
 import hr.azzi.socialgames.alias.ui.screens.ResultsScreen
 import hr.azzi.socialgames.alias.ui.screens.ResultsUiState
 import hr.azzi.socialgames.alias.ui.screens.TeamRow
@@ -70,7 +71,9 @@ class ResultsActivity : BaseActivity() {
         }
         return ResultsUiState(
             teamName = game.currentTeam.teamName,
-            correct = game.currentCorrectAnswers,
+            // Points, not guessed words: on a scored deck four hard words already read as
+            // eleven correct, and that is the number the round is worth.
+            correct = game.currentCorrectPoints,
             skip = game.currentSkipAnswers,
             rows = rows,
             nextTeamName = game.nextTeam?.teamName,
@@ -85,8 +88,10 @@ class ResultsActivity : BaseActivity() {
                 teamName = game.currentTeam.teamName,
                 explainer = game.explainingPlayerName,
                 guesser = game.answeringPlayerName,
-                correctWords = game.currentTeamMarkedWords.filter { it.isCorrect }.map { it.word },
-                skippedWords = game.currentTeamMarkedWords.filterNot { it.isCorrect }.map { it.word },
+                correctWords = game.currentTeamMarkedWords.filter { it.isCorrect }
+                    .map { RoundCardWord(it.word, if (game.isScored) it.points else null) },
+                skippedWords = game.currentTeamMarkedWords.filterNot { it.isCorrect }
+                    .map { RoundCardWord(it.word, if (game.isScored) it.points else null) },
             ),
         )
     }

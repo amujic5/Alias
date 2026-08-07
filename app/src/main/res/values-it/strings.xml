@@ -432,4 +432,9 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
 
     <!-- Sharing the round result as an image -->
     <string name="share_round_results">CONDIVIDI RISULTATO</string>
+    <string name="easy_medium_hard">Facile Medio Difficile</string>
+    <string name="easy_medium_hard_info">Più di 1.000 parole. Tre livelli di difficoltà. Non sai mai cosa arriverà dopo. Le parole facili valgono 1 punto, quelle medie 2 e quelle difficili 3. Mantieni la calma, spiega in fretta e trasforma ogni parola in punti prima che scada il tempo.</string>
+    <string name="emh_tier_1">FACILE · 1 PUNTO</string>
+    <string name="emh_tier_2">MEDIO · 2 PUNTI</string>
+    <string name="emh_tier_3">DIFFICILE · 3 PUNTI</string>
 </resources>
