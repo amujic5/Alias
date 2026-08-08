@@ -63,6 +63,7 @@
     <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Game type</string>
+    <string name="game_alias_esp">Alias Spain</string>
     <string name="game_alias_slo">Alias Slovenija</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Taboo</string>
@@ -340,6 +341,7 @@
     <string name="alias_cro_info">Dobrodošli u čarobni svijet Hrvatske kulture, gdje ćemo koristiti riječi i imena od prošlosti do sadašnjosti kao ključeve za otkrivanje tajni. Razmišljajte kao rječnički čarobnjaci dok koristite riječi poput \\"kralj Tomislav\\" i \\"Franjo Tuđman\\" te likove kao \\"profesor Baltazar\\" i \\"Mate Rimac\\" kako biste osvojili bodove u ovoj uzbudljivoj igri HR Alias.\n
 Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinonime, ili suprotna značenja kako biste pomogli svojim partnerima da pogode što više riječi prije nego što vrijeme istekne. Kroz ovu igru prepunu uzbuđenja, možete otkriti prave riječi i postati tim pobjednika u igri Alias! Započnite svoju avanturu i pokažite svoju maštovitost!</string>
     <string name="alias_srb_info">Dobrodošli u čarobni svet srpske kulture — od istorije do današnjih dana. Koristite reči i imena poput „Nikola Tesla“, „Sveti Sava“, „Novak Đoković“, „Kalemegdan“ i „ćevapi“ kao ključeve za pogađanje pojmova i osvajanje bodova u uzbudljivoj igri Alias Srbija.\n</string>
+    <string name="alias_esp_info">Alias Spain puts your knowledge of everything Spanish to the test!\n\nFrom paella, jamón and churros to the Alhambra, the Camino de Santiago and the Sagrada Família. From San Fermín, the Fallas and the Feria de Abril to Cervantes, Goya, Dalí and Almodóvar. Football, flamenco, Nadal and Los 40 Principales — six hundred cards of Spain.</string>
     <string name="alias_slo_info">Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!\n\nZ besedami in imeni iz priljubljenih otroških pravljicnih in literarnih junakov, Martina Krpana, Radovednega Tačka in Cicibana, pa do spoznavanja slovenskih kulturnih spomenikov, krajev, posebnosti, najbolj priljubljenih serij, knjig, jedi in slavnih ljudi. Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!</string>
     <string name="game_alias_uk_info">UK Alias - the exciting game where you explain words and learn more about the country you love the best!\n\nHow much do you know about the UK? This exciting word game requires players to explain words and learn more about the country you love the best!\n\nWith 1,800 words about UK sports, culture history and much more, this game is perfect for the whole family.</string>
     <string name="game_alias_junior_info">Explain words and images to your team members using words with the same, similar, or opposite meanings, mimicking sounds or actions, and more. This game can also be played by children who cannot yet read, as there are corresponding pictures next to the words. Each team tries to guess as many words as possible before the time runs out on the hourglass. Play this fast, dynamic, and insanely fun game!\nAlias Junior is a game for the whole family!</string>
@@ -453,4 +455,18 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="emh_tier_2">MEDIUM · 2 POINTS</string>
     <string name="emh_tier_3">HARD · 3 POINTS</string>
     <string name="round_saving_clip">Saving your clip…</string>
+
+    <!-- Deck languages -->
+    <string name="lang_eng">English</string>
+    <string name="lang_esp">Spanish</string>
+    <string name="lang_cro">Croatian</string>
+    <string name="lang_bos">Bosnian</string>
+    <string name="lang_srb">Serbian</string>
+    <string name="lang_slo">Slovenian</string>
+    <string name="lang_ger">German</string>
+    <string name="lang_fra">French</string>
+    <string name="lang_ita">Italian</string>
+    <string name="lang_dut">Dutch</string>
+    <string name="lang_rus">Russian</string>
+    <string name="lang_swe">Swedish</string>
 </resources>

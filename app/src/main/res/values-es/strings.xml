@@ -56,6 +56,7 @@
     <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Tipo de juego</string>
+    <string name="game_alias_esp">Alias España</string>
     <string name="game_alias_slo">Alias Eslovenia</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabú</string>
@@ -333,6 +334,7 @@
     <string name="alias_cro_info">Dobrodošli u čarobni svijet Hrvatske kulture, gdje ćemo koristiti riječi i imena od prošlosti do sadašnjosti kao ključeve za otkrivanje tajni. Razmišljajte kao rječnički čarobnjaci dok koristite riječi poput \\"kralj Tomislav\\" i \\"Franjo Tuđman\\" te likove kao \\"profesor Baltazar\\" i \\"Mate Rimac\\" kako biste osvojili bodove u ovoj uzbudljivoj igri HR Alias.\n
 Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinonime, ili suprotna značenja kako biste pomogli svojim partnerima da pogode što više riječi prije nego što vrijeme istekne. Kroz ovu igru prepunu uzbuđenja, možete otkriti prave riječi i postati tim pobjednika u igri Alias! Započnite svoju avanturu i pokažite svoju maštovitost!</string>
     <string name="alias_srb_info">Dobrodošli u čarobni svet srpske kulture — od istorije do današnjih dana. Koristite reči i imena poput „Nikola Tesla“, „Sveti Sava“, „Novak Đoković“, „Kalemegdan“ i „ćevapi“ kao ključeve za pogađanje pojmova i osvajanje bodova u uzbudljivoj igri Alias Srbija.\n</string>
+    <string name="alias_esp_info">¡Alias España pone a prueba todo lo que sabes de tu país!\n\nDe la paella, el jamón y los churros a la Alhambra, el Camino de Santiago y la Sagrada Família. De San Fermín, las Fallas y la Feria de Abril a Cervantes, Goya, Dalí y Almodóvar. Fútbol, flamenco, Nadal y Los 40 Principales: seiscientas cartas de España.</string>
     <string name="alias_slo_info">Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!\n\nZ besedami in imeni iz priljubljenih otroških pravljicnih in literarnih junakov, Martina Krpana, Radovednega Tačka in Cicibana, pa do spoznavanja slovenskih kulturnih spomenikov, krajev, posebnosti, najbolj priljubljenih serij, knjig, jedi in slavnih ljudi. Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!</string>
     <string name="game_alias_junior_info">Explica palabras e imágenes a los miembros de tu equipo utilizando palabras con el mismo, similar u opuesto significado, imitando sonidos o acciones y más. Este juego también puede ser jugado por niños que aún no saben leer, ya que hay imágenes correspondientes junto a las palabras. Cada equipo intenta adivinar la mayor cantidad de palabras posible antes de que se agote el tiempo en el reloj de arena. ¡Juega este juego rápido, dinámico y extremadamente divertido!\nAlias Junior es un juego para toda la familia!</string>
     <string name="game_taboo_info">Taboo es un juego de palabras de fiesta que aporta una buena dosis de diversión. Imagina esta situación: tú y tus amigos reunidos alrededor de una mesa, cada uno tratando de describir una palabra o frase inusual en una tarjeta, evitando cuidadosamente cuatro pistas muy comunes que también están en la tarjeta.\n\n¡Pero hay más! Tus oponentes también están ahí, vigilando atentamente el reloj, listos para hacer sonar el timbre como árbitros expertos si rompes la regla y mencionas palabras prohibidas o, digamos, intentas bailar como un profesional.\n\n¡Es una experiencia emocionante, amigos! Por cada tarjeta que tu equipo adivine con éxito, ganas un valioso punto. ¡Es como un desafío de habilidades verbales y es realmente divertido! Entonces, si estás buscando un juego de fiesta que te haga reír, gritar y tal vez incluso hacer algunas acrobacias verbales como un ninja, ¡Taboo es la elección perfecta para una noche épica!</string>
@@ -438,4 +440,18 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="emh_tier_2">MEDIO · 2 PUNTOS</string>
     <string name="emh_tier_3">DIFÍCIL · 3 PUNTOS</string>
     <string name="round_saving_clip">Guardando tu clip…</string>
+
+    <!-- Deck languages -->
+    <string name="lang_eng">Inglés</string>
+    <string name="lang_esp">Español</string>
+    <string name="lang_cro">Croata</string>
+    <string name="lang_bos">Bosnio</string>
+    <string name="lang_srb">Serbio</string>
+    <string name="lang_slo">Esloveno</string>
+    <string name="lang_ger">Alemán</string>
+    <string name="lang_fra">Francés</string>
+    <string name="lang_ita">Italiano</string>
+    <string name="lang_dut">Neerlandés</string>
+    <string name="lang_rus">Ruso</string>
+    <string name="lang_swe">Sueco</string>
 </resources>

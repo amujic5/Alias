@@ -65,6 +65,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Vrsta igre</string>
+    <string name="game_alias_esp">Alias Španija</string>
     <string name="game_alias_slo">Alias Slovenija</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabu</string>
@@ -342,6 +343,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijedno
     <string name="alias_cro_info">Dobrodošli u čarobni svet hrvatske kulture, gde ćemo koristiti reči i imena od prošlosti do sadašnjosti kao ključeve za otkrivanje tajni. Razmišljajte kao rečnički čarobnjaci dok koristite reči poput \\"kralj Tomislav\\" i \\"Franjo Tuđman\\" te likove kao \\"profesor Baltazar\\" i \\"Mate Rimac\\" kako biste osvojili bodove u ovoj uzbudljivoj igri HR Alias.\n
 Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sinonime ili suprotna značenja kako biste pomogli svojim saigračima da pogode što više reči pre nego što vreme istekne. Kroz ovu igru prepunu uzbuđenja možete otkriti prave reči i postati pobednički tim u igri Alias! Započnite svoju avanturu i pokažite svoju maštovitost!</string>
     <string name="alias_srb_info">Dobrodošli u čarobni svet srpske kulture — od istorije do današnjih dana. Koristite reči i imena poput „Nikola Tesla“, „Sveti Sava“, „Novak Đoković“, „Kalemegdan“ i „ćevapi“ kao ključeve za pogađanje pojmova i osvajanje bodova u uzbudljivoj igri Alias Srbija.\n</string>
+    <string name="alias_esp_info">Alias Španija proverava koliko poznaješ sve što je špansko!\n\nOd paelje, pršute i čurosa do Alhambre, Kamina de Santjago i Sagrade Familije. Od San Fermina, Falja i Ferije de Abril do Servantesa, Goje, Dalija i Almodovara. Fudbal, flamenko, Nadal i Los 40 Principales — šest stotina kartica Španije.</string>
     <string name="alias_slo_info">Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!\n\nZ besedami in imeni iz priljubljenih otroških pravljicnih in literarnih junakov, Martina Krpana, Radovednega Tačka in Cicibana, pa do spoznavanja slovenskih kulturnih spomenikov, krajev, posebnosti, najbolj priljubljenih serij, knjig, jedi in slavnih ljudi. Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!</string>
     <string name="game_alias_uk_info">UK Alias — uzbudljiva igra u kojoj objašnjavaš reči i učiš više o zemlji koju najviše voliš!\n\nKoliko znaš o Velikoj Britaniji? Ova uzbudljiva igra rečima traži od igrača da objašnjavaju reči i saznaju više o zemlji koju najviše vole!\n\nSa 1.800 reči o britanskom sportu, kulturi, istoriji i mnogo čemu drugom, ova igra je savršena za celu porodicu.</string>
     <string name="game_alias_junior_info">Objašnjavajte reči i slike članovima svog tima koristeći reči istog, sličnog ili suprotnog značenja, oponašajući zvukove ili radnje i još mnogo toga. Ovu igru mogu da igraju i deca koja još ne znaju da čitaju, jer se pored reči nalaze odgovarajuće sličice. Svaki tim pokušava da pogodi što više reči pre nego što istekne pesak u peščaniku. Igrajte ovu brzu, dinamičnu i suludo zabavnu igru!\nAlias Junior je igra za celu porodicu!</string>
@@ -448,4 +450,18 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="emh_tier_2">SREDNJE · 2 POENA</string>
     <string name="emh_tier_3">TEŠKO · 3 POENA</string>
     <string name="round_saving_clip">Čuvam snimak…</string>
+
+    <!-- Deck languages -->
+    <string name="lang_eng">Engleski</string>
+    <string name="lang_esp">Španski</string>
+    <string name="lang_cro">Hrvatski</string>
+    <string name="lang_bos">Bosanski</string>
+    <string name="lang_srb">Srpski</string>
+    <string name="lang_slo">Slovenački</string>
+    <string name="lang_ger">Nemački</string>
+    <string name="lang_fra">Francuski</string>
+    <string name="lang_ita">Italijanski</string>
+    <string name="lang_dut">Holandski</string>
+    <string name="lang_rus">Ruski</string>
+    <string name="lang_swe">Švedski</string>
 </resources>

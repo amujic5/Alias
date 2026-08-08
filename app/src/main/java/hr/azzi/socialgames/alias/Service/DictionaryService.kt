@@ -141,7 +141,9 @@ enum class BoardGameId {
     @SerializedName("game_alias_who_am_i")
     WHOAMI,
     @SerializedName("easy_medium_hard")
-    EASY_MEDIUM_HARD
+    EASY_MEDIUM_HARD,
+    @SerializedName("game_alias_esp")
+    ESP
 }
 
 fun BoardGameId.serializedName(): String {
@@ -169,6 +171,7 @@ object JSONService {
         BoardGameId.SLO -> "SLO"
         BoardGameId.GER -> "GER"
         BoardGameId.UK  -> "ENG"
+        BoardGameId.ESP -> "ESP"
         else -> null
     }
 

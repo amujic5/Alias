@@ -24,13 +24,20 @@ object OnlineWordSource {
         get() = JSONService.boardGames.filter { it.id != BoardGameId.TABOO && !it.isLocalOnly }
 
     /** Loaded deck words + display language name for a (deckId, code) pair, or null. */
-    data class DeckWords(val language: String, val languageCode: String, val words: List<String>)
+    data class DeckWords(val language: String, val languageCode: String, val words: List<String>) {
+        /** Language name in the app's language; `language` itself is an identifier, not display text. */
+        fun displayName(context: Context): String {
+            val id = context.resources.getIdentifier(
+                "lang_" + languageCode.lowercase(), "string", context.packageName)
+            return if (id != 0) context.getString(id) else language
+        }
+    }
 
     /** Languages a deck ships a non-empty word file for, as (code, displayName). */
     fun languages(context: Context, deck: BoardGame): List<Pair<String, String>> =
         deck.languages.mapNotNull { code ->
             val model = loadDeck(context, deck.id.serializedName(), code)
-            if (model == null || model.words.isEmpty()) null else code to model.language
+            if (model == null || model.words.isEmpty()) null else code to model.displayName(context)
         }
 
     /** Emoji flag for a games.json language short-code (case-insensitive). */
@@ -43,6 +50,7 @@ object OnlineWordSource {
         "srb" -> "🇷🇸"
         "slo" -> "🇸🇮"
         "bos" -> "🇧🇦"
+        "esp" -> "🇪🇸"
         "swe" -> "🇸🇪"
         "rus" -> "🇷🇺"
         "dut" -> "🇳🇱"

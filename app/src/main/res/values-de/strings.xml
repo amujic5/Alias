@@ -57,6 +57,7 @@
     <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Spieltyp</string>
+    <string name="game_alias_esp">Alias Spanien</string>
     <string name="game_alias_slo">Alias Slovenija</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabu</string>
@@ -334,6 +335,7 @@
     <string name="alias_cro_info">Dobrodošli u čarobni svijet Hrvatske kulture, gdje ćemo koristiti riječi i imena od prošlosti do sadašnjosti kao ključeve za otkrivanje tajni. Razmišljajte kao rječnički čarobnjaci dok koristite riječi poput \\"kralj Tomislav\\" i \\"Franjo Tuđman\\" te likove kao \\"profesor Baltazar\\" i \\"Mate Rimac\\" kako biste osvojili bodove u ovoj uzbudljivoj igri HR Alias.\n
 Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinonime, ili suprotna značenja kako biste pomogli svojim partnerima da pogode što više riječi prije nego što vrijeme istekne. Kroz ovu igru prepunu uzbuđenja, možete otkriti prave riječi i postati tim pobjednika u igri Alias! Započnite svoju avanturu i pokažite svoju maštovitost!</string>
     <string name="alias_srb_info">Dobrodošli u čarobni svet srpske kulture — od istorije do današnjih dana. Koristite reči i imena poput „Nikola Tesla“, „Sveti Sava“, „Novak Đoković“, „Kalemegdan“ i „ćevapi“ kao ključeve za pogađanje pojmova i osvajanje bodova u uzbudljivoj igri Alias Srbija.\n</string>
+    <string name="alias_esp_info">Alias Spanien testet, wie gut du alles Spanische kennst!\n\nVon Paella, Jamón und Churros bis zur Alhambra, dem Jakobsweg und der Sagrada Família. Von San Fermín, den Fallas und der Feria de Abril bis zu Cervantes, Goya, Dalí und Almodóvar. Fußball, Flamenco, Nadal und Los 40 Principales — sechshundert Karten Spanien.</string>
     <string name="alias_slo_info">Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!\n\nZ besedami in imeni iz priljubljenih otroških pravljicnih in literarnih junakov, Martina Krpana, Radovednega Tačka in Cicibana, pa do spoznavanja slovenskih kulturnih spomenikov, krajev, posebnosti, najbolj priljubljenih serij, knjig, jedi in slavnih ljudi. Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!</string>
     <string name="game_alias_junior_info">Erklären Sie Wörter und Bilder Ihren Teammitgliedern mithilfe von Wörtern mit gleicher, ähnlicher oder gegenteiliger Bedeutung, indem Sie Geräusche oder Handlungen nachahmen und vieles mehr. Dieses Spiel kann auch von Kindern gespielt werden, die noch nicht lesen können, da neben den Wörtern entsprechende Bilder vorhanden sind. Jedes Team versucht, so viele Wörter wie möglich zu erraten, bevor die Zeit in der Sanduhr abläuft. Spielen Sie dieses schnelle, dynamische und unglaublich unterhaltsame Spiel!\nAlias Junior ist ein Spiel für die ganze Familie!</string>
     <string name="game_taboo_info">Taboo ist ein geselliges Wortspiel, das eine ernsthafte Portion Spaß mit sich bringt. Stellen Sie sich folgende Situation vor: Sie und Ihre Freunde versammeln sich um einen Tisch, jeder versucht, ein ungewöhnliches Wort oder eine ungewöhnliche Phrase auf einer Karte zu beschreiben, wobei Sie sorgfältig vier sehr gängige Hinweise vermeiden müssen, die sich ebenfalls auf der Karte befinden.\n\nAber das ist noch nicht alles! Ihre Gegner sind ebenfalls dabei und behalten die Uhr im Auge, bereit, wie erfahrene Schiedsrichter zu signalisieren, wenn Sie die Regel verletzen und verbotene Wörter aussprechen oder, sagen wir, versuchen, wie echte Profis zu tanzen.\n\nEs ist ein aufregendes Erlebnis, meine Freunde! Für jede Karte, die Ihr Team erfolgreich errät, erhalten Sie einen wertvollen Punkt. Es ist wie eine Herausforderung der verbalen Fähigkeiten und macht wirklich viel Spaß! Wenn Sie also ein Party-Spiel suchen, das Sie zum Lachen, Schreien und vielleicht sogar zu einigen verbalen Akrobatiken wie ein Ninja bringen wird, dann ist Taboo die ideale Wahl für einen epischen Abend!</string>
@@ -439,4 +441,18 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="emh_tier_2">MITTEL · 2 PUNKTE</string>
     <string name="emh_tier_3">SCHWER · 3 PUNKTE</string>
     <string name="round_saving_clip">Clip wird gespeichert …</string>
+
+    <!-- Deck languages -->
+    <string name="lang_eng">Englisch</string>
+    <string name="lang_esp">Spanisch</string>
+    <string name="lang_cro">Kroatisch</string>
+    <string name="lang_bos">Bosnisch</string>
+    <string name="lang_srb">Serbisch</string>
+    <string name="lang_slo">Slowenisch</string>
+    <string name="lang_ger">Deutsch</string>
+    <string name="lang_fra">Französisch</string>
+    <string name="lang_ita">Italienisch</string>
+    <string name="lang_dut">Niederländisch</string>
+    <string name="lang_rus">Russisch</string>
+    <string name="lang_swe">Schwedisch</string>
 </resources>

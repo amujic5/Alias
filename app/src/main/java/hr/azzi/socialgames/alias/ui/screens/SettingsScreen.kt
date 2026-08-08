@@ -156,7 +156,7 @@ fun SettingsScreen(
                         verticalAlignment = Alignment.CenterVertically) {
                         Text(flagEmoji(dict?.imageURLString), fontSize = 18.sp)
                         Spacer(Modifier.width(8.dp))
-                        Text(dict?.language ?: "", color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 14.sp)
+                        Text(dict?.displayName(context) ?: "", color = Color.White, fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 14.sp)
                         Spacer(Modifier.width(6.dp))
                         Icon(Icons.Filled.ChevronRight, null, tint = Color.White.copy(alpha = 0.85f), modifier = Modifier.size(18.dp))
                     }
@@ -280,6 +280,7 @@ private fun LanguagePickerOverlay(
     onDismiss: () -> Unit,
     onPick: (Int) -> Unit,
 ) {
+    val ctx = LocalContext.current
     Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.5f)).clickable(false) {}) {
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
@@ -293,7 +294,7 @@ private fun LanguagePickerOverlay(
                 verticalArrangement = Arrangement.spacedBy(14.dp),
             ) {
                 itemsIndexed(dictionaries) { i, d ->
-                    LanguageCard(flagEmoji(d.imageURLString), d.language, i == selectedIndex) { onPick(i) }
+                    LanguageCard(flagEmoji(d.imageURLString), d.displayName(ctx), i == selectedIndex) { onPick(i) }
                 }
             }
         }

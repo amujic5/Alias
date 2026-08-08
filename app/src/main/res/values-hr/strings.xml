@@ -65,6 +65,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Vrsta igre</string>
+    <string name="game_alias_esp">Alias Španjolska</string>
     <string name="game_alias_slo">Alias Slovenija</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabu</string>
@@ -341,6 +342,7 @@ Cilj igre je postići rezultat koji je postavljen u postavkama (zadana vrijednos
     <string name="alias_cro_info">Dobrodošli u čarobni svijet Hrvatske kulture, gdje ćemo koristiti riječi i imena od prošlosti do sadašnjosti kao ključeve za otkrivanje tajni. Razmišljajte kao rječnički čarobnjaci dok koristite riječi poput \\"kralj Tomislav\\" i \\"Franjo Tuđman\\" te likove kao \\"profesor Baltazar\\" i \\"Mate Rimac\\" kako biste osvojili bodove u ovoj uzbudljivoj igri HR Alias.\n
 Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinonime, ili suprotna značenja kako biste pomogli svojim partnerima da pogode što više riječi prije nego što vrijeme istekne. Kroz ovu igru prepunu uzbuđenja, možete otkriti prave riječi i postati tim pobjednika u igri Alias! Započnite svoju avanturu i pokažite svoju maštovitost!</string>
     <string name="alias_srb_info">Dobrodošli u čarobni svet srpske kulture — od istorije do današnjih dana. Koristite reči i imena poput „Nikola Tesla“, „Sveti Sava“, „Novak Đoković“, „Kalemegdan“ i „ćevapi“ kao ključeve za pogađanje pojmova i osvajanje bodova u uzbudljivoj igri Alias Srbija.\n</string>
+    <string name="alias_esp_info">Alias Španjolska provjerava koliko poznaješ sve što je španjolsko!\n\nOd paelle, pršuta i churrosa do Alhambre, Camina de Santiago i Sagrade Familije. Od San Fermina, Falla i Feria de Abril do Cervantesa, Goye, Dalíja i Almodóvara. Nogomet, flamenco, Nadal i Los 40 Principales — šest stotina kartica Španjolske.</string>
     <string name="alias_slo_info">Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!\n\nZ besedami in imeni iz priljubljenih otroških pravljicnih in literarnih junakov, Martina Krpana, Radovednega Tačka in Cicibana, pa do spoznavanja slovenskih kulturnih spomenikov, krajev, posebnosti, najbolj priljubljenih serij, knjig, jedi in slavnih ljudi. Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!</string>
     <string name="game_alias_junior_info">Objasnite riječi i slike članovima vaše ekipe koristeći riječi istog, sličnog ili suprotnog značenja, oponašanjem zvukova ili radnji i slično. Igru mogu igrati i djeca koja još ne znaju čitati budući da se pokraj riječi nalaze i odgovarajuće slike. Svaka ekipa pokušava pogoditi što više riječi prije nego što istekne vrijeme na pješčanom satu. Zaigrajte ovu brzu, dinamičnu i ludo zabavnu igru!\nAlias Junior može igrati cijela obitelj!</string>
     <string name="game_taboo_info">Taboo predstavlja izvanrednu igru riječima koja donosi dozu ozbiljne zabave. Zamislite scenarij: vi i vaši kolege okupljeni oko stola, svatko nastoji opisati neku neobičnu riječ ili frazu s kartice, pri čemu se morate kloniti četiri najčešća hinta koji su također navedeni na kartici.\n\nNo, tu je i izazov: vaši protivnici promatraju sat, spremni da vas prekinu zvučnim signalom kao vrhunski suci ukoliko prekršite pravilo i izgovorite zabranjene riječi ili, recimo, pokušate zaplesati kao profesionalac.\n\nIskustvo je pravo, kolege! Za svaku karticu koju vaš tim uspješno odgonetne, stječete bod. Ovo je igra u kojoj se snalažljivost i komunikacija isprepliću na najzabavniji način. Dakle, ako tražite igru koja će podići atmosferu na vašem sastanku ili timskom događaju, Taboo je vaš izbor.</string>
@@ -453,4 +455,18 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="emh_tier_2">SREDNJE · 2 BODA</string>
     <string name="emh_tier_3">TEŠKO · 3 BODA</string>
     <string name="round_saving_clip">Spremam snimku…</string>
+
+    <!-- Deck languages -->
+    <string name="lang_eng">Engleski</string>
+    <string name="lang_esp">Španjolski</string>
+    <string name="lang_cro">Hrvatski</string>
+    <string name="lang_bos">Bosanski</string>
+    <string name="lang_srb">Srpski</string>
+    <string name="lang_slo">Slovenski</string>
+    <string name="lang_ger">Njemački</string>
+    <string name="lang_fra">Francuski</string>
+    <string name="lang_ita">Talijanski</string>
+    <string name="lang_dut">Nizozemski</string>
+    <string name="lang_rus">Ruski</string>
+    <string name="lang_swe">Švedski</string>
 </resources>

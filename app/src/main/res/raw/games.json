@@ -15,7 +15,8 @@
         "Rus",
         "Dut",
         "Bos",
-        "Slo"
+        "Slo",
+        "Esp"
       ],
       "info": "alias_classic_info",
       "age": "10+",
@@ -33,7 +34,8 @@
         "Srb",
         "Eng",
         "Ger",
-        "Slo"
+        "Slo",
+        "Esp"
       ],
       "info": "easy_medium_hard_info",
       "age": "10+",
@@ -51,7 +53,8 @@
         "Ger",
         "Slo",
         "Srb",
-        "Bos"
+        "Bos",
+        "Esp"
       ],
       "info": "alias_football_info",
       "age": "10+",
@@ -97,6 +100,19 @@
       "time": "45min",
       "players": "3+",
       "free": true
+    },
+    {
+        "id": "game_alias_esp",
+        "name": "game_alias_esp",
+        "image": "country_esp",
+        "languages": [
+            "Esp"
+        ],
+        "info": "alias_esp_info",
+        "age": "10+",
+        "time": "45min",
+        "players": "3+",
+        "free": true
     },
     {
       "id": "game_alias_slo",
@@ -148,7 +164,8 @@
         "Cro",
         "Slo",
         "Srb",
-        "Bos"
+        "Bos",
+        "Esp"
       ],
       "info": "game_alias_junior_info",
       "age": "4-10",
@@ -184,7 +201,8 @@
         "Ger",
         "Srb",
         "Bos",
-        "Slo"
+        "Slo",
+        "Esp"
       ],
       "info": "game_nba_info",
       "age": "10+",
@@ -202,7 +220,8 @@
         "Ger",
         "Srb",
         "Bos",
-        "Slo"
+        "Slo",
+        "Esp"
       ],
       "info": "alias_movies_info",
       "age": "10+",
@@ -220,7 +239,8 @@
         "Ger",
         "Srb",
         "Bos",
-        "Slo"
+        "Slo",
+        "Esp"
       ],
       "info": "game_alias_who_am_i_info",
       "age": "10+",

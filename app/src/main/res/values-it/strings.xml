@@ -56,6 +56,7 @@
     <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Tipo di gioco</string>
+    <string name="game_alias_esp">Alias Spagna</string>
     <string name="game_alias_slo">Alias Slovenia</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabù</string>
@@ -333,6 +334,7 @@
     <string name="alias_cro_info">Dobrodošli u čarobni svijet Hrvatske kulture, gdje ćemo koristiti riječi i imena od prošlosti do sadašnjosti kao ključeve za otkrivanje tajni. Razmišljajte kao rječnički čarobnjaci dok koristite riječi poput \\"kralj Tomislav\\" i \\"Franjo Tuđman\\" te likove kao \\"profesor Baltazar\\" i \\"Mate Rimac\\" kako biste osvojili bodove u ovoj uzbudljivoj igri HR Alias.\n
 Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinonime, ili suprotna značenja kako biste pomogli svojim partnerima da pogode što više riječi prije nego što vrijeme istekne. Kroz ovu igru prepunu uzbuđenja, možete otkriti prave riječi i postati tim pobjednika u igri Alias! Započnite svoju avanturu i pokažite svoju maštovitost!</string>
     <string name="alias_srb_info">Dobrodošli u čarobni svet srpske kulture — od istorije do današnjih dana. Koristite reči i imena poput „Nikola Tesla“, „Sveti Sava“, „Novak Đoković“, „Kalemegdan“ i „ćevapi“ kao ključeve za pogađanje pojmova i osvajanje bodova u uzbudljivoj igri Alias Srbija.\n</string>
+    <string name="alias_esp_info">Alias Spagna mette alla prova tutto quello che sai sulla Spagna!\n\nDalla paella, dal jamón e dai churros all\'Alhambra, al Cammino di Santiago e alla Sagrada Família. Da San Fermín, dalle Fallas e dalla Feria de Abril a Cervantes, Goya, Dalí e Almodóvar. Calcio, flamenco, Nadal e Los 40 Principales: seicento carte di Spagna.</string>
     <string name="alias_slo_info">Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!\n\nZ besedami in imeni iz priljubljenih otroških pravljicnih in literarnih junakov, Martina Krpana, Radovednega Tačka in Cicibana, pa do spoznavanja slovenskih kulturnih spomenikov, krajev, posebnosti, najbolj priljubljenih serij, knjig, jedi in slavnih ljudi. Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!</string>
     <string name="game_alias_junior_info">Spiegate parole e immagini ai membri del vostro team utilizzando parole con lo stesso, simile o opposto significato, imitando suoni o azioni e altro ancora. Questo gioco può essere giocato anche da bambini che non sanno ancora leggere, poiché accanto alle parole ci sono immagini corrispondenti. Ogni squadra cerca di indovinare il maggior numero di parole possibile prima che il tempo si esaurisca nella clessidra. Giocate a questo gioco veloce, dinamico e incredibilmente divertente!\nAlias Junior è un gioco per tutta la famiglia!</string>
     <string name="game_taboo_info">Taboo è un gioco di parole da festa che porta un tocco di divertimento serio. Immaginate questa situazione: voi e i vostri amici riuniti intorno a un tavolo, ognuno cerca di descrivere una parola o una frase strana su una carta, evitando accuratamente quattro suggerimenti molto comuni che sono anch\'essi sulla carta.\n\nMa c\'è di più! I vostri avversari sono lì anche loro, con un occhio vigile sull\'orologio, pronti a far suonare il buzzer come arbitri esperti se infrangete la regola e pronunciate parole proibite o, diciamo, cercate di ballare come dei veri professionisti.\n\nÈ un\'esperienza emozionante, amici! Per ogni carta che il vostro team indovina con successo, guadagnate un punto prezioso. È come una sfida di abilità verbali e è assolutamente divertente! Quindi, se state cercando un gioco da festa che vi farà ridere, urlare e magari anche fare qualche acrobazia verbale da ninja, Taboo è la vostra scelta per una serata epica!</string>
@@ -438,4 +440,18 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="emh_tier_2">MEDIO · 2 PUNTI</string>
     <string name="emh_tier_3">DIFFICILE · 3 PUNTI</string>
     <string name="round_saving_clip">Salvataggio del video…</string>
+
+    <!-- Deck languages -->
+    <string name="lang_eng">Inglese</string>
+    <string name="lang_esp">Spagnolo</string>
+    <string name="lang_cro">Croato</string>
+    <string name="lang_bos">Bosniaco</string>
+    <string name="lang_srb">Serbo</string>
+    <string name="lang_slo">Sloveno</string>
+    <string name="lang_ger">Tedesco</string>
+    <string name="lang_fra">Francese</string>
+    <string name="lang_ita">Italiano</string>
+    <string name="lang_dut">Olandese</string>
+    <string name="lang_rus">Russo</string>
+    <string name="lang_swe">Svedese</string>
 </resources>

@@ -65,6 +65,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="game_alias_srb">SRB Alias</string>
     <string name="game_alias_junior">Alias Junior</string>
     <string name="game_type">Vrsta igre</string>
+    <string name="game_alias_esp">Alias Španija</string>
     <string name="game_alias_slo">Alias Slovenija</string>
     <string name="game_alias_uk">UK Alias</string>
     <string name="game_taboo">Tabu</string>
@@ -341,6 +342,7 @@ Cilj igre je doseči rezultat, ki je določen v nastavitvah (privzeta vrednost j
     <string name="alias_cro_info">Dobrodošli v čarobnem svetu hrvaške kulture, kjer bomo uporabili besede in imena od preteklosti do sedanjosti kot ključe za odkrivanje skrivnosti. Razmišljajte kot čarovniki slovarja, ko uporabljate besede, kot so \\"kralj Tomislav\\" in \\"Franjo Tuđman\\", ter like, kot so \\"profesor Baltazar\\" in \\"Mate Rimac\\", da osvojite točke v tej vznemirljivi igri HR Vzdevek.\n
 Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenkami ali nasprotnimi pomeni, da pomagate svojim partnerjem uganiti čim več besed, preden poteče čas. Skozi to vznemirljivo igro lahko odkrijete prave besede in postanete zmagovalna ekipa v igri Vzdevek! Začnite svojo pustolovščino in pokažite svojo domišljijo!</string>
     <string name="alias_srb_info">Dobrodošli u čarobni svet srpske kulture — od istorije do današnjih dana. Koristite reči i imena poput „Nikola Tesla“, „Sveti Sava“, „Novak Đoković“, „Kalemegdan“ i „ćevapi“ kao ključeve za pogađanje pojmova i osvajanje bodova u uzbudljivoj igri Alias Srbija.\n</string>
+    <string name="alias_esp_info">Alias Španija preverja, koliko poznaš vse, kar je špansko!\n\nOd paelle, pršuta in čurosov do Alhambre, Camina de Santiago in Sagrade Familie. Od San Fermina, Fallas in Feria de Abril do Cervantesa, Goye, Dalíja in Almodóvarja. Nogomet, flamenko, Nadal in Los 40 Principales — šeststo kartic Španije.</string>
     <string name="alias_slo_info">Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!\n\nZ besedami in imeni iz priljubljenih otroških pravljicnih in literarnih junakov, Martina Krpana, Radovednega Tačka in Cicibana, pa do spoznavanja slovenskih kulturnih spomenikov, krajev, posebnosti, najbolj priljubljenih serij, knjig, jedi in slavnih ljudi. Alias Slovenija preizkuša tvoje besedišče in poznavanje vsega, kar je slovensko!</string>
     <string name="game_alias_junior_info">Razložite besede in slike svojim člani ekip z uporabo besed z enakim, podobnim ali nasprotnim pomenom, posnemajte zvoke ali dejanja in še več. To igro lahko igrate tudi otroci, ki še ne znajo brati, saj so ob besedah tudi slike. Vsaka ekipa poskuša uganiti čim več besed, preden se izteče čas v peščeni uri. Igrajte to hitro, dinamično in noro zabavno igro!\nVzdevek Junior je igra za celotno družino!</string>
     <string name="game_taboo_info">Tabu je ultimativen večerni besedni ekstravagantenca! Predstavljajte si to: vi in vaši prijatelji se zberete in poskušate opisati neko smešno besedo ali frazo z zloženke, ne da bi pri tem razkrili štiri očitne namige, ki so tudi na kartici.\n\nAmpak počakajte, ni konca! Tudi vaši nasprotniki so tam, natančno gledajo na uro, pripravljeni vas zvati kot nadležnega komarja, če spustite prepovedane besede ali se odločite za najboljše interpretativne plesne poteze.\n\nVznemirjenje je pravo, ljudje! Za vsako osvojeno kartico vaše ekipe zaslužite dragoceno točko. Gre za besedno bitko spretnosti in je čisti užitek! Torej, če iščete zabavno igro za večer, ki vas bo nasmejala, spravila v krik in morda celo naredila nekaj ninja besednih akrobatik, je Tabu vaš vstopnica v epohalni večer!</string>
@@ -446,4 +448,18 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="emh_tier_2">SREDNJE · 2 TOČKI</string>
     <string name="emh_tier_3">TEŽKO · 3 TOČKE</string>
     <string name="round_saving_clip">Shranjujem posnetek…</string>
+
+    <!-- Deck languages -->
+    <string name="lang_eng">Angleščina</string>
+    <string name="lang_esp">Španščina</string>
+    <string name="lang_cro">Hrvaščina</string>
+    <string name="lang_bos">Bosanščina</string>
+    <string name="lang_srb">Srbščina</string>
+    <string name="lang_slo">Slovenščina</string>
+    <string name="lang_ger">Nemščina</string>
+    <string name="lang_fra">Francoščina</string>
+    <string name="lang_ita">Italijanščina</string>
+    <string name="lang_dut">Nizozemščina</string>
+    <string name="lang_rus">Ruščina</string>
+    <string name="lang_swe">Švedščina</string>
 </resources>
