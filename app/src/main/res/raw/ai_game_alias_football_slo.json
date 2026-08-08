@@ -1,0 +1,2677 @@
+{
+  "language": "Slovenian",
+  "languageCode": "SLO",
+  "words": [
+    {
+      "word": "Žoga",
+      "clues": [
+        "Okrogel predmet ki ga brcaš po igrišču.",
+        "Napihnjena je z zrakom in se odbija.",
+        "Brez nje tekme sploh ni.",
+        "Nekoč je bila usnjena in težka ko je bila mokra.",
+        "Sodnik jo pred začetkom postavi na sredino.",
+        "Otroci jo brcnejo čez ograjo in gre po skrivaj ponjo.",
+        "Če se preluknja jo je treba zakrpati ali zamenjati.",
+        "V košarki jo mečeš z rokami tukaj pa z nogami.",
+        "Vratar jo ujame in odbije.",
+        "Ko gre čez črto za vrati je kot."
+      ]
+    },
+    {
+      "word": "Gol",
+      "clues": [
+        "Ko gre žoga v mrežo in vsi zavpijejo.",
+        "Za tega se navijači objamejo in skačejo.",
+        "Praznuje se s tekom proti tribuni.",
+        "Sodnik pokaže proti sredini ko je dosežen.",
+        "Tekma se lahko konča brez enega samega.",
+        "Napadalec ga išče cel večer.",
+        "Če ga daš v zadnji minuti si junak.",
+        "Vratar ga poskuša preprečiti.",
+        "Šteje samo če cela žoga prečka črto.",
+        "Kdor jih da največ v sezoni dobi nagrado za strelca."
+      ]
+    },
+    {
+      "word": "Vratar",
+      "clues": [
+        "Edini na igrišču ki sme z rokami.",
+        "Nosi drugačen dres kot soigralci.",
+        "Stoji med dvema stebričkoma in mreža za njim.",
+        "Njegove rokavice so lepljive.",
+        "Pri enajstmetrovki ugiba na katero stran skočiti.",
+        "Če ga premagajo enajstkrat je bil grozen večer.",
+        "Buffon in Oblak sta znana predstavnika tega poklica.",
+        "Pogosto vpije na obrambo naj se postavi.",
+        "Med vsemi enajstimi je zadnja obramba.",
+        "Včasih pride v napad pri kotu v zadnji minuti."
+      ]
+    },
+    {
+      "word": "Branilec",
+      "clues": [
+        "Igralec ki skrbi da nasprotnik ne pride do vrat.",
+        "Igra blizu svojega vratarja.",
+        "Njegova naloga je odvzeti žogo napadalcu.",
+        "Pogosto glavo nastavi pri kotih.",
+        "Če zgreši je nasprotnik sam pred vrati.",
+        "Nosi številke od dve do pet.",
+        "V slovenščini se mu reče tudi bek.",
+        "Redko doseže zadetek pa je takrat velik praznik.",
+        "Pri prekršku v svojem kazenskem prostoru povzroči enajstmetrovko.",
+        "Postavlja se v steno pri prostem strelu."
+      ]
+    },
+    {
+      "word": "Napadalec",
+      "clues": [
+        "Igralec ki je najbolj spredaj.",
+        "Njegova naloga je zadeti mrežo.",
+        "Nosi navadno številko devet.",
+        "Čaka na podajo v kazenskem prostoru.",
+        "Če ne zadene cel mesec ga navijači kritizirajo.",
+        "Haaland in Šeško igrata na tem mestu.",
+        "Pogosto je v prepovedanem položaju.",
+        "Nasprotni branilci ga ves čas držijo za dres.",
+        "Ko dobi žogo z boka jo poskuša poslati v mrežo.",
+        "Njegovi goli odločajo tekme."
+      ]
+    },
+    {
+      "word": "Vezist",
+      "clues": [
+        "Igralec ki povezuje obrambo in napad.",
+        "Igra na sredini igrišča.",
+        "Največ teka na tekmi opravi prav on.",
+        "Modrić je najbolj znan primer.",
+        "Podaja žogo naprej in nazaj.",
+        "Pogosto nosi številko osem ali deset.",
+        "Njegove podaje odločajo o tempu igre.",
+        "Mora znati braniti in napadati.",
+        "Če je dober ekipa nadzoruje tekmo.",
+        "Med polčasom je najbolj utrujen."
+      ]
+    },
+    {
+      "word": "Sodnik",
+      "clues": [
+        "Nosi piščalko in črn dres.",
+        "Kaže kartone kadar je kdo grob.",
+        "Navijači ga radi žalijo.",
+        "Odloči ali je bil prekršek ali ne.",
+        "Na začetku vrže kovanec.",
+        "Pomagata mu dva ob črti.",
+        "Danes mu pomaga tudi videoposnetek.",
+        "Meri dodani čas na koncu polčasa.",
+        "Če se zmoti je naslednji dan v vseh novicah.",
+        "Piska konec tekme."
+      ]
+    },
+    {
+      "word": "Trener",
+      "clues": [
+        "Stoji ob igrišču in vpije navodila.",
+        "Odloči kdo igra in kdo sedi.",
+        "Med polčasom govori ekipi v slačilnici.",
+        "Pogosto nosi obleko ali športno jopico.",
+        "Če ekipa izgublja ga odpustijo.",
+        "Guardiola in Mourinho sta znana.",
+        "Riše taktiko na tablo.",
+        "Med tekmo največ hodi po svojem prostoru.",
+        "Kadar je zadetek se veseli bolj kot igralci.",
+        "Odloči tudi menjave."
+      ]
+    },
+    {
+      "word": "Kapetan",
+      "clues": [
+        "Nosi trak okoli rokava.",
+        "Vodi ekipo na igrišče.",
+        "Sodnik z njim govori o spornih odločitvah.",
+        "Navadno je najbolj izkušen v moštvu.",
+        "Pri žrebu izbere stran igrišča.",
+        "Če se poškoduje trak prevzame nekdo drug.",
+        "Na ladji je glavni poveljnik posadke.",
+        "Prvi dvigne pokal ob zmagi.",
+        "Njegova beseda v slačilnici največ šteje.",
+        "Pomirja soigralce ko se razburijo."
+      ]
+    },
+    {
+      "word": "Navijač",
+      "clues": [
+        "Sedi na tribuni in kriči.",
+        "Nosi šal in dres svoje ekipe.",
+        "Poje pesmi cel drugi polčas.",
+        "Potuje z ekipo tudi v tujino.",
+        "Ob zadetku skoči s sedeža.",
+        "Prižge baklo čeprav ne bi smel.",
+        "Kupi vstopnico in prinese zastavo.",
+        "Ob porazu žalosten odide domov.",
+        "Njihov hrup je znan kot dvanajsti igralec.",
+        "Nekateri imajo obraz pobarvan v klubske barve."
+      ]
+    },
+    {
+      "word": "Stadion",
+      "clues": [
+        "Velika zgradba s tribunami okoli igrišča.",
+        "Tja pride tudi šestdeset tisoč ljudi.",
+        "Ima reflektorje za večerne tekme.",
+        "V Ljubljani je najbolj znan v Stožicah.",
+        "Wembley in Camp Nou sta zelo znana.",
+        "Ob koncu tekme se izprazni v pol ure.",
+        "Ima garderobe in prostor za novinarje.",
+        "Trava na sredini se redno kosi.",
+        "Ko je razprodan ni več niti enega prostega sedeža.",
+        "Zvok množice se od zidov odbija."
+      ]
+    },
+    {
+      "word": "Tribuna",
+      "clues": [
+        "Del stadiona kjer sedijo gledalci.",
+        "Ima vrste sedežev druga nad drugo.",
+        "Navijači na severni strani so najglasnejši.",
+        "Ko pade zadetek vsi vstanejo z nje.",
+        "Med dežjem je del pokrit s streho.",
+        "Vstopnica pove na kateri sediš.",
+        "Med tekmo se po njej valovi.",
+        "Otroci na njej mahajo z zastavicami.",
+        "Po tekmi jo čistilci pometejo.",
+        "Najdražji sedeži so na sredini glavne."
+      ]
+    },
+    {
+      "word": "Igrišče",
+      "clues": [
+        "Zelena površina s črtami.",
+        "Dolgo je približno sto metrov.",
+        "Na sredini je krog in pika.",
+        "Ob straneh sta dva kazenska prostora.",
+        "Trava se pred tekmo poškropi z vodo.",
+        "Pozimi ga včasih pokrije sneg.",
+        "Sodnik ga pred tekmo pregleda.",
+        "Igralci nanj pritečejo iz predora.",
+        "Če je razmočeno se žoga ustavlja.",
+        "Otroci ga narišejo kar na travniku z majicami za vrata."
+      ]
+    },
+    {
+      "word": "Mreža",
+      "clues": [
+        "Visi za vratnicama.",
+        "Ko se strese je zadetek.",
+        "Narejena je iz vrvic in ima luknjice.",
+        "Vratar je za tekmo prime in preveri.",
+        "Če ima luknjo gre žoga skoznjo in nastane zmeda.",
+        "V odbojki je napeta čez sredino.",
+        "Ribič jo vrže v vodo.",
+        "Pajek jo splete v kotu.",
+        "Po zadetku se v njej ustavi žoga.",
+        "Delavci jo pred tekmo napnejo na kljukice."
+      ]
+    },
+    {
+      "word": "Kot",
+      "clues": [
+        "Sodnik pokaže proti zastavici ob robu.",
+        "Igralec žogo postavi v majhen lok na vogalu.",
+        "Iz njega se pogosto zadene z glavo.",
+        "Dosodi se ko branilec zadnji zadene žogo čez svojo črto.",
+        "V kazenskem prostoru se takrat gnete deset igralcev.",
+        "Vratar takrat vpije naj se pokrijejo.",
+        "Nogometaš ga izvede s prve ali z drugo nogo.",
+        "Šteje se v statistiki tekme.",
+        "Nasprotje tega je odmik od vrat.",
+        "V matematiki ga merimo v stopinjah."
+      ]
+    },
+    {
+      "word": "Prekršek",
+      "clues": [
+        "Kadar igralec podre nasprotnika.",
+        "Sodnik zapiska in pokaže na tla.",
+        "Če je hud sledi rumeni ali rdeči karton.",
+        "V kazenskem prostoru pomeni najstrožjo kazen.",
+        "Igralec zaradi njega dobi opomin.",
+        "Grobo brcanje po nogah je najpogostejši.",
+        "Nasprotnik nato izvede prosti strel.",
+        "Če jih nabereš preveč zamudiš naslednjo tekmo.",
+        "Simuliranje padca je tudi kaznovano.",
+        "Sodnik ga včasih spregleda in nastane vik in krik."
+      ]
+    },
+    {
+      "word": "Karton",
+      "clues": [
+        "Sodnik ga potegne iz žepa.",
+        "Rumeni pomeni opomin.",
+        "Rdeči pomeni da moraš z igrišča.",
+        "Dva rumena se seštejeta v rdečega.",
+        "Igralec ga dobi če se prepira s sodnikom.",
+        "Ima ga v prsnem žepu skupaj z beležko.",
+        "Če jih zbereš preveč si kaznovan s prepovedjo igranja.",
+        "Barva pove kako hud je bil prekršek.",
+        "Nekateri jih v eni tekmi dobijo pet.",
+        "Tudi škatla iz debelega papirja se tako imenuje."
+      ]
+    },
+    {
+      "word": "Enajstmetrovka",
+      "clues": [
+        "Strel z bele pike.",
+        "Samo vratar in strelec ostaneta v prostoru.",
+        "Odloča o zmagovalcu ko je izenačeno.",
+        "Vratar ugiba levo ali desno.",
+        "Če jo zgrešiš je to nočna mora.",
+        "Dosodi se za prekršek v kazenskem prostoru.",
+        "Razdalja do vrat je natanko enajst metrov.",
+        "Po podaljških sledi izvajanje teh.",
+        "Igralec pred njo globoko vdihne.",
+        "Panenka je izumil poseben način izvedbe na sredino."
+      ]
+    },
+    {
+      "word": "Podaja",
+      "clues": [
+        "Ko žogo pošlješ soigralcu.",
+        "Lahko je kratka ali dolga.",
+        "Če je natančna nastane priložnost.",
+        "Vezist jih na tekmo naredi tudi sto.",
+        "Zadnja pred zadetkom šteje kot asistenca.",
+        "Lahko je po tleh ali po zraku.",
+        "Nasprotnik jo lahko prestreže.",
+        "Trener zahteva da so hitre in enostavne.",
+        "S peto je najlepša za oko.",
+        "Slaba pomeni izgubljeno žogo."
+      ]
+    },
+    {
+      "word": "Strel",
+      "clues": [
+        "Poskus da žoga konča v mreži.",
+        "Lahko je z desno ali z levo.",
+        "Vratar ga odbije v kot.",
+        "Če gre čez prečko navijači zavzdihnejo.",
+        "Z razdalje dvajsetih metrov je najlepši.",
+        "Sodnik ga po prekršku dovoli kot prostega.",
+        "Nekateri imajo tako močnega da mreža poči.",
+        "Meri se tudi hitrost v kilometrih na uro.",
+        "Če zadene vratnico se odbije nazaj v igro.",
+        "Statistika šteje koliko jih je bilo v okvir."
+      ]
+    },
+    {
+      "word": "Zmaga",
+      "clues": [
+        "Ko doseže tvoja ekipa več zadetkov.",
+        "Prinese tri točke na lestvici.",
+        "Po njej se v slačilnici poje.",
+        "Navijači se zaradi nje veselijo do jutra.",
+        "Nasprotje poraza.",
+        "Na koncu sezone jih šteješ za naslov.",
+        "Trenerju podaljša pogodbo.",
+        "Če je s petimi razlike je prepričljiva.",
+        "Po njej ekipa dela krog časti okoli igrišča.",
+        "V šahu jo dosežeš z matom."
+      ]
+    },
+    {
+      "word": "Poraz",
+      "clues": [
+        "Ko prejmeš več zadetkov kot jih daš.",
+        "Po njem so glave povešene.",
+        "Navijači takrat zapustijo stadion prej.",
+        "Nasprotje zmage.",
+        "Trenerja lahko stane službe.",
+        "Če je z visoko razliko je ponižujoč.",
+        "Igralci se po njem opravičijo navijačem pod tribuno.",
+        "V tabeli pomeni nič točk.",
+        "Po njem sledi dolg trening naslednji dan.",
+        "Najhujši je v finalu."
+      ]
+    },
+    {
+      "word": "Remi",
+      "clues": [
+        "Ko obe ekipi dosežeta enako zadetkov.",
+        "Prinese eno točko vsaki.",
+        "Nihče ni zmagal in nihče izgubil.",
+        "Rezultat je lahko nič nič.",
+        "V izločilnih bojih temu sledijo podaljški.",
+        "Trener manjše ekipe je s tem zadovoljen.",
+        "Ob koncu si igralci izmenjajo dres brez slabe volje.",
+        "V šahu se doseže tudi z dogovorom.",
+        "Beseda prihaja iz francoščine.",
+        "V tabeli je zapisan med zmagami in porazi."
+      ]
+    },
+    {
+      "word": "Polčas",
+      "clues": [
+        "Tekma je razdeljena na dva takšna dela.",
+        "Traja petinštirideset minut.",
+        "Med njima je odmor.",
+        "Ob koncu prvega sodnik zapiska.",
+        "Ekipi po odmoru zamenjata strani.",
+        "Trener takrat v slačilnici popravi taktiko.",
+        "Na televiziji takrat tečejo reklame.",
+        "Gledalci gredo takrat po pijačo.",
+        "Rezultat ob koncu prvega se posebej beleži.",
+        "Skupaj z dodatkom traja skoraj petdeset minut."
+      ]
+    },
+    {
+      "word": "Podaljšek",
+      "clues": [
+        "Dodatnih trideset minut ko je izenačeno.",
+        "Igra se v izločilnih tekmah.",
+        "Sledi mu izvajanje enajstmetrovk.",
+        "Igralci so takrat že povsem izmuzeni.",
+        "Razdeljen je na dva krajša dela.",
+        "Trener takrat porabi zadnjo menjavo.",
+        "Marsikatera odločitev pade prav v njem.",
+        "Navijači takrat najbolj grizejo nohte.",
+        "V rednem delu prvenstva ga ni.",
+        "Zlati zadetek je bil nekoč pravilo v njem."
+      ]
+    },
+    {
+      "word": "Menjava",
+      "clues": [
+        "Ko en igralec zapusti igrišče drug pa pride.",
+        "Sodnik ob črti dvigne tablico s številkami.",
+        "Trener jih ima na voljo pet.",
+        "Utrujen igralec z dvignjeno roko pozdravi tribuno.",
+        "Sveže noge pogosto odločijo tekmo.",
+        "Nekateri igralci se ob njej jezijo.",
+        "Zgodi se največkrat okoli šestdesete minute.",
+        "Vratarjeva je redka in pomeni poškodbo.",
+        "Med njo se čas ustavi in doda na koncu.",
+        "Tudi denar v tuji valuti se tako obravnava."
+      ]
+    },
+    {
+      "word": "Klop",
+      "clues": [
+        "Sedež ob robu igrišča za rezervne.",
+        "Trener pred njo stoji in vpije.",
+        "Kdor ne igra sedi tam s toplo bundo.",
+        "Pokrita je s streho zaradi dežja.",
+        "Na njej so tudi zdravnik in pomočniki.",
+        "Če igralec preveč časa presedi zahteva odhod v drug klub.",
+        "V parku je na njej prostor za tri ljudi.",
+        "Po zadetku vsi z nje planejo pokonci.",
+        "Sodnik lahko trenerja pošlje z nje na tribuno.",
+        "Rezervni vratar tam presedi celo sezono."
+      ]
+    },
+    {
+      "word": "Dres",
+      "clues": [
+        "Majica s številko in imenom na hrbtu.",
+        "Vsak klub ima svoje barve.",
+        "Po tekmi si jih igralci izmenjajo.",
+        "Domači in gostujoči sta različna.",
+        "Navijači jih kupujejo v klubski trgovini.",
+        "Številka deset je najbolj zaželena.",
+        "Vratarjev se razlikuje od ostalih.",
+        "Na prsih je znak sponzorja.",
+        "Če ga vlečeš je to prekršek.",
+        "Ob slovesu ga obesijo pod strop dvorane."
+      ]
+    },
+    {
+      "word": "Kopačke",
+      "clues": [
+        "Čevlji z žebljički na podplatu.",
+        "Preprečijo drsenje po mokri travi.",
+        "Nekatere so barvne in svetleče.",
+        "Pred tekmo jih igralci zavežejo dvakrat.",
+        "Po tekmi so blatne in jih je treba očistiti.",
+        "Otroci si jih želijo za rojstni dan.",
+        "Za umetno travo se uporabljajo drugačne.",
+        "Znane znamke jih izdelujejo v vseh barvah.",
+        "Če se ti razveže vezalka moraš stran z igrišča.",
+        "Njihovi žebljički pustijo sled v travi."
+      ]
+    },
+    {
+      "word": "Ščitniki",
+      "clues": [
+        "Trdi ploščici pod nogavicami.",
+        "Varujejo golenico pred brco.",
+        "Brez njih sodnik ne pusti na igrišče.",
+        "Otroci jih pogosto pozabijo doma.",
+        "Po tekmi dišijo po znoju.",
+        "Narejeni so iz plastike ali karbona.",
+        "Nekateri igralci nosijo majhne za več gibljivosti.",
+        "Pod njimi se pogosto skriva trak.",
+        "Rešili so marsikatero zlomljeno kost.",
+        "Nogometaši jih vtaknejo pod dolge nogavice."
+      ]
+    },
+    {
+      "word": "Piščalka",
+      "clues": [
+        "Sodnik jo ima ves čas v ustih.",
+        "Ko zapiska se igra ustavi.",
+        "Njen zvok pomeni prekršek ali konec.",
+        "Visi na vrvici okoli vratu.",
+        "Ob koncu tekme zapiska trikrat.",
+        "Tudi policist jo uporablja na cesti.",
+        "Nekateri navijači jo prinesejo na tribuno in motijo.",
+        "Njen zvok se sliši čez cel stadion.",
+        "Če jo pozabi doma je tekma v težavah.",
+        "Reševalec na bazenu jo uporablja podobno."
+      ]
+    },
+    {
+      "word": "Zastavica",
+      "clues": [
+        "Pomočnik ob črti jo dviga.",
+        "Z njo pokaže prepovedani položaj.",
+        "Na vogalu igrišča jih stoji po ena.",
+        "Ima kratek drog in barvno krpico.",
+        "Ko jo dvigne se napad ustavi.",
+        "Otroci mahajo z manjšimi na tribuni.",
+        "Pri kotu jo igralec pogosto podre in postavi nazaj.",
+        "Njena barva je pogosto oranžna ali rumena.",
+        "Če je dvignjena in sodnik ne piska nastane zmešnjava.",
+        "Na vrhu stadiona plapola večja različica."
+      ]
+    },
+    {
+      "word": "Rezultat",
+      "clues": [
+        "Številki ki povesta kdo vodi.",
+        "Prikaže se na velikem zaslonu.",
+        "Nič nič pomeni da ni bilo zadetkov.",
+        "Ob koncu tekme je dokončen.",
+        "Novinarji ga sporočijo takoj po piščalki.",
+        "Če je izenačen sledijo podaljški.",
+        "Stavnice nanj sprejemajo napovedi.",
+        "Na semaforju sta dve številki z dvopičjem.",
+        "Med tekmo se lahko večkrat obrne.",
+        "Tudi v šoli ga dobiš pri testu."
+      ]
+    },
+    {
+      "word": "Prvenstvo",
+      "clues": [
+        "Tekmovanje ki traja celo sezono.",
+        "Zmagovalec na koncu dvigne pokal.",
+        "V Sloveniji se imenuje prva liga.",
+        "Ekipe se srečajo doma in v gosteh.",
+        "Zadnji dve navadno izpadeta.",
+        "Traja od poletja do pomladi.",
+        "Vsaka zmaga prinese tri točke.",
+        "Naslov brani lanski zmagovalec.",
+        "Tudi svetovno se prireja vsaka štiri leta.",
+        "Lestvica pokaže kdo je v vodstvu."
+      ]
+    },
+    {
+      "word": "Pokal",
+      "clues": [
+        "Kovinska posoda ki jo dvigneš ob zmagi.",
+        "Zmagovalec ga dvigne nad glavo.",
+        "Pogosto je posrebren in težak.",
+        "Iz njega v slačilnici pijejo šampanjec.",
+        "Stoji v vitrini kluba.",
+        "Tekmovanje na izpadanje se imenuje po njem.",
+        "Kapetan ga prvi prime.",
+        "Ob paradi ga vozijo po mestu na avtobusu.",
+        "Ima podstavek z imeni prejšnjih zmagovalcev.",
+        "Če ti spodrsne in pade je to velika sramota."
+      ]
+    },
+    {
+      "word": "Liga",
+      "clues": [
+        "Skupina klubov ki igrajo drug proti drugemu.",
+        "Angleška je najbolj gledana na svetu.",
+        "Prva in druga sta ločeni po kakovosti.",
+        "Na koncu sezone se ekipe selijo gor in dol.",
+        "Prvakov je najmočnejše klubsko tekmovanje v Evropi.",
+        "Ima svojo lestvico in razpored.",
+        "V njej igra deset ali dvajset ekip.",
+        "Slovenska nosi ime sponzorja.",
+        "Kdor je zadnji izpade v nižjo.",
+        "Beseda pomeni tudi zvezo ali združenje."
+      ]
+    },
+    {
+      "word": "Klub",
+      "clues": [
+        "Društvo za katerega igrajo nogometaši.",
+        "Ima svoje barve grb in navijače.",
+        "Olimpija in Maribor sta najbolj znana pri nas.",
+        "Kupuje in prodaja igralce.",
+        "Ima predsednika in upravo.",
+        "Njegovi člani plačujejo članarino.",
+        "Lahko je tudi prostor kjer se pleše ponoči.",
+        "Njegov grb je našit na dres.",
+        "Ustanovljen je bil pred sto leti.",
+        "Njegovi navijači potujejo za njim po vsej državi."
+      ]
+    },
+    {
+      "word": "Reprezentanca",
+      "clues": [
+        "Izbrana vrsta države.",
+        "Igralci v njej nosijo državni grb.",
+        "Pred tekmo se poje himna.",
+        "Selektor izbere kdo bo vpoklican.",
+        "Igra na evropskih in svetovnih prvenstvih.",
+        "Slovenska igra v modrih dresih.",
+        "Zbere se le nekajkrat na leto.",
+        "Za nastop v njej ni plačila ampak čast.",
+        "Njeni uspehi združijo celo državo.",
+        "Igralci iz različnih klubov igrajo skupaj."
+      ]
+    },
+    {
+      "word": "Selektor",
+      "clues": [
+        "Vodi izbrano vrsto države.",
+        "Odloči koga vpokliče na tekmo.",
+        "Ni zaposlen pri klubu ampak pri zvezi.",
+        "Objavi seznam igralcev pred vsako akcijo.",
+        "Matjaž Kek je najbolj znan pri nas.",
+        "Če reprezentanca ne uspe on odstopi.",
+        "Njegovo delo spremlja vsa država.",
+        "Nima vsakodnevnih treningov kot klubski kolega.",
+        "Na tekmi stoji ob igrišču v obleki.",
+        "Pogosto potuje in gleda tekme po klubih."
+      ]
+    },
+    {
+      "word": "Derbi",
+      "clues": [
+        "Tekma med največjima tekmecema.",
+        "Stadion je vedno razprodan.",
+        "Vzdušje je napeto že dneve prej.",
+        "Olimpija in Maribor igrata takšno tekmo.",
+        "Policija je takrat v pripravljenosti.",
+        "Rezultat te tekme se pomni leta.",
+        "Navijaški skupini se med njo zbadata.",
+        "Beseda prihaja iz angleščine.",
+        "Tudi mestni obračun se tako imenuje.",
+        "Igralci pravijo da se sam od sebe naigra."
+      ]
+    },
+    {
+      "word": "Tekma",
+      "clues": [
+        "Srečanje dveh ekip.",
+        "Traja devetdeset minut plus dodatek.",
+        "Začne se z žvižgom in začetnim udarcem.",
+        "Gledalci kupijo vstopnico zanjo.",
+        "Lahko je prijateljska ali za točke.",
+        "Prenaša se po televiziji.",
+        "Po njej sledijo izjave pred kamerami.",
+        "Če dežuje se lahko prestavi.",
+        "Sodnik jo lahko tudi prekine.",
+        "Otroci jo igrajo na dvorišču brez sodnika."
+      ]
+    },
+    {
+      "word": "Trening",
+      "clues": [
+        "Vadba med tednom pred tekmo.",
+        "Igralci na njem tečejo in vadijo strele.",
+        "Vodja ekipe na njem postavi taktiko.",
+        "Poteka na pomožnem igrišču.",
+        "Zadnji pred tekmo je lahek.",
+        "Novinarji smejo gledati le prvih petnajst minut.",
+        "Po njem sledi še vadba v telovadnici.",
+        "Kdor ga izpusti brez razloga ima težave.",
+        "Otroci hodijo nanj dvakrat na teden.",
+        "Po njem so majice povsem mokre."
+      ]
+    },
+    {
+      "word": "Poškodba",
+      "clues": [
+        "Ko igralec začuti bolečino in obleži.",
+        "Zdravnik priteče z zeleno torbo.",
+        "Zaradi nje igralec izpusti več tekem.",
+        "Najhujša je pretrgana vez v kolenu.",
+        "Po njej sledi dolga vrnitev v formo.",
+        "Nastane tudi brez dotika nasprotnika.",
+        "Sodnik zaradi nje ustavi igro.",
+        "Nogometaš gre z igrišča na nosilih.",
+        "Mišična je najpogostejša pri sprinterjih.",
+        "Rehabilitacija po njej traja mesece."
+      ]
+    },
+    {
+      "word": "Slačilnica",
+      "clues": [
+        "Prostor kjer se ekipa preobleče.",
+        "Tam trener govori med odmorom.",
+        "Ima omarice in klopi.",
+        "Po zmagi se v njej poje in pleše.",
+        "Novinarji vanjo ne smejo.",
+        "V njej visijo dresi pripravljeni na obešalnikih.",
+        "Po tekmi se v njej tušira cela ekipa.",
+        "Kapetan v njej pred tekmo nagovori soigralce.",
+        "Sodniki imajo svojo ločeno.",
+        "V šoli je podobna pred telovadbo."
+      ]
+    },
+    {
+      "word": "Rezerva",
+      "clues": [
+        "Igralec ki čaka na svojo priložnost.",
+        "Sedi pod streho ob igrišču.",
+        "Ogreva se ob črti med tekmo.",
+        "Vstopi ko trener pokliče njegovo številko.",
+        "Včasih odloči tekmo v zadnjih minutah.",
+        "Vratar te vrste redko igra.",
+        "Na seznamu jih je do devet.",
+        "Če dolgo čaka postane nezadovoljen.",
+        "Med ogrevanjem teče ob robu s pisano jopičem.",
+        "Beseda pomeni tudi zalogo za hude čase."
+      ]
+    },
+    {
+      "word": "Himna",
+      "clues": [
+        "Pesem države ki se poje pred tekmo.",
+        "Igralci med njo stojijo v vrsti.",
+        "Nekateri jo pojejo z roko na prsih.",
+        "Navijači jo zapojejo skupaj z ekipo.",
+        "Zdravljica je naša.",
+        "Zveni pred vsako tekmo reprezentance.",
+        "Traja minuto ali dve.",
+        "Pred njo sodnik počaka s piščalko.",
+        "Tudi klubi imajo svojo.",
+        "Ob njej se marsikomu naježi koža."
+      ]
+    },
+    {
+      "word": "Prestop",
+      "clues": [
+        "Ko igralec zamenja klub.",
+        "Zanj se plača odškodnina.",
+        "Zgodi se poleti ali pozimi.",
+        "Novinarji o njem ugibajo tedne prej.",
+        "Igralec ob njem podpiše novo pogodbo.",
+        "Rekordni je bil vreden več sto milijonov.",
+        "Navijači ga lahko sprejmejo z veseljem ali z jezo.",
+        "Zadnji dan roka je najbolj napet.",
+        "Zdravniški pregled je pogoj zanj.",
+        "Če je brezplačen se zgodi ob izteku pogodbe."
+      ]
+    },
+    {
+      "word": "Pogodba",
+      "clues": [
+        "Papir ki ga igralec podpiše s klubom.",
+        "Določa plačo in koliko let ostane.",
+        "Ko poteče je igralec prost.",
+        "Podaljša se če je igralec dober.",
+        "Vsebuje tudi odkupno klavzulo.",
+        "Podpisana je pred kamerami z novim dresom v rokah.",
+        "Njeno kršenje pomeni kazen.",
+        "Traja navadno tri do pet let.",
+        "Tudi pri službi jo podpišeš pri delodajalcu.",
+        "Zastopnik se dogovarja o njeni vsebini."
+      ]
+    },
+    {
+      "word": "Ogrevanje",
+      "clues": [
+        "Vadba pred začetkom tekme.",
+        "Igralci tečejo in raztezajo mišice.",
+        "Traja približno pol ure.",
+        "Vratar med njim lovi strele.",
+        "Brez njega je poškodba veliko bolj verjetna.",
+        "Poteka na polovici igrišča.",
+        "Rezervni ga ponovijo tudi med tekmo.",
+        "Med njim se ekipa vrne v slačilnico po zadnje besede.",
+        "Navijači takrat pozdravijo igralce.",
+        "Tudi pred tekom v gozdu ga narediš doma."
+      ]
+    },
+    {
+      "word": "Semafor",
+      "clues": [
+        "Velika tabla z rezultatom.",
+        "Kaže tudi minuto tekme.",
+        "Na njem se prikažejo imena strelcev.",
+        "Ob zadetku na njem zaplešejo številke.",
+        "Danes je velik zaslon v barvah.",
+        "Na cesti ima tri barve.",
+        "Če se pokvari sodnik meri čas sam.",
+        "Gledalci nanj pogledajo ko pozabijo rezultat.",
+        "Na njem teče tudi reklama sponzorjev.",
+        "Visi nad eno od tribun."
+      ]
+    },
+    {
+      "word": "Kazen",
+      "clues": [
+        "Sodnik jo dosodi po prekršku.",
+        "Lahko je rumena ali rdeča.",
+        "Zaradi nje igralec izpusti naslednjo tekmo.",
+        "Klub jo lahko dobi tudi v denarju.",
+        "Če navijači mečejo predmete jo dobi klub.",
+        "Zaradi hujše se igra brez gledalcev.",
+        "Zveza jo določi po pregledu posnetka.",
+        "V šoli je to zapisana opomba.",
+        "Za ponavljajoče prekrške je vedno strožja.",
+        "Tudi zapor je oblika te besede v sodstvu."
+      ]
+    },
+    {
+      "word": "Vstopnica",
+      "clues": [
+        "Papir ki ti omogoči vstop na stadion.",
+        "Na njej piše vrsta in sedež.",
+        "Pred derbijem je razprodana v urah.",
+        "Kupiš jo na spletu ali pri blagajni.",
+        "Redar jo pregleda pri vhodu.",
+        "Nekateri jih preprodajajo dražje.",
+        "Otroci imajo pogosto ceneje.",
+        "Če jo izgubiš ostaneš pred vrati.",
+        "Danes je pogosto kar koda v telefonu.",
+        "Tudi za kino jo potrebuješ."
+      ]
+    },
+    {
+      "word": "Redar",
+      "clues": [
+        "Skrbi za red na tribunah.",
+        "Nosi opazen jopič.",
+        "Pri vhodu pregleda torbe.",
+        "Če kdo skoči na igrišče ga ustavi.",
+        "Stoji obrnjen proti gledalcem in ne gleda tekme.",
+        "Med derbijem jih je na stotine.",
+        "Sodeluje s policijo.",
+        "Pomaga tudi pri iskanju sedeža.",
+        "Ob izpraznitvi stadiona usmerja množico.",
+        "Njegova naloga je preprečiti pretep."
+      ]
+    },
+    {
+      "word": "Maskota",
+      "clues": [
+        "Oseba v kostumu ki zabava otroke.",
+        "Skače ob robu igrišča.",
+        "Ima veliko glavo iz pene.",
+        "Otroci se z njo fotografirajo.",
+        "Pred tekmo pleše na sredini.",
+        "Vsak klub ima svojo žival ali lik.",
+        "Med odmorom meče majice v tribuno.",
+        "V njej se človek grozno preznoji.",
+        "Ob zadetku dela salte.",
+        "Tudi na olimpijskih igrah jo izberejo."
+      ]
+    },
+    {
+      "word": "Komentator",
+      "clues": [
+        "Opisuje dogajanje po televiziji.",
+        "Njegov glas poznaš tudi če ga ne vidiš.",
+        "Ob zadetku zavpije na ves glas.",
+        "Sedi v kabini nad tribuno.",
+        "Pripravi si podatke o igralcih.",
+        "Ob njem sedi še strokovni sogovornik.",
+        "Če se zmoti pri imenu ga gledalci popravijo.",
+        "Med prenosom skoraj ne utihne.",
+        "Njegove izjave postanejo znane fraze.",
+        "Na radiu mora opisati še več kot na televiziji."
+      ]
+    },
+    {
+      "word": "Predor",
+      "clues": [
+        "Hodnik po katerem igralci pridejo na igrišče.",
+        "Vodi iz slačilnice do trave.",
+        "Otroci pospremijo igralce skozenj za roko.",
+        "Pred izhodom se igralci v njem postavijo v vrsto.",
+        "Nad njim je pogosto napis kluba.",
+        "Kamere v njem ujamejo zadnje besede pred tekmo.",
+        "Ob polčasu ekipe skozenj izginejo.",
+        "V gorah je izkopan skozi hrib za avtomobile.",
+        "Sodnik gre skozenj zadnji.",
+        "Iz njega prihaja hrup tribun vse glasneje."
+      ]
+    },
+    {
+      "word": "Prepoved",
+      "clues": [
+        "Igralec zaradi nje ne sme igrati.",
+        "Sledi rdečemu kartonu.",
+        "Traja eno ali več tekem.",
+        "Zveza jo izreče po tekmi.",
+        "Med njo igralec gleda s tribune.",
+        "Nastane tudi zaradi štirih opominov.",
+        "Za grobo brco je daljša.",
+        "Klub se lahko nanjo pritoži.",
+        "Trener zaradi nje spremeni postavo.",
+        "Tudi za doping se izreče zelo dolga."
+      ]
+    },
+    {
+      "word": "Nogomet",
+      "clues": [
+        "Šport z žogo in enajstimi igralci na vsaki strani.",
+        "Najbolj priljubljen na svetu je.",
+        "Svetovno prvenstvo v njem je vsaka štiri leta.",
+        "Brazilija ga je osvojila petkrat.",
+        "Igra se devetdeset minut.",
+        "Anglija velja za njegovo domovino.",
+        "Z nogami se v njem igra.",
+        "Messi in Ronaldo sta njegova zvezdnika.",
+        "Liga prvakov je njegovo najboljše klubsko tekmovanje.",
+        "Otroci ga igrajo na vsakem dvorišču."
+      ]
+    },
+    {
+      "word": "Zadetek",
+      "clues": [
+        "Kar dosežeš ko žoga konča v mreži.",
+        "Šteje eno točko na semaforju.",
+        "Sodnik pokaže na sredino ko ga prizna.",
+        "Napadalec ga proslavi z drsenjem po travi.",
+        "Iz kota ga je najlepše doseči z glavo.",
+        "Vratar ga skuša preprečiti.",
+        "V nogometu jih je na tekmi malo.",
+        "Črtna tehnologija potrdi ali je bil dosežen.",
+        "Njegov avtor si nabira statistiko za nagrado.",
+        "Iz enajstih metrov je najlažji."
+      ]
+    },
+    {
+      "word": "Vratnica",
+      "clues": [
+        "Navpični del okvira ob vratih.",
+        "Žoga se od nje odbije nazaj v igro.",
+        "Zvok ko jo zadeneš je značilen.",
+        "Bela je in okrogla po prerezu.",
+        "Skupaj s prečko obdaja mrežo.",
+        "Napadalec jo prekolne po zgrešeni priložnosti.",
+        "Dve stojita druga proti drugi.",
+        "Vratar se je ob koncu tekme naslonil nanjo.",
+        "Če jo zadeneš gol ne šteje.",
+        "Njena razdalja od druge je sedem metrov in tri četrt."
+      ]
+    },
+    {
+      "word": "Prečka",
+      "clues": [
+        "Vodoravni del okvira nad vratarjem.",
+        "Žoga jo zadene z zvokom.",
+        "Nad glavo čuvaja mreže je.",
+        "Skupaj z vratnicama obdaja mrežo.",
+        "Strel čeznjo je zapravljena priložnost.",
+        "Vratar jo doseže le s konicami prstov.",
+        "Visoka je dva metra in štirideset.",
+        "Bela je in ravna.",
+        "Če jo strel oplazi navijači zavzdihnejo.",
+        "Nekateri jo zadenejo pogosteje kot mrežo."
+      ]
+    },
+    {
+      "word": "Avt",
+      "clues": [
+        "Kar dosodi sodnik ko gre žoga čez stransko črto.",
+        "Igralec jo vrže z obema rokama iznad glave.",
+        "Obe nogi morata biti pri tem na tleh.",
+        "Nasprotnik dobi žogo v posest.",
+        "Pomožni sodnik ga pokaže z zastavico.",
+        "Iz njega ni mogoče doseči zadetka neposredno.",
+        "Nekateri ga vržejo tako daleč kot iz kota.",
+        "Če ga vržeš narobe ga dobi nasprotnik.",
+        "Najpogostejša prekinitev igre je.",
+        "Dolge mete iz njega treniraj kot orožje."
+      ]
+    },
+    {
+      "word": "Ofsajd",
+      "clues": [
+        "Nedovoljen položaj napadalca.",
+        "Pomožni sodnik ga pokaže z dvignjeno zastavico.",
+        "Zadnji branilec določa njegovo črto.",
+        "Video sodnik ga danes meri po centimetrih.",
+        "Zaradi njega je bilo razveljavljenih na tisoče zadetkov.",
+        "Past zanj branilci nastavijo s skokom naprej.",
+        "Iz kota ga ni.",
+        "Rama ali koleno lahko odloči.",
+        "Njegovo pravilo je najbolj sporno v tem športu.",
+        "Črta na zaslonu ga pokaže gledalcem."
+      ]
+    },
+    {
+      "word": "Izključitev",
+      "clues": [
+        "Kar sledi rdečemu kartonu.",
+        "Igralec mora s terena in v slačilnico.",
+        "Ekipa igra naprej z desetimi.",
+        "Dva rumena kartona pripeljeta do nje.",
+        "Sledi ji prepoved nastopa na naslednji tekmi.",
+        "Grd start je pogost razlog zanj.",
+        "Trener po njej takoj spremeni postavitev.",
+        "Vratar jo doživi ob prekršku zadnjega branilca.",
+        "Zaradi žalitve sodnika se tudi zgodi.",
+        "Najhujša kazen med tekmo je."
+      ]
+    },
+    {
+      "word": "Opomin",
+      "clues": [
+        "Blaga kazen ki jo sodnik izreče na terenu.",
+        "Rumeni karton ga pospremi.",
+        "Ime se zapiše v zapisnik.",
+        "Trije v sezoni pomenijo počitek na naslednji tekmi.",
+        "Igralec po njem igra bolj previdno.",
+        "Zaradi ugovarjanja se pogosto prisluži.",
+        "Zavlačevanje igre ga tudi prinese.",
+        "Slačenje dresa ob veselju ga povzroči.",
+        "Drugi na isti tekmi pomeni pot v slačilnico.",
+        "Sodnik zanj dvigne roko z barvnim kartončkom."
+      ]
+    },
+    {
+      "word": "Start",
+      "clues": [
+        "Poskus odvzema žoge z nogo po tleh.",
+        "Če je z obema nogama je nevaren.",
+        "Sodnik ga kaznuje če je od zadaj.",
+        "Drseči po travi je najbolj efekten.",
+        "Branilci ga izvedejo v zadnjem trenutku.",
+        "Če zadeneš najprej žogo je čist.",
+        "Poškodbe gležnja so pogosta posledica.",
+        "Angleži mu pravijo tackle.",
+        "Ob dežju je lažje izvedljiv.",
+        "Če zgrešiš dobiš rumeni karton."
+      ]
+    },
+    {
+      "word": "Blokada",
+      "clues": [
+        "Ko igralec s telesom prepreči strel.",
+        "Branilec se vrže pred žogo.",
+        "Rebra pri njej pogosto zabolijo.",
+        "V zidu jo izvede več igralcev hkrati.",
+        "Statistika jo šteje kot obrambno dejanje.",
+        "Vratar se ji zahvali po tekmi.",
+        "Roka pri njej ne sme biti odmaknjena.",
+        "Pogum je zanjo najbolj potreben.",
+        "Izvede se v zadnjem hipu pred udarcem.",
+        "Če se žoga odbije v kot je bila uspešna."
+      ]
+    },
+    {
+      "word": "Center",
+      "clues": [
+        "Predložek z bočnega dela igrišča v kazenski prostor.",
+        "Krilni igralec ga pošlje pred vrata.",
+        "Napadalec ga čaka za udarec z glavo.",
+        "Beckham je bil mojster zanj.",
+        "Zavit v loku je najbolj nevaren.",
+        "Iz teka ob črti se najpogosteje izvede.",
+        "Vratar ga skuša prestreči s pestjo.",
+        "Nizek po tleh je sodobna različica.",
+        "Asistenca je pogosto njegov rezultat.",
+        "Tudi sredinski del igrišča se tako imenuje."
+      ]
+    },
+    {
+      "word": "Volej",
+      "clues": [
+        "Udarec po žogi preden se dotakne tal.",
+        "Zidane ga je izvedel v finalu lige prvakov.",
+        "Zahteva popoln občutek za čas.",
+        "Iz predložka je najlepši način za zadetek.",
+        "Če ga zgrešiš gre žoga v tribune.",
+        "Polovični se izvede takoj po odboju.",
+        "Tenisači ga izvajajo ob mreži.",
+        "Noga mora biti pri njem visoko.",
+        "Najbolj atraktiven način zaključka je.",
+        "Vratar ga skoraj ne more ubraniti."
+      ]
+    },
+    {
+      "word": "Škarjice",
+      "clues": [
+        "Udarec z obratom telesa v zraku.",
+        "Igralec pri njem pade na hrbet.",
+        "Ronaldo jih je izvedel proti Juventusu.",
+        "Tudi bicikel se jim reče.",
+        "Žoga pri njih leti nazaj čez glavo.",
+        "Najbolj atraktivna poteza tega športa so.",
+        "Gledalci ob njih vstanejo s sedežev.",
+        "Za nagrado najlepšega zadetka so pogosta zmagovalka.",
+        "Ime imajo po gibanju nog v zraku.",
+        "Na travi so manj boleče kot na asfaltu."
+      ]
+    },
+    {
+      "word": "Preigravanje",
+      "clues": [
+        "Ko igralec z žogo obide nasprotnika.",
+        "Finta je njegov ključni del.",
+        "Krilni igralci ga izvajajo največ.",
+        "Messi ga izvede z drobnimi koraki.",
+        "Ramena pri njem zavedejo branilca.",
+        "Če ga zgrešiš izgubiš žogo.",
+        "Navijači ob uspešnem zaploskajo.",
+        "Ena na ena je položaj zanj.",
+        "Ulični slog ga postavlja v ospredje.",
+        "Branilci ga preprečijo s pravilnim položajem telesa."
+      ]
+    },
+    {
+      "word": "Finta",
+      "clues": [
+        "Gib s katerim prevaraš nasprotnika.",
+        "Telo gre v eno smer žoga v drugo.",
+        "Neymar jih izvaja največ na tekmo.",
+        "Branilec se nasede in ostane na mestu.",
+        "Tudi lažni strel je ena od njih.",
+        "Rameni jo naredita najbolj prepričljivo.",
+        "Trenerji jo učijo že v mlajših selekcijah.",
+        "Če je preveč jih je igra počasna.",
+        "Preigravanje se z njo začne.",
+        "Publika zaradi nje vzklika."
+      ]
+    },
+    {
+      "word": "Taktika",
+      "clues": [
+        "Načrt igre ki ga določi trener.",
+        "Na tablo jo nariše pred tekmo.",
+        "Postavitev je njen temelj.",
+        "Med polčasom se lahko spremeni.",
+        "Obrambna se imenuje avtobus pred vrati.",
+        "Napadalna zahteva visok pritisk.",
+        "Analitiki jo preučujejo z videoposnetkov.",
+        "Guardiola velja za njenega mojstra.",
+        "Brez nje tudi najboljši igralci izgubijo.",
+        "Nasprotnika se pred tekmo preuči zaradi nje."
+      ]
+    },
+    {
+      "word": "Postavitev",
+      "clues": [
+        "Razpored igralcev na igrišču.",
+        "Zapiše se s tremi številkami.",
+        "Štiri štiri dve je klasična.",
+        "Trener jo pove pred tekmo v slačilnici.",
+        "Med tekmo jo lahko spremeni z menjavo.",
+        "Trije branilci so njena sodobna različica.",
+        "Napadalna ima več igralcev spredaj.",
+        "Na zaslonu pred tekmo jo pokažejo gledalcem.",
+        "Odvisna je od nasprotnika.",
+        "Njena osnova je vedno čuvaj mreže med vratnicama."
+      ]
+    },
+    {
+      "word": "Krilo",
+      "clues": [
+        "Igralec ki igra ob stranski črti.",
+        "Hitrost je njegova največja odlika.",
+        "Predložke pošilja v kazenski prostor.",
+        "Preigravanje ena na ena je njegova naloga.",
+        "Levo in desno obstajata.",
+        "Robben je bil najbolj znan levičar na desni strani.",
+        "Branilec ga skuša potisniti proti črti.",
+        "Tudi del ptice se tako imenuje.",
+        "Sodobni pogosto zaključi sam namesto podaje.",
+        "Njegova številka je bila nekoč sedem ali enajst."
+      ]
+    },
+    {
+      "word": "Libero",
+      "clues": [
+        "Prosti branilec brez zadolžitve za posameznika.",
+        "Beckenbauer ga je uveljavil.",
+        "Igral je za zadnjo linijo obrambe.",
+        "Danes ga skoraj ni več.",
+        "Odbojka ima igralca s tem imenom v drugi barvi dresa.",
+        "Njegova naloga je bila pobirati odbite žoge.",
+        "Ime izhaja iz italijanske besede za prost.",
+        "V sistemu s čistilcem je bil ključen.",
+        "Sedemdeseta so bila njegov vrhunec.",
+        "Nemci so ga vgradili v svojo šolo igre."
+      ]
+    },
+    {
+      "word": "Bek",
+      "clues": [
+        "Igralec zadnje vrste ob stranski črti.",
+        "Levi in desni obstajata.",
+        "Sodobni se vključuje v napad.",
+        "Njegova številka je pogosto dve ali tri.",
+        "Krilo nasprotnika mora zaustaviti.",
+        "Tek gor in dol po črti je njegov vsakdan.",
+        "Alexander-Arnold je znan po podajah s tega mesta.",
+        "Beseda prihaja iz angleščine.",
+        "Predložke pošilja tudi on.",
+        "Kondicija je zanj najpomembnejša."
+      ]
+    },
+    {
+      "word": "Stoper",
+      "clues": [
+        "Osrednji branilec pred vratarjem.",
+        "Visok in močan mora biti.",
+        "Igra z glavo je njegova specialnost.",
+        "Napadalca nasprotnika pokriva ves čas.",
+        "Van Dijk je njegov sodobni vzor.",
+        "Pri kotih hodi v nasprotnikov prostor.",
+        "Njegova številka je pogosto štiri ali pet.",
+        "Skupaj s sotrpinom tvori par v sredini obrambe.",
+        "Napake na tem mestu se drago maščujejo.",
+        "Vodenje zadnje linije je njegova naloga."
+      ]
+    },
+    {
+      "word": "Trak",
+      "clues": [
+        "Kar nosi kapetan okoli nadlakti.",
+        "Barven je in ima pogosto črko C.",
+        "Ob menjavi ga preda naslednjemu igralcu.",
+        "Znak vodstva na igrišču je.",
+        "Nekateri klubi imajo nanj vezano posebno čast.",
+        "Ob poslovilni tekmi ga legenda odloži.",
+        "Elastičen je in se zapne s ježkom.",
+        "Sodnik preveri kdo ga nosi pred tekmo.",
+        "Tudi za lase se uporablja podoben predmet.",
+        "Na njem je včasih napis v podporo kakšni akciji."
+      ]
+    },
+    {
+      "word": "Rokavice",
+      "clues": [
+        "Nosi jih le eden na igrišču.",
+        "Oprijem na žogi je njihov namen.",
+        "Pena na dlani je njihov ključni del.",
+        "Pred tekmo jih navlaži s slino ali vodo.",
+        "Vratar jih zamenja ob polčasu če so premočene.",
+        "Za vsak prst imajo posebno zaščito proti zvinu.",
+        "Barvne so danes bolj pogoste kot bele.",
+        "V dežju so najbolj pomembne.",
+        "Po tekmi jih pogosto vrže navijaču.",
+        "Brez njih bi bilo lovljenje strelov boleče."
+      ]
+    },
+    {
+      "word": "Nogavice",
+      "clues": [
+        "Segajo do kolena in držijo ščitnike.",
+        "Barve kluba imajo.",
+        "Nekateri jih prerežejo zaradi udobja.",
+        "Pod njimi so lahko dodatne kratke.",
+        "Ob koncu tekme jih igralci potegnejo navzdol.",
+        "Trak jih drži na mestu.",
+        "Sodnik preveri ali so pravilne barve pred tekmo.",
+        "Pod kolenom se pogosto zvijejo.",
+        "Pralni stroj jih po tekmi čaka na kupu.",
+        "Skupaj z dresom in hlačkami tvorijo opremo."
+      ]
+    },
+    {
+      "word": "Blagajna",
+      "clues": [
+        "Prostor kjer se kupijo vstopnice.",
+        "Pred derbijem se pred njo vije vrsta.",
+        "Danes jo pogosto nadomesti spletna prodaja.",
+        "Ob njej stoji redar.",
+        "Gotovina ali kartica pri njej zamenja lastnika.",
+        "Zapre se pol ure po začetku tekme.",
+        "Napis razprodano na njej razžalosti navijače.",
+        "V njej sedi uslužbenec kluba.",
+        "Poleg nje je vhod na tribuno.",
+        "Tudi v trgovini stoji naprava s tem imenom."
+      ]
+    },
+    {
+      "word": "Prihod",
+      "clues": [
+        "Trenutek ko ekipa pride na stadion.",
+        "Avtobus jo pripelje pred vhod.",
+        "Navijači ob njem prižgejo bakle.",
+        "Igralci s slušalkami stopijo iz vozila.",
+        "Kamere ga danes prenašajo v živo.",
+        "Dve uri pred začetkom se navadno zgodi.",
+        "Policija pri njem varuje pot.",
+        "Nekateri klubi ga naredijo pravo predstavo.",
+        "Slačilnica je njegov cilj.",
+        "Obleke igralcev pri njem so tema modnih objav."
+      ]
+    },
+    {
+      "word": "Kondicija",
+      "clues": [
+        "Telesna pripravljenost igralca.",
+        "Poletne priprave jo dvignejo.",
+        "Brez nje zadnjih deset minut ne zdržiš.",
+        "Merijo jo s testi teka.",
+        "V drugem polčasu se najbolj pozna.",
+        "Trener zanjo ima posebnega pomočnika.",
+        "Tek v hribu jo gradi.",
+        "Po poškodbi jo je najtežje vrniti.",
+        "Utrujenost je znak da je slaba.",
+        "Sodobni igralec preteče več kot deset kilometrov na tekmo."
+      ]
+    },
+    {
+      "word": "Sprint",
+      "clues": [
+        "Kratek tek z najvišjo hitrostjo.",
+        "Krilni igralci jih naredijo največ.",
+        "Merijo jih s posebnimi merilniki na dresu.",
+        "V protinapadu je odločilen.",
+        "Traja le nekaj sekund.",
+        "Mbappe je z njim najhitrejši na svetu.",
+        "Po njem igralec potrebuje počitek.",
+        "Trening zanj vključuje ponavljanja.",
+        "Zadnja linija ga izvede ob visoki obrambi.",
+        "Atletika ima disciplino s tem imenom na sto metrov."
+      ]
+    },
+    {
+      "word": "Vzdržljivost",
+      "clues": [
+        "Sposobnost da zdržiš vseh devetdeset minut.",
+        "Gradi se s tekom na dolge razdalje.",
+        "Brez nje v podaljških obležiš s krčem.",
+        "Vezisti jo potrebujejo najbolj.",
+        "Priprave v gorah jo izboljšajo.",
+        "Merijo jo s testom porabe kisika.",
+        "Utrujenost je njeno nasprotje.",
+        "Maratonci jo imajo najbolj razvito.",
+        "Trener jo preverja s ponavljajočimi se teki.",
+        "Sodobni nogomet jo zahteva bolj kot kdaj prej."
+      ]
+    },
+    {
+      "word": "Telovadnica",
+      "clues": [
+        "Prostor z utežmi in napravami.",
+        "Igralci vanjo hodijo poleg treninga na travi.",
+        "Moč nog se gradi v njej.",
+        "Po poškodbi je prvi korak nazaj.",
+        "Kondicijski trener v njej vodi vadbo.",
+        "Ogledala in gumijasta tla jo označujejo.",
+        "Klubi imajo svojo poleg slačilnice.",
+        "Ročke in klopi so njena oprema.",
+        "Zimski del sezone se v njej preživi več časa.",
+        "Tudi šola ima svojo za športno vzgojo."
+      ]
+    },
+    {
+      "word": "Masaža",
+      "clues": [
+        "Sproščanje mišic po tekmi.",
+        "Miza in olje sta zanjo potrebna.",
+        "Poškodbe preprečuje.",
+        "Terapevt jo izvaja z rokami.",
+        "Po njej so noge lažje.",
+        "Pred tekmo je kratka in poživljajoča.",
+        "Krč jo pogosto zahteva takoj.",
+        "V slačilnici je zanjo poseben prostor.",
+        "Igralci si jo privoščijo tudi na dan počitka.",
+        "Boli in godi hkrati."
+      ]
+    },
+    {
+      "word": "Nosila",
+      "clues": [
+        "Na njih odnesejo poškodovanega z igrišča.",
+        "Dva človeka jih nosita.",
+        "Sodnik jih pokliče z roko.",
+        "Igralec na njih včasih vstane takoj ob črti.",
+        "Rdeča barva jih pogosto označuje.",
+        "Ob robu igrišča čakajo ves čas.",
+        "Publika zaploska ko gre igralec na njih.",
+        "Vratni opornik gre včasih zraven.",
+        "Rešilec je njihov naslednji korak.",
+        "Ob težji poškodbi so nujna."
+      ]
+    },
+    {
+      "word": "Povoj",
+      "clues": [
+        "Bel trak s katerim se ovije poškodovan del.",
+        "Gleženj se z njim utrdi.",
+        "Elastičen je in se razteza.",
+        "Po zvinu ga nosiš več dni.",
+        "Krvavo rano z njim najprej zaustavijo.",
+        "Na glavi ga včasih nosi branilec do konca tekme.",
+        "V torbi zdravnika jih je vedno več.",
+        "Sponka ali obliž ga drži na mestu.",
+        "Preveč tesen zaustavi kri.",
+        "Terapevt ga zamenja vsak dan."
+      ]
+    },
+    {
+      "word": "Rehabilitacija",
+      "clues": [
+        "Vračanje v formo po poškodbi.",
+        "Traja lahko več mesecev.",
+        "Fizioterapevt jo vodi.",
+        "Bazen je pogost del nje.",
+        "Križne vezi zahtevajo najdaljšo.",
+        "Prva tekma po njej je poseben trenutek.",
+        "Postopno obremenjevanje je njeno pravilo.",
+        "Prehitro končana pomeni novo poškodbo.",
+        "Psihična plat je pri njej enako težka.",
+        "Klub ima zanjo poseben program."
+      ]
+    },
+    {
+      "word": "Doping",
+      "clues": [
+        "Nedovoljena poživila v športu.",
+        "Testiranje ga odkrije.",
+        "Armstrong je zaradi njega izgubil naslove.",
+        "Agencija z imenom WADA se z njim ukvarja.",
+        "Vzorec urina se zanj odda po tekmi.",
+        "Kazen zanj je večletna prepoved.",
+        "Seznam prepovedanih snovi se vsako leto posodobi.",
+        "Tudi zdravilo proti prehladu lahko sproži alarm.",
+        "Poštenost športa uničuje.",
+        "Nadzorniki pridejo tudi na dom brez najave."
+      ]
+    },
+    {
+      "word": "Zveza",
+      "clues": [
+        "Krovna organizacija tega športa v državi.",
+        "Kratica svetovne je FIFA.",
+        "Evropska se imenuje UEFA.",
+        "Reprezentanco vodi in izbira selektorja.",
+        "Sedež ima v prestolnici.",
+        "Kazni za klube izreka njena komisija.",
+        "Predsednik jo vodi z izvršnim odborom.",
+        "Registrira igralce in sodnike.",
+        "Sistem tekmovanj določa ona.",
+        "Sponzorske pogodbe za državno ekipo sklepa ona."
+      ]
+    },
+    {
+      "word": "Pravilo",
+      "clues": [
+        "Zapisano določilo igre.",
+        "Sedemnajst jih je v tem športu.",
+        "Ofsajd je najbolj zapleteno.",
+        "Sodnik jih uveljavlja na igrišču.",
+        "Zapisana so v knjigi ki jo izda mednarodna zveza.",
+        "Roka v kazenskem prostoru je predmet stalnih sprememb.",
+        "Kdor ga krši dobi kazen.",
+        "Otroci se prvega naučijo že v vrtcu.",
+        "Brez njih bi bila igra kaos.",
+        "Sprememba katerega od njih je vsako leto tema razprav."
+      ]
+    },
+    {
+      "word": "Odločitev",
+      "clues": [
+        "Kar sodnik sprejme v trenutku.",
+        "Video sistem jo lahko spremeni.",
+        "Navijači jo pogosto glasno komentirajo.",
+        "Ob njej pokaže na belo piko ali na sredino.",
+        "Sporna je tema pogovornih oddaj po tekmi.",
+        "Nekatere so nepopravljive.",
+        "Trenerja lahko stane službe.",
+        "Sekunda je čas ki ga ima zanjo.",
+        "Zapiše se v zapisnik po tekmi.",
+        "Nepristranskost je njena največja vrednota."
+      ]
+    },
+    {
+      "word": "Video",
+      "clues": [
+        "Sistem s katerim sodnik pregleda sporne trenutke.",
+        "Kratica zanj je VAR.",
+        "V sobi pred zasloni sedi pomočnik.",
+        "Ob njem sodnik teče do zaslona ob igrišču.",
+        "Sporne zadetke preveri.",
+        "Igra se med njegovim delom ustavi.",
+        "Navijači na stadionu med njim ne vedo kaj se dogaja.",
+        "Uveden je bil leta 2018 na svetovnem prvenstvu.",
+        "Črte na sliki pokažejo prepovedan položaj.",
+        "Nekateri pravijo da je uničil spontano veselje."
+      ]
+    },
+    {
+      "word": "Statistika",
+      "clues": [
+        "Številke ki opisujejo tekmo.",
+        "Posest žoge je njen najbolj znan podatek.",
+        "Streli v okvir se v njej štejejo.",
+        "Preteženi kilometri so danes njen del.",
+        "Po tekmi jo pokažejo na zaslonu.",
+        "Analitiki jo uporabljajo pri nakupu igralcev.",
+        "Podaje in njihova natančnost so v njej.",
+        "Nekateri pravijo da ne pove vsega.",
+        "Klub ima zanjo posebnega zaposlenega.",
+        "Sodobni nogomet jo meri s senzorji na dresu."
+      ]
+    },
+    {
+      "word": "Prenos",
+      "clues": [
+        "Tekma ki jo gledaš po televiziji.",
+        "Komentator ga spremlja z glasom.",
+        "Kamere so razporejene okoli igrišča.",
+        "Pravice zanj klubi drago prodajo.",
+        "Živi je najbolj vreden.",
+        "Reklame ga prekinejo ob polčasu.",
+        "Milijoni ljudi ga hkrati spremljajo ob finalu.",
+        "Zamik nekaj sekund je pri njem običajen.",
+        "Satelit ga pošlje po vsem svetu.",
+        "Doma ga gledaš s prijatelji ob prigrizku."
+      ]
+    },
+    {
+      "word": "Studio",
+      "clues": [
+        "Prostor od koder govorijo analitiki.",
+        "Miza in zasloni so v njem.",
+        "Pred tekmo in po njej se vanj vrnejo.",
+        "Nekdanji igralci v njem komentirajo.",
+        "Voditelj v njem postavlja vprašanja.",
+        "Taktična tabla na dotik je njegova oprema.",
+        "Luči in kamere ga polnijo.",
+        "Med polčasom se v njem ponovi najboljše.",
+        "Gost v njem je pogosto trener brez kluba.",
+        "Tudi glasbeniki snemajo v prostoru s tem imenom."
+      ]
+    },
+    {
+      "word": "Intervju",
+      "clues": [
+        "Pogovor z novinarjem po tekmi.",
+        "Mikrofon je pri njem pred obrazom.",
+        "Igralec ga da še ves poten.",
+        "Trener v njem razloži menjave.",
+        "Sponzorska stena je za hrbtom.",
+        "Nekateri se mu izognejo in gredo mimo.",
+        "Kratek se opravi kar ob robu igrišča.",
+        "Izjave iz njega postanejo naslovi.",
+        "Prevajalec je pri tujcih potreben.",
+        "Pravila tekmovanja ga zahtevajo od izbranih igralcev."
+      ]
+    },
+    {
+      "word": "Konferenca",
+      "clues": [
+        "Srečanje z novinarji pred ali po tekmi.",
+        "Trener na njej sedi za mizo z mikrofonom.",
+        "Napovedi in poškodbe so njena tema.",
+        "Mourinho je zaradi izjav na njej pogosto dobil kazen.",
+        "Fotografi na njej klečijo spredaj.",
+        "Sponzorska stena je njeno ozadje.",
+        "Vprašanja se postavljajo dvignjeno roko.",
+        "Igralec ob trenerju je pogosto kapetan.",
+        "Traja navadno pol ure.",
+        "Prenašajo jo tudi v živo po spletu."
+      ]
+    },
+    {
+      "word": "Sponzor",
+      "clues": [
+        "Podjetje ki plača za oglas na dresu.",
+        "Njegov logotip je na prsih.",
+        "Pogodba z njim prinese milijone.",
+        "Letalska družba je pogosta izbira pri velikih klubih.",
+        "Njegovo ime nosi tudi stadion.",
+        "Brez njega manjši klubi ne preživijo.",
+        "Na oglasni steni za intervjuji jih je cela vrsta.",
+        "Igralec ga zastopa tudi v reklamah.",
+        "Če klub pade v nižjo ligo pogosto odide.",
+        "Njegov znak je tudi na treningu."
+      ]
+    },
+    {
+      "word": "Logotip",
+      "clues": [
+        "Znak kluba na dresu.",
+        "Nad srcem je našit.",
+        "Grb je njegova pogosta oblika.",
+        "Igralec ga poljubi po zadetku.",
+        "Barve kluba so v njem.",
+        "Zvezdica nad njim pomeni osvojene naslove.",
+        "Navijači ga imajo natetoviranega.",
+        "Prodaja majic z njim polni blagajno.",
+        "Prenova njegove podobe razburi navijače.",
+        "Na sredini igrišča je pogosto narisan."
+      ]
+    },
+    {
+      "word": "Barve",
+      "clues": [
+        "To kar loči eno ekipo od druge.",
+        "Dres jih nosi.",
+        "Navijači jih nosijo na šalih.",
+        "Rezervni komplet je drugačen zaradi njih.",
+        "Sodnik pazi da se ne prekrivajo.",
+        "Vratar mora imeti drugačne od soigralcev.",
+        "Zgodovina kluba je z njimi povezana.",
+        "Domači nastopijo v svojih osnovnih.",
+        "Nekateri klubi so poznani kar po njih.",
+        "Šal in zastava jih ponosno kažeta."
+      ]
+    },
+    {
+      "word": "Trava",
+      "clues": [
+        "Podlaga na kateri se igra.",
+        "Kosijo jo v pasovih.",
+        "Umetna je njena nadomestna oblika.",
+        "Pred tekmo jo poškropijo z vodo.",
+        "Zimske razmere jo uničijo.",
+        "Ogrevanje pod njo prepreči zmrzal.",
+        "Vzdrževalec skrbi zanjo vse leto.",
+        "Igralec po zadetku po njej zdrsne.",
+        "Njena višina je natančno predpisana.",
+        "Zelena barva stadiona prihaja od nje."
+      ]
+    },
+    {
+      "word": "Reflektor",
+      "clues": [
+        "Močna luč nad stadionom.",
+        "Večerne tekme brez njih ne bi bilo.",
+        "Na štirih stolpih so nameščeni.",
+        "Izpad elektrike jih ugasne in tekma se ustavi.",
+        "Nočno vzdušje ustvarijo.",
+        "Insekti se poleti okoli njih zbirajo.",
+        "Njihova svetloba pade na igrišče z vseh strani.",
+        "Sodobni so varčnejši in se prižgejo takoj.",
+        "Fotografi potrebujejo njihovo moč.",
+        "Pred tekmo se preizkusijo."
+      ]
+    },
+    {
+      "word": "Ograja",
+      "clues": [
+        "Meja med tribuno in igriščem.",
+        "Redarji stojijo pred njo.",
+        "Navijači nanjo obesijo transparente.",
+        "Ob veselju se nanjo splezajo.",
+        "Varnostni predpisi jo v nekaterih državah prepovedujejo.",
+        "Steklena je sodobna različica.",
+        "Po tekmi se ob njej igralci zahvalijo navijačem.",
+        "Nekoč je bila visoka in bodeča.",
+        "Med sektorjema navijačev tudi stoji.",
+        "Njena naloga je preprečiti vdor na igrišče."
+      ]
+    },
+    {
+      "word": "Tunel",
+      "clues": [
+        "Prehod iz slačilnice na igrišče.",
+        "Igralci skozenj pridejo v vrsti.",
+        "Otroci jih pri tem držijo za roko.",
+        "Sodnik hodi na čelu.",
+        "Kamera je v njem nameščena na strop.",
+        "Prepiri se v njem včasih nadaljujejo po polčasu.",
+        "Navijači ob njem stojijo najbližje.",
+        "Streha ga varuje pred meti s tribun.",
+        "Glasba iz zvočnikov ga napolni.",
+        "Iz njega ekipa stopi na zelenico."
+      ]
+    },
+    {
+      "word": "Zvočnik",
+      "clues": [
+        "Naprava ki oznanja postave in zadetke.",
+        "Iz njega se sliši ime strelca.",
+        "Glasba iz njega zaigra ob prihodu ekip.",
+        "Napovedovalec govori vanj.",
+        "Navodila o varnosti se prek njega objavijo.",
+        "Nameščen je pod streho tribune.",
+        "Ob zadetku domačih zaigra himna kluba.",
+        "Njegov glas se odbija po praznem stadionu.",
+        "Če se pokvari nihče ne ve kdo je zadel.",
+        "Tudi doma ga imaš ob televiziji."
+      ]
+    },
+    {
+      "word": "Sedež",
+      "clues": [
+        "Na njem gledalec spremlja tekmo.",
+        "Številka in vrsta sta zapisani na vstopnici.",
+        "Plastičen je in zložljiv.",
+        "Barve na tribuni pogosto tvorijo napis.",
+        "Stoječi prostor je njegova alternativa.",
+        "Ob zadetku nihče ne ostane na njem.",
+        "Vzdrževalci jih po tekmi počistijo.",
+        "Modernizacija stadiona jih zahteva za vsakega gledalca.",
+        "Otrok potrebuje blazino da vidi čez glave.",
+        "Na tribuni jih je lahko petdeset tisoč."
+      ]
+    },
+    {
+      "word": "Vhod",
+      "clues": [
+        "Mesto skozi katero navijači pridejo na tribuno.",
+        "Redar pri njem preveri vstopnico.",
+        "Črtna koda se pri njem prebere.",
+        "Vrtljiva vrata so pri njem pogosta.",
+        "Pred derbijem se pred njim gnete množica.",
+        "Sektor je zapisan nad njim.",
+        "Prepovedani predmeti se pri njem odvzamejo.",
+        "Odpre se dve uri pred tekmo.",
+        "Ločen je za domače in gostujoče navijače.",
+        "Njegovo nasprotje je izhod po tekmi."
+      ]
+    },
+    {
+      "word": "Parkirišče",
+      "clues": [
+        "Prostor kjer navijači pustijo avtomobile.",
+        "Pred tekmo se hitro napolni.",
+        "Avtobus ekipe ima na njem svoje mesto.",
+        "Po tekmi je na njem prometni zastoj.",
+        "Nekateri navijači na njem prižgejo žar.",
+        "Za invalide so mesta najbližje vhodu.",
+        "Redarji na njem usmerjajo promet.",
+        "Plačilo zanj je pogosto vključeno v vstopnico.",
+        "Novinarska vozila imajo svoj del.",
+        "Kolesa se odložijo v poseben stojal ob njem."
+      ]
+    },
+    {
+      "word": "Točka",
+      "clues": [
+        "Kar ekipa dobi za neodločen izid.",
+        "Tri jih prinese zmaga.",
+        "Na lestvici odloča o naslovu.",
+        "Odbitek zaradi kazni jih zmanjša.",
+        "Njihova razlika na koncu sezone je lahko ena sama.",
+        "Poraz jih ne prinese nobene.",
+        "Prvak jih zbere največ.",
+        "Njihovo štetje se je spremenilo v devetdesetih.",
+        "Za obstanek jih je potrebnih okoli štirideset.",
+        "Trener po slabi tekmi reče da je pomembna le ta pridobitev."
+      ]
+    },
+    {
+      "word": "Lestvica",
+      "clues": [
+        "Razpredelnica z vrstnim redom ekip.",
+        "Na vrhu je vodilna ekipa.",
+        "Zadnji trije padejo v nižjo ligo.",
+        "Točke jo določajo.",
+        "Objavljena je po vsakem krogu.",
+        "Razlika v zadetkih odloča pri enakem številu točk.",
+        "Navijači jo preverjajo vsak ponedeljek.",
+        "Sredi sezone pove veliko o formi.",
+        "Prvi štirje se navadno uvrstijo v Evropo.",
+        "Njena zadnja mesta so rdeče obarvana."
+      ]
+    },
+    {
+      "word": "Prvak",
+      "clues": [
+        "Ekipa ki na koncu sezone osvoji naslov.",
+        "Pokal dvigne v zrak.",
+        "Zvezdica nad grbom mu pripada.",
+        "Parada z avtobusom sledi.",
+        "Konfeti in šampanjec spremljajo njegovo slavje.",
+        "Naslednjo sezono igra v najmočnejšem evropskem tekmovanju.",
+        "Navijači ga pričakajo na osrednjem trgu.",
+        "Njegov trener dobi nagrado za najboljšega.",
+        "Medalje prejmejo vsi igralci.",
+        "Njegovo ime se vpiše v zgodovino tekmovanja."
+      ]
+    },
+    {
+      "word": "Trofeja",
+      "clues": [
+        "Predmet ki ga dvigne zmagovalec.",
+        "Iz srebra ali zlata je narejena.",
+        "Kapetan jo prvi dvigne v zrak.",
+        "V vitrini kluba nato stoji.",
+        "Ob dvigu se sproži ognjemet.",
+        "Poljubijo jo vsi igralci po vrsti.",
+        "Njena kopija ostane klubu.",
+        "Nekatere imajo znano obliko in ime.",
+        "Ob paradi jo peljejo skozi mesto.",
+        "Če jo trikrat osvojiš jo ponekod obdržiš."
+      ]
+    },
+    {
+      "word": "Finale",
+      "clues": [
+        "Zadnja tekma tekmovanja.",
+        "Zmagovalec dobi pokal.",
+        "Igra se na nevtralnem stadionu.",
+        "Podaljški in enajstmetrovke jo lahko odločijo.",
+        "Milijarda ljudi jo gleda po svetu.",
+        "Vstopnice zanjo so najdražje.",
+        "Poraženec dobi le srebrno medaljo.",
+        "Pred njo je slovesnost z glasbo.",
+        "Nanjo se pride prek polfinala.",
+        "Nekatere so postale legendarne zaradi preobrata."
+      ]
+    },
+    {
+      "word": "Polfinale",
+      "clues": [
+        "Tekma pred zadnjim korakom do naslova.",
+        "Štiri ekipe še ostanejo v igri.",
+        "Dve tekmi se igrata na tej stopnji.",
+        "Zmagovalec gre v finale.",
+        "Poraženec v nekaterih tekmovanjih igra za tretje mesto.",
+        "Doma in v gosteh se pogosto igra dvakrat.",
+        "Napetost je na njem največja.",
+        "Reprezentanca ga na velikem tekmovanju šteje za velik uspeh.",
+        "Žreb določi pare zanj.",
+        "Podaljški so na njem pogosti."
+      ]
+    },
+    {
+      "word": "Kvalifikacije",
+      "clues": [
+        "Tekme za uvrstitev na veliko tekmovanje.",
+        "Skupine se določijo z žrebom.",
+        "Trajajo približno dve leti.",
+        "Prvi iz skupine gre naprej neposredno.",
+        "Dodatne tekme so za drugouvrščene.",
+        "Male reprezentance v njih presenetijo velike.",
+        "Selektor v njih preizkuša mlade igralce.",
+        "Doma in v gosteh se igra z vsakim.",
+        "Poraz v njih pomeni gledanje prvenstva pred zaslonom.",
+        "Njihov razpored objavi zveza dve leti prej."
+      ]
+    },
+    {
+      "word": "Žreb",
+      "clues": [
+        "Postopek s katerim se določijo pari.",
+        "Kroglice se izvlečejo iz posod.",
+        "Prenaša se v živo iz dvorane.",
+        "Legende tega športa ga pogosto izvedejo.",
+        "Bobni z imeni ekip so razdeljeni po jakosti.",
+        "Klubi iz iste države se v prvem delu ne morejo srečati.",
+        "Sreča pri njem lahko odloči o napredovanju.",
+        "Navijači ob njem vzklikajo ali zastokajo.",
+        "Poteka pod nadzorom zveze.",
+        "Njegov rezultat določi pot do finala."
+      ]
+    },
+    {
+      "word": "Medalja",
+      "clues": [
+        "Kovinski obesek ki ga dobi uvrščeni.",
+        "Okoli vratu se obesi.",
+        "Zlata pripada zmagovalcu.",
+        "Srebrna je za poraženca finala.",
+        "Bron je za tretje mesto.",
+        "Ob podelitvi jo obesi predsednik zveze.",
+        "Igralci jo grizejo za fotografe.",
+        "V vitrini doma jo hranijo do konca življenja.",
+        "Vsak igralec ekipe jo prejme.",
+        "Njena vrvica ima barve tekmovanja."
+      ]
+    },
+    {
+      "word": "Rekord",
+      "clues": [
+        "Najboljši dosežek doslej.",
+        "Podre se in zapiše na novo.",
+        "Največ zadetkov v sezoni je eden takih.",
+        "Knjiga z imenom Guinness jih zbira.",
+        "Statistiki jih natančno vodijo.",
+        "Ob njegovem padcu tekma za trenutek zastane.",
+        "Nekateri veljajo za nedosegljive.",
+        "Obiska na stadionu je tudi eden.",
+        "Njegov lastnik je ponosen vse življenje.",
+        "Nepremagljivi niz tekem brez poraza je pogosto omenjan."
+      ]
+    },
+    {
+      "word": "Serija",
+      "clues": [
+        "Zaporedje tekem z istim izidom.",
+        "Zmagovalna dvigne samozavest.",
+        "Brez poraza traja lahko cel krog.",
+        "Njen konec pride nepričakovano.",
+        "Statistiki jo natančno spremljajo.",
+        "Trener pravi da je pomembna le naslednja tekma.",
+        "Neporažena je predmet ponosa.",
+        "Črna se imenuje niz porazov.",
+        "Mediji o njej pišejo pred vsako tekmo.",
+        "Prekinitev take zgodbe je za nasprotnika velik uspeh."
+      ]
+    },
+    {
+      "word": "Obisk",
+      "clues": [
+        "Število gledalcev na tekmi.",
+        "Objavijo ga ob polčasu.",
+        "Derbi ga dvigne na najvišjo raven.",
+        "Dež ga zniža.",
+        "Razprodano pomeni najvišjega mogočega.",
+        "Ob slabi formi pade.",
+        "Rekorden je zapisan v zgodovini kluba.",
+        "Cena vstopnice nanj močno vpliva.",
+        "V praznem stadionu je bil med pandemijo ničen.",
+        "Klubu prinese pomemben del prihodka."
+      ]
+    },
+    {
+      "word": "Nasprotnik",
+      "clues": [
+        "Ekipa proti kateri igraš.",
+        "Pred tekmo se ga preuči z videoposnetkov.",
+        "Roko mu podaš pred začetkom.",
+        "Njegova postava je objavljena uro prej.",
+        "Njegove slabosti so priložnost.",
+        "Dres z njim zamenjaš po tekmi.",
+        "Njegovi navijači sedijo v ločenem sektorju.",
+        "Domači ali gostujoči je lahko.",
+        "Podcenjevanje njega je pogosta napaka.",
+        "Spoštovanje do njega je del športnega duha."
+      ]
+    },
+    {
+      "word": "Gost",
+      "clues": [
+        "Ekipa ki pride igrat na tuj stadion.",
+        "Njeni navijači sedijo v posebnem sektorju.",
+        "Zmaga zanjo je še bolj sladka.",
+        "Njena slačilnica je manjša od domače.",
+        "Rezervni dres pogosto obleče.",
+        "Žvižgi domačih navijačev jo spremljajo.",
+        "Zadetek na tujem stadionu je nekoč štel dvojno.",
+        "Pot z avtobusom ali letalom jo utrudi.",
+        "Zmage zunaj doma so redkejše.",
+        "Njeno vodstvo utiša celoten stadion."
+      ]
+    },
+    {
+      "word": "Zamuda",
+      "clues": [
+        "Kar se zgodi če tekma ne začne pravočasno.",
+        "Sodnik jo lahko prišteje na koncu.",
+        "Prometni zastoj avtobusa jo povzroči.",
+        "Gost na semaforju pri četrtem sodniku pokaže dodane minute.",
+        "Zaradi nevihte se lahko začetek prestavi.",
+        "Navijači ob njej postanejo nemirni.",
+        "Napovedovalec o njej obvesti prek zvočnika.",
+        "Televizija zaradi nje spremeni razpored.",
+        "Kazen zanjo lahko izreče zveza.",
+        "Ob njej se ogrevanje podaljša."
+      ]
+    },
+    {
+      "word": "Sodba",
+      "clues": [
+        "Kar sodnik zapiše v poročilo po tekmi.",
+        "Disciplinska komisija jo prebere.",
+        "Kazni za klube iz nje izhajajo.",
+        "Podrobno opiše sporne dogodke.",
+        "Pritožba nanjo je mogoča v nekaj dneh.",
+        "Nedopustno vedenje navijačev je pogosta vsebina.",
+        "Objavijo jo šele po nekaj dneh.",
+        "Klub jo pričakuje z napetostjo.",
+        "Prepoved obiska tekem lahko sledi.",
+        "Zapis v njej je uraden dokument."
+      ]
+    },
+    {
+      "word": "Pomočnik",
+      "clues": [
+        "Sodnik ob stranski črti z zastavico.",
+        "Prepovedan položaj je njegova glavna naloga.",
+        "Teče ob črti gor in dol vso tekmo.",
+        "Dva ju je na tekmi.",
+        "Menjave sporoča četrtemu sodniku.",
+        "Njegova zastavica ima dve barvi.",
+        "Ob spornih trenutkih se posvetuje z glavnim.",
+        "Tudi trener ima človeka s takim nazivom.",
+        "Njegova ocena globine je merjena v centimetrih.",
+        "Napake pri njem so vidne v ponovitvi."
+      ]
+    },
+    {
+      "word": "Napaka",
+      "clues": [
+        "Neroden dotik ki privede do zadetka.",
+        "Vratar jo naredi ko mu žoga spolzi.",
+        "Branilec jo naredi z napačno podajo nazaj.",
+        "Nasprotnik jo takoj kaznuje.",
+        "Statistika jo posebej beleži.",
+        "Ponovitev jo pokaže z vseh strani.",
+        "Navijači jo dolgo pomnijo.",
+        "Trener jo popravi z menjavo.",
+        "Vsak jo naredi enkrat v karieri pred milijoni.",
+        "Nihče je ne dela namerno."
+      ]
+    },
+    {
+      "word": "Pritisk",
+      "clues": [
+        "Način igre z visokim napadanjem nasprotnika.",
+        "Klopp je zanj uporabljal izraz gegenpressing.",
+        "Zahteva izjemno pripravljenost.",
+        "Nasprotnika prisili v napako pri izigravanju.",
+        "Izvaja se takoj po izgubljeni žogi.",
+        "Sodobni nogomet ga postavlja v ospredje.",
+        "Po dvajsetih minutah lahko izčrpa ekipo.",
+        "Trener ga zahteva z besedami višje in hitreje.",
+        "Tudi psihično breme pred pomembno tekmo se tako imenuje.",
+        "Nasprotnik ga preigra z eno dolgo podajo."
+      ]
+    },
+    {
+      "word": "Posest",
+      "clues": [
+        "Delež časa ko ima ekipa žogo.",
+        "V odstotkih se prikaže na zaslonu.",
+        "Barcelona jo je pod Guardiolo dvignila nad sedemdeset.",
+        "Nekatere ekipe se ji namenoma odpovedo.",
+        "Kratke podaje jo ohranjajo.",
+        "Ne pomeni nujno zmage.",
+        "Statistika jo meri s posebnim programom.",
+        "Nasprotnik jo pretrga s pritiskom.",
+        "Igra z njo se imenuje nadzorovana.",
+        "Ob koncu tekme jo vodilna ekipa namenoma zadrži."
+      ]
+    },
+    {
+      "word": "Zid",
+      "clues": [
+        "Vrsta igralcev pred izvajalcem prekinitve.",
+        "Postavi se devet metrov in petnajst od žoge.",
+        "Igralci si z rokami zaščitijo telo.",
+        "Sodnik razdaljo označi s posebnim sprejem.",
+        "Nekateri skočijo drugi ostanejo na tleh.",
+        "Eden pogosto leži za njim.",
+        "Vratar ga postavi in nato zavzame svoj položaj.",
+        "Žoga ga zaobide v loku ali gre pod njim.",
+        "Njegova višina odloča o uspehu strela.",
+        "Tri do pet igralcev ga navadno sestavlja."
+      ]
+    },
+    {
+      "word": "Pika",
+      "clues": [
+        "Bela oznaka enajst metrov pred vrati.",
+        "Žoga se nanjo postavi pred najstrožjo kaznijo.",
+        "Sodnik nanjo pokaže z iztegnjeno roko.",
+        "Izvajalec ob njej globoko vdihne.",
+        "Napetost ob njej je največja v tem športu.",
+        "Nariše se z belo barvo skupaj s črtami.",
+        "Tudi na sredini igrišča je podobna oznaka.",
+        "Streljanje z nje odloča finala.",
+        "Vratar pred njo pleše po črti.",
+        "Njena razdalja od vrat je predpisana v pravilih."
+      ]
+    },
+    {
+      "word": "Črta",
+      "clues": [
+        "Bela oznaka ki omejuje igrišče.",
+        "Če jo žoga v celoti prečka je zunaj.",
+        "Stranska in prečna sta dve vrsti.",
+        "Sredinska deli igrišče na polovici.",
+        "Pomožni sodnik teče ob njej.",
+        "Vzdrževalec jo nariše pred vsako tekmo.",
+        "Tehnologija zaznava kdaj jo žoga povsem prečka pri vratih.",
+        "Kazenski prostor je z njo zarisan.",
+        "Če stopiš čeznjo pri metu ni veljaven.",
+        "Bela barva iz stroja jo položi na travo."
+      ]
+    },
+    {
+      "word": "Krog",
+      "clues": [
+        "Ena runda tekem v prvenstvu.",
+        "Po vsakem se posodobi lestvica.",
+        "Šestintrideset jih ima večina lig v sezoni.",
+        "Zadnji odloči o naslovu.",
+        "Razpored zanj določi žreb pred sezono.",
+        "Tudi oznaka na sredini igrišča ima to obliko.",
+        "Prvi v sezoni je vedno poseben dogodek.",
+        "V pokalu se imenuje izločilni.",
+        "Med njimi je navadno teden dni premora.",
+        "Derbi v katerem koli od njih napolni stadion."
+      ]
+    },
+    {
+      "word": "Vrata",
+      "clues": [
+        "Okvir z mrežo v katerega se strelja.",
+        "Čuvaj mreže jih brani.",
+        "Široka so sedem metrov in tri četrt.",
+        "Dvoje jih je na igrišču.",
+        "Prečka in vratnici jih sestavljajo.",
+        "Zadetek pomeni da je žoga šla vanje.",
+        "Mreža je nanje pripeta s kavlji.",
+        "Ob koncu tekme se strani zamenjajo.",
+        "V dvorani so precej manjša.",
+        "Otroci si jih na dvorišču naredijo iz oblačil."
+      ]
+    },
+    {
+      "word": "Zapisnik",
+      "clues": [
+        "Uradni dokument o poteku tekme.",
+        "Sodnik ga izpolni po koncu.",
+        "Kartoni in strelci so v njem navedeni.",
+        "Postavi obeh ekip se vanj vpišeta pred začetkom.",
+        "Delegat ga pregleda in podpiše.",
+        "Komisija ga uporabi pri izrekanju kazni.",
+        "Menjave se vanj vpišejo z minuto.",
+        "Brez njega tekma uradno ne obstaja.",
+        "Danes se izpolni v elektronski obliki.",
+        "Kapetana ga pred tekmo potrdita."
+      ]
+    },
+    {
+      "word": "Transparent",
+      "clues": [
+        "Platno z napisom na tribuni.",
+        "Navijači ga razvijejo pred začetkom.",
+        "Sporočilo na njem je pogosto duhovito.",
+        "Politična vsebina na njem je prepovedana.",
+        "Redarji preverijo njegovo besedilo pred vstopom.",
+        "Med koreografijo je njen osrednji del.",
+        "Obesi se čez ograjo sektorja.",
+        "Kamere ga rade pokažejo v prenosu.",
+        "Nekateri so dolgi čez celo tribuno.",
+        "Ob poslovilni tekmi legende je pisan v zahvalo."
+      ]
+    },
+    {
+      "word": "Bakla",
+      "clues": [
+        "Ogenj ki ga navijači prižgejo na tribuni.",
+        "Rdeč dim se ob njej razširi po stadionu.",
+        "Uradno je na stadionih prepovedana.",
+        "Klub zaradi nje dobi denarno kazen.",
+        "Vzdušje z njo postane pravljično in nevarno hkrati.",
+        "Redarji jo skušajo preprečiti pri vhodu.",
+        "Če pade na igrišče se tekma prekine.",
+        "Njena temperatura je izjemno visoka.",
+        "Ob prihodu ekipe se jih prižge največ.",
+        "Fotografije z njo so najbolj priljubljene."
+      ]
+    },
+    {
+      "word": "Šal",
+      "clues": [
+        "Dolg pleten kos blaga v barvah kluba.",
+        "Navijači ga dvignejo nad glavo med himno.",
+        "Ime kluba je vanj vtkano.",
+        "Pozimi greje vrat na tribuni.",
+        "Kupi se v klubski trgovini.",
+        "Zbiratelji jih imajo na stotine.",
+        "Ob menjavi kluba ga igralec dobi v dar.",
+        "Razpet med rokami je znak pripadnosti.",
+        "Tudi navijači nasprotnika imajo svojega v drugih barvah.",
+        "Na zidu sobe ga marsikateri mladenič obesi."
+      ]
+    },
+    {
+      "word": "Zastava",
+      "clues": [
+        "Blago na drogu v barvah kluba ali države.",
+        "Med himno se dvigne.",
+        "Navijači jo vihtijo s tribune.",
+        "Ogromna se razgrne čez celoten sektor.",
+        "Državna se dvigne pred reprezentančno tekmo.",
+        "Klubska ima na sebi grb.",
+        "Ob osvojenem naslovu se z njo teče po igrišču.",
+        "Na stolpu stadiona plapola ves dan.",
+        "Njena velikost na tribuni je pogosto omejena s pravili.",
+        "Ob žalovanju je spuščena na pol droga."
+      ]
+    },
+    {
+      "word": "Boben",
+      "clues": [
+        "Tolkalo s katerim navijači držijo ritem.",
+        "Postavljen je sredi sektorja.",
+        "Vodja navijačev nanj udarja s palicami.",
+        "Skandiranje se po njem ravna.",
+        "Slišati ga je po vsem stadionu.",
+        "Nekateri klubi ga imajo prepovedanega.",
+        "Skupaj s trobento tvori zvok tribune.",
+        "Njegova opna je napeta čez okrogel okvir.",
+        "Ob zadetku se ritem na njem pospeši.",
+        "V glasbeni skupini ga igra tolkalec."
+      ]
+    },
+    {
+      "word": "Aplavz",
+      "clues": [
+        "Ploskanje občinstva.",
+        "Igralec ga dobi ob menjavi.",
+        "Ob koncu tekme ga ekipa nameni navijačem.",
+        "Nasprotnikov najboljši igralec ga včasih dobi tudi od domačih.",
+        "V določeni minuti se nameni v spomin pokojnemu.",
+        "Stoječi je največja čast.",
+        "Rokami se ustvari.",
+        "Gostujoči navijači ga namenijo svoji ekipi kljub porazu.",
+        "Ob lepi potezi se sam sproži.",
+        "Njegovo nasprotje je žvižganje."
+      ]
+    },
+    {
+      "word": "Žvižg",
+      "clues": [
+        "Ostri zvok iz sodnikovih ust.",
+        "Označi začetek in konec tekme.",
+        "Prekršek se z njim ustavi.",
+        "Tudi navijači tako izrazijo nezadovoljstvo.",
+        "Piščalka ga proizvede.",
+        "Trije zaporedni pomenijo konec.",
+        "Ob njem se igra takoj ustavi.",
+        "Gostujoči igralec ga sliši ob vsakem dotiku žoge.",
+        "Ob koncu tekme prinese olajšanje vodilni ekipi.",
+        "Njegova glasnost pove kako oster je bil prekršek."
+      ]
+    },
+    {
+      "word": "Skandiranje",
+      "clues": [
+        "Zborno vzklikanje navijačev.",
+        "Ime igralca se pogosto ponavlja.",
+        "Vodja s tribune ga začne.",
+        "Ritem mu daje boben.",
+        "Ob zadetku postane najglasnejše.",
+        "Nekatera so žaljiva in prinesejo klubu kazen.",
+        "Cel stadion se lahko pridruži.",
+        "Pesmi zanj se prenašajo iz roda v rod.",
+        "Ob koncu tekme se spremeni v zahvalo.",
+        "Zvočni posnetki ga uporabljajo v filmih o tem športu."
+      ]
+    },
+    {
+      "word": "Koreografija",
+      "clues": [
+        "Vnaprej pripravljen navijaški prizor na tribuni.",
+        "Kartončki v rokah ustvarijo veliko sliko.",
+        "Pripravlja se več tednov v tajnosti.",
+        "Ob prihodu ekip se razgrne.",
+        "Dim in ogenj sta pogosto njen del.",
+        "Fotografi jo posnamejo z nasprotne tribune.",
+        "Vsak sedež ima pri njej svojo vlogo.",
+        "Južni sektorji so po njej znani.",
+        "Nekatere so postale slavne po vsem svetu.",
+        "Tudi v plesu obstaja beseda s tem pomenom."
+      ]
+    },
+    {
+      "word": "Kamera",
+      "clues": [
+        "Naprava ki snema dogajanje na igrišču.",
+        "Na tirnici ob črti drsi.",
+        "Nekatere visijo na jeklenicah nad igriščem.",
+        "Ponovitev pride iz nje.",
+        "V vratih je skrita majhna.",
+        "Brezpilotni letalnik jo danes nosi nad stadionom.",
+        "Sodnikova odločitev se preveri z njenim posnetkom.",
+        "Igralec vanjo pomaha po zadetku.",
+        "Snemalec jo nosi na rami ob črti.",
+        "Prenos tekme brez nje ni mogoč."
+      ]
+    },
+    {
+      "word": "Fotograf",
+      "clues": [
+        "Človek z velikim objektivom ob črti.",
+        "Kleči za oglasnimi panoji.",
+        "Rumeni jopič ga označuje.",
+        "Njegove slike so naslednji dan v časopisu.",
+        "Ob zadetku ujame veselje strelca.",
+        "Za akreditacijo mora zaprositi pred tekmo.",
+        "Njegova oprema tehta več kilogramov.",
+        "Za vrati je najboljši položaj zanj.",
+        "Med tekmo ne sme na igrišče.",
+        "Ob dvigu pokala se jih zbere na desetine."
+      ]
+    },
+    {
+      "word": "Novinar",
+      "clues": [
+        "Piše o tekmi za medije.",
+        "Vprašanja postavlja na konferenci.",
+        "Njegovo mesto je na tribuni za tisk.",
+        "Prenosni računalnik ima ves čas odprt.",
+        "Ocene igralcev napiše takoj po koncu.",
+        "Akreditacija mu omogoči vstop.",
+        "Trenerji z njim niso vedno prijazni.",
+        "Prvi izve za prestop.",
+        "Njegov članek je naslednje jutro na spletu.",
+        "Miks cona je prostor kjer lovi izjave."
+      ]
+    },
+    {
+      "word": "Nagrada",
+      "clues": [
+        "Priznanje za najboljšega posameznika.",
+        "Zlata žoga je najbolj znana v tem športu.",
+        "Podeli se na slovesnosti ob koncu leta.",
+        "Novinarji in selektorji glasujejo zanjo.",
+        "Messi jo je prejel največkrat.",
+        "Tudi za najboljšega vratarja obstaja posebna.",
+        "Denarna je pogosto vezana na uvrstitev.",
+        "Kipec se postavi v vitrino.",
+        "Za najlepši zadetek se imenuje po Puskasu.",
+        "Mladi igralec sanja o njej vse življenje."
+      ]
+    },
+    {
+      "word": "Talent",
+      "clues": [
+        "Mlad igralec z veliko obljubo.",
+        "Skavti ga opazijo že pri petnajstih.",
+        "Akademija ga vzgaja od otroštva.",
+        "Če prehitro zasloveti lahko izgori.",
+        "Velike ekipe ga kupijo poceni in prodajo drago.",
+        "Njegova prva tekma med člani je velik dogodek.",
+        "Mediji ga takoj razglasijo za novega zvezdnika.",
+        "Nekateri ga zapravijo zaradi neresnosti.",
+        "Naravna sposobnost je njegov temelj.",
+        "Delo je po znanem reku pomembnejše od njega."
+      ]
+    },
+    {
+      "word": "Veteran",
+      "clues": [
+        "Izkušen igralec pri koncu kariere.",
+        "Mlajšim je vzor v slačilnici.",
+        "Njegove noge niso več tako hitre.",
+        "Izkušnje nadomestijo hitrost pri njem.",
+        "Poslovilna tekma se zanj pripravi.",
+        "Pogosto postane trener po koncu.",
+        "Kapetanski trak je pogosto njegov.",
+        "Nekateri igrajo še po štiridesetem letu.",
+        "Zdravnik zanj pripravi poseben program.",
+        "Njegov dres se v klubu včasih upokoji."
+      ]
+    },
+    {
+      "word": "Legenda",
+      "clues": [
+        "Igralec ki ga klub nikoli ne pozabi.",
+        "Kip pred stadionom mu postavijo.",
+        "Njegova številka se ne podeli več.",
+        "Navijači o njem pojejo tudi desetletja pozneje.",
+        "Maldini in Giggs sta primera zvestobe enemu klubu.",
+        "Ob obletnicah ga povabijo na igrišče.",
+        "Njegovi zadetki so na posnetkih neštetokrat predvajani.",
+        "Muzej kluba mu nameni celo vitrino.",
+        "Otroci ga poznajo po zgodbah staršev.",
+        "Tudi napis pod zemljevidom se tako imenuje."
+      ]
+    },
+    {
+      "word": "Zvezdnik",
+      "clues": [
+        "Igralec ki ga pozna ves svet.",
+        "Reklame z njim so povsod.",
+        "Njegov prestop je novica na prvi strani.",
+        "Milijoni sledilcev ga spremljajo na spletu.",
+        "Njegova plača presega vse ostale v ekipi.",
+        "Fotografi ga čakajo tudi pred hišo.",
+        "Dres z njegovim priimkom se najbolje prodaja.",
+        "Pritisk nanj je največji na velikih tekmah.",
+        "Selfi z njim je sanje vsakega otroka.",
+        "Nekateri ga zaradi slave težko prenesejo."
+      ]
+    },
+    {
+      "word": "Akademija",
+      "clues": [
+        "Šola kluba za mlade igralce.",
+        "Otroci vanjo vstopijo pri osmih letih.",
+        "Barcelonska se imenuje La Masia.",
+        "Iz nje pride največ domačih igralcev.",
+        "Bivanje v internatu je pogosto del nje.",
+        "Trenerji v njej učijo tehniko in disciplino.",
+        "Le redki iz nje pridejo do prve ekipe.",
+        "Šolanje mora potekati vzporedno s treningi.",
+        "Klub z dobro prihrani milijone pri nakupih.",
+        "Njeni tekmovalni razredi so razdeljeni po letnikih."
+      ]
+    },
+    {
+      "word": "Skavt",
+      "clues": [
+        "Človek ki išče nove igralce.",
+        "Sedi na tribunah mladinskih tekem.",
+        "Poročilo o igralcu pošlje klubu.",
+        "Sodobni uporablja tudi podatkovne baze.",
+        "Potuje po vsem svetu.",
+        "Njegovo oko opazi tisto česar statistika ne pokaže.",
+        "Ob njem sedi pogosto z beležnico.",
+        "Klubi imajo cele mreže takih ljudi.",
+        "Uspešen odkrije zvezdnika preden ga opazijo drugi.",
+        "Njegovo delo je pogosto anonimno."
+      ]
+    },
+    {
+      "word": "Agent",
+      "clues": [
+        "Zastopnik igralca pri pogajanjih.",
+        "Provizijo dobi ob vsakem prestopu.",
+        "Za stranko išče najboljšo ponudbo.",
+        "Raiola je bil med najbolj znanimi.",
+        "Klubi z njim pogosto niso zadovoljni.",
+        "Pogodbo pregleda in izpogaja pogoje.",
+        "Nekateri zastopajo cele družine igralcev.",
+        "Njegov vpliv na trg je ogromen.",
+        "Licenca za to delo je danes obvezna.",
+        "Med prestopnim rokom je najbolj zaposlen."
+      ]
+    },
+    {
+      "word": "Odškodnina",
+      "clues": [
+        "Denar ki ga klub plača za igralca.",
+        "Neymarjeva je bila rekordna.",
+        "Meri se v milijonih.",
+        "Klavzula v pogodbi jo lahko določi vnaprej.",
+        "Manjši klubi od nje živijo.",
+        "Delež gre včasih tudi klubu kjer je igralec zrasel.",
+        "Plača se v obrokih čez več let.",
+        "Bonusi za nastope jo lahko povečajo.",
+        "Brez nje igralec odide ob izteku pogodbe.",
+        "Rekordna vsota vsakih nekaj let pade."
+      ]
+    },
+    {
+      "word": "Posoja",
+      "clues": [
+        "Začasen odhod igralca v drug klub.",
+        "Traja navadno pol sezone ali eno leto.",
+        "Mladi tako naberejo minute.",
+        "Matični klub pogosto plača del plače.",
+        "Proti svojemu klubu igralec včasih ne sme nastopiti.",
+        "Odkupna klavzula je lahko del dogovora.",
+        "Po njej se igralec vrne domov.",
+        "Velike ekipe imajo na desetine igralcev tako razpršenih.",
+        "Za igralca je priložnost za dokazovanje.",
+        "Tudi knjižnica ponuja knjige na tak način."
+      ]
+    },
+    {
+      "word": "Podpis",
+      "clues": [
+        "Trenutek ko igralec postane član kluba.",
+        "Fotografija s pisalom in dresom sledi.",
+        "Zdravniški pregled je pred njim.",
+        "Pogodba se z njim sklene.",
+        "Navijači ga čakajo pred stavbo kluba.",
+        "Objavijo ga na družbenih omrežjih.",
+        "Rok zanj se izteče ob zaprtju prestopnega roka.",
+        "Tudi na dresu za navijača se naredi kaj takega.",
+        "Predsednik kluba je pri njem zraven.",
+        "Brez njega dogovor ne velja."
+      ]
+    },
+    {
+      "word": "Ponudba",
+      "clues": [
+        "Znesek ki ga klub pošlje za igralca.",
+        "Prva je pogosto zavrnjena.",
+        "Izboljša se z novim pismom.",
+        "Mediji o njej poročajo z domnevami.",
+        "Igralčev zastopnik jo posreduje naprej.",
+        "Če jo klub sprejme sledijo pogajanja z igralcem.",
+        "Klavzula v pogodbi lahko določi znesek ob katerem je samodejno sprejeta.",
+        "Tekmec lahko pošlje višjo.",
+        "Ob koncu prestopnega roka pridejo najhitrejše.",
+        "Zavrnjena včasih razjezi igralca."
+      ]
+    },
+    {
+      "word": "Plača",
+      "clues": [
+        "Denar ki ga igralec prejme mesečno.",
+        "Vrhunski jo imajo v milijonih na leto.",
+        "Bonusi za zadetke jo povečajo.",
+        "Če jo klub zamuja igralec lahko odide brez odškodnine.",
+        "Zgornja meja zanjo v nekaterih ligah obstaja.",
+        "Davek jo občutno zniža.",
+        "Pogajanja o njej so najtežji del pogodbe.",
+        "Objave o njej so pogosto le ugibanja.",
+        "Mladi v akademiji je skoraj ne prejmejo.",
+        "Njena višina je odvisna od uspehov in slave."
+      ]
+    },
+    {
+      "word": "Licenca",
+      "clues": [
+        "Dovoljenje kluba za nastopanje v ligi.",
+        "Zveza jo izda pred sezono.",
+        "Brez nje klub ne sme igrati.",
+        "Finančna stabilnost je pogoj zanjo.",
+        "Če je klub ne dobi izpade v nižjo ligo.",
+        "Tudi trener jo mora imeti za vodenje ekipe.",
+        "Stopnje zanj se označujejo s črkami.",
+        "Stadion mora ustrezati predpisom da se pridobi.",
+        "Dolgovi so najpogostejši razlog za zavrnitev.",
+        "Njeno podeljevanje je vsako leto tema poročil."
+      ]
+    },
+    {
+      "word": "Proračun",
+      "clues": [
+        "Denar s katerim klub razpolaga v sezoni.",
+        "Plače so njegov največji del.",
+        "Prihodki od prenosov ga polnijo.",
+        "Manjši klubi imajo tisočkrat manjšega od največjih.",
+        "Pravila poštenega poslovanja ga omejujejo.",
+        "Če ga prekoračiš sledi kazen zveze.",
+        "Prodaja igralca ga lahko reši.",
+        "Vodstvo ga potrdi pred začetkom sezone.",
+        "Tudi država ima dokument s tem imenom.",
+        "Njegova višina napove kje bo ekipa končala."
+      ]
+    },
+    {
+      "word": "Sezona",
+      "clues": [
+        "Obdobje od prve do zadnje tekme leta.",
+        "Traja navadno od avgusta do maja.",
+        "Zimski premor jo prekine.",
+        "Pripravljalni del je pred njo.",
+        "Ob koncu se podelijo naslovi.",
+        "Poletje je čas med dvema.",
+        "Uspešna se meri s trofejami.",
+        "Prestopni rok jo odpre in prekine.",
+        "Najboljši igralec se izbere ob njenem koncu.",
+        "V nekaterih državah poteka čez koledarsko leto."
+      ]
+    },
+    {
+      "word": "Premor",
+      "clues": [
+        "Prekinitev tekmovanja med sezono.",
+        "Zimski traja nekaj tednov.",
+        "Reprezentančni prekine klubske tekme.",
+        "Igralci med njim odidejo na počitnice.",
+        "Trener ga izkoristi za dodatne treninge.",
+        "Navijači ga težko prenesejo.",
+        "Poletni je najdaljši.",
+        "Priprave se v njem pogosto opravijo v toplih krajih.",
+        "Poškodovani ga izkoristijo za okrevanje.",
+        "Prestopni rok se pogosto ujema z njim."
+      ]
+    },
+    {
+      "word": "Turnir",
+      "clues": [
+        "Tekmovanje več ekip v kratkem času.",
+        "Reprezentance ga igrajo poleti.",
+        "Skupinski del je njegov začetek.",
+        "Izločilne tekme sledijo.",
+        "Vsaka štiri leta je največji na svetu.",
+        "Gostitelj je izbran leta prej.",
+        "Vstopnice zanj se prodajajo z žrebom.",
+        "Otroci ga igrajo tudi na šolskem igrišču.",
+        "Njegov zmagovalec dvigne pokal.",
+        "Mesta gostiteljev so razpršena po državi."
+      ]
+    },
+    {
+      "word": "Udarec",
+      "clues": [
+        "Zamah z nogo po žogi.",
+        "Notranji del stopala ga naredi natančnega.",
+        "Nart mu da moč.",
+        "Prosti se izvaja po prekršku.",
+        "Vratar ga izvede z roba svojega prostora.",
+        "Njegova hitrost lahko preseže sto kilometrov na uro.",
+        "Iz kota ga izvede krilni igralec.",
+        "Če je z glavo se ne uporablja noga.",
+        "Tehnika zanj se vadi na treningu na stotine ponovitev.",
+        "Zaključni v mrežo je cilj vsakega napada."
+      ]
+    },
+    {
+      "word": "Napad",
+      "clues": [
+        "Faza igre ko ekipa gradi priložnost.",
+        "Zaključi se s strelom proti mreži.",
+        "Sredinski igralci ga začnejo s podajo naprej.",
+        "Hiter po pridobljeni žogi se imenuje protinapad.",
+        "Postavljen se gradi počasi s kratkimi podajami.",
+        "Njegovo nasprotje je obramba.",
+        "Krila ga širijo po robovih igrišča.",
+        "Trener ga izboljša z menjavo konice.",
+        "Če traja predolgo se nasprotnik postavi.",
+        "Statistika šteje njihovo število na tekmo."
+      ]
+    },
+    {
+      "word": "Obramba",
+      "clues": [
+        "Faza igre ko ekipa brani svoja vrata.",
+        "Štirje igralci jo navadno sestavljajo.",
+        "Cona ali osebno sta njena dva načina.",
+        "Trdna je temelj naslova.",
+        "Vratar je njen zadnji člen.",
+        "Tudi posredovanje čuvaja mreže se tako imenuje.",
+        "Visoka postavi past za prepovedan položaj.",
+        "Njeno nasprotje je napad.",
+        "Trener jo vadi s postavljanjem igralcev v vrsti.",
+        "Če razpade tekma hitro odloči."
+      ]
+    },
+    {
+      "word": "Protinapad",
+      "clues": [
+        "Hiter prehod iz obrambe v napad.",
+        "Nasprotnik je pri njem razpostavljen naprej.",
+        "Nekaj sekund je čas ki ga imaš.",
+        "Hitri krilni igralci so zanj idealni.",
+        "Dolga podaja ga sproži.",
+        "Ekipe ki branijo globoko ga uporabljajo kot orožje.",
+        "Ob koncu tekme se pogosto zgodi proti utrujenim.",
+        "Ena podaja lahko odloči celo tekmo.",
+        "Trener nanj pripravi ekipo z vajami tri na dva.",
+        "Gledalcem je najbolj razburljiv del igre."
+      ]
+    },
+    {
+      "word": "Prekinitev",
+      "clues": [
+        "Trenutek ko se igra ustavi in začne z mirujočo žogo.",
+        "Kot in prosti udarec sta njeni obliki.",
+        "Ekipe za njo vadijo posebne vaje.",
+        "Tretjina vseh zadetkov pade iz nje.",
+        "Visoki igralci pridejo iz obrambe naprej ob njej.",
+        "Zid se postavi pred izvajalcem.",
+        "Označene poteze zanjo so klubska skrivnost.",
+        "Vratar mora ob njej organizirati soigralce.",
+        "Tudi poškodba lahko povzroči ustavitev igre.",
+        "Statistika beleži uspešnost iz nje."
+      ]
+    },
+    {
+      "word": "Vodstvo",
+      "clues": [
+        "Prednost v številu zadetkov.",
+        "Prvi zadetek ga prinese.",
+        "Ekipa ga skuša zadržati do konca.",
+        "Če ga izgubiš je psihološki udarec velik.",
+        "Trener po njem pogosto zamenja napadalca za branilca.",
+        "Ob koncu tekme se z njim igra na čas.",
+        "Dvogolno je varnejše.",
+        "Zapravljeno je najpogostejša tema kritik.",
+        "Tudi upravni odbor kluba se tako imenuje.",
+        "Gostujoče utiša domači stadion."
+      ]
+    },
+    {
+      "word": "Izenačenje",
+      "clues": [
+        "Zadetek s katerim je izid spet enak.",
+        "Pogosto pade v zadnjih minutah.",
+        "Stadion ob njem znori ali obnemi.",
+        "Ekipa ga išče z vsemi silami.",
+        "Vratar gre ob koncu naprej pri kotu da ga doseže.",
+        "Po njem se tekma pogosto odloči na drugo stran.",
+        "Statistika ga šteje kot obrat razpoloženja.",
+        "Za gostujočo ekipo je pogosto dovolj dober izid.",
+        "Sodnikov dodatek je čas ko se največkrat zgodi.",
+        "Točka je njegova nagrada."
+      ]
+    },
+    {
+      "word": "Preobrat",
+      "clues": [
+        "Ko ekipa iz zaostanka pride do zmage.",
+        "Liverpool ga je izvedel proti Barceloni.",
+        "Najbolj slavni so v finalih.",
+        "Navijači ga pomnijo desetletja.",
+        "Dva zadetka v nekaj minutah ga naredijo.",
+        "Trener po njem postane junak.",
+        "Statistiki ga označijo kot redko dejanje.",
+        "Menjava ga pogosto sproži.",
+        "Poraženec po njem dolgo okreva.",
+        "Zgodovina tega športa je polna takih večerov."
+      ]
+    },
+    {
+      "word": "Trobenta",
+      "clues": [
+        "Pihalo s katerim navijači ropotajo na tribuni.",
+        "Vuvuzela je njena afriška različica.",
+        "Prvenstvo v Južni Afriki je zaslovelo po njenem brenčanju.",
+        "Zvok iz nje je oster in enoličen.",
+        "Ustnik se pritisne na ustnice.",
+        "Skupaj z bobnom napolni sektor s hrupom.",
+        "Nekateri stadioni jo prepovedujejo.",
+        "Gledalci doma so ob njej stišali televizor.",
+        "V pihalnem orkestru je iz medenine.",
+        "Ob zadetku zadoni najglasneje."
+      ]
+    },
+    {
+      "word": "Slavje",
+      "clues": [
+        "Veselje po osvojenem naslovu.",
+        "Šampanjec se razlije po slačilnici.",
+        "Parada z odprtim avtobusom skozi mesto sledi.",
+        "Konfeti padajo z odra.",
+        "Navijači se zberejo na osrednjem trgu.",
+        "Pokal se dviguje visoko v zrak.",
+        "Pesmi se pojejo pozno v noč.",
+        "Tudi po zadetku se izvede krajša različica.",
+        "Fotografije z njega ostanejo v muzeju kluba.",
+        "Ob njem se igralci povzpnejo na ograjo k navijačem."
+      ]
+    }
+  ],
+  "imageURLString": "slovenia"
+}
