@@ -270,9 +270,10 @@ class AiPlayController(
             val deck = AIWordIndex.deck(config.deck.id, config.language)
             if (queries.isEmpty() || deck == null) { turn = Turn.Idle; return }
 
+            val k = config.language.shortlistK
             val shortlists = withContext(Dispatchers.Default) {
                 queries.mapNotNull { q ->
-                    AIEmbedder.embed(q)?.let { qv -> AIWordIndex.topK(qv, deck, 12) }
+                    AIEmbedder.embed(q)?.let { qv -> AIWordIndex.topK(qv, deck, k) }
                 }
             }
             val hit = shortlists.any { list -> list.any { AnswerMatcher.matches(it, listOf(word)) } }

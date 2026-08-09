@@ -17,6 +17,19 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
 
     val display: String get() = code.uppercase()
 
+    /**
+     * How many candidates the you-explain round shortlists per query. The bot counts the
+     * word as guessed when it lands anywhere in this list, so a wider net makes it look
+     * more capable. Slovenian and Spanish retrieve well below the rest and Serbian sits
+     * between, so they get a little more room instead of a stricter cut. Kept in sync
+     * with iOS AILanguage.shortlistK.
+     */
+    val shortlistK: Int get() = when (this) {
+        ES, SL -> 14
+        SR -> 13
+        else -> 12
+    }
+
     /** [locale] ("ll" or "ll-CC") as a java.util.Locale. */
     val javaLocale: Locale get() = locale.split("-").let {
         if (it.size == 2) Locale(it[0], it[1]) else Locale(it[0])
