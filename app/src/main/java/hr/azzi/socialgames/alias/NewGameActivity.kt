@@ -33,6 +33,9 @@ class NewGameActivity : BaseActivity() {
                 )
             }
         }
+        // Calm moment before a game — ask for a rating. Google quotas this, so it
+        // shows at most a few times per user and silently no-ops otherwise.
+        AppReview.request(this)
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {
