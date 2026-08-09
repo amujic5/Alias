@@ -1,0 +1,3082 @@
+{
+  "language": "Spanish",
+  "languageCode": "ESP",
+  "words": [
+    {
+      "word": "Perro",
+      "clues": [
+        "Es el mejor amigo del hombre.",
+        "Ladra cuando llega alguien a casa.",
+        "Lo sacas a pasear con una correa.",
+        "Mueve la cola cuando está contento.",
+        "Duerme en una caseta del jardín.",
+        "En los dibujos hay uno famoso que se llama Scooby Doo.",
+        "Le encanta que le lances un palo.",
+        "Muchos niños piden uno a los Reyes Magos.",
+        "Se lleva fatal con el gato del vecino.",
+        "Entierra sus huesos en la tierra."
+      ]
+    },
+    {
+      "word": "Gato",
+      "clues": [
+        "Dice miau cuando tiene hambre.",
+        "Duerme todo el día en el sofá.",
+        "Se afila las uñas en el sillón.",
+        "Juega con un ovillo de lana.",
+        "Ronronea si le acaricias la barriga.",
+        "Siempre cae de pie desde lo alto.",
+        "El de las botas sale en un cuento famoso.",
+        "Caza ratones en el granero.",
+        "Tiene bigotes largos y ojos brillantes.",
+        "Se lame el pelo para estar limpio."
+      ]
+    },
+    {
+      "word": "Vaca",
+      "clues": [
+        "Dice mu en el prado.",
+        "De ella sale la leche que bebes.",
+        "Es blanca con manchas negras.",
+        "Vive en una granja con el toro.",
+        "Tiene cuernos y una cola larga.",
+        "El granjero la ordeña por la mañana.",
+        "Con su leche se hace el queso.",
+        "Come hierba todo el día.",
+        "Lleva un cencerro colgado del cuello.",
+        "Es mucho más grande que una oveja."
+      ]
+    },
+    {
+      "word": "Cerdo",
+      "clues": [
+        "Dice oink y se revuelca en el barro.",
+        "Tiene el rabito enrollado como un muelle.",
+        "Es rosa y bastante gordito.",
+        "Vive en una pocilga de la granja.",
+        "En el cuento son tres hermanos y hay un lobo.",
+        "Su hocico se llama morro.",
+        "De él sale el jamón.",
+        "Come de todo en un comedero.",
+        "Se parece al jabalí del bosque.",
+        "Peppa es la más famosa de los dibujos."
+      ]
+    },
+    {
+      "word": "Gallina",
+      "clues": [
+        "Pone huevos todas las mañanas.",
+        "Dice co co co en el corral.",
+        "Sus crías amarillas son los pollitos.",
+        "Duerme donde el granjero recoge los huevos.",
+        "Tiene una cresta roja en la cabeza.",
+        "Es la mujer del gallo.",
+        "Come granos de maíz del suelo.",
+        "Hay un juego de niños con los ojos tapados que lleva su nombre.",
+        "No sabe volar aunque tiene alas.",
+        "En el cuento pone un huevo de oro."
+      ]
+    },
+    {
+      "word": "Caballo",
+      "clues": [
+        "Dice hiiii y galopa muy rápido.",
+        "Los vaqueros lo montan en las películas.",
+        "Tiene crines largas en el cuello.",
+        "Duerme de pie en el establo.",
+        "Lleva herraduras de metal en las patas.",
+        "Come heno y zanahorias.",
+        "En la feria hay uno de madera que da vueltas.",
+        "El pequeño se llama potro.",
+        "Se parece a la cebra pero sin rayas.",
+        "Arrastra el carro por el campo."
+      ]
+    },
+    {
+      "word": "Oveja",
+      "clues": [
+        "Dice beee en el monte.",
+        "Está cubierta de lana blanca y rizada.",
+        "El pastor la cuida con su perro.",
+        "Con su pelo se hacen jerséis.",
+        "En primavera la esquilan al cero.",
+        "Para dormirte cuentas muchas saltando una valla.",
+        "Su cría se llama cordero.",
+        "El lobo quiere comérsela en los cuentos.",
+        "Va siempre en rebaño con las demás.",
+        "Come hierba en el prado igual que la vaca."
+      ]
+    },
+    {
+      "word": "Pato",
+      "clues": [
+        "Dice cuac cuac en el estanque.",
+        "Nada en el agua y no se moja.",
+        "Tiene el pico plano y naranja.",
+        "Camina moviendo el culete de lado a lado.",
+        "En el cuento el feo se convierte en cisne.",
+        "Le tiras pan en el parque.",
+        "Sus dedos tienen membrana para nadar.",
+        "Hay uno de goma amarillo para la bañera.",
+        "Vuela en grupo hacia el sur en invierno.",
+        "El famoso de los dibujos se llama Donald."
+      ]
+    },
+    {
+      "word": "Conejo",
+      "clues": [
+        "Da saltos con sus patas traseras.",
+        "Tiene las orejas larguísimas.",
+        "Le encantan las zanahorias.",
+        "Vive en una madriguera bajo tierra.",
+        "En Pascua trae huevos de chocolate.",
+        "Mueve la nariz sin parar.",
+        "El mago lo saca de la chistera.",
+        "Su cola es una bolita blanca.",
+        "Se parece a la liebre del campo.",
+        "Corre mucho más que la tortuga."
+      ]
+    },
+    {
+      "word": "Ratón",
+      "clues": [
+        "Es pequeño gris y muy rápido.",
+        "Le encanta el queso de la trampa.",
+        "El gato lo persigue por toda la casa.",
+        "Vive en un agujero de la pared.",
+        "El que trae dinero por los dientes se llama Pérez.",
+        "Mickey es el más famoso del mundo.",
+        "Tiene una cola larga y fina.",
+        "Chilla con un sonido muy agudo.",
+        "El elefante le tiene miedo en los cuentos.",
+        "El ordenador tiene uno para mover la flecha."
+      ]
+    },
+    {
+      "word": "León",
+      "clues": [
+        "Es el rey de la selva.",
+        "Ruge tan fuerte que asusta a todos.",
+        "Tiene una melena enorme alrededor de la cara.",
+        "Simba es el más famoso de las películas.",
+        "Duerme casi todo el día a la sombra.",
+        "Caza en la sabana con su manada.",
+        "Es como un gato gigante y amarillo.",
+        "En el circo salta por un aro.",
+        "Su rugido se oye a kilómetros.",
+        "Su cría se llama cachorro."
+      ]
+    },
+    {
+      "word": "Tigre",
+      "clues": [
+        "Es naranja con rayas negras.",
+        "Vive en la selva y caza sin ayuda.",
+        "Es primo del gato pero gigante.",
+        "En una caja de cereales sale uno famoso.",
+        "Ruge y enseña unos colmillos enormes.",
+        "Se esconde entre la hierba alta.",
+        "Sus rayas son distintas en cada uno.",
+        "En el circo salta por un aro de fuego.",
+        "Le gusta el agua y sabe nadar.",
+        "En el cuento de la selva se llama Shere Khan."
+      ]
+    },
+    {
+      "word": "Elefante",
+      "clues": [
+        "Es el animal más grande de la tierra.",
+        "Tiene una trompa larguísima.",
+        "Sus orejas parecen dos abanicos.",
+        "Se ducha echándose agua por encima.",
+        "Tiene dos colmillos blancos.",
+        "Dumbo es el que vuela en la película.",
+        "Nunca olvida nada según dicen.",
+        "Come cacahuetes en el circo.",
+        "Su piel es gris y llena de arrugas.",
+        "Le tiene miedo a un ratón pequeñito."
+      ]
+    },
+    {
+      "word": "Jirafa",
+      "clues": [
+        "Es el animal más alto del mundo.",
+        "Tiene el cuello larguísimo.",
+        "Su piel es amarilla con manchas marrones.",
+        "Come hojas de la copa de los árboles.",
+        "Vive en la sabana africana.",
+        "Para beber tiene que abrir mucho las patas.",
+        "Su lengua es azulada y muy larga.",
+        "Su cría nace midiendo casi dos metros.",
+        "En el zoo la ves desde una plataforma alta.",
+        "Tiene dos cuernitos pequeños en la cabeza."
+      ]
+    },
+    {
+      "word": "Mono",
+      "clues": [
+        "Se columpia de rama en rama.",
+        "Le encantan los plátanos.",
+        "Hace muecas graciosas en el zoo.",
+        "Se rasca la cabeza igual que tú.",
+        "Tiene la cola muy larga para agarrarse.",
+        "Vive en la selva con sus amigos.",
+        "Dice u u a a cuando se enfada.",
+        "Es el animal que más se parece a las personas.",
+        "En el cuento de la selva se llama Rey Louie.",
+        "Trepa por los árboles a toda velocidad."
+      ]
+    },
+    {
+      "word": "Oso",
+      "clues": [
+        "Duerme todo el invierno en una cueva.",
+        "Le vuelve loco la miel de las abejas.",
+        "El de peluche está en tu cama.",
+        "Winnie es el más famoso de los cuentos.",
+        "Hay uno blanco que vive en el hielo.",
+        "Pesca salmones en el río con la boca.",
+        "Se pone de pie y ruge muy fuerte.",
+        "El panda come bambú todo el día.",
+        "Es grande peludo y marrón.",
+        "En los dibujos de Masha sale uno enorme."
+      ]
+    },
+    {
+      "word": "Lobo",
+      "clues": [
+        "Aúlla mirando a la luna.",
+        "Se comió a la abuela de Caperucita.",
+        "Sopló y sopló y tiró la casa de paja.",
+        "Va en manada por el bosque.",
+        "Se parece mucho a un perro grande y gris.",
+        "El pastor gritaba que venía.",
+        "Persigue a las ovejas del rebaño.",
+        "Tiene los dientes muy afilados.",
+        "Es el abuelo salvaje de los perros.",
+        "En el cuento se disfraza con un gorro."
+      ]
+    },
+    {
+      "word": "Zorro",
+      "clues": [
+        "Es naranja con la cola muy peluda.",
+        "Dicen que es el más listo del bosque.",
+        "Roba gallinas del corral por la noche.",
+        "Sale en la fábula de las uvas verdes.",
+        "Se parece a un perro pequeño y pelirrojo.",
+        "Vive en una madriguera en el campo.",
+        "En el Principito hay uno que quiere ser amigo.",
+        "Tiene el hocico fino y puntiagudo.",
+        "Su cola le sirve de manta cuando duerme.",
+        "Caza ratones dando un salto en la nieve."
+      ]
+    },
+    {
+      "word": "Ardilla",
+      "clues": [
+        "Guarda avellanas para el invierno.",
+        "Sube por el tronco a toda prisa.",
+        "Tiene una cola enorme y esponjosa.",
+        "Vive en un agujero del árbol.",
+        "Es pequeña y marrón o gris.",
+        "Se le olvida dónde escondió la comida.",
+        "En el parque baja a por tus migas.",
+        "Salta de rama en rama sin caerse.",
+        "Coge las nueces con las dos manitas.",
+        "En la película de la Edad de Hielo hay una loca por su bellota."
+      ]
+    },
+    {
+      "word": "Erizo",
+      "clues": [
+        "Está lleno de púas en la espalda.",
+        "Se hace una bola cuando tiene miedo.",
+        "Sonic el azul corre a toda velocidad.",
+        "Sale de noche a buscar gusanos.",
+        "Es pequeño y cabe en tus manos.",
+        "Duerme todo el invierno bajo las hojas.",
+        "Camina despacito por el jardín.",
+        "Nadie se atreve a darle un abrazo.",
+        "Tiene el morrito alargado y negro.",
+        "Hay uno de mar que vive entre las rocas."
+      ]
+    },
+    {
+      "word": "Ciervo",
+      "clues": [
+        "Tiene unos cuernos con muchas ramas.",
+        "Bambi es el más famoso de la película.",
+        "Corre por el bosque saltando muy alto.",
+        "Su piel es marrón con puntitos blancos de pequeño.",
+        "Papá Noel usa unos parecidos para el trineo.",
+        "Come hierba y hojas tiernas.",
+        "Sus cuernos se le caen y le vuelven a salir.",
+        "Es muy asustadizo y sale corriendo.",
+        "Se parece a la cabra pero es más elegante.",
+        "Bebe agua en el río al amanecer."
+      ]
+    },
+    {
+      "word": "Cebra",
+      "clues": [
+        "Es blanca con rayas negras.",
+        "Se parece a un caballo pintado.",
+        "Vive en la sabana con las jirafas.",
+        "Su nombre está en el paso de peatones.",
+        "Corre en manada para huir del león.",
+        "No hay dos con las mismas rayas.",
+        "Marty es la de la película de Madagascar.",
+        "Come hierba seca en África.",
+        "Relincha parecido a un caballo.",
+        "Tiene una crin de punta en el cuello."
+      ]
+    },
+    {
+      "word": "Hipopótamo",
+      "clues": [
+        "Pasa el día metido en el barro y el agua.",
+        "Abre una boca gigante llena de dientes.",
+        "Es gordo gris y muy pesado.",
+        "Vive en los ríos de África.",
+        "Parece tranquilo pero se enfada mucho.",
+        "Solo saca los ojos y la nariz del agua.",
+        "Hay un juego de mesa donde comen bolas.",
+        "Sus patas son cortitas y gordas.",
+        "Bosteza tan grande que asusta.",
+        "Los pájaros se le suben encima a descansar."
+      ]
+    },
+    {
+      "word": "Cocodrilo",
+      "clues": [
+        "Tiene la boca llena de dientes afilados.",
+        "Se hace el dormido en el río como un tronco.",
+        "En Peter Pan se tragó un reloj.",
+        "Su piel es verde y muy dura.",
+        "Nada moviendo la cola de lado a lado.",
+        "Pone huevos en la orilla.",
+        "Se parece mucho al caimán.",
+        "Cierra la mandíbula de golpe.",
+        "Hay un juguete de dientes que muerde el dedo.",
+        "Vive en los ríos calientes de África."
+      ]
+    },
+    {
+      "word": "Serpiente",
+      "clues": [
+        "Se arrastra por el suelo sin patas.",
+        "Saca la lengua partida en dos.",
+        "Hace ssss para asustarte.",
+        "En el cuento de la selva hipnotiza con los ojos.",
+        "Algunas tienen veneno en los colmillos.",
+        "Cambia de piel cuando crece.",
+        "Se enrolla como una manguera.",
+        "Vive entre las piedras del campo.",
+        "Hay un juego de tablero con escaleras.",
+        "El encantador la saca de la cesta con una flauta."
+      ]
+    },
+    {
+      "word": "Tortuga",
+      "clues": [
+        "Lleva su casa encima de la espalda.",
+        "Es el animal más lento del mundo.",
+        "Ganó la carrera a la liebre.",
+        "Esconde la cabeza cuando se asusta.",
+        "Hay unas que viven en el mar y otras en el campo.",
+        "Puede vivir más de cien años.",
+        "Come lechuga y tomate.",
+        "Su caparazón es duro como una piedra.",
+        "Las ninjas de los dibujos comen pizza.",
+        "Pone sus huevos enterrados en la arena."
+      ]
+    },
+    {
+      "word": "Rana",
+      "clues": [
+        "Dice croac croac en el estanque.",
+        "Da saltos enormes con sus patas.",
+        "Es verde y viscosa.",
+        "De pequeña era un renacuajo.",
+        "La princesa le dio un beso y se hizo príncipe.",
+        "Caza moscas con la lengua pegajosa.",
+        "Vive entre los nenúfares del charco.",
+        "Tiene los ojos muy saltones.",
+        "Nada muy bien y también anda por tierra.",
+        "En el pueblo cantan todas juntas por la noche."
+      ]
+    },
+    {
+      "word": "Pez",
+      "clues": [
+        "Nada en el agua todo el tiempo.",
+        "Abre y cierra la boca sin parar.",
+        "Vive en una pecera redonda del salón.",
+        "Nemo es el más famoso de las películas.",
+        "Tiene escamas brillantes y aletas.",
+        "El gato quiere sacarlo de la pecera.",
+        "Lo sacas del río con una caña.",
+        "Dicen que tiene muy poca memoria.",
+        "El tiburón es el más grande y temido del mar.",
+        "Se come frito con patatas."
+      ]
+    },
+    {
+      "word": "Tiburón",
+      "clues": [
+        "Tiene una aleta que sale del agua.",
+        "Su boca está llena de dientes de sierra.",
+        "Es el más temido del mar.",
+        "Huele la sangre desde muy lejos.",
+        "En la película sale una música que da miedo.",
+        "Hay una canción de bebés que se hizo famosa.",
+        "Sus dientes se le caen y le salen otros nuevos.",
+        "Nada sin parar ni para dormir.",
+        "El más grande solo come bichitos diminutos.",
+        "Es gris por arriba y blanco por abajo."
+      ]
+    },
+    {
+      "word": "Ballena",
+      "clues": [
+        "Es el animal más grande del mar.",
+        "Echa un chorro de agua por el lomo.",
+        "En el cuento se tragó a Pinocho.",
+        "Canta bajo el agua para hablar con las demás.",
+        "Sube a la superficie para respirar.",
+        "Su cola es enorme y golpea el agua.",
+        "No tiene dientes y come bichitos diminutos.",
+        "Es azul grisácea y pesa muchísimo.",
+        "Su cría bebe leche igual que tú.",
+        "La ves desde un barco si tienes suerte."
+      ]
+    },
+    {
+      "word": "Delfín",
+      "clues": [
+        "Salta fuera del agua dando volteretas.",
+        "Es gris y siempre parece que sonríe.",
+        "En el acuario juega con una pelota.",
+        "Habla con silbidos y chasquidos.",
+        "Es muy listo y aprende trucos rápido.",
+        "Nada al lado de los barcos.",
+        "Ayuda a las personas perdidas en el mar.",
+        "Respira por un agujero de la cabeza.",
+        "Va en grupo con toda su familia.",
+        "Parece un pez pero bebe leche de bebé."
+      ]
+    },
+    {
+      "word": "Pulpo",
+      "clues": [
+        "Tiene ocho brazos con ventosas.",
+        "Echa tinta negra para escapar.",
+        "Se esconde entre las rocas del fondo.",
+        "Cambia de color para camuflarse.",
+        "En Galicia se come con patatas y pimentón.",
+        "Es blandito y no tiene huesos.",
+        "Hay un peluche al que se le da la vuelta.",
+        "Se agarra al cristal del acuario.",
+        "Es primo del calamar y de la sepia.",
+        "Camina por el fondo del mar como una araña."
+      ]
+    },
+    {
+      "word": "Cangrejo",
+      "clues": [
+        "Camina de lado por la playa.",
+        "Tiene dos pinzas que aprietan fuerte.",
+        "Se esconde debajo de las piedras.",
+        "Lleva un caparazón duro y rojo.",
+        "En la Sirenita hay uno que canta.",
+        "Lo pillas con el cubo en la orilla.",
+        "Sus ojos van encima de dos palitos.",
+        "Se come cocido en Navidad.",
+        "Se mete de espaldas en su agujero.",
+        "Si te pilla un dedo duele mucho."
+      ]
+    },
+    {
+      "word": "Caracol",
+      "clues": [
+        "Lleva una concha en forma de espiral.",
+        "Deja un rastro de baba por donde pasa.",
+        "Saca los cuernitos cuando llueve.",
+        "Es lentísimo y nunca tiene prisa.",
+        "Se esconde dentro de su casa si le tocas.",
+        "Aparece en el jardín después de la lluvia.",
+        "Se come la lechuga de la huerta.",
+        "Hay una canción que le pide sacar los cuernos al sol.",
+        "Sin concha se llama babosa.",
+        "Se pega al cristal y lo ves desde dentro."
+      ]
+    },
+    {
+      "word": "Mariposa",
+      "clues": [
+        "Antes era una oruga que comía hojas.",
+        "Tiene las alas llenas de colores.",
+        "Vuela de flor en flor en primavera.",
+        "Salió de un capullo colgado de una rama.",
+        "Los niños la persiguen con una red.",
+        "Se posa en tu dedo si estás quieto.",
+        "Hay unas de noche que van a la luz.",
+        "Es como una polilla pero muy bonita.",
+        "Sus alas parecen dos abanicos iguales.",
+        "Bebe el néctar con una trompita enrollada."
+      ]
+    },
+    {
+      "word": "Abeja",
+      "clues": [
+        "Hace la miel en su colmena.",
+        "Zumba haciendo bzzz cerca de las flores.",
+        "Si te pica duele mucho y se queda el aguijón.",
+        "Es amarilla con rayas negras.",
+        "Maya es la más famosa de los dibujos.",
+        "Trabaja para su reina todo el día.",
+        "Lleva el polen de flor en flor.",
+        "Su casa tiene celdas con seis lados.",
+        "Se parece a la avispa pero es peluda.",
+        "El oso mete la pata en su panal."
+      ]
+    },
+    {
+      "word": "Hormiga",
+      "clues": [
+        "Es diminuta y va siempre en fila.",
+        "Carga con migas más grandes que ella.",
+        "Vive bajo tierra en un nido lleno de túneles.",
+        "En la fábula trabaja mientras la cigarra canta.",
+        "Guarda comida para el invierno.",
+        "Tiene seis patas y dos antenas.",
+        "Se te sube por la pierna en el campo.",
+        "Hay unas rojas que pican.",
+        "Obedece a su reina sin rechistar.",
+        "Se cuela en la cocina buscando azúcar."
+      ]
+    },
+    {
+      "word": "Araña",
+      "clues": [
+        "Teje una tela pegajosa entre dos ramas.",
+        "Tiene ocho patas muy largas.",
+        "Atrapa moscas en su red.",
+        "Al superhéroe de rojo y azul le picó una.",
+        "Vive en el rincón del techo.",
+        "Da un poco de repelús verla correr.",
+        "Baja colgada de un hilo desde el techo.",
+        "Se esconde debajo de la bañera.",
+        "Algunas son peludas y muy grandes.",
+        "Su tela brilla con el rocío de la mañana."
+      ]
+    },
+    {
+      "word": "Mosca",
+      "clues": [
+        "Zumba alrededor de tu oreja y no se va.",
+        "Se posa en la comida de la mesa.",
+        "La persigues con un matamoscas.",
+        "Tiene los ojos enormes y rojos.",
+        "Se frota las patitas delanteras.",
+        "En verano entra por la ventana.",
+        "Es negra pequeña y muy rápida.",
+        "Camina por el techo boca abajo.",
+        "Se pega al papel amarillo de la cocina.",
+        "De su huevo sale un bichito blanco."
+      ]
+    },
+    {
+      "word": "Gusano",
+      "clues": [
+        "Es alargado blandito y sin patas.",
+        "Vive bajo tierra en el jardín.",
+        "Sale a la superficie cuando llueve.",
+        "El pájaro lo saca del suelo con el pico.",
+        "Aparece dentro de la manzana mordida.",
+        "El pescador lo usa de cebo en el anzuelo.",
+        "Se arruga y se estira para avanzar.",
+        "De la oruga sale luego una mariposa.",
+        "Hay unos de gominola que venden en la tienda.",
+        "Se retuerce si lo coges con la mano."
+      ]
+    },
+    {
+      "word": "Búho",
+      "clues": [
+        "Está despierto toda la noche.",
+        "Dice uh uh desde la rama.",
+        "Gira la cabeza casi del todo.",
+        "Tiene los ojos redondos y enormes.",
+        "En Harry Potter reparte el correo.",
+        "Duerme de día en el hueco de un árbol.",
+        "Dicen que es el más sabio del bosque.",
+        "Caza ratones sin hacer ningún ruido.",
+        "Se parece a la lechuza blanca.",
+        "Sus plumas son marrones y le tapan las patas."
+      ]
+    },
+    {
+      "word": "Águila",
+      "clues": [
+        "Vuela más alto que ningún pájaro.",
+        "Ve un conejo desde muy lejos.",
+        "Tiene el pico curvado y afilado.",
+        "Hace su nido en lo alto de la montaña.",
+        "Sus garras atrapan a los peces del río.",
+        "Es marrón con la cabeza blanca en América.",
+        "Aparece en muchas banderas y escudos.",
+        "Baja en picado a toda velocidad.",
+        "Abre las alas y parece enorme.",
+        "Es la reina de los pájaros."
+      ]
+    },
+    {
+      "word": "Loro",
+      "clues": [
+        "Repite todo lo que dices.",
+        "Tiene plumas de muchos colores.",
+        "El pirata lo lleva en el hombro.",
+        "Vive en una jaula con un columpio.",
+        "Come pipas y trocitos de fruta.",
+        "Su pico curvo rompe las cáscaras.",
+        "En la selva vuela en bandada chillando.",
+        "Se parece a la cotorra verde del parque.",
+        "Dice hola cuando entras por la puerta.",
+        "Se sube a tu dedo si se lo pides."
+      ]
+    },
+    {
+      "word": "Pingüino",
+      "clues": [
+        "Va vestido de blanco y negro como un camarero.",
+        "Camina moviéndose de lado a lado.",
+        "Vive donde todo está helado.",
+        "No sabe volar pero nada genial.",
+        "Se tira por el hielo con la barriga.",
+        "El papá cuida el huevo entre las patas.",
+        "En la película bailan claqué.",
+        "Come peces que pesca buceando.",
+        "Se juntan todos para no pasar frío.",
+        "Los de Madagascar son unos gamberros."
+      ]
+    },
+    {
+      "word": "Pollo",
+      "clues": [
+        "De pequeño es amarillo y suave.",
+        "Dice pío pío nada más nacer.",
+        "Sale de un huevo rompiendo la cáscara.",
+        "Su mamá es la gallina y su papá el gallo.",
+        "Se come asado los domingos con patatas.",
+        "En el restaurante lo sirven empanado en bolitas.",
+        "Corre por el corral detrás de su madre.",
+        "Sus alitas son lo que más gusta a los niños.",
+        "El de goma suena cuando lo aprietas.",
+        "Picotea granos de maíz en el suelo."
+      ]
+    },
+    {
+      "word": "Burro",
+      "clues": [
+        "Dice iaaa iaaa muy fuerte.",
+        "Tiene las orejas larguísimas y grises.",
+        "Carga las cestas por el camino del pueblo.",
+        "En Shrek habla sin parar y es muy pesado.",
+        "Se parece a un caballo pequeño.",
+        "Le ponen la cola en un juego con los ojos tapados.",
+        "Come paja y cardos.",
+        "Dicen que es muy cabezota.",
+        "En el belén está al lado del buey.",
+        "Los niños lo montan en la feria."
+      ]
+    },
+    {
+      "word": "Camello",
+      "clues": [
+        "Tiene dos jorobas en la espalda.",
+        "Cruza el desierto sin beber agua.",
+        "Los Reyes Magos llegan montados en uno.",
+        "Guarda comida dentro de sus bultos.",
+        "Escupe si se enfada contigo.",
+        "Sus patas largas no se hunden en la arena.",
+        "El de una sola joroba se llama dromedario.",
+        "Tiene pestañas larguísimas contra la arena.",
+        "Anda balanceándose como un barco.",
+        "Puede beber muchísima agua de golpe."
+      ]
+    },
+    {
+      "word": "Canguro",
+      "clues": [
+        "Lleva a su bebé en una bolsa de la barriga.",
+        "Da saltos gigantes con las patas de atrás.",
+        "Vive en Australia.",
+        "No sabe caminar hacia atrás.",
+        "Su bebé asoma la cabeza para mirar.",
+        "Boxea con las manos si se pelea.",
+        "Es marrón y tiene las orejas grandes.",
+        "En el zoo pasa el día tumbado a la sombra.",
+        "Come hierba igual que las vacas.",
+        "Su cola es gorda y muy fuerte."
+      ]
+    },
+    {
+      "word": "Koala",
+      "clues": [
+        "Duerme veinte horas al día.",
+        "Se abraza al tronco del eucalipto.",
+        "Solo come hojas de un único árbol.",
+        "Es gris con orejas peludas y redondas.",
+        "Vive en Australia igual que el canguro.",
+        "Su bebé viaja en la espalda de mamá.",
+        "Tiene la nariz grande negra y de goma.",
+        "Parece un peluche de verdad.",
+        "Casi nunca baja al suelo.",
+        "No es un oso aunque se le parece."
+      ]
+    },
+    {
+      "word": "Panda",
+      "clues": [
+        "Es blanco y negro con ojeras enormes.",
+        "Come bambú todo el santo día.",
+        "Vive en China.",
+        "En la película aprende kung fu.",
+        "Es un oso pero no caza nada.",
+        "Su bebé nace del tamaño de un ratón.",
+        "Se sienta como una persona a comer.",
+        "En el zoo todos quieren verlo.",
+        "Se cae de los árboles y no le pasa nada.",
+        "Quedan muy poquitos en el mundo."
+      ]
+    },
+    {
+      "word": "Rinoceronte",
+      "clues": [
+        "Tiene un cuerno enorme en el morro.",
+        "Su piel es gris y parece una armadura.",
+        "Carga a toda velocidad cuando se enfada.",
+        "Vive en África con los elefantes.",
+        "Se revuelca en el barro para quitarse el calor.",
+        "Ve fatal pero huele muy bien.",
+        "Los pájaros se le suben al lomo.",
+        "Es gordísimo y pesa como un coche.",
+        "Come hierba y ramitas.",
+        "Algunos tienen dos cuernos uno detrás de otro."
+      ]
+    },
+    {
+      "word": "Murciélago",
+      "clues": [
+        "Duerme colgado boca abajo.",
+        "Sale a volar cuando se hace de noche.",
+        "Es el único animal con alas y pelo.",
+        "Vive en cuevas oscuras.",
+        "Ve con el oído mandando pitidos.",
+        "El superhéroe de Gotham lleva su capa.",
+        "Come mosquitos toda la noche.",
+        "Parece un ratón con alas de piel.",
+        "Se cuelga del techo con las uñas.",
+        "En Halloween lo dibujan por todas partes."
+      ]
+    },
+    {
+      "word": "Dinosaurio",
+      "clues": [
+        "Vivió hace muchísimos años y ya no queda ninguno.",
+        "El tiranosaurio era el más temido.",
+        "Sus huesos están en el museo.",
+        "Ponía huevos enormes en el nido.",
+        "Algunos tenían el cuello larguísimo.",
+        "Sale en la película del parque jurásico.",
+        "Otros volaban y otros nadaban.",
+        "Un meteorito acabó con todos ellos.",
+        "El triceratops tenía tres cuernos.",
+        "Hay muñecos de goma para jugar."
+      ]
+    },
+    {
+      "word": "Foca",
+      "clues": [
+        "Aplaude con sus aletas en el circo.",
+        "Hace equilibrios con una pelota en el morro.",
+        "Vive en las rocas heladas del norte.",
+        "Nada rapidísimo pero en tierra se arrastra.",
+        "Es gris gordita y muy suave.",
+        "Come pescado que le lanza el cuidador.",
+        "Sus bigotes son largos y tiesos.",
+        "El bebé nace blanco como la nieve.",
+        "Ladra un poco parecido a un perro.",
+        "El oso blanco intenta cazarla en el hielo."
+      ]
+    },
+    {
+      "word": "Cisne",
+      "clues": [
+        "Es blanco con el cuello curvado.",
+        "Nada en el lago del parque.",
+        "El patito feo se convirtió en uno.",
+        "Hay un ballet famoso con uno negro.",
+        "Su pico es naranja con una parte negra.",
+        "De lejos parece una barquita blanca.",
+        "Bufa si te acercas demasiado.",
+        "Sus crías van en fila detrás de mamá.",
+        "Vuela con el cuello larguísimo estirado.",
+        "Es como un pato pero mucho más elegante."
+      ]
+    },
+    {
+      "word": "Manzana",
+      "clues": [
+        "Es roja o verde y muy crujiente.",
+        "Blancanieves mordió una envenenada.",
+        "Cae del árbol cuando está madura.",
+        "Se la llevas al profesor en los dibujos.",
+        "Tiene pipas dentro del corazón.",
+        "Con ella se hace la tarta favorita de la abuela.",
+        "La marca del ordenador tiene una mordida.",
+        "Guillermo Tell disparó a una con su flecha.",
+        "El gusano hace un agujero dentro.",
+        "Se pela con un cuchillo dando vueltas."
+      ]
+    },
+    {
+      "word": "Plátano",
+      "clues": [
+        "Es amarillo y hay que pelarlo.",
+        "Al mono le vuelve loco.",
+        "Tiene forma de media luna.",
+        "Si pisas su piel te resbalas.",
+        "El de Canarias es pequeñito y dulce.",
+        "Se pone negro si lo dejas muchos días.",
+        "Se corta en rodajas encima del yogur.",
+        "Crece en racimos en un árbol tropical.",
+        "Es blandito por dentro y muy dulce.",
+        "Los niños lo llevan al cole de almuerzo."
+      ]
+    },
+    {
+      "word": "Naranja",
+      "clues": [
+        "Con ella haces un zumo por la mañana.",
+        "Es redonda y del mismo color que su nombre.",
+        "Se pela y sale en gajos.",
+        "En Valencia hay campos llenos.",
+        "Tiene mucha vitamina para el resfriado.",
+        "Su prima pequeña es la mandarina.",
+        "La exprimes con una máquina.",
+        "Su piel se llama cáscara y huele fuerte.",
+        "Es del color de la zanahoria.",
+        "Se corta en rodajas para el descanso del partido."
+      ]
+    },
+    {
+      "word": "Fresa",
+      "clues": [
+        "Es roja con puntitos amarillos.",
+        "Tiene un rabito verde arriba.",
+        "Se moja en chocolate para merendar.",
+        "Crece pegada al suelo en la mata.",
+        "Es el sabor de helado favorito de muchos.",
+        "Se come con nata y azúcar.",
+        "El batido rosa se hace con ella.",
+        "Se recoge en primavera.",
+        "Cabe entera en tu boca.",
+        "Su mermelada se unta en la tostada."
+      ]
+    },
+    {
+      "word": "Uva",
+      "clues": [
+        "En Nochevieja te comes doce con las campanadas.",
+        "Crece en racimos en la parra.",
+        "Las hay verdes y moradas.",
+        "El zorro de la fábula no llegaba a cogerlas.",
+        "Con ellas se hace el vino.",
+        "Si las secas se convierten en pasas.",
+        "Tienen pepitas dentro que escupes.",
+        "Se lavan bien antes de comerlas.",
+        "Son redonditas y muy dulces.",
+        "Cuelgan de una viña en el campo."
+      ]
+    },
+    {
+      "word": "Sandía",
+      "clues": [
+        "Es verde por fuera y roja por dentro.",
+        "Está llena de pepitas negras.",
+        "Es la fruta más grande del verano.",
+        "Se corta en triángulos y la muerdes.",
+        "Tiene muchísima agua y quita la sed.",
+        "Pesa tanto que hay que cogerla con dos manos.",
+        "Se enfría en la nevera para la merienda.",
+        "Se parece al melón pero por dentro es roja.",
+        "Suena a hueco si le das golpecitos.",
+        "La comes en la playa o en la piscina."
+      ]
+    },
+    {
+      "word": "Pera",
+      "clues": [
+        "Tiene forma de bombilla.",
+        "Es amarilla o verde y muy jugosa.",
+        "Se pela y se come de postre.",
+        "Crece en un árbol junto a la manzana.",
+        "Tiene un rabito arriba para cogerla.",
+        "Cuando está madura se deshace en la boca.",
+        "Se cuece con vino en Navidad.",
+        "Los bebés la comen en papilla.",
+        "Su piel tiene puntitos marrones.",
+        "Se parece a la manzana pero es más alargada."
+      ]
+    },
+    {
+      "word": "Limón",
+      "clues": [
+        "Es amarillo y muy ácido.",
+        "Si lo chupas pones una cara graciosa.",
+        "Se exprime en el agua con azúcar.",
+        "Se echan unas gotas al pescado.",
+        "Su piel se ralla para los bizcochos.",
+        "Crece en un árbol del patio.",
+        "Su primo naranja es más dulce.",
+        "Con él se hace un helado muy fresquito.",
+        "Sirve para escribir mensajes secretos.",
+        "Su color es igual que el del plátano."
+      ]
+    },
+    {
+      "word": "Patata",
+      "clues": [
+        "Se fríe en tiras y se come con kétchup.",
+        "Crece debajo de la tierra.",
+        "Con ella se hace la tortilla española.",
+        "Tiene ojos pero no ve nada.",
+        "Se pela con un cuchillo y queda blanca.",
+        "Las de bolsa hacen mucho ruido al comerlas.",
+        "En Toy Story hay un señor con bigote y sombrero.",
+        "Se cuece con agua para hacer puré.",
+        "Es marrón por fuera y amarilla por dentro.",
+        "Si la dejas mucho le salen brotes."
+      ]
+    },
+    {
+      "word": "Tomate",
+      "clues": [
+        "Es rojo redondo y jugoso.",
+        "Con él se hace la salsa de la pizza.",
+        "Se echa en la ensalada con lechuga.",
+        "Se unta en el pan con aceite.",
+        "Crece en la huerta colgando de una mata.",
+        "En un pueblo se lo tiran todos en fiestas.",
+        "Cuando está verde no está listo.",
+        "El kétchup se hace con él.",
+        "Se pone rojo igual que tu cara con vergüenza.",
+        "Tiene pepitas y mucha agua dentro."
+      ]
+    },
+    {
+      "word": "Zanahoria",
+      "clues": [
+        "Es naranja y larga con punta.",
+        "Al conejo le vuelve loco.",
+        "Crece bajo tierra con hojas verdes fuera.",
+        "Dicen que te ayuda a ver mejor.",
+        "El muñeco de nieve la lleva de nariz.",
+        "Se ralla para la ensalada.",
+        "Cruje muchísimo al morderla.",
+        "Se echa a la sopa con la patata.",
+        "Se le da al caballo en la mano.",
+        "Los Reyes dejan una a los camellos."
+      ]
+    },
+    {
+      "word": "Cebolla",
+      "clues": [
+        "Si la cortas te hace llorar.",
+        "Tiene muchas capas una encima de otra.",
+        "Es blanca o morada y redonda.",
+        "Huele muy fuerte en la cocina.",
+        "Se echa dorada en la tortilla.",
+        "Crece debajo de la tierra.",
+        "Se corta en aros para la hamburguesa.",
+        "Shrek dice que los ogros son como ella.",
+        "Su prima pequeña es el ajo.",
+        "Se guarda en una red en la despensa."
+      ]
+    },
+    {
+      "word": "Lechuga",
+      "clues": [
+        "Es verde y está llena de hojas.",
+        "Con ella se hace la ensalada.",
+        "Está crujiente y fresquita.",
+        "Al conejo y a la tortuga les encanta.",
+        "Se lava hoja por hoja antes de comerla.",
+        "Va dentro de la hamburguesa.",
+        "Crece en la huerta pegada al suelo.",
+        "Se aliña con aceite y sal.",
+        "Es una bola grande de hojas.",
+        "Los caracoles se la comen por la noche."
+      ]
+    },
+    {
+      "word": "Maíz",
+      "clues": [
+        "Sus granos amarillos van en una mazorca.",
+        "Con él se hacen las palomitas.",
+        "La gallina lo picotea del suelo.",
+        "Se come de lata en la ensalada.",
+        "Crece en plantas más altas que tú.",
+        "Se asa entero y se come con las manos.",
+        "Los cereales del desayuno se hacen con él.",
+        "Sus granos van en filas perfectas.",
+        "Tiene unos pelillos rubios en la punta.",
+        "Es amarillo como el sol."
+      ]
+    },
+    {
+      "word": "Pan",
+      "clues": [
+        "Se compra recién hecho por la mañana.",
+        "Tiene corteza dura y miga blanda.",
+        "Con dos rebanadas haces un bocadillo.",
+        "Hansel y Gretel dejaron un rastro de migas.",
+        "Se moja en el chocolate del desayuno.",
+        "Se lo echas a los patos del estanque.",
+        "Está hecho de harina agua y levadura.",
+        "Si es de ayer se pone duro como una piedra.",
+        "Se corta en rebanadas para tostarlo.",
+        "Su barra es larga y crujiente."
+      ]
+    },
+    {
+      "word": "Queso",
+      "clues": [
+        "Al ratón le vuelve loco.",
+        "Se hace con la leche de la vaca.",
+        "El de bola tiene agujeros.",
+        "Se ralla encima de los macarrones.",
+        "Se funde en la pizza y hace hilos.",
+        "El cuervo lo tenía en el pico en la fábula.",
+        "Lo hay fresco curado y azul.",
+        "Se pone en el bocadillo con jamón.",
+        "Es amarillo y huele fuerte.",
+        "Se corta en triangulitos para la merienda."
+      ]
+    },
+    {
+      "word": "Leche",
+      "clues": [
+        "Es blanca y se bebe en un vaso.",
+        "La vaca la da todos los días.",
+        "Se mezcla con cacao para el desayuno.",
+        "Con ella se hace el queso y el yogur.",
+        "Se guarda en la nevera para que no se corte.",
+        "Los bebés no toman otra cosa.",
+        "Se calienta en el microondas con cuidado.",
+        "Si hierve se sale del cazo.",
+        "Se moja el bizcocho dentro.",
+        "Viene en un cartón o en una botella."
+      ]
+    },
+    {
+      "word": "Huevo",
+      "clues": [
+        "Lo pone la gallina en el nido.",
+        "Se rompe la cáscara contra la sartén.",
+        "Frito tiene la yema amarilla en medio.",
+        "En Pascua es de chocolate y trae sorpresa.",
+        "Con él y la patata se hace la tortilla.",
+        "Si se cae al suelo se rompe seguro.",
+        "Se cuece en agua hirviendo diez minutos.",
+        "Humpty Dumpty se sentó en el muro y se cayó.",
+        "Por fuera es blanco o marrón y liso.",
+        "De los que pone la serpiente salen crías."
+      ]
+    },
+    {
+      "word": "Arroz",
+      "clues": [
+        "Son granitos blancos y pequeños.",
+        "Con él se hace la paella.",
+        "Se cuece en una olla con agua.",
+        "Se come con tomate y huevo frito.",
+        "En China lo comen con palillos.",
+        "Crece en campos inundados de agua.",
+        "Se lo tiran a los novios en la boda.",
+        "Con leche y canela es un postre riquísimo.",
+        "Se hincha cuando lo cueces.",
+        "Viene en un saco o en una bolsa."
+      ]
+    },
+    {
+      "word": "Espaguetis",
+      "clues": [
+        "Son largos y finos como cuerdas.",
+        "Se comen con tomate y queso rallado.",
+        "Se enrollan en el tenedor.",
+        "En la película de los perros comparten uno.",
+        "Se cuecen en agua hirviendo con sal.",
+        "Antes de cocerlos se rompen si los doblas.",
+        "Los italianos son los que más los comen.",
+        "Se te queda la boca manchada de rojo.",
+        "También los hay con carne picada.",
+        "Son pasta igual que los macarrones."
+      ]
+    },
+    {
+      "word": "Pizza",
+      "clues": [
+        "Es redonda y se corta en triángulos.",
+        "Lleva tomate y queso derretido por encima.",
+        "Se pide a casa y te la traen en una caja.",
+        "La de cuatro quesos es muy famosa.",
+        "En Italia la hacen en horno de leña.",
+        "Las tortugas ninja no comen otra cosa.",
+        "Se estira la masa dándole vueltas en el aire.",
+        "El queso hace hilos cuando la levantas.",
+        "Los champiñones y el jamón van encima.",
+        "Es la comida favorita de los cumpleaños."
+      ]
+    },
+    {
+      "word": "Hamburguesa",
+      "clues": [
+        "Lleva carne redonda dentro de un pan.",
+        "Se come con patatas fritas y refresco.",
+        "El payaso de amarillo y rojo la vende.",
+        "Se le echa kétchup y mostaza.",
+        "Encima lleva queso lechuga y tomate.",
+        "Se coge con las dos manos.",
+        "Se hace en la barbacoa del verano.",
+        "Su pan lleva semillas de sésamo arriba.",
+        "El menú infantil trae un juguete.",
+        "Es la reina de la comida rápida."
+      ]
+    },
+    {
+      "word": "Bocadillo",
+      "clues": [
+        "Lo llevas al cole envuelto en papel de plata.",
+        "Se hace con una barra abierta por la mitad.",
+        "El de tortilla es el más famoso de España.",
+        "Dentro puede ir jamón queso o chorizo.",
+        "Se come a media mañana en el patio.",
+        "Se coge con la mano y se muerde.",
+        "En los tebeos es la nube donde hablan.",
+        "Va en la mochila de la excursión.",
+        "Si lleva pan de molde se llama sándwich.",
+        "Se corta por la mitad para compartirlo."
+      ]
+    },
+    {
+      "word": "Sopa",
+      "clues": [
+        "Se come caliente con cuchara.",
+        "Es lo que te dan cuando estás malito.",
+        "Lleva fideos o letras dentro.",
+        "Hay que soplar antes de tomarla o te quemas.",
+        "Se sirve en un plato hondo.",
+        "En invierno entra en calor.",
+        "Se hace con caldo de pollo.",
+        "Con las letras puedes escribir tu nombre.",
+        "Está hecha de agua y verduras.",
+        "Si la tomas haciendo ruido te riñen."
+      ]
+    },
+    {
+      "word": "Tortilla",
+      "clues": [
+        "Se hace con huevo batido en la sartén.",
+        "La española lleva patata y a veces cebolla.",
+        "Se le da la vuelta con un plato.",
+        "Se come en bocadillo o en pincho.",
+        "Es redonda y amarilla.",
+        "La francesa se dobla por la mitad.",
+        "Nunca falta en el picnic del campo.",
+        "Se corta en trozos como una tarta.",
+        "En México es una masa fina de maíz.",
+        "Su sartén hay que engrasarla con aceite."
+      ]
+    },
+    {
+      "word": "Chocolate",
+      "clues": [
+        "Es marrón y se derrite en la boca.",
+        "Viene en tabletas con cuadraditos.",
+        "Se moja el churro dentro en invierno.",
+        "Los huevos de Pascua están hechos de esto.",
+        "El blanco y el negro son los más famosos.",
+        "Se hace con el cacao del árbol.",
+        "Charlie visitó una fábrica llena de esto.",
+        "Mancha las manos si lo aprietas.",
+        "Con leche caliente se hace una taza espesa.",
+        "Es lo que más piden los niños de merienda."
+      ]
+    },
+    {
+      "word": "Helado",
+      "clues": [
+        "Se come en verano y está congelado.",
+        "Va en un cucurucho o en una tarrina.",
+        "Si tardas mucho se derrite y gotea.",
+        "El de chocolate y el de fresa son los favoritos.",
+        "Se guarda en el congelador.",
+        "La furgoneta que lo vende suena con una musiquita.",
+        "Te deja la lengua de colores.",
+        "Si comes muy rápido te duele la cabeza.",
+        "Lo pides con dos bolas y virutas.",
+        "El de palo lleva una madera para agarrarlo."
+      ]
+    },
+    {
+      "word": "Galleta",
+      "clues": [
+        "Se moja en la leche del desayuno.",
+        "Es redonda y crujiente.",
+        "Viene en un paquete de muchas iguales.",
+        "Las de chocolate tienen pepitas.",
+        "El monstruo azul de Barrio Sésamo las devora.",
+        "Se hacen en el horno con un molde.",
+        "Si se moja mucho se cae al vaso.",
+        "En Navidad se hacen con forma de estrella.",
+        "Deja migas por toda la mesa.",
+        "La de jengibre salió corriendo en el cuento."
+      ]
+    },
+    {
+      "word": "Tarta",
+      "clues": [
+        "Lleva velas encima en tu cumpleaños.",
+        "Soplas y pides un deseo.",
+        "Se corta en porciones para todos.",
+        "La de queso y la de chocolate son las mejores.",
+        "Se decora con nata y fresas.",
+        "Se hace en el horno en un molde redondo.",
+        "En las películas se la tiran a la cara.",
+        "Debajo puede tener bizcocho mojado.",
+        "En las bodas hay una de varios pisos.",
+        "Si la dejas fuera se pone dura."
+      ]
+    },
+    {
+      "word": "Caramelo",
+      "clues": [
+        "Se chupa y no se muerde.",
+        "Viene envuelto en un papelito.",
+        "La bruja tenía una casa llena de dulces.",
+        "Si comes muchos te salen caries.",
+        "Los hay de menta de fresa y de limón.",
+        "Se pega en los dientes si es blandito.",
+        "Los echan en las cabalgatas de Reyes.",
+        "El de palo se llama piruleta.",
+        "El médico te da uno si eres valiente.",
+        "Está hecho de azúcar hervido."
+      ]
+    },
+    {
+      "word": "Zumo",
+      "clues": [
+        "Se hace exprimiendo la naranja.",
+        "Se bebe con una pajita del brik.",
+        "El de piña es amarillo y dulce.",
+        "Lo tomas en el desayuno con las tostadas.",
+        "Se sirve muy frío en un vaso.",
+        "Si lo dejas mucho pierde las vitaminas.",
+        "El de tomate es rojo y espeso.",
+        "Lo pides en el bar del parque.",
+        "Lo llevas en la mochila del cole.",
+        "El de manzana es el favorito de los peques."
+      ]
+    },
+    {
+      "word": "Agua",
+      "clues": [
+        "No tiene color ni sabor ni olor.",
+        "Sale del grifo de la cocina.",
+        "Se bebe cuando tienes mucha sed.",
+        "Llena la piscina en verano.",
+        "Si se congela se convierte en hielo.",
+        "Cae del cielo cuando llueve.",
+        "Los peces viven dentro de ella.",
+        "Hierve en el cazo y salen burbujas.",
+        "Con ella te duchas y te lavas los dientes.",
+        "Se guarda en una botella de plástico."
+      ]
+    },
+    {
+      "word": "Miel",
+      "clues": [
+        "La hacen las abejas en su colmena.",
+        "Es dorada espesa y muy dulce.",
+        "Al oso Winnie le vuelve loco.",
+        "Se echa en la leche cuando toses.",
+        "Se unta en la tostada del desayuno.",
+        "Gotea despacio de la cuchara.",
+        "Se guarda en un tarro de cristal.",
+        "Se pone dura si hace frío.",
+        "Se saca de los panales con cuidado.",
+        "Pega mucho los dedos si la tocas."
+      ]
+    },
+    {
+      "word": "Mantequilla",
+      "clues": [
+        "Se unta en el pan con un cuchillo.",
+        "Es amarilla y blandita.",
+        "Se guarda en la nevera para que no se derrita.",
+        "Se hace con la nata de la leche.",
+        "Se echa a la sartén para las tortitas.",
+        "Viene en una tarrina o en una pastilla.",
+        "Se derrite enseguida sobre la tostada caliente.",
+        "Con azúcar y harina se hacen galletas.",
+        "Si la dejas al sol se queda líquida.",
+        "Los cruasanes llevan muchísima."
+      ]
+    },
+    {
+      "word": "Palomitas",
+      "clues": [
+        "Se comen en el cine viendo una película.",
+        "Salen del maíz cuando estalla.",
+        "Hacen pop pop dentro del microondas.",
+        "Se comen saladas o con caramelo.",
+        "Son blancas y muy ligeras.",
+        "Vienen en un cubo enorme de papel.",
+        "Se te quedan trocitos entre los dientes.",
+        "En la feria las venden en bolsas gigantes.",
+        "Se hacen en dos minutos en casa.",
+        "Parecen nubes pequeñitas y crujientes."
+      ]
+    },
+    {
+      "word": "Casa",
+      "clues": [
+        "Es donde vives con tu familia.",
+        "Tiene tejado puertas y ventanas.",
+        "Los tres cerditos hicieron una de paja y otra de ladrillos.",
+        "La dibujas con humo saliendo de la chimenea.",
+        "Dentro están el salón el baño y los dormitorios.",
+        "El caracol lleva la suya a la espalda.",
+        "Se abre la puerta con una llave.",
+        "Puede ser un piso o un chalet.",
+        "El lobo sopló y tiró la más floja.",
+        "Los perros tienen una pequeña en el jardín."
+      ]
+    },
+    {
+      "word": "Puerta",
+      "clues": [
+        "Se abre y se cierra con un pomo.",
+        "Llamas con los nudillos o con el timbre.",
+        "La de tu portal se cierra con llave.",
+        "Si hay corriente se cierra de golpe.",
+        "La del cole se abre a las nueve.",
+        "Tiene bisagras que a veces chirrían.",
+        "La de la nevera se cierra sola.",
+        "Detrás de ella puede haber una sorpresa.",
+        "El lobo la tiró abajo soplando.",
+        "La cierras cuando quieres estar tranquilo."
+      ]
+    },
+    {
+      "word": "Ventana",
+      "clues": [
+        "Se abre para que entre el aire.",
+        "Tiene un cristal por el que miras la calle.",
+        "En invierno se empaña con tu aliento.",
+        "Peter Pan entró volando por una.",
+        "Se limpia con un trapo y espray.",
+        "Tiene una persiana que sube y baja.",
+        "Los pájaros se posan en su repisa.",
+        "En el coche también hay unas pequeñas.",
+        "Se cierra cuando llueve mucho.",
+        "Desde ella ves si nieva o hace sol."
+      ]
+    },
+    {
+      "word": "Cama",
+      "clues": [
+        "Es donde duermes por la noche.",
+        "Tiene sábanas manta y almohada.",
+        "Por la mañana hay que hacerla.",
+        "Los niños saltan encima aunque no se debe.",
+        "Ricitos de oro probó tres antes de dormirse.",
+        "Debajo dicen que vive el monstruo.",
+        "La de arriba y la de abajo se llaman literas.",
+        "El domingo te quedas en ella un rato más.",
+        "Si estás malito pasas el día metido en ella.",
+        "Encima del colchón se pone una sábana bajera."
+      ]
+    },
+    {
+      "word": "Silla",
+      "clues": [
+        "Tiene cuatro patas y un respaldo.",
+        "Te sientas en ella para comer.",
+        "En el cole tienes una en tu pupitre.",
+        "Si te balanceas te caes de espaldas.",
+        "Ricitos de oro rompió la más pequeña.",
+        "Va debajo de la mesa.",
+        "En el juego hay que correr cuando para la música.",
+        "La del bebé es alta y tiene bandeja.",
+        "Te subes encima para alcanzar el armario.",
+        "Está hecha de madera o de plástico."
+      ]
+    },
+    {
+      "word": "Mesa",
+      "clues": [
+        "Tiene cuatro patas y una tabla plana.",
+        "Encima se ponen los platos para comer.",
+        "Todos se sientan alrededor en Navidad.",
+        "Se pone el mantel encima.",
+        "Debajo se esconde el perro.",
+        "En el cole escribes encima de la tuya.",
+        "Se limpia con una bayeta después de cenar.",
+        "Si te das con la esquina duele mucho.",
+        "La del salón es baja y guarda el mando.",
+        "Los juegos de tablero se juegan encima."
+      ]
+    },
+    {
+      "word": "Sofá",
+      "clues": [
+        "Es blandito y cabéis varios sentados.",
+        "El gato duerme encima todo el día.",
+        "Delante suele estar la tele.",
+        "Sus cojines sirven para hacer una cabaña.",
+        "Se pierden monedas entre sus rendijas.",
+        "Los domingos te tumbas en él con la manta.",
+        "Algunos se abren y se convierten en cama.",
+        "Salta encima el pequeño de la familia cuando nadie mira.",
+        "Está tapizado de tela o de cuero.",
+        "Tiene reposabrazos a los lados."
+      ]
+    },
+    {
+      "word": "Nevera",
+      "clues": [
+        "Está fría por dentro y guarda la comida.",
+        "Tiene una luz que se enciende al abrirla.",
+        "Arriba o abajo está el congelador.",
+        "Su puerta se llena de imanes de recuerdos.",
+        "Zumba bajito en la cocina.",
+        "Si la dejas abierta pita.",
+        "Dentro están la leche y el yogur.",
+        "Es blanca alta y rectangular.",
+        "Se abre mil veces buscando algo de picar.",
+        "Hace cubitos de hielo para el verano."
+      ]
+    },
+    {
+      "word": "Lavadora",
+      "clues": [
+        "Da vueltas y vueltas con la ropa dentro.",
+        "Se le echa jabón y suavizante.",
+        "Al terminar hace un pitido.",
+        "Siempre pierde un calcetín.",
+        "Está en el baño o en la terraza.",
+        "Su puerta es redonda y de cristal.",
+        "Centrifuga tan fuerte que se mueve sola.",
+        "Deja la ropa limpia y mojada.",
+        "Luego hay que tender todo al sol.",
+        "Es una caja blanca que hace mucho ruido."
+      ]
+    },
+    {
+      "word": "Televisión",
+      "clues": [
+        "La ves sentado en el sofá.",
+        "Se cambia de canal con el mando.",
+        "Antes era gorda y ahora es plana.",
+        "En ella ponen los dibujos animados.",
+        "Si te acercas mucho te riñen.",
+        "Se cuelga en la pared del salón.",
+        "Tiene un botón para subir el volumen.",
+        "En Nochevieja ponen las campanadas.",
+        "Se apaga cuando toca cenar.",
+        "Se enchufa a la corriente para encenderla."
+      ]
+    },
+    {
+      "word": "Teléfono",
+      "clues": [
+        "Sirve para hablar con la abuela desde lejos.",
+        "Suena y contestas diciendo dígame.",
+        "El móvil es el que llevas en el bolsillo.",
+        "Antes tenía una rueda con números.",
+        "Ahora tiene pantalla táctil y aplicaciones.",
+        "Se carga por la noche con un cable.",
+        "Con él haces fotos y vídeos.",
+        "Si te llaman vibra encima de la mesa.",
+        "El de casa está colgado en la pared.",
+        "En emergencias marcas el uno uno dos."
+      ]
+    },
+    {
+      "word": "Reloj",
+      "clues": [
+        "Marca la hora con dos agujas.",
+        "Se lleva en la muñeca.",
+        "El de la pared hace tic tac.",
+        "Suena por la mañana para ir al cole.",
+        "En Nochevieja todos miran el de la Puerta del Sol.",
+        "El cocodrilo de Peter Pan se tragó uno.",
+        "El conejo de Alicia siempre llegaba tarde mirándolo.",
+        "Los digitales tienen números que cambian.",
+        "Si se le acaba la pila se para.",
+        "Con él sabes cuánto falta para el recreo."
+      ]
+    },
+    {
+      "word": "Lámpara",
+      "clues": [
+        "Se enciende y da luz por la noche.",
+        "Tiene una bombilla dentro.",
+        "Aladino frotó una y salió un genio.",
+        "La de la mesilla se apaga antes de dormir.",
+        "Cuelga del techo del salón.",
+        "Tiene una pantalla de tela encima.",
+        "Si se funde la bombilla hay que cambiarla.",
+        "Se enciende con un interruptor.",
+        "Las polillas van hacia su luz.",
+        "Ilumina la habitación cuando lees."
+      ]
+    },
+    {
+      "word": "Espejo",
+      "clues": [
+        "Te ves a ti mismo cuando te miras.",
+        "La madrastra le preguntaba quién era la más bella.",
+        "Si se rompe dicen que trae mala suerte.",
+        "Está encima del lavabo del baño.",
+        "Se empaña con el vapor de la ducha.",
+        "El coche tiene unos para mirar atrás.",
+        "Te peinas delante de él.",
+        "Es de cristal y muy frágil.",
+        "En las ferias los hay que te deforman.",
+        "Todo lo ves al revés en él."
+      ]
+    },
+    {
+      "word": "Escalera",
+      "clues": [
+        "Tiene muchos peldaños para subir.",
+        "Lleva al piso de arriba de la casa.",
+        "El bombero usa una larguísima.",
+        "En un juego de mesa te hace subir y las serpientes bajar.",
+        "Si vas corriendo te puedes caer.",
+        "La de mano se apoya en la pared.",
+        "Las hay que se mueven solas en el centro comercial.",
+        "Cenicienta perdió su zapato en una.",
+        "Se sube de dos en dos cuando tienes prisa.",
+        "Al lado tiene una barandilla para agarrarse."
+      ]
+    },
+    {
+      "word": "Llave",
+      "clues": [
+        "Abre la puerta de casa.",
+        "Se guarda en el bolsillo o en el bolso.",
+        "Si la pierdes no puedes entrar.",
+        "Se mete en la cerradura y se gira.",
+        "Suelen ir muchas juntas en un aro.",
+        "Es pequeña de metal y con dientes.",
+        "La del coche también abre el maletero.",
+        "En los cuentos abre un cofre del tesoro.",
+        "La copia se hace en la ferretería.",
+        "Hace ruido dentro del bolsillo al andar."
+      ]
+    },
+    {
+      "word": "Cuchara",
+      "clues": [
+        "Con ella se toma la sopa.",
+        "Es redondeada por la punta.",
+        "Los bebés la usan para el puré.",
+        "Va al lado derecho del plato.",
+        "La pequeña sirve para remover el café.",
+        "Con ella comes el yogur y el helado.",
+        "Es de metal o de plástico de colores.",
+        "Si la calientas quema los labios.",
+        "El azúcar se echa con ella.",
+        "No sirve para pinchar la carne."
+      ]
+    },
+    {
+      "word": "Tenedor",
+      "clues": [
+        "Tiene cuatro puntas para pinchar.",
+        "Con él enrollas los espaguetis.",
+        "Va a la izquierda del plato.",
+        "Se usa junto al cuchillo.",
+        "La Sirenita se peinaba con uno.",
+        "No sirve para tomar la sopa.",
+        "Si lo metes en el microondas hace chispas.",
+        "Es de metal y brilla.",
+        "Los de plástico son para el picnic.",
+        "Con él pinchas un trozo de carne."
+      ]
+    },
+    {
+      "word": "Cuchillo",
+      "clues": [
+        "Corta la carne y el pan.",
+        "Tiene el filo muy afilado.",
+        "Va a la derecha del plato.",
+        "Los niños no deben usarlo solos.",
+        "Con él se pela la fruta.",
+        "Se usa junto al tenedor.",
+        "El del pan tiene los dientes como una sierra.",
+        "Es de metal con mango de madera.",
+        "Se guarda en un cajón cerrado.",
+        "Con él se unta la mantequilla."
+      ]
+    },
+    {
+      "word": "Plato",
+      "clues": [
+        "Es redondo y encima va la comida.",
+        "El hondo es para la sopa.",
+        "Después de comer hay que fregarlo.",
+        "Si se cae al suelo se rompe.",
+        "Se apilan uno encima de otro en el armario.",
+        "Se seca con un trapo.",
+        "El del perro está en el suelo de la cocina.",
+        "Los de plástico son para el campo.",
+        "Debajo de la taza se pone uno pequeño.",
+        "A la tortilla se le da la vuelta con uno."
+      ]
+    },
+    {
+      "word": "Vaso",
+      "clues": [
+        "Se llena de agua para beber.",
+        "Es de cristal y se rompe fácil.",
+        "Si lo llenas mucho se derrama.",
+        "Los de plástico son para los cumpleaños.",
+        "Se pone en la mesa al lado del plato.",
+        "Se bebe la leche en uno grande.",
+        "Se empaña cuando está muy frío.",
+        "Se friega con la esponja y el jabón.",
+        "Con una pajita dentro sabe mejor.",
+        "Está medio lleno o medio vacío."
+      ]
+    },
+    {
+      "word": "Taza",
+      "clues": [
+        "Tiene un asa para cogerla.",
+        "Se toma el chocolate caliente en ella.",
+        "La de la abuela tiene flores pintadas.",
+        "Se pone encima de un platito.",
+        "Se moja la galleta dentro.",
+        "Quema si está recién llena.",
+        "Se regala con tu nombre escrito.",
+        "Se friega con cuidado para no romperla.",
+        "El café se sirve en una pequeñita.",
+        "Al soplar dentro se enfría antes."
+      ]
+    },
+    {
+      "word": "Cepillo",
+      "clues": [
+        "Con él te lavas los dientes.",
+        "Lleva pasta encima con sabor a menta.",
+        "Hay que cambiarlo cada tres meses.",
+        "Otro sirve para peinarse el pelo.",
+        "El del pelo quita los nudos y tira un poco.",
+        "Se guarda en un vaso del baño.",
+        "Los hay eléctricos que vibran.",
+        "Cada uno de la familia tiene el suyo de un color.",
+        "Se usa dos minutos por la mañana y por la noche.",
+        "También hay uno para limpiar los zapatos."
+      ]
+    },
+    {
+      "word": "Jabón",
+      "clues": [
+        "Sirve para lavarse las manos.",
+        "Hace espuma cuando lo frotas.",
+        "Puede ser una pastilla o un bote con dosificador.",
+        "Resbala de las manos si está mojado.",
+        "Con él se hacen pompas y burbujas.",
+        "Huele muy bien a flores o a coco.",
+        "Está al lado del lavabo.",
+        "Escuece si te entra en los ojos.",
+        "El de la ropa se echa en la lavadora.",
+        "Después de tocarlo hay que aclararse con agua."
+      ]
+    },
+    {
+      "word": "Toalla",
+      "clues": [
+        "Se usa para secarse al salir de la ducha.",
+        "La llevas a la playa para tumbarte.",
+        "Cuelga de una barra en el baño.",
+        "Es de rizo y muy suave.",
+        "Cada uno tiene la suya de un color.",
+        "La del pelo se enrolla como un turbante.",
+        "Si está mojada huele mal.",
+        "La de la piscina va en la mochila.",
+        "Se dobla y se guarda en el armario.",
+        "Las hay pequeñas para las manos."
+      ]
+    },
+    {
+      "word": "Almohada",
+      "clues": [
+        "Apoyas la cabeza encima para dormir.",
+        "Es blanda y va en la cama.",
+        "Tiene una funda que se lava.",
+        "Con ella se hacen guerras entre hermanos.",
+        "Debajo dejas el diente para que se lo lleven.",
+        "Si la aplastas vuelve a su sitio.",
+        "Las de plumas son las más blanditas.",
+        "Se ahueca antes de acostarse.",
+        "Se abraza cuando tienes sueño.",
+        "Se pone en la cabecera de la cama."
+      ]
+    },
+    {
+      "word": "Manta",
+      "clues": [
+        "Te tapa cuando hace frío en el sofá.",
+        "Es de lana o de pelito suave.",
+        "En invierno se pone encima de las sábanas.",
+        "Se dobla a los pies de la cama.",
+        "Con ella y dos sillas haces una cabaña.",
+        "El bebé duerme envuelto en una.",
+        "La de cuadros va al picnic del campo.",
+        "Cuanto más pesa más abriga.",
+        "Se sacude en la terraza para quitar el polvo.",
+        "Los abuelos se echan una encima al ver la tele."
+      ]
+    },
+    {
+      "word": "Paraguas",
+      "clues": [
+        "Se abre cuando empieza a llover.",
+        "Tiene varillas y un mango curvado.",
+        "Si hace viento se da la vuelta.",
+        "Mary Poppins volaba agarrada a uno.",
+        "Se deja en la entrada goteando.",
+        "Se cierra antes de entrar al coche.",
+        "Siempre se olvida en cualquier sitio.",
+        "El de la playa es enorme y da sombra.",
+        "Cabéis dos debajo si os apretáis.",
+        "Es negro o de colores muy alegres."
+      ]
+    },
+    {
+      "word": "Mochila",
+      "clues": [
+        "Se lleva a la espalda con dos tiras.",
+        "Dentro van los libros del cole.",
+        "Algunas tienen ruedas para arrastrarlas.",
+        "Pesa un montón los lunes.",
+        "Tiene un bolsillo para la botella de agua.",
+        "Se cuelga en la percha de clase.",
+        "La de la excursión lleva el bocadillo.",
+        "Se cierra con una cremallera.",
+        "Dora la exploradora tiene una que habla.",
+        "La de acampar es gigante y va llena."
+      ]
+    },
+    {
+      "word": "Libro",
+      "clues": [
+        "Está lleno de páginas y hay que pasarlas.",
+        "Cuenta historias de princesas o de piratas.",
+        "Lo lees antes de dormir con papá.",
+        "Tiene tapas duras y un lomo.",
+        "Se guarda de pie en la estantería.",
+        "Se saca prestado de la biblioteca.",
+        "El del cole pesa mucho en la mochila.",
+        "Usas un punto para saber dónde ibas.",
+        "Los de los peques tienen más dibujos que letras.",
+        "Si le doblas la esquina se estropea."
+      ]
+    },
+    {
+      "word": "Lápiz",
+      "clues": [
+        "Con él escribes y luego borras.",
+        "Se saca punta cuando se gasta.",
+        "Es de madera con una mina gris dentro.",
+        "Los de colores pintan el dibujo.",
+        "Se guarda en el estuche del cole.",
+        "Si aprietas mucho se rompe la punta.",
+        "Va detrás de la oreja del carpintero.",
+        "Se muerde cuando piensas mucho.",
+        "El sacapuntas deja unas virutas bonitas.",
+        "Antes de escribir con boli usas uno."
+      ]
+    },
+    {
+      "word": "Tijeras",
+      "clues": [
+        "Cortan el papel en dos.",
+        "Tienen dos agujeros para los dedos.",
+        "Las del cole tienen la punta redonda.",
+        "Con ellas recortas figuras.",
+        "El peluquero corta el pelo con unas.",
+        "Hacen un ruido de chas chas.",
+        "Con papel y piedra hay un juego famoso.",
+        "Se pasan siempre por el mango.",
+        "Están hechas de dos cuchillas juntas.",
+        "Sirven para abrir las bolsas difíciles."
+      ]
+    },
+    {
+      "word": "Cubo",
+      "clues": [
+        "Con él haces castillos en la arena.",
+        "Lleva un asa para transportarlo.",
+        "El de la basura está en la cocina.",
+        "Se llena de agua para fregar el suelo.",
+        "La pala va siempre a su lado.",
+        "Se le da la vuelta y sale una torre de arena.",
+        "El de Rubik tiene colores y se gira.",
+        "Es una figura con seis caras cuadradas.",
+        "Se deja en la playa lleno de conchas.",
+        "Si tiene un agujero pierde el agua."
+      ]
+    },
+    {
+      "word": "Escoba",
+      "clues": [
+        "Sirve para barrer el suelo.",
+        "La bruja vuela montada en una.",
+        "Va siempre con el recogedor.",
+        "Tiene un palo largo y cerdas abajo.",
+        "Junta las migas de la cocina en un montón.",
+        "En Harry Potter juegan al quidditch encima.",
+        "Se guarda detrás de la puerta.",
+        "Con ella llegas a las telarañas del techo.",
+        "Se pasa después de comer.",
+        "Es de plástico o de paja."
+      ]
+    },
+    {
+      "word": "Alfombra",
+      "clues": [
+        "Se pone en el suelo del salón.",
+        "Aladino volaba en una mágica.",
+        "Es blandita y se anda descalzo encima.",
+        "Debajo se esconde el polvo cuando hay prisa.",
+        "Se sacude o se aspira para limpiarla.",
+        "La de la entrada dice bienvenidos.",
+        "Puede ser redonda o cuadrada.",
+        "Si tropiezas con ella te caes.",
+        "La del baño se moja al salir de la ducha.",
+        "Encima juegan los niños con los coches."
+      ]
+    },
+    {
+      "word": "Sol",
+      "clues": [
+        "Sale por la mañana y lo calienta todo.",
+        "Es una bola de fuego amarilla.",
+        "Se dibuja con rayitas alrededor.",
+        "Hay que ponerse crema para que no te queme.",
+        "Se esconde por la tarde y se hace de noche.",
+        "La Tierra da vueltas a su alrededor.",
+        "No se puede mirar de frente.",
+        "Cuando hay nubes no se le ve.",
+        "En verano pega mucho más fuerte.",
+        "Con él y la lluvia sale el arcoíris."
+      ]
+    },
+    {
+      "word": "Luna",
+      "clues": [
+        "Se ve en el cielo de noche.",
+        "A veces es redonda y a veces un trozo.",
+        "Los astronautas caminaron encima.",
+        "Está llena de cráteres y polvo gris.",
+        "El lobo le aúlla desde el monte.",
+        "Dicen en broma que está hecha de queso.",
+        "Da vueltas alrededor de la Tierra.",
+        "Cuando está llena parece un plato blanco.",
+        "Se ve mejor con un telescopio.",
+        "En los cuentos las vacas saltan por encima."
+      ]
+    },
+    {
+      "word": "Estrella",
+      "clues": [
+        "Brilla en el cielo por la noche.",
+        "Se dibuja con cinco puntas.",
+        "Va en lo alto del árbol de Navidad.",
+        "Se pide un deseo cuando cae una.",
+        "El sol es la más cercana a nosotros.",
+        "Hay muchísimas y no se pueden contar.",
+        "Los marineros se guiaban con ellas.",
+        "Una guio a los Reyes Magos hasta Belén.",
+        "En el mar hay una con cinco brazos.",
+        "Parece que parpadean desde muy lejos."
+      ]
+    },
+    {
+      "word": "Nube",
+      "clues": [
+        "Es blanca y esponjosa en el cielo.",
+        "De ella cae la lluvia.",
+        "Cuando es gris viene tormenta.",
+        "Tumbado en la hierba les buscas formas.",
+        "Está hecha de gotitas de agua.",
+        "El avión vuela por encima de ellas.",
+        "Tapa el sol y de repente hace fresco.",
+        "Parece de algodón pero no se puede tocar.",
+        "Hay unas de golosina que son blanditas.",
+        "Se mueve empujada por el viento."
+      ]
+    },
+    {
+      "word": "Lluvia",
+      "clues": [
+        "Cae del cielo y te moja.",
+        "Sales con el paraguas y las botas de agua.",
+        "Deja charcos por toda la calle.",
+        "Suena tac tac en el cristal.",
+        "Después de ella sale el arcoíris.",
+        "Riega las plantas del campo gratis.",
+        "Cuando es muy fuerte se llama chaparrón.",
+        "En otoño cae casi todos los días.",
+        "Huele a tierra mojada cuando termina.",
+        "Si es finita casi no se nota."
+      ]
+    },
+    {
+      "word": "Nieve",
+      "clues": [
+        "Es blanca fría y cae en invierno.",
+        "Con ella haces un muñeco con zanahoria.",
+        "Se tiran bolas entre los amigos.",
+        "Cubre las montañas de blanco.",
+        "Los esquís se deslizan por encima.",
+        "Se derrite cuando sale el sol.",
+        "Cada copo es distinto a los demás.",
+        "Deja huellas cuando la pisas.",
+        "Papá Noel viaja sobre ella en trineo.",
+        "Cruje bajo las botas al caminar."
+      ]
+    },
+    {
+      "word": "Viento",
+      "clues": [
+        "No se ve pero se nota en la cara.",
+        "Mueve las hojas de los árboles.",
+        "Con él vuela la cometa en el parque.",
+        "Da la vuelta al paraguas.",
+        "Los molinos giran gracias a él.",
+        "El lobo sopló como si fuera uno muy fuerte.",
+        "Levanta los papeles de la mesa.",
+        "Cuando sopla muchísimo se llama vendaval.",
+        "Hace que los barcos de vela avancen.",
+        "Silba por las rendijas de la ventana."
+      ]
+    },
+    {
+      "word": "Arcoíris",
+      "clues": [
+        "Sale después de llover cuando asoma el sol.",
+        "Tiene siete colores en el cielo.",
+        "Empieza en rojo y acaba en morado.",
+        "Dicen que al final hay un tesoro escondido.",
+        "Tiene forma de puente curvado.",
+        "Se dibuja con muchas tiras de colores.",
+        "No se puede tocar ni alcanzar.",
+        "Los unicornios aparecen siempre con uno.",
+        "Dura muy poquito y desaparece.",
+        "Se hace con la luz y las gotas de agua."
+      ]
+    },
+    {
+      "word": "Trueno",
+      "clues": [
+        "Suena buuum después del rayo.",
+        "Da mucho miedo por la noche.",
+        "Viene con la tormenta y la lluvia.",
+        "Los perros se esconden cuando lo oyen.",
+        "Primero ves la luz y luego lo escuchas.",
+        "Retumban los cristales cuando llega.",
+        "Se cuentan los segundos para saber si está lejos.",
+        "Dicen que son las nubes chocando.",
+        "Es el ruido más fuerte del cielo.",
+        "Después de él suele caer un chaparrón."
+      ]
+    },
+    {
+      "word": "Árbol",
+      "clues": [
+        "Tiene tronco ramas y hojas.",
+        "En Navidad se llena de bolas y luces.",
+        "De él cuelgan las manzanas.",
+        "Los pájaros hacen su nido arriba.",
+        "Da sombra en verano para descansar.",
+        "La ardilla sube por su tronco.",
+        "En otoño se le caen todas las hojas.",
+        "Con su madera se hacen las mesas.",
+        "Se planta y se riega hasta que crece.",
+        "Algunos tienen un columpio colgado de una rama."
+      ]
+    },
+    {
+      "word": "Flor",
+      "clues": [
+        "Huele muy bien y tiene pétalos.",
+        "La abeja va a por su néctar.",
+        "Se regala un ramo por los cumpleaños.",
+        "La rosa y el tulipán son de las más famosas.",
+        "Crece de una semilla en la maceta.",
+        "Se pone en un jarrón con agua.",
+        "Nace en primavera por todo el campo.",
+        "Le arrancas los pétalos diciendo sí o no.",
+        "El girasol es la más grande y amarilla.",
+        "Si no la riegas se marchita."
+      ]
+    },
+    {
+      "word": "Hoja",
+      "clues": [
+        "Es verde y crece en las ramas.",
+        "En otoño se pone marrón y cae al suelo.",
+        "Al pisar las secas hacen crac.",
+        "La oruga se la come a mordiscos.",
+        "Las del cuaderno son de papel.",
+        "La jirafa alcanza las de arriba del todo.",
+        "Tiene unos nervios finos como venas.",
+        "El viento las arrastra por la calle.",
+        "Se guardan entre libros para secarlas.",
+        "El trébol tiene tres y con cuatro da suerte."
+      ]
+    },
+    {
+      "word": "Hierba",
+      "clues": [
+        "Es verde y cubre todo el prado.",
+        "La vaca y la oveja se la comen.",
+        "Se corta con una máquina que hace ruido.",
+        "Te tumbas encima en el parque.",
+        "Después del riego está mojada.",
+        "En el campo de fútbol es verde y rayada.",
+        "Si te sientas te manchas el pantalón.",
+        "Crece muy rápido en primavera.",
+        "Los grillos cantan escondidos dentro.",
+        "Con un tallo puedes hacer un silbido."
+      ]
+    },
+    {
+      "word": "Montaña",
+      "clues": [
+        "Es muy alta y hay que subir andando.",
+        "En invierno tiene la punta nevada.",
+        "Los excursionistas llegan hasta la cima.",
+        "Se baja esquiando por la nieve.",
+        "Las cabras andan por sus rocas.",
+        "Es lo contrario del valle.",
+        "Se dibuja con dos picos y un sol en medio.",
+        "El águila hace su nido en lo más alto.",
+        "En la feria hay una rusa que da vueltas.",
+        "Desde arriba se ve todo pequeñito."
+      ]
+    },
+    {
+      "word": "Río",
+      "clues": [
+        "Lleva agua dulce hasta el mar.",
+        "Por él bajan los patos nadando.",
+        "Tiene un puente para cruzarlo.",
+        "El oso pesca salmones dentro.",
+        "Nace en la montaña y baja corriendo.",
+        "Se tiran piedras planas para que reboten.",
+        "Su orilla está llena de juncos.",
+        "No es tan grande como el mar.",
+        "Su agua está fresquita en verano.",
+        "Las barcas navegan despacito por él."
+      ]
+    },
+    {
+      "word": "Mar",
+      "clues": [
+        "Es enorme y su agua está salada.",
+        "Sus olas llegan hasta la orilla.",
+        "Dentro viven los peces y los pulpos.",
+        "El barco navega por encima.",
+        "Es azul y no se ve el final.",
+        "Cuando hay tormenta las olas son gigantes.",
+        "Con las gafas ves todo por debajo del agua.",
+        "Si tragas agua te sabe fatal.",
+        "Las gaviotas vuelan por encima gritando.",
+        "Llegas a él bajando por la playa."
+      ]
+    },
+    {
+      "word": "Playa",
+      "clues": [
+        "Está llena de arena y de toallas.",
+        "Vas en verano a bañarte.",
+        "Se hacen castillos con el cubo y la pala.",
+        "El agua está justo al lado.",
+        "Te pones crema para no quemarte.",
+        "Las conchas aparecen en la orilla.",
+        "La sombrilla se clava en el suelo.",
+        "Se anda descalzo y quema al mediodía.",
+        "Los cangrejos corren de lado por ella.",
+        "Al volver a casa la arena está en todas partes."
+      ]
+    },
+    {
+      "word": "Arena",
+      "clues": [
+        "Es amarilla y está en la playa.",
+        "Con ella y agua haces castillos.",
+        "Se cuela por todas partes.",
+        "Se queda pegada a los dedos mojados.",
+        "El desierto está lleno hasta el horizonte.",
+        "Se escapa entre los dedos como un chorrito.",
+        "El reloj antiguo la deja caer para medir el tiempo.",
+        "El parque tiene un cajón para jugar.",
+        "Está hecha de piedrecitas diminutas.",
+        "Quema mucho si hace sol al mediodía."
+      ]
+    },
+    {
+      "word": "Bosque",
+      "clues": [
+        "Está lleno de árboles muy juntos.",
+        "Caperucita lo cruzó para ir a casa de la abuela.",
+        "Dentro viven ciervos zorros y búhos.",
+        "Hansel y Gretel se perdieron dentro.",
+        "Huele a tierra mojada y a pino.",
+        "El leñador corta madera allí.",
+        "Está oscuro porque las ramas tapan la luz.",
+        "Se recogen setas y piñas en otoño.",
+        "Hay que tener mucho cuidado con el fuego.",
+        "Se oyen pájaros por todas partes."
+      ]
+    },
+    {
+      "word": "Piedra",
+      "clues": [
+        "Es dura gris y pesada.",
+        "Se lanza al agua para que rebote.",
+        "En el juego de manos pierde contra el papel.",
+        "Si tropiezas con una te caes.",
+        "El castillo está hecho de muchas juntas.",
+        "Guardas una bonita en el bolsillo.",
+        "Debajo se esconden los bichitos.",
+        "La montaña está llena de ellas.",
+        "Los hombres antiguos hacían herramientas con ellas.",
+        "Es tan dura que no se puede morder."
+      ]
+    },
+    {
+      "word": "Fuego",
+      "clues": [
+        "Quema y hay que tener muchísimo cuidado.",
+        "Es naranja y amarillo y se mueve.",
+        "Los bomberos lo apagan con agua.",
+        "Con él se asan las salchichas del campamento.",
+        "Sale de una cerilla al frotarla.",
+        "El dragón lo echa por la boca.",
+        "Calienta la chimenea en invierno.",
+        "Hace mucho humo negro.",
+        "Nunca hay que jugar con él.",
+        "En la noche de San Juan se hacen hogueras."
+      ]
+    },
+    {
+      "word": "Barro",
+      "clues": [
+        "Se hace mezclando tierra y agua.",
+        "El cerdo se revuelca dentro encantado.",
+        "Se te quedan las botas pegadas.",
+        "Con él se hacen pasteles de mentira.",
+        "Mancha toda la ropa de marrón.",
+        "Después de la lluvia el camino se llena.",
+        "El alfarero hace vasijas con él.",
+        "Se seca al sol y se pone duro.",
+        "Los coches salpican al pasar.",
+        "Hay que limpiarse antes de entrar en casa."
+      ]
+    },
+    {
+      "word": "Charco",
+      "clues": [
+        "Se forma en el suelo después de llover.",
+        "Los niños saltan dentro con las botas.",
+        "Se ve tu cara reflejada en el agua.",
+        "Salpica a todo el que pasa cerca.",
+        "Los gorriones se bañan dentro.",
+        "Cuando sale el sol desaparece.",
+        "Es poco profundo y está sucio.",
+        "Si lo pisas te mojas los calcetines.",
+        "Los coches te mojan si pasan al lado.",
+        "El perro bebe de él en el parque."
+      ]
+    },
+    {
+      "word": "Niebla",
+      "clues": [
+        "Es una nube que baja hasta el suelo.",
+        "No se ve nada a dos pasos.",
+        "Aparece por la mañana temprano en invierno.",
+        "Los coches encienden las luces para pasar.",
+        "Todo se vuelve blanco y misterioso.",
+        "Se levanta cuando calienta el sol.",
+        "Moja un poco la cara al caminar.",
+        "En las películas de miedo siempre hay.",
+        "El avión no puede aterrizar con ella.",
+        "Parece humo pero está hecha de agua."
+      ]
+    },
+    {
+      "word": "Hielo",
+      "clues": [
+        "Es agua congelada y muy fría.",
+        "Se echan cubitos al refresco.",
+        "Si lo pisas resbalas y te caes.",
+        "Los pingüinos y las focas viven encima.",
+        "En el congelador se hace en una bandeja.",
+        "Se derrite en las manos enseguida.",
+        "Los patinadores se deslizan sobre él.",
+        "El iceberg es un trozo enorme en el mar.",
+        "Se pone en un chichón para que no duela.",
+        "Suena cloc cloc dentro del vaso."
+      ]
+    },
+    {
+      "word": "Mano",
+      "clues": [
+        "Tiene cinco dedos.",
+        "Con ella saludas diciendo adiós.",
+        "Se lava con jabón antes de comer.",
+        "Aplaudes chocando las dos.",
+        "Escribes con la derecha o con la izquierda.",
+        "El guante la tapa en invierno.",
+        "En el juego hace piedra papel o tijera.",
+        "Le miran la palma para adivinar el futuro.",
+        "La abuela te la da para cruzar la calle.",
+        "Se levanta en clase para hablar."
+      ]
+    },
+    {
+      "word": "Pie",
+      "clues": [
+        "Va dentro del zapato y del calcetín.",
+        "Tiene cinco dedos igual que la mano.",
+        "Con él chutas el balón.",
+        "Si te lo pisan duele mucho.",
+        "Su parte de abajo se llama planta.",
+        "Deja huellas en la arena mojada.",
+        "Le hacen cosquillas y te partes de risa.",
+        "Cenicienta perdió el zapato de uno.",
+        "Cuando andas mucho acaba cansado.",
+        "Con su medida se elige el número del zapato."
+      ]
+    },
+    {
+      "word": "Cabeza",
+      "clues": [
+        "Encima de ella crece el pelo.",
+        "Dentro está el cerebro que piensa.",
+        "Se mueve para decir sí o no.",
+        "Duele cuando estás malito.",
+        "El gorro y el casco la protegen.",
+        "Está unida al cuerpo por el cuello.",
+        "Con ella se remata el balón en fútbol.",
+        "Tiene la cara delante con los ojos y la boca.",
+        "Si te das un golpe sale un chichón.",
+        "Los payasos se ponen una peluca encima."
+      ]
+    },
+    {
+      "word": "Ojo",
+      "clues": [
+        "Con él ves todo lo que hay.",
+        "Tienes dos y son iguales.",
+        "Puede ser azul verde o marrón.",
+        "Las pestañas lo protegen del polvo.",
+        "Se cierra para dormir.",
+        "Cuando lloras salen lágrimas de él.",
+        "Las gafas ayudan a que vea mejor.",
+        "El pirata lleva un parche en uno.",
+        "Si te entra jabón escuece mucho.",
+        "Parpadea sin que te des cuenta."
+      ]
+    },
+    {
+      "word": "Nariz",
+      "clues": [
+        "Con ella hueles la comida.",
+        "Tiene dos agujeros para respirar.",
+        "El payaso la lleva roja y redonda.",
+        "A Pinocho le crecía al mentir.",
+        "Se tapa cuando algo huele fatal.",
+        "El muñeco de nieve la tiene de zanahoria.",
+        "Cuando estás resfriado gotea.",
+        "Se limpia con un pañuelo soplando fuerte.",
+        "Está entre los ojos y la boca.",
+        "El perro la tiene siempre húmeda."
+      ]
+    },
+    {
+      "word": "Boca",
+      "clues": [
+        "Con ella comes y hablas.",
+        "Dentro están los dientes y la lengua.",
+        "Se abre mucho al bostezar.",
+        "El dentista te pide que la abras.",
+        "Se tapa al toser para no contagiar.",
+        "Con ella das besos a mamá.",
+        "Si comes chocolate se te queda manchada.",
+        "El pez la abre y la cierra dentro del agua.",
+        "Los labios están alrededor de ella.",
+        "Con ella soplas las velas del cumpleaños."
+      ]
+    },
+    {
+      "word": "Oreja",
+      "clues": [
+        "Con ella escuchas la música.",
+        "El conejo y el burro las tienen larguísimas.",
+        "Algunas llevan un pendiente colgado.",
+        "El gorro las tapa cuando hace frío.",
+        "Están una a cada lado de la cabeza.",
+        "El elefante las mueve como abanicos.",
+        "Se limpian por fuera con cuidado.",
+        "Si te tiran de ella duele.",
+        "Se pone el teléfono al lado para hablar.",
+        "Cuando alguien habla flojito la acercas."
+      ]
+    },
+    {
+      "word": "Diente",
+      "clues": [
+        "Sirve para masticar la comida.",
+        "Cuando se te cae lo dejas bajo la almohada.",
+        "El ratón Pérez te deja una moneda.",
+        "Se limpia con el cepillo y la pasta.",
+        "Si comes muchas chuches sale una caries.",
+        "El tiburón tiene muchísimos y afilados.",
+        "Al bebé le sale el primero al año.",
+        "El dentista lo mira con un espejito.",
+        "El de leche se cae y sale otro nuevo.",
+        "Con él muerdes la manzana."
+      ]
+    },
+    {
+      "word": "Pelo",
+      "clues": [
+        "Crece en la cabeza y hay que cortarlo.",
+        "Se peina con un cepillo por la mañana.",
+        "Rapunzel lo tenía larguísimo desde la torre.",
+        "Puede ser rubio moreno o pelirrojo.",
+        "Se lava con champú en la ducha.",
+        "Se hacen coletas trenzas y moños.",
+        "Los abuelos lo tienen blanco.",
+        "El león tiene una melena enorme.",
+        "Se seca con el secador que hace ruido.",
+        "El gato lo suelta por todo el sofá."
+      ]
+    },
+    {
+      "word": "Brazo",
+      "clues": [
+        "Va desde el hombro hasta la mano.",
+        "Con él abrazas muy fuerte.",
+        "En medio está el codo que se dobla.",
+        "Si te lo rompes te ponen una escayola.",
+        "Lo levantas para pedir el turno.",
+        "El pulpo tiene ocho.",
+        "Con él lanzas la pelota lo más lejos posible.",
+        "La camiseta tiene mangas para taparlo.",
+        "La vacuna te la ponen ahí.",
+        "Cuando llevas mucho peso acaba dolorido."
+      ]
+    },
+    {
+      "word": "Pierna",
+      "clues": [
+        "Con ella andas y corres.",
+        "En medio está la rodilla.",
+        "Termina en el pie.",
+        "El pantalón tiene dos huecos para meterlas.",
+        "Si te caes te haces una herida.",
+        "El futbolista chuta con la más fuerte.",
+        "La escayola se pone cuando se rompe.",
+        "Se estira antes de hacer deporte.",
+        "La cigüeña se apoya solo en una.",
+        "Cuando corres mucho acaba cansada."
+      ]
+    },
+    {
+      "word": "Dedo",
+      "clues": [
+        "Tienes cinco en cada mano.",
+        "El pulgar es el más gordito.",
+        "Con el índice señalas las cosas.",
+        "El anular lleva el anillo.",
+        "El meñique es el más pequeño.",
+        "Los bebés se chupan uno.",
+        "Si te pillas uno con la puerta duele muchísimo.",
+        "Se cuenta con ellos hasta diez.",
+        "El pintor lo mete en la pintura sin querer.",
+        "La uña está en la puntita."
+      ]
+    },
+    {
+      "word": "Barriga",
+      "clues": [
+        "Suena cuando tienes hambre.",
+        "Está debajo del pecho y encima de las piernas.",
+        "En medio tiene el ombligo.",
+        "Duele si comes demasiadas chuches.",
+        "El bebé crece dentro de la de mamá.",
+        "El canguro lleva una bolsa ahí.",
+        "Se hincha después de comer mucho.",
+        "Al gato le encanta que se la rasques.",
+        "Te tumbas boca abajo encima de ella.",
+        "Papá Noel la tiene muy redonda."
+      ]
+    },
+    {
+      "word": "Lengua",
+      "clues": [
+        "Con ella notas si algo está dulce o salado.",
+        "La sacas para hacer burlas.",
+        "El helado la deja de colores.",
+        "Si tomas algo caliente te la quemas.",
+        "El perro la saca cuando tiene calor.",
+        "El camaleón la lanza para cazar moscas.",
+        "Está dentro de la boca al lado de los dientes.",
+        "El médico la mira con un palito.",
+        "Es rosa y está siempre mojada.",
+        "Con ella también hablas y cantas."
+      ]
+    },
+    {
+      "word": "Rodilla",
+      "clues": [
+        "Está en medio de la pierna.",
+        "Se dobla para sentarte.",
+        "Si te caes en el patio se pela.",
+        "Se le pone una tirita encima.",
+        "Los futbolistas llevan espinilleras debajo.",
+        "Al rezar te apoyas en ellas.",
+        "Los pantalones se rompen justo por ahí.",
+        "El médico le da un golpecito y salta.",
+        "Los patinadores llevan protección para no hacerse daño.",
+        "Cuando creces te duele un poco."
+      ]
+    },
+    {
+      "word": "Coche",
+      "clues": [
+        "Tiene cuatro ruedas y un volante.",
+        "Va por la carretera hasta el pueblo.",
+        "Papá aparca el suyo en el garaje.",
+        "Hay que ponerse el cinturón para viajar.",
+        "Suena la bocina cuando alguien se cruza.",
+        "Se llena de gasolina en la gasolinera.",
+        "Los pequeños de juguete caben en la mano.",
+        "El de carreras corre muchísimo.",
+        "Rayo McQueen es el más famoso de la película.",
+        "Si se estropea viene la grúa."
+      ]
+    },
+    {
+      "word": "Autobús",
+      "clues": [
+        "Es largo y lleva a mucha gente.",
+        "El del cole es amarillo en las películas.",
+        "Se sube por delante y se paga el billete.",
+        "Tiene un timbre para pedir la parada.",
+        "Espera en una parada con marquesina.",
+        "Los de dos pisos son de Londres.",
+        "El conductor va delante con un volante enorme.",
+        "Si vas de pie te agarras a una barra.",
+        "Va lleno a primera hora de la mañana.",
+        "Sus puertas se abren solas con un ruido raro."
+      ]
+    },
+    {
+      "word": "Bicicleta",
+      "clues": [
+        "Tiene dos ruedas y pedales.",
+        "Se aprende a montar con ruedines.",
+        "Hay que llevar casco para ir seguro.",
+        "Se frena apretando el manillar.",
+        "Si se pincha hay que poner un parche.",
+        "Los ciclistas hacen carreras larguísimas.",
+        "Suena un timbre para avisar.",
+        "Se pedalea cuesta arriba con mucho esfuerzo.",
+        "Se ata con un candado en la calle.",
+        "Muchos niños la piden a los Reyes."
+      ]
+    },
+    {
+      "word": "Moto",
+      "clues": [
+        "Tiene dos ruedas pero no lleva pedales.",
+        "El casco es obligatorio para subirse.",
+        "Hace mucho ruido al arrancar.",
+        "El repartidor de pizzas va en una.",
+        "Adelanta a los coches en el atasco.",
+        "Solo caben el conductor y otra persona detrás.",
+        "Se inclina en las curvas.",
+        "Las de carreras corren en un circuito.",
+        "La policía tiene unas con sirena.",
+        "Se aparca en cualquier huequito pequeño."
+      ]
+    },
+    {
+      "word": "Tren",
+      "clues": [
+        "Va por unas vías de hierro.",
+        "El antiguo hace chu chu y suelta humo.",
+        "Tiene una locomotora y muchos vagones.",
+        "Para en la estación y suben los viajeros.",
+        "El de alta velocidad es larguísimo y blanco.",
+        "Hay uno de juguete que da vueltas por un circuito.",
+        "Suena una campana en el paso a nivel.",
+        "El revisor pica los billetes.",
+        "En Harry Potter uno rojo lleva a los magos al colegio.",
+        "Vas mirando el paisaje por la ventanilla."
+      ]
+    },
+    {
+      "word": "Avión",
+      "clues": [
+        "Vuela por el cielo entre las nubes.",
+        "Tiene dos alas y una cola.",
+        "Despega y aterriza en el aeropuerto.",
+        "Dentro hay azafatas que dan la comida.",
+        "Deja una raya blanca en el cielo.",
+        "Se pliega uno de papel para lanzarlo.",
+        "El piloto va en la cabina de delante.",
+        "Se viaja en él cuando vas muy lejos.",
+        "Hay que abrocharse el cinturón al despegar.",
+        "Ruge muy fuerte al pasar por encima."
+      ]
+    },
+    {
+      "word": "Barco",
+      "clues": [
+        "Navega por el mar sin hundirse.",
+        "Los piratas tienen uno con bandera negra.",
+        "Tiene un ancla que se tira al fondo.",
+        "El capitán lleva el timón.",
+        "Los de vela avanzan con el viento.",
+        "El Titanic chocó contra un iceberg.",
+        "La gente se marea cuando hay olas.",
+        "Lleva coches y personas hasta la isla.",
+        "Uno de papel flota en el charco.",
+        "En el puerto hay muchos amarrados."
+      ]
+    },
+    {
+      "word": "Camión",
+      "clues": [
+        "Es enorme y lleva mercancías.",
+        "Tiene muchísimas ruedas.",
+        "Va por la autopista muy despacio en las cuestas.",
+        "El de la basura pasa por la mañana temprano.",
+        "El de bomberos es rojo y lleva escalera.",
+        "El conductor duerme dentro de la cabina.",
+        "Toca una bocina grave y potentísima.",
+        "Los de juguete son de plástico o de metal.",
+        "El de la mudanza lleva todos los muebles.",
+        "El de obras suelta arena por detrás."
+      ]
+    },
+    {
+      "word": "Ambulancia",
+      "clues": [
+        "Lleva a los enfermos al hospital.",
+        "Suena con sirena y luces azules.",
+        "Es blanca con una raya de colores.",
+        "Dentro va una camilla con ruedas.",
+        "Todos los coches se apartan cuando pasa.",
+        "Los sanitarios curan por el camino.",
+        "Se llama al uno uno dos si hay una emergencia.",
+        "Lleva la palabra escrita al revés delante.",
+        "En el campo de fútbol siempre hay una esperando.",
+        "Corre muchísimo cuando hay prisa."
+      ]
+    },
+    {
+      "word": "Helicóptero",
+      "clues": [
+        "Tiene unas aspas enormes que giran arriba.",
+        "Puede quedarse quieto en el aire.",
+        "Aterriza en una azotea o en el campo.",
+        "Hace mucho ruido al pasar.",
+        "Los bomberos apagan incendios con él.",
+        "Rescata a la gente de la montaña.",
+        "No tiene alas como el avión.",
+        "Tiene otras aspas pequeñas en la cola.",
+        "Suena tap tap tap desde lejos.",
+        "La policía vigila el tráfico desde arriba."
+      ]
+    },
+    {
+      "word": "Cohete",
+      "clues": [
+        "Sale disparado hacia el espacio.",
+        "Se cuenta hacia atrás antes de despegar.",
+        "Lleva astronautas hasta la luna.",
+        "Echa fuego por debajo al subir.",
+        "Tiene forma de lápiz gigante.",
+        "Se lanza desde una base con una torre.",
+        "Hay uno de juguete que sube con agua.",
+        "En Navidad los echan al cielo con colores.",
+        "Suelta muchísimo humo blanco.",
+        "Vuelve a caer al mar con paracaídas."
+      ]
+    },
+    {
+      "word": "Tractor",
+      "clues": [
+        "Trabaja en el campo con el granjero.",
+        "Sus ruedas traseras son gigantes.",
+        "Va muy despacio por la carretera.",
+        "Arrastra un remolque lleno de paja.",
+        "Ara la tierra antes de sembrar.",
+        "Suele ser verde o rojo.",
+        "Su motor hace un ruido muy fuerte.",
+        "Solo cabe el conductor en la cabina.",
+        "Levanta polvo por todo el camino.",
+        "Los niños tienen uno de juguete con pala."
+      ]
+    },
+    {
+      "word": "Patinete",
+      "clues": [
+        "Tiene dos ruedas y un manillar.",
+        "Se empuja con un pie y con el otro te subes.",
+        "Se pliega para llevarlo en la mano.",
+        "Hay unos eléctricos para los mayores.",
+        "Se lleva casco por si te caes.",
+        "Se frena pisando la parte de atrás.",
+        "Los niños van con él al parque.",
+        "Es más pequeño que una bicicleta.",
+        "Los hay de tres ruedas para los peques.",
+        "Se guarda detrás de la puerta de casa."
+      ]
+    },
+    {
+      "word": "Metro",
+      "clues": [
+        "Es un tren que va por debajo de la ciudad.",
+        "Se baja por unas escaleras hasta el andén.",
+        "El billete se pasa por un torno.",
+        "Sus túneles son oscuros y largos.",
+        "Una voz avisa antes de cerrar las puertas.",
+        "Hay un plano de colores con las líneas.",
+        "En Madrid y en Barcelona hay uno enorme.",
+        "Va muy lleno a la hora de ir al trabajo.",
+        "A veces hay músicos tocando en los pasillos.",
+        "Sopla un viento raro cuando llega."
+      ]
+    },
+    {
+      "word": "Taxi",
+      "clues": [
+        "Es un coche que te lleva pagando.",
+        "Lleva una luz verde cuando está libre.",
+        "En Nueva York son todos amarillos.",
+        "Se para levantando la mano en la calle.",
+        "Un aparato va contando lo que cuesta.",
+        "En Madrid son blancos con una raya roja.",
+        "Espera a los viajeros en la puerta del aeropuerto.",
+        "Al final el conductor te da un recibo.",
+        "Se pide por teléfono si llueve mucho.",
+        "Solo caben cuatro pasajeros dentro."
+      ]
+    },
+    {
+      "word": "Pelota",
+      "clues": [
+        "Es redonda y bota en el suelo.",
+        "Se chuta con el pie en el patio.",
+        "La de baloncesto entra por un aro.",
+        "Si le das a la ventana la rompes.",
+        "La de playa es hinchable y de colores.",
+        "El perro la trae cuando la lanzas.",
+        "La de tenis es amarilla y peluda.",
+        "Se pincha si le clavas algo.",
+        "Se hincha con una aguja y un inflador.",
+        "El delfín hace equilibrio con una en el morro."
+      ]
+    },
+    {
+      "word": "Muñeca",
+      "clues": [
+        "Se le pone ropa y se le peina el pelo.",
+        "Duerme contigo en la cama.",
+        "Se le da el biberón de mentira.",
+        "Barbie es la más famosa del mundo.",
+        "Va dentro del carrito de paseo.",
+        "Algunas hablan si aprietas la barriga.",
+        "Las rusas se abren y sale otra dentro.",
+        "Tiene los ojos que se cierran al tumbarla.",
+        "Se piden muchas por Navidad.",
+        "Así se llama también la parte del brazo donde va el reloj."
+      ]
+    },
+    {
+      "word": "Peluche",
+      "clues": [
+        "Es blandito y se abraza para dormir.",
+        "Puede ser un oso un perro o un conejo.",
+        "Se lava en la lavadora cuando está sucio.",
+        "Está relleno de algodón.",
+        "Lo ganas en la feria si aciertas.",
+        "Sus ojos son dos botones de plástico.",
+        "Lo llevas de viaje para no echar de menos casa.",
+        "Si lo pierdes lloras un montón.",
+        "Tiene el pelito suave por fuera.",
+        "En tu cama hay una montaña de ellos."
+      ]
+    },
+    {
+      "word": "Puzle",
+      "clues": [
+        "Se hace juntando muchas piezas.",
+        "Cuando lo acabas se ve un dibujo entero.",
+        "Siempre falta una pieza al final.",
+        "Se empieza por los bordes y las esquinas.",
+        "Los de los peques tienen trozos gigantes.",
+        "Se hace encima de la mesa del salón.",
+        "Las piezas encajan haciendo un chas.",
+        "Los hay de mil trozos para los mayores.",
+        "Al terminarlo lo desmontas y a la caja.",
+        "Se buscan las piezas por el color parecido."
+      ]
+    },
+    {
+      "word": "Columpio",
+      "clues": [
+        "Está en el parque colgado de dos cadenas.",
+        "Te empujan por detrás para subir alto.",
+        "Vas hacia delante y hacia atrás.",
+        "Al lado están el tobogán y el balancín.",
+        "Algunos tienen una silla con barra para los bebés.",
+        "Se salta desde arriba cuando nadie mira.",
+        "Si vas muy alto da un cosquilleo en la barriga.",
+        "Chirría si le falta grasa.",
+        "Hay que esperar el turno para subirse.",
+        "También los hay colgados de la rama de un árbol."
+      ]
+    },
+    {
+      "word": "Tobogán",
+      "clues": [
+        "Te tiras sentado desde arriba.",
+        "Se sube por una escalerita.",
+        "Está en el parque al lado de los columpios.",
+        "El de la piscina acaba en el agua.",
+        "En verano quema si es de metal.",
+        "Bajas rapidísimo si llevas pantalón corto.",
+        "Algunos dan vueltas como un tubo.",
+        "No se sube por donde se baja.",
+        "Los hay de plástico rojo azul y amarillo.",
+        "Al llegar abajo caes de pie en la arena."
+      ]
+    },
+    {
+      "word": "Globo",
+      "clues": [
+        "Se hincha soplando y se ata con un nudo.",
+        "Si lo pinchas hace pum.",
+        "El de helio sube hasta el techo.",
+        "Los hay de todos los colores en los cumpleaños.",
+        "Si lo frotas en el pelo se pega a la pared.",
+        "Se escapa volando si lo sueltas en la calle.",
+        "Con ellos se hacen figuras de animales.",
+        "El aerostático lleva una cesta con gente.",
+        "Se le pinta una cara con rotulador.",
+        "Se desinfla poco a poco y se arruga."
+      ]
+    },
+    {
+      "word": "Cometa",
+      "clues": [
+        "Vuela en el cielo atada a un hilo.",
+        "Necesita viento para subir.",
+        "Tiene una cola de trapos de colores.",
+        "Se vuela en la playa o en un campo abierto.",
+        "Si se enreda en un árbol es una pena.",
+        "Suele tener forma de rombo.",
+        "Hay que correr para que despegue.",
+        "Se suelta cuerda poco a poco.",
+        "En China las hacen enormes con forma de dragón.",
+        "También hay una en el espacio con cola brillante."
+      ]
+    },
+    {
+      "word": "Comba",
+      "clues": [
+        "Se salta pasándola por debajo de los pies.",
+        "Dos amigos la dan y otro salta en medio.",
+        "Se cantan canciones mientras saltas.",
+        "Es una cuerda con dos mangos.",
+        "Si te enganchas te toca dar.",
+        "En el recreo se juega mucho.",
+        "Los boxeadores la usan para entrenar.",
+        "Se salta a la pata coja o con los dos pies.",
+        "Da vueltas tan rápido que casi no se ve.",
+        "Se guarda enrollada en la mochila."
+      ]
+    },
+    {
+      "word": "Escondite",
+      "clues": [
+        "Uno cuenta hasta veinte tapándose la cara.",
+        "Los demás buscan un sitio donde no les vean.",
+        "Se juega en casa o en el parque.",
+        "El que cuenta grita que ya va a buscar.",
+        "Hay que estar calladito para que no te pillen.",
+        "El último en aparecer gana la partida.",
+        "Debajo de la cama es el mejor sitio.",
+        "Si te encuentran te toca contar a ti.",
+        "Con los bebés se juega tapándose la cara con las manos.",
+        "Nadie puede mirar mientras se cuenta."
+      ]
+    },
+    {
+      "word": "Canicas",
+      "clues": [
+        "Son bolitas de cristal de colores.",
+        "Se lanzan con el dedo hacia un agujero.",
+        "Se guardan en una bolsa de tela.",
+        "Suenan al chocar unas con otras.",
+        "Dentro tienen unas rayas de colores.",
+        "Si ruedan se van debajo del sofá.",
+        "Se juega en el suelo agachado.",
+        "El que gana se lleva las de los demás.",
+        "Son duras y muy pesaditas.",
+        "No hay que metérselas en la boca."
+      ]
+    },
+    {
+      "word": "Cartas",
+      "clues": [
+        "Se reparten y se sujetan en abanico.",
+        "Con ellas se juega a la brisca y al mus.",
+        "Las hay de oros copas espadas y bastos.",
+        "Se barajan antes de empezar.",
+        "Si las tiras se desparraman por el suelo.",
+        "Con ellas se hace un castillo que se cae.",
+        "Se guardan en una cajita.",
+        "Los magos adivinan la que has elegido.",
+        "Hay un juego donde buscas parejas iguales.",
+        "El as vale más que todas."
+      ]
+    },
+    {
+      "word": "Patines",
+      "clues": [
+        "Llevan ruedas debajo del zapato.",
+        "Se usan casco y coderas por si te caes.",
+        "Los de hielo llevan una cuchilla.",
+        "Se avanza deslizándose por el suelo.",
+        "Los de cuatro ruedas son los antiguos.",
+        "Se atan bien fuerte los cordones.",
+        "Se aprende agarrado a la pared.",
+        "En la pista de hielo se alquilan.",
+        "Frenan con un taco de goma detrás.",
+        "Se guardan colgados por los cordones."
+      ]
+    },
+    {
+      "word": "Robot",
+      "clues": [
+        "Es una máquina con forma de persona.",
+        "Habla con voz metálica y rara.",
+        "Funciona con pilas o se enchufa.",
+        "En las películas del espacio hay unos famosos.",
+        "Se mueve andando muy tieso.",
+        "Hay uno que limpia el suelo solo en casa.",
+        "Obedece las órdenes que le das.",
+        "Tiene lucecitas que se encienden.",
+        "Está hecho de metal y plástico.",
+        "Los niños tienen uno de juguete que se transforma."
+      ]
+    },
+    {
+      "word": "Peonza",
+      "clues": [
+        "Da vueltas sobre una punta.",
+        "Se lanza con una cuerda enrollada.",
+        "Baila un rato y luego se cae.",
+        "Es de madera o de plástico.",
+        "Las modernas se llaman de combate.",
+        "Gira tan rápido que se ve borrosa.",
+        "Se juega en el suelo liso.",
+        "Los abuelos jugaban con una de pequeños.",
+        "La que más aguanta girando gana.",
+        "Se pinta de colores y al girar se mezclan."
+      ]
+    },
+    {
+      "word": "Médico",
+      "clues": [
+        "Te cura cuando estás malito.",
+        "Lleva una bata blanca.",
+        "Te mira la garganta con un palito.",
+        "Escucha el corazón con un aparato colgado del cuello.",
+        "Trabaja en el hospital o en el centro de salud.",
+        "Te pone la vacuna en el brazo.",
+        "Receta jarabe para la tos.",
+        "Te toma la temperatura con un termómetro.",
+        "Escribe con una letra que no se entiende.",
+        "Si te rompes un hueso él te escayola."
+      ]
+    },
+    {
+      "word": "Bombero",
+      "clues": [
+        "Apaga los incendios con una manguera.",
+        "Baja por una barra desde el piso de arriba.",
+        "Su camión es rojo y suena la sirena.",
+        "Lleva casco y un traje amarillo.",
+        "Rescata gatos subidos a un árbol.",
+        "Usa una escalera larguísima.",
+        "Espera el aviso en un parque muy grande.",
+        "Entra en el humo con una máscara.",
+        "Muchos niños quieren serlo de mayores.",
+        "También abre puertas cuando alguien se queda encerrado."
+      ]
+    },
+    {
+      "word": "Policía",
+      "clues": [
+        "Persigue a los ladrones.",
+        "Lleva uniforme y una gorra.",
+        "Su coche tiene luces azules y sirena.",
+        "Dirige el tráfico con un silbato.",
+        "Te ayuda si te pierdes en la calle.",
+        "Tiene un perro que huele cosas escondidas.",
+        "Pone multas si aparcas mal.",
+        "Trabaja en una comisaría.",
+        "Algunos van en moto o a caballo.",
+        "Se le llama al uno uno dos si hay peligro."
+      ]
+    },
+    {
+      "word": "Profesor",
+      "clues": [
+        "Da clase en el cole todos los días.",
+        "Escribe en la pizarra con rotulador.",
+        "Manda deberes para casa.",
+        "Corrige los exámenes con boli rojo.",
+        "Te enseña a leer y a sumar.",
+        "Pasa lista por la mañana.",
+        "Cuida el patio en el recreo.",
+        "Explica los ríos y las montañas.",
+        "Habla con tus padres en las reuniones.",
+        "Si hablas en clase te manda callar."
+      ]
+    },
+    {
+      "word": "Panadero",
+      "clues": [
+        "Hace el pan por la noche mientras duermes.",
+        "Trabaja con harina y un horno enorme.",
+        "Va lleno de blanco en el delantal.",
+        "Vende barras y bollos por la mañana.",
+        "Amasa con las manos hasta que queda fina.",
+        "Su tienda huele riquísimo al pasar.",
+        "Hace también las magdalenas y los cruasanes.",
+        "Se levanta a las cuatro de la madrugada.",
+        "Mete las barras al horno con una pala larga.",
+        "Prepara el roscón para el día de Reyes."
+      ]
+    },
+    {
+      "word": "Cartero",
+      "clues": [
+        "Reparte las cartas por las casas.",
+        "Las mete en el buzón del portal.",
+        "Lleva una bolsa grande colgada.",
+        "Va en bici o en una moto amarilla.",
+        "Trae los paquetes que compras.",
+        "Los perros le ladran cuando llega.",
+        "Llama al timbre si hay que firmar.",
+        "Recoge los sobres del buzón de la calle.",
+        "Trabaja para correos.",
+        "En Navidad trae muchas felicitaciones."
+      ]
+    },
+    {
+      "word": "Cocinero",
+      "clues": [
+        "Prepara la comida en el restaurante.",
+        "Lleva un gorro blanco muy alto.",
+        "Remueve la olla con un cucharón.",
+        "Prueba la salsa antes de servir.",
+        "En la película hay una rata que le ayuda.",
+        "Corta las verduras muy rápido.",
+        "Usa sartenes y muchos cuchillos.",
+        "En el cole prepara el menú del comedor.",
+        "Le sale humo de las ollas por todas partes.",
+        "Escribe el plato del día en una pizarra."
+      ]
+    },
+    {
+      "word": "Payaso",
+      "clues": [
+        "Lleva la nariz roja y redonda.",
+        "Se pone una peluca de colores.",
+        "Hace reír a todos en el circo.",
+        "Sus zapatos son gigantes.",
+        "Se cae al suelo aposta.",
+        "Se pinta la boca enorme.",
+        "Tira agua con una flor del traje.",
+        "Hace globos con forma de perro.",
+        "Va en un coche que se cae a trozos.",
+        "En los cumpleaños hace juegos con los niños."
+      ]
+    },
+    {
+      "word": "Peluquero",
+      "clues": [
+        "Corta el pelo con tijeras.",
+        "Te pone una capa para no mancharte.",
+        "Lava la cabeza con champú en un lavabo raro.",
+        "Usa el secador y el cepillo.",
+        "Deja el suelo lleno de pelos.",
+        "Con la maquinilla hace el corte muy corto.",
+        "Hace trenzas moños y coletas.",
+        "Tiene un espejo enorme delante.",
+        "Te enseña la nuca con otro espejo pequeño.",
+        "Al terminar te da una piruleta si eres pequeño."
+      ]
+    },
+    {
+      "word": "Astronauta",
+      "clues": [
+        "Viaja al espacio en un cohete.",
+        "Lleva un traje blanco muy gordo.",
+        "Flota porque allí no pesa nada.",
+        "Camina por la luna dando saltos.",
+        "Su casco tiene un cristal delante.",
+        "Vive en una estación que da vueltas a la Tierra.",
+        "Come la comida de tubos y bolsitas.",
+        "Ve la Tierra azul desde la ventanilla.",
+        "Entrena muchos años antes de subir.",
+        "Se agarra a todo para no salir volando."
+      ]
+    }
+  ],
+  "imageURLString": "spain"
+}
