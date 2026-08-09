@@ -7,7 +7,7 @@ import java.io.InputStream
  * so Kotlin tokenization matches the Python-trained model. Produces [CLS] … [SEP]
  * ids. No lowercasing / accent stripping (cased model). Port of iOS AIWordPieceTokenizer.
  */
-class AIWordPieceTokenizer(vocabStream: InputStream, private val maxLen: Int = 64) {
+class AIWordPieceTokenizer(vocabStream: InputStream, private val maxLen: Int = 128) {
 
     private val vocab: Map<String, Int>
     private val unkId: Int

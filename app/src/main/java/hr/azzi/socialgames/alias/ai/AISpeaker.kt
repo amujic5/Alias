@@ -141,13 +141,14 @@ class AISpeaker(context: Context, private val rate: Float = 1.0f) {
          * Voices that would satisfy [code], best first. Android's engine ships
          * Croatian but almost never Serbian or Bosnian, so those also accept a
          * Croatian voice — shared Latin pronunciation, and hr ijekavica is closer
-         * to Bosnian/Montenegrin than sr ekavica anyway. The player's own language
-         * is always tried first, so a device that does have it still uses it.
+         * to Bosnian/Montenegrin than sr ekavica anyway. Slovenian is patchy for the
+         * same reason and falls back to Croatian too. The player's own language is
+         * always tried first, so a device that does have it still uses it.
          */
         fun voiceCandidates(code: String): List<Locale> {
             val primary = localeFor(code)
             return when (code.substringBefore("-").lowercase()) {
-                "sr", "bs" -> listOf(primary, Locale("hr", "HR"))
+                "sr", "bs", "sl" -> listOf(primary, Locale("hr", "HR"))
                 else -> listOf(primary)
             }
         }

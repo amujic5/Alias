@@ -6,10 +6,12 @@ import java.util.Locale
 /** Languages the AI feature supports. fileCode maps to the ai_<deck>_<fileCode>.json assets. */
 enum class AILanguage(val code: String, val locale: String, val aiName: String, val fileCode: String, val emoji: String) {
     EN("en", "en-US", "English", "eng", "🇬🇧"),
+    ES("es", "es-ES", "Spanish", "esp", "🇪🇸"),
     FR("fr", "fr-FR", "French", "fra", "🇫🇷"),
     DE("de", "de-DE", "German", "ger", "🇩🇪"),
     IT("it", "it-IT", "Italian", "ita", "🇮🇹"),
     HR("hr", "hr-HR", "Croatian", "cro", "🇭🇷"),
+    SL("sl", "sl-SI", "Slovenian", "slo", "🇸🇮"),
     SR("sr", "sr-RS", "Serbian", "srb", "🇷🇸"),
     BS("bs", "bs-BA", "Bosnian", "bos", "🇧🇦");
 
@@ -22,22 +24,18 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
 
     /** Native display name shown in the language pill / picker. */
     val nativeName: String get() = when (this) {
-        EN -> "English"; FR -> "Français"; DE -> "Deutsch"; IT -> "Italiano"; HR -> "Hrvatski"
-        SR -> "Srpski"; BS -> "Bosanski"
+        EN -> "English"; ES -> "Español"; FR -> "Français"; DE -> "Deutsch"; IT -> "Italiano"
+        HR -> "Hrvatski"; SL -> "Slovenščina"; SR -> "Srpski"; BS -> "Bosanski"
     }
 
     companion object {
         fun from(code: String?): AILanguage = entries.firstOrNull { it.code == code } ?: EN
 
-        /**
-         * AI language matching the in-app UI language (Settings / LanguageManager).
-         * Slovenian has no AI content of its own, so it resolves to Croatian — the
-         * nearest neighbour. Spanish has no Slavic fallback, so it returns null and
-         * the saved preference / device locale decides.
-         */
+        /** AI language matching the in-app UI language (Settings / LanguageManager). */
         fun fromAppLanguage(): AILanguage? = when (LanguageManager.currentCode) {
-            "en" -> EN; "fr" -> FR; "de" -> DE; "it" -> IT
-            "hr", "sl" -> HR
+            "en" -> EN; "es" -> ES; "fr" -> FR; "de" -> DE; "it" -> IT
+            "hr" -> HR
+            "sl" -> SL
             "bs" -> BS
             "sr" -> SR
             else -> null
@@ -49,10 +47,13 @@ enum class AILanguage(val code: String, val locale: String, val aiName: String, 
             entries.firstOrNull { it.code == lang }?.let { return it }
             return when (Locale.getDefault().country.uppercase()) {
                 "GB", "US", "IE", "AU", "CA", "NZ" -> EN
+                "ES", "MX", "AR", "CO", "CL", "PE", "VE", "UY", "PY", "BO", "EC",
+                "CR", "PA", "DO", "GT", "HN", "NI", "SV", "PR" -> ES
                 "FR", "BE", "LU", "MC" -> FR
                 "DE", "AT", "CH", "LI" -> DE
                 "IT", "SM", "VA" -> IT
                 "HR" -> HR
+                "SI" -> SL
                 "BA" -> BS
                 "RS", "ME" -> SR
                 else -> null
