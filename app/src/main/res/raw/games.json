@@ -233,7 +233,9 @@
                 "Srb",
                 "Bos",
                 "Slo",
-                "Esp"
+                "Esp",
+                "Ita",
+                "Fra"
             ],
             "info": "game_nba_info",
             "age": "10+",
@@ -252,7 +254,9 @@
                 "Srb",
                 "Bos",
                 "Slo",
-                "Esp"
+                "Esp",
+                "Ita",
+                "Fra"
             ],
             "info": "alias_movies_info",
             "age": "10+",
@@ -271,7 +275,9 @@
                 "Srb",
                 "Bos",
                 "Slo",
-                "Esp"
+                "Esp",
+                "Ita",
+                "Fra"
             ],
             "info": "game_alias_who_am_i_info",
             "age": "10+",
