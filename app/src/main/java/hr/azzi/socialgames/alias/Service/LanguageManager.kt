@@ -69,7 +69,7 @@ object LanguageManager {
         get() = when (currentCode) {
             "bs" -> "home_bosnia"; "hr" -> "home_croatia"; "sr" -> "home_serbia"
             "de" -> "home_germany"; "sl" -> "home_slovenia"; "en" -> "home_uk"
-            "es" -> "home_spain"
+            "es" -> "home_spain"; "it" -> "home_italy"; "fr" -> "home_france"
             else -> ""
         }
 
