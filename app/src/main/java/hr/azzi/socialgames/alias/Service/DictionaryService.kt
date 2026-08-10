@@ -143,7 +143,11 @@ enum class BoardGameId {
     @SerializedName("easy_medium_hard")
     EASY_MEDIUM_HARD,
     @SerializedName("game_alias_esp")
-    ESP
+    ESP,
+    @SerializedName("game_alias_ita")
+    ITA,
+    @SerializedName("game_alias_fra")
+    FRA
 }
 
 fun BoardGameId.serializedName(): String {
@@ -163,7 +167,10 @@ object JSONService {
         return 0
     }
 
-    /** The country ("local-theme") deck for a given language short-code, if any. */
+    /** The country ("local-theme") deck for a given language short-code, if any.
+     *  Every country deck belongs here: one that is missing falls through to null and
+     *  then shows in every language, which is how the Italian and French decks first
+     *  shipped. */
     private fun countryDeckLanguage(id: BoardGameId): String? = when (id) {
         BoardGameId.CRO -> "CRO"
         BoardGameId.SRB -> "SRB"
@@ -172,6 +179,8 @@ object JSONService {
         BoardGameId.GER -> "GER"
         BoardGameId.UK  -> "ENG"
         BoardGameId.ESP -> "ESP"
+        BoardGameId.ITA -> "ITA"
+        BoardGameId.FRA -> "FRA"
         else -> null
     }
 

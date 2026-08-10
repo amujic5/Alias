@@ -1,252 +1,281 @@
 {
-  "games": [
-    {
-      "id": "game_alias_classic",
-      "name": "alias_classic",
-      "image": "game_classic",
-      "languages": [
-        "Eng",
-        "Ger",
-        "Fra",
-        "Cro",
-        "Ita",
-        "Srb",
-        "Swe",
-        "Rus",
-        "Dut",
-        "Bos",
-        "Slo",
-        "Esp"
-      ],
-      "info": "alias_classic_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "easy_medium_hard",
-      "name": "easy_medium_hard",
-      "image": "game_easy_medium_hard",
-      "languages": [
-        "Bos",
-        "Cro",
-        "Srb",
-        "Eng",
-        "Ger",
-        "Slo",
-        "Esp"
-      ],
-      "info": "easy_medium_hard_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": false
-    },
-    {
-      "id": "game_alias_football",
-      "name": "alias_football",
-      "image": "game_football",
-      "languages": [
-        "Cro",
-        "Eng",
-        "Ger",
-        "Slo",
-        "Srb",
-        "Bos",
-        "Esp"
-      ],
-      "info": "alias_football_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "game_alias_cro",
-      "name": "game_alias_cro",
-      "image": "game_alias_cro",
-      "languages": [
-        "Cro"
-      ],
-      "info": "alias_cro_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "game_alias_srb",
-      "name": "game_alias_srb",
-      "image": "serbia",
-      "languages": [
-        "Srb"
-      ],
-      "info": "alias_srb_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "game_alias_bos",
-      "name": "game_alias_bos",
-      "image": "country_bos",
-      "languages": [
-        "Bos"
-      ],
-      "info": "alias_bos_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-        "id": "game_alias_esp",
-        "name": "game_alias_esp",
-        "image": "country_esp",
-        "languages": [
-            "Esp"
-        ],
-        "info": "alias_esp_info",
-        "age": "10+",
-        "time": "45min",
-        "players": "3+",
-        "free": true
-    },
-    {
-      "id": "game_alias_slo",
-      "name": "game_alias_slo",
-      "image": "game_alias_slo",
-      "languages": [
-        "Slo"
-      ],
-      "info": "alias_slo_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "alias_ger",
-      "name": "game_alias_ger",
-      "image": "country_ger",
-      "languages": [
-        "Ger"
-      ],
-      "info": "alias_ger_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "game_alias_uk",
-      "name": "game_alias_uk",
-      "image": "game_alias_uk",
-      "languages": [
-        "Eng"
-      ],
-      "info": "game_alias_uk_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "game_alias_junior",
-      "name": "game_alias_junior",
-      "image": "game_alias_junior",
-      "languages": [
-        "Eng",
-        "Ger",
-        "Fra",
-        "Cro",
-        "Slo",
-        "Srb",
-        "Bos",
-        "Esp"
-      ],
-      "info": "game_alias_junior_info",
-      "age": "4-10",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "game_taboo",
-      "name": "game_taboo",
-      "image": "game_taboo",
-      "languages": [
-        "Eng",
-        "Cro",
-        "Ger",
-        "Srb",
-        "Bos",
-        "Slo"
-      ],
-      "info": "game_taboo_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": true
-    },
-    {
-      "id": "alias_nba",
-      "name": "NBA",
-      "image": "alias_nba",
-      "languages": [
-        "Cro",
-        "Eng",
-        "Ger",
-        "Srb",
-        "Bos",
-        "Slo",
-        "Esp"
-      ],
-      "info": "game_nba_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": false
-    },
-    {
-      "id": "alias_movies",
-      "name": "Movies & TV",
-      "image": "alias_movies",
-      "languages": [
-        "Cro",
-        "Eng",
-        "Ger",
-        "Srb",
-        "Bos",
-        "Slo",
-        "Esp"
-      ],
-      "info": "alias_movies_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": false
-    },
-    {
-      "id": "game_alias_who_am_i",
-      "name": "game_alias_who_am_i",
-      "image": "game_alias_who_am_i",
-      "languages": [
-        "Cro",
-        "Eng",
-        "Ger",
-        "Srb",
-        "Bos",
-        "Slo",
-        "Esp"
-      ],
-      "info": "game_alias_who_am_i_info",
-      "age": "10+",
-      "time": "45min",
-      "players": "3+",
-      "free": false
-    }
-  ]
+    "games": [
+        {
+            "id": "game_alias_classic",
+            "name": "alias_classic",
+            "image": "game_classic",
+            "languages": [
+                "Eng",
+                "Ger",
+                "Fra",
+                "Cro",
+                "Ita",
+                "Srb",
+                "Swe",
+                "Rus",
+                "Dut",
+                "Bos",
+                "Slo",
+                "Esp"
+            ],
+            "info": "alias_classic_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "easy_medium_hard",
+            "name": "easy_medium_hard",
+            "image": "game_easy_medium_hard",
+            "languages": [
+                "Bos",
+                "Cro",
+                "Srb",
+                "Eng",
+                "Ger",
+                "Slo",
+                "Esp"
+            ],
+            "info": "easy_medium_hard_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": false
+        },
+        {
+            "id": "game_alias_football",
+            "name": "alias_football",
+            "image": "game_football",
+            "languages": [
+                "Cro",
+                "Eng",
+                "Ger",
+                "Slo",
+                "Srb",
+                "Bos",
+                "Esp"
+            ],
+            "info": "alias_football_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_cro",
+            "name": "game_alias_cro",
+            "image": "game_alias_cro",
+            "languages": [
+                "Cro"
+            ],
+            "info": "alias_cro_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_srb",
+            "name": "game_alias_srb",
+            "image": "serbia",
+            "languages": [
+                "Srb"
+            ],
+            "info": "alias_srb_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_bos",
+            "name": "game_alias_bos",
+            "image": "country_bos",
+            "languages": [
+                "Bos"
+            ],
+            "info": "alias_bos_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_esp",
+            "name": "game_alias_esp",
+            "image": "country_esp",
+            "languages": [
+                "Esp"
+            ],
+            "info": "alias_esp_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_slo",
+            "name": "game_alias_slo",
+            "image": "game_alias_slo",
+            "languages": [
+                "Slo"
+            ],
+            "info": "alias_slo_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_ita",
+            "name": "game_alias_ita",
+            "image": "italy",
+            "languages": [
+                "Ita"
+            ],
+            "info": "alias_ita_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_fra",
+            "name": "game_alias_fra",
+            "image": "france",
+            "languages": [
+                "Fra"
+            ],
+            "info": "alias_fra_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "alias_ger",
+            "name": "game_alias_ger",
+            "image": "country_ger",
+            "languages": [
+                "Ger"
+            ],
+            "info": "alias_ger_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_uk",
+            "name": "game_alias_uk",
+            "image": "game_alias_uk",
+            "languages": [
+                "Eng"
+            ],
+            "info": "game_alias_uk_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_junior",
+            "name": "game_alias_junior",
+            "image": "game_alias_junior",
+            "languages": [
+                "Eng",
+                "Ger",
+                "Fra",
+                "Cro",
+                "Slo",
+                "Srb",
+                "Bos",
+                "Esp"
+            ],
+            "info": "game_alias_junior_info",
+            "age": "4-10",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_taboo",
+            "name": "game_taboo",
+            "image": "game_taboo",
+            "languages": [
+                "Eng",
+                "Cro",
+                "Ger",
+                "Srb",
+                "Bos",
+                "Slo",
+                "Esp",
+                "Fra",
+                "Ita"
+            ],
+            "info": "game_taboo_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "alias_nba",
+            "name": "NBA",
+            "image": "alias_nba",
+            "languages": [
+                "Cro",
+                "Eng",
+                "Ger",
+                "Srb",
+                "Bos",
+                "Slo",
+                "Esp"
+            ],
+            "info": "game_nba_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": false
+        },
+        {
+            "id": "alias_movies",
+            "name": "Movies & TV",
+            "image": "alias_movies",
+            "languages": [
+                "Cro",
+                "Eng",
+                "Ger",
+                "Srb",
+                "Bos",
+                "Slo",
+                "Esp"
+            ],
+            "info": "alias_movies_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": false
+        },
+        {
+            "id": "game_alias_who_am_i",
+            "name": "game_alias_who_am_i",
+            "image": "game_alias_who_am_i",
+            "languages": [
+                "Cro",
+                "Eng",
+                "Ger",
+                "Srb",
+                "Bos",
+                "Slo",
+                "Esp"
+            ],
+            "info": "game_alias_who_am_i_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": false
+        }
+    ]
 }
