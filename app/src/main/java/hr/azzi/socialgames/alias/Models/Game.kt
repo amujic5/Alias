@@ -4,7 +4,6 @@ import android.os.Parcelable
 import hr.azzi.socialgames.alias.Service.DictionaryService
 import kotlinx.android.parcel.IgnoredOnParcel
 import kotlinx.android.parcel.Parcelize
-import kotlin.random.Random
 
 /**
  * @param points what guessing this word is worth. One everywhere except the scored decks,
@@ -23,7 +22,14 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
            var _currentTeamIndex: Int,
            var currentTeamMarkedWords: ArrayList<MarkedWord> = ArrayList(),
            /** True on decks whose words carry their own value — see [newWord]. */
-           private var _isScored: Boolean = false ) : Parcelable {
+           private var _isScored: Boolean = false,
+           /**
+            * The deck as it was handed over. [_words] is dealt from and never refilled, so a
+            * long game on a small deck — Junior is 235 words — empties it and the next draw
+            * has nothing to pick from. Kept so play can carry on: repeating words late in a
+            * marathon game is better than ending it.
+            */
+           private val _deck: ArrayList<String> = ArrayList(_words) ) : Parcelable {
 
     private val _playingTeams: List<Team>
         get() {
@@ -152,8 +158,17 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
 
     val newWord: String
         get() {
+            // Dealt the deck out — start it again rather than draw from nothing.
+            if (_words.isEmpty()) _words.addAll(_deck)
+            if (_words.isEmpty()) {
+                currentWordPoints = 1
+                return ""
+            }
 
-            val randomIndex = randomValue(0, _words.size - 1)
+            // indices.random() rather than a hand-rolled bound: the previous
+            // nextInt(0, size - 1) threw once a single word was left, and could never
+            // deal the last word in the list.
+            val randomIndex = _words.indices.random()
             val wordString = _words[randomIndex]
             _words.removeAt(randomIndex)
 
@@ -271,9 +286,6 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
 
     }
 
-    private fun randomValue(min: Int, max: Int) : Int {
-        return Random.nextInt(min, max)
-    }
 
     companion object {
         /**
