@@ -142,6 +142,22 @@
                 android:name="android.support.FILE_PROVIDER_PATHS"
                 android:resource="@xml/file_paths" />
         </provider>
+
+        <!-- Stream's push module asks androidx.startup to install a notification-permission
+             requester for every user at launch, whether or not Online Play is ever opened.
+             It crashes when an activity stops without a content view — see
+             AliasApp.registerActivityLifecycleCallbacks, which refuses it. Dropped here as
+             well so the work is not done at cold start at all. Only this one initializer is
+             removed; every other library's startup entry is left alone. -->
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="${applicationId}.androidx-startup"
+            android:exported="false"
+            tools:node="merge">
+            <meta-data
+                android:name="io.getstream.android.push.permissions.PushPermissionsInitializer"
+                tools:node="remove" />
+        </provider>
     </application>
 
 </manifest>
