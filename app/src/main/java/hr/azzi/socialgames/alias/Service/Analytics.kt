@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias.Service
 
 import android.content.Context
+import android.os.Bundle
 import com.google.firebase.analytics.FirebaseAnalytics
 
 /**
@@ -40,6 +41,10 @@ object Analytics {
     /** The round's result was shared as an image from the results screen. */
     const val ROUND_RESULT_SHARED = "android_round_result_shared"
 
+    /** A round was played to the end — the timer ran out and the review screen opened.
+     *  Leaving Play with Quit does not pass this way, so an abandoned round is not counted. */
+    const val ROUND_PLAYED = "android_round_played"
+
     /** The saved rounds were opened from settings. */
     const val REPLAY_LIST_VISITED = "android_replay_list_visited"
 
@@ -50,6 +55,29 @@ object Analytics {
 
     fun log(context: Context, event: String) {
         runCatching { FirebaseAnalytics.getInstance(context).logEvent(event, null) }
+    }
+
+    /**
+     * A finished round, with the deck it was played on and the deck's language.
+     *
+     * The language code is upper-cased because the deck files disagree with themselves —
+     * "Ita" sits next to "ITA", "Fra" next to "FRA" — and Firebase would report each
+     * spelling as its own value, splitting one language across two rows.
+     *
+     * Both are event parameters, which Firebase does not show in reports until they are
+     * registered under Events ▸ Manage custom definitions. Until someone does that in the
+     * console the data is collected but invisible.
+     */
+    fun logRoundPlayed(context: Context, deckId: String, languageCode: String) {
+        runCatching {
+            FirebaseAnalytics.getInstance(context).logEvent(
+                ROUND_PLAYED,
+                Bundle().apply {
+                    putString("deck", deckId)
+                    putString("language", languageCode.uppercase())
+                },
+            )
+        }
     }
 
     /**

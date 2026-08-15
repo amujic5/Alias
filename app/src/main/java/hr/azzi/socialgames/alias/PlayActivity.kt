@@ -22,6 +22,7 @@ import com.google.firebase.analytics.FirebaseAnalytics
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.DictionaryService
+import hr.azzi.socialgames.alias.Service.serializedName
 import hr.azzi.socialgames.alias.Service.NoAds
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardWord
@@ -246,6 +247,16 @@ class PlayActivity : BaseActivity() {
     }
 
     private fun goToResults(clip: File?) {
+        // Every finished round passes here; Quit leaves through finish() instead, so an
+        // abandoned round is not counted.
+        DictionaryService.playingDictionary?.let { dictionary ->
+            Analytics.logRoundPlayed(
+                this,
+                DictionaryService.playingBoardGame?.id?.serializedName() ?: "unknown",
+                dictionary.languageCode,
+            )
+        }
+
         val intent = Intent(this, ResultsActivity::class.java)
         intent.putExtra("game", game)
         intent.putExtra("replayPath", clip?.absolutePath)

@@ -19,6 +19,13 @@ class DictionaryService {
 
     companion object {
         var playingDictionary: DictionaryModel? = null
+
+        /**
+         * The deck the current game is being played on. Set beside [playingDictionary] when
+         * the game starts, because Play only receives the Game itself — the deck never
+         * travels that far — and the round-played event has to name it.
+         */
+        var playingBoardGame: BoardGame? = null
     }
 }
 
