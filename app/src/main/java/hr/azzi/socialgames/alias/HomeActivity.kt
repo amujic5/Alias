@@ -3,6 +3,7 @@ package hr.azzi.socialgames.alias
 import android.content.Intent
 import android.content.res.Configuration
 import android.os.Bundle
+import android.util.Log
 import android.view.View
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.runtime.Composable
@@ -13,6 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.JSONService
 import hr.azzi.socialgames.alias.appupdate.AppUpdateController
@@ -120,9 +122,43 @@ abstract class BaseActivity : AppCompatActivity() {
             setViewCompositionStrategy(ViewCompositionStrategy.DisposeOnViewTreeLifecycleDestroyed)
             setContent(content)
         }
-        setContentView(composeView)
+        try {
+            setContentView(composeView)
+        } catch (error: RuntimeException) {
+            if (!restartOnBrokenDecor(error)) throw error
+            return
+        }
         // Draw edge-to-edge; Compose applies the system-bar padding itself.
         WindowCompat.setDecorFitsSystemWindows(window, false)
+    }
+
+    /**
+     * Last resort for a window that comes up without its content container.
+     *
+     * AppCompat builds its sub-decor by handing the framework's `android.R.id.content`
+     * view over to its own ContentFrameLayout. When the framework hands it nothing —
+     * `mWindow.findViewById(android.R.id.content)` is null — the handover is skipped and
+     * the install dies moments later, either on `applyFixedSizeWindow` (NPE on
+     * ContentFrameLayout.setDecorPadding) or, earlier, on "Window couldn't find content
+     * container view". It happens at cold start on a small number of devices and is not
+     * something the app can prevent from here.
+     *
+     * The recovery has to be a fresh activity, not a second `setContentView`: the failed
+     * install already made the sub-decor this window's content, and that sub-decor is the
+     * one whose id was never set, so retrying in place meets the same null. A new instance
+     * gets a new Window.
+     *
+     * Once per activity class per process. If the restarted instance fails the same way
+     * the cause is not transient, and the crash is let through rather than restarting for
+     * as long as the user's patience holds.
+     */
+    private fun restartOnBrokenDecor(error: RuntimeException): Boolean {
+        if (!restartedOnce.add(javaClass.name)) return false
+        Log.w("Decor", "sub-decor install failed, restarting ${javaClass.simpleName}", error)
+        Analytics.log(this, Analytics.DECOR_RESTART)
+        finish()
+        startActivity(Intent(intent).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
+        return true
     }
 
     protected fun applyInsets(target: View) {
@@ -134,5 +170,10 @@ abstract class BaseActivity : AppCompatActivity() {
             insets
         }
         ViewCompat.requestApplyInsets(target)
+    }
+
+    private companion object {
+        /** Activity classes already restarted once — see [restartOnBrokenDecor]. */
+        val restartedOnce = mutableSetOf<String>()
     }
 }

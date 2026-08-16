@@ -45,6 +45,10 @@ object Analytics {
      *  Leaving Play with Quit does not pass this way, so an abandoned round is not counted. */
     const val ROUND_PLAYED = "android_round_played"
 
+    /** A screen came up without its content container and was restarted — see
+     *  BaseActivity.restartOnBrokenDecor. Rare, and worth knowing if it stops being rare. */
+    const val DECOR_RESTART = "android_decor_restart"
+
     /** The saved rounds were opened from settings. */
     const val REPLAY_LIST_VISITED = "android_replay_list_visited"
 

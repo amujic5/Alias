@@ -10,16 +10,22 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
-    <style name="FullscreenTheme" parent="AppTheme">
-        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
-        <item name="android:windowActionBarOverlay">true</item>
-        <item name="android:windowBackground">@null</item>
-        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
-        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
-    </style>
+    <!--
+        Home's theme. No action bar, the same as every other screen in the app.
 
-    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
-        <item name="android:background">@color/black_overlay</item>
+        It used to inherit one from AppTheme and overlay it, only for HomeActivity to hide
+        it again in onPostCreate. The cost was not the wasted work: an action bar puts that
+        one screen alone on AppCompat's heavy sub-decor path — inflate abc_screen_toolbar
+        through a themed inflater, wire up a DecorContentParent, create a support ActionBar
+        — and both "the window came up without a content container" crashes reported from
+        this app came from that path, on this screen. The eleven activities already on
+        AppTheme.NoActionBar have never reported it.
+
+        windowBackground stays null on purpose: Compose paints its own, and an opaque one
+        here only adds a flash of colour before the first frame.
+    -->
+    <style name="FullscreenTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowBackground">@null</item>
     </style>
 
     <style name="SwitchTheme" parent="Theme.AppCompat.Light">
