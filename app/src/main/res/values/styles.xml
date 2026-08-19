@@ -37,6 +37,20 @@
         <item name="windowNoTitle">true</item>
     </style>
 
+    <!--
+        Only ever used by a relaunch after the window failed to build — see
+        BaseActivity.recoverFromBrokenWindow. The one item is the whole point of it:
+        PhoneWindow.generateLayout picks which of its own screen layouts to inflate from
+        the window features, and windowActionModeOverlay moves it off screen_simple and
+        onto screen_simple_overlay_action_mode. Same thing to look at — this app has no
+        action modes to overlay — but a different framework layout, which is the only
+        lever there is on a device whose copy of the first one is broken.
+    -->
+    <style name="RecoveryTheme" parent="AppTheme.NoActionBar">
+        <item name="android:windowActionModeOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+    </style>
+
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
 
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />

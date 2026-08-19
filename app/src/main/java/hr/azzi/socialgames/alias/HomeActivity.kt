@@ -14,6 +14,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.lifecycle.lifecycleScope
+import com.google.firebase.crashlytics.FirebaseCrashlytics
 import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.JSONService
@@ -125,7 +126,7 @@ abstract class BaseActivity : AppCompatActivity() {
         try {
             setContentView(composeView)
         } catch (error: RuntimeException) {
-            if (!restartOnBrokenDecor(error)) throw error
+            recoverFromBrokenWindow(error)
             return
         }
         // Draw edge-to-edge; Compose applies the system-bar padding itself.
@@ -133,32 +134,55 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     /**
+     * Applies the recovery theme when this launch is the second attempt — see
+     * [recoverFromBrokenWindow]. Has to happen before the content is set, because the
+     * framework reads the window style when it builds the decor.
+     */
+    override fun onCreate(savedInstanceState: Bundle?) {
+        if (intent?.getBooleanExtra(EXTRA_RECOVERY, false) == true) setTheme(R.style.RecoveryTheme)
+        super.onCreate(savedInstanceState)
+    }
+
+    /**
      * Last resort for a window that comes up without its content container.
      *
-     * AppCompat builds its sub-decor by handing the framework's `android.R.id.content`
-     * view over to its own ContentFrameLayout. When the framework hands it nothing —
-     * `mWindow.findViewById(android.R.id.content)` is null — the handover is skipped and
-     * the install dies moments later, either on `applyFixedSizeWindow` (NPE on
-     * ContentFrameLayout.setDecorPadding) or, earlier, on "Window couldn't find content
-     * container view". It happens at cold start on a small number of devices and is not
-     * something the app can prevent from here.
+     * The framework inflates its own screen layout and then cannot find
+     * `@android:id/content` inside it — `PhoneWindow.generateLayout` throws "Window
+     * couldn't find content container view". Nothing in this app takes part in that
+     * inflation: no LayoutInflater factory, no getResources override, no base-context
+     * wrapping. It is the device's own framework resources, at cold start.
      *
-     * The recovery has to be a fresh activity, not a second `setContentView`: the failed
-     * install already made the sub-decor this window's content, and that sub-decor is the
-     * one whose id was never set, so retrying in place meets the same null. A new instance
-     * gets a new Window.
+     * The throw leaves the window half-installed — a decor with no content parent — so
+     * anything that touches it afterwards finds `android.R.id.content` null. That is the
+     * same null AppCompat dies on in `applyFixedSizeWindow`, and the one Stream's
+     * permission watcher used to die on: one fault, several places to fall over.
      *
-     * Once per activity class per process. If the restarted instance fails the same way
-     * the cause is not transient, and the crash is let through rather than restarting for
-     * as long as the user's patience holds.
+     * Two attempts, and they are not the same attempt twice. A window cannot be repaired
+     * in place — this one keeps its missing content parent for as long as it lives — so
+     * the retry is a fresh activity, and it asks for a different framework layout:
+     * `android:windowActionModeOverlay` makes `generateLayout` inflate
+     * screen_simple_overlay_action_mode instead of screen_simple. If the device broke one
+     * layout the second one works; if it broke the lot, nothing here can help.
+     *
+     * The second failure closes the screen quietly rather than crashing. The crash would
+     * tell the user nothing — there is no window to say it in — and it would count against
+     * the app in Play's vitals for a fault in the device's system resources. It is
+     * recorded to Crashlytics either way, which does not count towards vitals, so the
+     * devices this happens on stay visible.
      */
-    private fun restartOnBrokenDecor(error: RuntimeException): Boolean {
-        if (!restartedOnce.add(javaClass.name)) return false
-        Log.w("Decor", "sub-decor install failed, restarting ${javaClass.simpleName}", error)
-        Analytics.log(this, Analytics.DECOR_RESTART)
+    private fun recoverFromBrokenWindow(error: RuntimeException) {
+        val secondAttempt = intent?.getBooleanExtra(EXTRA_RECOVERY, false) == true
+        Log.w(TAG, "window has no content view in ${javaClass.simpleName}", error)
+        Analytics.log(this, if (secondAttempt) Analytics.DECOR_GAVE_UP else Analytics.DECOR_RESTART)
+        runCatching { FirebaseCrashlytics.getInstance().recordException(error) }
         finish()
-        startActivity(Intent(intent).addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION))
-        return true
+        if (!secondAttempt) {
+            startActivity(
+                Intent(intent)
+                    .putExtra(EXTRA_RECOVERY, true)
+                    .addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION),
+            )
+        }
     }
 
     protected fun applyInsets(target: View) {
@@ -173,7 +197,11 @@ abstract class BaseActivity : AppCompatActivity() {
     }
 
     private companion object {
-        /** Activity classes already restarted once — see [restartOnBrokenDecor]. */
-        val restartedOnce = mutableSetOf<String>()
+        const val TAG = "Decor"
+
+        /** Marks a launch as the retry, so a second failure stops instead of looping.
+         *  Carried in the intent rather than in a field: it survives the new process a
+         *  restart may come up in, and cannot outlive the launch it belongs to. */
+        const val EXTRA_RECOVERY = "recoverBrokenWindow"
     }
 }
