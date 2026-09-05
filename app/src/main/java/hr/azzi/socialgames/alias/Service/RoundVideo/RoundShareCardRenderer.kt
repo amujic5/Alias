@@ -26,6 +26,14 @@ sealed interface RoundShareHeader {
      * intact rather than a hole.
      */
     data class Mascot(val image: Bitmap?, val tint: Int) : RoundShareHeader
+
+    /**
+     * Draw & Guess, where the round produced one thing worth sharing. The word goes on top
+     * — without it the picture is a riddle to everyone who wasn't there — and the drawing
+     * fills the rest. A null image falls back to the score card rather than framing an
+     * empty sheet of paper.
+     */
+    data class Drawing(val image: Bitmap?, val word: String) : RoundShareHeader
 }
 
 /**
@@ -96,6 +104,43 @@ class RoundShareCardRenderer(
             listY + max(listHeight(correctRows.size), listHeight(skippedRows.size)) + 46f,
         )
 
+    // MARK: - Draw & Guess
+
+    /**
+     * The word, then the drawing on white paper. Everything the talking card says with
+     * tiles and lists, this round says with one picture.
+     */
+    private fun drawnRound(canvas: Canvas, drawing: Bitmap, word: String) {
+        shadowText(canvas, word.uppercase(), RectF(20f, 188f, 370f, 254f), 48f)
+
+        val paper = RectF(24f, 268f, 366f, 768f)
+        val scaledPaper = scaled(paper)
+        val radius = 30f * scale
+        canvas.drawRoundRect(
+            scaledPaper, radius, radius,
+            Paint(Paint.ANTI_ALIAS_FLAG).apply {
+                color = Color.WHITE
+                setShadowLayer(28f * scale, 0f, 10f * scale, withAlpha(Color.BLACK, 0.22f))
+            },
+        )
+
+        // Aspect-fit inside the paper. The drawing was made on a canvas of a different
+        // shape from this one, and stretching it would bend every line drawn straight.
+        val inset = 18f * scale
+        val box = RectF(
+            scaledPaper.left + inset, scaledPaper.top + inset,
+            scaledPaper.right - inset, scaledPaper.bottom - inset,
+        )
+        val ratio = minOf(box.width() / drawing.width, box.height() / drawing.height)
+        val w = drawing.width * ratio
+        val hgt = drawing.height * ratio
+        val dst = RectF(
+            box.centerX() - w / 2f, box.centerY() - hgt / 2f,
+            box.centerX() + w / 2f, box.centerY() + hgt / 2f,
+        )
+        canvas.drawBitmap(drawing, null, dst, Paint(Paint.FILTER_BITMAP_FLAG))
+    }
+
     // MARK: - Render
 
     fun render(): Bitmap {
@@ -110,9 +155,16 @@ class RoundShareCardRenderer(
         shadowText(canvas, "ALIAS", RectF(20f, aliasY, 370f, aliasY + 60f), wordmarkSize)
         shadowText(canvas, "WORDS", RectF(20f, wordsY, 370f, wordsY + 60f), wordmarkSize)
 
-        when (val h = header) {
+        val h = header
+        if (h is RoundShareHeader.Drawing && h.image != null) {
+            drawnRound(canvas, h.image, h.word)
+            return bitmap
+        }
+        when (h) {
             is RoundShareHeader.Team -> teamCard(canvas)
             is RoundShareHeader.Mascot -> mascotDisc(canvas, h.image, h.tint)
+            // A drawing round with nothing drawn: fall through to the score card.
+            is RoundShareHeader.Drawing -> teamCard(canvas)
         }
 
         statCard(

@@ -43,7 +43,11 @@ class ResultsActivity : BaseActivity() {
                         onStart = { startNextRound() },
                         onFinish = { showWinner() },
                         onQuit = { quitToHome() },
-                        captureMomentAvailable = DualCameraSupport.isSupported(this),
+                        // Nothing about a drawing round is worth filming — the phone is
+                        // the page, and the front lens would spend the round looking at
+                        // whoever is holding it. Read off the round rather than the deck:
+                        // the results screen is only handed the Game.
+                        captureMomentAvailable = !game.isDrawGuess && DualCameraSupport.isSupported(this),
                         captureMoment = captureMoment,
                         onCaptureMomentChange = { captureMoment = it },
                     )

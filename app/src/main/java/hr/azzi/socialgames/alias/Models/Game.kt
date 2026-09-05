@@ -23,6 +23,8 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
            var currentTeamMarkedWords: ArrayList<MarkedWord> = ArrayList(),
            /** True on decks whose words carry their own value — see [newWord]. */
            private var _isScored: Boolean = false,
+           /** One word a round, drawn rather than described. See PlayScreen. */
+           private var _isDrawGuess: Boolean = false,
            /**
             * The deck as it was handed over. [_words] is dealt from and never refilled, so a
             * long game on a small deck — Junior is 235 words — empties it and the next draw
@@ -49,9 +51,19 @@ class Game(private var _reverseExplaingAnsweringDirection: Boolean,
     val isScored: Boolean
         get() = _isScored
 
+    /** One word a round, drawn rather than described. */
+    val isDrawGuess: Boolean
+        get() = _isDrawGuess
+
     val currentRoundScore: Int
         get() {
-            return currentCorrectPoints - currentSkipAnswers
+            // A miss only costs a point on the decks that deduct for one. Every talking
+            // deck does, and has to: the pile is deep, and without a cost the fastest
+            // strategy is to skip everything hard. Draw & Guess has nothing to burn
+            // through — the round is one word — so a miss is worth nothing rather than
+            // worth less than nothing.
+            val penalty = if (_isDrawGuess) 0 else currentSkipAnswers
+            return currentCorrectPoints - penalty
         }
 
     /**

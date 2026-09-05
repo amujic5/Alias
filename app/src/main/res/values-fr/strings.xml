@@ -459,4 +459,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="lang_dut">Néerlandais</string>
     <string name="lang_rus">Russe</string>
     <string name="lang_swe">Suédois</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NOUVEAU</string>
+    <string name="game_draw_guess">Dessine et devine</string>
+    <string name="game_draw_guess_info">Regarde le mot et dessine-le directement sur ton téléphone, sans papier ni crayon. Interdit de parler, d\'écrire des lettres ou des chiffres, ou de mimer. Amuse-toi avec les outils de dessin, cours contre la montre et vois si ton dessin est assez bon pour être deviné à temps. À la fin de la manche, tu peux enregistrer ton chef-d\'œuvre et le partager pour que tout le monde le voie.</string>
+    <string name="draw_guess_you_draw">C\'est toi qui dessines</string>
+    <string name="draw_guess_hint_partner">Seul %1$s devine. Lance quand tu es prêt : le mot disparaît.</string>
+    <string name="draw_guess_was_it_guessed">Alors, trouvé ?</string>
+    <string name="draw_guess_times_up">Temps écoulé ! Voyons voir.</string>
+    <string name="draw_guess_the_word_was">Le mot était</string>
+    <string name="draw_guess_guessed">TROUVÉ</string>
+    <string name="draw_guess_not_guessed">PAS TROUVÉ</string>
 </resources>

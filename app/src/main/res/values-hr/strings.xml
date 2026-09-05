@@ -473,4 +473,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="lang_dut">Nizozemski</string>
     <string name="lang_rus">Ruski</string>
     <string name="lang_swe">Švedski</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NOVO</string>
+    <string name="game_draw_guess">Crtaj i pogodi</string>
+    <string name="game_draw_guess_info">Pogledaj riječ i nacrtaj je ravno na mobitelu — bez olovke i papira. Bez pričanja, slova, brojeva i pantomime. Poigraj se alatima za crtanje, utrkuj se sa satom i vidi je li tvoj crtež dovoljno dobar da ga pogode na vrijeme. Kad runda završi, svoje remek-djelo možeš spremiti i podijeliti da ga svi vide.</string>
+    <string name="draw_guess_you_draw">Ti crtaš</string>
+    <string name="draw_guess_hint_partner">Pogađa samo %1$s. Kreni kad si spreman — riječ tada nestaje.</string>
+    <string name="draw_guess_was_it_guessed">Je li pogođeno?</string>
+    <string name="draw_guess_times_up">Vrijeme je isteklo! Da vidimo.</string>
+    <string name="draw_guess_the_word_was">Riječ je bila</string>
+    <string name="draw_guess_guessed">POGOĐENO</string>
+    <string name="draw_guess_not_guessed">NIJE POGOĐENO</string>
 </resources>

@@ -473,4 +473,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="lang_dut">Dutch</string>
     <string name="lang_rus">Russian</string>
     <string name="lang_swe">Swedish</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NEW</string>
+    <string name="game_draw_guess">Draw &amp; Guess</string>
+    <string name="game_draw_guess_info">See the word and draw it right on your phone — no pen or paper needed. No talking, letters, numbers, or miming. Get creative with the drawing tools, race against the clock, and see if your drawing is good enough to be guessed in time. When the round is over, you can save and share your masterpiece for everyone to see.</string>
+    <string name="draw_guess_you_draw">You draw</string>
+    <string name="draw_guess_hint_partner">Only %1$s guesses. Start when you\'re ready — the word disappears.</string>
+    <string name="draw_guess_was_it_guessed">Was it guessed?</string>
+    <string name="draw_guess_times_up">Time\'s up! Let\'s find out.</string>
+    <string name="draw_guess_the_word_was">The word was</string>
+    <string name="draw_guess_guessed">GUESSED</string>
+    <string name="draw_guess_not_guessed">NOT GUESSED</string>
 </resources>

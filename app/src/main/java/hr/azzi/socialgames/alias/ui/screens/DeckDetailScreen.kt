@@ -40,6 +40,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.Billing
+import hr.azzi.socialgames.alias.Service.FreeTryStore
 import hr.azzi.socialgames.alias.Service.BoardGame
 import hr.azzi.socialgames.alias.Service.serializedName
 import hr.azzi.socialgames.alias.ui.theme.Alias
@@ -66,7 +67,7 @@ fun DeckDetailScreen(
     val unlockedIds by Billing.unlocked.collectAsState()
     val prices by Billing.prices.collectAsState()
 
-    val productId = deck.id.serializedName()
+    val productId = deck.productId
     val unlocked = deck.free || unlockedIds.contains(productId)
     val price = prices[productId]
 
@@ -128,7 +129,9 @@ fun DeckDetailScreen(
                     Spacer(Modifier.height(12.dp))
                     // "Try for free": watch a rewarded ad, then play this session. Off for
                     // decks that are bought rather than sampled.
-                    if (deck.allowsFreeTry) {
+                    // One per deck, ever: once spent it is recorded and the button is
+                    // gone for good — see FreeTryStore.
+                    if (deck.allowsFreeTry && !FreeTryStore.hasUsedFreeTry(ctx, productId)) {
                         PillButton(stringResource(R.string.try_for_free), kind = PillKind.Light, onClick = onTryFree)
                         Spacer(Modifier.height(12.dp))
                     }

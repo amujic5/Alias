@@ -459,4 +459,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="lang_dut">Niederländisch</string>
     <string name="lang_rus">Russisch</string>
     <string name="lang_swe">Schwedisch</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NEU</string>
+    <string name="game_draw_guess">Malen &amp; Raten</string>
+    <string name="game_draw_guess_info">Sieh dir das Wort an und zeichne es direkt auf dem Handy — ganz ohne Stift und Papier. Kein Reden, keine Buchstaben, keine Zahlen, keine Pantomime. Spiel mit den Zeichenwerkzeugen, kämpfe gegen die Uhr und finde heraus, ob deine Zeichnung gut genug ist, um rechtzeitig erraten zu werden. Nach der Runde kannst du dein Meisterwerk speichern und mit allen teilen.</string>
+    <string name="draw_guess_you_draw">Du zeichnest</string>
+    <string name="draw_guess_hint_partner">Nur %1$s rät. Starte, wenn du bereit bist — dann verschwindet das Wort.</string>
+    <string name="draw_guess_was_it_guessed">Wurde es erraten?</string>
+    <string name="draw_guess_times_up">Zeit abgelaufen! Mal sehen.</string>
+    <string name="draw_guess_the_word_was">Das Wort war</string>
+    <string name="draw_guess_guessed">ERRATEN</string>
+    <string name="draw_guess_not_guessed">NICHT ERRATEN</string>
 </resources>

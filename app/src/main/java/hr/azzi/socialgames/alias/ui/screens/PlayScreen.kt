@@ -28,6 +28,7 @@ import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.automirrored.filled.ArrowForward
 import androidx.compose.material.icons.filled.Check
+import androidx.compose.material.icons.filled.Close
 import androidx.compose.material.icons.filled.Pause
 import androidx.compose.material.icons.filled.PlayArrow
 import androidx.compose.material3.AlertDialog
@@ -113,6 +114,16 @@ fun PlayScreen(
     // flipping it there would cancel the coroutine before it reaches onFinished().
     var finishing by remember { mutableStateOf(false) }
     var showSheet by remember { mutableStateOf(true) }
+    // Draw & Guess: one word a round, drawn instead of described. The page is held here
+    // so the screen can lock it when the whistle blows and hand it to the share card.
+    val isDraw = game.isDrawGuess
+    val drawState = rememberDrawGuessState()
+    // The verdict card is only ever raised by the clock. A drawing is guessed out loud in
+    // the room, so the phone has no idea whether the table got there — it asks.
+    var showVerdict by remember { mutableStateOf(false) }
+    // True from the first press of start. The word is shown before that and never again:
+    // the table is looking at the same screen.
+    var drawStarted by remember { mutableStateOf(false) }
     var showQuit by remember { mutableStateOf(false) }
 
     LaunchedEffect(running) {
@@ -126,7 +137,9 @@ fun PlayScreen(
         // timeLeft == 0 — DON'T flip `running` here: it keys this LaunchedEffect,
         // so changing it would cancel this coroutine before onFinished() runs.
         finishing = true
+        drawState.frozen = true
         soundSystem.playEnd()
+        if (isDraw) return@LaunchedEffect      // the verdict card takes it from here
         delay(800)
         onFinished()
     }
@@ -136,6 +149,27 @@ fun PlayScreen(
     // Taboo decks pack extra data into the raw word, and the card shows the clean one.
     LaunchedEffect(displayWord, correctPoints, skip, timeLeft) {
         onRoundState(displayWord, correctPoints, skip, timeLeft)
+    }
+
+    // The clock has run out on a drawing round: freeze the page and ask the table.
+    LaunchedEffect(finishing) {
+        if (finishing && isDraw && !showVerdict) showVerdict = true
+    }
+
+    /** Marks the one word this round was about and hands over to the results screen. */
+    fun finishDrawRound(guessed: Boolean) {
+        if (!isDraw) return
+        game.addMarkedWord(MarkedWord(displayWord, guessed, 1))
+        if (guessed) correctPoints += 1 else skip++
+        if (guessed) soundSystem.playRightButton() else soundSystem.playSkipButton()
+        finishing = true
+        drawState.frozen = true
+        showVerdict = false
+        // Taken before the screen goes: the canvas belongs to this composition and is a
+        // moment from being torn down.
+        DrawGuessRound.drawing = drawState.toBitmap(drawState.canvasWidth, drawState.canvasHeight)
+        DrawGuessRound.word = displayWord
+        onFinished()
     }
 
     fun pauseAndShow() {
@@ -181,7 +215,14 @@ fun PlayScreen(
 
             // Center: faded countdown + word (or Junior picture card / Taboo forbidden-words card)
             Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
-                if (cameraMode) {
+                if (isDraw) {
+                    // Tighter padding than the talking decks use: every point given back
+                    // here goes to the page.
+                    DrawGuessCanvas(
+                        drawState,
+                        Modifier.fillMaxSize().padding(horizontal = 16.dp, vertical = 10.dp),
+                    )
+                } else if (cameraMode) {
                     Box(Modifier.fillMaxSize().padding(horizontal = 6.dp, vertical = 8.dp)) {
                         // The word is on the stage's own plate here, not on the screen behind
                         // it — the explainer is looking at the camera, not at the page.
@@ -255,6 +296,24 @@ fun PlayScreen(
                         color = if (taboo != null) Color.White else Alias.textSecondary,
                         fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 17.sp)
                 }
+            } else if (isDraw) {
+                // Shorter than on the talking decks — there they are the whole interface,
+                // here they are two taps at the end of a round.
+                Row(
+                    Modifier.fillMaxWidth().padding(horizontal = 16.dp, vertical = 10.dp),
+                    horizontalArrangement = Arrangement.spacedBy(14.dp),
+                ) {
+                    ActionButton(stringResource(R.string.draw_guess_not_guessed), Icons.Filled.Close,
+                        Alias.danger, Modifier.weight(1f).height(58.dp), enabled = running && !finishing) {
+                        if (!running || finishing) return@ActionButton
+                        finishDrawRound(false)
+                    }
+                    ActionButton(stringResource(R.string.draw_guess_guessed), Icons.Filled.Check,
+                        Alias.success, Modifier.weight(1f).height(58.dp), enabled = running && !finishing) {
+                        if (!running || finishing) return@ActionButton
+                        finishDrawRound(true)
+                    }
+                }
             } else {
                 Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(14.dp)) {
                     ActionButton(stringResource(R.string.skip), Icons.AutoMirrored.Filled.ArrowForward, Alias.danger,
@@ -283,10 +342,20 @@ fun PlayScreen(
                 answering = game.answeringPlayerName,
                 correct = correctPoints,
                 skip = skip,
-                onResume = { showSheet = false; running = true },
+                // Only before the round has ever run. Pausing halfway through must not put
+                // the word back up in front of everyone guessing it.
+                drawWord = if (isDraw && !drawStarted) displayWord else null,
+                onResume = { showSheet = false; running = true; drawStarted = true },
                 onStop = { showSheet = false; showQuit = true },
             )
         }
+    }
+
+    if (showVerdict) {
+        DrawGuessVerdictDialog(
+            word = displayWord,
+            onVerdict = { guessed -> finishDrawRound(guessed) },
+        )
     }
 
     if (showQuit) {
@@ -318,7 +387,10 @@ private fun ActionButton(label: String, icon: androidx.compose.ui.graphics.vecto
 @Composable
 private fun PauseSheet(
     teamName: String, explaining: String, answering: String,
-    correct: Int, skip: Int, onResume: () -> Unit, onStop: () -> Unit,
+    correct: Int, skip: Int,
+    /** Draw & Guess only, and only before the round starts: the word to draw. */
+    drawWord: String? = null,
+    onResume: () -> Unit, onStop: () -> Unit,
 ) {
     Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.45f)).clickable(enabled = false) {}) {
         Column(
@@ -350,6 +422,24 @@ private fun PauseSheet(
             Row(Modifier.fillMaxWidth()) {
                 PlayerColumn(stringResource(R.string.explaining), explaining, Modifier.weight(1f))
                 PlayerColumn(stringResource(R.string.answering), answering, Modifier.weight(1f))
+            }
+            if (drawWord != null) {
+                Spacer(Modifier.height(14.dp))
+                Box(Modifier.fillMaxWidth().height(1.dp).background(Alias.divider))
+                Spacer(Modifier.height(14.dp))
+                Text(stringResource(R.string.draw_guess_you_draw).uppercase(),
+                    color = Alias.textSecondary, fontFamily = Alias.body,
+                    fontWeight = FontWeight.Bold, fontSize = 11.sp)
+                Text(drawWord, color = Alias.textPrimary, fontFamily = Alias.display,
+                    fontWeight = FontWeight.ExtraBold, fontSize = 34.sp, maxLines = 1)
+                // Named, not "everyone else": this game is played in teams and only the
+                // partner is guessing. It is the difference between a table shouting over
+                // each other and one person being on the hook.
+                if (answering.isNotBlank()) {
+                    Spacer(Modifier.height(4.dp))
+                    Text(stringResource(R.string.draw_guess_hint_partner, answering),
+                        color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+                }
             }
         }
     }

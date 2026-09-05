@@ -64,6 +64,49 @@ data class BoardGame(
      * Decks whose words carry their own value, written as a `-1`/`-2`/`-3` suffix that
      * never reaches the screen. Everything else scores a flat point per word.
      */
+    /**
+     * One word is drawn on the phone and everyone else calls out guesses. The round is
+     * that one word, so there is no skipping to the next — see PlayScreen.
+     */
+    val isDrawGuess: Boolean
+        get() = id == BoardGameId.DRAW_GUESS
+
+    /**
+     * Whether a word that was not guessed costs the team a point.
+     *
+     * Every talking deck takes one back for a skip, and it has to: the pile is deep, and
+     * without a cost the fastest strategy is to skip everything hard. Draw & Guess has
+     * nothing to burn through — the round is one word, drawn once — so a miss is worth
+     * nothing rather than worth less than nothing.
+     */
+    val deductsForMisses: Boolean
+        get() = id != BoardGameId.DRAW_GUESS
+
+    /**
+     * The Play Store product that unlocks this deck.
+     *
+     * Every other paid deck is sold under its own id, so that is the default. Draw &
+     * Guess is the exception: the product was set up as `draw_and_guess` while the deck
+     * is `game_draw_guess`, and a product id cannot be renamed once the store has seen
+     * it. Better one mapping here than a rename rippling through the deck files.
+     */
+    val productId: String
+        get() = if (id == BoardGameId.DRAW_GUESS) "draw_and_guess" else id.serializedName()
+
+    /**
+     * Whether the deck is called out as new on the Choose a Game grid. Listed by hand,
+     * and meant to be: "new" is a marketing decision with an expiry date, and nothing in
+     * the data can tell when it stops being true. Its counterpart, the PREMIUM badge, is
+     * derived from `free` instead — that one is a fact.
+     */
+    val isNew: Boolean
+        get() = id == BoardGameId.DRAW_GUESS || id == BoardGameId.EASY_MEDIUM_HARD
+
+    /** The goal score this deck is played to. One word a round scores far slower than a
+     *  deck you can burn through, so it is counted in single figures. */
+    val goalScoreRange: IntRange
+        get() = if (id == BoardGameId.DRAW_GUESS) 5..20 else 40..120
+
     val isScored: Boolean
         get() = id == BoardGameId.EASY_MEDIUM_HARD
 
@@ -73,7 +116,12 @@ data class BoardGame(
      * a word being worth three points.
      */
     val isLocalOnly: Boolean
-        get() = id == BoardGameId.EASY_MEDIUM_HARD
+        get() = id == BoardGameId.EASY_MEDIUM_HARD || id == BoardGameId.DRAW_GUESS
+
+    /** Nothing about a drawing round is worth filming, and the front camera would spend
+     *  it looking at whoever is holding the phone. */
+    val allowsDualCamera: Boolean
+        get() = id != BoardGameId.DRAW_GUESS
 
     /**
      * Whether a locked deck can be opened for one session by watching a rewarded video.
@@ -154,7 +202,9 @@ enum class BoardGameId {
     @SerializedName("game_alias_ita")
     ITA,
     @SerializedName("game_alias_fra")
-    FRA
+    FRA,
+    @SerializedName("game_draw_guess")
+    DRAW_GUESS
 }
 
 fun BoardGameId.serializedName(): String {

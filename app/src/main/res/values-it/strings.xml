@@ -458,4 +458,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="lang_dut">Olandese</string>
     <string name="lang_rus">Russo</string>
     <string name="lang_swe">Svedese</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NUOVO</string>
+    <string name="game_draw_guess">Disegna e indovina</string>
+    <string name="game_draw_guess_info">Guarda la parola e disegnala direttamente sul telefono, senza carta né penna. Niente parole, lettere, numeri o mimo. Divertiti con gli strumenti di disegno, corri contro il tempo e scopri se il tuo disegno è abbastanza buono da farla indovinare in tempo. Alla fine del round puoi salvare e condividere il tuo capolavoro perché lo vedano tutti.</string>
+    <string name="draw_guess_you_draw">Disegni tu</string>
+    <string name="draw_guess_hint_partner">Indovina solo %1$s. Comincia quando sei pronto: la parola sparisce.</string>
+    <string name="draw_guess_was_it_guessed">L\'hanno indovinata?</string>
+    <string name="draw_guess_times_up">Tempo scaduto! Vediamo.</string>
+    <string name="draw_guess_the_word_was">La parola era</string>
+    <string name="draw_guess_guessed">INDOVINATA</string>
+    <string name="draw_guess_not_guessed">NON INDOVINATA</string>
 </resources>

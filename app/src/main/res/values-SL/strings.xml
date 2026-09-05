@@ -466,4 +466,15 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="lang_dut">Nizozemščina</string>
     <string name="lang_rus">Ruščina</string>
     <string name="lang_swe">Švedščina</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NOVO</string>
+    <string name="game_draw_guess">Riši in ugibaj</string>
+    <string name="game_draw_guess_info">Poglej besedo in jo nariši kar na telefonu — brez svinčnika in papirja. Brez govorjenja, črk, številk in pantomime. Poigraj se z orodji za risanje, tekmuj s časom in poglej, ali je tvoja risba dovolj dobra, da jo pravočasno uganejo. Ko je runda končana, lahko svojo mojstrovino shraniš in deliš, da jo vidijo vsi.</string>
+    <string name="draw_guess_you_draw">Ti rišeš</string>
+    <string name="draw_guess_hint_partner">Ugiba samo %1$s. Začni, ko si pripravljen — beseda takrat izgine.</string>
+    <string name="draw_guess_was_it_guessed">So uganili?</string>
+    <string name="draw_guess_times_up">Čas je potekel! Poglejmo.</string>
+    <string name="draw_guess_the_word_was">Beseda je bila</string>
+    <string name="draw_guess_guessed">UGANO</string>
+    <string name="draw_guess_not_guessed">NI UGANO</string>
 </resources>

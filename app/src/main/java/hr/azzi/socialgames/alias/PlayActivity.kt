@@ -107,6 +107,9 @@ class PlayActivity : BaseActivity() {
      * permission was declined, the round is played exactly as it would have been.
      */
     private fun startRecordingIfAsked() {
+        // Belt and braces with Settings, which does not offer the row on this deck: an
+        // Intent carried over from an earlier round must not start a camera here.
+        if (game.isDrawGuess) return
         if (!captureMoment) return
         val granted = ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) ==
             PackageManager.PERMISSION_GRANTED

@@ -84,14 +84,19 @@ fun SettingsScreen(
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("gameSettings", android.content.Context.MODE_PRIVATE) }
     var time by remember { mutableIntStateOf(60) }    // range 20..80
-    var score by remember { mutableIntStateOf(100) }  // range 40..120
+    // The goal score is counted in whatever units the deck scores in. A talking round can
+    // bank a dozen words, a drawing round banks one — so Draw & Guess plays to 5..20 and
+    // starts in the middle of that, where every other deck plays to 40..120.
+    val scoreRange = remember(boardGame) { boardGame.goalScoreRange }
+    var score by remember { mutableIntStateOf(if (boardGame.isDrawGuess) 10 else 100) }
     var selected by remember { mutableIntStateOf(preferredDictionaryIndex(dictionaries, prefs.getString("selectedLanguageCode", null))) }
     var showPicker by remember { mutableStateOf(false) }
 
     // Capture Moment needs two cameras at once, and the word cards in Junior and Taboo
     // leave no room for the camera stage — so those two never offer it.
     val captureMomentAvailable = remember {
-        !boardGame.isTaboo && !boardGame.isAliasJunior && DualCameraSupport.isSupported(context)
+        !boardGame.isTaboo && !boardGame.isAliasJunior && boardGame.allowsDualCamera &&
+            DualCameraSupport.isSupported(context)
     }
     var captureMoment by remember { mutableStateOf(false) }
     var showDualCamSheet by remember { mutableStateOf(false) }
@@ -145,7 +150,8 @@ fun SettingsScreen(
             ) {
                 if (teams.isNotEmpty()) VsPill(teams.filter { it.playing }.map { it.teamName })
 
-                SettingSlider(stringResource(R.string.score_settings).uppercase(), score, 40, 120) { score = it }
+                SettingSlider(stringResource(R.string.score_settings).uppercase(),
+                    score, scoreRange.first, scoreRange.last) { score = it }
                 SettingSlider(stringResource(R.string.time_limit_seconds).uppercase(), time, 20, 80) { time = it }
 
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {

@@ -40,6 +40,8 @@ import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
+import hr.azzi.socialgames.alias.Service.RoundVideo.ROUND_SHARE_FILE
+import hr.azzi.socialgames.alias.Service.RoundVideo.RoundShareHeader
 import hr.azzi.socialgames.alias.Service.RoundVideo.shareRoundImage
 import hr.azzi.socialgames.alias.Service.RoundVideo.writeRoundShareImage
 import hr.azzi.socialgames.alias.ui.theme.Alias
@@ -140,7 +142,17 @@ fun ResultsScreen(
                                         sharing = true
                                         Analytics.log(context, Analytics.ROUND_RESULT_SHARED)
                                         scope.launch {
-                                            writeRoundShareImage(context, info)
+                                            // A drawing round shares the drawing itself
+                                            // under the word; every other deck shares the
+                                            // score tiles and the two word lists.
+                                            val drawing = DrawGuessRound.drawing
+                                            val word = DrawGuessRound.word
+                                            val header = if (drawing != null && word != null)
+                                                RoundShareHeader.Drawing(drawing, word)
+                                            else RoundShareHeader.Team
+                                            val name = if (drawing != null)
+                                                "alias-words-drawing.png" else ROUND_SHARE_FILE
+                                            writeRoundShareImage(context, info, header, name)
                                                 ?.let { shareRoundImage(context, it) }
                                             sharing = false
                                         }

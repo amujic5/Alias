@@ -27,7 +27,8 @@ import kotlinx.coroutines.launch
 
 /**
  * Google Play Billing for the paid decks. Mirrors the iOS IAPStore logic:
- * a deck is unlocked when `deck.free || Billing.isUnlocked(deck.id.serializedName())`.
+ * a deck is unlocked when `deck.free || Billing.isUnlocked(deck.productId)`. Not the deck
+ * id: Draw & Guess is sold as `draw_and_guess` while the deck is `game_draw_guess`.
  *
  * Product IDs MUST match the managed (one-time) products created in the Play Console,
  * and are intentionally the same strings as the iOS product IDs.
@@ -37,7 +38,12 @@ object Billing {
     private const val TAG = "Billing"
 
     /** Managed one-time product IDs — same as the paid deck ids / iOS products. */
-    val productIds = listOf("alias_nba", "alias_movies", "game_alias_who_am_i", "easy_medium_hard", NoAds.PRODUCT_ID)
+    val productIds = listOf(
+        "alias_nba", "alias_movies", "game_alias_who_am_i", "easy_medium_hard",
+        // Draw & Guess. Deliberately not "game_draw_guess" — see BoardGame.productId.
+        "draw_and_guess",
+        NoAds.PRODUCT_ID,
+    )
 
     /**
      * Products a debug build treats as owned, so a deck can be played before its product is

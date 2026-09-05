@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The PREMIUM badge's glyph. Drawn rather than taken from Material Icons: the set has
+     no crown, and the nearest stand-ins (a rosette, a star) say something else. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="12dp"
+    android:height="12dp"
+    android:viewportWidth="12"
+    android:viewportHeight="12">
+    <path
+        android:fillColor="#5B4200"
+        android:pathData="M1.4,3.2l1.9,2 2.7,-3.1 2.7,3.1 1.9,-2 -0.8,6H2.2l-0.8,-6z" />
+</vector>

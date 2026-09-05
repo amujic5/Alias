@@ -4,7 +4,7 @@ import android.content.Intent
 import android.os.Bundle
 import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.BoardGame
-import hr.azzi.socialgames.alias.Service.serializedName
+import hr.azzi.socialgames.alias.Service.FreeTryStore
 import hr.azzi.socialgames.alias.ui.screens.DeckDetailScreen
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
@@ -13,10 +13,15 @@ class DeckDetailActivity : BaseActivity() {
 
     private val boardGame: BoardGame by lazy { intent.getParcelableExtra("boardGame")!! }
 
+    /** Whether the ad-gated try is still on the table: the deck allows one at all, and
+     *  this install has not already taken it. */
+    private fun canTryFree(): Boolean =
+        boardGame.allowsFreeTry && !FreeTryStore.hasUsedFreeTry(this, boardGame.productId)
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         // Warm up a rewarded ad for the "Try for free" path on locked paid decks.
-        if (!boardGame.free && boardGame.allowsFreeTry && !Billing.isUnlocked(boardGame.id.serializedName())) {
+        if (!boardGame.free && canTryFree() && !Billing.isUnlocked(boardGame.productId)) {
             TryFreeAd.preload(this)
         }
         val launchGame = {
@@ -30,9 +35,17 @@ class DeckDetailActivity : BaseActivity() {
                     deck = boardGame,
                     onBack = { finish() },
                     onPlay = { launchGame() },
-                    onBuy = { Billing.launchPurchase(this, boardGame.id.serializedName()) },
+                    onBuy = { Billing.launchPurchase(this, boardGame.productId) },
                     // Watch the rewarded ad, then drop into the game for this session.
-                    onTryFree = { TryFreeAd.show(this) { launchGame() } },
+                    // The try is recorded before the game starts, not after: the player
+                    // has watched the ad and earned the round, and an app killed on the
+                    // way in must not owe them another one.
+                    onTryFree = {
+                        TryFreeAd.show(this) {
+                            FreeTryStore.markFreeTryUsed(this, boardGame.productId)
+                            launchGame()
+                        }
+                    },
                 )
             }
         }

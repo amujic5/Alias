@@ -458,4 +458,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="lang_dut">Neerlandés</string>
     <string name="lang_rus">Ruso</string>
     <string name="lang_swe">Sueco</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NUEVO</string>
+    <string name="game_draw_guess">Dibuja y adivina</string>
+    <string name="game_draw_guess_info">Mira la palabra y dibújala directamente en el móvil, sin lápiz ni papel. Nada de hablar, ni letras, ni números, ni mímica. Juega con las herramientas de dibujo, corre contra el reloj y descubre si tu dibujo es lo bastante bueno para que lo adivinen a tiempo. Cuando termine la ronda, puedes guardar y compartir tu obra maestra para que la vea todo el mundo.</string>
+    <string name="draw_guess_you_draw">Dibujas tú</string>
+    <string name="draw_guess_hint_partner">Solo adivina %1$s. Empieza cuando estés listo: la palabra desaparece.</string>
+    <string name="draw_guess_was_it_guessed">¿La adivinaron?</string>
+    <string name="draw_guess_times_up">¡Se acabó el tiempo! Vamos a ver.</string>
+    <string name="draw_guess_the_word_was">La palabra era</string>
+    <string name="draw_guess_guessed">ADIVINADA</string>
+    <string name="draw_guess_not_guessed">NO ADIVINADA</string>
 </resources>

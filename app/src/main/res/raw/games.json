@@ -46,23 +46,25 @@
             "free": false
         },
         {
-            "id": "game_alias_football",
-            "name": "alias_football",
-            "image": "game_football",
+            "id": "game_draw_guess",
+            "name": "game_draw_guess",
+            "image": "game_draw_guess",
             "languages": [
-                "Cro",
                 "Eng",
-                "Ger",
-                "Slo",
-                "Srb",
+                "Cro",
                 "Bos",
-                "Esp"
+                "Srb",
+                "Slo",
+                "Ger",
+                "Esp",
+                "Ita",
+                "Fra"
             ],
-            "info": "alias_football_info",
-            "age": "10+",
-            "time": "45min",
-            "players": "3+",
-            "free": true
+            "info": "game_draw_guess_info",
+            "age": "6+",
+            "time": "30min",
+            "players": "4+",
+            "free": false
         },
         {
             "id": "game_alias_cro",
@@ -176,6 +178,25 @@
                 "Eng"
             ],
             "info": "game_alias_uk_info",
+            "age": "10+",
+            "time": "45min",
+            "players": "3+",
+            "free": true
+        },
+        {
+            "id": "game_alias_football",
+            "name": "alias_football",
+            "image": "game_football",
+            "languages": [
+                "Cro",
+                "Eng",
+                "Ger",
+                "Slo",
+                "Srb",
+                "Bos",
+                "Esp"
+            ],
+            "info": "alias_football_info",
             "age": "10+",
             "time": "45min",
             "players": "3+",

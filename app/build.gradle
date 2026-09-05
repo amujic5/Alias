@@ -57,13 +57,16 @@ android {
 }
 
 dependencies {
-    implementation platform('com.google.firebase:firebase-bom:34.15.0')
+    implementation platform('com.google.firebase:firebase-bom:34.18.0')
 
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 
     // Jetpack Compose (UI rebuild)
-    implementation platform('androidx.compose:compose-bom:2025.08.00')
+    // Held one release back on purpose: 2026.08.00 ships Compose 1.12, which requires
+    // compileSdk 37, and AGP 8.11.1 recommends 36 as its maximum. Moving past this means
+    // moving the toolchain first.
+    implementation platform('androidx.compose:compose-bom:2026.06.01')
     implementation 'androidx.compose.ui:ui'
     implementation 'androidx.compose.ui:ui-graphics'
     implementation 'androidx.compose.ui:ui-tooling-preview'
@@ -71,11 +74,11 @@ dependencies {
     implementation 'androidx.compose.material3:material3'
     implementation 'androidx.compose.material:material-icons-extended'
     implementation 'androidx.compose.foundation:foundation'
-    implementation 'androidx.activity:activity-compose:1.11.0'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.9.4'
-    implementation 'androidx.appcompat:appcompat:1.7.1'
-    implementation 'androidx.core:core-ktx:1.15.0'
-    implementation 'androidx.constraintlayout:constraintlayout:2.2.0'
+    implementation 'androidx.activity:activity-compose:1.13.0'
+    implementation 'androidx.lifecycle:lifecycle-viewmodel-compose:2.10.0'
+    implementation 'androidx.appcompat:appcompat:1.8.0'
+    implementation 'androidx.core:core-ktx:1.17.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.2.2'
     implementation 'androidx.recyclerview:recyclerview:1.4.0'
     implementation 'androidx.cardview:cardview:1.0.0'
     implementation 'com.google.android.material:material:1.14.0'
@@ -100,27 +103,33 @@ dependencies {
     implementation 'com.google.android.play:app-update-ktx:2.1.0'
 
     // Google Play Billing (paid decks — one-time products)
-    implementation 'com.android.billingclient:billing-ktx:7.1.1'
+    implementation 'com.android.billingclient:billing-ktx:9.1.0'
 
     implementation 'com.google.android.gms:play-services-ads:25.4.0'
+    // Unity Ads as a bidding demand source inside AdMob mediation. Unlike the iOS pod,
+    // the Android adapter does NOT pull the Unity SDK with it — Google's guide has both
+    // declared explicitly, and the pair has to move together. AdMob keeps loading and
+    // showing every ad; nothing here calls Unity's own API.
+    implementation 'com.unity3d.ads:unity-ads:4.20.0'
+    implementation 'com.google.ads.mediation:unity:4.20.0.1'
     // User Messaging Platform — GDPR/UMP consent before requesting ads (EEA/UK)
-    implementation 'com.google.android.ump:user-messaging-platform:3.2.0'
+    implementation 'com.google.android.ump:user-messaging-platform:4.0.0'
     // Google Play In-App Review (rating prompt after an AI game)
     implementation 'com.google.android.play:review-ktx:2.0.2'
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-play-services:1.11.0'
     // Stream Video (Online Play realtime video/audio)
-    implementation 'io.getstream:stream-video-android-ui-compose:1.28.0'
+    implementation 'io.getstream:stream-video-android-ui-compose:1.32.0'
     implementation 'com.google.firebase:firebase-functions'
-    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.26.0'
+    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.29.0'
     implementation 'androidx.multidex:multidex:2.0.1'
     implementation 'com.google.code.gson:gson:2.14.0'
-    implementation 'com.google.guava:guava:33.6.0-android'
+    implementation 'com.google.guava:guava:33.7.1-android'
 
     // Rive — animated AI bot avatar (.riv files in res/raw). Auto-initialises via
     // androidx.startup. 11.x ships 16 KB-page-aligned native libs (required by
     // Google Play for Android 15+ targets).
-    implementation 'app.rive:rive-android:11.7.1'
-    implementation 'androidx.startup:startup-runtime:1.1.1'
+    implementation 'app.rive:rive-android:11.12.0'
+    implementation 'androidx.startup:startup-runtime:1.2.0'
 }
 
 apply plugin: 'com.google.gms.google-services'

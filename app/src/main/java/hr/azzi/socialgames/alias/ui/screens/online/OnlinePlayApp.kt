@@ -52,6 +52,7 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 import com.firebase.ui.auth.AuthUI
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.Service.FreeTryStore
 import hr.azzi.socialgames.alias.TryFreeAd
 import hr.azzi.socialgames.alias.Service.Billing
 import hr.azzi.socialgames.alias.Service.BoardGame
@@ -252,12 +253,12 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
             label = { deckDisplayName(context, it) },
             imageName = { it.image },
             badge = { d ->
-                if (!d.free && !unlockedIds.contains(d.id.serializedName()))
-                    prices[d.id.serializedName()] ?: unlockLabel
+                if (!d.free && !unlockedIds.contains(d.productId))
+                    prices[d.productId] ?: unlockLabel
                 else null
             },
             onPick = { picked ->
-                val pid = picked.id.serializedName()
+                val pid = picked.productId
                 if (!picked.free && !unlockedIds.contains(pid)) {
                     // Locked paid deck — let the user choose: buy, or watch an ad to try it free.
                     choiceDeck = picked
@@ -268,7 +269,7 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
             onBack = { showDeckPicker = false },
         )
         choiceDeck?.let { d ->
-            val pid = d.id.serializedName()
+            val pid = d.productId
             AlertDialog(
                 onDismissRequest = { choiceDeck = null },
                 title = { Text(deckDisplayName(context, d)) },
@@ -279,12 +280,21 @@ private fun OnlineCreateScreen(store: OnlineStore, onBack: () -> Unit) {
                     }) { Text(stringResource(R.string.online_unlock_for, prices[pid] ?: "—")) }
                 },
                 dismissButton = {
-                    TextButton(onClick = {
-                        choiceDeck = null
-                        activity?.let { act ->
-                            TryFreeAd.show(act) { deck = d; showDeckPicker = false }
-                        }
-                    }) { Text(stringResource(R.string.try_for_free)) }
+                    // The same one-per-deck rule as the deck info screen, and the same
+                    // record: a try spent there is spent here too. Without this the free
+                    // try could simply be taken again from the online deck picker.
+                    if (d.allowsFreeTry && !FreeTryStore.hasUsedFreeTry(context, pid)) {
+                        TextButton(onClick = {
+                            choiceDeck = null
+                            activity?.let { act ->
+                                TryFreeAd.show(act) {
+                                    FreeTryStore.markFreeTryUsed(context, pid)
+                                    deck = d
+                                    showDeckPicker = false
+                                }
+                            }
+                        }) { Text(stringResource(R.string.try_for_free)) }
+                    }
                 },
             )
         }

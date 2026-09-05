@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- The eraser tool. Drawn rather than taken from Material Icons, which has no eraser
+     in the set this project bundles; the nearest stand-ins mean other things. -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24"
+    android:tint="#5A6B84">
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M16.24,3.56l4.2,4.2a2,2 0 0 1 0,2.83l-8.49,8.49H20v2H8.5a2,2 0 0 1 -1.41,-0.59l-3.53,-3.53a2,2 0 0 1 0,-2.83l9.85,-9.85a2,2 0 0 1 2.83,0zM9.7,18.5l3.53,-3.54 -4.24,-4.24 -3.53,3.53 3.53,3.53 0.71,0.72z" />
+</vector>

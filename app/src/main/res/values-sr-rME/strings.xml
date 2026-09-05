@@ -468,4 +468,15 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="lang_dut">Holandski</string>
     <string name="lang_rus">Ruski</string>
     <string name="lang_swe">Švedski</string>
+    <string name="deck_badge_premium">PREMIUM</string>
+    <string name="deck_badge_new">NOVO</string>
+    <string name="game_draw_guess">Crtaj i pogodi</string>
+    <string name="game_draw_guess_info">Pogledaj reč i nacrtaj je pravo na telefonu — bez olovke i papira. Bez pričanja, slova, brojeva i pantomime. Poigraj se alatkama za crtanje, trkaj se sa satom i vidi da li je tvoj crtež dovoljno dobar da ga pogode na vreme. Kad se runda završi, svoje remek-delo možeš da sačuvaš i podeliš da ga svi vide.</string>
+    <string name="draw_guess_you_draw">Ti crtaš</string>
+    <string name="draw_guess_hint_partner">Pogađa samo %1$s. Kreni kad si spreman — reč tada nestaje.</string>
+    <string name="draw_guess_was_it_guessed">Da li je pogođeno?</string>
+    <string name="draw_guess_times_up">Vreme je isteklo! Da vidimo.</string>
+    <string name="draw_guess_the_word_was">Reč je bila</string>
+    <string name="draw_guess_guessed">POGOĐENO</string>
+    <string name="draw_guess_not_guessed">NIJE POGOĐENO</string>
 </resources>
