@@ -91,6 +91,8 @@ dependencies {
     implementation 'com.google.firebase:firebase-auth'
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-firestore'
+    // Replays the player chooses to send to Alias land in Cloud Storage.
+    implementation 'com.google.firebase:firebase-storage'
     implementation 'com.google.firebase:firebase-crashlytics'
     implementation 'com.google.firebase:firebase-database'
     implementation 'com.google.firebase:firebase-inappmessaging-display'

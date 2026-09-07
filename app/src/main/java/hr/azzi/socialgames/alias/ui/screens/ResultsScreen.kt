@@ -38,6 +38,13 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
+import android.content.Intent
+import android.widget.Toast
+import android.net.Uri
+import hr.azzi.socialgames.alias.Service.SocialRegion
+import hr.azzi.socialgames.alias.Service.RoundVideo.AliasSubmission
+import hr.azzi.socialgames.alias.Service.RoundVideo.ReplayUploader
+import java.io.File
 import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundCardInfo
 import hr.azzi.socialgames.alias.Service.RoundVideo.ROUND_SHARE_FILE
@@ -65,6 +72,10 @@ data class ResultsUiState(
     val answering: String?,
     /** The round video, if one was filmed and came out. */
     val replayPath: String? = null,
+    /** The deck just played, for naming the file if the replay is sent to Alias. */
+    val deckId: String? = null,
+    /** The deck's own language — CRO, SRB — which decides whether there is an audience at all. */
+    val deckLanguageCode: String? = null,
     /** Everything the shareable result image draws — the round that just ended. */
     val shareInfo: RoundCardInfo? = null,
 )
@@ -93,7 +104,48 @@ fun ResultsScreen(
     // Back is the only way out of this screen, and there is a game in progress behind it.
     BackHandler { showQuit = true }
 
-    playing?.let { path -> ReplayPlayer(path) { playing = null } }
+    // The audience for this round's language, or null where that language has no account.
+    val region = remember(state.deckLanguageCode) { SocialRegion.forDeckLanguage(state.deckLanguageCode) }
+    val submission = remember(region, state.deckId) {
+        val deck = state.deckId
+        if (region != null && deck != null)
+            AliasSubmission.round(deck, state.deckLanguageCode.orEmpty(), region) else null
+    }
+    var sendState by remember { mutableStateOf(ReplaySendState.Idle) }
+    var askingToSend by remember { mutableStateOf(false) }
+
+    playing?.let { path ->
+        ReplayPlayer(path, submission, announceSendStart = true) {
+            playing = null
+            // The player carries the same action, so coming back may be the first the card
+            // hears that the replay has already gone.
+            if (ReplayUploader.hasSent(path)) sendState = ReplaySendState.Sent
+        }
+    }
+
+    if (askingToSend) {
+        SendToAliasDialog(
+            onDismiss = { askingToSend = false },
+            onApprove = {
+                askingToSend = false
+                val target = submission ?: return@SendToAliasDialog
+                val path = state.replayPath ?: return@SendToAliasDialog
+                sendState = ReplaySendState.Sending
+                // Said out loud once, at the start: the transfer deliberately happens out
+                // of sight, and without this the only sign of it is a spinner on a card the
+                // player is about to scroll past on their way to the next round.
+                Toast.makeText(context, R.string.replay_send_started_toast, Toast.LENGTH_LONG).show()
+                Analytics.log(context, Analytics.REPLAY_SEND_STARTED)
+                ReplayUploader.upload(File(path), target.deckId, target.languageCode, target.folder) { result ->
+                    sendState = if (result.isSuccess) ReplaySendState.Sent else ReplaySendState.Failed
+                    Analytics.log(
+                        context,
+                        if (result.isSuccess) Analytics.REPLAY_SEND_SUCCEEDED else Analytics.REPLAY_SEND_FAILED,
+                    )
+                }
+            },
+        )
+    }
     if (showQuit) {
         QuitGameDialog(onConfirm = onQuit, onDismiss = { showQuit = false })
     }
@@ -164,12 +216,34 @@ fun ResultsScreen(
                 }
 
                 state.replayPath?.let { path ->
-                    ReplayCard(
-                        onPlay = {
-                            Analytics.log(context, Analytics.REPLAY_PLAY)
-                            playing = path
-                        },
-                    )
+                    val play = {
+                        Analytics.log(context, Analytics.REPLAY_PLAY)
+                        playing = path
+                    }
+                    if (region != null) {
+                        ReplayReadyCard(
+                            videoPath = path,
+                            teamName = state.teamName,
+                            region = region,
+                            sendState = sendState,
+                            onPlay = play,
+                            onShare = {
+                                Analytics.log(context, Analytics.REPLAY_SHARE)
+                                shareReplayFile(context, path)
+                            },
+                            onSendToAlias = { askingToSend = true },
+                            onFollow = {
+                                Analytics.log(context, Analytics.REPLAY_FOLLOW_TIKTOK)
+                                runCatching {
+                                    context.startActivity(
+                                        Intent(Intent.ACTION_VIEW, Uri.parse(region.tiktokUrl))
+                                    )
+                                }
+                            },
+                        )
+                    } else {
+                        ReplayCard(onPlay = play)
+                    }
                 }
 
                 // Only where there is a next round to film. On the last one the button below

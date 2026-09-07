@@ -38,6 +38,13 @@ object Analytics {
     /** Shared from the player. */
     const val REPLAY_SHARE = "android_replay_share"
 
+    /** The player approved the confirmation and the upload began. */
+    const val REPLAY_SEND_STARTED = "android_replay_send_to_alias_started"
+    const val REPLAY_SEND_SUCCEEDED = "android_replay_send_to_alias_succeeded"
+    const val REPLAY_SEND_FAILED = "android_replay_send_to_alias_failed"
+    /** The follow row on the replay card was tapped. */
+    const val REPLAY_FOLLOW_TIKTOK = "android_replay_follow_tiktok"
+
     /** The round's result was shared as an image from the results screen. */
     const val ROUND_RESULT_SHARED = "android_round_result_shared"
 
@@ -58,6 +65,10 @@ object Analytics {
     const val REPLAY_LIST_ITEM_PLAY = "android_replay_list_item_play"
     const val REPLAY_LIST_ITEM_SHARE = "android_replay_list_item_share"
     const val REPLAY_LIST_ITEM_DELETE = "android_replay_list_item_delete"
+
+    /** The TikTok row in settings was tapped. That row only exists for the Balkan UI
+     *  languages, so the count is already segmented to the audience the account is for. */
+    const val TIKTOK_FOLLOW_TAPPED = "android_tap_on_tiktok_follow_settings"
 
     fun log(context: Context, event: String) {
         runCatching { FirebaseAnalytics.getInstance(context).logEvent(event, null) }

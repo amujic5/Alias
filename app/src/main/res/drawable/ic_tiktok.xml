@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  The TikTok note, drawn the way the real mark is: the same glyph three times — the red
+  copy nudged up-right, the cyan copy down-left, the white one on top. Keep it untinted
+  (Image, not Icon) or the three colours collapse into one.
+-->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <group
+        android:translateX="0.9"
+        android:translateY="-0.7">
+        <path
+            android:fillColor="#FE2C55"
+            android:pathData="M16.6,5.82C15.9,5.03 15.54,4.03 15.54,3h-3.09v12.4c-0.02,1.39 -1.16,2.5 -2.56,2.5c-1.42,0 -2.6,-1.16 -2.6,-2.6c0,-1.72 1.66,-3.01 3.37,-2.48V9.66c-3.45,-0.46 -6.47,2.22 -6.47,5.64c0,3.33 2.76,5.7 5.69,5.7c3.14,0 5.69,-2.55 5.69,-5.7V9.01c1.25,0.9 2.76,1.38 4.3,1.38V7.3C19.88,7.3 18.06,7.39 16.6,5.82z" />
+    </group>
+
+    <group
+        android:translateX="-0.9"
+        android:translateY="0.7">
+        <path
+            android:fillColor="#25F4EE"
+            android:pathData="M16.6,5.82C15.9,5.03 15.54,4.03 15.54,3h-3.09v12.4c-0.02,1.39 -1.16,2.5 -2.56,2.5c-1.42,0 -2.6,-1.16 -2.6,-2.6c0,-1.72 1.66,-3.01 3.37,-2.48V9.66c-3.45,-0.46 -6.47,2.22 -6.47,5.64c0,3.33 2.76,5.7 5.69,5.7c3.14,0 5.69,-2.55 5.69,-5.7V9.01c1.25,0.9 2.76,1.38 4.3,1.38V7.3C19.88,7.3 18.06,7.39 16.6,5.82z" />
+    </group>
+
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M16.6,5.82C15.9,5.03 15.54,4.03 15.54,3h-3.09v12.4c-0.02,1.39 -1.16,2.5 -2.56,2.5c-1.42,0 -2.6,-1.16 -2.6,-2.6c0,-1.72 1.66,-3.01 3.37,-2.48V9.66c-3.45,-0.46 -6.47,2.22 -6.47,5.64c0,3.33 2.76,5.7 5.69,5.7c3.14,0 5.69,-2.55 5.69,-5.7V9.01c1.25,0.9 2.76,1.38 4.3,1.38V7.3C19.88,7.3 18.06,7.39 16.6,5.82z" />
+</vector>

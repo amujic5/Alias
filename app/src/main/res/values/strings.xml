@@ -420,7 +420,7 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
 
     <!-- Round replay -->
     <string name="replay_ready_title">Your replay is ready!</string>
-    <string name="replay_ready_subtitle">Watch &amp; share the fun</string>
+    <string name="replay_ready_subtitle">Watch it, share it, or send it to Alias.</string>
 
     <!-- Settings menu and round history -->
     <string name="settings_general">GENERAL</string>
@@ -444,6 +444,8 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="history_delete">Delete</string>
     <string name="history_empty">No rounds recorded yet</string>
     <string name="settings_share">Share</string>
+    <string name="settings_follow_us">FOLLOW US</string>
+    <string name="settings_tiktok">Follow us on TikTok</string>
     <string name="capture_moment_next_round">Capture moment for next round</string>
 
     <!-- Remove Ads -->
@@ -484,4 +486,26 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="draw_guess_the_word_was">The word was</string>
     <string name="draw_guess_guessed">GUESSED</string>
     <string name="draw_guess_not_guessed">NOT GUESSED</string>
+    <string name="replay_play_video">PLAY VIDEO</string>
+    <string name="replay_share_video">SHARE VIDEO</string>
+    <string name="replay_share_video_note">Open your device’s share sheet.</string>
+    <string name="replay_share_alias">SHARE WITH US</string>
+    <string name="replay_share_alias_note">Send to Alias Words for a chance to be featured!</string>
+    <string name="replay_share_alias_sending">SENDING…</string>
+    <string name="replay_share_alias_sent">SENT SUCCESS</string>
+    <string name="replay_share_alias_sent_note">Thanks! We’ll take a look.</string>
+    <string name="replay_share_alias_failed">Couldn’t send. Try again later.</string>
+    <string name="replay_follow_tiktok">Follow us on TikTok</string>
+    <string name="send_alias_title">Send replay to Alias?</string>
+    <string name="send_alias_body">We’ll upload this replay to Alias Words so it can be considered for TikTok or in-app features.</string>
+    <string name="send_alias_note">You can still share it normally anytime.</string>
+    <string name="send_alias_not_now">Not now</string>
+    <string name="send_alias_send">Send Replay</string>
+    <string name="player_exit">Exit</string>
+    <string name="player_share">Share</string>
+    <string name="player_share_alias">Share with us</string>
+    <string name="replay_send_started_toast">Sending in the background. Carry on playing!</string>
+    <string name="send_alias_legal">By sending, you agree to our %1$s and acknowledge our %2$s.</string>
+    <string name="send_alias_legal_terms">Terms of Use</string>
+    <string name="send_alias_legal_privacy">Privacy Policy</string>
 </resources>

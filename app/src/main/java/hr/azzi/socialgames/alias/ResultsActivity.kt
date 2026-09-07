@@ -14,6 +14,8 @@ import hr.azzi.socialgames.alias.ui.screens.ResultsScreen
 import hr.azzi.socialgames.alias.ui.screens.ResultsUiState
 import hr.azzi.socialgames.alias.ui.screens.TeamRow
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
+import hr.azzi.socialgames.alias.Service.DictionaryService
+import hr.azzi.socialgames.alias.Service.serializedName
 import java.io.File
 
 class ResultsActivity : BaseActivity() {
@@ -86,6 +88,10 @@ class ResultsActivity : BaseActivity() {
             // Only offered if the file is still there — the cache is the system's to reclaim,
             // and a card that opens a black player is worse than no card.
             replayPath = intent.getStringExtra("replayPath")?.takeIf { File(it).exists() },
+            // Read from the service rather than carried in the intent: it is the same
+            // dictionary the round was played from, and it is still loaded.
+            deckId = DictionaryService.playingBoardGame?.id?.serializedName(),
+            deckLanguageCode = DictionaryService.playingDictionary?.languageCode,
             // The round just played, not the one coming up. Rebuilt after answers are
             // edited, so the shared image always agrees with the screen.
             shareInfo = RoundCardInfo(

@@ -1,5 +1,6 @@
 package hr.azzi.socialgames.alias.ui.screens
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
@@ -38,6 +39,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
@@ -51,6 +53,7 @@ private val CardBorder = Color.White.copy(alpha = 0.35f)
 private val SectionLabel = Color.White.copy(alpha = 0.55f)
 private val BadgeBlue = Color(0xFF2685F5)
 private val BadgeGreen = Color(0xFF35C15E)
+private val BadgeTikTok = Color(0xFF010101)
 
 /**
  * The app's settings (Figma "16 Settings", node 3051:406).
@@ -74,6 +77,7 @@ fun AppSettingsScreen(
     onPrivacy: () -> Unit,
     onTerms: () -> Unit,
     onShare: () -> Unit,
+    onTikTok: (() -> Unit)? = null,
 ) {
     BrandBackground {
         Column(
@@ -140,6 +144,24 @@ fun AppSettingsScreen(
                 ) { Chevron() }
             }
 
+            // The Balkan account only speaks to the Balkan audience, so the row is there only
+            // for those UI languages — the caller decides by passing a handler, or not.
+            if (onTikTok != null) {
+                Section(stringResource(R.string.settings_follow_us)) {
+                    SettingsRow(
+                        badge = BadgeTikTok,
+                        badgeContent = {
+                            Image(
+                                painterResource(R.drawable.ic_tiktok), null,
+                                modifier = Modifier.size(20.dp),
+                            )
+                        },
+                        title = stringResource(R.string.settings_tiktok),
+                        onClick = onTikTok,
+                    ) { Chevron() }
+                }
+            }
+
             Section(stringResource(R.string.settings_about)) {
                 SettingsRow(
                     icon = Icons.Filled.Shield, badge = BadgeBlue,
@@ -188,6 +210,21 @@ private fun SettingsRow(
     title: String,
     onClick: () -> Unit,
     trailing: @Composable () -> Unit,
+) = SettingsRow(
+    badge = badge,
+    badgeContent = { Icon(icon, null, tint = Color.White, modifier = Modifier.size(20.dp)) },
+    title = title,
+    onClick = onClick,
+    trailing = trailing,
+)
+
+@Composable
+private fun SettingsRow(
+    badge: Color,
+    badgeContent: @Composable () -> Unit,
+    title: String,
+    onClick: () -> Unit,
+    trailing: @Composable () -> Unit,
 ) {
     Row(
         Modifier.fillMaxWidth().clickable { onClick() }
@@ -199,7 +236,7 @@ private fun SettingsRow(
             Modifier.size(40.dp).clip(CircleShape).background(badge),
             contentAlignment = Alignment.Center,
         ) {
-            Icon(icon, null, tint = Color.White, modifier = Modifier.size(20.dp))
+            badgeContent()
         }
         Text(
             title, color = Color.White, fontFamily = Alias.body,

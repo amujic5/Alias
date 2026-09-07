@@ -69,6 +69,7 @@ import kotlinx.coroutines.delay
 import hr.azzi.socialgames.alias.BuildConfig
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.GameSettings
+import hr.azzi.socialgames.alias.Service.Analytics
 import hr.azzi.socialgames.alias.Service.AppLanguage
 import hr.azzi.socialgames.alias.Service.LanguageManager
 import hr.azzi.socialgames.alias.ui.theme.Alias
@@ -250,6 +251,12 @@ fun HomeScreen(
             onPrivacy = { openUrl(context, PRIVACY_URL) },
             onTerms = { openUrl(context, TERMS_URL) },
             onShare = onShare,
+            onTikTok = if (LanguageManager.currentCode in BALKAN_LANGUAGES) {
+                {
+                    Analytics.log(context, Analytics.TIKTOK_FOLLOW_TAPPED)
+                    openUrl(context, TIKTOK_URL)
+                }
+            } else null,
         )
     }
 
@@ -273,6 +280,10 @@ fun HomeScreen(
 /** The app's own pages. Confirm these before release — they are the site's expected paths. */
 private const val PRIVACY_URL = "https://aliaswords.com/privacy"
 private const val TERMS_URL = "https://aliaswords.com/terms"
+
+/** The TikTok account is Balkan-only, so its settings row follows those UI languages. */
+private const val TIKTOK_URL = "https://www.tiktok.com/@aliaswordsbalkan"
+private val BALKAN_LANGUAGES = setOf("hr", "sr", "bs", "sl")
 
 private fun openUrl(context: android.content.Context, url: String) {
     runCatching {

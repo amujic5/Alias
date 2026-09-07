@@ -429,7 +429,7 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
 
     <!-- Round replay -->
     <string name="replay_ready_title">Tvoj snimak je spreman!</string>
-    <string name="replay_ready_subtitle">Pogledaj i podijeli zabavu</string>
+    <string name="replay_ready_subtitle">Pogledaj ga, podijeli ili pošalji Aliasu.</string>
 
     <!-- Settings menu and round history -->
     <string name="settings_general">OPĆENITO</string>
@@ -453,6 +453,8 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="history_delete">Obriši</string>
     <string name="history_empty">Još nema snimljenih rundi</string>
     <string name="settings_share">Podijeli</string>
+    <string name="settings_follow_us">PRATI NAS</string>
+    <string name="settings_tiktok">Zaprati nas na TikToku</string>
     <string name="capture_moment_next_round">Snimi sljedeću rundu</string>
 
     <!-- Remove Ads -->
@@ -493,4 +495,26 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="draw_guess_the_word_was">Riječ je bila</string>
     <string name="draw_guess_guessed">POGOĐENO</string>
     <string name="draw_guess_not_guessed">NIJE POGOĐENO</string>
+    <string name="replay_play_video">POGLEDAJ VIDEO</string>
+    <string name="replay_share_video">PODIJELI VIDEO</string>
+    <string name="replay_share_video_note">Otvara dijeljenje na tvom uređaju.</string>
+    <string name="replay_share_alias">PODIJELI S NAMA</string>
+    <string name="replay_share_alias_note">Pošalji Alias Wordsu i možda te objavimo!</string>
+    <string name="replay_share_alias_sending">ŠALJEM…</string>
+    <string name="replay_share_alias_sent">POSLANO</string>
+    <string name="replay_share_alias_sent_note">Hvala! Pogledat ćemo ga.</string>
+    <string name="replay_share_alias_failed">Slanje nije uspjelo. Pokušaj kasnije.</string>
+    <string name="replay_follow_tiktok">Prati nas na TikToku</string>
+    <string name="send_alias_title">Poslati video Aliasu?</string>
+    <string name="send_alias_body">Poslat ćemo ovaj video Alias Wordsu kako bi mogao doći na TikTok ili u aplikaciju.</string>
+    <string name="send_alias_note">I dalje ga možeš podijeliti kad god želiš.</string>
+    <string name="send_alias_not_now">Ne sada</string>
+    <string name="send_alias_send">Pošalji video</string>
+    <string name="player_exit">Izađi</string>
+    <string name="player_share">Podijeli</string>
+    <string name="player_share_alias">Podijeli s nama</string>
+    <string name="replay_send_started_toast">Šaljem u pozadini. Slobodno nastavi igrati!</string>
+    <string name="send_alias_legal">Slanjem prihvaćaš %1$s i potvrđuješ da si pročitao %2$s.</string>
+    <string name="send_alias_legal_terms">Uvjete korištenja</string>
+    <string name="send_alias_legal_privacy">Pravila privatnosti</string>
 </resources>

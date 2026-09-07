@@ -8,6 +8,8 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.platform.LocalContext
 import hr.azzi.socialgames.alias.Service.Analytics
+import hr.azzi.socialgames.alias.Service.LanguageManager
+import hr.azzi.socialgames.alias.Service.RoundVideo.AliasSubmission
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaLibrary
 import hr.azzi.socialgames.alias.Service.RoundVideo.RoundMediaSort
 
@@ -32,7 +34,12 @@ fun RoundHistoryRoute(onBack: () -> Unit) {
     val items = remember(sort, revision) { RoundMediaLibrary.items(context, sort) }
     val best = remember(items) { items.maxByOrNull { it.correctCount }?.id }
 
-    playing?.let { path -> ReplayPlayer(path) { playing = null } }
+    // A saved clip keeps a file name and a team, not a deck or a deck language, so it
+    // cannot say which audience it belongs to. It is filed under `history` and tagged with
+    // the language the app is in, which is the only hint left about where it came from.
+    playing?.let { path ->
+        ReplayPlayer(path, AliasSubmission.history(LanguageManager.deckLanguageCode)) { playing = null }
+    }
 
     RoundHistoryScreen(
         items = items,

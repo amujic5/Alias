@@ -412,7 +412,7 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
 
     <!-- Round replay -->
     <string name="replay_ready_title">Tvoj posnetek je pripravljen!</string>
-    <string name="replay_ready_subtitle">Poglej in deli zabavo</string>
+    <string name="replay_ready_subtitle">Poglej ga, deli ali pošlji Aliasu.</string>
 
     <!-- Settings menu and round history -->
     <string name="settings_general">SPLOŠNO</string>
@@ -437,6 +437,8 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="history_delete">Izbriši</string>
     <string name="history_empty">Ni še posnetih rund</string>
     <string name="settings_share">Deli</string>
+    <string name="settings_follow_us">SLEDI NAM</string>
+    <string name="settings_tiktok">Sledi nam na TikToku</string>
     <string name="capture_moment_next_round">Posnemi naslednjo rundo</string>
 
     <!-- Remove Ads -->
@@ -477,4 +479,26 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="draw_guess_the_word_was">Beseda je bila</string>
     <string name="draw_guess_guessed">UGANO</string>
     <string name="draw_guess_not_guessed">NI UGANO</string>
+    <string name="replay_play_video">PREDVAJAJ VIDEO</string>
+    <string name="replay_share_video">DELI VIDEO</string>
+    <string name="replay_share_video_note">Odpre deljenje na tvoji napravi.</string>
+    <string name="replay_share_alias">DELI Z NAMI</string>
+    <string name="replay_share_alias_note">Pošlji Alias Words in morda te objavimo!</string>
+    <string name="replay_share_alias_sending">POŠILJAM…</string>
+    <string name="replay_share_alias_sent">POSLANO</string>
+    <string name="replay_share_alias_sent_note">Hvala! Ogledali si ga bomo.</string>
+    <string name="replay_share_alias_failed">Pošiljanje ni uspelo. Poskusi pozneje.</string>
+    <string name="replay_follow_tiktok">Sledi nam na TikToku</string>
+    <string name="send_alias_title">Pošljem posnetek Aliasu?</string>
+    <string name="send_alias_body">Ta posnetek bomo naložili v Alias Words, da ga lahko upoštevamo za TikTok ali za funkcije v aplikaciji.</string>
+    <string name="send_alias_note">Še vedno ga lahko deliš kadar koli.</string>
+    <string name="send_alias_not_now">Ne zdaj</string>
+    <string name="send_alias_send">Pošlji posnetek</string>
+    <string name="player_exit">Izhod</string>
+    <string name="player_share">Deli</string>
+    <string name="player_share_alias">Deli z nami</string>
+    <string name="replay_send_started_toast">Pošiljam v ozadju. Kar nadaljuj z igro!</string>
+    <string name="send_alias_legal">S pošiljanjem sprejemaš %1$s in potrjuješ, da si prebral %2$s.</string>
+    <string name="send_alias_legal_terms">Pogoje uporabe</string>
+    <string name="send_alias_legal_privacy">Pravilnik o zasebnosti</string>
 </resources>
