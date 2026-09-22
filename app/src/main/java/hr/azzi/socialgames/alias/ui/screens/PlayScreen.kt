@@ -70,12 +70,12 @@ import kotlinx.coroutines.delay
  *
  * A pale wash on white by day. At night it cannot stay pale — on navy a near-white number
  * reads as the loudest thing on the screen and the word in front of it stops being the
- * point — so it is white held back to forty per cent, which lets it read as a backdrop at
+ * point — so it is white held back to thirty per cent, which lets it read as a backdrop at
  * the larger size rather than competing with the word at full strength on top of it.
  */
 private val FadedNumber: Color
     @Composable get() =
-        if (hr.azzi.socialgames.alias.arena.isDarkTheme()) Color.White.copy(alpha = 0.40f)
+        if (hr.azzi.socialgames.alias.arena.isDarkTheme()) Color.White.copy(alpha = 0.30f)
         else Color(0xFFDCE4EF)
 
 /** Big enough to read as the ground the word sits on, rather than a number beside it. */
