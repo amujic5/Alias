@@ -12,6 +12,7 @@ import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.layout.statusBarsPadding
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
@@ -286,19 +287,37 @@ fun rememberPlayerLevel(): Int {
 @Composable
 internal fun ArenaScreenHeader(title: String, onBack: () -> Unit) {
     Row(
-        Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 10.dp),
+        Modifier
+            .fillMaxWidth()
+            // The two hosts disagree about insets — the Arena activity pads for the system
+            // bars, the AI hub does not — and pushed from the hub this row sat underneath
+            // the status bar. Inset padding is consumed by whoever applies it first, so
+            // asking for it here adds nothing in the activity and rescues it in the hub.
+            .statusBarsPadding()
+            .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(
-            androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack,
-            contentDescription = null,
-            tint = Color.White,
-            modifier = Modifier.size(26.dp).clickable(onClick = onBack),
-        )
+        // A disc rather than a bare glyph: white on the Arena backdrop is legible but
+        // easy to miss, and 40dp is a tap target rather than a 26dp guess at one.
+        Box(
+            Modifier
+                .size(40.dp)
+                .clip(CircleShape)
+                .background(Color.White.copy(alpha = 0.16f))
+                .clickable(onClick = onBack),
+            contentAlignment = Alignment.Center,
+        ) {
+            Icon(
+                androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack,
+                contentDescription = null,
+                tint = Color.White,
+                modifier = Modifier.size(22.dp),
+            )
+        }
         Spacer(Modifier.width(12.dp))
         Text(
             title,
-            fontFamily = Alias.display, fontSize = 22.sp, color = Color.White, maxLines = 1,
+            fontFamily = Alias.display, fontSize = 24.sp, color = Color.White, maxLines = 1,
         )
     }
 }
