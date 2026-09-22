@@ -99,6 +99,10 @@ private fun ArenaRoundHost(
             onChallengeFinish = { result, _ -> report(result) },
             clues = clues,
             deadlineMs = deadlineMs,
+            // The engine already preloads when the round opens and presents just after
+            // the whistle — exactly where an Arena round wants it. What it was doing was
+            // reporting those impressions against the AI Practice unit.
+            ads = hr.azzi.socialgames.alias.ai.AdInterstitial.arena,
             onClose = onAbandon,
         )
     } else {
@@ -107,6 +111,7 @@ private fun ArenaRoundHost(
             fixedWords = words,
             onChallengeFinish = { result, _ -> report(result) },
             deadlineMs = deadlineMs,
+            ads = hr.azzi.socialgames.alias.ai.AdInterstitial.arena,
             onClose = onAbandon,
         )
     }

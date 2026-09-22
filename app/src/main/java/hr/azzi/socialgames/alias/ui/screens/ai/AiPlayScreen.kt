@@ -69,11 +69,13 @@ fun AiPlayScreen(
     onChallengeFinish: ((AIPracticeResult, List<String>) -> Unit)? = null,
     /** Set by the Arena, whose round is already running. See `AiPlayController`. */
     deadlineMs: Long? = null,
+    /** Which ad unit this round is worth. See `AdInterstitial`. */
+    ads: hr.azzi.socialgames.alias.ai.AdInterstitial = hr.azzi.socialgames.alias.ai.AdInterstitial.ai,
     onClose: () -> Unit,
 ) {
     val context = LocalContext.current
     var sessionKey by remember { mutableIntStateOf(0) }
-    val controller = remember(sessionKey) { AiPlayController(context, config, fixedWords, onChallengeFinish, deadlineMs) }
+    val controller = remember(sessionKey) { AiPlayController(context, config, fixedWords, onChallengeFinish, deadlineMs, ads) }
     DisposableEffect(controller) { onDispose { controller.dispose() } }
 
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->

@@ -74,12 +74,14 @@ fun AiExplainScreen(
     clues: Map<String, List<String>>? = null,
     /** Set by the Arena, whose round is already running. */
     deadlineMs: Long? = null,
+    /** Which ad unit this round is worth. See `AdInterstitial`. */
+    ads: hr.azzi.socialgames.alias.ai.AdInterstitial = hr.azzi.socialgames.alias.ai.AdInterstitial.ai,
     onClose: () -> Unit,
 ) {
     val context = LocalContext.current
     var sessionKey by remember { mutableIntStateOf(0) }
     val controller = remember(sessionKey) {
-        AiExplainController(context, config, fixedWords, onChallengeFinish, clues, deadlineMs)
+        AiExplainController(context, config, fixedWords, onChallengeFinish, clues, deadlineMs, ads)
     }
     DisposableEffect(controller) { onDispose { controller.dispose() } }
 

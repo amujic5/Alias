@@ -49,6 +49,15 @@ class AiExplainController(
      * player's round outlast the one everybody else is playing.
      */
     private val deadlineMs: Long? = null,
+    /**
+     * Which interstitial this round is worth.
+     *
+     * The screen is shared — Practice, a Challenge and an Arena round are all played on
+     * it — and the ad unit is not: the Arena has its own, so its rounds report against it
+     * instead of against Practice. Injected rather than read from the config because the
+     * controller has no idea which of the three it is running, and the caller does.
+     */
+    private val ads: AdInterstitial = AdInterstitial.ai,
 ) {
     enum class Phase { Loading, VoiceRequired, SttUnavailable, Denied, Thinking, Guessing, Done }
 
@@ -130,7 +139,7 @@ class AiExplainController(
             sttStatus = AISttSupport.Status.LanguageUnsupported
             phase = Phase.SttUnavailable
         }
-        AIInterstitial.preload(context)
+        ads.preload(context)
         // The AI voice is a hard requirement — never start the round without it.
         runVoiceGate()
     }
@@ -361,6 +370,6 @@ class AiExplainController(
         speaker.stop(); speech.stop()
         sound.playEnd()
         onFinish?.invoke(result, frozenWords)                 // show the score screen first…
-        AIInterstitial.show(context) { AppReview.request(context) } // …ad, then the rating prompt
+        ads.show(context) { AppReview.request(context) } // …ad, then the rating prompt
     }
 }

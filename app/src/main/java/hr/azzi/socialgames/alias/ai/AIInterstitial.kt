@@ -16,25 +16,39 @@ import hr.azzi.socialgames.alias.BuildConfig
 import hr.azzi.socialgames.alias.Service.NoAds
 
 /**
- * Full-screen interstitial shown after an AI round (Practice + Challenge), mirroring
- * the iOS AdInterstitial: preload while playing, present ~0.8s after the round ends.
+ * Full-screen interstitial shown after a round: preload while playing, present ~0.8s
+ * after it ends.
  *
- * Uses Google's test unit in debug builds (so dev builds never serve/click live ads,
- * which would violate AdMob policy) and the production unit in release.
+ * An instance per ad unit rather than one object, because the round screens are shared —
+ * Practice, a Challenge and an Arena round are all played on them — and the unit is not.
+ * While this was a singleton every Arena round reported its impression against the AI
+ * Practice unit.
+ *
+ * Google's test unit in debug builds, so dev builds never serve or click a live ad, which
+ * would violate AdMob policy.
  */
-object AIInterstitial {
+class AdInterstitial(private val prodUnit: String) {
 
-    private const val PROD_UNIT = "ca-app-pub-1489905432577426/1224402586"
-    private const val TEST_UNIT = "ca-app-pub-3940256099942544/1033173712" // Google sample interstitial
-    private val unitId: String get() = if (BuildConfig.DEBUG) TEST_UNIT else PROD_UNIT
+    companion object {
+        private const val TEST_UNIT = "ca-app-pub-3940256099942544/1033173712" // Google sample
+
+        /** Practice and Challenge — the AI section's own rounds. */
+        val ai = AdInterstitial("ca-app-pub-1489905432577426/1224402586")
+
+        /** Alias Arena round end. */
+        val arena = AdInterstitial("ca-app-pub-1489905432577426/7533530102")
+
+        private var initialized = false
+    }
+
+    private val unitId: String get() = if (BuildConfig.DEBUG) TEST_UNIT else prodUnit
 
     private var ad: InterstitialAd? = null
     private var loading = false
-    private var initialized = false
 
     /** Request an interstitial in the background (no-op if one is ready or loading). */
     fun preload(context: Context) {
-        if (NoAds.isPurchased) return
+        if (NoAds.isActive) return
         if (ad != null || loading || !AdsConsent.canRequestAds) return
         val app = context.applicationContext
         if (!initialized) { MobileAds.initialize(app) {}; initialized = true }
@@ -51,9 +65,9 @@ object AIInterstitial {
      * so callers can chain a follow-up (e.g. the in-app review prompt) after the ad.
      */
     fun show(context: Context, onDismiss: () -> Unit = {}) {
-        // Bought out of ads — hand straight back, so whatever was chained after the ad
-        // (the rating prompt) still happens.
-        if (NoAds.isPurchased) { onDismiss(); return }
+        // Out of the ads, bought or earned — hand straight back, so whatever was
+        // chained after the ad still happens.
+        if (NoAds.isActive) { onDismiss(); return }
         val activity = context as? Activity
         val current = ad
         if (activity == null || current == null) { onDismiss(); return }
