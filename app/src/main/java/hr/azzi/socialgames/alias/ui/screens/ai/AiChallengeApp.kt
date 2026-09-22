@@ -212,6 +212,8 @@ fun AiChallengeApp(
             onProfile = { push(AiRoute.Profile) },
             onSeeAll = { push(AiRoute.Profile) },
             onOpenChallenge = { openChallenge(it) },
+            arenaProfile = arenaProfile,
+            onLeaderboard = { push(AiRoute.Standings) },
             onArena = {
                 context.startActivity(
                     android.content.Intent(context, hr.azzi.socialgames.alias.ArenaActivity::class.java)

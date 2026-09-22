@@ -24,6 +24,9 @@ import androidx.compose.material.icons.filled.Lock
 import androidx.compose.material3.Icon
 import androidx.compose.material3.IconButton
 import androidx.compose.material3.Text
+import androidx.compose.runtime.collectAsState
+import androidx.compose.foundation.layout.width
+import androidx.compose.foundation.layout.offset
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -67,6 +70,9 @@ fun AiHubScreen(
      * behind signing in.
      */
     onArena: (() -> Unit)? = null,
+    /** The Arena's side of the player: the level, the XP and the face. */
+    arenaProfile: hr.azzi.socialgames.alias.arena.ArenaProfileStore? = null,
+    onLeaderboard: (() -> Unit)? = null,
 ) {
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding().verticalScroll(rememberScrollState())) {
@@ -77,11 +83,19 @@ fun AiHubScreen(
             Spacer(Modifier.height(8.dp))
 
             Column(Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                if (isSignedIn) ProfileHeader(username, stats, onProfile) else JoinCard(onSignIn)
+                if (isSignedIn || arenaProfile != null) {
+                    ProfileHeader(username, arenaProfile, onProfile)
+                } else {
+                    JoinCard(onSignIn)
+                }
 
                 // Above the two mode cards, and bigger than them: those are things you
                 // can do, this is the thing the app wants you to do.
                 onArena?.let { hr.azzi.socialgames.alias.arena.ui.ArenaEntryCard(onClick = it) }
+
+                if (arenaProfile != null && onLeaderboard != null) {
+                    LeaderboardRow(arenaProfile, onLeaderboard)
+                }
 
                 ActionCard("AI", Color(0xFFB9A7F6), stringResource(R.string.ai_practice_title),
                     stringResource(R.string.ai_practice_subtitle), locked = false, onClick = onPractice)
@@ -114,27 +128,139 @@ fun AiHubScreen(
 }
 
 @Composable
-private fun ProfileHeader(username: String, stats: AIUserStats, onClick: () -> Unit) {
-    val level = 1 + stats.wins / 5
-    Box(Modifier.fillMaxWidth().clip(RoundedCornerShape(20.dp)).background(Color.White.copy(alpha = 0.16f))
-        .clickable { onClick() }.padding(16.dp)) {
-        Row(verticalAlignment = Alignment.CenterVertically) {
-            Avatar(username, Alias.accent, 52)
-            Spacer(Modifier.size(12.dp))
-            Column(Modifier.weight(1f)) {
-                Text("@${username}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp)
-                Spacer(Modifier.height(6.dp))
-                Row(horizontalArrangement = Arrangement.spacedBy(6.dp)) {
-                    StatChip(stringResource(R.string.ai_stat_w, stats.wins), Alias.success)
-                    StatChip(stringResource(R.string.ai_stat_l, stats.losses), Alias.danger)
-                    StatChip(stringResource(R.string.ai_stat_d, stats.draws), Color.White.copy(alpha = 0.3f))
-                }
-            }
-            Column(horizontalAlignment = Alignment.CenterHorizontally) {
-                Text(stringResource(R.string.ai_lv), color = Color.White.copy(alpha = 0.7f), fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 10.sp)
-                Text("$level", color = Alias.accent, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
-            }
+private fun ProfileHeader(
+    username: String,
+    arena: hr.azzi.socialgames.alias.arena.ArenaProfileStore?,
+    onClick: () -> Unit,
+) {
+    val summary = arena?.summary?.collectAsState()?.value
+    val avatar = arena?.avatar?.collectAsState()?.value
+
+    Row(
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(22.dp))
+            .background(hr.azzi.socialgames.alias.arena.ArenaColors.card)
+            .clickable { onClick() }.padding(16.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(14.dp),
+    ) {
+        hr.azzi.socialgames.alias.arena.ui.ArenaAvatarImage(
+            avatar, 68.dp, ring = Alias.accent, ringWidth = 3.dp,
+        )
+
+        Column(Modifier.weight(1f), verticalArrangement = Arrangement.spacedBy(6.dp)) {
+            Text(
+                "@$username",
+                color = hr.azzi.socialgames.alias.arena.ArenaColors.title,
+                fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp,
+                maxLines = 1,
+            )
+            Text(
+                stringResource(R.string.ai_hub_level_pill, summary?.level ?: 1),
+                color = Color.White, fontFamily = Alias.body,
+                fontWeight = FontWeight.Black, fontSize = 12.sp,
+                modifier = Modifier.clip(RoundedCornerShape(50)).background(Color(0xFF3F4BA8))
+                    .padding(horizontal = 12.dp, vertical = 5.dp),
+            )
+            Text(
+                stringResource(
+                    R.string.ai_hub_xp_progress,
+                    summary?.xpIntoLevel ?: 0, summary?.xpForLevel ?: 1,
+                ),
+                color = hr.azzi.socialgames.alias.arena.ArenaColors.title,
+                fontFamily = Alias.body, fontWeight = FontWeight.Bold, fontSize = 13.sp,
+                maxLines = 1,
+            )
+            XpBar(summary?.levelProgress ?: 0f)
+            Text(
+                stringResource(R.string.ai_hub_xp_hint),
+                color = hr.azzi.socialgames.alias.arena.ArenaColors.body,
+                fontFamily = Alias.body, fontSize = 12.sp, maxLines = 1,
+            )
         }
+
+        Icon(
+            Icons.Filled.ChevronRight, null,
+            tint = hr.azzi.socialgames.alias.arena.ArenaColors.body,
+            modifier = Modifier.size(20.dp),
+        )
+    }
+}
+
+/**
+ * Progress to the next level, with the head of the bar marked.
+ *
+ * The dot is not decoration: at the start of a level the fill is a few pixels wide and
+ * reads as an empty track, which says "you have nothing" to somebody who has just earned
+ * their first XP.
+ */
+@Composable
+private fun XpBar(progress: Float) {
+    androidx.compose.foundation.layout.BoxWithConstraints(
+        Modifier.fillMaxWidth().height(14.dp),
+    ) {
+        val width = maxWidth
+        Box(Modifier.fillMaxWidth().height(14.dp).clip(RoundedCornerShape(50))
+            .background(hr.azzi.socialgames.alias.arena.ArenaColors.well))
+        Box(
+            Modifier.width(maxOf(10.dp, width * progress)).height(14.dp)
+                .clip(RoundedCornerShape(50)).background(Alias.accent),
+        )
+        Box(
+            Modifier.offset(x = maxOf(0.dp, width * progress - 14.dp))
+                .size(14.dp).clip(CircleShape).background(Alias.accent),
+        )
+    }
+}
+
+/**
+ * Where you stand in the Arena, and a way into the full board.
+ *
+ * Reads the weekly standing because that is what the standings screen opens on — a row
+ * that said one thing and then pushed a screen saying another would be worse than no row.
+ */
+@Composable
+private fun LeaderboardRow(
+    arena: hr.azzi.socialgames.alias.arena.ArenaProfileStore,
+    onClick: () -> Unit,
+) {
+    val weekly = arena.weekly.collectAsState().value
+
+    Row(
+        Modifier.fillMaxWidth().clip(RoundedCornerShape(22.dp))
+            .background(hr.azzi.socialgames.alias.arena.ArenaColors.card)
+            .clickable { onClick() }.padding(18.dp),
+        verticalAlignment = Alignment.CenterVertically,
+        horizontalArrangement = Arrangement.spacedBy(15.dp),
+    ) {
+        Box(
+            Modifier.size(54.dp).clip(RoundedCornerShape(17.dp)).background(Alias.accent),
+            contentAlignment = Alignment.Center,
+        ) {
+            Text(
+                weekly.rank?.let { "#$it" } ?: "#—",
+                color = Alias.onAccent, fontFamily = Alias.display,
+                fontWeight = FontWeight.ExtraBold, fontSize = 20.sp, maxLines = 1,
+            )
+        }
+        Column(Modifier.weight(1f)) {
+            Text(
+                stringResource(R.string.ai_hub_leaderboard_title),
+                color = hr.azzi.socialgames.alias.arena.ArenaColors.title,
+                fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 21.sp,
+                maxLines = 1,
+            )
+            Text(
+                weekly.rank?.let { r ->
+                    weekly.score?.let { stringResource(R.string.ai_hub_leaderboard_you, r, it) }
+                } ?: stringResource(R.string.ai_hub_leaderboard_empty),
+                color = hr.azzi.socialgames.alias.arena.ArenaColors.body,
+                fontFamily = Alias.body, fontSize = 13.sp, maxLines = 1,
+            )
+        }
+        Icon(
+            Icons.Filled.ChevronRight, null,
+            tint = Color.White.copy(alpha = 0.8f), modifier = Modifier.size(20.dp),
+        )
     }
 }
 
