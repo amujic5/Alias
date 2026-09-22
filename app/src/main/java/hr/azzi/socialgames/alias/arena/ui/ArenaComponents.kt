@@ -53,6 +53,8 @@ fun ArenaAvatarImage(
     size: androidx.compose.ui.unit.Dp,
     ring: Color? = Color.White,
     ringWidth: androidx.compose.ui.unit.Dp = 2.dp,
+    /** Drains the colour from a locked face, so the padlock is not the only signal. */
+    desaturated: Boolean = false,
     modifier: Modifier = Modifier,
 ) {
     val avatar = AliasAvatar.named(id)
@@ -68,6 +70,11 @@ fun ArenaAvatarImage(
             painter = painterResource(avatar.drawable),
             contentDescription = stringResource(avatar.nameRes),
             contentScale = ContentScale.Crop,
+            colorFilter = if (desaturated) {
+                androidx.compose.ui.graphics.ColorFilter.colorMatrix(
+                    androidx.compose.ui.graphics.ColorMatrix().apply { setToSaturation(0f) }
+                )
+            } else null,
             modifier = Modifier.size(size).clip(CircleShape),
         )
     }
