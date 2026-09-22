@@ -16,6 +16,7 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
     <uses-permission android:name="com.android.vending.BILLING" />
     <uses-permission android:name="android.permission.RECORD_AUDIO" />
     <uses-permission android:name="android.permission.CAMERA" />
@@ -74,6 +75,9 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OnlineActivity" android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <receiver
+            android:name=".notifications.AliasNotificationReceiver"
+            android:exported="false" />
         <activity android:name=".ArenaActivity" android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity

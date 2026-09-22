@@ -113,6 +113,11 @@ fun HomeScreen(
             },
             onDismiss = { showArenaPromo = false },
         )
+    } else {
+        // One interruption per launch. If the promo took this one, the permission prompt
+        // waits for the next — two system-looking sheets stacked on a first launch is how
+        // both of them get dismissed without being read.
+        AskNotificationPermissionOnce()
     }
     var showSettings by remember { mutableStateOf(false) }
     var showHistory by remember { mutableStateOf(false) }
@@ -442,5 +447,41 @@ private fun ScatteredSquares() {
                 .clip(RoundedCornerShape(8.dp))
                 .background(color)
         )
+    }
+}
+
+
+/**
+ * Asks for POST_NOTIFICATIONS once, the first time Home is reached without something else
+ * already on screen.
+ *
+ * Below API 33 there is no runtime permission and the reminders simply work, so this does
+ * nothing there — and it never asks twice, because a refusal cannot be re-asked and the
+ * only way back is the Settings app.
+ */
+@Composable
+private fun AskNotificationPermissionOnce() {
+    val context = LocalContext.current
+    if (android.os.Build.VERSION.SDK_INT < android.os.Build.VERSION_CODES.TIRAMISU) {
+        LaunchedEffect(Unit) {
+            hr.azzi.socialgames.alias.notifications.AliasNotifications.refresh(context)
+        }
+        return
+    }
+
+    val launcher = androidx.activity.compose.rememberLauncherForActivityResult(
+        androidx.activity.result.contract.ActivityResultContracts.RequestPermission()
+    ) {
+        hr.azzi.socialgames.alias.notifications.AliasNotifications.refresh(context)
+    }
+
+    LaunchedEffect(Unit) {
+        val notif = hr.azzi.socialgames.alias.notifications.AliasNotifications
+        if (notif.isAllowed(context)) {
+            notif.refresh(context)
+        } else if (!notif.hasAskedPermission(context)) {
+            notif.markAsked(context)
+            launcher.launch(android.Manifest.permission.POST_NOTIFICATIONS)
+        }
     }
 }

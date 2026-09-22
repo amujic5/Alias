@@ -233,6 +233,10 @@ fun ArenaFlowScreen(
                         xpBefore = summary.xp,
                     )
                     ArenaAnalytics.roundFinished(mode, lang)
+                    // Pushes the idle nudge out two days. Recorded on a submission, not
+                    // on entering the lobby: the reminder is about playing.
+                    hr.azzi.socialgames.alias.notifications.AliasNotifications
+                        .recordArenaPlayed(context)
                     scope.launch { store.submit(playing, guessed, skipped) }
                 },
                 // Leaving the play screen early submits nothing, because there is nothing
