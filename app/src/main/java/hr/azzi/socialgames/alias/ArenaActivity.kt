@@ -118,9 +118,9 @@ private fun ArenaRoot(store: ArenaStore, profile: ArenaProfileStore, onExit: () 
             onClose = { stage = ArenaStage.Live },
         )
 
-        ArenaStage.Standings -> ArenaStandingsScreen(profile)
+        ArenaStage.Standings -> ArenaStandingsScreen(profile) { stage = ArenaStage.Profile }
 
-        ArenaStage.Rewards -> ArenaRewardGridScreen(summary)
+        ArenaStage.Rewards -> ArenaRewardGridScreen(summary) { stage = ArenaStage.Profile }
 
         ArenaStage.AvatarPicker -> ArenaAvatarPicker(
             selected = AliasAvatar.named(avatar),

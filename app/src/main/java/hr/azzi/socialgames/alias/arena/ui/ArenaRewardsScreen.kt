@@ -235,10 +235,11 @@ private fun RewardCard(reward: LevelReward) {
  * opens deliberately from their profile and reads, not a four-second flourish.
  */
 @Composable
-fun ArenaRewardGridScreen(summary: ArenaSummary) {
+fun ArenaRewardGridScreen(summary: ArenaSummary, onBack: () -> Unit) {
     val nextLevel = LevelRewards.nextRewardLevel(summary.level)
 
-    Box(Modifier.fillMaxSize().background(ArenaColors.backdrop)) {
+    Column(Modifier.fillMaxSize().background(ArenaColors.backdrop)) {
+        ArenaScreenHeader(stringResource(R.string.arena_reward_grid_title), onBack)
         LazyVerticalGrid(
             columns = GridCells.Fixed(2),
             modifier = Modifier.fillMaxSize().padding(horizontal = 20.dp),

@@ -58,7 +58,7 @@ import hr.azzi.socialgames.alias.ui.theme.Alias
  * out. Splitting it by country would be several tables where there is one competition.
  */
 @Composable
-fun ArenaStandingsScreen(profile: ArenaProfileStore) {
+fun ArenaStandingsScreen(profile: ArenaProfileStore, onBack: () -> Unit) {
     val mode by profile.mode.collectAsState()
     var period by remember { mutableStateOf(ArenaPeriod.WEEKLY) }
 
@@ -86,10 +86,12 @@ fun ArenaStandingsScreen(profile: ArenaProfileStore) {
     val listState = rememberLazyListState()
 
     Box(Modifier.fillMaxSize().background(ArenaColors.backdrop)) {
-        Column(
-            Modifier.fillMaxSize().padding(horizontal = 20.dp).padding(top = 10.dp),
-            verticalArrangement = Arrangement.spacedBy(14.dp),
-        ) {
+        Column(Modifier.fillMaxSize()) {
+            ArenaScreenHeader(stringResource(R.string.arena_standings_title), onBack)
+            Column(
+                Modifier.fillMaxSize().padding(horizontal = 20.dp),
+                verticalArrangement = Arrangement.spacedBy(14.dp),
+            ) {
             ArenaModeSwitcher(mode, onChange = { profile.setMode(it) })
             PeriodPicker(period) { period = it }
 
@@ -120,6 +122,7 @@ fun ArenaStandingsScreen(profile: ArenaProfileStore) {
                     }
                     StandingsList(rows, mine, listState)
                 }
+            }
             }
         }
     }

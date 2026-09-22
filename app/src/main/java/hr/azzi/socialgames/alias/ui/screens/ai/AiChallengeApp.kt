@@ -333,12 +333,12 @@ fun AiChallengeApp(
         )
 
         AiRoute.Standings ->
-            hr.azzi.socialgames.alias.arena.ui.ArenaStandingsScreen(arenaProfile)
+            hr.azzi.socialgames.alias.arena.ui.ArenaStandingsScreen(arenaProfile) { pop() }
 
         AiRoute.Rewards ->
             hr.azzi.socialgames.alias.arena.ui.ArenaRewardGridScreen(
                 arenaProfile.summary.collectAsState().value
-            )
+            ) { pop() }
 
         AiRoute.AvatarPicker -> hr.azzi.socialgames.alias.arena.ui.ArenaAvatarPicker(
             selected = hr.azzi.socialgames.alias.arena.AliasAvatar

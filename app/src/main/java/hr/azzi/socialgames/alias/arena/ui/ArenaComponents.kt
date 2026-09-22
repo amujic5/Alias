@@ -15,6 +15,8 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.Icon
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
@@ -272,4 +274,31 @@ fun rememberPlayerLevel(): Int {
         onDispose { hr.azzi.socialgames.alias.arena.PlayerLevel.removeListener(listener) }
     }
     return level
+}
+
+/**
+ * Back and a title, for a screen that is pushed rather than presented.
+ *
+ * iOS gets this from the navigation stack it is pushed into; nothing here provides one,
+ * so a screen without it was a dead end — reachable, and then only escapable with the
+ * system back gesture, which says nothing about where it goes.
+ */
+@Composable
+internal fun ArenaScreenHeader(title: String, onBack: () -> Unit) {
+    Row(
+        Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 10.dp),
+        verticalAlignment = Alignment.CenterVertically,
+    ) {
+        Icon(
+            androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack,
+            contentDescription = null,
+            tint = Color.White,
+            modifier = Modifier.size(26.dp).clickable(onClick = onBack),
+        )
+        Spacer(Modifier.width(12.dp))
+        Text(
+            title,
+            fontFamily = Alias.display, fontSize = 22.sp, color = Color.White, maxLines = 1,
+        )
+    }
 }
