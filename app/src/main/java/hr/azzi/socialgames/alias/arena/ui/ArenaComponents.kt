@@ -17,6 +17,8 @@ import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.draw.clip
@@ -249,4 +251,25 @@ fun ArenaRowDivider(modifier: Modifier = Modifier) {
             .height(1.dp)
             .background(ArenaColors.border),
     )
+}
+
+/**
+ * The player's Arena level, as Compose state.
+ *
+ * The level arrives asynchronously — one read at launch — and the screens that gate on it
+ * are often already drawn by then. Without this a player who opens the app and goes
+ * straight to New Game sees the padlocks from the last session, and a reinstalled player
+ * sees all of them.
+ */
+@Composable
+fun rememberPlayerLevel(): Int {
+    var level by androidx.compose.runtime.remember {
+        androidx.compose.runtime.mutableIntStateOf(hr.azzi.socialgames.alias.arena.PlayerLevel.current)
+    }
+    androidx.compose.runtime.DisposableEffect(Unit) {
+        val listener = { level = hr.azzi.socialgames.alias.arena.PlayerLevel.current }
+        hr.azzi.socialgames.alias.arena.PlayerLevel.addListener(listener)
+        onDispose { hr.azzi.socialgames.alias.arena.PlayerLevel.removeListener(listener) }
+    }
+    return level
 }

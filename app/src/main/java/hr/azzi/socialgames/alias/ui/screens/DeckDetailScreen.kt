@@ -68,7 +68,12 @@ fun DeckDetailScreen(
     val prices by Billing.prices.collectAsState()
 
     val productId = deck.productId
-    val unlocked = deck.free || unlockedIds.contains(productId)
+    // Three ways to hold a deck: it was always free, it was bought, or the Arena handed
+    // it over at a level. See `LevelRewards`.
+    val level = hr.azzi.socialgames.alias.arena.ui.rememberPlayerLevel()
+    val unlockLevel = hr.azzi.socialgames.alias.arena.LevelRewards.levelFor(deck.id)
+    val unlocked = deck.free || unlockedIds.contains(productId) ||
+        (unlockLevel != null && level >= unlockLevel)
     val price = prices[productId]
 
     val imgId = remember(deck.image) { ctx.resources.getIdentifier(deck.image, "drawable", ctx.packageName) }

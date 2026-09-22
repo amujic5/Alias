@@ -91,6 +91,29 @@ fun HomeScreen(
     // being relaunched), refreshing the flag image and every LanguageManager-derived value.
     LocalConfiguration.current
     var showLanguages by remember { mutableStateOf(false) }
+
+    /**
+     * The Arena announcement: once on the first launch, then weekly, five times at most.
+     *
+     * Decided once per composition rather than watched, so a promo dismissed here does
+     * not come straight back when something else recomposes the screen. See `ArenaPromo`.
+     */
+    var showArenaPromo by remember {
+        mutableStateOf(hr.azzi.socialgames.alias.arena.ArenaPromo.isDue(context))
+    }
+    if (showArenaPromo) {
+        LaunchedEffect(Unit) { hr.azzi.socialgames.alias.arena.ArenaPromo.recordShown(context) }
+        hr.azzi.socialgames.alias.arena.ui.ArenaPromoSheet(
+            onEnter = {
+                hr.azzi.socialgames.alias.arena.ArenaPromo.recordAccepted(context)
+                showArenaPromo = false
+                context.startActivity(
+                    android.content.Intent(context, hr.azzi.socialgames.alias.ArenaActivity::class.java)
+                )
+            },
+            onDismiss = { showArenaPromo = false },
+        )
+    }
     var showSettings by remember { mutableStateOf(false) }
     var showHistory by remember { mutableStateOf(false) }
     var soundEnabled by remember { mutableStateOf(GameSettings.soundEnabled(context)) }
