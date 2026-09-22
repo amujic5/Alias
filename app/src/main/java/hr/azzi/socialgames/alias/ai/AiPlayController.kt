@@ -30,6 +30,16 @@ class AiPlayController(
     val config: AIPracticeConfig,
     fixedWords: List<String>?,
     private val onFinish: ((AIPracticeResult, List<String>) -> Unit)?,
+    /**
+     * When the round must be over, whatever this controller is doing.
+     *
+     * Null for Practice and a Challenge, which each start a fresh full length. The Arena
+     * sets it, because its round is already running on a server clock and this timer has
+     * to measure what is left of *that*. Derived from the deadline rather than
+     * decremented, so a pause — a phone call, the app backgrounded — cannot let one
+     * player's round outlast the one everybody else is playing.
+     */
+    private val deadlineMs: Long? = null,
 ) {
     enum class Phase { Loading, VoiceRequired, SttUnavailable, Denied, Playing, Done }
     enum class Turn { Idle, Explaining, AiGuessing }
@@ -209,7 +219,9 @@ class AiPlayController(
             while (isActive) {
                 delay(100)
                 if (phase != Phase.Playing) continue
-                remaining -= 0.1
+                remaining = deadlineMs
+                    ?.let { ((it - System.currentTimeMillis()) / 1000.0).coerceAtLeast(0.0) }
+                    ?: (remaining - 0.1)
                 if (remaining <= 10 && !tick) { tick = true; sound.playTikTok() }
                 if (remaining <= 0) { finish(); break }
             }

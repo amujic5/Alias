@@ -67,11 +67,13 @@ fun AiPlayScreen(
     config: AIPracticeConfig,
     fixedWords: List<String>? = null,
     onChallengeFinish: ((AIPracticeResult, List<String>) -> Unit)? = null,
+    /** Set by the Arena, whose round is already running. See `AiPlayController`. */
+    deadlineMs: Long? = null,
     onClose: () -> Unit,
 ) {
     val context = LocalContext.current
     var sessionKey by remember { mutableIntStateOf(0) }
-    val controller = remember(sessionKey) { AiPlayController(context, config, fixedWords, onChallengeFinish) }
+    val controller = remember(sessionKey) { AiPlayController(context, config, fixedWords, onChallengeFinish, deadlineMs) }
     DisposableEffect(controller) { onDispose { controller.dispose() } }
 
     val launcher = rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()) { granted ->

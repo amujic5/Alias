@@ -234,9 +234,9 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             } else null
             val onClose: () -> Unit = { if (route.isChallenge) pop() else popToHub() }
             if (route.config.mode == hr.azzi.socialgames.alias.ai.AIMode.YOU_EXPLAIN)
-                AiPlayScreen(route.config, route.fixedWords, finish, onClose)
+                AiPlayScreen(route.config, route.fixedWords, finish, onClose = onClose)
             else
-                AiExplainScreen(route.config, route.fixedWords, finish, onClose)
+                AiExplainScreen(route.config, route.fixedWords, finish, onClose = onClose)
         }
 
         is AiRoute.OpenById -> {

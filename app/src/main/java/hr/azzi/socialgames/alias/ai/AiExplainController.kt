@@ -30,6 +30,25 @@ class AiExplainController(
     val config: AIPracticeConfig,
     fixedWords: List<String>?,
     private val onFinish: ((AIPracticeResult, List<String>) -> Unit)?,
+    /**
+     * Clues that win over the deck's.
+     *
+     * The Arena's words are drawn from every deck of a language, so no single bundled
+     * deck has clues for all of them — the server sends the clues it drew alongside the
+     * words, and those are the ones that match. Null keeps Practice and Challenge
+     * unchanged.
+     */
+    private val clues: Map<String, List<String>>? = null,
+    /**
+     * When the round must be over, whatever this controller is doing.
+     *
+     * Null for Practice and a Challenge, which each start a fresh full length. The Arena
+     * sets it, because its round is already running on a server clock and this timer has
+     * to measure what is left of *that*. Derived from the deadline rather than
+     * decremented, so a pause — a phone call, the app backgrounded — cannot let one
+     * player's round outlast the one everybody else is playing.
+     */
+    private val deadlineMs: Long? = null,
 ) {
     enum class Phase { Loading, VoiceRequired, SttUnavailable, Denied, Thinking, Guessing, Done }
 
@@ -42,7 +61,7 @@ class AiExplainController(
         fixedWords ?: AIDeckCatalog.words(context, config.deck.id, config.language).shuffled()
     private var words: MutableList<String> = frozenWords.toMutableList()
     private val baked: Map<String, List<String>> =
-        AIDeckCatalog.clueMap(context, config.deck.id, config.language)
+        clues ?: AIDeckCatalog.clueMap(context, config.deck.id, config.language)
 
     var phase by mutableStateOf(Phase.Loading); private set
     var clue by mutableStateOf(""); private set
@@ -220,7 +239,9 @@ class AiExplainController(
             while (isActive) {
                 delay(100)
                 if (phase != Phase.Guessing && phase != Phase.Thinking) continue
-                remaining -= 0.1
+                remaining = deadlineMs
+                    ?.let { ((it - System.currentTimeMillis()) / 1000.0).coerceAtLeast(0.0) }
+                    ?: (remaining - 0.1)
                 if (remaining <= 10 && !tickPlayed) { tickPlayed = true; sound.playTikTok() }
                 if (remaining <= 0) { finish(); break }
             }

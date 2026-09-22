@@ -70,12 +70,16 @@ fun AiExplainScreen(
     config: AIPracticeConfig,
     fixedWords: List<String>? = null,
     onChallengeFinish: ((AIPracticeResult, List<String>) -> Unit)? = null,
+    /** Clues the Arena's server dealt with the words. See `AiExplainController`. */
+    clues: Map<String, List<String>>? = null,
+    /** Set by the Arena, whose round is already running. */
+    deadlineMs: Long? = null,
     onClose: () -> Unit,
 ) {
     val context = LocalContext.current
     var sessionKey by remember { mutableIntStateOf(0) }
     val controller = remember(sessionKey) {
-        AiExplainController(context, config, fixedWords, onChallengeFinish)
+        AiExplainController(context, config, fixedWords, onChallengeFinish, clues, deadlineMs)
     }
     DisposableEffect(controller) { onDispose { controller.dispose() } }
 
