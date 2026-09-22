@@ -2,11 +2,16 @@ package hr.azzi.socialgames.alias
 
 import android.content.Intent
 import android.os.Bundle
+import androidx.activity.viewModels
 import hr.azzi.socialgames.alias.ai.AIAnalytics
 import hr.azzi.socialgames.alias.ui.screens.ai.AiChallengeApp
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
 class AIChallengeActivity : BaseActivity() {
+
+    /** The Arena's profile, so the hub shows the same person the Arena does. */
+    private val arenaProfile: hr.azzi.socialgames.alias.arena.ArenaProfileStore by viewModels()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,9 +23,10 @@ class AIChallengeActivity : BaseActivity() {
             "https" -> AIAnalytics.appOpenViaUniversalLink(this)
             "aliaswords" -> AIAnalytics.appOpenViaScheme(this)
         }
+        arenaProfile.start()
         setComposeContent {
             AliasTheme {
-                AiChallengeApp(initialChallengeId = id, onExit = { finish() })
+                AiChallengeApp(initialChallengeId = id, arenaProfile = arenaProfile, onExit = { finish() })
             }
         }
     }

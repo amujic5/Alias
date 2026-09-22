@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.material3.CircularProgressIndicator
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.collectAsState
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableIntStateOf
@@ -46,6 +47,11 @@ private sealed interface AiRoute {
     data class Outcome(val challenge: AIChallenge, val score: Int, val total: Int) : AiRoute
     data class OpenById(val id: String) : AiRoute
     data class PlayDetail(val play: AIChallengePlay, val challenge: AIChallenge) : AiRoute
+
+    /** The Arena screens the profile opens — pushed here so they share the hub's stack. */
+    data object Standings : AiRoute
+    data object Rewards : AiRoute
+    data object AvatarPicker : AiRoute
     object Profile : AiRoute
 }
 
@@ -60,7 +66,18 @@ private fun deckNameOf(context: Context, deck: hr.azzi.socialgames.alias.ai.AIDe
 }
 
 @Composable
-fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
+fun AiChallengeApp(
+    initialChallengeId: String?,
+    /**
+     * The Arena's side of the player, so the hub opens the same profile the Arena does.
+     *
+     * One profile, whichever door you came through: two screens describing the same
+     * person disagree the moment one of them draws a letter where the other draws the
+     * chosen face.
+     */
+    arenaProfile: hr.azzi.socialgames.alias.arena.ArenaProfileStore,
+    onExit: () -> Unit,
+) {
     val context = LocalContext.current
     val scope = rememberCoroutineScope()
 
@@ -298,11 +315,33 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             onClose = { popToHub() },
         )
 
-        AiRoute.Profile -> AiProfileScreen(
-            username = username, uid = myUid, stats = stats, recent = recent,
+        AiRoute.Profile -> hr.azzi.socialgames.alias.arena.ui.ArenaPlayerProfileScreen(
+            profile = arenaProfile,
+            stats = stats,
+            recent = recent,
+            isAnonymous = !AuthService.isSignedIn,
+            onPickAvatar = { push(AiRoute.AvatarPicker) },
+            onOpenRewards = { push(AiRoute.Rewards) },
+            onOpenStandings = { push(AiRoute.Standings) },
             onOpenChallenge = { openChallenge(it) },
+            onSeeAll = { push(AiRoute.Profile) },
+            onSignIn = { launchSignIn() },
             onSignOut = { AuthService.signOut(); popToHub(); authVersion++ },
-            onDeleteAccount = { runDeleteAccount(reauthed = false) },
+            onClose = { pop() },
+        )
+
+        AiRoute.Standings ->
+            hr.azzi.socialgames.alias.arena.ui.ArenaStandingsScreen(arenaProfile)
+
+        AiRoute.Rewards ->
+            hr.azzi.socialgames.alias.arena.ui.ArenaRewardGridScreen(
+                arenaProfile.summary.collectAsState().value
+            )
+
+        AiRoute.AvatarPicker -> hr.azzi.socialgames.alias.arena.ui.ArenaAvatarPicker(
+            selected = hr.azzi.socialgames.alias.arena.AliasAvatar
+                .named(arenaProfile.avatar.collectAsState().value),
+            onPick = { scope.launch { arenaProfile.setAvatar(it.id) } },
             onClose = { pop() },
         )
     }

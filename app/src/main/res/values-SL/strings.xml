@@ -679,7 +679,6 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="arena_profile_percentile">Najboljših %1$d%% od %2$d igralcev</string>
     <string name="arena_profile_guest_title">Ohrani napredek</string>
     <string name="arena_profile_guest_body">Igraš kot gost. Prijavi se, da tvoj XP in uvrstitev preživita ponovno namestitev.</string>
-    <string name="arena_profile_guest_cta">Prijava z Apple ID</string>
     <string name="arena_reward_grid_title">Nagrade</string>
     <string name="arena_reward_info_title">NAGRADA NA VSAKI STOPNJI</string>
     <string name="arena_reward_info_sub">Avatar vsako stopnjo · komplet vsakih 5</string>
@@ -709,4 +708,5 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="arena_avatar_title">Izberi avatar</string>
     <string name="arena_avatar_subtitle">Pritisni avatar za takojšnjo uporabo</string>
     <string name="arena_avatar_done">Končano</string>
+    <string name="ai_profile_empty">Še ni dvobojev — izzovi prijatelja!</string>
 </resources>

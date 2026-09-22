@@ -57,17 +57,6 @@ fun AiProfileScreen(
     onSignOut: () -> Unit,
     onDeleteAccount: () -> Unit,
     onClose: () -> Unit,
-    /**
-     * The Arena's half of this profile, when there is one.
-     *
-     * One profile, whichever door you came through. iOS briefly had two describing the
-     * same person and they disagreed about the avatar; null here simply means the caller
-     * has no Arena state to show, not that a second profile exists.
-     */
-    arena: hr.azzi.socialgames.alias.arena.ArenaProfileStore? = null,
-    onPickAvatar: () -> Unit = {},
-    onOpenRewards: () -> Unit = {},
-    onOpenStandings: () -> Unit = {},
 ) {
     var confirmDelete by remember { mutableStateOf(false) }
     BrandBackground {
@@ -78,25 +67,8 @@ fun AiProfileScreen(
             }
             Column(Modifier.padding(20.dp), horizontalAlignment = Alignment.CenterHorizontally,
                 verticalArrangement = Arrangement.spacedBy(14.dp)) {
-                // The chosen avatar, not an initial: it is picked here, worn on every
-                // Arena board, and a letter would be the one place it was missing.
-                if (arena != null) {
-                    hr.azzi.socialgames.alias.arena.ui.ArenaProfileIdentity(
-                        profile = arena,
-                        onPickAvatar = onPickAvatar,
-                        onOpenRewards = onOpenRewards,
-                    )
-                } else {
-                    Avatar(username, Alias.accent, 92)
-                }
+                Avatar(username, Alias.accent, 92)
                 Text("@$username", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 24.sp)
-
-                if (arena != null) {
-                    hr.azzi.socialgames.alias.arena.ui.ArenaProfileRanking(
-                        profile = arena,
-                        onOpenStandings = onOpenStandings,
-                    )
-                }
 
                 Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
                     Stat(stringResource(R.string.ai_wins), stats.wins, Alias.success, Modifier.weight(1f))

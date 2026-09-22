@@ -25,6 +25,7 @@ import hr.azzi.socialgames.alias.arena.LocalAppAppearance
 import hr.azzi.socialgames.alias.arena.ui.ArenaAvatarPicker
 import hr.azzi.socialgames.alias.arena.ui.ArenaFlowScreen
 import hr.azzi.socialgames.alias.arena.ui.ArenaModeScreen
+import hr.azzi.socialgames.alias.arena.ui.ArenaPlayerProfileScreen
 import hr.azzi.socialgames.alias.arena.ui.ArenaRewardGridScreen
 import hr.azzi.socialgames.alias.arena.ui.ArenaStandingsScreen
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
@@ -102,19 +103,19 @@ private fun ArenaRoot(store: ArenaStore, profile: ArenaProfileStore, onExit: () 
             onClose = { stage = ArenaStage.Mode },
         )
 
-        ArenaStage.Profile -> hr.azzi.socialgames.alias.ui.screens.ai.AiProfileScreen(
-            username = name,
-            uid = "",
+        ArenaStage.Profile -> ArenaPlayerProfileScreen(
+            profile = profile,
             stats = hr.azzi.socialgames.alias.ai.AIUserStats(0, 0, 0),
             recent = emptyList(),
-            onOpenChallenge = {},
-            onSignOut = {},
-            onDeleteAccount = {},
-            onClose = { stage = ArenaStage.Live },
-            arena = profile,
+            isAnonymous = hr.azzi.socialgames.alias.arena.ArenaProfile.isGuestName(name),
             onPickAvatar = { stage = ArenaStage.AvatarPicker },
             onOpenRewards = { stage = ArenaStage.Rewards },
             onOpenStandings = { stage = ArenaStage.Standings },
+            onOpenChallenge = {},
+            onSeeAll = {},
+            onSignIn = {},
+            onSignOut = {},
+            onClose = { stage = ArenaStage.Live },
         )
 
         ArenaStage.Standings -> ArenaStandingsScreen(profile)

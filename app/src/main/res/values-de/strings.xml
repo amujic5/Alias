@@ -672,7 +672,6 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="arena_profile_percentile">Top %1$d%% von %2$d Spielern</string>
     <string name="arena_profile_guest_title">Fortschritt sichern</string>
     <string name="arena_profile_guest_body">Du spielst als Gast. Melde dich an, damit XP und Rang eine Neuinstallation überstehen.</string>
-    <string name="arena_profile_guest_cta">Mit Apple anmelden</string>
     <string name="arena_reward_grid_title">Belohnungen</string>
     <string name="arena_reward_info_title">BELOHNUNG PRO LEVEL</string>
     <string name="arena_reward_info_sub">Avatar pro Level · Deck alle 5</string>
@@ -702,4 +701,5 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="arena_avatar_title">Avatar wählen</string>
     <string name="arena_avatar_subtitle">Tippe einen Avatar an — sofort übernommen</string>
     <string name="arena_avatar_done">Fertig</string>
+    <string name="ai_profile_empty">Noch keine Spiele — fordere einen Freund heraus!</string>
 </resources>
