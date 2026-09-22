@@ -12,6 +12,41 @@ class AliasApp : Application() {
         // The level, from launch rather than from the first visit to the AI section: the
         // deck screen gates on it and is two taps from Home. See `ArenaIdentity`.
         runCatching { hr.azzi.socialgames.alias.arena.ArenaIdentity.start(this) }
+        runCatching { watchForeground() }
+    }
+
+    /**
+     * Re-reads the level whenever the app comes back to the foreground.
+     *
+     * The Android half of what iOS does in `applicationDidBecomeActive`. Without it the
+     * level is only ever as current as the last cold start, and a deck earned on another
+     * phone — or a level crossed while this one was backgrounded — stays locked here.
+     *
+     * Counted rather than taken from `ProcessLifecycleOwner`, which would mean another
+     * dependency for one callback. Zero to one started activities is the foreground; a
+     * rotation goes one to one and does not fire.
+     */
+    private fun watchForeground() {
+        registerActivityLifecycleCallbacks(object : ActivityLifecycleCallbacks {
+            private var started = 0
+
+            override fun onActivityStarted(activity: android.app.Activity) {
+                if (started++ == 0) {
+                    hr.azzi.socialgames.alias.arena.ArenaIdentity.refresh()
+                    hr.azzi.socialgames.alias.notifications.AliasNotifications.refresh(this@AliasApp)
+                }
+            }
+
+            override fun onActivityStopped(activity: android.app.Activity) {
+                if (started > 0) started--
+            }
+
+            override fun onActivityCreated(a: android.app.Activity, b: android.os.Bundle?) = Unit
+            override fun onActivityResumed(a: android.app.Activity) = Unit
+            override fun onActivityPaused(a: android.app.Activity) = Unit
+            override fun onActivitySaveInstanceState(a: android.app.Activity, b: android.os.Bundle) = Unit
+            override fun onActivityDestroyed(a: android.app.Activity) = Unit
+        })
     }
 
     /**
