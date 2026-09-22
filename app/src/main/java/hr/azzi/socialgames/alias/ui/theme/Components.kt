@@ -38,7 +38,7 @@ fun PillButton(
     val bg = when (kind) {
         PillKind.Primary -> Alias.accent
         PillKind.Light -> Alias.surface
-        PillKind.Dark -> Alias.textPrimary
+        PillKind.Dark -> Alias.darkFill
     }
     val fg = when (kind) {
         PillKind.Primary -> Alias.onAccent

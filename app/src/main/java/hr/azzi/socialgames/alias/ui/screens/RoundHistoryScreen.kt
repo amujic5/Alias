@@ -196,7 +196,7 @@ private fun RoundCard(
                 horizontalArrangement = Arrangement.spacedBy(8.dp, Alignment.CenterHorizontally),
             ) {
                 Box(
-                    Modifier.size(28.dp).clip(CircleShape).background(Alias.textPrimary),
+                    Modifier.size(28.dp).clip(CircleShape).background(Alias.darkFill),
                     contentAlignment = Alignment.Center,
                 ) {
                     Icon(Icons.Filled.PlayArrow, null, tint = Color.White, modifier = Modifier.size(16.dp))

@@ -258,7 +258,7 @@ private fun Thumbnail(path: String, teamName: String, modifier: Modifier, onPlay
     }
 
     Box(
-        modifier.clip(RoundedCornerShape(12.dp)).background(Alias.textPrimary).clickable { onPlay() },
+        modifier.clip(RoundedCornerShape(12.dp)).background(Alias.darkFill).clickable { onPlay() },
     ) {
         frame?.let {
             Image(it.asImageBitmap(), null, Modifier.fillMaxSize(), contentScale = ContentScale.Crop)

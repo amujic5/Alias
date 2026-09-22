@@ -39,6 +39,16 @@ object Alias {
      */
     val onAccent = Color(0xFF0E1726)
 
+    /**
+     * A solid dark disc or pill, with white on it. Fixed, like [onAccent].
+     *
+     * Its own name because the alternative is what went wrong: `textPrimary` was used as
+     * a fill wherever something wanted to be dark, which was harmless while ink was
+     * always dark, and became a white pill with white text on it the moment ink learned
+     * to invert.
+     */
+    val darkFill = Color(0xFF0E1726)
+
     // The adaptive half. Each of these is a role — what a card is painted, what a heading
     // is painted — and resolves against the appearance in force, so a screen that already
     // reads `Alias.surface` follows the System / Light / Dark switch without changing.

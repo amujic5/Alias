@@ -65,7 +65,18 @@ import hr.azzi.socialgames.alias.ui.theme.Alias
 import com.caverock.androidsvg.SVG
 import kotlinx.coroutines.delay
 
-private val FadedNumber = Color(0xFFDCE4EF)
+/**
+ * The round's countdown, drawn large behind the word.
+ *
+ * A pale wash on white by day. At night it cannot stay pale — on navy a near-white
+ * number reads as the loudest thing on the screen and the word in front of it stops
+ * being the point — so it is white held back to eighty per cent, which leaves the word
+ * at full strength clearly on top.
+ */
+private val FadedNumber: Color
+    @Composable get() =
+        if (hr.azzi.socialgames.alias.arena.isDarkTheme()) Color.White.copy(alpha = 0.80f)
+        else Color(0xFFDCE4EF)
 
 // Taboo play palette (Figma "14 Play - Taboo").
 private val TabooBg = Color(0xFF2A1E3F)

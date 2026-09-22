@@ -330,7 +330,7 @@ private fun ScoreRow(row: TeamRow) {
     Row(Modifier.fillMaxWidth().padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
         Box(
             Modifier.size(34.dp).clip(RoundedCornerShape(50))
-                .background(if (row.winner) Alias.accent else Alias.textPrimary),
+                .background(if (row.winner) Alias.accent else Alias.darkFill),
             contentAlignment = Alignment.Center,
         ) {
             Text("${row.rank}", color = if (row.winner) Alias.onAccent else Color.White,

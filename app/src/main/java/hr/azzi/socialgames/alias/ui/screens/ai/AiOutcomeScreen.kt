@@ -74,7 +74,7 @@ fun AiOutcomeScreen(
             CCard(Modifier.fillMaxWidth()) {
                 Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
                     Side(myName.ifBlank { "You" }, Alias.accent, myScore, "$myScore/$myTotal", true, Modifier.weight(1f))
-                    Box(Modifier.size(44.dp).clip(CircleShape).background(Alias.textPrimary), contentAlignment = Alignment.Center) {
+                    Box(Modifier.size(44.dp).clip(CircleShape).background(Alias.darkFill), contentAlignment = Alignment.Center) {
                         Text("VS", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 14.sp)
                     }
                     Side(challenge.creatorName, Alias.blue600, challenge.creatorScore, "${challenge.creatorScore}", false, Modifier.weight(1f))

@@ -131,7 +131,7 @@ private fun RankRow(rank: Int, p: AIChallengePlay, challenge: AIChallenge, myUid
     }
     val me = p.playerId == myUid
     Row(Modifier.fillMaxWidth().clickable { onClick() }.padding(16.dp), verticalAlignment = Alignment.CenterVertically) {
-        Box(Modifier.size(30.dp).clip(RoundedCornerShape(50)).background(Alias.textPrimary), contentAlignment = Alignment.Center) {
+        Box(Modifier.size(30.dp).clip(RoundedCornerShape(50)).background(Alias.darkFill), contentAlignment = Alignment.Center) {
             Text("$rank", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 13.sp)
         }
         Spacer(Modifier.size(12.dp))
