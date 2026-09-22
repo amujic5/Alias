@@ -195,6 +195,11 @@ fun AiChallengeApp(initialChallengeId: String?, onExit: () -> Unit) {
             onProfile = { push(AiRoute.Profile) },
             onSeeAll = { push(AiRoute.Profile) },
             onOpenChallenge = { openChallenge(it) },
+            onArena = {
+                context.startActivity(
+                    android.content.Intent(context, hr.azzi.socialgames.alias.ArenaActivity::class.java)
+                )
+            },
         )
 
         is AiRoute.Setup -> AiSetupScreen(

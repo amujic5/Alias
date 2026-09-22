@@ -59,6 +59,14 @@ fun AiHubScreen(
     onProfile: () -> Unit,
     onSeeAll: () -> Unit,
     onOpenChallenge: (AIChallenge) -> Unit,
+    /**
+     * The Arena, when it is on offer.
+     *
+     * Null takes the door away without shipping an app — the Arena signs a newcomer in
+     * anonymously and lets them play a round first, so unlike Challenge it is not gated
+     * behind signing in.
+     */
+    onArena: (() -> Unit)? = null,
 ) {
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding().verticalScroll(rememberScrollState())) {
@@ -70,6 +78,10 @@ fun AiHubScreen(
 
             Column(Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
                 if (isSignedIn) ProfileHeader(username, stats, onProfile) else JoinCard(onSignIn)
+
+                // Above the two mode cards, and bigger than them: those are things you
+                // can do, this is the thing the app wants you to do.
+                onArena?.let { hr.azzi.socialgames.alias.arena.ui.ArenaEntryCard(onClick = it) }
 
                 ActionCard("AI", Color(0xFFB9A7F6), stringResource(R.string.ai_practice_title),
                     stringResource(R.string.ai_practice_subtitle), locked = false, onClick = onPractice)

@@ -74,6 +74,8 @@
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".OnlineActivity" android:screenOrientation="portrait"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity android:name=".ArenaActivity" android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity
             android:name=".AIChallengeActivity"
             android:screenOrientation="portrait"

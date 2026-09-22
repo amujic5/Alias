@@ -9,6 +9,9 @@ class AliasApp : Application() {
         super.onCreate()
         runCatching { AppCheckSetup.install() }
         runCatching { Billing.start(this) }
+        // The level, from launch rather than from the first visit to the AI section: the
+        // deck screen gates on it and is two taps from Home. See `ArenaIdentity`.
+        runCatching { hr.azzi.socialgames.alias.arena.ArenaIdentity.start(this) }
     }
 
     /**
