@@ -424,7 +424,7 @@ fun DrawGuessVerdictDialog(word: String, onVerdict: (Boolean) -> Unit) {
                 .padding(16.dp)
                 .shadow(20.dp, RoundedCornerShape(28.dp), clip = false)
                 .clip(RoundedCornerShape(28.dp))
-                .background(Color.White)
+                .background(Alias.surface)
                 .padding(24.dp),
             horizontalAlignment = Alignment.CenterHorizontally,
         ) {

@@ -279,7 +279,7 @@ fun ResultsScreen(
 
             // Bottom bar
             Column(
-                Modifier.fillMaxWidth().shadow(20.dp).background(Color.White).padding(20.dp),
+                Modifier.fillMaxWidth().shadow(20.dp).background(Alias.surface).padding(20.dp),
             ) {
                 if (state.nextTeamName != null) {
                     Row(verticalAlignment = Alignment.CenterVertically) {

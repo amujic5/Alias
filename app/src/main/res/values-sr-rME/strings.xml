@@ -519,7 +519,7 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="settings_notif_arena">Podsetnici za Alias Arenu</string>
     <string name="settings_notif_night">Alias veče</string>
     <string name="settings_notif_denied_title">Obaveštenja su isključena</string>
-    <string name="settings_notif_denied_body">Uključi ih u podešavanjima iOS-a da dobijaš podsetnike iz Aliasa.</string>
+    <string name="settings_notif_denied_body">Uključi ih u podešavanjima uređaja da dobijaš podsetnike iz Aliasa.</string>
     <string name="settings_notif_open">Otvori podešavanja</string>
     <string name="notif_arena_title_1">Arena te traži 🏆</string>
     <string name="notif_arena_body_1">Dva dana bez runde. Jedna traje 60 sekundi — dođi po svoje mesto.</string>
@@ -567,7 +567,6 @@ Vaš zadatak je da prenesete suštinu hrvatske kulture kroz kreativne opise, sin
     <string name="arena_avatar_human_zoe">Zoe</string>
     <string name="arena_avatar_human_rex">Rex</string>
     <string name="arena_username_rule">Korisničko ime mora imati 3–15 slova ili brojeva, bez razmaka.</string>
-    <string name="arena_link_existing_account">Ovaj Apple ID već ima Alias nalog. Prijavi se s njim — anonimni napredak ne može da se spoji.</string>
     <string name="arena_promo_badge">NOVO · UŽIVO</string>
     <string name="arena_promo_subtitle">Brze runde. Pravi igrači.\nJedna ekipa nosi krunu.</string>
     <string name="arena_promo_playing">%1$d IGRA</string>

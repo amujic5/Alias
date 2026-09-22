@@ -510,7 +510,7 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="settings_notif_arena">Alias-Arena-Erinnerungen</string>
     <string name="settings_notif_night">Alias-Abend</string>
     <string name="settings_notif_denied_title">Mitteilungen sind aus</string>
-    <string name="settings_notif_denied_body">Aktiviere sie in den iOS-Einstellungen, um Erinnerungen von Alias zu erhalten.</string>
+    <string name="settings_notif_denied_body">Aktiviere sie in den Geräteeinstellungen, um Erinnerungen von Alias zu erhalten.</string>
     <string name="settings_notif_open">Einstellungen öffnen</string>
     <string name="notif_arena_title_1">Die Arena vermisst dich 🏆</string>
     <string name="notif_arena_body_1">Zwei Tage ohne Runde. Eine dauert 60 Sekunden — hol dir deinen Platz zurück.</string>
@@ -558,7 +558,6 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="arena_avatar_human_zoe">Zoe</string>
     <string name="arena_avatar_human_rex">Rex</string>
     <string name="arena_username_rule">Der Benutzername muss 3–15 Buchstaben oder Ziffern enthalten, ohne Leerzeichen.</string>
-    <string name="arena_link_existing_account">Diese Apple-ID hat bereits ein Alias-Konto. Melde dich damit an – anonymer Fortschritt lässt sich nicht zusammenführen.</string>
     <string name="arena_promo_badge">NEU · JETZT LIVE</string>
     <string name="arena_promo_subtitle">Schnelle Runden. Echte Gegner.\nEin Team holt die Krone.</string>
     <string name="arena_promo_playing">%1$d SPIELEN</string>

@@ -54,7 +54,7 @@ fun EditAnswersScreen(
     val correct = words.filter { it.isCorrect }.sumOf { it.points }
     val skip = words.count { !it.isCorrect }
 
-    Column(Modifier.fillMaxSize().background(Color.White)) {
+    Column(Modifier.fillMaxSize().background(Alias.surface)) {
         // Blue header
         Box(Modifier.fillMaxWidth().background(Alias.brandGradient)) {
             Row(Modifier.fillMaxWidth().statusBarsPadding().padding(start = 6.dp, top = 6.dp, bottom = 12.dp),
@@ -101,7 +101,7 @@ fun EditAnswersScreen(
             }
         }
 
-        Row(Modifier.fillMaxWidth().background(Color.White).navigationBarsPadding().padding(20.dp),
+        Row(Modifier.fillMaxWidth().background(Alias.surface).navigationBarsPadding().padding(20.dp),
             horizontalArrangement = Arrangement.spacedBy(14.dp)) {
             Box(Modifier.weight(1f)) { PillButton(stringResource(R.string.cancel), PillKind.Dark, onClick = onCancel) }
             Box(Modifier.weight(1f)) { PillButton(stringResource(R.string.save), PillKind.Primary, onClick = onSave) }

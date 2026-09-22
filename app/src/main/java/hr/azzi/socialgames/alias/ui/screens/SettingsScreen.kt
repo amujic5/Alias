@@ -311,7 +311,7 @@ private fun LanguagePickerOverlay(
 private fun LanguageCard(emoji: String, name: String, selected: Boolean, onClick: () -> Unit) {
     val shape = RoundedCornerShape(20.dp)
     Column(
-        Modifier.fillMaxWidth().height(120.dp).clip(shape).background(Color.White)
+        Modifier.fillMaxWidth().height(120.dp).clip(shape).background(Alias.surface)
             .border(if (selected) 3.dp else 0.dp, if (selected) Alias.accent else Color.Transparent, shape)
             .clickable { onClick() }.padding(16.dp),
         horizontalAlignment = Alignment.CenterHorizontally,

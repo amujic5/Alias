@@ -185,12 +185,12 @@ fun PlayScreen(
         label = "progress",
     )
 
-    Box(Modifier.fillMaxSize().background(if (taboo != null) TabooBg else Color.White)) {
+    Box(Modifier.fillMaxSize().background(if (taboo != null) TabooBg else Alias.surface)) {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
             // Top card: team + counts + pause
             Row(
                 Modifier.fillMaxWidth().padding(16.dp).shadow(12.dp, RoundedCornerShape(20.dp), clip = false)
-                    .clip(RoundedCornerShape(20.dp)).background(Color.White).padding(18.dp),
+                    .clip(RoundedCornerShape(20.dp)).background(Alias.surface).padding(18.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Column(Modifier.weight(1f)) {
@@ -396,7 +396,7 @@ private fun PauseSheet(
         Column(
             Modifier.fillMaxWidth().systemBarsPadding().padding(16.dp)
                 .shadow(20.dp, RoundedCornerShape(20.dp), clip = false)
-                .clip(RoundedCornerShape(20.dp)).background(Color.White).padding(18.dp),
+                .clip(RoundedCornerShape(20.dp)).background(Alias.surface).padding(18.dp),
         ) {
             Row(verticalAlignment = Alignment.CenterVertically) {
                 Column(Modifier.weight(1f)) {

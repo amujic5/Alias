@@ -94,7 +94,7 @@ private fun DeckCard(deck: BoardGame, onClick: () -> Unit) {
             .height(150.dp)
             .shadow(12.dp, CardShape, clip = false)
             .clip(CardShape)
-            .background(Color.White)
+            .background(Alias.surface)
             .clickable { onClick() },
     ) {
     Column(

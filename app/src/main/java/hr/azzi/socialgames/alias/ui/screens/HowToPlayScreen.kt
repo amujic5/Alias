@@ -67,7 +67,7 @@ fun HowToPlayScreen(onGotIt: () -> Unit) {
 
         Box(Modifier.fillMaxSize().systemBarsPadding().padding(24.dp), contentAlignment = Alignment.Center) {
             Column(
-                Modifier.fillMaxWidth().clip(RoundedCornerShape(28.dp)).background(Color.White)
+                Modifier.fillMaxWidth().clip(RoundedCornerShape(28.dp)).background(Alias.surface)
                     .padding(vertical = 26.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {

@@ -90,7 +90,7 @@ fun NewGameScreen(
             // Bottom bar: VS line + start
             val vs = teams.filter { it.playing }.joinToString("  VS  ") { it.teamName }
             Column(
-                Modifier.fillMaxWidth().shadow(20.dp).background(Color.White)
+                Modifier.fillMaxWidth().shadow(20.dp).background(Alias.surface)
                     .padding(horizontal = 20.dp, vertical = 14.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
             ) {
@@ -123,7 +123,7 @@ fun NewGameScreen(
 private fun TeamCard(team: Team, onToggle: () -> Unit, onClick: () -> Unit) {
     Row(
         Modifier.fillMaxWidth().shadow(10.dp, CardShape, clip = false).clip(CardShape)
-            .background(Color.White).clickable { onClick() }.padding(16.dp),
+            .background(Alias.surface).clickable { onClick() }.padding(16.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
         Column(Modifier.weight(1f)) {
@@ -134,7 +134,7 @@ private fun TeamCard(team: Team, onToggle: () -> Unit, onClick: () -> Unit) {
         }
         Box(
             Modifier.size(28.dp).clip(RoundedCornerShape(50))
-                .background(if (team.playing) Alias.accent else Color(0xFFE2E8F1))
+                .background(if (team.playing) Alias.accent else Alias.divider)
                 .clickable { onToggle() },
             contentAlignment = Alignment.Center,
         ) {

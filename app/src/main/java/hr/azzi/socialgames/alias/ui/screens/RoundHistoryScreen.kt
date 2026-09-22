@@ -126,7 +126,7 @@ private fun RoundCard(
         Modifier.fillMaxWidth()
             .shadow(10.dp, RoundedCornerShape(24.dp), clip = false)
             .clip(RoundedCornerShape(24.dp))
-            .background(Color.White)
+            .background(Alias.surface)
             .clickable { onPlay() }
             .padding(14.dp),
         verticalArrangement = Arrangement.spacedBy(8.dp),
