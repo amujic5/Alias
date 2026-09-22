@@ -68,15 +68,18 @@ import kotlinx.coroutines.delay
 /**
  * The round's countdown, drawn large behind the word.
  *
- * A pale wash on white by day. At night it cannot stay pale — on navy a near-white
- * number reads as the loudest thing on the screen and the word in front of it stops
- * being the point — so it is white held back to eighty per cent, which leaves the word
- * at full strength clearly on top.
+ * A pale wash on white by day. At night it cannot stay pale — on navy a near-white number
+ * reads as the loudest thing on the screen and the word in front of it stops being the
+ * point — so it is white held back to sixty per cent, which lets it read as a backdrop
+ * at the larger size rather than competing with the word at full strength on top of it.
  */
 private val FadedNumber: Color
     @Composable get() =
-        if (hr.azzi.socialgames.alias.arena.isDarkTheme()) Color.White.copy(alpha = 0.80f)
+        if (hr.azzi.socialgames.alias.arena.isDarkTheme()) Color.White.copy(alpha = 0.60f)
         else Color(0xFFDCE4EF)
+
+/** Big enough to read as the ground the word sits on, rather than a number beside it. */
+private val CountdownSize = 232.sp
 
 // Taboo play palette (Figma "14 Play - Taboo").
 private val TabooBg = Color(0xFF2A1E3F)
@@ -280,7 +283,7 @@ fun PlayScreen(
                     }
                 } else {
                     Text("$timeLeft", color = FadedNumber, fontFamily = Alias.display,
-                        fontWeight = FontWeight.ExtraBold, fontSize = 200.sp)
+                        fontWeight = FontWeight.ExtraBold, fontSize = CountdownSize)
                     Text(word, color = Alias.textPrimary, fontFamily = Alias.display,
                         fontWeight = FontWeight.ExtraBold, fontSize = 44.sp, textAlign = TextAlign.Center,
                         modifier = Modifier.padding(horizontal = 24.dp))
