@@ -1,6 +1,7 @@
 package hr.azzi.socialgames.alias.arena.ui
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.border
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -91,7 +92,7 @@ fun ArenaResultsScreen(
                 fontFamily = Alias.body, fontWeight = FontWeight.Black, fontSize = 15.sp,
                 color = Color.White.copy(alpha = 0.9f),
                 modifier = Modifier.clip(RoundedCornerShape(8.dp))
-                    .then(Modifier).padding(4.dp),
+                    .clickable(onClick = onLeave).padding(8.dp),
             )
         }
     }
