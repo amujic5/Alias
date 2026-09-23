@@ -1,5 +1,7 @@
 package hr.azzi.socialgames.alias.ui.screens.ai
 
+import androidx.compose.foundation.layout.width
+import hr.azzi.socialgames.alias.ui.theme.BackButton
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -81,8 +83,9 @@ fun AiSetupScreen(
 
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
-            Row(Modifier.fillMaxWidth().padding(start = 6.dp, top = 6.dp, end = 16.dp), verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+            Row(Modifier.fillMaxWidth().padding(start = 14.dp, top = 8.dp, end = 16.dp), verticalAlignment = Alignment.CenterVertically) {
+                BackButton(onBack)
+                Spacer(Modifier.width(10.dp))
                 DisplayText(title, 24)
                 Spacer(Modifier.weight(1f))
                 AvatarPill { showAvatarPicker = true }
@@ -212,7 +215,8 @@ private fun LanguagePickerOverlay(languages: List<AILanguage>, selected: AILangu
     Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.5f)).clickable(false) {}) {
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = onDismiss) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+                BackButton(onDismiss)
+                Spacer(Modifier.width(10.dp))
                 DisplayText(stringResource(R.string.ai_choose_language), 22)
             }
             Spacer(Modifier.height(8.dp))
@@ -292,7 +296,8 @@ private fun DeckPickerOverlay(selected: AIDeck, onDismiss: () -> Unit, onPick: (
     Box(Modifier.fillMaxSize().background(Color.Black.copy(alpha = 0.5f)).clickable(false) {}) {
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = onDismiss) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+                BackButton(onDismiss)
+                Spacer(Modifier.width(10.dp))
                 DisplayText(stringResource(R.string.ai_choose_deck), 22)
             }
             Spacer(Modifier.height(8.dp))

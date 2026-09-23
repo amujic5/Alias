@@ -1,5 +1,7 @@
 package hr.azzi.socialgames.alias.ui.screens.ai
 
+import androidx.compose.foundation.layout.width
+import hr.azzi.socialgames.alias.ui.theme.BackButton
 import android.content.Context
 import androidx.compose.foundation.background
 import androidx.compose.foundation.border
@@ -85,7 +87,8 @@ fun AvatarPickerOverlay(
     Box(Modifier.fillMaxSize().background(Color(0xFF0E1730)).clickable(false) {}) {
         Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
             Row(verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = onDismiss) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+                BackButton(onDismiss)
+                Spacer(Modifier.width(10.dp))
                 DisplayText(stringResource(R.string.ai_choose_avatar), 22)
             }
             Spacer(Modifier.height(8.dp))

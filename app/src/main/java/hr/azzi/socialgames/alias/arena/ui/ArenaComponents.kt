@@ -297,23 +297,7 @@ internal fun ArenaScreenHeader(title: String, onBack: () -> Unit) {
             .padding(horizontal = 10.dp, vertical = 8.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        // A disc rather than a bare glyph: white on the Arena backdrop is legible but
-        // easy to miss, and 40dp is a tap target rather than a 26dp guess at one.
-        Box(
-            Modifier
-                .size(40.dp)
-                .clip(CircleShape)
-                .background(Color.White.copy(alpha = 0.16f))
-                .clickable(onClick = onBack),
-            contentAlignment = Alignment.Center,
-        ) {
-            Icon(
-                androidx.compose.material.icons.Icons.AutoMirrored.Filled.ArrowBack,
-                contentDescription = null,
-                tint = Color.White,
-                modifier = Modifier.size(22.dp),
-            )
-        }
+        hr.azzi.socialgames.alias.ui.theme.BackButton(onBack)
         Spacer(Modifier.width(12.dp))
         Text(
             title,

@@ -1,5 +1,7 @@
 package hr.azzi.socialgames.alias.ui.screens.ai
 
+import androidx.compose.foundation.layout.width
+import hr.azzi.socialgames.alias.ui.theme.BackButton
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
@@ -46,8 +48,9 @@ fun AiPlayDetailScreen(play: AIChallengePlay, challenge: AIChallenge, onClose: (
     val rows = play.correctWords.map { it to true } + play.skippedWords.map { it to false }
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
-            Row(Modifier.padding(start = 6.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = onClose) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+            Row(Modifier.padding(start = 14.dp, top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                BackButton(onClose)
+                Spacer(Modifier.width(10.dp))
                 DisplayText(stringResource(R.string.ai_player_result, play.playerName), 22)
             }
 

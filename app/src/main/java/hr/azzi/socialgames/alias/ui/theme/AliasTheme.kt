@@ -1,5 +1,14 @@
 package hr.azzi.socialgames.alias.ui.theme
 
+import androidx.compose.ui.graphics.vector.ImageVector
+import androidx.compose.ui.draw.clip
+import androidx.compose.ui.Alignment
+import androidx.compose.material3.Icon
+import androidx.compose.material.icons.automirrored.filled.ArrowBack
+import androidx.compose.material.icons.Icons
+import androidx.compose.foundation.shape.CircleShape
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
@@ -131,6 +140,33 @@ fun AliasTheme(content: @Composable () -> Unit) {
 @Composable
 fun BrandBackground(modifier: Modifier = Modifier, content: @Composable () -> Unit) {
     Box(modifier.fillMaxSize().background(Alias.brandGradientAdaptive)) { content() }
+}
+
+/**
+ * The circled arrow every pushed screen in the AI section opens with.
+ *
+ * Each screen used to spell its own out — a bare `IconButton` with a white glyph — which
+ * is why they drifted: different sizes, and on the gradient nothing to separate the arrow
+ * from whatever is behind it. The disc gives it an edge and a 40dp target that does not
+ * depend on the glyph being large. Pass `icon` when the button quits rather than goes
+ * back; a round in progress means something different by leaving.
+ */
+@Composable
+fun BackButton(
+    onClick: () -> Unit,
+    icon: ImageVector = Icons.AutoMirrored.Filled.ArrowBack,
+    modifier: Modifier = Modifier,
+) {
+    Box(
+        modifier
+            .size(40.dp)
+            .clip(CircleShape)
+            .background(Color.White.copy(alpha = 0.16f))
+            .clickable(onClick = onClick),
+        contentAlignment = Alignment.Center,
+    ) {
+        Icon(icon, contentDescription = null, tint = Color.White, modifier = Modifier.size(22.dp))
+    }
 }
 
 // MARK: text helpers

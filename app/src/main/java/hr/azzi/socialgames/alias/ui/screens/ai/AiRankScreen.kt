@@ -1,5 +1,7 @@
 package hr.azzi.socialgames.alias.ui.screens.ai
 
+import androidx.compose.foundation.layout.width
+import hr.azzi.socialgames.alias.ui.theme.BackButton
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -56,8 +58,9 @@ fun AiRankScreen(
 
     BrandBackground {
         Column(Modifier.fillMaxSize().systemBarsPadding().verticalScroll(rememberScrollState())) {
-            Row(Modifier.padding(start = 6.dp, top = 6.dp), verticalAlignment = Alignment.CenterVertically) {
-                IconButton(onClick = onClose) { Icon(Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White) }
+            Row(Modifier.padding(start = 14.dp, top = 8.dp), verticalAlignment = Alignment.CenterVertically) {
+                BackButton(onClose)
+                Spacer(Modifier.width(10.dp))
                 DisplayText(stringResource(R.string.ai_leaderboard), 22)
             }
             Column(Modifier.padding(20.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {

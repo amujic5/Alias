@@ -1,5 +1,6 @@
 package hr.azzi.socialgames.alias.arena.ui
 
+import hr.azzi.socialgames.alias.ui.theme.BackButton
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Arrangement
@@ -115,10 +116,7 @@ private fun Header(isAnonymous: Boolean, onSignOut: () -> Unit, onClose: () -> U
         Modifier.fillMaxWidth().padding(horizontal = 14.dp, vertical = 10.dp),
         verticalAlignment = Alignment.CenterVertically,
     ) {
-        Icon(
-            Icons.AutoMirrored.Filled.ArrowBack, null, tint = Color.White,
-            modifier = Modifier.size(26.dp).clickable(onClick = onClose),
-        )
+        BackButton(onClose)
         Spacer(Modifier.size(12.dp))
         Text(
             stringResource(R.string.arena_profile_title),

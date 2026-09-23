@@ -1,5 +1,6 @@
 package hr.azzi.socialgames.alias.ui.screens.ai
 
+import hr.azzi.socialgames.alias.ui.theme.BackButton
 import android.Manifest
 import android.content.pm.PackageManager
 import androidx.activity.compose.rememberLauncherForActivityResult
@@ -124,7 +125,7 @@ fun AiExplainScreen(
         Box(Modifier.fillMaxSize()) {
             Column(Modifier.fillMaxSize().systemBarsPadding().padding(20.dp)) {
                 Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically) {
-                    IconButton(onClick = onClose) { Icon(Icons.Filled.Close, null, tint = Color.White) }
+                    BackButton(onClose, Icons.Filled.Close)
                     Spacer(Modifier.weight(1f))
                     RingTimer(controller.remaining, config.totalSeconds)
                 }
