@@ -10,6 +10,7 @@ import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
+import androidx.compose.foundation.layout.navigationBarsPadding
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
@@ -27,6 +28,8 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateListOf
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
+import androidx.compose.runtime.rememberCoroutineScope
+import androidx.compose.runtime.rememberUpdatedState
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
@@ -47,6 +50,8 @@ import hr.azzi.socialgames.alias.arena.ArenaPeriod
 import hr.azzi.socialgames.alias.arena.ArenaProfileStore
 import hr.azzi.socialgames.alias.arena.ArenaStandingRow
 import hr.azzi.socialgames.alias.ui.theme.Alias
+import kotlinx.coroutines.Job
+import kotlinx.coroutines.launch
 
 /**
  * Who is ahead — today, this week, this month.
@@ -67,18 +72,27 @@ fun ArenaStandingsScreen(profile: ArenaProfileStore, onBack: () -> Unit) {
     var loading by remember { mutableStateOf(true) }
     var cursor by remember { mutableStateOf<DocumentSnapshot?>(null) }
     var loadingMore by remember { mutableStateOf(false) }
+    // The next page's read. Held here rather than run inside the scroll observer: that one
+    // restarts on every row scrolled, and a read cancelled mid-flight left `loadingMore`
+    // set for good — the board stopped growing wherever the finger happened to move
+    // while a page was loading.
+    val scope = rememberCoroutineScope()
+    var moreJob by remember { mutableStateOf<Job?>(null) }
 
     LaunchedEffect(Unit) { ArenaAnalytics.leaderboardShown() }
 
     // Keyed on both controls, so switching either cancels the read still in flight for
     // the old one instead of letting two land out of order.
     LaunchedEffect(period, mode) {
+        // A page still coming for the old board would be appended to the new one.
+        moreJob?.cancel()
+        loadingMore = false
         loading = true
         cursor = null
         val page = profile.standings(period)
         rows.clear()
         rows.addAll(page.rows)
-        cursor = page.next
+        cursor = page.next.takeIf { rows.size < MAX_ROWS }
         mine = profile.myStanding(period)
         loading = false
     }
@@ -89,7 +103,14 @@ fun ArenaStandingsScreen(profile: ArenaProfileStore, onBack: () -> Unit) {
         Column(Modifier.fillMaxSize()) {
             ArenaScreenHeader(stringResource(R.string.arena_standings_title), onBack)
             Column(
-                Modifier.fillMaxSize().padding(horizontal = 20.dp),
+                Modifier.fillMaxSize()
+                    // The hub does not pad for the system bars and the Arena does; inset
+                    // padding is consumed by whoever applies it first, so this adds nothing
+                    // in the Arena and keeps the gesture bar off the list — and off the
+                    // pinned row, which sat underneath it — in the hub.
+                    .navigationBarsPadding()
+                    .padding(horizontal = 20.dp)
+                    .padding(bottom = 8.dp),
                 verticalArrangement = Arrangement.spacedBy(14.dp),
             ) {
             ArenaModeSwitcher(mode, onChange = { profile.setMode(it) })
@@ -104,20 +125,26 @@ fun ArenaStandingsScreen(profile: ArenaProfileStore, onBack: () -> Unit) {
                     // Fetch the next page two rows from the bottom, so it is usually
                     // there before the scroll reaches it.
                     OnLastVisible(listState) { last ->
-                        if (!loadingMore && cursor != null && last >= rows.size - 2) {
+                        val after = cursor
+                        if (!loadingMore && after != null && last >= rows.size - 2) {
                             loadingMore = true
-                            val page = profile.standings(
-                                period = period,
-                                after = cursor,
-                                rankOffset = rows.size,
-                                // A tie that straddles the page boundary has to keep its
-                                // rank across it, and only this side knows what the
-                                // bottom of the page above scored.
-                                previous = rows.lastOrNull(),
-                            )
-                            rows.addAll(page.rows)
-                            cursor = page.next
-                            loadingMore = false
+                            moreJob = scope.launch {
+                                try {
+                                    val page = profile.standings(
+                                        period = period,
+                                        after = after,
+                                        rankOffset = rows.size,
+                                        // A tie that straddles the page boundary has to
+                                        // keep its rank across it, and only this side
+                                        // knows what the bottom of the page above scored.
+                                        previous = rows.lastOrNull(),
+                                    )
+                                    rows.addAll(page.rows)
+                                    cursor = page.next.takeIf { rows.size < MAX_ROWS }
+                                } finally {
+                                    loadingMore = false
+                                }
+                            }
                         }
                     }
                     StandingsList(rows, mine, listState)
@@ -129,6 +156,14 @@ fun ArenaStandingsScreen(profile: ArenaProfileStore, onBack: () -> Unit) {
 }
 
 /**
+ * How far down the board goes: the top hundred, still twenty to a page. Past that a list
+ * stops being a race anybody is reading, and every further page is twenty billed reads.
+ * A player below the line still sees their own place: that row is read on its own and
+ * pinned to the bottom.
+ */
+private const val MAX_ROWS = 100
+
+/**
  * Runs [block] whenever the last visible index changes.
  *
  * Extracted so the pagination reads as one thought rather than as three nested state
@@ -137,7 +172,7 @@ fun ArenaStandingsScreen(profile: ArenaProfileStore, onBack: () -> Unit) {
 @Composable
 private fun OnLastVisible(
     listState: androidx.compose.foundation.lazy.LazyListState,
-    block: suspend (Int) -> Unit,
+    block: (Int) -> Unit,
 ) {
     val last by remember {
         derivedStateOf { listState.layoutInfo.visibleItemsInfo.lastOrNull()?.index ?: 0 }
@@ -177,21 +212,35 @@ private fun StandingsList(
     mine: ArenaStandingRow?,
     listState: androidx.compose.foundation.lazy.LazyListState,
 ) {
-    val myIndex = remember(rows.size) { rows.indexOfFirst { it.isMe }.takeIf { it >= 0 } }
+    // Read through state rather than captured: the derivation below is remembered once,
+    // and a captured `mine` or index would keep answering for the first page and the
+    // first period long after either had changed.
+    val currentMine by rememberUpdatedState(mine)
+    val myIndex by remember(rows) {
+        derivedStateOf { rows.indexOfFirst { it.isMe }.takeIf { it >= 0 } }
+    }
 
     /**
      * A leaderboard whose whole point is "where am I" should never make you hunt for
      * yourself. If your row is on screen it speaks for itself; if it is off the top or
      * the bottom, it is held against that edge instead.
+     *
+     * On screen means all of it. A row cut in half by the edge is not one you can read,
+     * so until it is whole, the pinned copy stays.
      */
-    val myPosition by remember {
+    val myPosition by remember(listState) {
         derivedStateOf {
-            if (mine == null) return@derivedStateOf StandingPosition.ABSENT
+            if (currentMine == null) return@derivedStateOf StandingPosition.ABSENT
             val index = myIndex ?: return@derivedStateOf StandingPosition.BELOW
-            val visible = listState.layoutInfo.visibleItemsInfo
+            val layout = listState.layoutInfo
+            val visible = layout.visibleItemsInfo
             if (visible.isEmpty()) return@derivedStateOf StandingPosition.BELOW
+            val item = visible.firstOrNull { it.index == index }
             when {
-                index in visible.first().index..visible.last().index -> StandingPosition.VISIBLE
+                item != null && item.offset >= layout.viewportStartOffset &&
+                    item.offset + item.size <= layout.viewportEndOffset -> StandingPosition.VISIBLE
+                item != null -> if (item.offset < layout.viewportStartOffset) StandingPosition.ABOVE
+                    else StandingPosition.BELOW
                 index < visible.first().index -> StandingPosition.ABOVE
                 else -> StandingPosition.BELOW
             }
