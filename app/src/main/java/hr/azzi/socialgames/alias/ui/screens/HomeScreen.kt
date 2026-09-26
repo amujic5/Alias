@@ -229,9 +229,10 @@ fun HomeScreen(
                     onClick = onOnlinePlay,
                 ) { Badge(Color.White.copy(alpha = 0.22f)) { BadgeIcon(Icons.Filled.Public) } }
 
-                // Play with AI — pinned to the vertical centre (pink→orange gradient).
+                // Alias Arena — pinned to the vertical centre (pink→orange gradient). Opens
+                // the AI hub, where the Arena is the first card.
                 MenuButton(
-                    text = stringResource(R.string.play_with_ai),
+                    text = stringResource(R.string.home_alias_arena),
                     textColor = Color.White,
                     background = Brush.horizontalGradient(listOf(Color(0xFFF54A87), Color(0xFFFA8538))),
                     onClick = onAiChallenge,
