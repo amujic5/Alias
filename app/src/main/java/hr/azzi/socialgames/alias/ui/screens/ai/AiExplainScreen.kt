@@ -15,6 +15,7 @@ import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.heightIn
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
@@ -175,13 +176,12 @@ private fun Guessing(c: AiExplainController) {
     BoxWithConstraints(Modifier.fillMaxSize()) {
     val s = rememberCompactScale(maxHeight)
     Column(
-        Modifier.fillMaxSize().padding(top = 10.dp.compact(s)),
+        Modifier.fillMaxSize().padding(top = 4.dp.compact(s)),
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Spacer(Modifier.height(6.dp.compact(s)))
         Text(stringResource(R.string.ai_ai_clue), color = Color.White.copy(alpha = 0.6f), fontFamily = Alias.body,
             fontWeight = FontWeight.Black, fontSize = 12.sp.compact(s), letterSpacing = 3.sp)
-        Spacer(Modifier.height(14.dp.compact(s)))
+        Spacer(Modifier.height(8.dp.compact(s)))
         AutoShrinkText(
             text = if (c.clue.isEmpty()) "…" else "“${c.clue}”",
             maxFontSize = 23.sp.compact(s),
@@ -193,7 +193,7 @@ private fun Guessing(c: AiExplainController) {
             modifier = Modifier.padding(horizontal = 6.dp),
         )
 
-        Spacer(Modifier.height(18.dp.compact(s)))
+        Spacer(Modifier.height(10.dp.compact(s)))
 
         // Status pill
         Row(
@@ -206,13 +206,14 @@ private fun Guessing(c: AiExplainController) {
                 color = if (c.listening) Gold else Color.White, fontFamily = Alias.body,
                 fontWeight = FontWeight.SemiBold, fontSize = 13.sp.compact(s))
         }
-        Spacer(Modifier.height(16.dp.compact(s)))
-        BotAvatar(bot, Modifier.size(180.dp.compact(s)))
-        Spacer(Modifier.height(12.dp.compact(s)))
+        Spacer(Modifier.height(8.dp.compact(s)))
+        BotAvatar(bot, Modifier.size(160.dp.compact(s)))
+        Spacer(Modifier.height(4.dp.compact(s)))
 
         // Mic orb
         Box(
-            Modifier.size(180.dp.compact(s)).clickable { c.answerNow() },
+            // As big as the widest ring (168) and no bigger — the old 180 was dead space.
+            Modifier.size(168.dp.compact(s)).clickable { c.answerNow() },
             contentAlignment = Alignment.Center,
         ) {
             if (c.listening) {
@@ -229,32 +230,37 @@ private fun Guessing(c: AiExplainController) {
             }
         }
 
-        Spacer(Modifier.height(14.dp.compact(s)))
+        Spacer(Modifier.height(6.dp.compact(s)))
         DisplayText(
             if (c.listening) stringResource(R.string.ai_youre_guessing) else stringResource(R.string.ai_tap_mic_answer),
             18.compactSp(s),
         )
         if (c.listening && c.transcript.isNotEmpty()) {
-            Spacer(Modifier.height(10.dp.compact(s)))
+            Spacer(Modifier.height(6.dp.compact(s)))
             Text(c.transcript, color = Gold, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold,
                 fontSize = 26.sp.compact(s), maxLines = 1)
         }
 
-        Spacer(Modifier.weight(1f))
+        // Keeps the controls at the bottom when there is room, and gives way when there is
+        // not — a fixed gap here is what pushed Skip off the bottom of shorter screens.
+        Spacer(Modifier.weight(1f).heightIn(min = 8.dp))
 
         Row(horizontalArrangement = Arrangement.spacedBy(12.dp.compact(s))) {
             Chip(stringResource(R.string.ai_hear_again), s) { c.hearAgain() }
             Chip(stringResource(R.string.ai_new_clue), s) { c.newClue() }
         }
-        Spacer(Modifier.height(12.dp.compact(s)))
+        Spacer(Modifier.height(8.dp.compact(s)))
         Row(verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.spacedBy(18.dp)) {
             Text("✓ ${c.correctWords.size}", color = Alias.success, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp.compact(s))
             Text("» ${c.skippedWords.size}", color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 20.sp.compact(s))
         }
-        Spacer(Modifier.height(8.dp.compact(s)))
-        Text(stringResource(R.string.ai_skip_word), color = Color.White.copy(alpha = 0.9f), fontFamily = Alias.body,
-            fontWeight = FontWeight.SemiBold, fontSize = 16.sp.compact(s),
-            modifier = Modifier.clickable { c.reveal() }.padding(8.dp.compact(s)))
+        Spacer(Modifier.height(6.dp.compact(s)))
+        // A pill like the chips above, not bare text: on its own it read as a caption,
+        // and at the bottom edge it was easy to lose entirely.
+        Text(stringResource(R.string.ai_skip_word), color = Color.White, fontFamily = Alias.body,
+            fontWeight = FontWeight.Bold, fontSize = 15.sp.compact(s),
+            modifier = Modifier.clip(RoundedCornerShape(50)).background(Color.White.copy(alpha = 0.22f))
+                .clickable { c.reveal() }.padding(horizontal = 26.dp, vertical = 11.dp.compact(s)))
     }
     }
 }
