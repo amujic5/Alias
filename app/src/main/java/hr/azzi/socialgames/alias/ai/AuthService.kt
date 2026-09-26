@@ -15,14 +15,26 @@ object AuthService {
     private val db get() = FirebaseFirestore.getInstance()
 
     val uid: String? get() = auth.currentUser?.uid
-    val isSignedIn: Boolean get() = auth.currentUser != null
+
+    /**
+     * Signed in with an actual provider. Never true for the anonymous session the Arena
+     * opens: that one has [uid], but no account to sign out of, no username and no
+     * challenges — the same line iOS draws.
+     */
+    val isSignedIn: Boolean get() = auth.currentUser?.isAnonymous == false
     val displayName: String? get() = auth.currentUser?.displayName
 
-    /** A freshly created Firebase user has no username yet. */
+    /**
+     * A freshly created account has no username yet. Nor does a guest who just signed in:
+     * the link keeps their uid, and with it the generated "Guest4821", which is a
+     * placeholder rather than a handle. A guest who has not signed in is never asked.
+     */
     suspend fun needsUsername(): Boolean {
+        if (!isSignedIn) return false
         val id = uid ?: return false
         val name = loadName(id)
-        return name.isNullOrBlank() || name == "You"
+        return name.isNullOrBlank() || name == "You" ||
+            hr.azzi.socialgames.alias.arena.ArenaProfile.isGuestName(name)
     }
 
     suspend fun loadName(id: String): String? = runCatching {
@@ -41,7 +53,8 @@ object AuthService {
 
     /** Claims the username atomically. Throws if taken by someone else. */
     suspend fun setUsername(handle: String) {
-        val id = uid ?: throw IllegalStateException("not signed in")
+        // A handle claimed by an anonymous uid would be retired with nobody behind it.
+        val id = uid?.takeIf { isSignedIn } ?: throw IllegalStateException("not signed in")
         val trimmed = handle.trim()
         val lower = trimmed.lowercase()
         val unameRef = db.collection("usernames").document(lower)

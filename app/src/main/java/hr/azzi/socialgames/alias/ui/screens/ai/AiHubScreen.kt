@@ -85,7 +85,9 @@ fun AiHubScreen(
             Spacer(Modifier.height(8.dp))
 
             Column(Modifier.padding(horizontal = 20.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
-                if (isSignedIn || arenaProfile != null) {
+                // A guest gets the way in, not a profile: theirs is a generated name and
+                // nothing to manage, and the profile would only send them back to sign in.
+                if (isSignedIn) {
                     ProfileHeader(username, arenaProfile, onProfile)
                 } else {
                     JoinCard(onSignIn)

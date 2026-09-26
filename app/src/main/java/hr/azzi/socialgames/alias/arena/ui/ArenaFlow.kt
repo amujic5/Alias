@@ -195,7 +195,10 @@ fun ArenaFlowScreen(
     // The player's XP, streak and ranks only move when they are on the board, so that is
     // the one moment to re-read them.
     LaunchedEffect(boardLoaded) {
-        if (boardLoaded && board.any { it.isMe }) profile.refresh()
+        if (boardLoaded && board.any { it.isMe }) {
+            ArenaProfileStore.roundScored()
+            profile.refresh()
+        }
     }
 
     // XP only moves in the Arena, so this is the one screen a level-up can happen behind.

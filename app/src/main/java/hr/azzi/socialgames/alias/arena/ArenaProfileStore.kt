@@ -145,6 +145,9 @@ class ArenaProfileStore(app: Application) : AndroidViewModel(app) {
     /** Whether the bound account's profile has been read yet. */
     private var loaded = false
 
+    /** The [scoredRounds] this store's numbers already include. */
+    private var seenScoredRounds = scoredRounds
+
     /**
      * The three standings of one mode, kept for as long as the screen is open.
      *
@@ -248,6 +251,7 @@ class ArenaProfileStore(app: Application) : AndroidViewModel(app) {
 
     /** Re-reads everything, including the standings. After a round, and nowhere else. */
     suspend fun refresh() {
+        seenScoredRounds = scoredRounds
         if (!syncIdentity()) return
         loaded = true
         cachedStandings.clear()
@@ -264,6 +268,19 @@ class ArenaProfileStore(app: Application) : AndroidViewModel(app) {
     suspend fun refreshIfNeeded() {
         if (loaded) return
         refresh()
+    }
+
+    /**
+     * Re-reads if a round has been scored since this store last did.
+     *
+     * The Arena and the AI hub are two activities with a store each, and only the Arena's
+     * is there when the board lands. The hub's sits in the back stack holding the XP from
+     * before the round, and the profile opened from it would show that — so the hub calls
+     * this when it comes back to the front.
+     */
+    suspend fun catchUpIfScored() {
+        if (seenScoredRounds == scoredRounds) return
+        if (loaded) refresh() else { seenScoredRounds = scoredRounds; syncIdentity() }
     }
 
     fun setMode(next: ArenaMode) {
@@ -477,6 +494,13 @@ class ArenaProfileStore(app: Application) : AndroidViewModel(app) {
 
         fun install(store: ArenaProfileStore) { shared = store }
 
+        /** Rounds scored with this player on the board, in this process. See [catchUpIfScored]. */
+        @Volatile
+        private var scoredRounds = 0
+
+        /** The board has landed with this player on it: their XP and ranks have moved. */
+        fun roundScored() { scoredRounds++ }
+
         /**
          * The ids the scoring function writes to. Duplicated here rather than fetched,
          * because they are derived from the date: a client that computed them differently
@@ -523,17 +547,20 @@ class ArenaProfileStore(app: Application) : AndroidViewModel(app) {
 object ArenaProfile {
 
     /**
-     * A stable name for a guest, derived from the uid rather than stored.
+     * A stable name for a guest, derived from the uid: "Guest4821".
      *
      * So a guest whose seed write never landed still has something to be called, and is
-     * called the same thing on every screen and every board.
+     * called the same thing on every screen and every board. The same djb2 hash as iOS
+     * `ArenaProfile.guestName(for:)`, so one uid is one name on both platforms.
      */
     fun guestName(uid: String): String {
-        val digits = uid.filter { it.isDigit() }.takeLast(4)
-        val suffix = if (digits.length == 4) digits else (uid.hashCode().and(0x7FFF) % 10000)
-            .toString().padStart(4, '0')
-        return "Guest $suffix"
+        var hash = 5381uL
+        for (byte in uid.toByteArray(Charsets.UTF_8)) hash = hash * 33uL + byte.toUByte().toULong()
+        return String.format(Locale.US, "Guest%04d", (hash % 10_000uL).toLong())
     }
 
-    fun isGuestName(name: String): Boolean = name.startsWith("Guest ")
+    /** Whether a name was generated for a guest rather than chosen by its owner. */
+    fun isGuestName(name: String): Boolean = GUEST_NAME.matches(name)
+
+    private val GUEST_NAME = Regex("^Guest[0-9]{4}$")
 }

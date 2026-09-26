@@ -24,6 +24,9 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.stringResource
 import com.firebase.ui.auth.AuthUI
+import com.firebase.ui.auth.ErrorCodes
+import com.google.firebase.auth.FirebaseAuth
+import kotlinx.coroutines.tasks.await
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.ai.AIAnalytics
@@ -103,8 +106,18 @@ fun AiChallengeApp(
     var deleteRetryTick by remember { mutableIntStateOf(0) }
 
     val signInLauncher = rememberLauncherForActivityResult(FirebaseAuthUIActivityResultContract()) { result ->
+        val conflict = result.idpResponse?.error?.errorCode == ErrorCodes.ANONYMOUS_UPGRADE_MERGE_CONFLICT
         if (result.resultCode == android.app.Activity.RESULT_OK) {
             if (pendingDelete) { pendingDelete = false; deleteRetryTick++ } else authVersion++
+        } else if (conflict) {
+            // The Google account already has a user of its own, so the guest cannot become
+            // it. Take the account the player asked for; the guest's uid is left behind.
+            val credential = result.idpResponse?.credentialForLinking
+            pendingDelete = false
+            if (credential != null) scope.launch {
+                runCatching { FirebaseAuth.getInstance().signInWithCredential(credential).await() }
+                authVersion++
+            }
         } else {
             pendingDelete = false
         }
@@ -112,7 +125,11 @@ fun AiChallengeApp(
     fun launchSignIn() {
         val providers = listOf(AuthUI.IdpConfig.GoogleBuilder().build())
         signInLauncher.launch(
-            AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers).build()
+            AuthUI.getInstance().createSignInIntentBuilder().setAvailableProviders(providers)
+                // A guest from the Arena is linked rather than replaced, so the uid — and
+                // the level, rewards and standing on it — carries over to the account.
+                .enableAnonymousUsersAutoUpgrade()
+                .build()
         )
     }
 

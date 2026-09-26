@@ -3,9 +3,11 @@ package hr.azzi.socialgames.alias
 import android.content.Intent
 import android.os.Bundle
 import androidx.activity.viewModels
+import androidx.lifecycle.lifecycleScope
 import hr.azzi.socialgames.alias.ai.AIAnalytics
 import hr.azzi.socialgames.alias.ui.screens.ai.AiChallengeApp
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
+import kotlinx.coroutines.launch
 
 class AIChallengeActivity : BaseActivity() {
 
@@ -29,6 +31,12 @@ class AIChallengeActivity : BaseActivity() {
                 AiChallengeApp(initialChallengeId = id, arenaProfile = arenaProfile, onExit = { finish() })
             }
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        // Back from the Arena: the round just played moved the XP this hub shows.
+        lifecycleScope.launch { arenaProfile.catchUpIfScored() }
     }
 
     override fun onPostCreate(savedInstanceState: Bundle?) {

@@ -6,7 +6,9 @@ import android.util.Log
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.firestore.FieldValue
 import com.google.firebase.firestore.FirebaseFirestore
+import com.google.firebase.firestore.SetOptions
 import com.google.firebase.firestore.ListenerRegistration
 import com.google.firebase.firestore.Query
 import com.google.firebase.functions.FirebaseFunctions
@@ -250,6 +252,7 @@ class ArenaStore(app: Application) : AndroidViewModel(app) {
             // shown, and demanding a sign-in before they have seen a round is how you
             // lose them. The uid is real, it scores, and it can be upgraded later.
             runCatching { FirebaseAuth.getInstance().signInAnonymously().await() }
+                .onSuccess { result -> result.user?.uid?.let { seedGuestProfile(it) } }
                 .onFailure {
                     // Not swallowed. The Arena reads nothing that is not behind
                     // `request.auth != null`, so a failed sign-in does not degrade the
@@ -272,6 +275,30 @@ class ArenaStore(app: Application) : AndroidViewModel(app) {
         ArenaClock.sync()
         if (_round.value == null) loadCurrentRound()
         startTicking()
+    }
+
+    /**
+     * Gives a fresh guest a name, a country and the default avatar — iOS
+     * `seedGuestProfile`. The boards take the name from `users/{uid}`, so without this a
+     * guest plays under a blank row.
+     *
+     * `usernameLower` stays empty: a guest has claimed no handle, and reserving one for a
+     * uid that dies with the app would retire the name for good. Best-effort — the name is
+     * derived from the uid, so any screen can recompute it.
+     */
+    private suspend fun seedGuestProfile(uid: String) {
+        runCatching {
+            FirebaseFirestore.getInstance().collection("users").document(uid).set(
+                mapOf(
+                    "name" to ArenaProfile.guestName(uid),
+                    "usernameLower" to "",
+                    "country" to java.util.Locale.getDefault().country,
+                    "avatar" to AliasAvatar.DEFAULT.id,
+                    "updatedAt" to FieldValue.serverTimestamp(),
+                ),
+                SetOptions.merge(),
+            ).await()
+        }.onFailure { Log.w(TAG, "guest profile seed failed: ${it.message}") }
     }
 
     /** Stops the clock. The rounds carry on without us. */

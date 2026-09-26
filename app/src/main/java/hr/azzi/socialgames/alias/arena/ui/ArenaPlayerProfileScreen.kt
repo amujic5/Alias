@@ -101,10 +101,12 @@ fun ArenaPlayerProfileScreen(
                     fontFamily = Alias.display, fontSize = 28.sp, color = Color.White,
                     maxLines = 1, overflow = TextOverflow.Ellipsis,
                 )
+                // Right under the name it would replace: signing in is what turns
+                // "Guest4821" into a handle, so that is where the offer belongs.
+                if (isAnonymous) GuestCard(onSignIn)
                 ArenaProfileRanking(profile, onOpenStandings)
                 MatchRecord(stats)
                 RecentSection(recent, onOpenChallenge, onSeeAll)
-                if (isAnonymous) GuestCard(onSignIn)
             }
         }
     }
