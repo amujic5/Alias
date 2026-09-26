@@ -55,14 +55,23 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
 import hr.azzi.socialgames.alias.Service.SocialRegion
+import hr.azzi.socialgames.alias.arena.isDarkTheme
 import hr.azzi.socialgames.alias.ui.theme.Alias
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
-private val CardBorder = Color(0xFFDCEBFB)
-private val FollowBg = Color(0xFFF1F5FB)
-private val ShareBg = Color(0xFFF7FAFF)
-private val ShareBorder = Color(0xFFE9EEF6)
+// The pale fills are the light card's. At night the ink on them turns white, so they
+// become a faint white wash on the navy card instead of staying pale under white text.
+private val CardBorder: Color
+    @Composable get() = if (isDarkTheme()) Color.White.copy(alpha = 0.14f) else Color(0xFFDCEBFB)
+private val FollowBg: Color
+    @Composable get() = if (isDarkTheme()) Color.White.copy(alpha = 0.08f) else Color(0xFFF1F5FB)
+private val ShareBg: Color
+    @Composable get() = if (isDarkTheme()) Color.White.copy(alpha = 0.08f) else Color(0xFFF7FAFF)
+private val ShareBorder: Color
+    @Composable get() = if (isDarkTheme()) Color.White.copy(alpha = 0.12f) else Color(0xFFE9EEF6)
+private val ShareBubble: Color
+    @Composable get() = if (isDarkTheme()) Color.White.copy(alpha = 0.14f) else Color.White
 private val AliasTop = Color(0xFFE9F1FF)
 private val AliasBottom = Color(0xFFEEEAFF)
 private val AliasBorder = Color(0xFFDBE7FF)
@@ -124,14 +133,14 @@ fun ReplayReadyCard(
             ActionRow(
                 height = 40.dp, background = null, solid = Alias.accent, border = null,
                 icon = Icons.Filled.PlayArrow, iconTint = Color.White, bubble = Alias.onAccent,
-                title = stringResource(R.string.replay_play_video), titleColor = Alias.textPrimary,
+                title = stringResource(R.string.replay_play_video), titleColor = Alias.onAccent,
                 note = null, noteColor = Alias.textSecondary, chevron = Color(0xFF8A7226),
                 onClick = onPlay,
             )
             Spacer(Modifier.height(6.dp))
             ActionRow(
                 height = 46.dp, background = null, solid = ShareBg, border = ShareBorder,
-                icon = Icons.Filled.IosShare, iconTint = Alias.textPrimary, bubble = Color.White,
+                icon = Icons.Filled.IosShare, iconTint = Alias.textPrimary, bubble = ShareBubble,
                 title = stringResource(R.string.replay_share_video), titleColor = Alias.textPrimary,
                 note = stringResource(R.string.replay_share_video_note), noteColor = Alias.textSecondary,
                 chevron = Chevron, onClick = onShare,
@@ -274,7 +283,8 @@ private fun Thumbnail(path: String, teamName: String, modifier: Modifier, onPlay
                 .background(Color.White.copy(alpha = 0.95f)),
             contentAlignment = Alignment.Center,
         ) {
-            Icon(Icons.Filled.PlayArrow, null, tint = Alias.textPrimary, modifier = Modifier.size(20.dp))
+            // Fixed dark: the disc is white in both appearances.
+            Icon(Icons.Filled.PlayArrow, null, tint = Alias.darkFill, modifier = Modifier.size(20.dp))
         }
 
         Box(

@@ -423,7 +423,7 @@ private fun CodeBoxes(code: String, count: Int = 6, onChange: (String) -> Unit) 
                 val ch = code.getOrNull(i)?.toString() ?: ""
                 val focused = i == code.length.coerceAtMost(count - 1) && code.length <= i
                 Box(
-                    Modifier.weight(1f).aspectRatio(0.82f).clip(RoundedCornerShape(14.dp)).background(Color.White)
+                    Modifier.weight(1f).aspectRatio(0.82f).clip(RoundedCornerShape(14.dp)).background(Alias.surface)
                         .then(if (i == code.length) Modifier.border(2.5.dp, Alias.accent, RoundedCornerShape(14.dp)) else Modifier),
                     contentAlignment = Alignment.Center,
                 ) { Text(ch, color = Alias.textPrimary, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 26.sp) }

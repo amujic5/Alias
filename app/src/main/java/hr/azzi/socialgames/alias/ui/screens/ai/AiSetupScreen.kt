@@ -249,7 +249,7 @@ private fun LanguageCard(emoji: String, name: String, selected: Boolean, onClick
 private fun ModeCard(badgeLabel: String, title: String, subtitle: String, badge: Color, selected: Boolean, onClick: () -> Unit) {
     val border = if (selected) Modifier.border(2.dp, Alias.accent, RoundedCornerShape(20.dp)) else Modifier
     androidx.compose.foundation.layout.Box(Modifier.fillMaxWidth().then(border)
-        .clip(RoundedCornerShape(20.dp)).background(Color.White).clickable { onClick() }.padding(16.dp)) {
+        .clip(RoundedCornerShape(20.dp)).background(Alias.surface).clickable { onClick() }.padding(16.dp)) {
         Row(verticalAlignment = Alignment.CenterVertically) {
             androidx.compose.foundation.layout.Box(Modifier.size(48.dp).clip(RoundedCornerShape(14.dp)).background(badge),
                 contentAlignment = Alignment.Center) { Text(badgeLabel, color = Color.White, fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold) }
@@ -259,7 +259,7 @@ private fun ModeCard(badgeLabel: String, title: String, subtitle: String, badge:
                 Text(subtitle, color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
             }
             androidx.compose.foundation.layout.Box(Modifier.size(22.dp).clip(RoundedCornerShape(50))
-                .background(if (selected) Alias.accent else Color(0xFFE2E8F1)))
+                .background(if (selected) Alias.accent else Alias.divider))
         }
     }
 }
