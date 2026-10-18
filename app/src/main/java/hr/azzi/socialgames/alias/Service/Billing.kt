@@ -45,6 +45,7 @@ object Billing {
         // After Dark. Deliberately not "game_alias_after_dark" — see BoardGame.productId.
         "after_dark",
         NoAds.PRODUCT_ID,
+        BlackFriday.PRODUCT_ID,
     )
 
     /**
@@ -54,10 +55,13 @@ object Billing {
      * follow the user into the real app.
      *
      * Easy Medium Hard is deliberately left out — it is being tested through the real
-     * checkout, and a deck that unlocks itself can't show whether that works.
+     * checkout, and a deck that unlocks itself can't show whether that works. So is the
+     * Black Friday bundle: owning it owns everything, and a debug build that owned it would
+     * never see the offer.
      */
     private val devUnlocked: Set<String> =
-        if (BuildConfig.DEBUG) productIds.toSet() - "easy_medium_hard" else emptySet()
+        if (BuildConfig.DEBUG) productIds.toSet() - "easy_medium_hard" - BlackFriday.PRODUCT_ID
+        else emptySet()
 
     private val _unlocked = MutableStateFlow(devUnlocked)
     /** Product IDs the user owns. */
@@ -66,6 +70,13 @@ object Billing {
     private val _prices = MutableStateFlow<Map<String, String>>(emptyMap())
     /** productId -> localized formatted price (e.g. "€2.99"). */
     val prices: StateFlow<Map<String, String>> = _prices.asStateFlow()
+
+    /** A price as Play quotes it: the string to show, and the number behind it. */
+    data class Price(val formatted: String, val amountMicros: Long, val currencyCode: String)
+
+    private val _offers = MutableStateFlow<Map<String, Price>>(emptyMap())
+    /** productId -> price with its amount, for sums like the Black Friday saving. */
+    val offers: StateFlow<Map<String, Price>> = _offers.asStateFlow()
 
     private val scope = CoroutineScope(SupervisorJob() + Dispatchers.Main)
     private val productDetails = mutableMapOf<String, ProductDetails>()
@@ -136,9 +147,14 @@ object Billing {
         val params = QueryProductDetailsParams.newBuilder().setProductList(products).build()
         val result = client.queryProductDetails(params)
         val priceMap = mutableMapOf<String, String>()
+        val offerMap = mutableMapOf<String, Price>()
         result.productDetailsList?.forEach { pd ->
             productDetails[pd.productId] = pd
-            pd.oneTimePurchaseOfferDetails?.formattedPrice?.let { priceMap[pd.productId] = it }
+            pd.oneTimePurchaseOfferDetails?.let { offer ->
+                priceMap[pd.productId] = offer.formattedPrice
+                offerMap[pd.productId] =
+                    Price(offer.formattedPrice, offer.priceAmountMicros, offer.priceCurrencyCode)
+            }
         }
         // A product Play doesn't return is the whole reason a deck shows no price: it is
         // still a draft, priceless in this country, or the build isn't one Play knows.
@@ -149,6 +165,7 @@ object Billing {
                 "${result.billingResult.debugMessage} priced=${priceMap.keys} missing=$missing",
         )
         if (priceMap.isNotEmpty()) _prices.value = priceMap
+        if (offerMap.isNotEmpty()) _offers.value = offerMap
     }
 
     private suspend fun queryPurchases() {
@@ -164,16 +181,26 @@ object Billing {
                 acknowledgeIfNeeded(p)
             }
         }
-        _unlocked.value = owned
+        _unlocked.value = expandingBundle(owned)
         persist()
     }
 
     private fun handlePurchase(p: Purchase) {
         if (p.purchaseState != Purchase.PurchaseState.PURCHASED) return
         acknowledgeIfNeeded(p)
-        _unlocked.value = _unlocked.value.toMutableSet().apply { addAll(p.products) }
+        _unlocked.value = expandingBundle(_unlocked.value + p.products)
         persist()
     }
+
+    /**
+     * The Black Friday bundle stands in for every other product.
+     *
+     * Expanded here, once, rather than taught to every padlock: each deck already asks
+     * [isUnlocked] and No Ads reads the same set, so a bundle owner finds all of them
+     * answering yes and nothing is left on sale.
+     */
+    private fun expandingBundle(ids: Set<String>): Set<String> =
+        if (BlackFriday.PRODUCT_ID in ids) ids + productIds else ids
 
     private fun acknowledgeIfNeeded(p: Purchase) {
         if (p.isAcknowledged) return
@@ -221,7 +248,7 @@ object Billing {
     private fun loadPersisted() {
         val stored = appContext?.getSharedPreferences(PREFS, Context.MODE_PRIVATE)
             ?.getStringSet(KEY_UNLOCKED, emptySet()) ?: emptySet()
-        if (stored.isNotEmpty()) _unlocked.value = stored.toSet() + devUnlocked
+        if (stored.isNotEmpty()) _unlocked.value = expandingBundle(stored.toSet() + devUnlocked)
     }
 
     private const val PREFS = "billing"

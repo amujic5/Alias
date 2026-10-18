@@ -735,4 +735,18 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="after_dark_to_climax">Još %1$d do vrhunca · tamo pogodak ×%2$d</string>
     <string name="after_dark_at_climax">Vrhunac · svaki pogodak ×%d</string>
     <string name="after_dark_bonus">%d bonus</string>
+
+    <!-- Black Friday bundle -->
+    <string name="bf_unlock_all">OTKLJUČAJ SVE!</string>
+    <string name="bf_includes">Svi paketi + zauvijek bez oglasa</string>
+    <string name="bf_total_value">Ukupna vrijednost</string>
+    <string name="bf_starts_in">Počinje za</string>
+    <string name="bf_ends_in">Završava za</string>
+    <string name="bf_days">Dana</string>
+    <string name="bf_hours">Sati</string>
+    <string name="bf_minutes">Min</string>
+    <string name="bf_available_soon">Uskoro dostupno</string>
+    <string name="bf_unlock_for">Otključaj za %1$s</string>
+    <string name="bf_unlock_everything">Otključaj sve</string>
+    <string name="bf_close">Zatvori</string>
 </resources>

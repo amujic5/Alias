@@ -21,7 +21,10 @@ data class AliasAvatar(
     /** The level this avatar is handed over at. Zero for the eight that start unlocked. */
     val unlockLevel: Int get() = LevelRewards.levelForAvatar(id)
 
-    val isUnlockedByLevel: Boolean get() = PlayerLevel.current >= unlockLevel
+    /** The Black Friday bundle counts as having climbed the whole ladder. */
+    val isUnlockedByLevel: Boolean
+        get() = hr.azzi.socialgames.alias.Service.BlackFriday.isOwned ||
+            PlayerLevel.current >= unlockLevel
 
     companion object {
         val ROBOT_BLUE = AliasAvatar("robot_blue", R.drawable.robot_blue, R.string.arena_avatar_robot_blue)

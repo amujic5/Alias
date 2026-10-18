@@ -24,6 +24,9 @@ import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
 class HomeActivity : BaseActivity() {
 
+    /** Times Home has been shown since it was created — see `BlackFriday.isDue`. */
+    private val appearances = androidx.compose.runtime.mutableIntStateOf(0)
+
     // Registered before the activity is RESUMED so the Play update flow can report back.
     private val updateLauncher = registerForActivityResult(
         ActivityResultContracts.StartIntentSenderForResult()
@@ -35,6 +38,9 @@ class HomeActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        if (BuildConfig.DEBUG) {
+            hr.azzi.socialgames.alias.Service.BlackFriday.forcedPhase = intent?.getStringExtra("bfForcePhase")
+        }
         JSONService.loadBoardGamesFromFile(this)
         // Gather UMP consent (GDPR/EEA) before any ad is requested; starts the Mobile
         // Ads SDK only once consent allows it. Mirrors the iOS AdsConsentManager.
@@ -55,6 +61,7 @@ class HomeActivity : BaseActivity() {
                     onShare = { shareApp() },
                     onAiChallenge = { startActivity(Intent(this, AIChallengeActivity::class.java)) },
                     onOnlinePlay = { startActivity(Intent(this, OnlineActivity::class.java)) },
+                    appearance = appearances.intValue.coerceAtLeast(1),
                 )
             }
         }
@@ -67,6 +74,7 @@ class HomeActivity : BaseActivity() {
 
     override fun onResume() {
         super.onResume()
+        appearances.intValue += 1
         // Re-filter the deck list in case the language was changed in Settings —
         // country ("local-theme") decks follow the selected language.
         JSONService.loadBoardGamesFromFile(this)

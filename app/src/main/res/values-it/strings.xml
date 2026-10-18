@@ -711,4 +711,18 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="after_dark_to_climax">Ancora %1$d all\'Apice · lì ×%2$d</string>
     <string name="after_dark_at_climax">Apice · ogni parola ×%d</string>
     <string name="after_dark_bonus">%d bonus</string>
+
+    <!-- Black Friday bundle -->
+    <string name="bf_unlock_all">SBLOCCA TUTTO!</string>
+    <string name="bf_includes">Tutti i pacchetti + niente pubblicità per sempre</string>
+    <string name="bf_total_value">Valore totale</string>
+    <string name="bf_starts_in">Inizia tra</string>
+    <string name="bf_ends_in">Finisce tra</string>
+    <string name="bf_days">Giorni</string>
+    <string name="bf_hours">Ore</string>
+    <string name="bf_minutes">Min</string>
+    <string name="bf_available_soon">Presto disponibile</string>
+    <string name="bf_unlock_for">Sblocca a %1$s</string>
+    <string name="bf_unlock_everything">Sblocca tutto</string>
+    <string name="bf_close">Chiudi</string>
 </resources>

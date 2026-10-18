@@ -64,6 +64,7 @@ import android.app.Activity
 import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.runtime.collectAsState
 import hr.azzi.socialgames.alias.Service.Billing
+import hr.azzi.socialgames.alias.Service.BlackFriday
 import hr.azzi.socialgames.alias.Service.NoAds
 import kotlinx.coroutines.delay
 import hr.azzi.socialgames.alias.BuildConfig
@@ -84,6 +85,8 @@ fun HomeScreen(
     onShare: () -> Unit,
     onAiChallenge: () -> Unit,
     onOnlinePlay: () -> Unit,
+    /** 1 for the first time Home is shown after it was created, counting up on each return. */
+    appearance: Int = 1,
 ) {
     val context = LocalContext.current
     // Subscribe to configuration so the whole screen recomposes when the UI language
@@ -98,8 +101,19 @@ fun HomeScreen(
      * Decided once per composition rather than watched, so a promo dismissed here does
      * not come straight back when something else recomposes the screen. See `ArenaPromo`.
      */
+    /**
+     * The Black Friday offer: once in the teaser week, and in the sale week when Home is
+     * created and on every fifth return. See `BlackFriday`. Decided synchronously for the
+     * first appearance, so it can outrank the Arena promo and the permission prompt below.
+     */
+    var showBlackFriday by remember { mutableStateOf(BlackFriday.isDue(context, 1)) }
+    LaunchedEffect(appearance) {
+        if (appearance > 1 && BlackFriday.isDue(context, appearance)) showBlackFriday = true
+    }
+
+    // Black Friday first: it is the one with a date on it.
     var showArenaPromo by remember {
-        mutableStateOf(hr.azzi.socialgames.alias.arena.ArenaPromo.isDue(context))
+        mutableStateOf(!showBlackFriday && hr.azzi.socialgames.alias.arena.ArenaPromo.isDue(context))
     }
     if (showArenaPromo) {
         LaunchedEffect(Unit) { hr.azzi.socialgames.alias.arena.ArenaPromo.recordShown(context) }
@@ -113,7 +127,7 @@ fun HomeScreen(
             },
             onDismiss = { showArenaPromo = false },
         )
-    } else {
+    } else if (!showBlackFriday) {
         // One interruption per launch. If the promo took this one, the permission prompt
         // waits for the next — two system-looking sheets stacked on a first launch is how
         // both of them get dismissed without being read.
@@ -132,10 +146,30 @@ fun HomeScreen(
     val removeAdsPrice = prices[NoAds.PRODUCT_ID]
     val activity = context as? Activity
 
+    // Re-read on every appearance: the window opens and closes at midnight, which a
+    // long-lived Home can cross.
+    val bfPhase = remember(appearance) { BlackFriday.phase() }
+    val bfOffered = !owned.contains(BlackFriday.PRODUCT_ID) && bfPhase != BlackFriday.Phase.None
+    val offers by Billing.offers.collectAsState()
+    if (showBlackFriday && bfOffered) {
+        LaunchedEffect(Unit) { BlackFriday.recordShown(context) }
+        BlackFridayDialog(
+            phase = bfPhase,
+            pricing = BlackFriday.pricing(offers),
+            bundlePrice = prices[BlackFriday.PRODUCT_ID],
+            // Bought, it closes by itself: `bfOffered` turns false with the entitlement.
+            onBuy = { activity?.let { Billing.launchPurchase(it, BlackFriday.PRODUCT_ID) } },
+            onDismiss = { showBlackFriday = false },
+        )
+    }
+
     // Shows the offer, then folds it away: expanded first, because a disc alone says nothing
     // about what it costs; folded after a few seconds, because the home screen belongs to the
     // buttons below it.
-    var removeAdsExpanded by remember { mutableStateOf(true) }
+    //
+    // Not in Black Friday week: that week belongs to the bundle, and the pill opened beside
+    // the chip would run into the gear.
+    var removeAdsExpanded by remember { mutableStateOf(!BlackFriday.isOffered()) }
     LaunchedEffect(adsRemoved) {
         if (!adsRemoved) {
             delay(5_000)
@@ -177,20 +211,32 @@ fun HomeScreen(
                     horizontalArrangement = Arrangement.SpaceBetween,
                     verticalAlignment = Alignment.CenterVertically,
                 ) {
-                    // The offer, opposite the gear. Owners never see it.
-                    if (!adsRemoved) {
-                        RemoveAdsPill(
-                            expanded = removeAdsExpanded,
-                            price = removeAdsPrice,
-                            onClick = {
-                                // It has said its piece either way — fold it now rather than
-                                // leaving it open behind the Play sheet.
-                                removeAdsExpanded = false
-                                activity?.let { Billing.launchPurchase(it, NoAds.PRODUCT_ID) }
-                            },
-                        )
-                    } else {
-                        Spacer(Modifier.size(1.dp))
+                    // The offers, opposite the gear. Owners never see them; Black Friday sits
+                    // beside Remove Ads, or in its place once the ads are gone.
+                    Row(
+                        Modifier.weight(1f, fill = false).padding(end = 16.dp),
+                        horizontalArrangement = Arrangement.spacedBy(10.dp),
+                        verticalAlignment = Alignment.CenterVertically,
+                    ) {
+                        if (!adsRemoved) {
+                            RemoveAdsPill(
+                                expanded = removeAdsExpanded,
+                                price = removeAdsPrice,
+                                onClick = {
+                                    // It has said its piece either way — fold it now rather than
+                                    // leaving it open behind the Play sheet.
+                                    removeAdsExpanded = false
+                                    activity?.let { Billing.launchPurchase(it, NoAds.PRODUCT_ID) }
+                                },
+                            )
+                        }
+                        if (bfOffered) {
+                            BlackFridayChip(
+                                height = 50.dp, fontSize = 17,
+                                modifier = Modifier.clickable { showBlackFriday = true },
+                            )
+                        }
+                        if (adsRemoved && !bfOffered) Spacer(Modifier.size(1.dp))
                     }
                     Box(
                         Modifier.size(50.dp).clip(CircleShape)

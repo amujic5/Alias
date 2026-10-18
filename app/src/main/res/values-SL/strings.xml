@@ -719,4 +719,18 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="after_dark_to_climax">Še %1$d do vrhunca · tam ×%2$d</string>
     <string name="after_dark_at_climax">Vrhunec · vsak zadetek ×%d</string>
     <string name="after_dark_bonus">%d bonus</string>
+
+    <!-- Black Friday bundle -->
+    <string name="bf_unlock_all">ODKLENI VSE!</string>
+    <string name="bf_includes">Vsi paketi + za vedno brez oglasov</string>
+    <string name="bf_total_value">Skupna vrednost</string>
+    <string name="bf_starts_in">Začne se čez</string>
+    <string name="bf_ends_in">Konča se čez</string>
+    <string name="bf_days">Dni</string>
+    <string name="bf_hours">Ur</string>
+    <string name="bf_minutes">Min</string>
+    <string name="bf_available_soon">Kmalu na voljo</string>
+    <string name="bf_unlock_for">Odkleni za %1$s</string>
+    <string name="bf_unlock_everything">Odkleni vse</string>
+    <string name="bf_close">Zapri</string>
 </resources>
