@@ -74,7 +74,7 @@ class PlayActivity : BaseActivity() {
         if (game._currentTeamIndex % 2 == 1) loadInterstitialAd2()
 
         setComposeContent {
-            AliasTheme {
+            AliasTheme(forceDark = game.isSegmented) {
                 PlayScreen(
                     game = game,
                     soundSystem = soundSystem,

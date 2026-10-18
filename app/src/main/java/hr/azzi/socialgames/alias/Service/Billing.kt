@@ -42,6 +42,8 @@ object Billing {
         "alias_nba", "alias_movies", "game_alias_who_am_i", "easy_medium_hard",
         // Draw & Guess. Deliberately not "game_draw_guess" — see BoardGame.productId.
         "draw_and_guess",
+        // After Dark. Deliberately not "game_alias_after_dark" — see BoardGame.productId.
+        "after_dark",
         NoAds.PRODUCT_ID,
     )
 

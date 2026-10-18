@@ -39,6 +39,19 @@ import hr.azzi.socialgames.alias.ui.theme.Overline
 import hr.azzi.socialgames.alias.ui.theme.PillButton
 import hr.azzi.socialgames.alias.ui.theme.PillKind
 
+/** How a row shows what its word does to the score. */
+enum class PointsStyle {
+    /** Every word is a flat point; a column of ones says nothing. */
+    Hidden,
+    /** Easy Medium Hard: the word's value, greyed out when skipped. */
+    Value,
+    /**
+     * After Dark: what the row does to the total — `+1`, `+2` from CLIMAX, or `−1` for a
+     * skip, since a skip costs the same whichever segment it came from.
+     */
+    Signed,
+}
+
 @Composable
 fun EditAnswersScreen(
     teamName: String,
@@ -46,8 +59,8 @@ fun EditAnswersScreen(
     onToggle: (Int, Boolean) -> Unit,
     onCancel: () -> Unit,
     onSave: () -> Unit,
-    /** Whether a word can be worth more than one — only then is its value worth showing. */
-    showsPoints: Boolean = false,
+    /** Whether, and how, a row shows what its word is worth. */
+    pointsStyle: PointsStyle = PointsStyle.Hidden,
 ) {
     // Read off the edits being made here, not off the game: the round is only written back
     // on Save, and the tally has to follow the switches in the meantime.
@@ -82,11 +95,18 @@ fun EditAnswersScreen(
                     Text(word.word, color = if (word.isCorrect) Alias.textPrimary else Alias.danger,
                         fontFamily = Alias.display, fontWeight = FontWeight.Bold, fontSize = 18.sp,
                         modifier = Modifier.weight(1f))
-                    if (showsPoints) {
-                        // A skipped word keeps its value on screen but greys out — it is not
-                        // being scored.
-                        PointsBadge(word.points, dimmed = !word.isCorrect)
-                        Spacer(Modifier.width(12.dp))
+                    when (pointsStyle) {
+                        PointsStyle.Hidden -> Unit
+                        PointsStyle.Value -> {
+                            // A skipped word keeps its value on screen but greys out — it is
+                            // not being scored.
+                            PointsBadge(word.points, dimmed = !word.isCorrect)
+                            Spacer(Modifier.width(12.dp))
+                        }
+                        PointsStyle.Signed -> {
+                            DeltaBadge(if (word.isCorrect) word.points else -1)
+                            Spacer(Modifier.width(12.dp))
+                        }
                     }
                     Switch(
                         checked = word.isCorrect,

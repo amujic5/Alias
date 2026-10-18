@@ -700,4 +700,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="arena_avatar_subtitle">Tocca un avatar per applicarlo subito</string>
     <string name="arena_avatar_done">Fatto</string>
     <string name="ai_profile_empty">Ancora nessuna partita — sfida un amico!</string>
+
+    <!-- After Dark -->
+    <string name="game_alias_after_dark">After Dark</string>
+    <string name="game_alias_after_dark_info">Menti maliziose. Riflessi pronti. Zero vergogna. 🌶️\n\nAlias Words: After Dark trasforma spiegazioni innocenti in conversazioni decisamente per adulti. Fate squadra con gli amici e descrivete la parola senza dirla, con indizi che non direste mai in società. Indovinatene il più possibile e lasciate il pudore fuori dalla porta.\n\nIndovinate tre parole nello stesso turno e raggiungete l\'APICE, dove ogni parola vale 2 punti. Pronti ad andare fino in fondo?</string>
+    <string name="after_dark_segment_spark">Scintilla</string>
+    <string name="after_dark_segment_attraction">Attrazione</string>
+    <string name="after_dark_segment_excitement">Eccitazione</string>
+    <string name="after_dark_segment_climax">Apice</string>
+    <string name="after_dark_to_climax">Ancora %1$d all\'Apice · lì ×%2$d</string>
+    <string name="after_dark_at_climax">Apice · ogni parola ×%d</string>
+    <string name="after_dark_bonus">%d bonus</string>
 </resources>

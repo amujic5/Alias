@@ -44,6 +44,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.alpha
 import androidx.compose.ui.draw.clip
 import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Color
@@ -57,6 +58,7 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import hr.azzi.socialgames.alias.R
+import hr.azzi.socialgames.alias.Models.AfterDarkSegment
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.Service.GameSettings
@@ -110,6 +112,12 @@ fun PlayScreen(
     // on as soon as the next word is drawn, and the mark has to carry the old one. Worth 1
     // on every deck that doesn't price its words, so nothing else has to know the difference.
     var wordPoints by remember { mutableIntStateOf(game.currentWordPoints) }
+    // After Dark: the segment of the card on screen, captured with it for the same reason.
+    // The climb itself is the round's and is read off the game whenever an answer lands.
+    val isAfterDark = game.isSegmented
+    var wordSegment by remember { mutableStateOf(game.currentWordSegment) }
+    // Bumped on every correct CLIMAX answer; each new value is one burst.
+    var climaxBursts by remember { mutableIntStateOf(0) }
     // Alias Junior words are "NNN-word": a picture (res/raw/junior_NNN) the guessers look
     // at, with the clean word shown to the explainer. For every other deck `junior` is null.
     val junior = remember(word) { juniorImageRes(context, word) }
@@ -121,6 +129,12 @@ fun PlayScreen(
     // one, and on a scored deck the only number that matters — four hard words are worth 11.
     var correctPoints by remember { mutableIntStateOf(0) }
     var skip by remember { mutableIntStateOf(0) }
+    val afterDarkLevel = remember(correctPoints) { game.afterDarkLevel }
+    val afterDarkHitsToClimax = remember(correctPoints) { game.afterDarkHitsToClimax }
+    // "2 skipped", and on After Dark what CLIMAX has paid on top: "2 skipped · 3 bonus".
+    val bonusSuffix = if (isAfterDark)
+        " · " + stringResource(R.string.after_dark_bonus, remember(correctPoints) { game.currentBonusPoints })
+    else ""
     var running by remember { mutableStateOf(false) }
     // True from the moment the whistle blows. The round is over then, but the screen stays up
     // while the clip is closed — and an answer marked in that window would score a word that
@@ -200,18 +214,22 @@ fun PlayScreen(
     )
 
     Box(Modifier.fillMaxSize().background(if (taboo != null) TabooBg else Alias.surface)) {
+        if (isAfterDark) AfterDarkBackdrop()
         Column(Modifier.fillMaxSize().systemBarsPadding()) {
             // Top card: team + counts + pause
             Row(
-                Modifier.fillMaxWidth().padding(16.dp).shadow(12.dp, RoundedCornerShape(20.dp), clip = false)
-                    .clip(RoundedCornerShape(20.dp)).background(Alias.surface).padding(18.dp),
+                Modifier.fillMaxWidth().padding(16.dp)
+                    .shadow(if (isAfterDark) 0.dp else 12.dp, RoundedCornerShape(20.dp), clip = false)
+                    .clip(RoundedCornerShape(20.dp))
+                    .background(if (isAfterDark) AfterDarkStyle.surface else Alias.surface).padding(18.dp),
                 verticalAlignment = Alignment.CenterVertically,
             ) {
                 Column(Modifier.weight(1f)) {
-                    Text(game.currentTeam.teamName, color = Alias.textPrimary,
+                    Text(game.currentTeam.teamName, color = if (isAfterDark) AfterDarkStyle.text else Alias.textPrimary,
                         fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = 22.sp)
-                    Text("$correctPoints ${stringResource(R.string.corrected)} · $skip ${stringResource(R.string.skipped)}",
-                        color = Alias.textSecondary, fontFamily = Alias.body, fontSize = 13.sp)
+                    Text("$correctPoints ${stringResource(R.string.corrected)} · $skip ${stringResource(R.string.skipped)}$bonusSuffix",
+                        color = if (isAfterDark) AfterDarkStyle.textMuted else Alias.textSecondary,
+                        fontFamily = Alias.body, fontSize = 13.sp)
                 }
                 Box(
                     Modifier.size(52.dp).clip(RoundedCornerShape(16.dp)).background(Alias.danger)
@@ -223,8 +241,13 @@ fun PlayScreen(
             // Progress bar
             Box(Modifier.fillMaxWidth().padding(horizontal = 16.dp).height(6.dp)
                 .clip(RoundedCornerShape(50))
-                .background(if (taboo != null) Color.White.copy(alpha = 0.16f) else Alias.divider)) {
-                Box(Modifier.fillMaxHeight().fillMaxWidth(frac).clip(RoundedCornerShape(50)).background(Alias.accent))
+                .background(when {
+                    taboo != null -> Color.White.copy(alpha = 0.16f)
+                    isAfterDark -> AfterDarkStyle.well
+                    else -> Alias.divider
+                })) {
+                Box(Modifier.fillMaxHeight().fillMaxWidth(frac).clip(RoundedCornerShape(50))
+                    .background(if (isAfterDark) AfterDarkStyle.timer else Alias.accent))
             }
 
             // Center: faded countdown + word (or Junior picture card / Taboo forbidden-words card)
@@ -246,6 +269,9 @@ fun PlayScreen(
                             hasFrontCamera = hasFrontCamera,
                             wordPoints = wordPoints.takeIf { game.isScored },
                         )
+                        // Filmed, the word lives on the stage's plate, and nothing can go
+                        // behind that without going behind the feed — so it plays over it.
+                        if (isAfterDark) AfterDarkClimaxBurst(climaxBursts, Modifier.align(Alignment.Center))
                         TimerBadge(
                             timeLeft,
                             Modifier.align(Alignment.TopEnd).padding(top = 4.dp, end = 8.dp),
@@ -282,11 +308,24 @@ fun PlayScreen(
                             modifier = Modifier.padding(horizontal = 24.dp))
                     }
                 } else {
-                    Text("$timeLeft", color = FadedNumber, fontFamily = Alias.display,
-                        fontWeight = FontWeight.ExtraBold, fontSize = CountdownSize)
-                    Text(word, color = Alias.textPrimary, fontFamily = Alias.display,
-                        fontWeight = FontWeight.ExtraBold, fontSize = 44.sp, textAlign = TextAlign.Center,
-                        modifier = Modifier.padding(horizontal = 24.dp))
+                    // Behind the word and the segment above it, so the burst frames them
+                    // instead of covering them.
+                    if (isAfterDark) AfterDarkClimaxBurst(climaxBursts, Modifier.align(Alignment.Center))
+                    Text("$timeLeft", color = if (isAfterDark) AfterDarkStyle.countdown else FadedNumber,
+                        fontFamily = Alias.display, fontWeight = FontWeight.ExtraBold, fontSize = CountdownSize)
+                    Column(horizontalAlignment = Alignment.CenterHorizontally) {
+                        // The After Dark segment sits right above the word, however many lines
+                        // the word takes. Hidden behind the sheet like the word's value would be,
+                        // but kept in the layout so the word does not jump when it appears.
+                        if (isAfterDark) {
+                            AfterDarkSegmentLabel(wordSegment, Modifier.alpha(if (showSheet) 0f else 1f))
+                            Spacer(Modifier.height(14.dp))
+                        }
+                        Text(word,
+                            color = if (isAfterDark) AfterDarkStyle.text else Alias.textPrimary, fontFamily = Alias.display,
+                            fontWeight = FontWeight.ExtraBold, fontSize = 44.sp, textAlign = TextAlign.Center,
+                            modifier = Modifier.padding(horizontal = 24.dp))
+                    }
                     // Sits above the word, and only on decks whose cards carry a value. Hidden
                     // behind the sheet like the word is: it would give the card away early.
                     if (game.isScored && !showSheet) {
@@ -296,6 +335,15 @@ fun PlayScreen(
                         )
                     }
                 }
+            }
+
+            // After Dark: the climb, above the buttons. Shown filmed too — it has to stay
+            // readable while the round is on camera.
+            if (isAfterDark) {
+                AfterDarkProgress(
+                    afterDarkLevel, afterDarkHitsToClimax,
+                    Modifier.padding(start = 16.dp, end = 16.dp, top = 16.dp),
+                )
             }
 
             // Bottom action buttons. A filmed round holds the screen while the clip is
@@ -330,20 +378,28 @@ fun PlayScreen(
                 }
             } else {
                 Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.spacedBy(14.dp)) {
-                    ActionButton(stringResource(R.string.skip), Icons.AutoMirrored.Filled.ArrowForward, Alias.danger,
-                        Modifier.weight(1f), enabled = running && !finishing) {
+                    ActionButton(stringResource(R.string.skip), Icons.AutoMirrored.Filled.ArrowForward,
+                        if (isAfterDark) AfterDarkStyle.skip else Alias.danger,
+                        Modifier.weight(1f), enabled = running && !finishing,
+                        contentColor = if (isAfterDark) AfterDarkStyle.text else Color.White) {
                         // Guarded here as well as greyed out: a tap already on its way still arrives.
                         if (!running || finishing) return@ActionButton
                         game.addMarkedWord(MarkedWord(displayWord, false, wordPoints)); skip++
                         soundSystem.playSkipButton(); GameSettings.tick(context)
                         word = game.newWord; wordPoints = game.currentWordPoints
+                        wordSegment = game.currentWordSegment
                     }
-                    ActionButton(stringResource(R.string.correct), Icons.Filled.Check, Alias.success,
-                        Modifier.weight(1f), enabled = running && !finishing) {
+                    ActionButton(stringResource(R.string.correct), Icons.Filled.Check,
+                        if (isAfterDark) AfterDarkStyle.correct else Alias.success,
+                        Modifier.weight(1f), enabled = running && !finishing,
+                        contentColor = if (isAfterDark) AfterDarkStyle.onCorrect else Color.White) {
                         if (!running || finishing) return@ActionButton
+                        // Read before the next word is drawn: the segment is the one just guessed.
+                        if (isAfterDark && wordSegment == AfterDarkSegment.CLIMAX) climaxBursts++
                         game.addMarkedWord(MarkedWord(displayWord, true, wordPoints)); correctPoints += wordPoints
                         soundSystem.playRightButton(); GameSettings.tick(context)
                         word = game.newWord; wordPoints = game.currentWordPoints
+                        wordSegment = game.currentWordSegment
                     }
                 }
             }
@@ -384,6 +440,7 @@ fun PlayScreen(
 @Composable
 private fun ActionButton(label: String, icon: androidx.compose.ui.graphics.vector.ImageVector,
                          color: Color, modifier: Modifier = Modifier, enabled: Boolean = true,
+                         contentColor: Color = Color.White,
                          onClick: () -> Unit) {
     Row(
         modifier.height(72.dp).shadow(8.dp, RoundedCornerShape(20.dp), clip = false)
@@ -391,9 +448,9 @@ private fun ActionButton(label: String, icon: androidx.compose.ui.graphics.vecto
             .clickable(enabled = enabled) { onClick() }.padding(horizontal = 18.dp),
         verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.Center,
     ) {
-        Icon(icon, null, tint = Color.White, modifier = Modifier.size(22.dp))
+        Icon(icon, null, tint = contentColor, modifier = Modifier.size(22.dp))
         Spacer(Modifier.size(8.dp))
-        Text(label.uppercase(), color = Color.White, fontFamily = Alias.display,
+        Text(label.uppercase(), color = contentColor, fontFamily = Alias.display,
             fontWeight = FontWeight.ExtraBold, fontSize = 17.sp)
     }
 }

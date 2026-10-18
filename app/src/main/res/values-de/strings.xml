@@ -701,4 +701,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="arena_avatar_subtitle">Tippe einen Avatar an — sofort übernommen</string>
     <string name="arena_avatar_done">Fertig</string>
     <string name="ai_profile_empty">Noch keine Spiele — fordere einen Freund heraus!</string>
+
+    <!-- After Dark -->
+    <string name="game_alias_after_dark">After Dark</string>
+    <string name="game_alias_after_dark_info">Schmutzige Gedanken. Schnelle Köpfe. Null Scham. 🌶️\n\nAlias Words: After Dark macht aus harmlosen Erklärungen sehr erwachsene Gespräche. Bildet Teams mit euren Freunden und beschreibt das Wort, ohne es zu sagen — mit Hinweisen, die ihr in feiner Gesellschaft nie aussprechen würdet. Erratet so viele wie möglich und lasst eure Hemmungen an der Tür.\n\nErratet drei Wörter in einer Runde und ihr erreicht den HÖHEPUNKT, wo jedes Wort 2 Punkte zählt. Bereit, aufs Ganze zu gehen?</string>
+    <string name="after_dark_segment_spark">Funke</string>
+    <string name="after_dark_segment_attraction">Anziehung</string>
+    <string name="after_dark_segment_excitement">Erregung</string>
+    <string name="after_dark_segment_climax">Höhepunkt</string>
+    <string name="after_dark_to_climax">Noch %1$d bis zum Höhepunkt · dort ×%2$d</string>
+    <string name="after_dark_at_climax">Höhepunkt · jeder Treffer ×%d</string>
+    <string name="after_dark_bonus">%d Bonus</string>
 </resources>

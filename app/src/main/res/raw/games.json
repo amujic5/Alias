@@ -46,6 +46,27 @@
             "free": false
         },
         {
+            "id": "game_alias_after_dark",
+            "name": "game_alias_after_dark",
+            "image": "game_alias_after_dark",
+            "languages": [
+                "Cro",
+                "Srb",
+                "Bos",
+                "Slo",
+                "Eng",
+                "Ger",
+                "Ita",
+                "Esp",
+                "Fra"
+            ],
+            "info": "game_alias_after_dark_info",
+            "age": "16+",
+            "time": "30min",
+            "players": "4+",
+            "free": false
+        },
+        {
             "id": "game_draw_guess",
             "name": "game_draw_guess",
             "image": "game_draw_guess",

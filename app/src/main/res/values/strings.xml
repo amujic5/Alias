@@ -715,4 +715,15 @@ Vaš zadatak je prenositi suštinu Hrvatske kulture kroz kreativne opise, sinoni
     <string name="arena_avatar_subtitle">Tap an avatar to apply instantly</string>
     <string name="arena_avatar_done">Done</string>
     <string name="ai_profile_empty">No matches yet — challenge a friend!</string>
+
+    <!-- After Dark -->
+    <string name="game_alias_after_dark">After Dark</string>
+    <string name="game_alias_after_dark_info">Dirty minds. Quick thinking. Zero shame. 🌶️\n\nAlias Words: After Dark turns innocent explanations into very adult conversations. Team up with friends and describe the word without saying it — using clues you\'d never say in polite company. Guess as many as you can and leave your inhibitions at the door.\n\nGet three words right in a single round and you\'ll reach CLIMAX, where every word is worth 2 points. Ready to go all the way?</string>
+    <string name="after_dark_segment_spark">Spark</string>
+    <string name="after_dark_segment_attraction">Attraction</string>
+    <string name="after_dark_segment_excitement">Excitement</string>
+    <string name="after_dark_segment_climax">Climax</string>
+    <string name="after_dark_to_climax">%1$d more to Climax · hits there ×%2$d</string>
+    <string name="after_dark_at_climax">Climax · every hit ×%d</string>
+    <string name="after_dark_bonus">%d bonus</string>
 </resources>

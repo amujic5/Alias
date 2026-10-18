@@ -6,6 +6,7 @@ import androidx.compose.runtime.toMutableStateList
 import hr.azzi.socialgames.alias.Models.Game
 import hr.azzi.socialgames.alias.Models.MarkedWord
 import hr.azzi.socialgames.alias.ui.screens.EditAnswersScreen
+import hr.azzi.socialgames.alias.ui.screens.PointsStyle
 import hr.azzi.socialgames.alias.ui.theme.AliasTheme
 
 class EditAnswersActivity : BaseActivity() {
@@ -27,7 +28,11 @@ class EditAnswersActivity : BaseActivity() {
                     onToggle = { i, checked ->
                         words[i] = MarkedWord(words[i].word, checked, words[i].points)
                     },
-                    showsPoints = game.isScored,
+                    pointsStyle = when {
+                        game.isScored -> PointsStyle.Value
+                        game.isSegmented -> PointsStyle.Signed
+                        else -> PointsStyle.Hidden
+                    },
                     onCancel = { finish() },
                     onSave = {
                         val intent = Intent()

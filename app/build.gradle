@@ -85,6 +85,8 @@ dependencies {
     implementation 'com.squareup.picasso:picasso:2.71828'
     // Renders the Alias Junior picture cards (SVGs ported from iOS, in res/raw).
     implementation 'com.caverock:androidsvg-aar:1.4'
+    // The burst a CLIMAX answer sets off on the After Dark deck (res/raw/after_dark_climax).
+    implementation 'com.airbnb.android:lottie-compose:6.6.7'
 
     // Firebase
     implementation 'com.firebaseui:firebase-ui-auth:9.1.1'

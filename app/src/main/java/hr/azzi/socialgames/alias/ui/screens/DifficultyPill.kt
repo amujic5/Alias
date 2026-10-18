@@ -104,3 +104,28 @@ fun PointsBadge(points: Int, modifier: Modifier = Modifier, dimmed: Boolean = fa
         )
     }
 }
+
+/**
+ * What a word did to the score, signed: `+1`, `+2`, or `−1` in red for a skip. For decks
+ * where the row is about the total rather than the word's tier (After Dark).
+ */
+@Composable
+fun DeltaBadge(delta: Int, modifier: Modifier = Modifier) {
+    val tint = if (delta < 0) Alias.danger else difficultyTint(delta)
+    Box(
+        modifier
+            .clip(CircleShape)
+            .background(tint.copy(alpha = 0.14f))
+            .padding(horizontal = 11.dp, vertical = 5.dp),
+        contentAlignment = Alignment.Center,
+    ) {
+        Text(
+            if (delta < 0) "\u2212${-delta}" else "+$delta",
+            color = tint,
+            fontFamily = Alias.body,
+            fontWeight = FontWeight.Black,
+            fontSize = 14.sp,
+            letterSpacing = 0.4.sp,
+        )
+    }
+}

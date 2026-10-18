@@ -708,4 +708,15 @@ Vaša naloga je prenašati bistvo hrvaške kulture s kreativnimi opisi, sopomenk
     <string name="arena_avatar_subtitle">Pritisni avatar za takojšnjo uporabo</string>
     <string name="arena_avatar_done">Končano</string>
     <string name="ai_profile_empty">Še ni dvobojev — izzovi prijatelja!</string>
+
+    <!-- After Dark -->
+    <string name="game_alias_after_dark">After Dark</string>
+    <string name="game_alias_after_dark_info">Umazane misli. Hitra glava. Nič sramu. 🌶️\n\nAlias Words: After Dark spremeni nedolžne razlage v zelo odrasle pogovore. Združite se s prijatelji in opišite besedo, ne da bi jo izgovorili — z namigi, ki jih v olikani družbi nikoli ne bi rekli. Uganite jih čim več, sram pa pustite pred vrati.\n\nUganite tri besede v istem krogu in dosežete VRHUNEC, kjer je vsaka beseda vredna 2 točki. Ste pripravljeni iti do konca?</string>
+    <string name="after_dark_segment_spark">Iskra</string>
+    <string name="after_dark_segment_attraction">Privlačnost</string>
+    <string name="after_dark_segment_excitement">Vzburjenje</string>
+    <string name="after_dark_segment_climax">Vrhunec</string>
+    <string name="after_dark_to_climax">Še %1$d do vrhunca · tam ×%2$d</string>
+    <string name="after_dark_at_climax">Vrhunec · vsak zadetek ×%d</string>
+    <string name="after_dark_bonus">%d bonus</string>
 </resources>

@@ -86,12 +86,17 @@ data class BoardGame(
      * The Play Store product that unlocks this deck.
      *
      * Every other paid deck is sold under its own id, so that is the default. Draw &
-     * Guess is the exception: the product was set up as `draw_and_guess` while the deck
-     * is `game_draw_guess`, and a product id cannot be renamed once the store has seen
+     * Guess and After Dark are the exceptions: their products were set up as
+     * `draw_and_guess` and `after_dark` while the decks are `game_draw_guess` and
+     * `game_alias_after_dark`, and a product id cannot be renamed once the store has seen
      * it. Better one mapping here than a rename rippling through the deck files.
      */
     val productId: String
-        get() = if (id == BoardGameId.DRAW_GUESS) "draw_and_guess" else id.serializedName()
+        get() = when (id) {
+            BoardGameId.DRAW_GUESS -> "draw_and_guess"
+            BoardGameId.AFTER_DARK -> "after_dark"
+            else -> id.serializedName()
+        }
 
     /**
      * Whether the deck is called out as new on the Choose a Game grid. Listed by hand,
@@ -100,7 +105,8 @@ data class BoardGame(
      * derived from `free` instead — that one is a fact.
      */
     val isNew: Boolean
-        get() = id == BoardGameId.DRAW_GUESS || id == BoardGameId.EASY_MEDIUM_HARD
+        get() = id == BoardGameId.DRAW_GUESS || id == BoardGameId.EASY_MEDIUM_HARD ||
+            id == BoardGameId.AFTER_DARK
 
     /** The goal score this deck is played to. One word a round scores far slower than a
      *  deck you can burn through, so it is counted in single figures. */
@@ -111,12 +117,23 @@ data class BoardGame(
         get() = id == BoardGameId.EASY_MEDIUM_HARD
 
     /**
+     * Decks whose words carry the segment they belong to, written as a `-SPARK`…`-CLIMAX`
+     * suffix that never reaches the screen. See [hr.azzi.socialgames.alias.Models.AfterDarkSegment].
+     */
+    val isSegmented: Boolean
+        get() = id == BoardGameId.AFTER_DARK
+
+    /**
      * Decks that only make sense passing one phone around: the AI reads its words aloud
      * and Online Play freezes a list for strangers, and neither has anything to do with
      * a word being worth three points.
+     *
+     * After Dark is local for a different reason: it is an adult deck, meant for a table of
+     * friends who chose it together — not for a room of strangers, nor for the AI.
      */
     val isLocalOnly: Boolean
-        get() = id == BoardGameId.EASY_MEDIUM_HARD || id == BoardGameId.DRAW_GUESS
+        get() = id == BoardGameId.EASY_MEDIUM_HARD || id == BoardGameId.DRAW_GUESS ||
+            id == BoardGameId.AFTER_DARK
 
     /** Nothing about a drawing round is worth filming, and the front camera would spend
      *  it looking at whoever is holding the phone. */
@@ -204,7 +221,9 @@ enum class BoardGameId {
     @SerializedName("game_alias_fra")
     FRA,
     @SerializedName("game_draw_guess")
-    DRAW_GUESS
+    DRAW_GUESS,
+    @SerializedName("game_alias_after_dark")
+    AFTER_DARK
 }
 
 fun BoardGameId.serializedName(): String {

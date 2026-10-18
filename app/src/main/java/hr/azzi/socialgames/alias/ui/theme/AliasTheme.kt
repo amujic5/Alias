@@ -123,14 +123,20 @@ private val colorScheme: androidx.compose.material3.ColorScheme
         )
     }
 
+/**
+ * @param forceDark paints dark whatever the phone and Settings say. For a screen with its
+ * own fixed night palette (After Dark's Play screen): the pieces it does not repaint read
+ * the adaptive tokens, and they have to agree with the rest of it.
+ */
 @Composable
-fun AliasTheme(content: @Composable () -> Unit) {
+fun AliasTheme(forceDark: Boolean = false, content: @Composable () -> Unit) {
     // Provided here rather than per-activity: the switch in Settings has to reach every
     // screen, and an activity that forgot to wrap would silently stay light.
     val appearance = hr.azzi.socialgames.alias.arena.AppAppearance
         .load(androidx.compose.ui.platform.LocalContext.current)
     androidx.compose.runtime.CompositionLocalProvider(
-        hr.azzi.socialgames.alias.arena.LocalAppAppearance provides appearance.value
+        hr.azzi.socialgames.alias.arena.LocalAppAppearance provides
+            if (forceDark) hr.azzi.socialgames.alias.arena.AppAppearance.DARK else appearance.value
     ) {
         MaterialTheme(colorScheme = colorScheme, content = content)
     }
